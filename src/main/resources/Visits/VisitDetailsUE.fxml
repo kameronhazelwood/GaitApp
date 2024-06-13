@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.HyperlinkLabel?>
+
+<AnchorPane prefHeight="700.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Visits.VisitDetailsUEController">
+    <Pane layoutX="-5.0" layoutY="-3.0" prefHeight="700.0" prefWidth="800.0">
+        <TabPane layoutY="2.0" prefHeight="700.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+            <Tab text="Visit Information">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="763.0" prefWidth="696.0">
+                    <Label layoutX="14.0" layoutY="14.0" text="Visit Information:">
+                        <font>
+                            <Font name="System Bold" size="14.0" />
+                        </font>
+                    </Label>
+                    <GridPane layoutX="21.0" layoutY="62.0" prefHeight="119.0" prefWidth="698.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <Label prefHeight="34.0" prefWidth="85.0" text="Date" />
+                        <TextField fx:id="UEdate" GridPane.columnIndex="1" />
+                        <Label text="Time" GridPane.columnIndex="2" />
+                        <TextField fx:id="UEaptTime" GridPane.columnIndex="3" />
+                        <Label text="Attended?" GridPane.columnIndex="4" />
+                        <TextField fx:id="UEaptAttended" GridPane.columnIndex="5" />
+                        <Label prefHeight="34.0" prefWidth="85.0" text="Start Time" GridPane.rowIndex="1" />
+                        <TextField fx:id="UEaptStartTime" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Stop Time" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField fx:id="UEaptStopTime" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Label text="Date Sched" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <TextField fx:id="UEaptDate" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                        <Label text="Visit Type" GridPane.rowIndex="2" />
+                        <TextField fx:id="UEaptVisitType" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Visit Sub-Type" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <TextField fx:id="UEaptSubType" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Label text="Date Sent to EPIC" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                        <TextField fx:id="UEdateSentToEpic" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                        <Label text="Date Processed" GridPane.rowIndex="3" />
+                        <TextField fx:id="UEaptDateProcessed" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Date Printed" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <TextField fx:id="UEDatePrinted" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <Label text="Date Finalized" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                        <TextField fx:id="UEDateFinalized" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                    </GridPane>
+                    <Label layoutX="22.0" layoutY="195.0" text="Diagnosis" />
+                    <TextField fx:id="UEaptDiagnosis" layoutX="139.0" layoutY="191.0" prefHeight="25.0" prefWidth="579.0" />
+                    <Label layoutX="21.0" layoutY="227.0" text="Reason for Analysis" />
+                    <TextField fx:id="UEaptReason" layoutX="139.0" layoutY="223.0" prefHeight="25.0" prefWidth="579.0" />
+                    <Label layoutX="21.0" layoutY="259.0" text="Internal Comment" />
+                    <TextField fx:id="UEaptComment" layoutX="139.0" layoutY="255.0" prefHeight="25.0" prefWidth="579.0" />
+                    <Label layoutX="22.0" layoutY="291.0" text="Keywords" />
+                    <TextField layoutX="139.0" layoutY="287.0" prefHeight="25.0" prefWidth="579.0" />
+                    <Label layoutX="22.0" layoutY="317.0" text="Interpretation Information">
+                        <font>
+                            <Font name="System Bold" size="13.0" />
+                        </font>
+                    </Label>
+                    <GridPane layoutX="23.0" layoutY="353.0" prefHeight="24.0" prefWidth="690.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints />
+                            <RowConstraints />
+                            <RowConstraints />
+                            <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <Label prefHeight="17.0" prefWidth="134.0" text="Date" GridPane.rowIndex="3" />
+                        <Label text="MD " GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Label text="PT" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                        <TextField fx:id="UEinterpDate" prefHeight="45.0" prefWidth="119.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="UEaptMd" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <TextField fx:id="UEaptPT" prefHeight="27.0" prefWidth="112.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                    </GridPane>
+                    <Label layoutX="23.0" layoutY="379.0" text="Referring Physician Information">
+                        <font>
+                            <Font name="System Bold" size="13.0" />
+                        </font>
+                    </Label>
+                    <GridPane layoutX="25.0" layoutY="462.0" prefHeight="106.0" prefWidth="701.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="346.0" minWidth="10.0" prefWidth="128.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="573.0" minWidth="10.0" prefWidth="573.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <Label text="Visit PT" />
+                        <Label text="Visit PT-2" GridPane.rowIndex="1" />
+                        <Label text="Visit Biomech" GridPane.rowIndex="2" />
+                        <Label text="Visit Biomech-2" GridPane.rowIndex="3" />
+                        <TextField fx:id="UEvisitPt" GridPane.columnIndex="1" />
+                        <TextField fx:id="UEpt2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="UEvisitBio" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="UEbiomech2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                    </GridPane>
+                    <Label layoutX="21.0" layoutY="443.0" text="Visit Personnel">
+                        <font>
+                            <Font name="System Bold" size="13.0" />
+                        </font>
+                    </Label>
+                    <GridPane layoutX="21.0" layoutY="398.0" prefHeight="30.0" prefWidth="710.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <Label text="Referring MD" />
+                        <Label text="Date Sent" GridPane.columnIndex="2" />
+                        <TextField fx:id="UEaptReferringMd" GridPane.columnIndex="1" />
+                        <TextField fx:id="UEaptDateSent" GridPane.columnIndex="3" />
+                    </GridPane>
+                    <Label layoutX="23.0" layoutY="573.0" text="Questionnaires:">
+                        <font>
+                            <Font name="System Bold" size="13.0" />
+                        </font>
+                    </Label>
+                    <HyperlinkLabel layoutX="25.0" layoutY="599.0" text="Hyperlink Questionnaire Label" />
+                </AnchorPane>
+            </Tab>
+            <Tab fx:id="physExamUE" text="UE Physical Examination">
+                <ScrollPane prefHeight="700.0" prefWidth="800.0">
+                    <AnchorPane prefHeight="4000.0">
+                        <Label layoutX="22.0" layoutY="11.0" text="UE PT Evaluation:">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="22.0" layoutY="71.0" prefHeight="17.0" prefWidth="67.0" text="Height (cm)" />
+                        <Label layoutX="315.0" layoutY="75.0" text="Weight (kg)" />
+                        <Label layoutX="22.0" layoutY="101.0" text="Right Foot Length(cm)" />
+                        <Label layoutX="315.0" layoutY="105.0" text="Left Foot Length(cm)" />
+                        <Label layoutX="22.0" layoutY="128.0" text="Right Foot Width (cm)" />
+                        <Label layoutX="315.0" layoutY="132.0" text="Left foot Width (cm)" />
+                        <TextField fx:id="ueHeight" layoutX="143.0" layoutY="72.0" />
+                        <TextField fx:id="rFootLength" layoutX="143.0" layoutY="100.0" />
+                        <TextField fx:id="rFootWidth" layoutX="143.0" layoutY="127.0" />
+                        <TextField fx:id="ueWeight" layoutX="439.0" layoutY="72.0" />
+                        <TextField fx:id="lFootLength" layoutX="439.0" layoutY="102.0" />
+                        <TextField fx:id="lFootWidth" layoutX="439.0" layoutY="130.0" />
+                        <Label layoutX="78.0" layoutY="164.0" prefHeight="25.0" prefWidth="127.0" text="MACS" />
+                        <Label layoutX="78.0" layoutY="194.0" prefHeight="25.0" prefWidth="127.0" text="GMFCS" />
+                        <Label layoutX="78.0" layoutY="224.0" prefHeight="25.0" prefWidth="127.0" text="FMS (5m)" />
+                        <Label layoutX="78.0" layoutY="255.0" prefHeight="25.0" prefWidth="127.0" text="FMS (50m)" />
+                        <Label layoutX="78.0" layoutY="285.0" prefHeight="25.0" prefWidth="127.0" text="FMS (500m)" />
+                        <Label layoutX="35.0" layoutY="334.0" text="ADL">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="13.0" layoutY="367.0" text="UE Dressing" />
+                        <Label layoutX="13.0" layoutY="396.0" text="LE Dress" />
+                        <Label layoutX="13.0" layoutY="429.0" text="Orthotic" />
+                        <Label layoutX="13.0" layoutY="457.0" text="Shoes" />
+                        <Label layoutX="13.0" layoutY="487.0" text="Socks" />
+                        <Label layoutX="13.0" layoutY="519.0" text="Fasteners" />
+                        <Label layoutX="13.0" layoutY="548.0" text="Hygiene" />
+                        <Label layoutX="35.0" layoutY="43.0" text=" General &amp; ADLs">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <ComboBox fx:id="ueMACS" layoutX="143.0" layoutY="164.0" prefWidth="150.0" />
+                        <ComboBox fx:id="ueGMFCS" layoutX="143.0" layoutY="195.0" prefWidth="150.0" />
+                        <ComboBox fx:id="ueFMS5" layoutX="143.0" layoutY="225.0" prefWidth="150.0" />
+                        <ComboBox fx:id="ueFMS50" layoutX="143.0" layoutY="255.0" prefWidth="150.0" />
+                        <ComboBox fx:id="ueFMS500" layoutX="143.0" layoutY="285.0" prefWidth="150.0" />
+                        <Separator layoutX="15.0" layoutY="390.0" prefHeight="0.0" prefWidth="509.0" />
+                        <Separator layoutX="15.0" layoutY="421.0" prefHeight="1.0" prefWidth="509.0" />
+                        <Label layoutX="128.0" layoutY="338.0" text="Independent ">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                        <Label layoutX="222.0" layoutY="338.0" text="Dependent">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="312.0" layoutY="338.0" text="Assist">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="414.0" layoutY="335.0" text="Comments">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <CheckBox fx:id="ueIndependent" layoutX="148.0" layoutY="367.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="ueDependent" layoutX="235.0" layoutY="367.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="ueAssist" layoutX="318.0" layoutY="367.0" mnemonicParsing="false" />
+                        <TextField fx:id="ueComments2" layoutX="375.0" layoutY="363.0" />
+                        <Separator blendMode="DIFFERENCE" layoutX="103.0" layoutY="336.0" orientation="VERTICAL" prefHeight="242.0" prefWidth="10.0" />
+                        <Separator blendMode="DIFFERENCE" layoutX="205.0" layoutY="339.0" orientation="VERTICAL" prefHeight="242.0" prefWidth="12.0" />
+                        <Separator blendMode="DIFFERENCE" layoutX="285.0" layoutY="343.0" orientation="VERTICAL" prefHeight="236.0" prefWidth="12.0" />
+                        <Separator blendMode="DIFFERENCE" layoutX="356.0" layoutY="341.0" orientation="VERTICAL" prefHeight="236.0" prefWidth="12.0" />
+                        <CheckBox fx:id="leIndependent" layoutX="148.0" layoutY="396.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="leDependent" layoutX="235.0" layoutY="396.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="leAssist" layoutX="318.0" layoutY="396.0" mnemonicParsing="false" />
+                        <TextField fx:id="leComments" layoutX="375.0" layoutY="393.0" />
+                        <Separator layoutX="18.0" layoutY="451.0" prefHeight="1.0" prefWidth="509.0" />
+                        <CheckBox fx:id="orthoIndep" layoutX="148.0" layoutY="428.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="orthodep" layoutX="235.0" layoutY="428.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="orthoAssist" layoutX="318.0" layoutY="428.0" mnemonicParsing="false" />
+                        <TextField fx:id="orthoComm" layoutX="375.0" layoutY="424.0" />
+                        <Separator layoutX="15.0" layoutY="480.0" prefHeight="1.0" prefWidth="509.0" />
+                        <CheckBox fx:id="shoesIndep" layoutX="148.0" layoutY="457.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="shoesDepen" layoutX="235.0" layoutY="457.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="shoesAssist" layoutX="318.0" layoutY="457.0" mnemonicParsing="false" />
+                        <TextField fx:id="shoesComments" layoutX="375.0" layoutY="453.0" />
+                        <Separator layoutX="18.0" layoutY="509.0" prefHeight="1.0" prefWidth="509.0" />
+                        <CheckBox fx:id="socksIndep" layoutX="148.0" layoutY="487.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="shoesDepend" layoutX="235.0" layoutY="487.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="socksAssist" layoutX="318.0" layoutY="487.0" mnemonicParsing="false" />
+                        <TextField fx:id="socksComments" layoutX="375.0" layoutY="483.0" />
+                        <Separator layoutX="18.0" layoutY="542.0" prefHeight="1.0" prefWidth="509.0" />
+                        <CheckBox fx:id="fastenersIndep" layoutX="148.0" layoutY="519.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="fastenersDep" layoutX="235.0" layoutY="519.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="fastenerAssist" layoutX="318.0" layoutY="519.0" mnemonicParsing="false" />
+                        <TextField fx:id="fastenersComments" layoutX="375.0" layoutY="515.0" />
+                        <CheckBox fx:id="hygieneIndep" layoutX="148.0" layoutY="548.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="hygieneDept" layoutX="235.0" layoutY="548.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="hygieneAssist" layoutX="318.0" layoutY="548.0" mnemonicParsing="false" />
+                        <TextField fx:id="hygieneComments" layoutX="375.0" layoutY="546.0" />
+                        <Separator layoutX="5.0" layoutY="575.0" prefHeight="7.0" prefWidth="517.0" />
+                        <Label layoutX="35.0" layoutY="610.0" text="Arm Motion">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="13.0" layoutY="664.0" text="Shoulder Abduction" />
+                        <Label layoutX="173.0" layoutY="621.0" text="Active" />
+                        <Label layoutX="263.0" layoutY="619.0" text="Passive" />
+                        <Label layoutX="224.0" layoutY="595.0" text="Right" />
+                        <Separator blendMode="DIFFERENCE" layoutX="330.0" layoutY="621.0" orientation="VERTICAL" prefHeight="894.0" prefWidth="2.0" />
+                        <Label layoutX="424.0" layoutY="594.0" text="Left" />
+                        <Label layoutX="366.0" layoutY="620.0" text="Active" />
+                        <Label layoutX="466.0" layoutY="621.0" text="Passive" />
+                        <Separator blendMode="DIFFERENCE" layoutX="145.0" layoutY="622.0" orientation="VERTICAL" prefHeight="893.0" prefWidth="5.0" />
+                        <Separator layoutX="237.0" layoutY="629.0" orientation="VERTICAL" prefHeight="883.0" prefWidth="2.0" />
+                        <TextField fx:id="activeShoulderAbdR" layoutX="167.0" layoutY="645.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveShoulderAbdR" layoutX="254.0" layoutY="645.0" prefHeight="25.0" prefWidth="61.0" />
+                        <Separator layoutX="425.0" layoutY="616.0" orientation="VERTICAL" prefHeight="898.0" prefWidth="0.0" />
+                        <TextField fx:id="passiveShoulderAbdL" layoutX="456.0" layoutY="645.0" prefHeight="25.0" prefWidth="61.0" />
+                        <TextField fx:id="activeShoulderAbdL" layoutX="354.0" layoutY="645.0" prefHeight="25.0" prefWidth="61.0" />
+                        <Separator blendMode="DIFFERENCE" layoutX="11.0" layoutY="638.0" prefHeight="2.0" prefWidth="512.0" />
+                        <Separator layoutX="16.0" layoutY="705.0" prefHeight="0.0" prefWidth="513.0" />
+                        <ComboBox layoutX="167.0" layoutY="674.0" prefWidth="60.0" />
+                        <ComboBox layoutX="256.0" layoutY="674.0" prefWidth="60.0" />
+                        <ComboBox layoutX="354.0" layoutY="674.0" prefWidth="60.0" />
+                        <ComboBox layoutX="456.0" layoutY="674.0" prefWidth="60.0" />
+                        <Label layoutX="13.0" layoutY="724.0" text="Shoulder Flexion" />
+                        <TextField fx:id="activeShoulderFlexR" layoutX="168.0" layoutY="709.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveShoulderFlexR" layoutX="256.0" layoutY="709.0" prefHeight="25.0" prefWidth="61.0" />
+                        <TextField fx:id="activeShoulderFlexL" layoutX="354.0" layoutY="709.0" prefHeight="25.0" prefWidth="61.0" />
+                        <TextField fx:id="passiveShoulderFlexL" layoutX="456.0" layoutY="709.0" prefHeight="25.0" prefWidth="61.0" />
+                        <ComboBox layoutX="169.0" layoutY="739.0" prefWidth="60.0" />
+                        <ComboBox layoutX="256.0" layoutY="739.0" prefWidth="60.0" />
+                        <ComboBox layoutX="354.0" layoutY="738.0" prefWidth="60.0" />
+                        <ComboBox layoutX="456.0" layoutY="739.0" prefWidth="60.0" />
+                        <Separator layoutX="13.0" layoutY="767.0" prefHeight="3.0" prefWidth="520.0" />
+                        <Label layoutX="13.0" layoutY="781.0" prefHeight="36.0" prefWidth="121.0" text="Shoulder Internal Rotation" wrapText="true" />
+                        <TextField fx:id="activeShoulderInRotR" layoutX="168.0" layoutY="774.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passtiveShoulderInRotR" layoutX="256.0" layoutY="774.0" prefHeight="25.0" prefWidth="61.0" />
+                        <TextField fx:id="activeShoulderInRotL" layoutX="354.0" layoutY="773.0" prefHeight="25.0" prefWidth="61.0" />
+                        <TextField fx:id="passtiveShoulderInRotL" layoutX="456.0" layoutY="774.0" prefHeight="25.0" prefWidth="61.0" />
+                        <ComboBox layoutX="168.0" layoutY="802.0" prefWidth="60.0" />
+                        <ComboBox layoutX="257.0" layoutY="803.0" prefWidth="60.0" />
+                        <ComboBox layoutX="354.0" layoutY="801.0" prefWidth="60.0" />
+                        <ComboBox layoutX="456.0" layoutY="802.0" prefWidth="60.0" />
+                        <Separator layoutX="12.0" layoutY="835.0" prefHeight="3.0" prefWidth="520.0" />
+                        <Label layoutX="13.0" layoutY="846.0" prefHeight="37.0" prefWidth="117.0" text="Shoulder External Rotation" wrapText="true" />
+                        <TextField fx:id="activeShoulderExRotR" layoutX="167.0" layoutY="839.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox layoutX="167.0" layoutY="869.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveShoulderExRotR" layoutX="256.0" layoutY="839.0" prefHeight="25.0" prefWidth="61.0" />
+                        <TextField fx:id="activeShoulderExRotL" layoutX="354.0" layoutY="839.0" prefHeight="25.0" prefWidth="61.0" />
+                        <TextField fx:id="passiveShoulderExRotL" layoutX="456.0" layoutY="839.0" prefHeight="25.0" prefWidth="61.0" />
+                        <ComboBox layoutX="257.0" layoutY="869.0" prefWidth="60.0" />
+                        <ComboBox layoutX="354.0" layoutY="869.0" prefWidth="60.0" />
+                        <ComboBox layoutX="456.0" layoutY="869.0" prefWidth="60.0" />
+                        <Separator layoutX="11.0" layoutY="896.0" prefHeight="3.0" prefWidth="520.0" />
+                        <Label layoutX="13.0" layoutY="899.0" prefHeight="57.0" prefWidth="119.0" text="Shoulder Internal Rotation with 90° Abduction" wrapText="true" />
+                        <TextField fx:id="activeShouldInRot90R" layoutX="168.0" layoutY="901.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveShouldInRot90R" layoutX="256.0" layoutY="901.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveShouldInRot90L" layoutX="354.0" layoutY="901.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="activeShouldInRot90L" layoutX="456.0" layoutY="900.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox layoutX="168.0" layoutY="929.0" prefWidth="60.0" />
+                        <ComboBox layoutX="257.0" layoutY="929.0" prefWidth="60.0" />
+                        <ComboBox layoutX="354.0" layoutY="929.0" prefWidth="60.0" />
+                        <ComboBox layoutX="456.0" layoutY="929.0" prefWidth="60.0" />
+                        <Separator layoutX="13.0" layoutY="958.0" prefHeight="3.0" prefWidth="520.0" />
+                        <Label layoutX="13.0" layoutY="964.0" prefHeight="53.0" prefWidth="136.0" text="Shoulder External Rotation with 90° Abduction" wrapText="true" />
+                        <TextField fx:id="activeShouldExRot90R" layoutX="167.0" layoutY="964.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveShouldExRot90R" layoutX="257.0" layoutY="964.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveShouldExRot90L" layoutX="354.0" layoutY="964.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="activeShouldExRot90L" layoutX="456.0" layoutY="964.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox layoutX="168.0" layoutY="991.0" prefWidth="60.0" />
+                        <ComboBox layoutX="258.0" layoutY="991.0" prefWidth="60.0" />
+                        <ComboBox layoutX="354.0" layoutY="991.0" prefWidth="60.0" />
+                        <ComboBox layoutX="456.0" layoutY="991.0" prefWidth="60.0" />
+                        <Separator layoutX="12.0" layoutY="1019.0" prefHeight="3.0" prefWidth="520.0" />
+                        <Label layoutX="13.0" layoutY="1036.0" text="Elbow Flexion" />
+                        <TextField fx:id="activeElbFexR" layoutX="167.0" layoutY="1023.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveElbFexR" layoutX="256.0" layoutY="1023.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveElbFexL" layoutX="354.0" layoutY="1024.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="activeElbFexL" layoutX="456.0" layoutY="1024.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox layoutX="167.0" layoutY="1052.0" prefWidth="60.0" />
+                        <ComboBox layoutX="256.0" layoutY="1052.0" prefWidth="60.0" />
+                        <ComboBox layoutX="354.0" layoutY="1052.0" prefWidth="60.0" />
+                        <ComboBox layoutX="456.0" layoutY="1052.0" prefWidth="60.0" />
+                        <Separator layoutX="9.0" layoutY="1082.0" prefHeight="3.0" prefWidth="520.0" />
+                        <Label layoutX="13.0" layoutY="1100.0" text="Elbow Extension" />
+                        <TextField fx:id="activeElbExR" layoutX="167.0" layoutY="1087.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveElbExR" layoutX="256.0" layoutY="1088.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveElbExL" layoutX="354.0" layoutY="1088.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="activeElbExL" layoutX="456.0" layoutY="1088.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox layoutX="167.0" layoutY="1115.0" prefWidth="60.0" />
+                        <ComboBox layoutX="256.0" layoutY="1115.0" prefWidth="60.0" />
+                        <ComboBox layoutX="354.0" layoutY="1115.0" prefWidth="60.0" />
+                        <ComboBox layoutX="456.0" layoutY="1115.0" prefWidth="60.0" />
+                        <Separator layoutX="13.0" layoutY="1146.0" prefHeight="3.0" prefWidth="520.0" />
+                        <Label layoutX="13.0" layoutY="1170.0" text="Forearm Supination" />
+                        <TextField fx:id="activeForeSupR" layoutX="167.0" layoutY="1149.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveForeSupR" layoutX="249.0" layoutY="1149.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="activeForeSupL" layoutX="352.0" layoutY="1149.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveForeSupL" layoutX="456.0" layoutY="1149.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox layoutX="168.0" layoutY="1176.0" prefWidth="60.0" />
+                        <ComboBox layoutX="249.0" layoutY="1176.0" prefWidth="60.0" />
+                        <ComboBox layoutX="352.0" layoutY="1176.0" prefWidth="60.0" />
+                        <ComboBox layoutX="456.0" layoutY="1176.0" prefWidth="60.0" />
+                        <Separator layoutX="6.0" layoutY="1203.0" prefHeight="3.0" prefWidth="527.0" />
+                        <Label layoutX="13.0" layoutY="1222.0" text="Forearm Pronation" />
+                        <TextField fx:id="passiveForProR" layoutX="167.0" layoutY="1208.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="activeForProR" layoutX="249.0" layoutY="1208.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="activeForProL" layoutX="352.0" layoutY="1208.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveForProL" layoutX="456.0" layoutY="1208.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox layoutX="167.0" layoutY="1235.0" prefWidth="60.0" />
+                        <ComboBox layoutX="249.0" layoutY="1235.0" prefWidth="60.0" />
+                        <ComboBox layoutX="352.0" layoutY="1235.0" prefWidth="60.0" />
+                        <ComboBox layoutX="456.0" layoutY="1235.0" prefWidth="60.0" />
+                        <Separator layoutX="10.0" layoutY="1265.0" prefHeight="3.0" prefWidth="527.0" />
+                        <Label layoutX="13.0" layoutY="1288.0" text="Wrist Flexion" />
+                        <TextField fx:id="activeWristFlexR" layoutX="166.0" layoutY="1269.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveWristFlexR" layoutX="249.0" layoutY="1269.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="activeWristFlexL" layoutX="352.0" layoutY="1269.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveWristFlexL" layoutX="456.0" layoutY="1269.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox layoutX="166.0" layoutY="1296.0" prefWidth="60.0" />
+                        <ComboBox layoutX="249.0" layoutY="1296.0" prefWidth="60.0" />
+                        <ComboBox layoutX="352.0" layoutY="1296.0" prefWidth="60.0" />
+                        <ComboBox layoutX="456.0" layoutY="1296.0" prefWidth="60.0" />
+                        <Separator layoutX="10.0" layoutY="1327.0" prefHeight="3.0" prefWidth="527.0" />
+                        <Label layoutX="13.0" layoutY="1344.0" text="Wrist Extension" />
+                        <TextField fx:id="activeWristExR" layoutX="166.0" layoutY="1332.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveWristExR" layoutX="249.0" layoutY="1332.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="activeWristExL" layoutX="353.0" layoutY="1331.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveWristExL" layoutX="456.0" layoutY="1330.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox layoutX="166.0" layoutY="1359.0" prefWidth="60.0" />
+                        <ComboBox layoutX="249.0" layoutY="1359.0" prefWidth="60.0" />
+                        <ComboBox layoutX="352.0" layoutY="1358.0" prefWidth="60.0" />
+                        <ComboBox layoutX="456.0" layoutY="1357.0" prefWidth="60.0" />
+                        <Separator layoutX="10.0" layoutY="1387.0" prefHeight="3.0" prefWidth="527.0" />
+                        <Label layoutX="13.0" layoutY="1476.0" text="Wrist Radial Deviation" />
+                        <TextField fx:id="activeWristUlR" layoutX="166.0" layoutY="1391.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveWristUlR" layoutX="249.0" layoutY="1391.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="activeWristUlL" layoutX="352.0" layoutY="1391.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveWristUlL" layoutX="456.0" layoutY="1391.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox layoutX="166.0" layoutY="1419.0" prefWidth="60.0" />
+                        <ComboBox layoutX="249.0" layoutY="1419.0" prefWidth="60.0" />
+                        <ComboBox layoutX="352.0" layoutY="1419.0" prefWidth="60.0" />
+                        <ComboBox layoutX="456.0" layoutY="1419.0" prefWidth="60.0" />
+                        <Separator layoutX="9.0" layoutY="1451.0" prefHeight="3.0" prefWidth="527.0" />
+                        <Label layoutX="13.0" layoutY="1411.0" text="Wrist Ulnar Deviation" />
+                        <TextField fx:id="activeWristRadR" layoutX="166.0" layoutY="1454.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveWristRadR" layoutX="249.0" layoutY="1454.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveWristRadL" layoutX="353.0" layoutY="1454.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="activeWristRadL" layoutX="456.0" layoutY="1454.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox layoutX="166.0" layoutY="1481.0" prefWidth="60.0" />
+                        <ComboBox layoutX="249.0" layoutY="1481.0" prefWidth="60.0" />
+                        <ComboBox layoutX="353.0" layoutY="1481.0" prefWidth="60.0" />
+                        <ComboBox layoutX="456.0" layoutY="1481.0" prefWidth="60.0" />
+                        <Separator blendMode="EXCLUSION" layoutX="17.0" layoutY="1514.0" prefHeight="3.0" prefWidth="527.0" />
+                        <Label layoutX="31.0" layoutY="1531.0" text="Hand Motion">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="223.0" layoutY="1517.0" text="Right" />
+                        <Label layoutX="421.0" layoutY="1517.0" text="Left" />
+                        <Label layoutX="173.0" layoutY="1530.0" text="Active" />
+                        <Label layoutX="266.0" layoutY="1530.0" text="Passive" />
+                        <Label layoutX="468.0" layoutY="1530.0" text="Passive" />
+                        <Label layoutX="366.0" layoutY="1530.0" text="Active" />
+                        <Separator blendMode="DIFFERENCE" layoutX="4.0" layoutY="1554.0" prefHeight="2.0" prefWidth="545.0" />
+                        <Separator layoutX="234.0" layoutY="1534.0" orientation="VERTICAL" prefHeight="382.0" prefWidth="7.0" />
+                        <Separator layoutX="430.0" layoutY="1536.0" orientation="VERTICAL" prefHeight="382.0" prefWidth="0.0" />
+                        <Separator blendMode="EXCLUSION" layoutX="328.0" layoutY="1539.0" orientation="VERTICAL" prefHeight="382.0" prefWidth="0.0" />
+                        <Separator blendMode="EXCLUSION" layoutX="143.0" layoutY="1538.0" orientation="VERTICAL" prefHeight="382.0" prefWidth="6.0" />
+                        <Label layoutX="15.0" layoutY="1579.0" text="Finger Flexion" />
+                        <TextField fx:id="activeFinFlexR" layoutX="166.0" layoutY="1558.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveFinFlexR" layoutX="254.0" layoutY="1559.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="activeFinFlexL" layoutX="353.0" layoutY="1559.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveFinFlexL" layoutX="456.0" layoutY="1559.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox layoutX="166.0" layoutY="1585.0" prefWidth="60.0" />
+                        <ComboBox layoutX="254.0" layoutY="1586.0" prefWidth="60.0" />
+                        <ComboBox layoutX="353.0" layoutY="1586.0" prefWidth="60.0" />
+                        <ComboBox layoutX="456.0" layoutY="1586.0" prefWidth="60.0" />
+                        <Separator layoutY="1613.0" prefHeight="3.0" prefWidth="527.0" />
+                        <Label layoutX="15.0" layoutY="1632.0" text="Finger Extension" />
+                        <TextField fx:id="activeFinExtR" layoutX="166.0" layoutY="1618.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveFinExtR" layoutX="254.0" layoutY="1618.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="activeFinExtL" layoutX="353.0" layoutY="1618.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveFinExtL" layoutX="456.0" layoutY="1618.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox layoutX="166.0" layoutY="1645.0" prefWidth="60.0" />
+                        <ComboBox layoutX="254.0" layoutY="1645.0" prefWidth="60.0" />
+                        <ComboBox layoutX="353.0" layoutY="1645.0" prefWidth="60.0" />
+                        <ComboBox layoutX="456.0" layoutY="1645.0" prefWidth="60.0" />
+                        <Separator layoutX="10.0" layoutY="1672.0" prefHeight="3.0" prefWidth="527.0" />
+                        <Label layoutX="15.0" layoutY="1683.0" prefHeight="37.0" prefWidth="104.0" text="Thumb CMC Palmar Abduction" wrapText="true" />
+                        <TextField fx:id="activeThuCMCPalR" layoutX="166.0" layoutY="1678.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveThuCMCPalR" layoutX="254.0" layoutY="1678.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="activeThuCMCPalL" layoutX="353.0" layoutY="1677.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveThuCMCPalL" layoutX="456.0" layoutY="1677.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox layoutX="166.0" layoutY="1705.0" prefWidth="60.0" />
+                        <ComboBox layoutX="254.0" layoutY="1705.0" prefWidth="60.0" />
+                        <ComboBox layoutX="353.0" layoutY="1703.0" prefWidth="60.0" />
+                        <ComboBox layoutX="456.0" layoutY="1703.0" prefWidth="60.0" />
+                        <Separator layoutX="10.0" layoutY="1732.0" prefHeight="3.0" prefWidth="527.0" />
+                        <Label layoutX="15.0" layoutY="1746.0" prefHeight="34.0" prefWidth="104.0" text="Thumb CMC Radial Abduction" wrapText="true" />
+                        <TextField fx:id="activeThuCMCRadR" layoutX="166.0" layoutY="1738.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveThuCMCRadR" layoutX="254.0" layoutY="1738.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="activeThuCMCRadL" layoutX="353.0" layoutY="1738.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveThuCMCRadL" layoutX="456.0" layoutY="1738.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox layoutX="166.0" layoutY="1765.0" prefWidth="60.0" />
+                        <ComboBox layoutX="254.0" layoutY="1765.0" prefWidth="60.0" />
+                        <ComboBox layoutX="353.0" layoutY="1765.0" prefWidth="60.0" />
+                        <ComboBox layoutX="456.0" layoutY="1765.0" prefWidth="60.0" />
+                        <Separator layoutX="10.0" layoutY="1792.0" prefHeight="3.0" prefWidth="527.0" />
+                        <Label layoutX="15.0" layoutY="1814.0" prefHeight="14.0" prefWidth="104.0" text="Thumb MCP" wrapText="true" />
+                        <TextField fx:id="activeThuMCPR" layoutX="166.0" layoutY="1798.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox layoutX="166.0" layoutY="1827.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveThuMCPR" layoutX="254.0" layoutY="1798.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="activeThuMCPL" layoutX="353.0" layoutY="1798.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveThuMCPL" layoutX="456.0" layoutY="1797.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox layoutX="254.0" layoutY="1827.0" prefWidth="60.0" />
+                        <ComboBox layoutX="353.0" layoutY="1827.0" prefWidth="60.0" />
+                        <ComboBox layoutX="456.0" layoutY="1827.0" prefWidth="60.0" />
+                        <Separator layoutX="11.0" layoutY="1855.0" prefHeight="3.0" prefWidth="527.0" />
+                        <Label layoutX="15.0" layoutY="1881.0" prefHeight="14.0" prefWidth="104.0" text="Thumb Opposition" wrapText="true" />
+                        <TextField fx:id="activeThuOppR" layoutX="166.0" layoutY="1860.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox layoutX="166.0" layoutY="1888.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveThuOppR" layoutX="254.0" layoutY="1860.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox layoutX="254.0" layoutY="1888.0" prefWidth="60.0" />
+                        <TextField fx:id="passiveThuOppL" layoutX="456.0" layoutY="1862.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="activeThuOppL" layoutX="353.0" layoutY="1860.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox layoutX="353.0" layoutY="1888.0" prefWidth="60.0" />
+                        <ComboBox layoutX="456.0" layoutY="1888.0" prefWidth="60.0" />
+                        <Separator blendMode="DIFFERENCE" layoutX="11.0" layoutY="1919.0" prefHeight="2.0" prefWidth="545.0" />
+                        <Label layoutX="24.0" layoutY="1935.0" text="Tone ">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <Separator blendMode="DIFFERENCE" layoutX="5.0" layoutY="1956.0" prefHeight="4.0" prefWidth="556.0" />
+                        <Separator blendMode="EXCLUSION" layoutX="141.0" layoutY="1938.0" orientation="VERTICAL" prefHeight="290.0" prefWidth="0.0" />
+                        <Separator blendMode="EXCLUSION" layoutX="329.0" layoutY="1938.0" orientation="VERTICAL" prefHeight="291.0" prefWidth="2.0" />
+                        <Label layoutX="169.0" layoutY="1937.0" text="Right " />
+                        <Separator layoutX="231.0" layoutY="1938.0" orientation="VERTICAL" prefHeight="290.0" prefWidth="0.0" />
+                        <Label layoutX="247.0" layoutY="1937.0" text="Right Interp" />
+                        <Separator layoutX="438.0" layoutY="1946.0" orientation="VERTICAL" prefHeight="280.0" prefWidth="3.0" />
+                        <Label layoutX="376.0" layoutY="1937.0" text="Left" />
+                        <Label layoutX="477.0" layoutY="1937.0" text="Left Interp" />
+                        <TextField fx:id="shoulderExtR" layoutX="159.0" layoutY="1966.0" prefHeight="25.0" prefWidth="60.0" />
+                        <Label layoutX="15.0" layoutY="1970.0" text="Shoulder Extensors" />
+                        <ComboBox fx:id="shoulderExtRInterp" layoutX="251.0" layoutY="1966.0" prefWidth="60.0" />
+                        <TextField fx:id="shoulderExtL" layoutX="358.0" layoutY="1966.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox fx:id="shoulderExtLInterp" layoutX="474.0" layoutY="1966.0" prefWidth="60.0" />
+                        <Separator layoutX="11.0" layoutY="1996.0" prefHeight="0.0" prefWidth="557.0" />
+                        <Label layoutX="15.0" layoutY="2004.0" text="Shoulder Flexors" />
+                        <TextField fx:id="shoulderFexR" layoutX="159.0" layoutY="2000.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox fx:id="shoulderFexRInterp" layoutX="249.0" layoutY="2001.0" prefWidth="60.0" />
+                        <ComboBox layoutX="474.0" layoutY="1999.0" prefWidth="60.0" />
+                        <TextField fx:id="shoulderFexL" layoutX="358.0" layoutY="2000.0" prefHeight="25.0" prefWidth="60.0" />
+                        <Separator layoutX="14.0" layoutY="2027.0" prefHeight="0.0" prefWidth="557.0" />
+                        <Label layoutX="15.0" layoutY="2036.0" text="Elbow Extensors" />
+                        <TextField fx:id="elbExtR" layoutX="159.0" layoutY="2033.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox fx:id="elbExtRInterp" layoutX="250.0" layoutY="2033.0" prefWidth="60.0" />
+                        <ComboBox fx:id="elbExtLInterp" layoutX="474.0" layoutY="2032.0" prefWidth="60.0" />
+                        <TextField fx:id="elbExtL" layoutX="358.0" layoutY="2033.0" prefHeight="25.0" prefWidth="60.0" />
+                        <Separator layoutX="11.0" layoutY="2061.0" prefHeight="0.0" prefWidth="557.0" />
+                        <Label layoutX="15.0" layoutY="2072.0" text="Elbow Flexors" />
+                        <TextField fx:id="elbFlexR" layoutX="159.0" layoutY="2065.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="elbFlexL" layoutX="358.0" layoutY="2065.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox fx:id="elbFlexRInterp" layoutX="250.0" layoutY="2065.0" prefWidth="60.0" />
+                        <ComboBox fx:id="elbFlexLinterp" layoutX="473.0" layoutY="2065.0" prefWidth="60.0" />
+                        <Separator layoutX="11.0" layoutY="2093.0" prefHeight="0.0" prefWidth="557.0" />
+                        <Label layoutX="15.0" layoutY="2102.0" text="Wrist Extensors" />
+                        <TextField fx:id="wristExtR" layoutX="159.0" layoutY="2098.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox fx:id="wristExtRInterp" layoutX="248.0" layoutY="2098.0" prefWidth="60.0" />
+                        <ComboBox fx:id="wristExtLInterp" layoutX="474.0" layoutY="2098.0" prefWidth="60.0" />
+                        <TextField fx:id="wristExtL" layoutX="358.0" layoutY="2098.0" prefHeight="25.0" prefWidth="60.0" />
+                        <Separator layoutY="2128.0" prefHeight="0.0" prefWidth="557.0" />
+                        <Label layoutX="15.0" layoutY="2137.0" text="Wrist Flexsors" />
+                        <TextField fx:id="wristFlexR" layoutX="159.0" layoutY="2133.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="wristFlexL" layoutX="358.0" layoutY="2133.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox fx:id="wristFlexRinterp" layoutX="249.0" layoutY="2133.0" prefWidth="60.0" />
+                        <ComboBox fx:id="wristFlexLinterp" layoutX="473.0" layoutY="2133.0" prefWidth="60.0" />
+                        <Separator layoutX="7.0" layoutY="2161.0" prefHeight="0.0" prefWidth="557.0" />
+                        <Label layoutX="15.0" layoutY="2170.0" text="Proximal Muscle Tone" />
+                        <TextField fx:id="promxMuscL" layoutX="358.0" layoutY="2166.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="promxMuscR" layoutX="159.0" layoutY="2166.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox fx:id="promxMuscRinterp" layoutX="249.0" layoutY="2166.0" prefWidth="60.0" />
+                        <ComboBox fx:id="promxMuscLinterp" layoutX="473.0" layoutY="2166.0" prefWidth="60.0" />
+                        <Label layoutX="15.0" layoutY="2201.0" text="Distal Muscle Tone" />
+                        <Separator layoutX="9.0" layoutY="2193.0" prefHeight="0.0" prefWidth="557.0" />
+                        <TextField fx:id="distalMuscR" layoutX="159.0" layoutY="2197.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox fx:id="distalMuscRinterp" layoutX="250.0" layoutY="2198.0" prefWidth="60.0" />
+                        <TextField fx:id="distalMuscL" layoutX="358.0" layoutY="2197.0" prefHeight="25.0" prefWidth="60.0" />
+                        <ComboBox fx:id="distalMuscLinterp" layoutX="472.0" layoutY="2198.0" prefWidth="60.0" />
+                        <Separator blendMode="DIFFERENCE" layoutX="4.0" layoutY="2227.0" prefHeight="1.0" prefWidth="562.0" />
+                        <Separator blendMode="DIFFERENCE" layoutX="8.0" layoutY="2295.0" prefHeight="1.0" prefWidth="562.0" />
+                        <Label layoutX="14.0" layoutY="2323.0" text="Money from Wallet" />
+                        <Separator blendMode="EXCLUSION" layoutX="123.0" layoutY="2286.0" orientation="VERTICAL" prefHeight="206.0" prefWidth="0.0" />
+                        <Label layoutX="153.0" layoutY="2242.0" text="Dynamic Positional Analysis">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <Separator blendMode="EXCLUSION" layoutX="330.0" layoutY="2288.0" orientation="VERTICAL" prefHeight="205.0" prefWidth="6.0" />
+                        <Label layoutX="361.0" layoutY="2261.0" text="Spontaneous Functional Analysis">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="133.0" layoutY="2275.0" text="Thumb Segment">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="237.0" layoutY="2275.0" text="Finger Segment">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <Separator layoutX="227.0" layoutY="2275.0" orientation="VERTICAL" prefHeight="216.0" prefWidth="1.0" />
+                        <ComboBox fx:id="mfwFing" layoutX="246.0" layoutY="2315.0" prefHeight="22.0" prefWidth="74.0" />
+                        <ComboBox fx:id="mfwThum" layoutX="140.0" layoutY="2315.0" prefHeight="22.0" prefWidth="74.0" />
+                        <RadioButton fx:id="mwf0" layoutX="338.0" layoutY="2321.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="mfw1" layoutX="378.0" layoutY="2321.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="mfw2" layoutX="418.0" layoutY="2321.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="mfw3" layoutX="458.0" layoutY="2321.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="mfw4" layoutX="498.0" layoutY="2321.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="mfw5" layoutX="538.0" layoutY="2321.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <Label layoutX="343.0" layoutY="2301.0" text="0" />
+                        <Label layoutX="382.0" layoutY="2301.0" text="1" />
+                        <Label layoutX="421.0" layoutY="2301.0" text="2" />
+                        <Label layoutX="460.0" layoutY="2301.0" text="3" />
+                        <Label layoutX="502.0" layoutY="2301.0" text="4" />
+                        <Label layoutX="542.0" layoutY="2301.0" text="5" />
+                        <Separator layoutX="10.0" layoutY="2344.0" prefHeight="0.0" prefWidth="586.0" />
+                        <Label layoutX="14.0" layoutY="2378.0" text="Fold Paper" />
+                        <ComboBox fx:id="FPThum" layoutX="140.0" layoutY="2370.0" prefHeight="22.0" prefWidth="74.0" />
+                        <ComboBox fx:id="FPFing" layoutX="246.0" layoutY="2370.0" prefHeight="22.0" prefWidth="74.0" />
+                        <RadioButton fx:id="FP0" layoutX="338.0" layoutY="2374.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="FP1" layoutX="378.0" layoutY="2374.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="FP2" layoutX="418.0" layoutY="2374.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="FP3" layoutX="458.0" layoutY="2374.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="FP4" layoutX="498.0" layoutY="2374.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="FP5" layoutX="538.0" layoutY="2374.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <Label layoutX="342.0" layoutY="2349.0" text="0" />
+                        <Label layoutX="382.0" layoutY="2349.0" text="1" />
+                        <Label layoutX="423.0" layoutY="2349.0" text="2" />
+                        <Label layoutX="462.0" layoutY="2349.0" text="3" />
+                        <Label layoutX="502.0" layoutY="2349.0" text="4" />
+                        <Label layoutX="543.0" layoutY="2349.0" text="5" />
+                        <Separator layoutX="5.0" layoutY="2397.0" prefHeight="0.0" prefWidth="586.0" />
+                        <Label layoutX="14.0" layoutY="2424.0" text="Tear Paper" />
+                        <ComboBox fx:id="TPThum" layoutX="140.0" layoutY="2416.0" prefHeight="22.0" prefWidth="74.0" />
+                        <ComboBox fx:id="TPFing" layoutX="246.0" layoutY="2416.0" prefHeight="22.0" prefWidth="74.0" />
+                        <RadioButton fx:id="TP0" layoutX="338.0" layoutY="2422.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="TP1" layoutX="378.0" layoutY="2422.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="TP2" layoutX="418.0" layoutY="2422.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="TP3" layoutX="458.0" layoutY="2422.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="TP4" layoutX="498.0" layoutY="2422.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="TP5" layoutX="538.0" layoutY="2422.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <Label layoutX="343.0" layoutY="2397.0" text="0" />
+                        <Label layoutX="383.0" layoutY="2397.0" text="1" />
+                        <Label layoutX="424.0" layoutY="2397.0" text="2" />
+                        <Label layoutX="461.0" layoutY="2397.0" text="3" />
+                        <Label layoutX="502.0" layoutY="2397.0" text="4" />
+                        <Label layoutX="542.0" layoutY="2397.0" text="5" />
+                        <Separator layoutX="12.0" layoutY="2443.0" prefHeight="0.0" prefWidth="586.0" />
+                        <Label layoutX="14.0" layoutY="2473.0" text="String Bead" />
+                        <ComboBox fx:id="SBThum" layoutX="140.0" layoutY="2465.0" prefHeight="22.0" prefWidth="74.0" />
+                        <ComboBox fx:id="SBFin" layoutX="246.0" layoutY="2465.0" prefHeight="22.0" prefWidth="74.0" />
+                        <RadioButton fx:id="SB0" layoutX="338.0" layoutY="2469.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="SB1" layoutX="378.0" layoutY="2469.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="SB2" layoutX="418.0" layoutY="2469.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="SB3" layoutX="458.0" layoutY="2469.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="SB4" layoutX="498.0" layoutY="2469.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="SB5" layoutX="538.0" layoutY="2469.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <Label layoutX="344.0" layoutY="2445.0" text="0" />
+                        <Label layoutX="382.0" layoutY="2445.0" text="1" />
+                        <Label layoutX="423.0" layoutY="2445.0" text="2" />
+                        <Label layoutX="463.0" layoutY="2445.0" text="3" />
+                        <Label layoutX="504.0" layoutY="2445.0" text="4" />
+                        <Label layoutX="544.0" layoutY="2445.0" text="5" />
+                        <Separator layoutX="11.0" layoutY="2491.0" prefHeight="0.0" prefWidth="586.0" />
+                        <Label layoutX="11.0" layoutY="2544.0" text="Unscrew Bottle Cap" />
+                        <Separator layoutX="12.0" layoutY="2567.0" prefHeight="0.0" prefWidth="586.0" />
+                        <Label layoutX="185.0" layoutY="2500.0" text="Wrist Segment">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <Separator layoutX="225.0" layoutY="2529.0" orientation="VERTICAL" prefHeight="180.0" prefWidth="0.0" />
+                        <Separator blendMode="DIFFERENCE" layoutX="7.0" layoutY="2516.0" prefHeight="3.0" prefWidth="573.0" />
+                        <ComboBox fx:id="UnscrewBotCapWrist1" layoutX="140.0" layoutY="2539.0" prefHeight="22.0" prefWidth="74.0" />
+                        <ComboBox fx:id="UnscrewBotCapWrist2" layoutX="241.0" layoutY="2539.0" prefHeight="22.0" prefWidth="74.0" />
+                        <Label layoutX="371.0" layoutY="2500.0" text="Spontaneous Functional Analysis">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <Separator blendMode="EXCLUSION" layoutX="123.0" layoutY="2502.0" orientation="VERTICAL" prefHeight="207.0" prefWidth="3.0" />
+                        <Separator blendMode="EXCLUSION" layoutX="330.0" layoutY="2502.0" orientation="VERTICAL" prefHeight="207.0" prefWidth="4.0" />
+                        <RadioButton fx:id="UBC0" layoutX="338.0" layoutY="2544.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="UBC1" layoutX="378.0" layoutY="2544.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="UBC2" layoutX="418.0" layoutY="2544.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="UBC3" layoutX="458.0" layoutY="2544.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="UBC4" layoutX="498.0" layoutY="2544.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="UBC5" layoutX="538.0" layoutY="2544.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <Label layoutX="343.0" layoutY="2521.0" text="0" />
+                        <Label layoutX="382.0" layoutY="2521.0" text="1" />
+                        <Label layoutX="423.0" layoutY="2521.0" text="2" />
+                        <Label layoutX="463.0" layoutY="2521.0" text="3" />
+                        <Label layoutX="504.0" layoutY="2521.0" text="4" />
+                        <Label layoutX="542.0" layoutY="2521.0" text="5" />
+                        <Label layoutX="11.0" layoutY="2575.0" prefHeight="35.0" prefWidth="99.0" text="Pull Apart Playdough" wrapText="true" />
+                        <ComboBox fx:id="pullApartPlay1" layoutX="138.0" layoutY="2588.0" prefHeight="22.0" prefWidth="74.0" />
+                        <ComboBox fx:id="pullApartPlay2" layoutX="239.0" layoutY="2588.0" prefHeight="22.0" prefWidth="74.0" />
+                        <RadioButton fx:id="PAP0" layoutX="338.0" layoutY="2592.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="PAP1" layoutX="378.0" layoutY="2592.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="PAP2" layoutX="418.0" layoutY="2592.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="PAP3" layoutX="458.0" layoutY="2592.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="PAP4" layoutX="498.0" layoutY="2592.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="PAP5" layoutX="538.0" layoutY="2592.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <Label layoutX="343.0" layoutY="2569.0" text="0" />
+                        <Label layoutX="383.0" layoutY="2569.0" text="1" />
+                        <Label layoutX="424.0" layoutY="2569.0" text="2" />
+                        <Label layoutX="463.0" layoutY="2569.0" text="3" />
+                        <Label layoutX="502.0" layoutY="2569.0" text="4" />
+                        <Label layoutX="542.0" layoutY="2570.0" text="5" />
+                        <Separator layoutX="13.0" layoutY="2615.0" prefHeight="0.0" prefWidth="586.0" />
+                        <Label layoutX="11.0" layoutY="2622.0" prefHeight="35.0" prefWidth="105.0" text="Cut Playdough with Knife" wrapText="true" />
+                        <ComboBox fx:id="cutPlay1" layoutX="136.0" layoutY="2636.0" prefHeight="22.0" prefWidth="74.0" />
+                        <ComboBox fx:id="cutPlay2" layoutX="242.0" layoutY="2636.0" prefHeight="22.0" prefWidth="74.0" />
+                        <RadioButton fx:id="CPwK0" layoutX="338.0" layoutY="2639.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="CPwK1" layoutX="378.0" layoutY="2639.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="CPwK2" layoutX="418.0" layoutY="2639.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="CPwK3" layoutX="458.0" layoutY="2639.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="CPwK4" layoutX="498.0" layoutY="2639.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="CPwK5" layoutX="538.0" layoutY="2639.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <Label layoutX="343.0" layoutY="2617.0" text="0" />
+                        <Label layoutX="383.0" layoutY="2616.0" text="1" />
+                        <Label layoutX="423.0" layoutY="2616.0" text="2" />
+                        <Label layoutX="463.0" layoutY="2616.0" text="3" />
+                        <Label layoutX="502.0" layoutY="2616.0" text="4" />
+                        <Label layoutX="543.0" layoutY="2616.0" text="5" />
+                        <Separator layoutX="10.0" layoutY="2664.0" prefHeight="0.0" prefWidth="586.0" />
+                        <Label layoutX="11.0" layoutY="2682.0" prefHeight="18.0" prefWidth="105.0" text="Throw Large Ball" wrapText="true" />
+                        <ComboBox layoutX="138.0" layoutY="2679.0" prefHeight="22.0" prefWidth="74.0" />
+                        <ComboBox layoutX="241.0" layoutY="2679.0" prefHeight="22.0" prefWidth="74.0" />
+                        <Separator layoutX="10.0" layoutY="2709.0" prefHeight="0.0" prefWidth="586.0" />
+                        <Label layoutX="207.0" layoutY="2721.0" text="Forearm Segment">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <Separator blendMode="EXCLUSION" layoutX="161.0" layoutY="2722.0" orientation="VERTICAL" prefHeight="176.0" prefWidth="0.0" />
+                        <Separator blendMode="DIFFERENCE" layoutX="14.0" layoutY="2738.0" prefHeight="1.0" prefWidth="590.0" />
+                        <Label layoutX="16.0" layoutY="2754.0" prefHeight="18.0" prefWidth="122.0" text="Accept Coins/Change" />
+                        <Separator layoutX="11.0" layoutY="2780.0" prefHeight="0.0" prefWidth="586.0" />
+                        <ComboBox fx:id="acceptCoins" layoutX="190.0" layoutY="2747.0" prefHeight="21.0" prefWidth="167.0" />
+                        <Label layoutX="16.0" layoutY="2792.0" prefHeight="18.0" prefWidth="122.0" text="Receive 5" />
+                        <ComboBox fx:id="recieve5" layoutX="190.0" layoutY="2789.0" prefHeight="21.0" prefWidth="167.0" />
+                        <Separator layoutX="12.0" layoutY="2819.0" prefHeight="0.0" prefWidth="586.0" />
+                        <Label layoutX="16.0" layoutY="2836.0" text="Take Hand to Mouth" />
+                        <ComboBox fx:id="handToMouth" layoutX="190.0" layoutY="2831.0" prefHeight="21.0" prefWidth="167.0" />
+                        <Separator layoutX="12.0" layoutY="2860.0" prefHeight="0.0" prefWidth="586.0" />
+                        <Label layoutX="16.0" layoutY="2874.0" text="Touch Opp. Ear with Palm" />
+                        <ComboBox fx:id="earWithPalm" layoutX="190.0" layoutY="2870.0" prefHeight="21.0" prefWidth="167.0" />
+                        <Separator layoutX="11.0" layoutY="2897.0" prefHeight="0.0" prefWidth="586.0" />
+                        <Separator blendMode="DIFFERENCE" layoutX="17.0" layoutY="2938.0" prefHeight="0.0" prefWidth="586.0" />
+                        <Separator blendMode="EXCLUSION" layoutX="158.0" layoutY="2912.0" orientation="VERTICAL" prefHeight="217.0" prefWidth="11.0" />
+                        <Label layoutX="222.0" layoutY="2917.0" text="Elbow Segment">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <Separator blendMode="DIFFERENCE" layoutX="8.0" layoutY="358.0" prefHeight="3.0" prefWidth="525.0" />
+                        <Separator blendMode="EXCLUSION" layoutX="359.0" layoutY="2912.0" orientation="VERTICAL" prefHeight="217.0" prefWidth="0.0" />
+                        <Label layoutX="394.0" layoutY="2917.0" text="Spontaneous Functional Analysis">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="61.0" layoutY="2950.0" />
+                        <Label layoutX="13.0" layoutY="2957.0" text="Place Sticker on Ball" />
+                        <ComboBox fx:id="stickerOnBall" layoutX="186.0" layoutY="2957.0" prefHeight="21.0" prefWidth="167.0" />
+                        <RadioButton fx:id="PSOB0" layoutX="378.0" layoutY="2962.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="PSOB1" layoutX="418.0" layoutY="2962.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="PSOB2" layoutX="458.0" layoutY="2962.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="PSOB3" layoutX="498.0" layoutY="2962.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" />
+                        <RadioButton fx:id="PSOB4" layoutX="538.0" layoutY="2962.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="PSOB5" layoutX="578.0" layoutY="2962.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <Label layoutX="383.0" layoutY="2942.0" text="0" />
+                        <Label layoutX="422.0" layoutY="2942.0" text="1" />
+                        <Label layoutX="462.0" layoutY="2942.0" text="2" />
+                        <Label layoutX="503.0" layoutY="2942.0" text="3" />
+                        <Label layoutX="542.0" layoutY="2942.0" text="4" />
+                        <Label layoutX="584.0" layoutY="2942.0" text="5" />
+                        <Label layoutX="13.0" layoutY="3007.0" text="Put Socks on" />
+                        <Separator layoutX="13.0" layoutY="2985.0" prefHeight="0.0" prefWidth="586.0" />
+                        <ComboBox fx:id="socksOn" layoutX="186.0" layoutY="3007.0" prefHeight="21.0" prefWidth="167.0" />
+                        <Separator layoutX="10.0" layoutY="3035.0" prefHeight="0.0" prefWidth="586.0" />
+                        <RadioButton fx:id="PSO0" layoutX="378.0" layoutY="3011.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="PSO1" layoutX="418.0" layoutY="3011.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="PSO2" layoutX="458.0" layoutY="3011.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="PSO3" layoutX="498.0" layoutY="3011.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="PSO4" layoutX="538.0" layoutY="3011.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="PSO5" layoutX="578.0" layoutY="3011.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <Label layoutX="383.0" layoutY="2988.0" text="0" />
+                        <Label layoutX="422.0" layoutY="2988.0" text="1" />
+                        <Label layoutX="463.0" layoutY="2988.0" text="2" />
+                        <Label layoutX="502.0" layoutY="2988.0" text="3" />
+                        <Label layoutX="542.0" layoutY="2988.0" text="4" />
+                        <Label layoutX="584.0" layoutY="2988.0" text="5" />
+                        <Label layoutX="13.0" layoutY="3058.0" text="Fasten Shoe" />
+                        <ComboBox fx:id="fastenShow" layoutX="186.0" layoutY="3058.0" prefHeight="21.0" prefWidth="167.0" />
+                        <RadioButton fx:id="FS0" layoutX="378.0" layoutY="3058.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="FS1" layoutX="418.0" layoutY="3058.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="FS2" layoutX="458.0" layoutY="3058.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="FS3" layoutX="498.0" layoutY="3058.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="FS4" layoutX="538.0" layoutY="3058.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <RadioButton fx:id="FS5" layoutX="578.0" layoutY="3058.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" />
+                        <Label layoutX="382.0" layoutY="3038.0" text="0" />
+                        <Label layoutX="424.0" layoutY="3038.0" text="1" />
+                        <Label layoutX="460.0" layoutY="3038.0" text="2" />
+                        <Label layoutX="504.0" layoutY="3038.0" text="3" />
+                        <Label layoutX="544.0" layoutY="3038.0" text="4" />
+                        <Label layoutX="584.0" layoutY="3038.0" text="5" />
+                        <Separator layoutX="9.0" layoutY="3086.0" prefHeight="0.0" prefWidth="586.0" />
+                        <Label layoutX="13.0" layoutY="3104.0" text="Crawl" />
+                        <ComboBox fx:id="crawl" layoutX="186.0" layoutY="3100.0" prefHeight="21.0" prefWidth="167.0" />
+                        <Separator layoutX="10.0" layoutY="3128.0" prefHeight="0.0" prefWidth="586.0" />
+                        <Separator blendMode="DIFFERENCE" layoutX="10.0" layoutY="3172.0" prefHeight="3.0" prefWidth="393.0" />
+                        <Separator blendMode="EXCLUSION" layoutX="158.0" layoutY="3149.0" orientation="VERTICAL" prefHeight="151.0" prefWidth="5.0" />
+                        <Separator blendMode="EXCLUSION" layoutX="283.0" layoutY="3149.0" orientation="VERTICAL" prefHeight="148.0" prefWidth="0.0" />
+                        <Label layoutX="212.0" layoutY="3149.0" text="Grasp" />
+                        <Label layoutX="325.0" layoutY="3149.0" text="Release" />
+                        <Separator blendMode="EXCLUSION" layoutX="400.0" layoutY="3149.0" orientation="VERTICAL" prefHeight="149.0" prefWidth="0.0" />
+                        <Label layoutX="13.0" layoutY="3192.0" text="Wrist Flexion" />
+                        <ComboBox fx:id="wristFlexGrasp" layoutX="184.0" layoutY="3188.0" prefHeight="19.0" prefWidth="88.0" />
+                        <ComboBox fx:id="wristFlexRelease" layoutX="300.0" layoutY="3188.0" prefHeight="19.0" prefWidth="88.0" />
+                        <Separator layoutX="7.0" layoutY="3217.0" prefHeight="3.0" prefWidth="393.0" />
+                        <Label layoutX="13.0" layoutY="3229.0" text="Wrist Neutral" />
+                        <ComboBox fx:id="wristNeutGrasp" layoutX="184.0" layoutY="3229.0" prefHeight="19.0" prefWidth="88.0" />
+                        <ComboBox fx:id="wristNeutRelease" layoutX="300.0" layoutY="3229.0" prefHeight="19.0" prefWidth="88.0" />
+                        <Separator layoutX="10.0" layoutY="3259.0" prefHeight="3.0" prefWidth="393.0" />
+                        <Label layoutX="13.0" layoutY="3271.0" text="Wrist Extended" />
+                        <ComboBox fx:id="wristExtRelease" layoutX="302.0" layoutY="3267.0" prefHeight="19.0" prefWidth="88.0" />
+                        <ComboBox fx:id="wristExtGrasp" layoutX="186.0" layoutY="3267.0" prefHeight="19.0" prefWidth="88.0" />
+                        <Separator layoutX="11.0" layoutY="3297.0" prefHeight="3.0" prefWidth="393.0" />
+                        <TextArea fx:id="ueComments" layoutX="13.0" layoutY="3369.0" prefHeight="166.0" prefWidth="570.0" />
+                        <Label layoutX="13.0" layoutY="3344.0" text="Comments" />
+                        <Label layoutX="13.0" layoutY="3544.0" text="Functional Classification System">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="13.0" layoutY="3564.0" text="0 - Does not use-Extemity not utilized in any capacity for completion of task" />
+                        <Label layoutX="13.0" layoutY="3584.0" text="1 - Poor passive assist-Uses as stabilizing weight only" />
+                        <Label layoutX="13.0" layoutY="3603.0" text="2 - Passive assist-Can hold onto object placed in hand &amp; may stabliize it for use by other hand" />
+                        <Label layoutX="13.0" layoutY="3620.0" text="3 - Poor active assist-Can actively grasp object &amp; hold it weakly" />
+                        <Label layoutX="13.0" layoutY="3638.0" text="4 - Active assist-Can actively grasp object, stabilize it well, &amp; may manipulate it against the other hand" />
+                        <Label layoutX="13.0" layoutY="3655.0" text="5 - Spontaneous use, partial to complete-Performs bimanuan activites easily: may use hand spontaneously or without reference to the other hand" />
+                    </AnchorPane>
+                </ScrollPane>
+            </Tab>
+<!--            <Tab fx:id="interp" text="Interpret">-->
+<!--                <BorderPane fx:id="bp">-->
+<!--                    <center>-->
+<!--                        <AnchorPane fx:id="ap" prefHeight="771.0" prefWidth="629.0" />-->
+<!--                    </center>-->
+<!--                    <left>-->
+<!--                        <VBox prefHeight="771.0" prefWidth="128.0" stylesheets="@../styles.css" BorderPane.alignment="CENTER">-->
+<!--                            <ToggleButton fx:id="videoUEButton" mnemonicParsing="false" onMouseClicked="#onVideoAssessment" prefHeight="80.0" prefWidth="130.0" text="Video Assessment" wrapText="true">-->
+<!--                                <font>-->
+<!--                                    <Font name="SansSerif Regular" size="13.0" />-->
+<!--                                </font>-->
+<!--                            </ToggleButton>-->
+<!--                            <ToggleButton fx:id="UEPhysButton" mnemonicParsing="false" onMouseClicked="#onUEPhys" prefHeight="80.0" prefWidth="130.0" text="UE Physical Examination" textAlignment="CENTER" wrapText="true">-->
+<!--                                <font>-->
+<!--                                    <Font size="13.0" />-->
+<!--                                </font>-->
+<!--                            </ToggleButton>-->
+<!--                            <ToggleButton fx:id="kinematicsButton" mnemonicParsing="false" onMouseClicked="#onKinematics" prefHeight="80.0" prefWidth="130.0" text="Kinematics">-->
+<!--                                <font>-->
+<!--                                    <Font size="13.0" />-->
+<!--                                </font>-->
+<!--                            </ToggleButton>-->
+<!--                            <ToggleButton fx:id="photoButton" mnemonicParsing="false" onMouseClicked="#onPhotos" prefHeight="80.0" prefWidth="130.0" text="Photographs">-->
+<!--                                <font>-->
+<!--                                    <Font name="SansSerif Regular" size="13.0" />-->
+<!--                                </font>-->
+<!--                            </ToggleButton>-->
+<!--                            <ToggleButton fx:id="assessmentFormButton" mnemonicParsing="false" onMouseClicked="#onAssessmentForm" prefHeight="80.0" prefWidth="130.0" text="Assessment Form">-->
+<!--                                <font>-->
+<!--                                    <Font name="SansSerif Regular" size="13.0" />-->
+<!--                                </font>-->
+<!--                            </ToggleButton>-->
+<!--                            <ToggleButton fx:id="recommendationsButton" mnemonicParsing="false" onMouseClicked="#onRecomendations" prefHeight="80.0" prefWidth="130.0" text="Recommendations">-->
+<!--                                <font>-->
+<!--                                    <Font name="SansSerif Regular" size="13.0" />-->
+<!--                                </font>-->
+<!--                            </ToggleButton>-->
+<!--                            <ToggleButton fx:id="signaturesButton" mnemonicParsing="false" onMouseDragged="#onSignatures" prefHeight="80.0" prefWidth="130.0" text="Signatures">-->
+<!--                                <font>-->
+<!--                                    <Font size="13.0" />-->
+<!--                                </font>-->
+<!--                            </ToggleButton>-->
+<!--                        </VBox>-->
+<!--                    </left>-->
+<!--                </BorderPane>-->
+<!--            </Tab>-->
+            <Tab fx:id="reportTab" text="Reports">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <Label layoutX="7.0" layoutY="133.0" text="Gait Pictures " />
+                    <Label layoutX="7" layoutY="62.0" prefWidth="1085.0" text="Gray boxes indicate that some data is present for that test/visit combination." />
+                    <Label layoutX="7.0" layoutY="79.0" text=" A question mark (?) indicates there are comments associated with that test. Hover the mouse over the box to see the comments." />
+                    <Label layoutX="7.0" layoutY="159.0" text="Gait Video" />
+                    <Label layoutX="7.0" layoutY="186.0" text="Gait Foot Pressure" />
+                    <Label layoutX="7.0" layoutY="209.0" text="Gait Kinematics " />
+                    <Label layoutX="7.0" layoutY="237.0" text="Gait Multisegment" />
+                    <Label layoutX="7.0" layoutY="263.0" text="Gait EMG Surface" />
+                    <Label layoutX="7.0" layoutY="286.0" text="Gait EMG Fine Wire" />
+                    <Label layoutX="7.0" layoutY="310.0" text="Gait PT Exam" />
+                    <Label layoutX="7.0" layoutY="335.0" text="Gait Walking Only" />
+                    <Label layoutX="7.0" layoutY="360.0" text="Gait Exercise" />
+                    <Label layoutX="7.0" layoutY="387.0" text="Gait Walking and Exercise" />
+                    <Label layoutX="7.0" layoutY="412.0" text="Gait Step Watch" />
+                    <Separator layoutX="7.0" layoutY="155.0" prefHeight="3.0" prefWidth="783.0" />
+                    <Label layoutX="274.0" layoutY="103.0" text="Date 1" />
+                    <Label layoutX="330.0" layoutY="103.0" text="Date 2" />
+                    <Label layoutX="384.0" layoutY="103.0" text="Date 3" />
+                    <CheckBox layoutX="283.0" layoutY="133.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="339.0" layoutY="133.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="394.0" layoutY="133.0" mnemonicParsing="false" />
+                    <Separator layoutX="9.0" layoutY="180.0" prefHeight="3.0" prefWidth="783.0" />
+                    <CheckBox layoutX="283.0" layoutY="158.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="339.0" layoutY="158.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="394.0" layoutY="159.0" mnemonicParsing="false" />
+                    <Separator layoutX="7.0" layoutY="203.0" prefHeight="3.0" prefWidth="783.0" />
+                    <CheckBox layoutX="283.0" layoutY="184.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="339.0" layoutY="184.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="394.0" layoutY="184.0" mnemonicParsing="false" />
+                    <Separator layoutX="7.0" layoutY="228.0" prefHeight="3.0" prefWidth="783.0" />
+                    <CheckBox layoutX="283.0" layoutY="209.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="339.0" layoutY="209.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="394.0" layoutY="209.0" mnemonicParsing="false" />
+                    <Separator layoutX="7.0" layoutY="256.0" prefHeight="3.0" prefWidth="783.0" />
+                    <CheckBox layoutX="283.0" layoutY="235.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="339.0" layoutY="237.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="394.0" layoutY="235.0" mnemonicParsing="false" />
+                    <Separator layoutX="8.0" layoutY="280.0" prefHeight="3.0" prefWidth="783.0" />
+                    <Separator layoutX="9.0" layoutY="306.0" prefHeight="3.0" prefWidth="783.0" />
+                    <CheckBox layoutX="283.0" layoutY="261.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="339.0" layoutY="263.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="394.0" layoutY="261.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="283.0" layoutY="286.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="339.0" layoutY="286.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="394.0" layoutY="286.0" mnemonicParsing="false" />
+                    <Separator layoutX="7.0" layoutY="329.0" prefHeight="3.0" prefWidth="783.0" />
+                    <CheckBox layoutX="339.0" layoutY="310.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="283.0" layoutY="310.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="394.0" layoutY="310.0" mnemonicParsing="false" />
+                    <Separator layoutX="7.0" layoutY="355.0" prefHeight="3.0" prefWidth="783.0" />
+                    <Separator layoutX="7.0" layoutY="381.0" prefHeight="3.0" prefWidth="783.0" />
+                    <Separator layoutX="7.0" layoutY="407.0" prefHeight="3.0" prefWidth="783.0" />
+                    <Separator layoutX="7.0" layoutY="432.0" prefHeight="3.0" prefWidth="783.0" />
+                    <CheckBox layoutX="283.0" layoutY="335.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="339.0" layoutY="335.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="394.0" layoutY="335.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="283.0" layoutY="360.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="339.0" layoutY="360.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="394.0" layoutY="360.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="283.0" layoutY="387.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="339.0" layoutY="387.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="394.0" layoutY="387.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="283.0" layoutY="413.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="339.0" layoutY="413.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="394.0" layoutY="412.0" mnemonicParsing="false" />
+                    <Separator layoutX="255.0" layoutY="109.0" orientation="VERTICAL" prefHeight="507.0" prefWidth="9.0" />
+                    <Separator layoutX="319.0" layoutY="109.0" orientation="VERTICAL" prefHeight="515.0" prefWidth="3.0" />
+                    <Separator layoutX="375.0" layoutY="112.0" orientation="VERTICAL" prefHeight="505.0" prefWidth="0.0" />
+                    <Separator layoutX="429.0" layoutY="112.0" orientation="VERTICAL" prefHeight="511.0" prefWidth="0.0" />
+                    <Label layoutX="7.0" layoutY="437.0" text="Gait History" />
+                    <CheckBox layoutX="283.0" layoutY="439.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="339.0" layoutY="439.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="394.0" layoutY="437.0" mnemonicParsing="false" />
+                    <Separator layoutX="6.0" layoutY="456.0" prefHeight="3.0" prefWidth="783.0" />
+                    <Label layoutX="7.0" layoutY="464.0" text="Gait - Interpretation Full" />
+                    <CheckBox layoutX="283.0" layoutY="464.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="339.0" layoutY="464.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="394.0" layoutY="464.0" mnemonicParsing="false" />
+                    <Separator layoutX="-5.0" layoutY="483.0" prefHeight="3.0" prefWidth="783.0" />
+                    <Label layoutX="7.0" layoutY="486.0" text="Gait Interpretation Modified" />
+                    <CheckBox layoutX="283.0" layoutY="486.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="339.0" layoutY="486.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="394.0" layoutY="486.0" mnemonicParsing="false" />
+                    <Separator layoutX="7.0" layoutY="505.0" prefHeight="3.0" prefWidth="783.0" />
+                    <Label layoutX="7.0" layoutY="510.0" text="UE - Pics" />
+                    <CheckBox layoutX="283.0" layoutY="510.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="339.0" layoutY="510.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="394.0" layoutY="510.0" mnemonicParsing="false" />
+                    <Separator layoutX="3.0" layoutY="529.0" prefHeight="3.0" prefWidth="783.0" />
+                    <Label layoutX="7.0" layoutY="534.0" text="UE - Video" />
+                    <Separator layoutX="7.0" layoutY="553.0" prefHeight="3.0" prefWidth="783.0" />
+                    <CheckBox layoutX="283.0" layoutY="534.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="339.0" layoutY="534.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="394.0" layoutY="534.0" mnemonicParsing="false" />
+                    <Label layoutX="7.0" layoutY="558.0" text="UE - Kinematics" />
+                    <Separator layoutX="7.0" layoutY="577.0" prefHeight="3.0" prefWidth="783.0" />
+                    <CheckBox layoutX="283.0" layoutY="558.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="339.0" layoutY="558.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="394.0" layoutY="558.0" mnemonicParsing="false" />
+                    <Label layoutX="7.0" layoutY="582.0" text="UE - Physical Exam" />
+                    <CheckBox layoutX="283.0" layoutY="582.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="339.0" layoutY="582.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="394.0" layoutY="582.0" mnemonicParsing="false" />
+                    <Separator layoutX="-5.0" layoutY="599.0" prefHeight="3.0" prefWidth="783.0" />
+                    <Separator blendMode="EXCLUSION" layoutX="-2.0" layoutY="53.0" prefHeight="3.0" prefWidth="783.0" />
+                    <Button fx:id="sideNavCompen" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#onViewCompendium" prefHeight="31.0" prefWidth="172.0" text="View Compendium" />
+               <Button fx:id="sideNavInterp" layoutX="197.0" layoutY="14.0" mnemonicParsing="false" onAction="#onViewInterpretation" prefHeight="31.0" prefWidth="172.0" text="View Interpretation" />
+                </AnchorPane>
+            </Tab>
+            <Tab fx:id="dataTab" text="Data">
+                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                    <TreeView fx:id="dataTable" layoutX="9.0" layoutY="19.0" onMouseClicked="#selectedItem" prefHeight="546.0" prefWidth="222.0">
+                    </TreeView>
+                    <HBox layoutX="355.0" layoutY="161.0" prefHeight="236.0" prefWidth="379.0">
+                    </HBox>
+                </AnchorPane>
+            </Tab>
+        </TabPane>
+    </Pane>
+
+
+</AnchorPane>

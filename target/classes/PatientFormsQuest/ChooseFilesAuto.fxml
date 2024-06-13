@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.gait.gaitui.Controller.PatientFormsQuest.ChooseFilesAutoController">
+    <AnchorPane prefHeight="529.0" prefWidth="631.0">
+        <Text layoutX="21.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Print Patient Forms: ">
+            <font>
+                <Font name="SansSerif Bold" size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="21.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To print forms for a different date than the one shown, enter the date in the box and click &quot;Change Date&quot;" wrappingWidth="572.8034362792969">
+            <font>
+                <Font name="SansSerif Regular" size="12.0" />
+            </font>
+        </Text>
+        <Text layoutX="21.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patients Scheduled For: ">
+            <font>
+                <Font name="SansSerif Regular" size="14.0" />
+            </font>
+        </Text>
+        <TextField fx:id="aptDate" layoutX="188.0" layoutY="83.0" />
+        <Button fx:id="changeDate" layoutX="356.0" layoutY="83.0" mnemonicParsing="false" text="Change Date" />
+        <Separator layoutX="-7.0" layoutY="117.0" prefHeight="0.0" prefWidth="634.0" />
+        <Text fx:id="patientMRN" layoutX="244.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <CheckBox fx:id="patientName" layoutX="12.0" layoutY="201.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="146.0" />
+        <CheckBox fx:id="patientVisitForm" layoutX="73.0" layoutY="235.0" mnemonicParsing="false" prefHeight="10.0" prefWidth="168.0" text="Patient Visit Form" />
+        <CheckBox fx:id="anaylsisInfo" layoutX="73.0" layoutY="259.0" mnemonicParsing="false" prefHeight="10.0" prefWidth="168.0" text="Analysis Info Sheet" />
+        <CheckBox fx:id="ptEval" layoutX="73.0" layoutY="283.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="124.0" text="PT Eval" />
+        <CheckBox fx:id="engineer" layoutX="73.0" layoutY="307.0" mnemonicParsing="false" text="Engineer" />
+        <CheckBox fx:id="ptFootEval" layoutX="73.0" layoutY="330.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="101.0" text="PT Foot Eval" />
+        <CheckBox fx:id="shueeForm" layoutX="73.0" layoutY="351.0" mnemonicParsing="false" text="SHUEE Grading Form" />
+        <CheckBox fx:id="ueEngForm" layoutX="73.0" layoutY="373.0" mnemonicParsing="false" text="UE Engineer Form" />
+        <CheckBox fx:id="ptRunningForm" layoutX="73.0" layoutY="394.0" mnemonicParsing="false" text="PT Running Form" />
+        <CheckBox fx:id="runEngForm" layoutX="73.0" layoutY="417.0" mnemonicParsing="false" text="Running Engineer Form" />
+        <CheckBox fx:id="ueEvalForm" layoutX="73.0" layoutY="440.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="127.0" text="UE Eval Form" />
+      <Button fx:id="printbutton" layoutX="220.0" layoutY="487.0" mnemonicParsing="false" onAction="#onPrint" prefHeight="25.0" prefWidth="132.0" text="Print" />
+      <Text layoutX="194.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MRN:" wrappingWidth="38.86456298828125" />
+      <Button fx:id="selectAll" layoutX="22.0" layoutY="129.0" mnemonicParsing="false" text="Select All" />
+      <Button fx:id="unselectAll" layoutX="94.0" layoutY="129.0" mnemonicParsing="false" text="Unselect All" />
+    </AnchorPane>
+</ScrollPane>

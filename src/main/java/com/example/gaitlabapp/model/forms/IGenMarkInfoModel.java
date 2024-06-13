@@ -1,0 +1,58 @@
+package com.example.gaitlabapp.model.forms;
+
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
+import jakarta.persistence.*;
+import lombok.NoArgsConstructor;
+
+@Data
+@Getter
+@Setter
+@Entity
+@NoArgsConstructor
+@Table(name = "GenMarkInfo")
+public class IGenMarkInfoModel {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "genMarkerId")
+    private Integer genMarkerId;
+    @Column(name = "height")
+    private Integer height;
+    @Column(name = "weight")
+    private Integer weight;
+    @Column(name = "rightFootLength")
+    private String rightFootLength;
+    @Column(name = "leftFootLength")
+    private String leftFootLength;
+    @Column(name = "rightFootWidth")
+    private String rightFootWidth;
+    @Column(name = "leftFootWidth")
+    private String leftFootWidth;
+    @Column(name = "gmfcs")
+    private String gmfcs;
+    @Column(name = "fms5m")
+    private String fms5m;
+    @Column(name = "fms50m")
+    private String fms50m;
+    @Column(name = "fms500m")
+    private String fms500m;
+    @Column(name = "comments")
+    private String comments;
+    @Column(name = "macs")
+    private String macs;
+    @Column(name = "AS1")
+    private String AS1;
+    @Column(name = "AS2")
+    private String AS2;
+    @Column(name = "AS3")
+    private String AS3;
+    @Column(name = "AS4")
+    private String AS4;
+    @Column(name = "AS5")
+    private String AS5;
+    @Column(name = "AS6")
+    private String AS6;
+
+}

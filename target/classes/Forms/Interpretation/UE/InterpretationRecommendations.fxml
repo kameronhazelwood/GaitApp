@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane prefHeight="771.0" prefWidth="669.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Interpretation.UE.InterpretationRecommendationsController">
+   <content>
+      <TabPane prefHeight="2000.0" prefWidth="700.0">
+         <tabs>
+            <Tab text="Diagnostic">
+               <content>
+                  <AnchorPane prefHeight="400.0" prefWidth="600.0">
+                     <children>
+                        <CheckBox layoutX="31.0" layoutY="39.0" mnemonicParsing="false" text="Recommend post operative motion analysis in one year to document outcome">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="31.0" layoutY="75.0" mnemonicParsing="false" text="Based on this evaluation, no additional diagnostic tests are indicated">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="31.0" layoutY="107.0" mnemonicParsing="false" text="Radiographs if they are felt to be clinically indicated">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="31.0" layoutY="140.0" mnemonicParsing="false" text="Based on the available data, the diagnosis is not clear and further work up is indicated">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <TextArea layoutX="175.0" layoutY="240.0" prefHeight="121.0" prefWidth="300.0" />
+                        <Text layoutX="98.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comments: ">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <CheckBox layoutX="127.0" layoutY="240.0" mnemonicParsing="false" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Surgery">
+               <content>
+                  <AnchorPane prefHeight="400.0" prefWidth="600.0">
+                     <children>
+                        <CheckBox layoutX="10.0" layoutY="30.0" mnemonicParsing="false" text="Based on the reviewed data, there are no specific surgical recommendations">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="10.0" layoutY="59.0" mnemonicParsing="false" text="Botox">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="10.0" layoutY="87.0" mnemonicParsing="false" text="Surgery">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" text="Either Botox or Surgery">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <Text layoutX="15.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                        </Text>
+                        <CheckBox layoutX="10.0" layoutY="184.0" mnemonicParsing="false" text="Improving function by releasing overactive muscle groups">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="10.0" layoutY="213.0" mnemonicParsing="false" text="Improving function by stabilizing joint segments">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="10.0" layoutY="242.0" mnemonicParsing="false" text="Improving function by augmenting selective motor control">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="10.0" layoutY="270.0" mnemonicParsing="false" text="Facilitating care by releasing contractures or re-aligning joints">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="10.0" layoutY="297.0" mnemonicParsing="false" text="Reducing pain by stabilizing or realigning joints">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="10.0" layoutY="325.0" mnemonicParsing="false" text="Enhancing self esteem by restoring normal appearance">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <Text layoutX="10.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Global surgical goals include">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Text>
+                        <CheckBox layoutX="10.0" layoutY="398.0" mnemonicParsing="false" text="Joint stabilization">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="10.0" layoutY="425.0" mnemonicParsing="false" text="Improve external rotation">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="10.0" layoutY="450.0" mnemonicParsing="false" text="Improve internal rotation">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="219.0" layoutY="398.0" mnemonicParsing="false" text="Fusion">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="219.0" layoutY="425.0" mnemonicParsing="false" text="Capsular reconstructions">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="219.0" layoutY="450.0" mnemonicParsing="false" text="Lengthen pectoralis major/subscapularis">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="10.0" layoutY="477.0" mnemonicParsing="false" text="transfer LD and/or teres major">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="219.0" layoutY="477.0" mnemonicParsing="false" text="Humeral osteotomy">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="10.0" layoutY="502.0" mnemonicParsing="false" text="Lengthen/release infraspinatus/teres minor">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="10.0" layoutY="526.0" mnemonicParsing="false" text="Other">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <TextArea layoutX="82.0" layoutY="526.0" prefHeight="74.0" prefWidth="304.0" promptText="Tap tp Enter Text" />
+                        <Text layoutX="15.0" layoutY="625.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elbow" wrappingWidth="77.025390625">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                        </Text>
+                        <CheckBox layoutX="10.0" layoutY="638.0" mnemonicParsing="false" text="Joint stabilization">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="10.0" layoutY="665.0" mnemonicParsing="false" text="Improve extension">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="10.0" layoutY="690.0" mnemonicParsing="false" text="Capsulotomy">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="219.0" layoutY="638.0" mnemonicParsing="false" text="Fusion">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="219.0" layoutY="665.0" mnemonicParsing="false" text="BR release">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="219.0" layoutY="690.0" mnemonicParsing="false" text="Lengthen biceps brachii/brachialis">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="219.0" layoutY="717.0" mnemonicParsing="false" text="Flexor pronator mass release (slide)">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="10.0" layoutY="717.0" mnemonicParsing="false" text="Other">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <TextArea layoutX="11.0" layoutY="744.0" prefHeight="74.0" prefWidth="304.0" promptText="Tap tp Enter Text" />
+                        <Text layoutX="15.0" layoutY="850.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forearm" wrappingWidth="77.025390625">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                        </Text>
+                        <CheckBox layoutX="10.0" layoutY="863.0" mnemonicParsing="false" text="Improve supination">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="10.0" layoutY="890.0" mnemonicParsing="false" text="Radius/ulna osteotomy">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="219.0" layoutY="863.0" mnemonicParsing="false" text="Reroute, lengthen, or release PT">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="219.0" layoutY="890.0" mnemonicParsing="false" text="BR release">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="10.0" layoutY="917.0" mnemonicParsing="false" text="Flexor-pronator release (slide)">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="10.0" layoutY="942.0" mnemonicParsing="false" text="Other">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <TextArea layoutX="82.0" layoutY="942.0" prefHeight="74.0" prefWidth="304.0" promptText="Tap tp Enter Text" />
+                        <Text layoutX="13.0" layoutY="1043.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrist" wrappingWidth="77.025390625">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                        </Text>
+                        <CheckBox layoutX="10.0" layoutY="1056.0" mnemonicParsing="false" text="Stabilization">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="10.0" layoutY="1083.0" mnemonicParsing="false" text="Improve extension">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="158.0" layoutY="1056.0" mnemonicParsing="false" text="Flexor tendon release">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="158.0" layoutY="1083.0" mnemonicParsing="false" text="Proximal row carpectomy">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="10.0" layoutY="1110.0" mnemonicParsing="false" text="Fusion">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="159.0" layoutY="1135.0" mnemonicParsing="false" text="FCU transfer to ECRB/ECRL/EDC">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <TextArea layoutX="10.0" layoutY="1165.0" prefHeight="74.0" prefWidth="304.0" promptText="Tap tp Enter Text" />
+                        <CheckBox layoutX="159.0" layoutY="1110.0" mnemonicParsing="false" text="ECU transfer">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="10.0" layoutY="1135.0" mnemonicParsing="false" text="Other">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <Text layoutX="10.0" layoutY="1280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thumb" wrappingWidth="77.025390625">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                        </Text>
+                        <CheckBox layoutX="10.0" layoutY="1293.0" mnemonicParsing="false" text="Stabilization">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="10.0" layoutY="1320.0" mnemonicParsing="false" text="Improve extension">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="162.0" layoutY="1293.0" mnemonicParsing="false" text="Volar plate arthroplasty">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="162.0" layoutY="1320.0" mnemonicParsing="false" text="Proximal row carpectomy">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="10.0" layoutY="1347.0" mnemonicParsing="false" text="Improve abduction">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="163.0" layoutY="1372.0" mnemonicParsing="false" text="Release/lengthen FPL">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <TextArea layoutX="10.0" layoutY="1447.0" prefHeight="74.0" prefWidth="304.0" promptText="Tap tp Enter Text" />
+                        <CheckBox layoutX="163.0" layoutY="1347.0" mnemonicParsing="false" text="MCP fusion">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="10.0" layoutY="1372.0" mnemonicParsing="false" text="Reinforce EPL">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="163.0" layoutY="1397.0" mnemonicParsing="false" text="Release adductor pollicis">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="10.0" layoutY="1397.0" mnemonicParsing="false" text="Reinforce APL">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="163.0" layoutY="1421.0" mnemonicParsing="false" text="EPL rerouting">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="10.0" layoutY="1421.0" mnemonicParsing="false" text="Other">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <Text layoutX="11.0" layoutY="1549.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Finger" wrappingWidth="77.025390625">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                        </Text>
+                        <CheckBox layoutX="11.0" layoutY="1562.0" mnemonicParsing="false" text="Flexion deformity">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="11.0" layoutY="1589.0" mnemonicParsing="false" text="FDS to EDC transfer">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="167.0" layoutY="1562.0" mnemonicParsing="false" text="Swan-neck deformity">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="167.0" layoutY="1589.0" mnemonicParsing="false" text="Flexor/pronator release">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="11.0" layoutY="1616.0" mnemonicParsing="false" text="FDS/FDP lengthening">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="168.0" layoutY="1641.0" mnemonicParsing="false" text="Central slip tenotomy">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <TextArea layoutX="10.0" layoutY="1695.0" prefHeight="74.0" prefWidth="304.0" promptText="Tap tp Enter Text" />
+                        <CheckBox layoutX="168.0" layoutY="1616.0" mnemonicParsing="false" text="FDS to FDP transfer">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="11.0" layoutY="1641.0" mnemonicParsing="false" text="PIP joint tenodesis">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="168.0" layoutY="1666.0" mnemonicParsing="false" text="Intrinsic origin Release">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="10.0" layoutY="1666.0" mnemonicParsing="false" text="Other">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="PT/OT">
+               <content>
+                  <AnchorPane prefHeight="400.0" prefWidth="600.0">
+                     <children>
+                        <CheckBox layoutX="15.0" layoutY="40.0" mnemonicParsing="false" text="No therapy is recommended">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="15.0" layoutY="65.0" mnemonicParsing="false" text="Strengthening program">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="15.0" layoutY="90.0" mnemonicParsing="false" text="Intense Bimanual use activities">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="15.0" layoutY="115.0" mnemonicParsing="false" text="Post surgery or post Botox rehabilitation">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <TextArea layoutX="107.0" layoutY="253.0" prefHeight="121.0" prefWidth="300.0" promptText="Tap to Enter Text" />
+                        <Text layoutX="15.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comments: ">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <CheckBox layoutX="15.0" layoutY="240.0" mnemonicParsing="false" />
+                        <CheckBox layoutX="15.0" layoutY="140.0" mnemonicParsing="false" text="Participation in age-appropriate activities such as martial arts, dance, swimming">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="15.0" layoutY="165.0" mnemonicParsing="false" text="Evaluation for assistive technology">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="15.0" layoutY="190.0" mnemonicParsing="false" text="Stretching exercises to improve flexibility and muscle length">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="15.0" layoutY="215.0" mnemonicParsing="false" text="Current therapy program seems reasonable">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Splinting">
+               <content>
+                  <AnchorPane prefHeight="400.0" prefWidth="600.0">
+                     <children>
+                        <Separator layoutY="68.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="3.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N">
+                           <font>
+                              <Font name="SansSerif Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="22.0" layoutY="49.0" orientation="VERTICAL" prefHeight="157.0" prefWidth="0.0" />
+                        <Text layoutX="27.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R">
+                           <font>
+                              <Font name="SansSerif Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="44.0" layoutY="49.0" orientation="VERTICAL" prefHeight="157.0" prefWidth="0.0" />
+                        <Text layoutX="49.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L">
+                           <font>
+                              <Font name="SansSerif Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="66.0" layoutY="49.0" orientation="VERTICAL" prefHeight="157.0" prefWidth="0.0" />
+                        <Text layoutX="70.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B">
+                           <font>
+                              <Font name="SansSerif Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="71.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="71.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="49.0" layoutY="71.0" mnemonicParsing="false" />
+                        <Separator layoutX="88.0" layoutY="49.0" orientation="VERTICAL" prefHeight="157.0" prefWidth="0.0" />
+                        <RadioButton layoutX="70.0" layoutY="71.0" mnemonicParsing="false" />
+                        <Separator layoutY="91.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="270.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Splinting">
+                           <font>
+                              <Font name="SansSerif Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="115.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resting hand splint">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="95.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="95.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="49.0" layoutY="95.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="70.0" layoutY="95.0" mnemonicParsing="false" />
+                        <Separator layoutY="114.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="115.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrist cock-up splint">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="117.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="117.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="49.0" layoutY="117.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="70.0" layoutY="117.0" mnemonicParsing="false" />
+                        <Separator layoutY="137.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="115.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thumb abduction splint">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="140.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="140.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="50.0" layoutY="140.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="70.0" layoutY="140.0" mnemonicParsing="false" />
+                        <Separator layoutY="160.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="115.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elbow extension splint">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="164.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="164.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="50.0" layoutY="164.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="70.0" layoutY="164.0" mnemonicParsing="false" />
+                        <Separator layoutY="183.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="115.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current orthotics are appropriate">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="186.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="186.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="50.0" layoutY="186.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="70.0" layoutY="186.0" mnemonicParsing="false" />
+                        <Separator layoutY="206.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="115.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Short arm cast or splint for Constraint Induced Therapy">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Text>
+                        <TextArea layoutX="182.0" layoutY="267.0" prefHeight="89.0" prefWidth="329.0" promptText="Tap to Enter Text" />
+                        <Text layoutX="83.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comments:">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </content>
+</ScrollPane>

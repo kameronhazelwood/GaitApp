@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Interpretation.UE.GenerateUEInterpretation">
+    <BorderPane fx:id="bp">
+        <center>
+            <AnchorPane fx:id="ap" prefHeight="771.0" prefWidth="629.0" />
+        </center>
+        <left>
+            <VBox prefHeight="771.0" prefWidth="128.0" stylesheets="@../../../styles.css" BorderPane.alignment="CENTER">
+                <children>
+                    <ToggleButton fx:id="videoUEButton" mnemonicParsing="false" onMouseClicked="#onVideoAssessment" prefHeight="80.0" prefWidth="130.0" text="Video Assessment" wrapText="true">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </ToggleButton>
+                    <ToggleButton fx:id="UEPhysButton" mnemonicParsing="false" onMouseClicked="#onUEPhys" prefHeight="80.0" prefWidth="130.0" text="UE Physical Examination" textAlignment="CENTER" wrapText="true">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                    </ToggleButton>
+                    <ToggleButton fx:id="kinematicsButton" mnemonicParsing="false" onMouseClicked="#onKinematics" prefHeight="80.0" prefWidth="130.0" text="Kinematics">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                    </ToggleButton>
+                    <ToggleButton fx:id="photoButton" mnemonicParsing="false" onMouseClicked="#onPhotos" prefHeight="80.0" prefWidth="130.0" text="Photographs">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </ToggleButton>
+                    <ToggleButton fx:id="assessmentFormButton" mnemonicParsing="false" onMouseClicked="#onAssessmentForm" prefHeight="80.0" prefWidth="130.0" text="Assessment Form">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </ToggleButton>
+                    <ToggleButton fx:id="recommendationsButton" mnemonicParsing="false" onMouseClicked="#onRecomendations" prefHeight="80.0" prefWidth="130.0" text="Recommendations">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </ToggleButton>
+                    <ToggleButton fx:id="signaturesButton" mnemonicParsing="false" onMouseDragged="#onSignatures" prefHeight="80.0" prefWidth="130.0" text="Signatures">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                    </ToggleButton>
+               <ToggleButton fx:id="signaturesButton1" mnemonicParsing="false" onMouseDragged="#onSignatures" prefHeight="80.0" prefWidth="130.0" text="Download PDF">
+                  <font>
+                     <Font size="13.0" />
+                  </font>
+               </ToggleButton>
+                </children>
+            </VBox>
+        </left>
+    </BorderPane>
+
+</AnchorPane>

@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane prefHeight="420.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Interpretation.FootEval.FootEvalNeuroController">
+    <TabPane prefHeight="755.0" prefWidth="710.0" tabClosingPolicy="UNAVAILABLE">
+        <Tab text="Issues">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="726.0" prefWidth="752.0">
+                <Text layoutX="72.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Issues Impacting Gait Function">
+                    <font>
+                        <Font name="SansSerif Regular" size="14.0" />
+                    </font>
+                </Text>
+                <TextArea layoutX="68.0" layoutY="111.0" prefHeight="158.0" prefWidth="509.0" promptText="Tap to Enter Text" />
+            </AnchorPane>
+        </Tab>
+        <Tab text="Behavior / Cognitive Function">
+            <content>
+                <AnchorPane prefHeight="400.0" prefWidth="600.0">
+                    <children>
+                        <Separator layoutY="68.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="3.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <Separator layoutX="22.0" layoutY="49.0" orientation="VERTICAL" prefHeight="111.0" prefWidth="0.0" />
+                        <Text layoutX="27.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <Separator layoutX="44.0" layoutY="49.0" orientation="VERTICAL" prefHeight="111.0" prefWidth="0.0" />
+                        <Text layoutX="49.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <Separator layoutX="66.0" layoutY="49.0" orientation="VERTICAL" prefHeight="111.0" prefWidth="0.0" />
+                        <Text layoutX="70.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="71.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="71.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="49.0" layoutY="71.0" mnemonicParsing="false" />
+                        <Separator layoutX="88.0" layoutY="49.0" orientation="VERTICAL" prefHeight="111.0" prefWidth="0.0" />
+                        <RadioButton layoutX="70.0" layoutY="71.0" mnemonicParsing="false" />
+                        <Separator layoutY="91.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="270.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Condition">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <Text layoutX="115.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No problem">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="95.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="95.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="49.0" layoutY="95.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="70.0" layoutY="95.0" mnemonicParsing="false" />
+                        <Separator layoutY="114.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="115.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Requires frequent redirection to complete tasks">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="117.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="117.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="49.0" layoutY="117.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="70.0" layoutY="117.0" mnemonicParsing="false" />
+                        <Separator layoutY="137.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="115.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Is a primary impairment to gait function ">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="140.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="140.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="50.0" layoutY="140.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="70.0" layoutY="140.0" mnemonicParsing="false" />
+                        <Separator layoutY="160.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="115.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Is an associated impairment">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                        <TextArea layoutX="182.0" layoutY="229.0" prefHeight="89.0" prefWidth="329.0" promptText="Tap to Enter Text" />
+                        <Text layoutX="83.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comments:">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Motor Control / Static Balance">
+            <content>
+                <AnchorPane prefHeight="400.0" prefWidth="600.0">
+                    <children>
+                        <Separator layoutY="68.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="3.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <Separator layoutX="22.0" layoutY="49.0" orientation="VERTICAL" prefHeight="111.0" prefWidth="0.0" />
+                        <Text layoutX="27.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <Separator layoutX="44.0" layoutY="49.0" orientation="VERTICAL" prefHeight="111.0" prefWidth="0.0" />
+                        <Text layoutX="49.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <Separator layoutX="66.0" layoutY="49.0" orientation="VERTICAL" prefHeight="111.0" prefWidth="0.0" />
+                        <Text layoutX="70.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="71.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="71.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="49.0" layoutY="71.0" mnemonicParsing="false" />
+                        <Separator layoutX="88.0" layoutY="49.0" orientation="VERTICAL" prefHeight="111.0" prefWidth="0.0" />
+                        <RadioButton layoutX="70.0" layoutY="71.0" mnemonicParsing="false" />
+                        <Separator layoutY="91.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="270.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Condition">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <Text layoutX="115.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Decreased knee flexion with toe drag">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="95.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="95.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="49.0" layoutY="95.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="70.0" layoutY="95.0" mnemonicParsing="false" />
+                        <Separator layoutY="114.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="115.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mild impairment ">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="117.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="117.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="49.0" layoutY="117.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="70.0" layoutY="117.0" mnemonicParsing="false" />
+                        <Separator layoutY="137.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="115.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Moderate impairment limiting gait function ">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="140.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="140.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="50.0" layoutY="140.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="70.0" layoutY="140.0" mnemonicParsing="false" />
+                        <Separator layoutY="160.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="115.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Severe impairment limiting functional community ambulation">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                        <TextArea layoutX="182.0" layoutY="216.0" prefHeight="89.0" prefWidth="329.0" promptText="Tap to Enter Text" />
+                        <Text layoutX="83.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comments:">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Muscle Strength">
+            <content>
+                <AnchorPane prefHeight="400.0" prefWidth="600.0">
+                    <children>
+                        <Separator layoutY="68.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="3.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <Separator layoutX="22.0" layoutY="49.0" orientation="VERTICAL" prefHeight="90.0" prefWidth="0.0" />
+                        <Text layoutX="27.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <Separator layoutX="44.0" layoutY="49.0" orientation="VERTICAL" prefHeight="90.0" prefWidth="0.0" />
+                        <Text layoutX="49.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <Separator layoutX="66.0" layoutY="49.0" orientation="VERTICAL" prefHeight="90.0" prefWidth="0.0" />
+                        <Text layoutX="70.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="71.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="71.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="49.0" layoutY="71.0" mnemonicParsing="false" />
+                        <Separator layoutX="88.0" layoutY="49.0" orientation="VERTICAL" prefHeight="90.0" prefWidth="0.0" />
+                        <RadioButton layoutX="70.0" layoutY="71.0" mnemonicParsing="false" />
+                        <Separator layoutY="91.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="270.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Condition">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <Text layoutX="115.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Normal">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="95.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="95.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="49.0" layoutY="95.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="70.0" layoutY="95.0" mnemonicParsing="false" />
+                        <Separator layoutY="114.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="115.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Isolated weakness">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="117.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="117.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="49.0" layoutY="117.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="70.0" layoutY="117.0" mnemonicParsing="false" />
+                        <Separator layoutY="137.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="115.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Global weakness">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                        <TextArea layoutX="182.0" layoutY="220.0" prefHeight="89.0" prefWidth="329.0" promptText="Tap to Enter Text" />
+                        <Text layoutX="83.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comments:">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Movement Disorder">
+            <content>
+                <AnchorPane prefHeight="400.0" prefWidth="600.0">
+                    <children>
+                        <Separator layoutY="68.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="3.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <Separator layoutX="22.0" layoutY="49.0" orientation="VERTICAL" prefHeight="136.0" prefWidth="0.0" />
+                        <Text layoutX="27.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <Separator layoutX="44.0" layoutY="49.0" orientation="VERTICAL" prefHeight="136.0" prefWidth="0.0" />
+                        <Text layoutX="49.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <Separator layoutX="66.0" layoutY="49.0" orientation="VERTICAL" prefHeight="136.0" prefWidth="0.0" />
+                        <Text layoutX="70.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="71.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="71.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="49.0" layoutY="71.0" mnemonicParsing="false" />
+                        <Separator layoutX="88.0" layoutY="49.0" orientation="VERTICAL" prefHeight="136.0" prefWidth="0.0" />
+                        <RadioButton layoutX="70.0" layoutY="71.0" mnemonicParsing="false" />
+                        <Separator layoutY="91.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="270.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Condition">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <Text layoutX="115.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="None">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="95.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="95.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="49.0" layoutY="95.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="70.0" layoutY="95.0" mnemonicParsing="false" />
+                        <Separator layoutY="114.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="115.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dystonia">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="117.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="117.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="49.0" layoutY="117.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="70.0" layoutY="117.0" mnemonicParsing="false" />
+                        <Separator layoutY="137.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="115.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Spastic ">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="140.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="140.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="50.0" layoutY="140.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="70.0" layoutY="140.0" mnemonicParsing="false" />
+                        <Separator layoutY="160.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="115.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dyskinetic ">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="164.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="164.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="50.0" layoutY="164.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="70.0" layoutY="164.0" mnemonicParsing="false" />
+                        <Text layoutX="115.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mixed">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                        <Separator layoutY="183.0" prefHeight="0.0" prefWidth="588.0" />
+                        <TextArea layoutX="182.0" layoutY="210.0" prefHeight="89.0" prefWidth="329.0" promptText="Tap to Enter Text" />
+                        <Text layoutX="83.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comments:">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Muscle Tone ">
+            <content>
+                <AnchorPane prefHeight="400.0" prefWidth="600.0">
+                    <children>
+                        <Separator layoutY="68.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="3.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <Separator layoutX="22.0" layoutY="49.0" orientation="VERTICAL" prefHeight="90.0" prefWidth="0.0" />
+                        <Text layoutX="27.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <Separator layoutX="44.0" layoutY="49.0" orientation="VERTICAL" prefHeight="90.0" prefWidth="0.0" />
+                        <Text layoutX="49.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <Separator layoutX="66.0" layoutY="49.0" orientation="VERTICAL" prefHeight="90.0" prefWidth="0.0" />
+                        <Text layoutX="70.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="71.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="71.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="49.0" layoutY="71.0" mnemonicParsing="false" />
+                        <Separator layoutX="88.0" layoutY="49.0" orientation="VERTICAL" prefHeight="90.0" prefWidth="0.0" />
+                        <RadioButton layoutX="70.0" layoutY="71.0" mnemonicParsing="false" />
+                        <Separator layoutY="91.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="270.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Condition">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <Text layoutX="115.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="None">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="95.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="95.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="49.0" layoutY="95.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="70.0" layoutY="95.0" mnemonicParsing="false" />
+                        <Separator layoutY="114.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="115.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hypotonia">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="117.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="117.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="49.0" layoutY="117.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="70.0" layoutY="117.0" mnemonicParsing="false" />
+                        <Separator layoutY="137.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="115.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hypertonia">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                        <Separator layoutY="167.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="3.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <Separator layoutX="22.0" layoutY="148.0" orientation="VERTICAL" prefHeight="90.0" prefWidth="0.0" />
+                        <Text layoutX="27.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <Separator layoutX="44.0" layoutY="148.0" orientation="VERTICAL" prefHeight="90.0" prefWidth="0.0" />
+                        <Text layoutX="49.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <Separator layoutX="66.0" layoutY="148.0" orientation="VERTICAL" prefHeight="90.0" prefWidth="0.0" />
+                        <Text layoutX="70.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="170.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="170.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="49.0" layoutY="170.0" mnemonicParsing="false" />
+                        <Separator layoutX="88.0" layoutY="148.0" orientation="VERTICAL" prefHeight="90.0" prefWidth="0.0" />
+                        <RadioButton layoutX="70.0" layoutY="170.0" mnemonicParsing="false" />
+                        <Separator layoutY="190.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="270.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Multilevel Spasticity">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <Text layoutX="115.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Spasticity assisting support ">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="194.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="194.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="49.0" layoutY="194.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="70.0" layoutY="194.0" mnemonicParsing="false" />
+                        <Separator layoutY="213.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="115.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Spasticity associated impairment to gait ">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="216.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="216.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="49.0" layoutY="216.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="70.0" layoutY="216.0" mnemonicParsing="false" />
+                        <Separator layoutY="236.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="115.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Spasticity the primary gait impairment">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                        <Separator layoutY="266.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="3.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <Separator layoutX="22.0" layoutY="247.0" orientation="VERTICAL" prefHeight="90.0" prefWidth="0.0" />
+                        <Text layoutX="27.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <Separator layoutX="44.0" layoutY="247.0" orientation="VERTICAL" prefHeight="90.0" prefWidth="0.0" />
+                        <Text layoutX="49.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <Separator layoutX="66.0" layoutY="247.0" orientation="VERTICAL" prefHeight="90.0" prefWidth="0.0" />
+                        <Text layoutX="70.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="269.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="269.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="49.0" layoutY="269.0" mnemonicParsing="false" />
+                        <Separator layoutX="88.0" layoutY="247.0" orientation="VERTICAL" prefHeight="90.0" prefWidth="0.0" />
+                        <RadioButton layoutX="70.0" layoutY="269.0" mnemonicParsing="false" />
+                        <Separator layoutY="289.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="270.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Focal Spasticity">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <Text layoutX="115.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Spasticity assisting support ">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="293.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="293.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="49.0" layoutY="293.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="70.0" layoutY="293.0" mnemonicParsing="false" />
+                        <Separator layoutY="312.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="115.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Spasticity associated impairment to gait ">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                        <RadioButton layoutX="2.0" layoutY="315.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="27.0" layoutY="315.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="49.0" layoutY="315.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="70.0" layoutY="315.0" mnemonicParsing="false" />
+                        <Separator layoutY="335.0" prefHeight="0.0" prefWidth="588.0" />
+                        <Text layoutX="115.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Spasticity the primary gait impairment">
+                            <font>
+                                <Font name="SansSerif Regular" size="13.0" />
+                            </font>
+                        </Text>
+                        <Text layoutX="13.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comments:">
+                            <font>
+                                <Font name="SansSerif Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <TextArea layoutX="115.0" layoutY="355.0" prefHeight="86.0" prefWidth="413.0" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+    </TabPane>
+</ScrollPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane fx:id="scenePane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.gaitlabapp.controllers.LogoutController" prefHeight="400.0" prefWidth="600.0">
+
+        <HBox VBox.vgrow="NEVER">
+            <children>
+                <ToolBar maxHeight="-Infinity" maxWidth="-Infinity" HBox.hgrow="ALWAYS">
+                    <items>
+                        <Button fx:id="patient" layoutX="130.0" layoutY="50" mnemonicParsing="false"prefHeight="80.0" prefWidth="120.0" styleClass="buttonTransparent" text="Patients" />
+                        <ImageView>
+                            <image>
+                                <Image url="@../patient.png" />
+                            </image>
+                        </ImageView>
+                        <Button fx:id="forms" layoutX="130.0" layoutY="50" mnemonicParsing="false" prefHeight="80.0" prefWidth="120.0" text="Forms" />
+                        <Button fx:id="scheduler" layoutX="130.0" layoutY="50" mnemonicParsing="false" prefHeight="80.0" prefWidth="120.0" text="Scheduler" />
+                        <Button fx:id="reports" layoutX="130.0" layoutY="50" mnemonicParsing="false" prefHeight="80.0" prefWidth="120.0" text="Reports" />
+                        <Button fx:id="users" layoutX="130.0" layoutY="50" mnemonicParsing="false" prefHeight="80.0" prefWidth="120.0" text="Users" />
+                        <Button fx:id="queries" layoutX="130.0" layoutY="50" mnemonicParsing="false" prefHeight="80.0" prefWidth="120.0" text="Queries" />
+                        <Button fx:id="logout" layoutX="130.0" layoutY="50" mnemonicParsing="false" prefHeight="80.0" prefWidth="120.0" text="Logout" onAction="#logout"/>
+                    </items>
+                </ToolBar>
+            </children>
+        </HBox>
+</AnchorPane>

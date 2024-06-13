@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Interpretation.FootEval.GenerateFootInterpretation">
+
+    <BorderPane fx:id="bp">
+        <center>
+            <AnchorPane fx:id="ap" prefHeight="771.0" prefWidth="1139.0" />
+        </center>
+        <left>
+            <VBox prefHeight="771.0" prefWidth="185.0" stylesheets="@../../../styles.css" BorderPane.alignment="CENTER">
+                <children>
+                    <ToggleButton fx:id="videoUEButton" mnemonicParsing="false" onMouseClicked="#onVideoAssessment" prefHeight="40.0" prefWidth="180.0" text="Video Assessment" wrapText="true">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </ToggleButton>
+                    <ToggleButton fx:id="GAITPhysButton" mnemonicParsing="false" onMouseClicked="#onGAITPhys" prefHeight="40.0" prefWidth="181.0" text="GAIT Physical Examination" textAlignment="CENTER" wrapText="true">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                    </ToggleButton>
+                    <ToggleButton fx:id="kinematicsButton" mnemonicParsing="false" onMouseClicked="#onKinematics" prefHeight="40.0" prefWidth="181.0" text="Kinematics">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                    </ToggleButton>
+                    <ToggleButton fx:id="kineticsButton" mnemonicParsing="false" onMouseClicked="#onKinetics" prefHeight="40.0" prefWidth="181.0" text="Kinetics">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </ToggleButton>
+                    <ToggleButton fx:id="footModelButton" mnemonicParsing="false" onMouseClicked="#onFootModel" prefHeight="40.0" prefWidth="181.0" text="Foot Model">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </ToggleButton>
+                    <ToggleButton fx:id="emgButton" mnemonicParsing="false" onMouseClicked="#onEMG" prefHeight="40.0" prefWidth="181.0" text="EMG Assessment">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </ToggleButton>
+                    <ToggleButton fx:id="pedobaragraphButton" mnemonicParsing="false" onMouseClicked="#onPedobaragraph" prefHeight="40.0" prefWidth="181.0" text="Pedobaragraph">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                    </ToggleButton>
+                    <ToggleButton fx:id="metabolicButton" mnemonicParsing="false" onMouseClicked="#onMetabolic" prefHeight="40.0" prefWidth="181.0" text="Metabolic (O2) Assessment" textAlignment="CENTER" wrapText="true">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                    </ToggleButton>
+                    <ToggleButton fx:id="stepWatchButton" mnemonicParsing="false" onMouseClicked="#onStepWatch" prefHeight="40.0" prefWidth="181.0" text="Step Watch" textAlignment="CENTER" wrapText="true">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                    </ToggleButton>
+                    <ToggleButton fx:id="photographsButton" mnemonicParsing="false" onMouseClicked="#onPhotographs" prefHeight="40.0" prefWidth="181.0" text="Photographs" textAlignment="CENTER" wrapText="true">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                    </ToggleButton>
+                    <ToggleButton fx:id="neuroButton" mnemonicParsing="false" onMouseClicked="#onNeuro" prefHeight="40.0" prefWidth="181.0" text="Neuro-Behavioral/ Cognitive" textAlignment="CENTER" wrapText="true">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                    </ToggleButton>
+                    <ToggleButton fx:id="biomechanicsButton" mnemonicParsing="false" onMouseClicked="#onBio" prefHeight="40.0" prefWidth="181.0" text="Biomechanics of Gait" textAlignment="CENTER" wrapText="true">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                    </ToggleButton>
+                    <ToggleButton fx:id="recommendationsButton" mnemonicParsing="false" onMouseClicked="#onRecommendation" prefHeight="40.0" prefWidth="181.0" text="Recommendations" textAlignment="CENTER" wrapText="true">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                    </ToggleButton>
+                    <ToggleButton fx:id="signaturesButton" mnemonicParsing="false" onMouseClicked="#onSignatures" prefHeight="40.0" prefWidth="181.0" text="Signatures" textAlignment="CENTER" wrapText="true">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                    </ToggleButton>
+               <ToggleButton fx:id="signaturesButton1" mnemonicParsing="false" onMouseClicked="#onSignatures" prefHeight="40.0" prefWidth="181.0" text="Download PDF" textAlignment="CENTER" wrapText="true">
+                  <font>
+                     <Font size="13.0" />
+                  </font>
+               </ToggleButton>
+                </children>
+            </VBox>
+        </left>
+    </BorderPane>
+
+
+</AnchorPane>

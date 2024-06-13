@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane prefHeight="709.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Interpretation.GAIT.InterpretationStepWatchController">
+   <content>
+      <AnchorPane prefHeight="1000.0" prefWidth="820.0">
+          <children>
+              <Text layoutX="14.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                  <font>
+                      <Font name="SansSerif Bold" size="14.0" />
+                  </font>
+              </Text>
+              <Text layoutX="359.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Condition 1">
+                  <font>
+                      <Font name="SansSerif Bold" size="14.0" />
+                  </font>
+              </Text>
+              <Text layoutX="295.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Value">
+                  <font>
+                      <Font name="SansSerif Bold" size="14.0" />
+                  </font>
+              </Text>
+              <Text layoutX="382.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interpretation">
+                  <font>
+                      <Font name="SansSerif Bold" size="14.0" />
+                  </font>
+              </Text>
+              <Text layoutX="522.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Normals">
+                  <font>
+                      <Font name="SansSerif Bold" size="14.0" />
+                  </font>
+              </Text>
+              <Separator layoutY="70.0" prefHeight="0.0" prefWidth="649.0" />
+              <Separator layoutX="265.0" layoutY="50.0" orientation="VERTICAL" prefHeight="670.0" prefWidth="6.0" />
+              <Separator layoutX="359.0" layoutY="50.0" orientation="VERTICAL" prefHeight="670.0" prefWidth="0.0" />
+              <Separator layoutX="501.0" layoutY="50.0" orientation="VERTICAL" prefHeight="670.0" prefWidth="0.0" />
+              <Text layoutX="10.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Strides">
+                  <font>
+                      <Font name="SansSerif Regular" size="12.0" />
+                  </font>
+              </Text>
+              <Separator layoutY="95.0" prefHeight="0.0" prefWidth="649.0" />
+              <Text layoutX="300.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+              <Text layoutX="539.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+              <Text layoutX="10.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Strides SD">
+                  <font>
+                      <Font name="SansSerif Regular" size="12.0" />
+                  </font>
+              </Text>
+              <Separator layoutY="120.0" prefHeight="0.0" prefWidth="649.0" />
+              <Text layoutX="300.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+              <Text layoutX="539.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+              <Text layoutX="10.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Active Minutes">
+                  <font>
+                      <Font name="SansSerif Regular" size="12.0" />
+                  </font>
+              </Text>
+              <Separator layoutY="145.0" prefHeight="0.0" prefWidth="649.0" />
+              <Text layoutX="300.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+              <Text layoutX="539.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+              <Text layoutX="10.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Active Minutes SD">
+                  <font>
+                      <Font name="SansSerif Regular" size="12.0" />
+                  </font>
+              </Text>
+              <Separator layoutY="170.0" prefHeight="0.0" prefWidth="649.0" />
+              <Text layoutX="300.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+              <Text layoutX="539.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+              <Text layoutX="11.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peak Performance">
+                  <font>
+                      <Font name="SansSerif Regular" size="12.0" />
+                  </font>
+              </Text>
+              <Separator layoutY="195.0" prefHeight="0.0" prefWidth="649.0" />
+              <Text layoutX="300.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+              <Text layoutX="539.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+              <Text layoutX="10.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peak Performance SD">
+                  <font>
+                      <Font name="SansSerif Regular" size="12.0" />
+                  </font>
+              </Text>
+              <Separator layoutY="220.0" prefHeight="0.0" prefWidth="649.0" />
+              <Text layoutX="300.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+              <Text layoutX="539.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+              <Text layoutX="10.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max Strides 5">
+                  <font>
+                      <Font name="SansSerif Regular" size="12.0" />
+                  </font>
+              </Text>
+              <Separator layoutY="245.0" prefHeight="0.0" prefWidth="649.0" />
+              <Text layoutX="300.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+              <Text layoutX="539.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+              <Text layoutX="10.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max Strides 5 SD">
+                  <font>
+                      <Font name="SansSerif Regular" size="12.0" />
+                  </font>
+              </Text>
+              <Separator layoutY="270.0" prefHeight="0.0" prefWidth="649.0" />
+              <Text layoutX="300.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+              <Text layoutX="539.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+              <Text layoutX="10.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max Strides 1">
+                  <font>
+                      <Font name="SansSerif Regular" size="12.0" />
+                  </font>
+              </Text>
+              <Separator layoutY="295.0" prefHeight="0.0" prefWidth="649.0" />
+              <Text layoutX="300.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+              <Text layoutX="539.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+              <Text layoutX="10.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max Strides 1 SD">
+                  <font>
+                      <Font name="SansSerif Regular" size="12.0" />
+                  </font>
+              </Text>
+              <Separator layoutY="320.0" prefHeight="0.0" prefWidth="649.0" />
+              <Text layoutX="300.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+              <Text layoutX="539.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+              <Text layoutX="10.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="High Activity Minutes">
+                  <font>
+                      <Font name="SansSerif Regular" size="12.0" />
+                  </font>
+              </Text>
+              <Separator layoutY="345.0" prefHeight="0.0" prefWidth="649.0" />
+              <Text layoutX="300.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+              <Text layoutX="539.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+              <Text layoutX="10.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="High Activity Minutes SD">
+                  <font>
+                      <Font name="SansSerif Regular" size="12.0" />
+                  </font>
+              </Text>
+              <Separator layoutY="370.0" prefHeight="0.0" prefWidth="649.0" />
+              <Text layoutX="300.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+              <Text layoutX="539.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="10.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medium Activity Minutes">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="395.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="10.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medium Activity Minutes SD">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="420.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="10.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Low Activity Minutes">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="445.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="10.0" layoutY="462.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Low Activity Minutes SD">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="470.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="10.0" layoutY="487.0" strokeType="OUTSIDE" strokeWidth="0.0" text="High Activity Strides">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="495.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="10.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="High Activity Strides SD">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="520.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="10.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medium Activity Strides">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="545.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="10.0" layoutY="563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medium Activity Strides SD">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="570.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="10.0" layoutY="588.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Low Activity Strides">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="595.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="10.0" layoutY="613.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Low Activity Strides SD">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="620.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="10.0" layoutY="637.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Minutes">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="645.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="10.0" layoutY="662.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Minutes SD">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="670.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="10.0" layoutY="688.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Percent Active">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="695.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="10.0" layoutY="712.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Percent Active SD">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="720.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="539.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="462.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="487.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="588.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="22.13671875" />
+            <Text layoutX="539.0" layoutY="613.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="637.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="662.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="688.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="712.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="300.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="300.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="300.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="302.0" layoutY="462.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="300.0" layoutY="487.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="300.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="300.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="300.0" layoutY="563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="300.0" layoutY="588.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="300.0" layoutY="613.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="300.0" layoutY="637.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="300.0" layoutY="662.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="300.0" layoutY="688.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="302.0" layoutY="712.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+          </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

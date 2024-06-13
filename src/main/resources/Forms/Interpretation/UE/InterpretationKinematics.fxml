@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane prefHeight="555.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Interpretation.UE.InterpretationKinematicsController">
+   <content>
+      <TabPane prefHeight="600.0" prefWidth="1500.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Shoulder Abduction">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="15.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name ">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="78.0" prefHeight="0.0" prefWidth="474.0" />
+                        <Separator layoutX="237.0" layoutY="52.0" orientation="VERTICAL" prefHeight="207.0" prefWidth="0.0" />
+                        <Text layoutX="5.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder Abduction max Right R">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="268.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Value">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="51.0" prefHeight="2.0" prefWidth="474.0" />
+                        <Text layoutX="313.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Condition 1">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="332.0" layoutY="52.0" orientation="VERTICAL" prefHeight="207.0" prefWidth="0.0" />
+                        <Text layoutX="362.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interpretation">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="472.0" layoutY="52.0" orientation="VERTICAL" prefHeight="207.0" prefWidth="0.0" />
+                        <Separator layoutY="108.0" prefWidth="474.0" />
+                        <Text layoutX="5.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder Abduction max Left L">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="138.0" prefWidth="474.0" />
+                        <Text layoutX="5.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder Abduction min Right R">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="168.0" prefWidth="474.0" />
+                        <Text layoutX="5.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder Abduction min Left L">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="198.0" prefWidth="474.0" />
+                        <Text layoutX="5.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder External rotation max Right R">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="228.0" prefWidth="474.0" />
+                        <Text layoutX="5.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder External rotation max Left L">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="258.0" prefWidth="474.0" />
+                        <Text layoutX="268.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="268.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="268.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="268.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="268.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="268.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upper Extremity Shoulder Abduction">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="69.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comments: ">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <TextArea layoutX="158.0" layoutY="303.0" prefHeight="65.0" prefWidth="325.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Hand to Mouth">
+              <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                      <children>
+                          <Text layoutX="15.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name ">
+                              <font>
+                                  <Font name="SansSerif Regular" size="14.0" />
+                              </font>
+                          </Text>
+                          <Separator layoutY="78.0" prefHeight="0.0" prefWidth="474.0" />
+                          <Separator layoutX="237.0" layoutY="52.0" orientation="VERTICAL" prefHeight="267.0" prefWidth="0.0" />
+                          <Text layoutX="5.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder Abduction max Right R">
+                              <font>
+                                  <Font name="SansSerif Regular" size="12.0" />
+                              </font>
+                          </Text>
+                          <Text layoutX="268.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Value">
+                              <font>
+                                  <Font name="SansSerif Regular" size="14.0" />
+                              </font>
+                          </Text>
+                          <Separator layoutY="51.0" prefHeight="2.0" prefWidth="474.0" />
+                          <Text layoutX="313.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Condition 1">
+                              <font>
+                                  <Font name="SansSerif Regular" size="14.0" />
+                              </font>
+                          </Text>
+                          <Separator layoutX="332.0" layoutY="52.0" orientation="VERTICAL" prefHeight="267.0" prefWidth="0.0" />
+                          <Text layoutX="362.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interpretation">
+                              <font>
+                                  <Font name="SansSerif Regular" size="14.0" />
+                              </font>
+                          </Text>
+                          <Separator layoutX="472.0" layoutY="52.0" orientation="VERTICAL" prefHeight="267.0" prefWidth="0.0" />
+                          <Separator layoutY="108.0" prefWidth="474.0" />
+                          <Text layoutX="5.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder Abduction max Left L">
+                              <font>
+                                  <Font name="SansSerif Regular" size="12.0" />
+                              </font>
+                          </Text>
+                          <Separator layoutY="138.0" prefWidth="474.0" />
+                          <Text layoutX="5.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder Flexion max Right R">
+                              <font>
+                                  <Font name="SansSerif Regular" size="12.0" />
+                              </font>
+                          </Text>
+                          <Separator layoutY="168.0" prefWidth="474.0" />
+                          <Text layoutX="5.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder Flexion max Left L">
+                              <font>
+                                  <Font name="SansSerif Regular" size="12.0" />
+                              </font>
+                          </Text>
+                          <Separator layoutY="198.0" prefWidth="474.0" />
+                          <Text layoutX="5.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrist Flexion/Extension mean Right R">
+                              <font>
+                                  <Font name="SansSerif Regular" size="12.0" />
+                              </font>
+                          </Text>
+                          <Separator layoutY="228.0" prefWidth="474.0" />
+                          <Text layoutX="5.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrist Flexion/Extension mean Left L">
+                              <font>
+                                  <Font name="SansSerif Regular" size="12.0" />
+                              </font>
+                          </Text>
+                          <Separator layoutY="258.0" prefWidth="474.0" />
+                          <Text layoutX="268.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                          <Text layoutX="268.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                          <Text layoutX="268.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                          <Text layoutX="268.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                          <Text layoutX="268.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                          <Text layoutX="268.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="5.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrist Pronation/Supination mean Right R">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="288.0" prefWidth="474.0" />
+                        <Text layoutX="5.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrist Pronation/Supination mean Left L">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="318.0" prefWidth="474.0" />
+                        <Text layoutX="268.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="268.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upper Extremity Hand to Mouth">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="52.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comments: ">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <TextArea layoutX="154.0" layoutY="329.0" prefHeight="98.0" prefWidth="357.0" />
+                      </children>
+                  </AnchorPane>
+              </content>
+          </Tab>
+            <Tab text="Hand to Neck">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                            <Text layoutX="15.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name ">
+                                <font>
+                                    <Font name="SansSerif Regular" size="14.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutY="78.0" prefHeight="0.0" prefWidth="474.0" />
+                            <Separator layoutX="237.0" layoutY="52.0" orientation="VERTICAL" prefHeight="148.0" prefWidth="0.0" />
+                            <Text layoutX="5.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder Abduction max Right R">
+                                <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                </font>
+                            </Text>
+                            <Text layoutX="268.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Value">
+                                <font>
+                                    <Font name="SansSerif Regular" size="14.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutY="51.0" prefHeight="2.0" prefWidth="474.0" />
+                            <Text layoutX="313.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Condition 1">
+                                <font>
+                                    <Font name="SansSerif Regular" size="14.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutX="332.0" layoutY="52.0" orientation="VERTICAL" prefHeight="148.0" prefWidth="0.0" />
+                            <Text layoutX="362.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interpretation">
+                                <font>
+                                    <Font name="SansSerif Regular" size="14.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutX="472.0" layoutY="52.0" orientation="VERTICAL" prefHeight="148.0" prefWidth="0.0" />
+                            <Separator layoutY="108.0" prefWidth="474.0" />
+                            <Text layoutX="5.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder Abduction max Left L">
+                                <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutY="138.0" prefWidth="474.0" />
+                            <Text layoutX="5.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder External Rotation min Right R">
+                                <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutY="168.0" prefWidth="474.0" />
+                            <Text layoutX="5.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder External Rotation min Left L">
+                                <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutY="198.0" prefWidth="474.0" />
+                            <Text layoutX="268.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                            <Text layoutX="268.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                            <Text layoutX="268.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                            <Text layoutX="268.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="7.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upper Extremity Hand to Neck">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="36.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comments: ">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <TextArea layoutX="126.0" layoutY="271.0" prefHeight="80.0" prefWidth="305.0" />
+                        </children>
+                    </AnchorPane>
+                </content>
+            </Tab>
+            <Tab text="Forward Reach">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                            <Text layoutX="15.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name ">
+                                <font>
+                                    <Font name="SansSerif Regular" size="14.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutY="78.0" prefHeight="0.0" prefWidth="474.0" />
+                            <Separator layoutX="237.0" layoutY="52.0" orientation="VERTICAL" prefHeight="87.0" prefWidth="0.0" />
+                            <Text layoutX="5.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elbow extension min Right R">
+                                <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                </font>
+                            </Text>
+                            <Text layoutX="268.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Value">
+                                <font>
+                                    <Font name="SansSerif Regular" size="14.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutY="51.0" prefHeight="2.0" prefWidth="474.0" />
+                            <Text layoutX="313.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Condition 1">
+                                <font>
+                                    <Font name="SansSerif Regular" size="14.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutX="332.0" layoutY="52.0" orientation="VERTICAL" prefHeight="87.0" prefWidth="0.0" />
+                            <Text layoutX="362.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interpretation">
+                                <font>
+                                    <Font name="SansSerif Regular" size="14.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutX="472.0" layoutY="52.0" orientation="VERTICAL" prefHeight="87.0" prefWidth="0.0" />
+                            <Separator layoutY="108.0" prefWidth="474.0" />
+                            <Text layoutX="5.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elbow extension min Left L">
+                                <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutY="138.0" prefWidth="474.0" />
+                            <Text layoutX="268.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                            <Text layoutX="268.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upper Extremity Forward Reach">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="77.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comments: ">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <TextArea layoutX="158.0" layoutY="212.0" prefHeight="82.0" prefWidth="313.0" />
+                        </children>
+                    </AnchorPane>
+                </content>
+            </Tab>
+            <Tab text="Walking">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                            <Text layoutX="15.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name ">
+                                <font>
+                                    <Font name="SansSerif Regular" size="14.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutY="78.0" prefHeight="0.0" prefWidth="474.0" />
+                            <Separator layoutX="237.0" layoutY="52.0" orientation="VERTICAL" prefHeight="328.0" prefWidth="0.0" />
+                            <Text layoutX="5.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder Flexion max Right R">
+                                <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                </font>
+                            </Text>
+                            <Text layoutX="268.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Value">
+                                <font>
+                                    <Font name="SansSerif Regular" size="14.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutY="51.0" prefHeight="2.0" prefWidth="474.0" />
+                            <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upper Extremity Ball Overhead">
+                                <font>
+                                    <Font name="SansSerif Regular" size="14.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutX="332.0" layoutY="52.0" orientation="VERTICAL" prefHeight="328.0" prefWidth="0.0" />
+                            <Text layoutX="362.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interpretation">
+                                <font>
+                                    <Font name="SansSerif Regular" size="14.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutX="472.0" layoutY="52.0" orientation="VERTICAL" prefHeight="328.0" prefWidth="0.0" />
+                            <Separator layoutY="108.0" prefWidth="474.0" />
+                            <Text layoutX="5.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder Flexion max Left L">
+                                <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutY="138.0" prefWidth="474.0" />
+                            <Text layoutX="5.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder Internal Rotation max Right R">
+                                <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutY="168.0" prefWidth="474.0" />
+                            <Text layoutX="5.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder Internal Rotation max Left L">
+                                <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutY="198.0" prefWidth="474.0" />
+                            <Text layoutX="5.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elbow Flexion max Right R">
+                                <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutY="228.0" prefWidth="474.0" />
+                            <Text layoutX="5.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elbow Flexion max Left L">
+                                <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutY="258.0" prefWidth="474.0" />
+                            <Text layoutX="268.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                            <Text layoutX="268.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                            <Text layoutX="268.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                            <Text layoutX="268.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                            <Text layoutX="268.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                            <Text layoutX="268.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                            <Text layoutX="5.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrist Pronation/Supination mean Right R">
+                                <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutY="288.0" prefWidth="474.0" />
+                            <Text layoutX="5.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrist Pronation/Supination mean Left L">
+                                <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutY="318.0" prefWidth="474.0" />
+                            <Text layoutX="268.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                            <Text layoutX="268.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                            <Separator layoutY="348.0" prefWidth="474.0" />
+                            <Text layoutX="5.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrist Flexion/Extension mean Right R">
+                                <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                </font>
+                            </Text>
+                            <Text layoutX="5.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrist Flexion/Extension mean Left L">
+                                <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutY="378.0" prefWidth="474.0" />
+                            <Text layoutX="268.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                            <Text layoutX="268.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                            <Text layoutX="316.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Condition 1">
+                                <font>
+                                    <Font name="SansSerif Regular" size="14.0" />
+                                </font>
+                            </Text>
+                            <Text layoutX="533.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comments: ">
+                                <font>
+                                    <Font name="SansSerif Regular" size="14.0" />
+                                </font>
+                            </Text>
+                            <TextArea layoutX="623.0" layoutY="163.0" prefHeight="87.0" prefWidth="279.0" />
+                        </children>
+                    </AnchorPane>
+                </content>
+            </Tab>
+            <Tab text="Shoulder IR/ER">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="26.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upper Extremity Shoulder IR/ER">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Ball Overhead">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                            <Text layoutX="15.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name ">
+                                <font>
+                                    <Font name="SansSerif Regular" size="14.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutY="78.0" prefHeight="0.0" prefWidth="474.0" />
+                            <Separator layoutX="237.0" layoutY="52.0" orientation="VERTICAL" prefHeight="328.0" prefWidth="0.0" />
+                            <Text layoutX="5.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder Flexion max Right R">
+                                <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                </font>
+                            </Text>
+                            <Text layoutX="268.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Value">
+                                <font>
+                                    <Font name="SansSerif Regular" size="14.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutY="51.0" prefHeight="2.0" prefWidth="474.0" />
+                            <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upper Extremity Ball Overhead">
+                                <font>
+                                    <Font name="SansSerif Regular" size="14.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutX="332.0" layoutY="52.0" orientation="VERTICAL" prefHeight="328.0" prefWidth="0.0" />
+                            <Text layoutX="362.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interpretation">
+                                <font>
+                                    <Font name="SansSerif Regular" size="14.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutX="472.0" layoutY="52.0" orientation="VERTICAL" prefHeight="328.0" prefWidth="0.0" />
+                            <Separator layoutY="108.0" prefWidth="474.0" />
+                            <Text layoutX="5.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder Flexion max Left L">
+                                <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutY="138.0" prefWidth="474.0" />
+                            <Text layoutX="5.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder Internal Rotation max Right R">
+                                <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutY="168.0" prefWidth="474.0" />
+                            <Text layoutX="5.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder Internal Rotation max Left L">
+                                <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutY="198.0" prefWidth="474.0" />
+                            <Text layoutX="5.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elbow Flexion max Right R">
+                                <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutY="228.0" prefWidth="474.0" />
+                            <Text layoutX="5.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elbow Flexion max Left L">
+                                <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutY="258.0" prefWidth="474.0" />
+                            <Text layoutX="268.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                            <Text layoutX="268.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                            <Text layoutX="268.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                            <Text layoutX="268.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                            <Text layoutX="268.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                            <Text layoutX="268.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                            <Text layoutX="5.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrist Pronation/Supination mean Right R">
+                                <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutY="288.0" prefWidth="474.0" />
+                            <Text layoutX="5.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrist Pronation/Supination mean Left L">
+                                <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                </font>
+                            </Text>
+                            <Separator layoutY="318.0" prefWidth="474.0" />
+                            <Text layoutX="268.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                            <Text layoutX="268.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Separator layoutY="348.0" prefWidth="474.0" />
+                        <Text layoutX="5.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrist Flexion/Extension mean Right R">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="5.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrist Flexion/Extension mean Left L">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="378.0" prefWidth="474.0" />
+                        <Text layoutX="268.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="268.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="316.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Condition 1">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="533.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comments: ">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <TextArea layoutX="623.0" layoutY="163.0" prefHeight="87.0" prefWidth="279.0" />
+                        </children>
+                    </AnchorPane>
+                </content>
+            </Tab>
+            <Tab text="Hand to Back">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1500.0">
+                     <children>
+                        <Text layoutX="15.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name ">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="78.0" prefHeight="0.0" prefWidth="474.0" />
+                        <Separator layoutX="237.0" layoutY="52.0" orientation="VERTICAL" prefHeight="147.0" prefWidth="0.0" />
+                        <Text layoutX="5.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder Extension minimum Right R">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="268.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Value">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="51.0" prefHeight="2.0" prefWidth="474.0" />
+                        <Text layoutX="313.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Condition 1">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="332.0" layoutY="52.0" orientation="VERTICAL" prefHeight="147.0" prefWidth="0.0" />
+                        <Text layoutX="362.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interpretation">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="472.0" layoutY="52.0" orientation="VERTICAL" prefHeight="147.0" prefWidth="0.0" />
+                        <Separator layoutY="108.0" prefWidth="474.0" />
+                        <Text layoutX="5.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder Extension minimum Left L">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="138.0" prefWidth="474.0" />
+                        <Text layoutX="5.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder Internal Rotation max Right R">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="168.0" prefWidth="474.0" />
+                        <Text layoutX="5.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder Internal Rotation max Left L">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="198.0" prefWidth="474.0" />
+                        <Text layoutX="268.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="268.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="268.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="268.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upper Extremity Hand to Back">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="38.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comments: ">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <TextArea layoutX="141.0" layoutY="231.0" prefHeight="96.0" prefWidth="333.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Supination/Pronation">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1500.0">
+                     <children>
+                        <Text layoutX="15.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name ">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="78.0" prefHeight="0.0" prefWidth="474.0" />
+                        <Separator layoutX="237.0" layoutY="52.0" orientation="VERTICAL" prefHeight="147.0" prefWidth="0.0" />
+                        <Text layoutX="5.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrist Pronation max Right R">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="268.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Value">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="51.0" prefHeight="2.0" prefWidth="474.0" />
+                        <Text layoutX="313.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Condition 1">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="332.0" layoutY="52.0" orientation="VERTICAL" prefHeight="147.0" prefWidth="0.0" />
+                        <Text layoutX="362.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interpretation">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="472.0" layoutY="52.0" orientation="VERTICAL" prefHeight="147.0" prefWidth="0.0" />
+                        <Separator layoutY="108.0" prefWidth="474.0" />
+                        <Text layoutX="5.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrist Pronation max Left L">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="138.0" prefWidth="474.0" />
+                        <Text layoutX="5.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrist Supination min Right R">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="168.0" prefWidth="474.0" />
+                        <Text layoutX="5.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrist Supination min Left L">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="198.0" prefWidth="474.0" />
+                        <Text layoutX="268.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="268.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="268.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="268.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="21.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upper Extremity Supination/Pronation">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="76.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comments">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <TextArea layoutX="170.0" layoutY="253.0" prefHeight="95.0" prefWidth="303.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Grasp/Release">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1500.0">
+                     <children>
+                        <Text layoutX="15.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name ">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="78.0" prefHeight="0.0" prefWidth="474.0" />
+                        <Separator layoutX="237.0" layoutY="52.0" orientation="VERTICAL" prefHeight="147.0" prefWidth="0.0" />
+                        <Text layoutX="5.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrist Pronation max Right R">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="268.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Value">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="51.0" prefHeight="2.0" prefWidth="474.0" />
+                        <Text layoutX="313.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Condition 1">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="332.0" layoutY="52.0" orientation="VERTICAL" prefHeight="147.0" prefWidth="0.0" />
+                        <Text layoutX="362.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interpretation">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="472.0" layoutY="52.0" orientation="VERTICAL" prefHeight="147.0" prefWidth="0.0" />
+                        <Separator layoutY="108.0" prefWidth="474.0" />
+                        <Text layoutX="5.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrist Pronation max Left L">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="138.0" prefWidth="474.0" />
+                        <Text layoutX="5.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrist Supination min Right R">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="168.0" prefWidth="474.0" />
+                        <Text layoutX="5.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrist Supination min Left L">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="198.0" prefWidth="474.0" />
+                        <Text layoutX="268.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="268.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="268.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="268.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="14.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upper Extremity Grasp/Release">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="56.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comments: ">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <TextArea layoutX="154.0" layoutY="260.0" prefHeight="77.0" prefWidth="250.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Running">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1500.0">
+                     <children>
+                        <Text layoutX="15.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name ">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="78.0" prefHeight="0.0" prefWidth="474.0" />
+                        <Separator layoutX="237.0" layoutY="52.0" orientation="VERTICAL" prefHeight="147.0" prefWidth="0.0" />
+                        <Text layoutX="5.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrist Pronation max Right R">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="268.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Value">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="51.0" prefHeight="2.0" prefWidth="474.0" />
+                        <Text layoutX="313.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Condition 1">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="332.0" layoutY="52.0" orientation="VERTICAL" prefHeight="147.0" prefWidth="0.0" />
+                        <Text layoutX="362.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interpretation">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="472.0" layoutY="52.0" orientation="VERTICAL" prefHeight="147.0" prefWidth="0.0" />
+                        <Separator layoutY="108.0" prefWidth="474.0" />
+                        <Text layoutX="5.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrist Pronation max Left L">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="138.0" prefWidth="474.0" />
+                        <Text layoutX="5.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrist Supination min Right R">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="168.0" prefWidth="474.0" />
+                        <Text layoutX="5.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrist Supination min Left L">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutY="198.0" prefWidth="474.0" />
+                        <Text layoutX="268.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="268.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="268.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="268.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upper Extremity Running">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="40.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comments: ">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <TextArea layoutX="127.0" layoutY="249.0" prefHeight="134.0" prefWidth="325.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </content>
+</ScrollPane>

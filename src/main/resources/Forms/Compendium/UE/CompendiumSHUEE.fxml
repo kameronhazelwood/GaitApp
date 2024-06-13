@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane prefHeight="1200.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Compendium.UE.CompendiumEUToneController">
+   <content>
+      <AnchorPane prefHeight="1200.0" prefWidth="1200.0">
+         <children>
+            <Label layoutX="23.0" layoutY="14.0" text="Upper Extremity SHUEE">
+               <font>
+                  <Font name="SansSerif Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="624.0" layoutY="75.0" prefHeight="42.0" prefWidth="145.0" text="Spontaneous Functional Analysis" wrapText="true">
+               <font>
+                  <Font name="SansSerif Regular" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="170.0" layoutY="97.0" text="Dynamic Positional Analysis">
+               <font>
+                  <Font name="SansSerif Regular" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="774.0" layoutY="97.0" text="Key">
+               <font>
+                  <Font name="SansSerif Regular" size="13.0" />
+               </font>
+            </Label>
+            <Separator layoutX="5.0" layoutY="112.0" prefHeight="1.0" prefWidth="1086.0" />
+            <Label layoutX="170.0" layoutY="120.0" text="Thumb Segment">
+               <font>
+                  <Font name="SansSerif Regular" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="395.0" layoutY="120.0" text="Finger Segment">
+               <font>
+                  <Font name="SansSerif Regular" size="11.0" />
+               </font>
+            </Label>
+            <Separator layoutY="133.0" prefHeight="0.0" prefWidth="768.0" />
+            <Separator blendMode="DIFFERENCE" layoutX="165.0" layoutY="97.0" orientation="VERTICAL" prefHeight="600.0" prefWidth="0.0" />
+            <Separator layoutX="240.0" layoutY="134.0" orientation="VERTICAL" prefHeight="121.0" prefWidth="0.0" />
+            <Separator layoutX="315.0" layoutY="133.0" orientation="VERTICAL" prefHeight="121.0" prefWidth="0.0" />
+            <Separator blendMode="EXCLUSION" layoutX="390.0" layoutY="113.0" orientation="VERTICAL" prefHeight="142.0" prefWidth="0.0" />
+            <Separator layoutY="164.0" prefHeight="0.0" prefWidth="768.0" />
+            <Separator layoutX="465.0" layoutY="133.0" orientation="VERTICAL" prefHeight="121.0" prefWidth="0.0" />
+            <Separator layoutX="540.0" layoutY="133.0" orientation="VERTICAL" prefHeight="121.0" prefWidth="0.0" />
+            <Separator blendMode="EXCLUSION" layoutX="615.0" layoutY="94.0" orientation="VERTICAL" prefHeight="160.0" prefWidth="0.0" />
+            <Label layoutX="23.0" layoutY="146.0" text="Money from Wallet">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="175.0" text="Fold Paper">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutX="-1.0" layoutY="194.0" prefHeight="0.0" prefWidth="768.0" />
+            <Label layoutX="23.0" layoutY="203.0" text="Tear Paper">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutY="224.0" prefHeight="0.0" prefWidth="768.0" />
+            <Label layoutX="23.0" layoutY="232.0" text="String Bead">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutX="1.0" layoutY="254.0" prefHeight="0.0" prefWidth="768.0" />
+            <Label layoutX="36.0" layoutY="263.0">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutY="284.0" prefHeight="0.0" prefWidth="768.0" />
+            <Separator layoutX="665.0" layoutY="132.0" orientation="VERTICAL" prefHeight="121.0" prefWidth="0.0" />
+            <Separator layoutX="715.0" layoutY="132.0" orientation="VERTICAL" prefHeight="121.0" prefWidth="0.0" />
+            <Separator blendMode="EXCLUSION" layoutX="765.0" layoutY="97.0" orientation="VERTICAL" prefHeight="157.0" prefWidth="6.0" />
+            <Label layoutX="170.0" layoutY="267.0" text="Wrist Segment">
+               <font>
+                  <Font name="SansSerif Regular" size="11.0" />
+               </font>
+            </Label>
+            <Separator layoutX="240.0" layoutY="284.0" orientation="VERTICAL" prefHeight="112.0" prefWidth="0.0" />
+            <Separator layoutX="315.0" layoutY="284.0" orientation="VERTICAL" prefHeight="112.0" prefWidth="0.0" />
+            <Separator blendMode="EXCLUSION" layoutX="390.0" layoutY="284.0" orientation="VERTICAL" prefHeight="112.0" prefWidth="2.0" />
+            <Separator layoutX="465.0" layoutY="284.0" orientation="VERTICAL" prefHeight="112.0" prefWidth="0.0" />
+            <Separator layoutX="540.0" layoutY="284.0" orientation="VERTICAL" prefHeight="112.0" prefWidth="0.0" />
+            <Separator blendMode="EXCLUSION" layoutX="615.0" layoutY="284.0" orientation="VERTICAL" prefHeight="112.0" prefWidth="0.0" />
+            <Separator layoutX="665.0" layoutY="284.0" orientation="VERTICAL" prefHeight="112.0" prefWidth="0.0" />
+            <Separator layoutX="715.0" layoutY="284.0" orientation="VERTICAL" prefHeight="112.0" prefWidth="0.0" />
+            <Separator blendMode="EXCLUSION" layoutX="765.0" layoutY="284.0" orientation="VERTICAL" prefHeight="112.0" prefWidth="6.0" />
+            <Separator layoutY="314.0" prefHeight="0.0" prefWidth="768.0" />
+            <Label layoutX="23.0" layoutY="293.0" text="Unscrew Bottle Cap">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="322.0" text="Pull Playdough Apart">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutY="342.0" prefHeight="0.0" prefWidth="768.0" />
+            <Label layoutX="22.0" layoutY="349.0" text="Cut Playdough with Knife">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutY="369.0" prefHeight="0.0" prefWidth="768.0" />
+            <Label layoutX="23.0" layoutY="376.0" text="Throw Large Ball">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutY="394.0" prefHeight="0.0" prefWidth="768.0" />
+            <Separator layoutY="423.0" prefHeight="0.0" prefWidth="768.0" />
+            <Label layoutX="171.0" layoutY="408.0" text="Forearm Segment">
+               <font>
+                  <Font name="SansSerif Regular" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="429.0" text="Accept Coins/Change">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutX="1.0" layoutY="449.0" prefHeight="0.0" prefWidth="768.0" />
+            <Separator layoutX="240.0" layoutY="423.0" orientation="VERTICAL" prefHeight="123.0" prefWidth="0.0" />
+            <Separator layoutX="315.0" layoutY="423.0" orientation="VERTICAL" prefHeight="123.0" prefWidth="0.0" />
+            <Separator blendMode="EXCLUSION" layoutX="390.0" layoutY="423.0" orientation="VERTICAL" prefHeight="123.0" prefWidth="2.0" />
+            <Separator layoutX="465.0" layoutY="424.0" orientation="VERTICAL" prefHeight="123.0" prefWidth="0.0" />
+            <Separator layoutX="540.0" layoutY="423.0" orientation="VERTICAL" prefHeight="123.0" prefWidth="0.0" />
+            <Separator blendMode="EXCLUSION" layoutX="615.0" layoutY="425.0" orientation="VERTICAL" prefHeight="122.0" prefWidth="0.0" />
+            <Separator layoutX="665.0" layoutY="423.0" orientation="VERTICAL" prefHeight="123.0" prefWidth="0.0" />
+            <Separator layoutX="715.0" layoutY="423.0" orientation="VERTICAL" prefHeight="123.0" prefWidth="0.0" />
+            <Separator blendMode="EXCLUSION" layoutX="765.0" layoutY="423.0" orientation="VERTICAL" prefHeight="123.0" prefWidth="6.0" />
+            <Label layoutX="24.0" layoutY="456.0" text="Receive 5">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutY="476.0" prefHeight="0.0" prefWidth="768.0" />
+            <Label layoutX="26.0" layoutY="483.0" text="Take Hand to Mouth">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutY="502.0" prefHeight="0.0" prefWidth="768.0" />
+            <Label layoutX="26.0" layoutY="509.0" prefHeight="35.0" prefWidth="119.0" text="Touch Opp. Ear with Palm" wrapText="true">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutY="545.0" prefHeight="0.0" prefWidth="768.0" />
+            <Separator layoutY="581.0" prefHeight="0.0" prefWidth="768.0" />
+            <Label layoutX="170.0" layoutY="566.0" text="Elbow Segment">
+               <font>
+                  <Font name="SansSerif Regular" size="11.0" />
+               </font>
+            </Label>
+            <Separator layoutX="240.0" layoutY="581.0" orientation="VERTICAL" prefHeight="117.0" prefWidth="0.0" />
+            <Separator layoutX="315.0" layoutY="581.0" orientation="VERTICAL" prefHeight="117.0" prefWidth="0.0" />
+            <Separator blendMode="EXCLUSION" layoutX="390.0" layoutY="581.0" orientation="VERTICAL" prefHeight="117.0" prefWidth="2.0" />
+            <Separator layoutX="465.0" layoutY="581.0" orientation="VERTICAL" prefHeight="117.0" prefWidth="0.0" />
+            <Separator layoutX="540.0" layoutY="581.0" orientation="VERTICAL" prefHeight="117.0" prefWidth="0.0" />
+            <Separator blendMode="EXCLUSION" layoutX="615.0" layoutY="581.0" orientation="VERTICAL" prefHeight="117.0" prefWidth="0.0" />
+            <Separator layoutX="665.0" layoutY="581.0" orientation="VERTICAL" prefHeight="117.0" prefWidth="0.0" />
+            <Separator layoutX="715.0" layoutY="581.0" orientation="VERTICAL" prefHeight="117.0" prefWidth="0.0" />
+            <Separator blendMode="EXCLUSION" layoutX="765.0" layoutY="581.0" orientation="VERTICAL" prefHeight="117.0" prefWidth="6.0" />
+            <Label layoutX="18.0" layoutY="589.0" text="Place Sticker on Ball">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutY="610.0" prefHeight="0.0" prefWidth="768.0" />
+            <Label layoutX="21.0" layoutY="619.0" text="Put Socks on">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutY="638.0" prefHeight="0.0" prefWidth="768.0" />
+            <Label layoutX="21.0" layoutY="646.0" text="Fasten Shoe">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutY="666.0" prefHeight="0.0" prefWidth="768.0" />
+            <Label layoutX="22.0" layoutY="677.0" text="Crawl">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutY="698.0" prefHeight="0.0" prefWidth="1088.0" />
+            <Text layoutX="774.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Functional Classification System" />
+            <Text layoutX="774.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0     Does not use - Extremity not utilized in any capacity for completion of task" wrappingWidth="288.1719970703125" />
+            <Text layoutX="774.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1     Poor passive assist - Uses as stabilizing weight only" />
+            <Text layoutX="774.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2     Passive assist - Can hold onto object placed in hand &amp; may stabilize it for use by other hand" wrappingWidth="314.63348388671875" />
+            <Text layoutX="774.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3      Poor active assist - Can actively grasp object &amp; hold it weakly" wrappingWidth="306.818359375" />
+            <Text layoutX="774.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4      Active assist - Can actively grasp object, stabilize it well, &amp; may manipulate it against the other hand" wrappingWidth="313.97723388671875" />
+            <Text layoutX="774.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5      Spontaneous use, partial to complete-Performs bimanual activities easily: may use hand spontaneously or without reference to the other hand" wrappingWidth="310.025390625" />
+            <Separator layoutX="1088.0" layoutY="112.0" orientation="VERTICAL" prefHeight="587.0" prefWidth="0.0" />
+            <Label layoutX="195.0" layoutY="725.0" text="Grasp">
+               <font>
+                  <Font name="SansSerif Regular" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="299.0" layoutY="724.0" text="Release">
+               <font>
+                  <Font name="SansSerif Regular" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="82.0" layoutY="744.0" text="Wrist Flexion">
+               <font>
+                  <Font name="SansSerif Regular" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="82.0" layoutY="763.0" text="Wrist Neutral">
+               <font>
+                  <Font name="SansSerif Regular" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="82.0" layoutY="783.0" text="Wrist Extended">
+               <font>
+                  <Font name="SansSerif Regular" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="553.0" layoutY="763.0" text="Static House: ">
+               <font>
+                  <Font name="SansSerif Regular" size="11.0" />
+               </font>
+            </Label>
+            <Separator layoutX="263.0" layoutY="724.0" orientation="VERTICAL" prefHeight="73.0" prefWidth="0.0" />
+            <Separator layoutX="86.0" layoutY="741.0" prefHeight="0.0" prefWidth="299.0" />
+            <Label layoutX="109.0" layoutY="880.0" text="Spontaneous Functional Analysis">
+               <font>
+                  <Font name="SansSerif Regular" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="367.0" layoutY="880.0" text="Dynamic Positional Analysis">
+               <font>
+                  <Font name="SansSerif Regular" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="637.0" layoutY="880.0" text="Grasp / Release">
+               <font>
+                  <Font name="SansSerif Regular" size="11.0" />
+               </font>
+            </Label>
+            <Separator layoutX="71.0" layoutY="878.0" orientation="VERTICAL" prefHeight="81.0" prefWidth="0.0" />
+            <Separator layoutX="71.0" layoutY="878.0" prefHeight="1.0" prefWidth="721.0" />
+            <Separator layoutX="72.0" layoutY="896.0" prefHeight="0.0" prefWidth="719.0" />
+            <Label layoutX="110.0" layoutY="900.0" text="Total Score">
+               <font>
+                  <Font name="SansSerif Regular" size="11.0" />
+               </font>
+            </Label>
+            <Separator layoutX="72.0" layoutY="917.0" prefHeight="0.0" prefWidth="719.0" />
+            <Separator layoutX="111.0" layoutY="918.0" orientation="VERTICAL" prefHeight="42.0" prefWidth="0.0" />
+            <Separator layoutX="151.0" layoutY="918.0" orientation="VERTICAL" prefHeight="43.0" prefWidth="0.0" />
+            <Separator layoutX="191.0" layoutY="896.0" orientation="VERTICAL" prefHeight="64.0" prefWidth="5.0" />
+            <Label layoutX="225.0" layoutY="900.0" text="Percentage">
+               <font>
+                  <Font name="SansSerif Regular" size="11.0" />
+               </font>
+            </Label>
+            <Separator layoutX="231.0" layoutY="918.0" orientation="VERTICAL" prefHeight="42.0" prefWidth="5.0" />
+            <Separator layoutX="311.0" layoutY="877.0" orientation="VERTICAL" prefHeight="82.0" prefWidth="3.0" />
+            <Separator layoutX="271.0" layoutY="918.0" orientation="VERTICAL" prefHeight="42.0" prefWidth="5.0" />
+            <Separator layoutX="351.0" layoutY="918.0" orientation="VERTICAL" prefHeight="41.0" prefWidth="5.0" />
+            <Label layoutX="346.0" layoutY="900.0" text="Total Score">
+               <font>
+                  <Font name="SansSerif Regular" size="11.0" />
+               </font>
+            </Label>
+            <Separator layoutX="391.0" layoutY="918.0" orientation="VERTICAL" prefHeight="41.0" prefWidth="5.0" />
+            <Separator layoutX="431.0" layoutY="897.0" orientation="VERTICAL" prefHeight="62.0" prefWidth="5.0" />
+            <Label layoutX="463.0" layoutY="900.0" text="Percentage">
+               <font>
+                  <Font name="SansSerif Regular" size="11.0" />
+               </font>
+            </Label>
+            <Separator layoutX="471.0" layoutY="918.0" orientation="VERTICAL" prefHeight="41.0" prefWidth="5.0" />
+            <Separator layoutX="511.0" layoutY="918.0" orientation="VERTICAL" prefHeight="40.0" prefWidth="5.0" />
+            <Separator layoutX="551.0" layoutY="878.0" orientation="VERTICAL" prefHeight="81.0" prefWidth="0.0" />
+            <Label layoutX="583.0" layoutY="900.0" text="Total Score">
+               <font>
+                  <Font name="SansSerif Regular" size="11.0" />
+               </font>
+            </Label>
+            <Separator layoutX="591.0" layoutY="918.0" orientation="VERTICAL" prefHeight="40.0" prefWidth="5.0" />
+            <Separator layoutX="631.0" layoutY="918.0" orientation="VERTICAL" prefHeight="41.0" prefWidth="5.0" />
+            <Separator layoutX="671.0" layoutY="897.0" orientation="VERTICAL" prefHeight="61.0" prefWidth="2.0" />
+            <Label layoutX="698.0" layoutY="900.0" text="Percentage">
+               <font>
+                  <Font name="SansSerif Regular" size="11.0" />
+               </font>
+            </Label>
+            <Separator layoutX="711.0" layoutY="918.0" orientation="VERTICAL" prefHeight="41.0" prefWidth="5.0" />
+            <Separator layoutX="751.0" layoutY="918.0" orientation="VERTICAL" prefHeight="41.0" prefWidth="5.0" />
+            <Separator layoutX="790.0" layoutY="879.0" orientation="VERTICAL" prefHeight="80.0" prefWidth="3.0" />
+            <Separator layoutX="72.0" layoutY="958.0" prefWidth="721.0" />
+            <Label layoutX="71.0" layoutY="1029.0" text="Comments: " />
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

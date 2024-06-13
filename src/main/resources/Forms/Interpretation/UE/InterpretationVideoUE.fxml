@@ -1,0 +1,1614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane prefHeight="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Interpretation.UE.InterpretationVideoUEController">
+   <content>
+      <TabPane prefHeight="1000.0" prefWidth="691.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Comments">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="497.0" prefWidth="668.0">
+                     <children>
+                        <TextArea layoutX="125.0" layoutY="96.0" prefHeight="157.0" prefWidth="436.0" />
+                        <Label layoutX="25.0" layoutY="159.0" text="Comments: ">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Hand Use">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="713.0" prefWidth="697.0">
+                     <children>
+                        <Label layoutX="9.0" layoutY="53.0" text="None">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="77.0" layoutY="53.0" text="Mostly">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="154.0" layoutY="53.0" text="Occasionally">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="272.0" layoutY="53.0" text="Hand Use">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="65.0" layoutY="51.0" orientation="VERTICAL" prefHeight="172.0" />
+                        <Separator layoutY="73.0" prefHeight="0.0" prefWidth="512.0" />
+                        <Separator layoutX="147.0" layoutY="51.0" orientation="VERTICAL" prefHeight="172.0" />
+                        <Separator layoutX="266.0" layoutY="51.0" orientation="VERTICAL" prefHeight="172.0" prefWidth="0.0" />
+                        <Separator layoutY="103.0" prefHeight="0.0" prefWidth="512.0" />
+                        <Separator layoutY="133.0" prefHeight="0.0" prefWidth="512.0" />
+                        <Separator layoutY="163.0" prefHeight="0.0" prefWidth="512.0" />
+                        <Separator layoutY="193.0" prefHeight="0.0" prefWidth="512.0" />
+                        <Separator layoutY="223.0" prefHeight="0.0" prefWidth="512.0" />
+                        <Separator layoutY="50.0" prefHeight="0.0" prefWidth="512.0" />
+                        <Separator layoutX="509.0" layoutY="51.0" orientation="VERTICAL" prefHeight="172.0" prefWidth="0.0" />
+                        <RadioButton layoutX="17.0" layoutY="81.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="17.0" layoutY="111.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="17.0" layoutY="140.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="17.0" layoutY="171.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="17.0" layoutY="201.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="81.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="111.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="140.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="171.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="201.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="191.0" layoutY="81.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="191.0" layoutY="111.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="191.0" layoutY="140.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="191.0" layoutY="171.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="191.0" layoutY="201.0" mnemonicParsing="false" />
+                        <Label layoutX="272.0" layoutY="81.0" text="spontaneous use">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="272.0" layoutY="111.0" text="a helper">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="272.0" layoutY="140.0" text="when cued">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="272.0" layoutY="171.0" text="passive">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="272.0" layoutY="201.0" text="not an effective helper">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextArea layoutX="150.0" layoutY="246.0" prefHeight="61.0" prefWidth="315.0" />
+                        <Label layoutX="42.0" layoutY="269.0" text="Comments: ">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="9.0" layoutY="15.0" text="Left">
+                           <font>
+                              <Font name="SansSerif Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="17.0" layoutY="358.0" text="None">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="85.0" layoutY="358.0" text="Mostly">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="162.0" layoutY="358.0" text="Occasionally">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="280.0" layoutY="358.0" text="Hand Use">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="73.0" layoutY="356.0" orientation="VERTICAL" prefHeight="172.0" />
+                        <Separator layoutX="8.0" layoutY="378.0" prefHeight="0.0" prefWidth="512.0" />
+                        <Separator layoutX="155.0" layoutY="356.0" orientation="VERTICAL" prefHeight="172.0" />
+                        <Separator layoutX="274.0" layoutY="356.0" orientation="VERTICAL" prefHeight="172.0" prefWidth="0.0" />
+                        <Separator layoutX="8.0" layoutY="408.0" prefHeight="0.0" prefWidth="512.0" />
+                        <Separator layoutX="8.0" layoutY="438.0" prefHeight="0.0" prefWidth="512.0" />
+                        <Separator layoutX="8.0" layoutY="468.0" prefHeight="0.0" prefWidth="512.0" />
+                        <Separator layoutX="8.0" layoutY="498.0" prefHeight="0.0" prefWidth="512.0" />
+                        <Separator layoutX="8.0" layoutY="528.0" prefHeight="0.0" prefWidth="512.0" />
+                        <Separator layoutX="8.0" layoutY="355.0" prefHeight="0.0" prefWidth="512.0" />
+                        <Separator layoutX="517.0" layoutY="356.0" orientation="VERTICAL" prefHeight="172.0" prefWidth="0.0" />
+                        <RadioButton layoutX="25.0" layoutY="386.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="25.0" layoutY="416.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="25.0" layoutY="445.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="25.0" layoutY="476.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="25.0" layoutY="506.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="104.0" layoutY="386.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="104.0" layoutY="416.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="104.0" layoutY="445.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="104.0" layoutY="476.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="104.0" layoutY="506.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="199.0" layoutY="386.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="199.0" layoutY="416.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="199.0" layoutY="445.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="199.0" layoutY="476.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="199.0" layoutY="506.0" mnemonicParsing="false" />
+                        <Label layoutX="280.0" layoutY="386.0" text="spontaneous use">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="280.0" layoutY="416.0" text="a helper">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="280.0" layoutY="445.0" text="when cued">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="280.0" layoutY="476.0" text="passive">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="280.0" layoutY="506.0" text="not an effective helper">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="9.0" layoutY="313.0" text="Right">
+                           <font>
+                              <Font name="SansSerif Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextArea layoutX="159.0" layoutY="547.0" prefHeight="61.0" prefWidth="315.0" />
+                        <Label layoutX="61.0" layoutY="570.0" text="Comments: ">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Grasp">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="839.0">
+                    <Label layoutX="9.0" layoutY="53.0" text="None">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="77.0" layoutY="53.0" text="Mostly">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="154.0" layoutY="53.0" text="Occasionally">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="53.0" text="Grasp">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Separator layoutX="65.0" layoutY="51.0" orientation="VERTICAL" prefHeight="113.0" prefWidth="0.0" />
+                    <Separator layoutY="73.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="147.0" layoutY="51.0" orientation="VERTICAL" prefHeight="113.0" />
+                    <Separator layoutX="266.0" layoutY="51.0" orientation="VERTICAL" prefHeight="113.0" prefWidth="0.0" />
+                    <Separator layoutY="103.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutY="133.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutY="163.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutY="50.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="509.0" layoutY="51.0" orientation="VERTICAL" prefHeight="113.0" prefWidth="0.0" />
+                    <RadioButton layoutX="17.0" layoutY="81.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="17.0" layoutY="111.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="17.0" layoutY="140.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="81.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="111.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="140.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="81.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="111.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="140.0" mnemonicParsing="false" />
+                    <Label layoutX="272.0" layoutY="81.0" text="Good">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="111.0" text="Weak">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="140.0" text="Ineffective">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <TextArea layoutX="135.0" layoutY="184.0" prefHeight="67.0" prefWidth="256.0" />
+                    <Label layoutX="30.0" layoutY="210.0" text="Comments: ">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="9.0" layoutY="24.0" text="Left">
+                        <font>
+                            <Font name="SansSerif Bold" size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="9.0" layoutY="313.0" text="None">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="77.0" layoutY="313.0" text="Mostly">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="154.0" layoutY="313.0" text="Occasionally">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="313.0" text="Grasp">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Separator layoutX="65.0" layoutY="311.0" orientation="VERTICAL" prefHeight="113.0" prefWidth="0.0" />
+                    <Separator layoutY="333.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="147.0" layoutY="311.0" orientation="VERTICAL" prefHeight="113.0" />
+                    <Separator layoutX="266.0" layoutY="311.0" orientation="VERTICAL" prefHeight="113.0" prefWidth="0.0" />
+                    <Separator layoutY="363.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutY="393.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="4.0" layoutY="423.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutY="310.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="511.0" layoutY="311.0" orientation="VERTICAL" prefHeight="113.0" prefWidth="0.0" />
+                    <RadioButton layoutX="17.0" layoutY="341.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="17.0" layoutY="371.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="17.0" layoutY="400.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="341.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="371.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="400.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="341.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="371.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="400.0" mnemonicParsing="false" />
+                    <Label layoutX="272.0" layoutY="341.0" text="Good">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="371.0" text="Weak">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="400.0" text="Ineffective">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="36.0" layoutY="465.0" text="Comments: ">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="9.0" layoutY="271.0" text="Right">
+                        <font>
+                            <Font name="SansSerif Bold" size="18.0" />
+                        </font>
+                    </Label>
+                  <TextArea layoutX="138.0" layoutY="439.0" prefHeight="67.0" prefWidth="256.0" />
+                </AnchorPane>
+            </Tab>
+            <Tab text="Fingers">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <Label layoutX="9.0" layoutY="53.0" text="None">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="77.0" layoutY="53.0" text="Mostly">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="154.0" layoutY="53.0" text="Occasionally">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="53.0" text="Grasp">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Separator layoutX="65.0" layoutY="51.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <Separator layoutY="73.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="147.0" layoutY="51.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <Separator layoutX="266.0" layoutY="51.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <Separator layoutY="103.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutY="133.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutY="163.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutY="50.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="509.0" layoutY="51.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <RadioButton layoutX="17.0" layoutY="81.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="17.0" layoutY="111.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="17.0" layoutY="140.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="81.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="111.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="140.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="81.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="111.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="140.0" mnemonicParsing="false" />
+                    <Label layoutX="272.0" layoutY="81.0" text="in neutral position">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="111.0" text="in excessive flexion">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="140.0" text="hyper-extended">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <TextArea layoutX="115.0" layoutY="212.0" prefHeight="59.0" prefWidth="255.0" />
+                    <Label layoutX="30.0" layoutY="235.0" text="Comments: ">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="9.0" layoutY="21.0" text="Left">
+                        <font>
+                            <Font name="SansSerif Bold" size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="9.0" layoutY="307.0" text="Right">
+                        <font>
+                            <Font name="SansSerif Bold" size="18.0" />
+                        </font>
+                    </Label>
+                  <Separator layoutY="193.0" prefHeight="0.0" prefWidth="512.0" />
+                  <RadioButton layoutX="18.0" layoutY="169.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="96.0" layoutY="169.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="191.0" layoutY="169.0" mnemonicParsing="false" />
+                  <Label layoutX="272.0" layoutY="169.0" text="swan neck">
+                     <font>
+                        <Font name="SansSerif Regular" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="346.0" text="None">
+                     <font>
+                        <Font name="SansSerif Regular" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="78.0" layoutY="346.0" text="Mostly">
+                     <font>
+                        <Font name="SansSerif Regular" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="155.0" layoutY="346.0" text="Occasionally">
+                     <font>
+                        <Font name="SansSerif Regular" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="273.0" layoutY="346.0" text="Grasp">
+                     <font>
+                        <Font name="SansSerif Regular" size="13.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="66.0" layoutY="344.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                  <Separator layoutX="1.0" layoutY="366.0" prefHeight="0.0" prefWidth="512.0" />
+                  <Separator layoutX="148.0" layoutY="344.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                  <Separator layoutX="267.0" layoutY="344.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                  <Separator layoutX="1.0" layoutY="396.0" prefHeight="0.0" prefWidth="512.0" />
+                  <Separator layoutX="1.0" layoutY="426.0" prefHeight="0.0" prefWidth="512.0" />
+                  <Separator layoutX="1.0" layoutY="456.0" prefHeight="0.0" prefWidth="512.0" />
+                  <Separator layoutX="1.0" layoutY="343.0" prefHeight="0.0" prefWidth="512.0" />
+                  <Separator layoutX="510.0" layoutY="344.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                  <RadioButton layoutX="18.0" layoutY="374.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="18.0" layoutY="404.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="18.0" layoutY="433.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="97.0" layoutY="374.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="97.0" layoutY="404.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="97.0" layoutY="433.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="192.0" layoutY="374.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="192.0" layoutY="404.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="192.0" layoutY="433.0" mnemonicParsing="false" />
+                  <Label layoutX="273.0" layoutY="374.0" text="in neutral position">
+                     <font>
+                        <Font name="SansSerif Regular" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="273.0" layoutY="404.0" text="in excessive flexion">
+                     <font>
+                        <Font name="SansSerif Regular" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="273.0" layoutY="433.0" text="hyper-extended">
+                     <font>
+                        <Font name="SansSerif Regular" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextArea layoutX="116.0" layoutY="505.0" prefHeight="59.0" prefWidth="255.0" />
+                  <Label layoutX="31.0" layoutY="528.0" text="Comments: ">
+                     <font>
+                        <Font name="SansSerif Regular" size="13.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="1.0" layoutY="486.0" prefHeight="0.0" prefWidth="512.0" />
+                  <RadioButton layoutX="19.0" layoutY="462.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="97.0" layoutY="462.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="192.0" layoutY="462.0" mnemonicParsing="false" />
+                  <Label layoutX="273.0" layoutY="462.0" text="swan neck">
+                     <font>
+                        <Font name="SansSerif Regular" size="13.0" />
+                     </font>
+                  </Label>
+                </AnchorPane>
+            </Tab>
+            <Tab text="Thumb">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <Label layoutX="9.0" layoutY="53.0" text="None">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="77.0" layoutY="53.0" text="Mostly">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="154.0" layoutY="53.0" text="Occasionally">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="53.0" text="Grasp">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Separator layoutX="65.0" layoutY="51.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <Separator layoutY="73.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="147.0" layoutY="51.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <Separator layoutX="266.0" layoutY="51.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <Separator layoutY="103.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutY="133.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutY="163.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutY="50.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="509.0" layoutY="51.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <RadioButton layoutX="17.0" layoutY="81.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="17.0" layoutY="111.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="17.0" layoutY="140.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="81.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="111.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="140.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="81.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="111.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="140.0" mnemonicParsing="false" />
+                    <Label layoutX="272.0" layoutY="81.0" text="opens web space">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="111.0" text="closed web space">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="140.0" text="adducted - thumb in palm">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <TextArea layoutX="115.0" layoutY="212.0" prefHeight="59.0" prefWidth="255.0" />
+                    <Label layoutX="30.0" layoutY="235.0" text="Comments: ">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="9.0" layoutY="21.0" text="Left">
+                        <font>
+                            <Font name="SansSerif Bold" size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="9.0" layoutY="307.0" text="Right">
+                        <font>
+                            <Font name="SansSerif Bold" size="18.0" />
+                        </font>
+                    </Label>
+                    <Separator layoutY="193.0" prefHeight="0.0" prefWidth="512.0" />
+                    <RadioButton layoutX="18.0" layoutY="169.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="169.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="169.0" mnemonicParsing="false" />
+                    <Label layoutX="272.0" layoutY="169.0" text="MCP hyperextension">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="10.0" layoutY="346.0" text="None">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="78.0" layoutY="346.0" text="Mostly">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="155.0" layoutY="346.0" text="Occasionally">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="273.0" layoutY="346.0" text="Grasp">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Separator layoutX="66.0" layoutY="344.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <Separator layoutX="1.0" layoutY="366.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="148.0" layoutY="344.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <Separator layoutX="267.0" layoutY="344.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <Separator layoutX="1.0" layoutY="396.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="1.0" layoutY="426.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="1.0" layoutY="456.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="1.0" layoutY="343.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="510.0" layoutY="344.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <RadioButton layoutX="18.0" layoutY="374.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="18.0" layoutY="404.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="18.0" layoutY="433.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="97.0" layoutY="374.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="97.0" layoutY="404.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="97.0" layoutY="433.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="192.0" layoutY="374.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="192.0" layoutY="404.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="192.0" layoutY="433.0" mnemonicParsing="false" />
+                    <Label layoutX="273.0" layoutY="374.0" text="open web space">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="273.0" layoutY="404.0" text="closed web space">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="273.0" layoutY="433.0" text="adducted - thumb in palm">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <TextArea layoutX="116.0" layoutY="505.0" prefHeight="59.0" prefWidth="255.0" />
+                    <Label layoutX="31.0" layoutY="528.0" text="Comments: ">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Separator layoutX="1.0" layoutY="486.0" prefHeight="0.0" prefWidth="512.0" />
+                    <RadioButton layoutX="19.0" layoutY="462.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="97.0" layoutY="462.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="192.0" layoutY="462.0" mnemonicParsing="false" />
+                    <Label layoutX="273.0" layoutY="462.0" text="MCP hyperextension">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                </AnchorPane>
+            </Tab>
+            <Tab text="Wrist">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <Label layoutX="9.0" layoutY="53.0" text="None">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="77.0" layoutY="53.0" text="Mostly">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="154.0" layoutY="53.0" text="Occasionally">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="53.0" text="Grasp">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Separator layoutX="65.0" layoutY="51.0" orientation="VERTICAL" prefHeight="173.0" prefWidth="0.0" />
+                    <Separator layoutY="73.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="147.0" layoutY="51.0" orientation="VERTICAL" prefHeight="173.0" prefWidth="0.0" />
+                    <Separator layoutX="266.0" layoutY="51.0" orientation="VERTICAL" prefHeight="173.0" prefWidth="0.0" />
+                    <Separator layoutY="103.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutY="133.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutY="163.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutY="50.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="509.0" layoutY="51.0" orientation="VERTICAL" prefHeight="173.0" prefWidth="0.0" />
+                    <RadioButton layoutX="17.0" layoutY="81.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="17.0" layoutY="111.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="17.0" layoutY="140.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="81.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="111.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="140.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="81.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="111.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="140.0" mnemonicParsing="false" />
+                    <Label layoutX="272.0" layoutY="81.0" text="neutral position">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="111.0" text="excessive flexion">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="140.0" text="excessive extension">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <TextArea layoutX="115.0" layoutY="234.0" prefHeight="59.0" prefWidth="255.0" />
+                    <Label layoutX="30.0" layoutY="254.0" text="Comments: ">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="9.0" layoutY="21.0" text="Left">
+                        <font>
+                            <Font name="SansSerif Bold" size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="9.0" layoutY="307.0" text="Right">
+                        <font>
+                            <Font name="SansSerif Bold" size="18.0" />
+                        </font>
+                    </Label>
+                    <Separator layoutY="193.0" prefHeight="0.0" prefWidth="512.0" />
+                    <RadioButton layoutX="18.0" layoutY="169.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="169.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="169.0" mnemonicParsing="false" />
+                    <Label layoutX="272.0" layoutY="169.0" text="radial deviation">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="10.0" layoutY="346.0" text="None">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="78.0" layoutY="346.0" text="Mostly">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="155.0" layoutY="346.0" text="Occasionally">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="273.0" layoutY="346.0" text="Grasp">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Separator layoutX="66.0" layoutY="344.0" orientation="VERTICAL" prefHeight="172.0" prefWidth="0.0" />
+                    <Separator layoutX="1.0" layoutY="366.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="148.0" layoutY="344.0" orientation="VERTICAL" prefHeight="172.0" prefWidth="0.0" />
+                    <Separator layoutX="267.0" layoutY="344.0" orientation="VERTICAL" prefHeight="172.0" prefWidth="0.0" />
+                    <Separator layoutX="1.0" layoutY="396.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="1.0" layoutY="426.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="1.0" layoutY="456.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="1.0" layoutY="343.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="510.0" layoutY="344.0" orientation="VERTICAL" prefHeight="172.0" prefWidth="0.0" />
+                    <RadioButton layoutX="18.0" layoutY="374.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="18.0" layoutY="404.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="18.0" layoutY="433.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="97.0" layoutY="374.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="97.0" layoutY="404.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="97.0" layoutY="433.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="192.0" layoutY="374.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="192.0" layoutY="404.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="192.0" layoutY="433.0" mnemonicParsing="false" />
+                    <Label layoutX="273.0" layoutY="374.0" text="neutral position">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="273.0" layoutY="404.0" text="excessive flexion">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="273.0" layoutY="433.0" text="excessive extension">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <TextArea layoutX="116.0" layoutY="525.0" prefHeight="59.0" prefWidth="255.0" />
+                    <Label layoutX="31.0" layoutY="541.0" text="Comments: ">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Separator layoutX="1.0" layoutY="486.0" prefHeight="0.0" prefWidth="512.0" />
+                    <RadioButton layoutX="19.0" layoutY="462.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="97.0" layoutY="462.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="192.0" layoutY="462.0" mnemonicParsing="false" />
+                    <Label layoutX="273.0" layoutY="462.0" text="radial deviation">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                  <Separator layoutY="223.0" prefHeight="0.0" prefWidth="512.0" />
+                  <Label layoutX="272.0" layoutY="202.0" text="ulnar deviation">
+                     <font>
+                        <Font name="SansSerif Regular" size="13.0" />
+                     </font>
+                  </Label>
+                  <RadioButton layoutX="191.0" layoutY="202.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="97.0" layoutY="202.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="19.0" layoutY="202.0" mnemonicParsing="false" />
+                  <Separator layoutY="516.0" prefHeight="0.0" prefWidth="512.0" />
+                  <RadioButton layoutX="19.0" layoutY="492.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="97.0" layoutY="492.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="192.0" layoutY="492.0" mnemonicParsing="false" />
+                  <Label layoutX="273.0" layoutY="493.0" text="ulnar deviation">
+                     <font>
+                        <Font name="SansSerif Regular" size="13.0" />
+                     </font>
+                  </Label>
+                </AnchorPane>
+            </Tab>
+            <Tab text="Forearm">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="741.0" prefWidth="631.0">
+                    <Label layoutX="9.0" layoutY="53.0" text="None">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="77.0" layoutY="53.0" text="Mostly">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="154.0" layoutY="53.0" text="Occasionally">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="53.0" text="Grasp">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Separator layoutX="65.0" layoutY="51.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <Separator layoutY="73.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="147.0" layoutY="51.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <Separator layoutX="266.0" layoutY="51.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <Separator layoutY="103.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutY="133.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutY="163.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutY="50.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="509.0" layoutY="51.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <RadioButton layoutX="17.0" layoutY="81.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="17.0" layoutY="111.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="17.0" layoutY="140.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="81.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="111.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="140.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="81.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="111.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="140.0" mnemonicParsing="false" />
+                    <Label layoutX="272.0" layoutY="81.0" text="neutral position">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="111.0" text="excessive supination">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="140.0" text="excessive pronation">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <TextArea layoutX="115.0" layoutY="234.0" prefHeight="59.0" prefWidth="255.0" />
+                    <Label layoutX="30.0" layoutY="254.0" text="Comments: ">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="9.0" layoutY="21.0" text="Left">
+                        <font>
+                            <Font name="SansSerif Bold" size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="9.0" layoutY="307.0" text="Right">
+                        <font>
+                            <Font name="SansSerif Bold" size="18.0" />
+                        </font>
+                    </Label>
+                    <Separator layoutY="193.0" prefHeight="0.0" prefWidth="512.0" />
+                    <RadioButton layoutX="18.0" layoutY="169.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="169.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="169.0" mnemonicParsing="false" />
+                    <Label layoutX="272.0" layoutY="169.0" text="severe pronation">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="10.0" layoutY="346.0" text="None">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="78.0" layoutY="346.0" text="Mostly">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="155.0" layoutY="346.0" text="Occasionally">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="273.0" layoutY="346.0" text="Grasp">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Separator layoutX="66.0" layoutY="344.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <Separator layoutX="1.0" layoutY="366.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="148.0" layoutY="344.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <Separator layoutX="267.0" layoutY="344.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <Separator layoutX="1.0" layoutY="396.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="1.0" layoutY="426.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="1.0" layoutY="456.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="1.0" layoutY="343.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="510.0" layoutY="344.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <RadioButton layoutX="18.0" layoutY="374.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="18.0" layoutY="404.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="18.0" layoutY="433.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="97.0" layoutY="374.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="97.0" layoutY="404.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="97.0" layoutY="433.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="192.0" layoutY="374.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="192.0" layoutY="404.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="192.0" layoutY="433.0" mnemonicParsing="false" />
+                    <Label layoutX="273.0" layoutY="374.0" text="neutral position">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="273.0" layoutY="404.0" text="excessive flexion">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="273.0" layoutY="433.0" text="excessive extension">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <TextArea layoutX="116.0" layoutY="525.0" prefHeight="59.0" prefWidth="255.0" />
+                    <Label layoutX="31.0" layoutY="541.0" text="Comments: ">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Separator layoutX="1.0" layoutY="486.0" prefHeight="0.0" prefWidth="512.0" />
+                    <RadioButton layoutX="19.0" layoutY="462.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="97.0" layoutY="462.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="192.0" layoutY="462.0" mnemonicParsing="false" />
+                    <Label layoutX="273.0" layoutY="462.0" text="radial deviation">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                </AnchorPane>
+            </Tab>
+            <Tab text="Elbow">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="839.0">
+                    <Label layoutX="9.0" layoutY="53.0" text="None">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="77.0" layoutY="53.0" text="Mostly">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="154.0" layoutY="53.0" text="Occasionally">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="53.0" text="Grasp">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Separator layoutX="65.0" layoutY="51.0" orientation="VERTICAL" prefHeight="113.0" prefWidth="0.0" />
+                    <Separator layoutY="73.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="147.0" layoutY="51.0" orientation="VERTICAL" prefHeight="113.0" />
+                    <Separator layoutX="266.0" layoutY="51.0" orientation="VERTICAL" prefHeight="113.0" prefWidth="0.0" />
+                    <Separator layoutY="103.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutY="133.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutY="163.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutY="50.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="509.0" layoutY="51.0" orientation="VERTICAL" prefHeight="113.0" prefWidth="0.0" />
+                    <RadioButton layoutX="17.0" layoutY="81.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="17.0" layoutY="111.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="17.0" layoutY="140.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="81.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="111.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="140.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="81.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="111.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="140.0" mnemonicParsing="false" />
+                    <Label layoutX="272.0" layoutY="81.0" text="Mildly flexed">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="111.0" text="Severely  flexed">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="140.0" text="Comes to full extension">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <TextArea layoutX="135.0" layoutY="184.0" prefHeight="67.0" prefWidth="256.0" />
+                    <Label layoutX="30.0" layoutY="210.0" text="Comments: ">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="9.0" layoutY="24.0" text="Left">
+                        <font>
+                            <Font name="SansSerif Bold" size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="9.0" layoutY="313.0" text="None">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="77.0" layoutY="313.0" text="Mostly">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="154.0" layoutY="313.0" text="Occasionally">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="313.0" text="Grasp">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Separator layoutX="65.0" layoutY="311.0" orientation="VERTICAL" prefHeight="113.0" prefWidth="0.0" />
+                    <Separator layoutY="333.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="147.0" layoutY="311.0" orientation="VERTICAL" prefHeight="113.0" />
+                    <Separator layoutX="266.0" layoutY="311.0" orientation="VERTICAL" prefHeight="113.0" prefWidth="0.0" />
+                    <Separator layoutY="363.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutY="393.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="4.0" layoutY="423.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutY="310.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="511.0" layoutY="311.0" orientation="VERTICAL" prefHeight="113.0" prefWidth="0.0" />
+                    <RadioButton layoutX="17.0" layoutY="341.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="17.0" layoutY="371.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="17.0" layoutY="400.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="341.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="371.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="400.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="341.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="371.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="400.0" mnemonicParsing="false" />
+                    <Label layoutX="272.0" layoutY="341.0" text="Mildly flexed">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="371.0" text="Severely flexed">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="400.0" text="Comes to full extension">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="36.0" layoutY="465.0" text="Comments: ">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="9.0" layoutY="271.0" text="Right">
+                        <font>
+                            <Font name="SansSerif Bold" size="18.0" />
+                        </font>
+                    </Label>
+                    <TextArea layoutX="138.0" layoutY="439.0" prefHeight="67.0" prefWidth="256.0" />
+                </AnchorPane>
+            </Tab>
+            <Tab text="Shoulder">
+                <content>
+                    <AnchorPane prefHeight="900.0" prefWidth="200.0">
+                        <children>
+                            <Label layoutX="9.0" layoutY="53.0" text="None">
+                                <font>
+                                    <Font name="SansSerif Regular" size="13.0" />
+                                </font>
+                            </Label>
+                            <Label layoutX="77.0" layoutY="53.0" text="Mostly">
+                                <font>
+                                    <Font name="SansSerif Regular" size="13.0" />
+                                </font>
+                            </Label>
+                            <Label layoutX="154.0" layoutY="53.0" text="Occasionally">
+                                <font>
+                                    <Font name="SansSerif Regular" size="13.0" />
+                                </font>
+                            </Label>
+                            <Label layoutX="272.0" layoutY="53.0" text="Hand Use">
+                                <font>
+                                    <Font name="SansSerif Regular" size="13.0" />
+                                </font>
+                            </Label>
+                            <Separator layoutX="65.0" layoutY="51.0" orientation="VERTICAL" prefHeight="263.0" prefWidth="0.0" />
+                            <Separator layoutY="73.0" prefHeight="0.0" prefWidth="512.0" />
+                            <Separator layoutX="147.0" layoutY="51.0" orientation="VERTICAL" prefHeight="263.0" prefWidth="0.0" />
+                            <Separator layoutX="266.0" layoutY="51.0" orientation="VERTICAL" prefHeight="263.0" prefWidth="0.0" />
+                            <Separator layoutY="103.0" prefHeight="0.0" prefWidth="512.0" />
+                            <Separator layoutY="133.0" prefHeight="0.0" prefWidth="512.0" />
+                            <Separator layoutY="163.0" prefHeight="0.0" prefWidth="512.0" />
+                            <Separator layoutY="193.0" prefHeight="0.0" prefWidth="512.0" />
+                            <Separator layoutY="223.0" prefHeight="0.0" prefWidth="512.0" />
+                            <Separator layoutY="50.0" prefHeight="0.0" prefWidth="512.0" />
+                            <Separator layoutX="509.0" layoutY="51.0" orientation="VERTICAL" prefHeight="263.0" prefWidth="0.0" />
+                            <RadioButton layoutX="17.0" layoutY="81.0" mnemonicParsing="false" />
+                            <RadioButton layoutX="17.0" layoutY="111.0" mnemonicParsing="false" />
+                            <RadioButton layoutX="17.0" layoutY="140.0" mnemonicParsing="false" />
+                            <RadioButton layoutX="17.0" layoutY="171.0" mnemonicParsing="false" />
+                            <RadioButton layoutX="17.0" layoutY="201.0" mnemonicParsing="false" />
+                            <RadioButton layoutX="96.0" layoutY="81.0" mnemonicParsing="false" />
+                            <RadioButton layoutX="96.0" layoutY="111.0" mnemonicParsing="false" />
+                            <RadioButton layoutX="96.0" layoutY="140.0" mnemonicParsing="false" />
+                            <RadioButton layoutX="96.0" layoutY="171.0" mnemonicParsing="false" />
+                            <RadioButton layoutX="96.0" layoutY="201.0" mnemonicParsing="false" />
+                            <RadioButton layoutX="191.0" layoutY="81.0" mnemonicParsing="false" />
+                            <RadioButton layoutX="191.0" layoutY="111.0" mnemonicParsing="false" />
+                            <RadioButton layoutX="191.0" layoutY="140.0" mnemonicParsing="false" />
+                            <RadioButton layoutX="191.0" layoutY="171.0" mnemonicParsing="false" />
+                            <RadioButton layoutX="191.0" layoutY="201.0" mnemonicParsing="false" />
+                            <Label layoutX="272.0" layoutY="81.0" text="Elevated">
+                                <font>
+                                    <Font name="SansSerif Regular" size="13.0" />
+                                </font>
+                            </Label>
+                            <Label layoutX="272.0" layoutY="111.0" text="Depressed">
+                                <font>
+                                    <Font name="SansSerif Regular" size="13.0" />
+                                </font>
+                            </Label>
+                            <Label layoutX="272.0" layoutY="140.0" text="IR">
+                                <font>
+                                    <Font name="SansSerif Regular" size="13.0" />
+                                </font>
+                            </Label>
+                            <Label layoutX="272.0" layoutY="171.0" text="ER">
+                                <font>
+                                    <Font name="SansSerif Regular" size="13.0" />
+                                </font>
+                            </Label>
+                            <Label layoutX="272.0" layoutY="201.0" text="Flexed">
+                                <font>
+                                    <Font name="SansSerif Regular" size="13.0" />
+                                </font>
+                            </Label>
+                            <Label layoutX="9.0" layoutY="15.0" text="Left">
+                                <font>
+                                    <Font name="SansSerif Bold" size="18.0" />
+                                </font>
+                            </Label>
+                            <Label layoutX="9.0" layoutY="410.0" text="Right">
+                                <font>
+                                    <Font name="SansSerif Bold" size="18.0" />
+                                </font>
+                            </Label>
+                        <Separator layoutY="253.0" prefHeight="0.0" prefWidth="512.0" />
+                        <RadioButton layoutX="17.0" layoutY="230.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="230.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="191.0" layoutY="230.0" mnemonicParsing="false" />
+                        <Label layoutX="272.0" layoutY="231.0" text="Extended">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutY="283.0" prefHeight="0.0" prefWidth="512.0" />
+                        <RadioButton layoutX="18.0" layoutY="262.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="262.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="191.0" layoutY="262.0" mnemonicParsing="false" />
+                        <Label layoutX="272.0" layoutY="262.0" text="ABducted">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutY="313.0" prefHeight="0.0" prefWidth="512.0" />
+                        <RadioButton layoutX="18.0" layoutY="290.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="290.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="191.0" layoutY="290.0" mnemonicParsing="false" />
+                        <Label layoutX="272.0" layoutY="290.0" text="ADducted">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="67.0" layoutY="353.0" text="Comments:">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextArea layoutX="141.0" layoutY="339.0" prefHeight="49.0" prefWidth="255.0" />
+                        <Label layoutX="10.0" layoutY="446.0" text="None">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="78.0" layoutY="446.0" text="Mostly">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="155.0" layoutY="446.0" text="Occasionally">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="273.0" layoutY="446.0" text="Hand Use">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="66.0" layoutY="444.0" orientation="VERTICAL" prefHeight="263.0" prefWidth="0.0" />
+                        <Separator layoutX="1.0" layoutY="466.0" prefHeight="0.0" prefWidth="512.0" />
+                        <Separator layoutX="148.0" layoutY="444.0" orientation="VERTICAL" prefHeight="263.0" prefWidth="0.0" />
+                        <Separator layoutX="267.0" layoutY="444.0" orientation="VERTICAL" prefHeight="263.0" prefWidth="0.0" />
+                        <Separator layoutX="1.0" layoutY="496.0" prefHeight="0.0" prefWidth="512.0" />
+                        <Separator layoutX="1.0" layoutY="526.0" prefHeight="0.0" prefWidth="512.0" />
+                        <Separator layoutX="1.0" layoutY="556.0" prefHeight="0.0" prefWidth="512.0" />
+                        <Separator layoutX="1.0" layoutY="586.0" prefHeight="0.0" prefWidth="512.0" />
+                        <Separator layoutX="1.0" layoutY="616.0" prefHeight="0.0" prefWidth="512.0" />
+                        <Separator layoutX="1.0" layoutY="443.0" prefHeight="0.0" prefWidth="512.0" />
+                        <Separator layoutX="510.0" layoutY="444.0" orientation="VERTICAL" prefHeight="263.0" prefWidth="0.0" />
+                        <RadioButton layoutX="18.0" layoutY="474.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="18.0" layoutY="504.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="18.0" layoutY="533.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="18.0" layoutY="564.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="18.0" layoutY="594.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="97.0" layoutY="474.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="97.0" layoutY="504.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="97.0" layoutY="533.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="97.0" layoutY="564.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="97.0" layoutY="594.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="192.0" layoutY="474.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="192.0" layoutY="504.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="192.0" layoutY="533.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="192.0" layoutY="564.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="192.0" layoutY="594.0" mnemonicParsing="false" />
+                        <Label layoutX="273.0" layoutY="474.0" text="Elevated">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="273.0" layoutY="504.0" text="Depressed">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="273.0" layoutY="533.0" text="IR">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="273.0" layoutY="564.0" text="ER">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="273.0" layoutY="594.0" text="Flexed">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="1.0" layoutY="646.0" prefHeight="0.0" prefWidth="512.0" />
+                        <RadioButton layoutX="18.0" layoutY="623.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="97.0" layoutY="623.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="192.0" layoutY="623.0" mnemonicParsing="false" />
+                        <Label layoutX="273.0" layoutY="624.0" text="Extended">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="1.0" layoutY="676.0" prefHeight="0.0" prefWidth="512.0" />
+                        <RadioButton layoutX="19.0" layoutY="655.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="97.0" layoutY="655.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="192.0" layoutY="655.0" mnemonicParsing="false" />
+                        <Label layoutX="273.0" layoutY="655.0" text="ABducted">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="1.0" layoutY="706.0" prefHeight="0.0" prefWidth="512.0" />
+                        <RadioButton layoutX="19.0" layoutY="683.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="97.0" layoutY="683.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="192.0" layoutY="683.0" mnemonicParsing="false" />
+                        <Label layoutX="273.0" layoutY="683.0" text="ADducted">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="68.0" layoutY="746.0" text="Comments:">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextArea layoutX="141.0" layoutY="729.0" prefHeight="49.0" prefWidth="255.0" />
+                        </children>
+                    </AnchorPane>
+                </content>
+            </Tab>
+            <Tab text="Scapula">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="741.0" prefWidth="631.0">
+                    <Label layoutX="9.0" layoutY="53.0" text="None">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="77.0" layoutY="53.0" text="Mostly">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="154.0" layoutY="53.0" text="Occasionally">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="53.0" text="Grasp">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Separator layoutX="65.0" layoutY="51.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <Separator layoutY="73.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="147.0" layoutY="51.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <Separator layoutX="266.0" layoutY="51.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <Separator layoutY="103.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutY="133.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutY="163.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutY="50.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="509.0" layoutY="51.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <RadioButton layoutX="17.0" layoutY="81.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="17.0" layoutY="111.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="17.0" layoutY="140.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="81.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="111.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="140.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="81.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="111.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="140.0" mnemonicParsing="false" />
+                    <Label layoutX="272.0" layoutY="81.0" text="Elevated">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="111.0" text="Depressed">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="140.0" text="Retracted">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <TextArea layoutX="115.0" layoutY="234.0" prefHeight="59.0" prefWidth="255.0" />
+                    <Label layoutX="30.0" layoutY="254.0" text="Comments: ">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="9.0" layoutY="21.0" text="Left">
+                        <font>
+                            <Font name="SansSerif Bold" size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="9.0" layoutY="307.0" text="Right">
+                        <font>
+                            <Font name="SansSerif Bold" size="18.0" />
+                        </font>
+                    </Label>
+                    <Separator layoutY="193.0" prefHeight="0.0" prefWidth="512.0" />
+                    <RadioButton layoutX="18.0" layoutY="169.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="169.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="169.0" mnemonicParsing="false" />
+                    <Label layoutX="272.0" layoutY="169.0" text="Winged">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="10.0" layoutY="346.0" text="None">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="78.0" layoutY="346.0" text="Mostly">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="155.0" layoutY="346.0" text="Occasionally">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="273.0" layoutY="346.0" text="Grasp">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Separator layoutX="66.0" layoutY="344.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <Separator layoutX="1.0" layoutY="366.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="148.0" layoutY="344.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <Separator layoutX="267.0" layoutY="344.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <Separator layoutX="1.0" layoutY="396.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="1.0" layoutY="426.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="1.0" layoutY="456.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="1.0" layoutY="343.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="510.0" layoutY="344.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <RadioButton layoutX="18.0" layoutY="374.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="18.0" layoutY="404.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="18.0" layoutY="433.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="97.0" layoutY="374.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="97.0" layoutY="404.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="97.0" layoutY="433.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="192.0" layoutY="374.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="192.0" layoutY="404.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="192.0" layoutY="433.0" mnemonicParsing="false" />
+                    <Label layoutX="273.0" layoutY="374.0" text="Elevated">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="273.0" layoutY="404.0" text="Depressed">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="273.0" layoutY="433.0" text="Retracted">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <TextArea layoutX="116.0" layoutY="525.0" prefHeight="59.0" prefWidth="255.0" />
+                    <Label layoutX="31.0" layoutY="541.0" text="Comments: ">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Separator layoutX="1.0" layoutY="486.0" prefHeight="0.0" prefWidth="512.0" />
+                    <RadioButton layoutX="19.0" layoutY="462.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="97.0" layoutY="462.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="192.0" layoutY="462.0" mnemonicParsing="false" />
+                    <Label layoutX="273.0" layoutY="462.0" text="Winged">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                </AnchorPane>
+            </Tab>
+            <Tab text="Trunk">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="741.0" prefWidth="631.0">
+                    <Label layoutX="9.0" layoutY="53.0" text="None">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="77.0" layoutY="53.0" text="Mostly">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="154.0" layoutY="53.0" text="Occasionally">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="53.0" text="Grasp">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Separator layoutX="65.0" layoutY="51.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <Separator layoutY="73.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="147.0" layoutY="51.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <Separator layoutX="266.0" layoutY="51.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <Separator layoutY="103.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutY="133.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutY="163.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutY="50.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="509.0" layoutY="51.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <RadioButton layoutX="17.0" layoutY="81.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="17.0" layoutY="111.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="17.0" layoutY="140.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="81.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="111.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="140.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="81.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="111.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="140.0" mnemonicParsing="false" />
+                    <Label layoutX="272.0" layoutY="81.0" text="Neutral">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="111.0" text="Rotated">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="272.0" layoutY="140.0" text="Laterally Flexed">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <TextArea layoutX="115.0" layoutY="234.0" prefHeight="59.0" prefWidth="255.0" />
+                    <Label layoutX="30.0" layoutY="254.0" text="Comments: ">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="9.0" layoutY="21.0" text="Left">
+                        <font>
+                            <Font name="SansSerif Bold" size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="9.0" layoutY="307.0" text="Right">
+                        <font>
+                            <Font name="SansSerif Bold" size="18.0" />
+                        </font>
+                    </Label>
+                    <Separator layoutY="193.0" prefHeight="0.0" prefWidth="512.0" />
+                    <RadioButton layoutX="18.0" layoutY="169.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="96.0" layoutY="169.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="191.0" layoutY="169.0" mnemonicParsing="false" />
+                    <Label layoutX="272.0" layoutY="169.0" text="Forward Flexed">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="10.0" layoutY="346.0" text="None">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="78.0" layoutY="346.0" text="Mostly">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="155.0" layoutY="346.0" text="Occasionally">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="273.0" layoutY="346.0" text="Grasp">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Separator layoutX="66.0" layoutY="344.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <Separator layoutX="1.0" layoutY="366.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="148.0" layoutY="344.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <Separator layoutX="267.0" layoutY="344.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <Separator layoutX="1.0" layoutY="396.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="1.0" layoutY="426.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="1.0" layoutY="456.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="1.0" layoutY="343.0" prefHeight="0.0" prefWidth="512.0" />
+                    <Separator layoutX="510.0" layoutY="344.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="0.0" />
+                    <RadioButton layoutX="18.0" layoutY="374.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="18.0" layoutY="404.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="18.0" layoutY="433.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="97.0" layoutY="374.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="97.0" layoutY="404.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="97.0" layoutY="433.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="192.0" layoutY="374.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="192.0" layoutY="404.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="192.0" layoutY="433.0" mnemonicParsing="false" />
+                    <Label layoutX="273.0" layoutY="374.0" text="Neutral">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="273.0" layoutY="404.0" text="Rotated">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="273.0" layoutY="433.0" text="Laterally Flexed">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <TextArea layoutX="116.0" layoutY="525.0" prefHeight="59.0" prefWidth="255.0" />
+                    <Label layoutX="31.0" layoutY="541.0" text="Comments: ">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                    <Separator layoutX="1.0" layoutY="486.0" prefHeight="0.0" prefWidth="512.0" />
+                    <RadioButton layoutX="19.0" layoutY="462.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="97.0" layoutY="462.0" mnemonicParsing="false" />
+                    <RadioButton layoutX="192.0" layoutY="462.0" mnemonicParsing="false" />
+                    <Label layoutX="273.0" layoutY="462.0" text="Forward Flexed">
+                        <font>
+                            <Font name="SansSerif Regular" size="13.0" />
+                        </font>
+                    </Label>
+                </AnchorPane>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </content>
+</ScrollPane>

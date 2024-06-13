@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Compendium.CompendiumQuestionnaireController">
+    <AnchorPane prefHeight="1028.0" prefWidth="799.0">
+        <Label layoutX="15.0" layoutY="14.0" text="Questionnaire Report">
+            <font>
+                <Font name="SansSerif Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="23.0" layoutY="71.0" text="Patient: " />
+        <Label layoutX="75.0" layoutY="71.0" text="Test Test" />
+        <Label layoutX="285.0" layoutY="71.0" text="MRN: " />
+        <Label layoutX="322.0" layoutY="71.0" text="123" />
+        <Label layoutX="499.0" layoutY="71.0" text="Visit Date: " />
+        <Label layoutX="568.0" layoutY="71.0" text="10/31/2023" />
+        <Separator blendMode="DIFFERENCE" layoutX="2.0" layoutY="98.0" prefHeight="0.0" prefWidth="787.0" />
+        <Label layoutX="23.0" layoutY="113.0" text="Person Completing Questionnaire" />
+        <Label layoutX="23.0" layoutY="146.0" text="Relationship to Patient: " />
+        <Label layoutX="23.0" layoutY="185.0" text="Recent Change to Ability to Walk: " />
+        <Label layoutX="23.0" layoutY="225.0" text="Noted for Support while Walking: " />
+        <Label layoutX="23.0" layoutY="265.0" text="FMS: " />
+        <Label layoutX="23.0" layoutY="305.0" text="Date to Followup with MD: " />
+        <Label layoutX="23.0" layoutY="345.0" text="General Concerns: " />
+        <Label layoutX="285.0" layoutY="113.0" text="Parent" />
+        <Label layoutX="285.0" layoutY="146.0" text="Parent" />
+        <Label layoutX="285.0" layoutY="185.0" text="No Change" />
+        <Label layoutX="285.0" layoutY="225.0" text="Walks without Support" />
+        <Label layoutX="285.0" layoutY="265.0" text="(5, 5, 5)" />
+        <Separator layoutX="21.0" layoutY="138.0" prefHeight="0.0" prefWidth="541.0" />
+        <Separator layoutX="21.0" layoutY="170.0" prefHeight="0.0" prefWidth="541.0" />
+        <Separator layoutX="21.0" layoutY="212.0" prefHeight="0.0" prefWidth="541.0" />
+        <Separator layoutX="21.0" layoutY="251.0" prefHeight="0.0" prefWidth="541.0" />
+        <Separator layoutX="21.0" layoutY="289.0" prefHeight="0.0" prefWidth="541.0" />
+        <Separator layoutX="21.0" layoutY="328.0" prefHeight="0.0" prefWidth="541.0" />
+        <Separator layoutX="21.0" layoutY="422.0" prefHeight="0.0" prefWidth="541.0" />
+        <Label layoutX="23.0" layoutY="476.0" text="Seizure Medications: ">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="283.0" layoutY="476.0" text="Current Devices/Braces:">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="23.0" layoutY="574.0" text="Gait Concerns:">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="283.0" layoutY="574.0" text="Pain Reports: ">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="20.0" layoutY="830.0" text="Occupational Therapy Frequency:">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="20.0" layoutY="683.0" text="Physical Therapy Frequency:">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+
+
+    </AnchorPane>
+</ScrollPane>

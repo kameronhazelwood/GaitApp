@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="561.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.gait.gaitui.Controller.Forms.TestForms.PTEvaluation_Tab">
+   <children>
+      <Pane prefHeight="561.0" prefWidth="628.0">
+         <children>
+            <Button layoutX="389.0" layoutY="517.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="104.0" text="Save" />
+            <Button layoutX="502.0" layoutY="517.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="104.0" text="Cancel" />
+         </children></Pane>
+      <TabPane prefHeight="514.0" prefWidth="628.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="General &amp; GMFM">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="544.0" prefWidth="620.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="General &amp; GMFM">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="51.0" text="Height " />
+                        <Label layoutX="352.0" layoutY="46.0" text="Weight " />
+                        <Label layoutX="14.0" layoutY="81.0" text="Right Foot Width(cm)" />
+                        <TextField layoutX="156.0" layoutY="49.0" />
+                        <TextField layoutX="441.0" layoutY="48.0" />
+                        <Label layoutX="14.0" layoutY="107.0" text="Right Foot Length(cm)" />
+                        <TextField layoutX="156.0" layoutY="77.0" />
+                        <TextField layoutX="156.0" layoutY="103.0" />
+                        <Label layoutX="14.0" layoutY="152.0" text="Ambulation Scale" />
+                        <TextField layoutX="156.0" layoutY="148.0" prefHeight="25.0" prefWidth="310.0" />
+                        <Label layoutX="14.0" layoutY="176.0" text="GMFCS" />
+                        <TextField layoutX="156.0" layoutY="172.0" prefHeight="25.0" prefWidth="310.0" />
+                        <TextField layoutX="442.0" layoutY="75.0" />
+                        <TextField layoutX="442.0" layoutY="103.0" />
+                        <Label layoutX="316.0" layoutY="81.0" text="Left Foot Width(cm)" />
+                        <Label layoutX="314.0" layoutY="107.0" text="Left Foot Length(cm)" />
+                        <Label layoutX="14.0" layoutY="202.0" text="FMS (5m)" />
+                        <TextField layoutX="156.0" layoutY="198.0" prefHeight="25.0" prefWidth="310.0" />
+                        <TextField layoutX="156.0" layoutY="224.0" prefHeight="25.0" prefWidth="310.0" />
+                        <Label layoutX="15.0" layoutY="228.0" text="FMS (50m)" />
+                        <Label layoutX="15.0" layoutY="254.0" text="FMS (500m)" />
+                        <TextField layoutX="156.0" layoutY="252.0" prefHeight="25.0" prefWidth="310.0" />
+                        <TextField layoutX="155.0" layoutY="289.0" prefHeight="102.0" prefWidth="433.0" />
+                        <Label layoutX="15.0" layoutY="322.0" text="Comments" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Functional Strength">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                            <TextField layoutX="239.0" layoutY="41.0" />
+                            <TextField layoutX="407.0" layoutY="41.0" />
+                            <Label layoutX="14.0" layoutY="45.0" text="Pull to Stand (52)" />
+                            <Label layoutX="462.0" layoutY="20.0" text="Left" />
+                            <Label layoutX="298.0" layoutY="22.0" text="Right " />
+                            <Label layoutX="14.0" layoutY="74.0" text="Indep. Standing - Arms Free(3 sec) (53)" />
+                            <Label layoutX="14.0" layoutY="100.0" text="Indep. Standing - Arms Free(20 sec) (53)" />
+                            <TextField layoutX="239.0" layoutY="70.0" />
+                            <TextField layoutX="239.0" layoutY="96.0" />
+                            <TextField layoutX="407.0" layoutY="70.0" />
+                            <TextField layoutX="407.0" layoutY="96.0" />
+                        <Label layoutX="12.0" layoutY="128.0" text="One leg stance hand held - Right (54, 55)" />
+                        <TextField layoutX="238.0" layoutY="123.0" />
+                        <TextField layoutX="407.0" layoutY="123.0" />
+                        <Label layoutX="14.0" layoutY="155.0" text="One leg stance (57, 58)" />
+                        <TextField layoutX="235.0" layoutY="151.0" />
+                        <TextField layoutX="407.0" layoutY="151.0" />
+                        <Label layoutX="15.0" layoutY="181.0" text="Short sit to stand (59)" />
+                        <TextField layoutX="235.0" layoutY="178.0" />
+                        <TextField layoutX="407.0" layoutY="178.0" />
+                        <Label layoutX="14.0" layoutY="208.0" text="High knee to stand (60, 61)" />
+                        <TextField layoutX="235.0" layoutY="205.0" />
+                        <TextField layoutX="407.0" layoutY="204.0" />
+                        <Label layoutX="14.0" layoutY="238.0" text="Lowers to Floor (62)" />
+                        <TextField layoutX="235.0" layoutY="232.0" />
+                        <TextField layoutX="407.0" layoutY="231.0" />
+                        <Label layoutX="15.0" layoutY="263.0" text="Squats (63)" />
+                        <TextField layoutX="235.0" layoutY="259.0" />
+                        <TextField layoutX="407.0" layoutY="259.0" />
+                        <Label layoutX="15.0" layoutY="290.0" text="Standing - picks pen from floor (64)" />
+                        <TextField layoutX="235.0" layoutY="286.0" />
+                        <TextField layoutX="407.0" layoutY="286.0" />
+                        <Label layoutX="15.0" layoutY="332.0" text="Comments" />
+                        <TextField layoutX="204.0" layoutY="328.0" prefHeight="69.0" prefWidth="397.0" />
+                        </children>
+                    </AnchorPane>
+                </content>
+            </Tab>
+          <Tab text="Prom &amp; Strength">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="499.0" prefWidth="620.0">
+                     <children>
+                        <Label layoutX="228.0" layoutY="14.0" text="Right" />
+                        <TextField layoutX="167.0" layoutY="35.0" />
+                        <Label layoutX="391.0" layoutY="14.0" text="Left" />
+                        <TextField layoutX="326.0" layoutY="35.0" />
+                        <Label layoutX="43.0" layoutY="39.0" text="Hip Flex" />
+                        <Label layoutX="43.0" layoutY="66.0" text="Hip Ext" />
+                        <TextField layoutX="167.0" layoutY="62.0" />
+                        <TextField layoutX="326.0" layoutY="62.0" />
+                        <Label layoutX="43.0" layoutY="94.0" text="Hip Abd" />
+                        <TextField layoutX="167.0" layoutY="91.0" />
+                        <TextField layoutX="326.0" layoutY="91.0" />
+                        <Label layoutX="42.0" layoutY="122.0" text="Hip Int Rot" />
+                        <TextField layoutX="167.0" layoutY="118.0" />
+                        <TextField layoutX="326.0" layoutY="118.0" />
+                        <Label layoutX="42.0" layoutY="151.0" text="Hip Ext Rot" />
+                        <TextField layoutX="167.0" layoutY="145.0" />
+                        <TextField layoutX="326.0" layoutY="145.0" />
+                        <Label layoutX="41.0" layoutY="178.0" text="Ryder Test" />
+                        <TextField layoutX="167.0" layoutY="172.0" />
+                        <TextField layoutX="326.0" layoutY="172.0" />
+                        <Label layoutX="44.0" layoutY="204.0" text="Knee Ext" />
+                        <TextField layoutX="167.0" layoutY="197.0" />
+                        <TextField layoutX="326.0" layoutY="197.0" />
+                        <Label layoutX="44.0" layoutY="231.0" text="Pop Angle" />
+                        <TextField layoutX="167.0" layoutY="224.0" />
+                        <TextField layoutX="326.0" layoutY="224.0" />
+                        <Label layoutX="24.0" layoutY="259.0" text="Bilateral Pop Angle" />
+                        <TextField layoutX="167.0" layoutY="251.0" />
+                        <TextField layoutX="326.0" layoutY="251.0" />
+                        <Label layoutX="52.0" layoutY="287.0" text="Ely Test" />
+                        <TextField layoutX="167.0" layoutY="280.0" />
+                        <TextField layoutX="326.0" layoutY="280.0" />
+                        <Label layoutX="51.0" layoutY="310.0" text="Dorsi (Flex)" />
+                        <TextField layoutX="167.0" layoutY="306.0" />
+                        <TextField layoutX="326.0" layoutY="306.0" />
+                        <Label layoutX="51.0" layoutY="336.0" text="Dorsi (ext)" />
+                        <TextField layoutX="169.0" layoutY="332.0" />
+                        <TextField layoutX="326.0" layoutY="332.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Orthotics">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="23.0" layoutY="24.0" text="Add Orthosis to Visit">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="23.0" layoutY="57.0" text="Orthosis:" />
+                        <ComboBox layoutX="87.0" layoutY="53.0" prefWidth="150.0" />
+                        <Label layoutX="33.0" layoutY="103.0" text="Side:" />
+                        <RadioButton layoutX="87.0" layoutY="103.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="60.0" text="Left" />
+                        <RadioButton layoutX="161.0" layoutY="103.0" mnemonicParsing="false" text="Right" />
+                        <RadioButton layoutX="249.0" layoutY="100.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="83.0" text="Center" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Motor Control">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="8.0" text="Motor Control">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="42.0" text="Iliopsoas" />
+                        <Label layoutX="14.0" layoutY="74.0" text="Glute Med" />
+                        <Label layoutX="14.0" layoutY="99.0" text="Hip Adductor" />
+                        <TextField layoutX="112.0" layoutY="38.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="220.0" layoutY="38.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="328.0" layoutY="38.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="436.0" layoutY="38.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="113.0" layoutY="64.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="220.0" layoutY="64.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="328.0" layoutY="65.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="436.0" layoutY="65.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="112.0" layoutY="92.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="219.0" layoutY="91.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="328.0" layoutY="92.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="436.0" layoutY="92.0" prefHeight="25.0" prefWidth="104.0" />
+                        <Label layoutX="14.0" layoutY="126.0" text="Glute Max" />
+                        <TextField layoutX="113.0" layoutY="119.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="219.0" layoutY="119.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="328.0" layoutY="119.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="436.0" layoutY="119.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="113.0" layoutY="146.0" prefHeight="25.0" prefWidth="104.0" />
+                        <Label layoutX="15.0" layoutY="152.0" text="Quads" />
+                        <TextField layoutX="220.0" layoutY="146.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="328.0" layoutY="146.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="436.0" layoutY="146.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="114.0" layoutY="172.0" prefHeight="25.0" prefWidth="104.0" />
+                        <Label layoutX="15.0" layoutY="177.0" text="Hamstring" />
+                        <TextField layoutX="220.0" layoutY="172.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="328.0" layoutY="173.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="436.0" layoutY="173.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="115.0" layoutY="199.0" prefHeight="25.0" prefWidth="104.0" />
+                        <Label layoutX="14.0" layoutY="203.0" text="Ant Tibialis" />
+                        <TextField layoutX="220.0" layoutY="199.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="328.0" layoutY="199.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="436.0" layoutY="199.0" prefHeight="25.0" prefWidth="104.0" />
+                        <Label layoutX="14.0" layoutY="228.0" text="Gastrocnemius" />
+                        <TextField layoutX="113.0" layoutY="224.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="220.0" layoutY="224.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="328.0" layoutY="224.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="435.0" layoutY="225.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="113.0" layoutY="250.0" prefHeight="25.0" prefWidth="104.0" />
+                        <Label layoutX="14.0" layoutY="254.0" text="Post Tibialis" />
+                        <TextField layoutX="220.0" layoutY="250.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="328.0" layoutY="250.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="435.0" layoutY="250.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="113.0" layoutY="277.0" prefHeight="25.0" prefWidth="104.0" />
+                        <Label layoutX="14.0" layoutY="281.0" text="Soleus" />
+                        <TextField layoutX="220.0" layoutY="277.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="328.0" layoutY="277.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="435.0" layoutY="277.0" prefHeight="25.0" prefWidth="104.0" />
+                        <Label layoutX="14.0" layoutY="305.0" text="Peroneals" />
+                        <TextField layoutX="114.0" layoutY="302.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="220.0" layoutY="301.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="328.0" layoutY="303.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="436.0" layoutY="304.0" prefHeight="25.0" prefWidth="104.0" />
+                        <Label layoutX="3.0" layoutY="332.0" text="Proximal Motor Control" />
+                        <TextField layoutX="137.0" layoutY="329.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="244.0" layoutY="329.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="350.0" layoutY="329.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="457.0" layoutY="329.0" prefHeight="25.0" prefWidth="104.0" />
+                        <Label layoutX="3.0" layoutY="358.0" text="Distal Motor Control" />
+                        <TextField layoutX="137.0" layoutY="355.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="244.0" layoutY="355.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="350.0" layoutY="354.0" prefHeight="25.0" prefWidth="104.0" />
+                        <TextField layoutX="457.0" layoutY="354.0" prefHeight="25.0" prefWidth="104.0" />
+                        <Label layoutX="11.0" layoutY="427.0" text="Comments" />
+                        <TextField layoutX="114.0" layoutY="397.0" prefHeight="77.0" prefWidth="463.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Tone">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Tone">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="6.0" layoutY="48.0" text="Iliopsoas" />
+                        <Label layoutX="6.0" layoutY="78.0" text="Glute Max" />
+                        <Label layoutX="9.0" layoutY="106.0" text="Adductor" />
+                        <TextField layoutX="80.0" layoutY="44.0" prefHeight="25.0" prefWidth="95.0" />
+                        <TextField layoutX="78.0" layoutY="72.0" prefHeight="25.0" prefWidth="97.0" />
+                        <TextField layoutX="78.0" layoutY="101.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="177.0" layoutY="44.0" prefHeight="25.0" prefWidth="95.0" />
+                        <TextField layoutX="178.0" layoutY="72.0" prefHeight="25.0" prefWidth="95.0" />
+                        <TextField layoutX="180.0" layoutY="101.0" prefHeight="25.0" prefWidth="95.0" />
+                        <TextField layoutX="280.0" layoutY="101.0" prefHeight="25.0" prefWidth="95.0" />
+                        <TextField layoutX="279.0" layoutY="71.0" prefHeight="25.0" prefWidth="95.0" />
+                        <TextField layoutX="278.0" layoutY="44.0" prefHeight="25.0" prefWidth="95.0" />
+                        <TextField layoutX="379.0" layoutY="101.0" prefHeight="25.0" prefWidth="95.0" />
+                        <TextField layoutX="379.0" layoutY="71.0" prefHeight="25.0" prefWidth="95.0" />
+                        <TextField layoutX="379.0" layoutY="44.0" prefHeight="25.0" prefWidth="95.0" />
+                        <Label layoutX="8.0" layoutY="132.0" text="Rectus Femoris" />
+                        <TextField layoutX="95.0" layoutY="129.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="196.0" layoutY="128.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="296.0" layoutY="128.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="396.0" layoutY="128.0" prefHeight="25.0" prefWidth="99.0" />
+                        <Label layoutX="8.0" layoutY="159.0" text="Vastus Medialis" />
+                        <TextField layoutX="96.0" layoutY="155.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="196.0" layoutY="155.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="297.0" layoutY="155.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="396.0" layoutY="154.0" prefHeight="25.0" prefWidth="99.0" />
+                        <Label layoutX="8.0" layoutY="185.0" text="Hamstring" />
+                        <TextField layoutX="96.0" layoutY="182.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="198.0" layoutY="182.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="297.0" layoutY="182.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="396.0" layoutY="182.0" prefHeight="25.0" prefWidth="99.0" />
+                        <Label layoutX="8.0" layoutY="211.0" text="Post Tib" />
+                        <TextField layoutX="96.0" layoutY="208.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="198.0" layoutY="208.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="299.0" layoutY="208.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="398.0" layoutY="208.0" prefHeight="25.0" prefWidth="99.0" />
+                        <Label layoutX="9.0" layoutY="238.0" text="Ant Tib" />
+                        <TextField layoutX="97.0" layoutY="234.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="198.0" layoutY="234.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="299.0" layoutY="234.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="401.0" layoutY="234.0" prefHeight="25.0" prefWidth="99.0" />
+                        <Label layoutX="9.0" layoutY="263.0" text="Gastroc" />
+                        <TextField layoutX="97.0" layoutY="261.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="198.0" layoutY="261.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="299.0" layoutY="261.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="401.0" layoutY="261.0" prefHeight="25.0" prefWidth="99.0" />
+                        <Label layoutX="9.0" layoutY="294.0" text="Clonus" />
+                        <TextField layoutX="98.0" layoutY="288.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="198.0" layoutY="288.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="300.0" layoutY="288.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="401.0" layoutY="288.0" prefHeight="25.0" prefWidth="99.0" />
+                        <Label layoutX="10.0" layoutY="321.0" text="Knee Jerk" />
+                        <TextField layoutX="98.0" layoutY="314.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="199.0" layoutY="314.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="300.0" layoutY="314.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="401.0" layoutY="314.0" prefHeight="25.0" prefWidth="99.0" />
+                        <Label layoutX="9.0" layoutY="345.0" text="Ankle Jerk" />
+                        <TextField layoutX="98.0" layoutY="341.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="199.0" layoutY="341.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="300.0" layoutY="340.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="402.0" layoutY="340.0" prefHeight="25.0" prefWidth="99.0" />
+                        <Label layoutX="9.0" layoutY="368.0" text="Babinski" />
+                        <TextField layoutX="99.0" layoutY="367.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="201.0" layoutY="368.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="302.0" layoutY="367.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="402.0" layoutY="368.0" prefHeight="25.0" prefWidth="99.0" />
+                        <Label layoutX="10.0" layoutY="404.0" text="Proximal Muscle Tone" />
+                        <Label layoutX="9.0" layoutY="435.0" text="Distal Muscle Tone" />
+                        <TextField layoutX="133.0" layoutY="400.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="234.0" layoutY="400.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="335.0" layoutY="400.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="436.0" layoutY="400.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="133.0" layoutY="426.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="234.0" layoutY="426.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="336.0" layoutY="427.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="436.0" layoutY="427.0" prefHeight="25.0" prefWidth="99.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Pain">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="22.0" layoutY="14.0" text="Pain Assessment Method: " />
+                        <Label layoutX="245.0" layoutY="14.0" text="Numerical" />
+                        <TextField layoutX="208.0" layoutY="39.0" />
+                        <TextField layoutX="208.0" layoutY="69.0" />
+                        <TextField layoutX="208.0" layoutY="98.0" />
+                        <Label layoutX="56.0" layoutY="42.0" text="Aggravating Factors" />
+                        <Label layoutX="59.0" layoutY="73.0" text="Activities Impacted" />
+                        <Label layoutX="68.0" layoutY="102.0" text="Current Level" />
+                        <Label layoutX="69.0" layoutY="131.0" text="Lowest Level" />
+                        <TextField layoutX="208.0" layoutY="126.0" />
+                        <Label layoutX="69.0" layoutY="157.0" text="Highest Level" />
+                        <TextField layoutX="208.0" layoutY="154.0" />
+                        <Label layoutX="67.0" layoutY="188.0" text="Location of Pain" />
+                        <TextField layoutX="208.0" layoutY="183.0" />
+                        <Label layoutX="67.0" layoutY="217.0" text="Frequency of Pain" />
+                        <TextField layoutX="208.0" layoutY="212.0" />
+                        <Label layoutX="73.0" layoutY="245.0" text="Duration of Pain" />
+                        <TextField layoutX="208.0" layoutY="240.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

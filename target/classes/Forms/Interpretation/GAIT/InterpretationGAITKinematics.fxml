@@ -1,0 +1,1055 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane prefHeight="762.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <TabPane prefHeight="970.0" prefWidth="1380.0" tabClosingPolicy="UNAVAILABLE">
+      <Tab text="Temporal / Spatial Parameters">
+         <AnchorPane prefHeight="971.0" prefWidth="1335.0">
+            <Text layoutX="14.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="255.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Barefoot - No Assistive Device">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="253.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Value">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="346.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interpretation">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="522.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Normals">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Text>
+            <Separator layoutY="70.0" prefHeight="0.0" prefWidth="656.0" />
+            <Separator layoutX="215.0" layoutY="50.0" orientation="VERTICAL" prefHeight="521.0" prefWidth="0.0" />
+            <Separator layoutX="329.0" layoutY="50.0" orientation="VERTICAL" prefHeight="521.0" prefWidth="5.0" />
+            <Separator layoutX="475.0" layoutY="50.0" orientation="VERTICAL" prefHeight="521.0" prefWidth="0.0" />
+            <Text layoutX="10.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Step Length (cm) R">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="95.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="260.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="10.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Step Length (cm) L">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="120.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="260.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="10.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stride Length (cm) R">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="145.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="260.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="10.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stride Length (cm) L">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="170.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="260.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="11.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stride Length (cm) R">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="195.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="260.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="10.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forward Velocity (cm/sec) R">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="220.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="260.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="10.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forward Velocity (cm/sec) L">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="245.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="260.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="10.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadence (steps/min) R">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="270.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="260.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="10.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Support Time (% gait cycle) R">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="295.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="260.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="10.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Support Time (% gait cycle) L">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="320.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="260.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="10.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R_Single_Support_Time R">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="345.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="260.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="10.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L_Single_Support_Time L">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="370.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="260.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="10.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Step Width (cm) R">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="260.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Separator layoutY="395.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="12.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Step Width (cm) L">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="420.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="260.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="11.0" layoutY="437.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Velocity (Height Normalized) R">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="445.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="260.0" layoutY="437.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="437.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="11.0" layoutY="462.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Step Length (Height Normalized) R">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="470.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="260.0" layoutY="462.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="462.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="10.0" layoutY="486.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Step Length (Height Normalized) L">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="495.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="260.0" layoutY="486.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="486.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="12.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gait Deviation Index (GDI) R">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="520.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="260.0" layoutY="511.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="12.0" layoutY="537.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gait Deviation Index (GDI) L">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="545.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="13.0" layoutY="563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gait Profile Score (GPS)">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutY="570.0" prefHeight="0.0" prefWidth="649.0" />
+            <Text layoutX="260.0" layoutY="537.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="260.0" layoutY="563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="539.0" layoutY="537.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         </AnchorPane>
+      </Tab>
+      <Tab text="Trunk Orientation Relative to Room">
+         <content>
+            <AnchorPane prefHeight="1200.0" prefWidth="663.0">
+               <children>
+                  <Text layoutX="14.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="255.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Barefoot - No Assistive Device">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="253.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Value">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="346.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interpretation">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="522.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Normals">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="70.0" prefHeight="0.0" prefWidth="656.0" />
+                  <Separator layoutX="215.0" layoutY="50.0" orientation="VERTICAL" prefHeight="172.0" prefWidth="0.0" />
+                  <Separator layoutX="329.0" layoutY="50.0" orientation="VERTICAL" prefHeight="172.0" prefWidth="5.0" />
+                  <Separator layoutX="475.0" layoutY="50.0" orientation="VERTICAL" prefHeight="172.0" prefWidth="0.0" />
+                  <Text layoutX="10.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lateral Trunk Tilt MAX Stance R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="95.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lateral Trunk Tilt MAX Stance L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="120.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forward Trunk Tilt Max in Stance R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="145.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forward Trunk Tilt Max in Stance L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="170.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="11.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trunk Rotation MAX in Stance R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="195.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trunk Rotation MAX in Stance L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="220.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Hip Joint Angles (deg)">
+         <content>
+            <AnchorPane prefHeight="1000.0" prefWidth="663.0">
+               <children>
+                  <Text layoutX="14.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="255.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Barefoot - No Assistive Device">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="253.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Value">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="346.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interpretation">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="522.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Normals">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="70.0" prefHeight="0.0" prefWidth="656.0" />
+                  <Separator layoutX="215.0" layoutY="50.0" orientation="VERTICAL" prefHeight="320.0" prefWidth="0.0" />
+                  <Separator layoutX="329.0" layoutY="50.0" orientation="VERTICAL" prefHeight="320.0" prefWidth="0.0" />
+                  <Separator layoutX="475.0" layoutY="50.0" orientation="VERTICAL" prefHeight="320.0" prefWidth="0.0" />
+                  <Text layoutX="10.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip Rotation at Foot Contact R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="95.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip Rotation at Foot Contact L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="120.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip Rotation at TO R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="145.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip Rotation at TO L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="170.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="11.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip Max Add Angle in Support R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="195.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip Max Add Angle in Support L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="220.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip Flexion at FC R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="245.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip Flexion at FC L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="270.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip Flex Max Stance R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="295.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip Flex Max Stance L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="320.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip Ext Max Stance R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="345.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip Ext Max Stance L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="370.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Ankle Joint Angles (deg)">
+         <content>
+            <AnchorPane prefHeight="1000.0" prefWidth="663.0">
+               <children>
+                  <Text layoutX="14.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="255.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Barefoot - No Assistive Device">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="253.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Value">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="361.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interpretation">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="522.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Normals">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="70.0" prefHeight="0.0" prefWidth="656.0" />
+                  <Separator layoutX="234.0" layoutY="50.0" orientation="VERTICAL" prefHeight="222.0" prefWidth="0.0" />
+                  <Separator layoutX="339.0" layoutY="50.0" orientation="VERTICAL" prefHeight="222.0" prefWidth="0.0" />
+                  <Separator layoutX="484.0" layoutY="50.0" orientation="VERTICAL" prefHeight="222.0" prefWidth="0.0" />
+                  <Text layoutX="10.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Foot to Tibia Rot at TO R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="95.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Foot to Tibia Rot at TO L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="120.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ankle Dorsiflexion at FC R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="145.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ankle Dorsiflexion at FC L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="170.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="11.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ankle Dorsiflexion stance MAX R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="195.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ankle Dorsiflexion stance MAX L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="220.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ankle Dorsiflexion stance TIME of MAX R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="245.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ankle Dorsiflexion stance TIME of MAX L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="270.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Variability">
+         <content>
+            <AnchorPane prefHeight="1000.0" prefWidth="663.0">
+               <children>
+                  <Text layoutX="14.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="255.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Barefoot - No Assistive Device">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="300.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Value">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="400.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interpretation">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="593.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Normals">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="70.0" prefHeight="0.0" prefWidth="725.0" />
+                  <Separator layoutX="256.0" layoutY="50.0" orientation="VERTICAL" prefHeight="147.0" prefWidth="0.0" />
+                  <Separator layoutX="377.0" layoutY="50.0" orientation="VERTICAL" prefHeight="147.0" prefWidth="0.0" />
+                  <Separator layoutX="528.0" layoutY="50.0" orientation="VERTICAL" prefHeight="147.0" prefWidth="0.0" />
+                  <Text layoutX="10.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mean Distance of CM from Straight Line (cm)">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="95.0" prefHeight="0.0" prefWidth="725.0" />
+                  <Text layoutX="300.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="610.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mean Variability of A/P foot placement R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="120.0" prefHeight="0.0" prefWidth="725.0" />
+                  <Text layoutX="300.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="610.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mean Variability of M/L foot placement R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="145.0" prefHeight="0.0" prefWidth="725.0" />
+                  <Text layoutX="300.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="610.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mean Variability of A/P foot placement L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="170.0" prefHeight="0.0" prefWidth="725.0" />
+                  <Text layoutX="300.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="610.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="11.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mean Variability of M/L foot placement L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="195.0" prefHeight="0.0" prefWidth="725.0" />
+                  <Text layoutX="300.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="610.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Arm Joint Angles">
+         <content>
+            <AnchorPane prefHeight="775.0" prefWidth="1195.0">
+               <children>
+                  <Text layoutX="14.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="255.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Barefoot - No Assistive Device">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="253.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Value">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="361.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interpretation">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="522.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Normals">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="70.0" prefHeight="0.0" prefWidth="656.0" />
+                  <Separator layoutX="234.0" layoutY="50.0" orientation="VERTICAL" prefHeight="222.0" prefWidth="0.0" />
+                  <Separator layoutX="339.0" layoutY="50.0" orientation="VERTICAL" prefHeight="222.0" prefWidth="0.0" />
+                  <Separator layoutX="484.0" layoutY="50.0" orientation="VERTICAL" prefHeight="222.0" prefWidth="0.0" />
+                  <Text layoutX="10.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elbow Flexion at FC R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="95.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elbow Flexion Max Right R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="120.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elbow flexion at FC L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="145.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elbow Flexion Max Left L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="170.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="11.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder Add at FC R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="195.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder Add at FC L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="220.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder Flexion at FC R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="245.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder Flexion at FC L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="270.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Pelvis Orientation Relative to Room">
+         <content>
+            <AnchorPane prefHeight="1000.0" prefWidth="663.0">
+               <children>
+                  <Text layoutX="14.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="255.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Barefoot - No Assistive Device">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="253.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Value">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="346.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interpretation">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="522.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Normals">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="70.0" prefHeight="0.0" prefWidth="656.0" />
+                  <Separator layoutX="215.0" layoutY="50.0" orientation="VERTICAL" prefHeight="271.0" prefWidth="0.0" />
+                  <Separator layoutX="329.0" layoutY="50.0" orientation="VERTICAL" prefHeight="271.0" prefWidth="5.0" />
+                  <Separator layoutX="475.0" layoutY="50.0" orientation="VERTICAL" prefHeight="271.0" prefWidth="0.0" />
+                  <Text layoutX="10.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pelvic Obliquity MAX Stance R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="95.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pelvic Obliquity MAX Stance L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="120.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anterior Pelvic Tilt Max Stance R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="145.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anterior Pelvic Tilt Max Stance L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="170.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="11.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pelvic Rot FC R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="195.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pelvic Rot FC L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="220.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pelvic Rot Max Stance R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="245.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pelvic Rot Max Stance L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="270.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pelvic Rot Min Stance R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="295.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pelvic Rot Min Stance L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="320.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Knee Joint Angles (deg)">
+         <content>
+            <AnchorPane prefHeight="1000.0" prefWidth="663.0">
+               <children>
+                  <Text layoutX="14.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="255.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Barefoot - No Assistive Device">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="253.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Value">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="346.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interpretation">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="522.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Normals">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="70.0" prefHeight="0.0" prefWidth="656.0" />
+                  <Separator layoutX="215.0" layoutY="50.0" orientation="VERTICAL" prefHeight="371.0" prefWidth="0.0" />
+                  <Separator layoutX="329.0" layoutY="50.0" orientation="VERTICAL" prefHeight="371.0" prefWidth="0.0" />
+                  <Separator layoutX="475.0" layoutY="50.0" orientation="VERTICAL" prefHeight="371.0" prefWidth="0.0" />
+                  <Text layoutX="10.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tib Torsion Max stance R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="95.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tib Torsion Max stance L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="120.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee Varus Valgus Stance R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="145.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee Varus Valgus Stance L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="170.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="11.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee Flex FC R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="195.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee Flex FC L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="220.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee Flex Max Stance R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="245.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee Flex Max Stance L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="270.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee Max Ext stance R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="295.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee Max Ext stance L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="320.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee Flex Max Swing R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="345.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee Flex Max Swing L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="370.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee Flex Max Swing Time R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="260.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Separator layoutY="395.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="12.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee Flex Max Swing Time L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="420.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Foot Orientation Relative to Room">
+         <content>
+            <AnchorPane prefHeight="1000.0" prefWidth="663.0">
+               <children>
+                  <Text layoutX="14.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="255.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Barefoot - No Assistive Device">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="253.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Value">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="346.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interpretation">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="522.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Normals">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="70.0" prefHeight="0.0" prefWidth="656.0" />
+                  <Separator layoutX="215.0" layoutY="50.0" orientation="VERTICAL" prefHeight="172.0" prefWidth="0.0" />
+                  <Separator layoutX="329.0" layoutY="50.0" orientation="VERTICAL" prefHeight="172.0" prefWidth="5.0" />
+                  <Separator layoutX="475.0" layoutY="50.0" orientation="VERTICAL" prefHeight="172.0" prefWidth="0.0" />
+                  <Text layoutX="10.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Foot Progression FC R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="95.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Foot Progression FC L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="120.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Foot Progression Angle Max R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="145.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Foot Progression Angle Max L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="170.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="11.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Foot Progression Angle Min R">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="195.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="10.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Foot Progression Angle Min L">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="220.0" prefHeight="0.0" prefWidth="649.0" />
+                  <Text layoutX="260.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="539.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+   </TabPane>
+</ScrollPane>

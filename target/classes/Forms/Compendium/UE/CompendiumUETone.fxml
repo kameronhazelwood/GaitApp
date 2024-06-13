@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane prefHeight="494.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Compendium.UE.CompendiumEUToneController">
+    <AnchorPane prefHeight="491.0" prefWidth="900.0">
+        <Label layoutX="32.0" layoutY="21.0" text="Upper Extremity Tone">
+            <font>
+                <Font name="SansSerif Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="188.0" layoutY="96.0" text="Right">
+            <font>
+                <Font name="SansSerif Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="284.0" layoutY="96.0" text="Left">
+            <font>
+                <Font name="SansSerif Bold" size="13.0" />
+            </font>
+        </Label>
+        <Separator layoutY="114.0" prefHeight="3.0" prefWidth="353.0" />
+        <Separator layoutX="247.0" layoutY="96.0" orientation="VERTICAL" prefHeight="189.0" prefWidth="1.0" />
+        <Separator layoutX="349.0" layoutY="96.0" orientation="VERTICAL" prefHeight="191.0" prefWidth="0.0" />
+        <Separator layoutX="-6.0" layoutY="94.0" prefHeight="1.0" prefWidth="357.0" />
+        <Separator layoutX="142.0" layoutY="94.0" orientation="VERTICAL" prefHeight="192.0" prefWidth="0.0" />
+        <Separator layoutY="139.0" prefHeight="1.0" prefWidth="350.0" />
+        <Label layoutX="22.0" layoutY="120.0" text="Shoulder extensors" />
+        <Label layoutX="22.0" layoutY="142.0" text="Shoulder flexors" />
+        <Separator layoutY="161.0" prefHeight="1.0" prefWidth="350.0" />
+        <Label layoutX="22.0" layoutY="164.0" text="Elbow extensors" />
+        <Separator layoutY="183.0" prefHeight="1.0" prefWidth="350.0" />
+        <Label layoutX="22.0" layoutY="186.0" text="Elbow flexors" />
+        <Separator layoutY="203.0" prefHeight="1.0" prefWidth="350.0" />
+        <Label layoutX="22.0" layoutY="205.0" text="Wrist extensors" />
+        <Separator layoutY="223.0" prefHeight="1.0" prefWidth="350.0" />
+        <Label layoutX="22.0" layoutY="226.0" text="Wrist flexors" />
+        <Separator layoutY="244.0" prefHeight="1.0" prefWidth="350.0" />
+        <Label layoutX="22.0" layoutY="247.0" text="Proximal Muscle Tone" />
+        <Separator layoutY="264.0" prefHeight="1.0" prefWidth="350.0" />
+        <Label layoutX="22.0" layoutY="267.0" text="Distal Muscle Tone" />
+        <Separator layoutY="285.0" prefHeight="1.0" prefWidth="350.0" />
+        <Label layoutX="456.0" layoutY="95.0" text="Modified Ashworth Scale">
+            <font>
+                <Font name="SansSerif Regular" size="13.0" />
+            </font>
+        </Label>
+        <Separator layoutX="456.0" layoutY="114.0" prefHeight="0.0" prefWidth="313.0" />
+        <Separator layoutX="505.0" layoutY="114.0" orientation="VERTICAL" prefHeight="234.0" prefWidth="0.0" />
+        <Separator layoutX="456.0" layoutY="114.0" orientation="VERTICAL" prefHeight="234.0" prefWidth="0.0" />
+        <Text layoutX="188.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text layoutX="284.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text layoutX="188.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text layoutX="284.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text layoutX="188.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text layoutX="284.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text layoutX="188.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text layoutX="284.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text layoutX="188.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text layoutX="284.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text layoutX="188.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text layoutX="284.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text layoutX="188.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text layoutX="284.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text layoutX="188.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text layoutX="284.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Label layoutX="472.0" layoutY="119.0" text="00">
+            <font>
+                <Font name="SansSerif Regular" size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="513.0" layoutY="120.0" text="Hypotonic">
+            <font>
+                <Font name="SansSerif Regular" size="10.0" />
+            </font>
+        </Label>
+        <Separator layoutX="456.0" layoutY="136.0" prefHeight="0.0" prefWidth="313.0" />
+        <Label layoutX="474.0" layoutY="140.0" text="0">
+            <font>
+                <Font name="SansSerif Regular" size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="513.0" layoutY="142.0" text="No increase in tone.">
+            <font>
+                <Font name="SansSerif Regular" size="10.0" />
+            </font>
+        </Label>
+        <Separator layoutX="458.0" layoutY="157.0" prefHeight="0.0" prefWidth="310.0" />
+        <Label layoutX="474.0" layoutY="165.0" text="1">
+            <font>
+                <Font name="SansSerif Regular" size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="513.0" layoutY="158.0" prefHeight="32.0" prefWidth="262.0" text="Slight increase in tome manifested by a catch and release or by minimal resistance at the end of rage of motion" wrapText="true">
+            <font>
+                <Font name="SansSerif Regular" size="10.0" />
+            </font>
+        </Label>
+        <Separator layoutX="456.0" layoutY="189.0" prefHeight="0.0" prefWidth="313.0" />
+        <Label layoutX="474.0" layoutY="208.0" text="1+">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="513.0" layoutY="191.0" prefHeight="49.0" prefWidth="260.0" text="Slight increase in muscle tone manifested by a catch followed by minimal resistance throughout the remainder (less than half) of the range of motion" wrapText="true">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Separator layoutX="456.0" layoutY="240.0" prefHeight="0.0" prefWidth="313.0" />
+        <Label layoutX="474.0" layoutY="255.0" text="2">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="513.0" layoutY="246.0" prefHeight="31.0" prefWidth="240.0" text="More marked increase in muscle tone through most of the range of motion, but affected part easily moved" wrapText="true">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Separator layoutX="456.0" layoutY="284.0" prefHeight="0.0" prefWidth="313.0" />
+        <Label layoutX="474.0" layoutY="298.0" text="3" wrapText="true">
+            <font>
+                <Font name="SansSerif Regular" size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="513.0" layoutY="289.0" prefHeight="29.0" prefWidth="245.0" text="Considerable increase in muscle tone, passive movement difficult." wrapText="true">
+            <font>
+                <Font name="SansSerif Regular" size="10.0" />
+            </font>
+        </Label>
+        <Separator layoutX="456.0" layoutY="320.0" prefHeight="0.0" prefWidth="313.0" />
+        <Separator layoutX="768.0" layoutY="114.0" orientation="VERTICAL" prefHeight="234.0" prefWidth="0.0" />
+        <Label layoutX="474.0" layoutY="328.0" text="4" />
+        <Label layoutX="513.0" layoutY="329.0" prefHeight="15.0" prefWidth="97.0" text="Affected part rigid." wrapText="true">
+            <font>
+                <Font name="SansSerif Regular" size="10.0" />
+            </font>
+        </Label>
+        <Separator layoutX="456.0" layoutY="346.0" prefHeight="0.0" prefWidth="313.0" />
+    </AnchorPane>
+</ScrollPane>

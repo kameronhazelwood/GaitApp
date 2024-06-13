@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="bp" prefHeight="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Compendium.GenerateCompendiumSide">
+   <center>
+      <AnchorPane fx:id="ap" prefHeight="400.0" prefWidth="600.0">
+      </AnchorPane>
+   </center>
+   <left>
+      <VBox prefHeight="600.0" prefWidth="136.0" stylesheets="@../../../styles.css" BorderPane.alignment="CENTER">
+         <ToggleButton fx:id="videos" layoutX="10.0" layoutY="282.0" mnemonicParsing="false" onMouseClicked="#videos" prefHeight="85.0" prefWidth="141.0" text="Videos" textFill="#efefef" wrapText="true" />
+         <ToggleButton fx:id="infoPage" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#infoPage" prefHeight="85.0" prefWidth="136.0" text="Info Page" textFill="#efefef" wrapText="true" />
+         <ToggleButton fx:id="ptHistory" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#ptHistory" prefHeight="85.0" prefWidth="136.0" text="Patient History Report" textFill="#efefef" wrapText="true" />
+         <ToggleButton fx:id="questionnaire" layoutX="10.0" layoutY="56.0" mnemonicParsing="false" onMouseClicked="#questionnaire" prefHeight="85.0" prefWidth="137.0" text="Questionnaire Report" textFill="#efefef" wrapText="true" />
+         <ToggleButton fx:id="adolescentParent" layoutX="10.0" layoutY="101.0" mnemonicParsing="false" onMouseClicked="#adolescentParent" prefHeight="85.0" prefWidth="136.0" text="Adolescent Health Assessment (Parent)" textFill="#efefef" wrapText="true" />
+         <ToggleButton fx:id="adolescentSelf" layoutX="10.0" layoutY="101.0" mnemonicParsing="false" onMouseClicked="#adolescentSelf" prefHeight="85.0" prefWidth="135.0" text="Adolescent Health Assessment (Self)" textFill="#efefef" wrapText="true" />
+         <ToggleButton fx:id="lowerExam" layoutX="10.0" layoutY="101.0" mnemonicParsing="false" onMouseClicked="#lowerExam" prefHeight="85.0" prefWidth="135.0" text="Lower Extremity Physical Exam" textFill="#efefef" wrapText="true" />
+         <ToggleButton fx:id="pngFiles" layoutX="10.0" layoutY="237.0" mnemonicParsing="false" onMouseClicked="#png" prefHeight="85.0" prefWidth="133.0" text="PNG Files" textFill="#efefef" wrapText="true" />
+         <ToggleButton fx:id="photos" layoutX="10.0" layoutY="282.0" mnemonicParsing="false" onMouseClicked="#photos" prefHeight="85.0" prefWidth="141.0" text="Photos" textFill="#efefef" wrapText="true" />
+         <ToggleButton fx:id="photos1" mnemonicParsing="false" onMouseClicked="#photos" prefHeight="85.0" prefWidth="141.0" text="Download PDF" textFill="#efefef" wrapText="true" />
+      </VBox>
+   </left>
+</BorderPane>

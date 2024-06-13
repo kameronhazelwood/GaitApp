@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="scenePane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.FormModuleController">
+    <HBox VBox.vgrow="NEVER">
+        <children>
+            <ToolBar maxHeight="-Infinity" maxWidth="-Infinity" HBox.hgrow="ALWAYS">
+                <items>
+                    <Button fx:id="patient" layoutX="130.0" layoutY="50" mnemonicParsing="false" onAction="#onPatientClick" prefHeight="80.0" prefWidth="120.0" styleClass="buttonTransparent" text="Patients" />
+                    <Button fx:id="forms" layoutX="130.0" layoutY="50" mnemonicParsing="false" prefHeight="80.0" prefWidth="120.0" text="Forms" />
+                    <Button fx:id="scheduler" layoutX="130.0" layoutY="50" mnemonicParsing="false" onAction="#onSchedulerClick" prefHeight="80.0" prefWidth="120.0" text="Scheduler" />
+                    <Button fx:id="reports" layoutX="130.0" layoutY="50" mnemonicParsing="false" onAction="#onReportsClick" prefHeight="80.0" prefWidth="120.0" text="Reports" />
+                    <Button fx:id="admin" layoutX="130.0" layoutY="50" mnemonicParsing="false" onAction="#onAdminClick" prefHeight="80.0" prefWidth="120.0" text="Admin" />
+                    <Button fx:id="newPatient" layoutX="130.0" layoutY="50" mnemonicParsing="false" onAction="#OnNewPatientClick" prefHeight="80.0" prefWidth="120.0" text="New Patient" />
+                    <Button fx:id="queries" layoutX="130.0" layoutY="50" mnemonicParsing="false" onAction="#onQueriesClick" prefHeight="80.0" prefWidth="120.0" text="Queries" />
+                    <Button fx:id="logout" layoutX="130.0" layoutY="50" mnemonicParsing="false" onAction="#logout" prefHeight="80.0" prefWidth="120.0" text="Logout" />
+                </items>
+            </ToolBar>
+        </children>
+    </HBox>
+
+
+
+<!--    <ComboBox layoutX="300.0" layoutY="110.0" prefWidth="300.0" />-->
+   <TabPane layoutX="-1.0" layoutY="149.0" prefHeight="600.0" prefWidth="880.0" tabClosingPolicy="UNAVAILABLE">
+     <tabs>
+       <Tab fx:id="questionnaire" text="Questionnaires">
+         <content>
+           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                     <Pane prefHeight="514.0" prefWidth="880.0">
+                        <children>
+                           <Label fx:id="questionnaireLabel" layoutX="20.0" layoutY="9.0" prefHeight="25.0" prefWidth="161.0" text="Questionnaires:">
+                              <font>
+                                 <Font size="15.0" />
+                              </font>
+                           </Label>
+                           <Label fx:id="dateLabel" layoutX="20.0" layoutY="46.0" prefHeight="25.0" prefWidth="68.0" text="Date:" />
+                           <TextField fx:id="dateTextField" layoutX="87.0" layoutY="47.0" />
+                           <Label fx:id="patientListLabel" layoutX="19.0" layoutY="128.0" prefHeight="17.0" prefWidth="71.0" text="Patient List:" />
+                           <Label layoutX="361.0" layoutY="50.0" text="History Questionnaire">
+                              <font>
+                                 <Font name="System Bold" size="12.0" />
+                              </font></Label>
+                           <CheckBox layoutX="363.0" layoutY="75.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="120.0" text="History" />
+                           <Label layoutX="360.0" layoutY="119.0" prefHeight="17.0" prefWidth="120.0" text="PODSI Questionnaire">
+                              <font>
+                                 <Font name="System Bold" size="12.0" />
+                              </font></Label>
+                           <CheckBox layoutX="363.0" layoutY="148.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="224.0" text="Child/Adolescent (Parent Reported)" />
+                           <CheckBox layoutX="364.0" layoutY="178.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="198.0" text="Adolescent (Self Reported)" />
+                           <CheckBox fx:id="patientNames" layoutX="101.0" layoutY="128.0" mnemonicParsing="false" text="Test, Test" />
+                        </children>
+                     </Pane>
+                     <Label layoutX="363.0" layoutY="223.0" prefHeight="17.0" prefWidth="96.0" text="Other">
+                        <font>
+                           <Font name="System Bold" size="12.0" />
+                        </font>
+                     </Label>
+                     <CheckBox layoutX="363.0" layoutY="253.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="163.0" text="Sports" />
+                     <CheckBox layoutX="363.0" layoutY="277.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="203.0" text="Hip" />
+                     <Label layoutX="363.0" layoutY="323.0" prefHeight="17.0" prefWidth="120.0" text="Language">
+                        <font>
+                           <Font name="System Bold" size="12.0" />
+                        </font>
+                     </Label>
+                     <ComboBox layoutX="365.0" layoutY="348.0" prefHeight="25.0" prefWidth="129.0" />
+                     <Button layoutX="689.0" layoutY="361.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="143.0" text="Print" />
+                  </children></AnchorPane>
+         </content>
+       </Tab>
+       <Tab fx:id="formsTab" text="Forms">
+         <content>
+           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                     <Pane fx:id="patientListLabels" prefHeight="572.0" prefWidth="880.0">
+                        <children>
+                           <Label layoutX="14.0" layoutY="14.0" prefHeight="35.0" prefWidth="232.0" text="Print Patient Forms">
+                              <font>
+                                 <Font size="24.0" />
+                              </font>
+                           </Label>
+                           <Label layoutX="14.0" layoutY="49.0" prefHeight="25.0" prefWidth="534.0" text="To print forms for a different date than shown, enter the date in the box and click &quot;Change Date&quot;." />
+                           <Label layoutX="14.0" layoutY="86.0" text="Patients Scheduled" />
+                           <TextField fx:id="changeDateTextfield" layoutX="130.0" layoutY="82.0" />
+                           <Button fx:id="changeDataButton" layoutX="316.0" layoutY="82.0" mnemonicParsing="false" text="Change Date" />
+                           <CheckBox fx:id="chooseFormsCheckBox" layoutX="401.0" layoutY="131.0" mnemonicParsing="false" onMouseClicked="#onChoosePatients" prefHeight="25.0" prefWidth="203.0" text="Choose Forms Automatically" />
+                           <Button fx:id="printButton" layoutX="639.0" layoutY="311.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="168.0" text="Print Forms" />
+                           <Label fx:id="patientListsLabel" layoutX="14.0" layoutY="156.0" text="Patient Names: " />
+                           <CheckBox fx:id="patientNams" layoutX="130.0" layoutY="197.0" mnemonicParsing="false" text="Test, Test" />
+                        </children>
+                     </Pane>
+                  </children>
+           </AnchorPane>
+         </content>
+       </Tab>
+     </tabs>
+   </TabPane>
+</AnchorPane>
