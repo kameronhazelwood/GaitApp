@@ -1,8 +1,7 @@
 package com.example.gaitlabapp.controllers;
 
 
-import com.example.gaitlabapp.GaitApp;
-import com.example.gaitlabapp.GaitLabAppApplication;
+import com.example.gaitlabapp.Launcher;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -48,7 +47,7 @@ public class AdminModuleController {
 
     @FXML
     public void onPatientClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/PatientModule.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/PatientModule.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
@@ -64,7 +63,7 @@ public class AdminModuleController {
 
     @FXML
     public  void onFormClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/FormsModule.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/FormsModule.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
@@ -79,7 +78,7 @@ public class AdminModuleController {
 
     @FXML
     public  void onSchedulerClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/SchedulerModule.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/SchedulerModule.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
@@ -94,7 +93,7 @@ public class AdminModuleController {
 
     @FXML
     public  void onReportClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/ReportsModule.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/ReportsModule.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
@@ -109,7 +108,7 @@ public class AdminModuleController {
 
     @FXML
     public  void onQueriesClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/QueriesModule.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/QueriesModule.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
@@ -134,7 +133,7 @@ public class AdminModuleController {
         }
     }
     public void OnNewPatientClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/NewPatientModule.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/NewPatientModule.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
@@ -159,7 +158,7 @@ public class AdminModuleController {
     @FXML
     public void onEditButton() throws IOException {
         Parent popUp;
-        popUp = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("Wizards/EditUserWizard.fxml")));
+        popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("Wizards/EditUserWizard.fxml")));
         Stage stage1 = new Stage();
         stage1.setTitle("Edit User Information");
         stage1.setScene(new Scene(popUp, 600, 450));
@@ -168,7 +167,7 @@ public class AdminModuleController {
     @FXML
     public void onNewButton() throws IOException {
         Parent popUp;
-        popUp = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("Wizards/NewUserWizard.fxml")));
+        popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("Wizards/NewUserWizard.fxml")));
         Stage stage1 = new Stage();
         stage1.setTitle("New User Information");
         stage1.setScene(new Scene(popUp, 600, 450));
@@ -177,7 +176,7 @@ public class AdminModuleController {
     @FXML
     public void onEditAptType() throws IOException {
         Parent popUp;
-        popUp = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("Wizards/EditAptTypeWizard.fxml")));
+        popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("Wizards/EditAptTypeWizard.fxml")));
         Stage stage1 = new Stage();
         stage1.setTitle("Edit Appointment Type");
         stage1.setScene(new Scene(popUp, 330, 120));
@@ -187,7 +186,7 @@ public class AdminModuleController {
     @FXML
     public void onNewAptType() throws IOException {
         Parent popUp;
-        popUp = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("Wizards/NewAptTypeWizard.fxml")));
+        popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("Wizards/NewAptTypeWizard.fxml")));
         Stage stage1 = new Stage();
         stage1.setTitle("New Appointment Type");
         stage1.setScene(new Scene(popUp, 330, 120));
@@ -206,7 +205,7 @@ public class AdminModuleController {
     }
     public void onEditResource() throws IOException {
         Parent popUp;
-        popUp = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("Wizards/EditResourceWizard.fxml")));
+        popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("Wizards/EditResourceWizard.fxml")));
         Stage stage1 = new Stage();
         stage1.setTitle("Edit Appointment Resource");
         stage1.setScene(new Scene(popUp, 330, 120));
@@ -214,7 +213,7 @@ public class AdminModuleController {
     }
     public void onNewResource() throws IOException {
         Parent popUp;
-        popUp = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("Wizards/NewResourceWizard.fxml")));
+        popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("Wizards/NewResourceWizard.fxml")));
         Stage stage1 = new Stage();
         stage1.setTitle("New Appointment Resource");
         stage1.setScene(new Scene(popUp, 330, 120));

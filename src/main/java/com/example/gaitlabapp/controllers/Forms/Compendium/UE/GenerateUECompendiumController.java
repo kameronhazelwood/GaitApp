@@ -1,7 +1,6 @@
 package com.example.gaitlabapp.controllers.Forms.Compendium.UE;
 
-import com.example.gaitlabapp.GaitApp;
-import com.example.gaitlabapp.GaitLabAppApplication;
+import com.example.gaitlabapp.Launcher;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -57,84 +56,84 @@ public class GenerateUECompendiumController {
     @FXML
     void adolescentParent(MouseEvent event) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("Forms/Compendium/GAIT/CompendiumAdolescentParent.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("Forms/Compendium/GAIT/CompendiumAdolescentParent.fxml")));
         bp.setCenter(root);
     }
 
     @FXML
     void adolescentSelf(MouseEvent event) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("Forms/Compendium/GAIT/CompendiumAdolescentSelf.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("Forms/Compendium/GAIT/CompendiumAdolescentSelf.fxml")));
         bp.setCenter(root);
     }
 
     @FXML
     void dailyLiving(MouseEvent event) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("Forms/Compendium/UE/CompendiumDaily.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("Forms/Compendium/UE/CompendiumDaily.fxml")));
         bp.setCenter(root);
     }
 
     @FXML
     void infoPage(MouseEvent event) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("Forms/Compendium/GAIT/CompendiumInfoPage.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("Forms/Compendium/GAIT/CompendiumInfoPage.fxml")));
         bp.setCenter(root);
     }
 
     @FXML
     void photos(MouseEvent event) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("Forms/Compendium/GAIT/CompendiumPhotos.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("Forms/Compendium/GAIT/CompendiumPhotos.fxml")));
         bp.setCenter(root);
     }
 
     @FXML
     void png(MouseEvent event) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("Forms/Compendium/GAIT/CompendiumPng.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("Forms/Compendium/GAIT/CompendiumPng.fxml")));
         bp.setCenter(root);
     }
 
     @FXML
     void ptHistory(MouseEvent event) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("Forms/Compendium/GAIT/CompendiumPtHistory.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("Forms/Compendium/GAIT/CompendiumPtHistory.fxml")));
         bp.setCenter(root);
     }
 
     @FXML
     void questionnaire(MouseEvent event) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("Forms/Compendium/GAIT/CompendiumQuestionnaire.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("Forms/Compendium/GAIT/CompendiumQuestionnaire.fxml")));
         bp.setCenter(root);
     }
 
     @FXML
     void shuee(MouseEvent event) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("Forms/Compendium/UE/CompendiumSHUEE.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("Forms/Compendium/UE/CompendiumSHUEE.fxml")));
         bp.setCenter(root);
     }
 
     @FXML
     void tone(MouseEvent event) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("Forms/Compendium/UE/CompendiumUETone.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("Forms/Compendium/UE/CompendiumUETone.fxml")));
         bp.setCenter(root);
     }
 
     @FXML
     void uePhyExam(MouseEvent event) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("Forms/Compendium/UE/CompendiumUEPhy.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("Forms/Compendium/UE/CompendiumUEPhy.fxml")));
         bp.setCenter(root);
     }
 
     @FXML
     void videos(MouseEvent event) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("Details/Videos.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("Details/Videos.fxml")));
         bp.setCenter(root);
     }
 }

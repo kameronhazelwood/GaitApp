@@ -31,7 +31,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 import javafx.stage.*;
-import com.example.gaitlabapp.GaitLabAppApplication;
+import com.example.gaitlabapp.Launcher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Controller;
@@ -44,9 +44,7 @@ import java.util.ResourceBundle;
 import static com.example.gaitlabapp.model.visits.IAppointmentModel.Type.*;
 
 @Controller
-@EnableJpaRepositories(
-        basePackages = ""
-)
+@EnableJpaRepositories
 public class PatientModuleController implements Initializable {
 
     public Button patient;
@@ -392,7 +390,7 @@ public class PatientModuleController implements Initializable {
             switch (appointmentModel.getType()) {
                 case GAIT -> {
                     Parent popUp;
-                    popUp = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Visits/VisitDetailsGait.fxml")));
+                    popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Visits/VisitDetailsGait.fxml")));
                     Stage stage1 = new Stage();
                     stage1.setTitle("GAIT Visit Details:   ");
                     //height 680 width 800
@@ -401,7 +399,7 @@ public class PatientModuleController implements Initializable {
                 }
                 case UE -> {
                     Parent popUp;
-                    popUp = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Visits/VisitDetailsUE.fxml")));
+                    popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Visits/VisitDetailsUE.fxml")));
                     Stage stage1 = new Stage();
                     stage1.setTitle("UE Visit Details:   ");
                     //height 680 width 800
@@ -410,7 +408,7 @@ public class PatientModuleController implements Initializable {
                 }
                 case FOOT -> {
                     Parent popUp;
-                    popUp = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Visits/VisitDetailsFootEval.fxml")));
+                    popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Visits/VisitDetailsFootEval.fxml")));
                     Stage stage1 = new Stage();
                     stage1.setTitle("Foot Eval Visit Details:   ");
                     //height 680 width 800
@@ -428,7 +426,7 @@ public class PatientModuleController implements Initializable {
             switch (appointmentModel.getType()) {
                 case GAIT -> {
                     Parent popUp;
-                    popUp = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/Compendium/GAIT/GenerateCompendiumSide.fxml")));
+                    popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Compendium/GAIT/GenerateCompendiumSide.fxml")));
                     Stage stage1 = new Stage();
                     stage1.setTitle("Patient Compendium:   ");
                     //height 680 width 800
@@ -437,7 +435,7 @@ public class PatientModuleController implements Initializable {
                 }
                 case UE -> {
                     Parent popUp;
-                    popUp = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/Compendium/UE/GenerateUECompendium.fxml")));
+                    popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Compendium/UE/GenerateUECompendium.fxml")));
                     Stage stage1 = new Stage();
                     stage1.setTitle("Patient Compendium:   ");
                     stage1.setScene(new Scene(popUp, 800, 690));
@@ -445,7 +443,7 @@ public class PatientModuleController implements Initializable {
                 }
                 case FOOT -> {
                     Parent popUp;
-                    popUp = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/Compendium/FootEval/GenerateFootCompendium.fxml")));
+                    popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Compendium/FootEval/GenerateFootCompendium.fxml")));
                     Stage stage1 = new Stage();
                     stage1.setTitle("Patient Compendium:   ");
                     stage1.setScene(new Scene(popUp, 800, 690));
@@ -462,7 +460,7 @@ public class PatientModuleController implements Initializable {
             switch (appointmentModel.getType()) {
                 case GAIT -> {
                     Parent popUp;
-                    popUp = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/Interpretation/GAIT/GenerateGAITInterpretation.fxml")));
+                    popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Interpretation/GAIT/GenerateGAITInterpretation.fxml")));
                     Stage stage1 = new Stage();
                     stage1.setTitle("Patient Interpretation:   ");
                     //height 680 width 800
@@ -471,7 +469,7 @@ public class PatientModuleController implements Initializable {
                 }
                 case UE -> {
                     Parent popUp;
-                    popUp = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/Interpretation/UE/GenerateUEInterpretation.fxml")));
+                    popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Interpretation/UE/GenerateUEInterpretation.fxml")));
                     Stage stage1 = new Stage();
                     stage1.setTitle("Patient Interpretation:   ");
                     stage1.setScene(new Scene(popUp, 800, 637));
@@ -479,7 +477,7 @@ public class PatientModuleController implements Initializable {
                 }
                 case FOOT -> {
                     Parent popUp;
-                    popUp = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/Interpretation/FootEval/GenerateFootInterpretation.fxml")));
+                    popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Interpretation/FootEval/GenerateFootInterpretation.fxml")));
                     Stage stage1 = new Stage();
                     stage1.setTitle("Patient Interpretation:   ");
                     stage1.setScene(new Scene(popUp, 780, 600));
@@ -657,7 +655,7 @@ public class PatientModuleController implements Initializable {
     }
 
     private ISurgeryModel showSurgeryDialog(ISurgeryModel surgeryModel, String title) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(GaitLabAppApplication.class.getResource("/Wizards/AddSurgery.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Wizards/AddSurgery.fxml"));
         Parent surgeryPane = fxmlLoader.load();
         AddSurgeryController addSurgeryController = fxmlLoader.getController();
 
@@ -700,7 +698,7 @@ public class PatientModuleController implements Initializable {
 
     private IDiagnosisModel showDiagnosisDialog(IDiagnosisModel diagnosisModel) throws IOException {
         IDiagnosisModel iDiagnosisModel = diagnosisCodeTable.getSelectionModel().getSelectedItem();
-        FXMLLoader fxmlLoader = new FXMLLoader(GaitLabAppApplication.class.getResource("/Wizards/NewDiagnosisCode.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Wizards/NewDiagnosisCode.fxml"));
         Parent diagCodePane = fxmlLoader.load();
         NewDiagnosisCodeController newDiagnosisCodeController = fxmlLoader.getController();
         newDiagnosisCodeController.setDiagCode(diagnosisModel);
@@ -741,7 +739,7 @@ public class PatientModuleController implements Initializable {
     }
 
     private IBotoxModel showBotoxDialog(IBotoxModel botoxModel) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(GaitLabAppApplication.class.getResource("/Wizards/AddBotox.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Wizards/AddBotox.fxml"));
         Parent botoxPane = fxmlLoader.load();
         AddBotoxController addBotoxController = fxmlLoader.getController();
 
@@ -781,7 +779,7 @@ public class PatientModuleController implements Initializable {
     }
 
     private IHealthHistoryModel showHealthDialog(IHealthHistoryModel healthHistoryModel, String title) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(GaitLabAppApplication.class.getResource("/Wizards/AddHealthCondition.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Wizards/AddHealthCondition.fxml"));
         Parent healthPane = fxmlLoader.load();
         AddHealthConditionController addHealthConditionController = fxmlLoader.getController();
 
@@ -805,7 +803,7 @@ public class PatientModuleController implements Initializable {
      */
     @FXML
     public void onFormClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/FormsModule.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/FormsModule.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setTitle("Nemours Children's Hospital  Lab");
@@ -817,7 +815,7 @@ public class PatientModuleController implements Initializable {
 
     @FXML
     public void onSchedulerClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/SchedulerModule.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/SchedulerModule.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setTitle("Nemours Children's Hospital  Lab");
@@ -829,7 +827,7 @@ public class PatientModuleController implements Initializable {
 
     @FXML
     public void onReportClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/ReportsModule.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/ReportsModule.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setTitle("Nemours Children's Hospital  Lab");
@@ -841,7 +839,7 @@ public class PatientModuleController implements Initializable {
 
     @FXML
     public void onAdminClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/AdminModule.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/AdminModule.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setTitle("Nemours Children's Hospital  Lab");
@@ -854,7 +852,7 @@ public class PatientModuleController implements Initializable {
 
     @FXML
     public void onQueriesClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/QueriesModule.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/QueriesModule.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
@@ -873,7 +871,7 @@ public class PatientModuleController implements Initializable {
     }
 
     public void OnNewPatientClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/NewPatientModule.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/NewPatientModule.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
@@ -895,7 +893,7 @@ public class PatientModuleController implements Initializable {
 
     public void onNewForm(ActionEvent event) throws IOException {
         Parent popUp;
-        popUp = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/FormComboBox.fxml")));
+        popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/FormComboBox.fxml")));
         Stage stage1 = new Stage();
         stage1.setTitle("Patient Forms");
         stage1.setScene(new Scene(popUp, 320, 150));
@@ -906,7 +904,7 @@ public class PatientModuleController implements Initializable {
 
     public void onVideo(ActionEvent mouseEvent) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Details/PatientVideos.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Details/PatientVideos.fxml")));
         bp.setCenter(root);
         if (videoRadio.isSelected()) {
             photoRadio.setSelected(false);
@@ -916,7 +914,7 @@ public class PatientModuleController implements Initializable {
 
     public void onPhoto(ActionEvent mouseEvent) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Details/PatientPhotos.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Details/PatientPhotos.fxml")));
         bp.setCenter(root);
         if (photoRadio.isSelected()) {
             videoRadio.setSelected(false);
@@ -926,7 +924,7 @@ public class PatientModuleController implements Initializable {
 
     public void onPDFViewer(ActionEvent event) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Details/PatientsPDF.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Details/PatientsPDF.fxml")));
         bp.setCenter(root);
         if (PDFViewer.isSelected()) {
             photoRadio.setSelected(false);

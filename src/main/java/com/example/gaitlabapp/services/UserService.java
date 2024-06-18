@@ -8,10 +8,7 @@ import java.util.Optional;
 
 public interface UserService {
     Optional<IUsersModel> save(IUsersModel usersModel);
-
     Optional<IUsersModel> findByUsername(String username);
-
     List<IUsersModel> findAll();
-
     void delete(Long id);
 }

@@ -1,7 +1,6 @@
 package com.example.gaitlabapp.controllers.Forms.Interpretation.FootEval;
 
-import com.example.gaitlabapp.GaitApp;
-import com.example.gaitlabapp.GaitLabAppApplication;
+import com.example.gaitlabapp.Launcher;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.input.MouseEvent;
@@ -18,25 +17,25 @@ public class GenerateFootInterpretation {
 
     public void onVideoAssessment(MouseEvent mouseEvent) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/Interpretation/UE/InterpretationVideoUE.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Interpretation/UE/InterpretationVideoUE.fxml")));
         bp.setCenter(root);
 
     }
     public void onGAITPhys(MouseEvent mouseEvent) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/Interpretation/GAIT/InterpGaitPhyExam.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Interpretation/GAIT/InterpGaitPhyExam.fxml")));
         bp.setCenter(root);
     }
 
     public void onKinematics(MouseEvent mouseEvent) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/Interpretation/GAIT/InterpretationGAITKinematics.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Interpretation/GAIT/InterpretationGAITKinematics.fxml")));
         bp.setCenter(root);
     }
 
     public void onKinetics(MouseEvent mouseEvent) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/Interpretation/GAIT/InterpretationGaitKinetics.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Interpretation/GAIT/InterpretationGaitKinetics.fxml")));
         bp.setCenter(root);
     }
 
@@ -48,31 +47,31 @@ public class GenerateFootInterpretation {
 
     public void onPedobaragraph(MouseEvent mouseEvent) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/Interpretation/GAIT/IntrepertationPedobaragraphGait.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Interpretation/GAIT/IntrepertationPedobaragraphGait.fxml")));
         bp.setCenter(root);
     }
 
     public void onMetabolic(MouseEvent mouseEvent) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/Interpretation/GAIT/InterpretationMetobolicGAIT.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Interpretation/GAIT/InterpretationMetobolicGAIT.fxml")));
         bp.setCenter(root);
     }
 
     public void onStepWatch(MouseEvent mouseEvent) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/Interpretation/GAIT/InterpretationStepWatch.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Interpretation/GAIT/InterpretationStepWatch.fxml")));
         bp.setCenter(root);
     }
 
     public void onPhotographs(MouseEvent mouseEvent) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/Interpretation/UE/InterpretationPhotos.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Interpretation/UE/InterpretationPhotos.fxml")));
         bp.setCenter(root);
     }
 
     public void onRecommendation(MouseEvent mouseEvent) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/Interpretation/FootEval/FootEvalRecommendations.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Interpretation/FootEval/FootEvalRecommendations.fxml")));
         bp.setCenter(root);
     }
 
@@ -81,13 +80,13 @@ public class GenerateFootInterpretation {
 
     public void onNeuro(MouseEvent mouseEvent) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/Interpretation/FootEval/FootEvalNeuroCognitive.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Interpretation/FootEval/FootEvalNeuroCognitive.fxml")));
         bp.setCenter(root);
     }
 
     public void onBio(MouseEvent mouseEvent) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/Interpretation/FootEval/FootEvalBiomech.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Interpretation/FootEval/FootEvalBiomech.fxml")));
         bp.setCenter(root);
     }
 }

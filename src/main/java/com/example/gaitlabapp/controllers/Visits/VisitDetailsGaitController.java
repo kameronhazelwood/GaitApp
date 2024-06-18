@@ -1,6 +1,6 @@
 package com.example.gaitlabapp.controllers.Visits;
 
-import com.example.gaitlabapp.GaitLabAppApplication;
+import com.example.gaitlabapp.Launcher;
 import com.example.gaitlabapp.config.Config;
 import com.example.gaitlabapp.model.visits.IAppointmentModel;
 import javafx.animation.PauseTransition;
@@ -1690,9 +1690,9 @@ public class VisitDetailsGaitController implements Initializable {
     @FXML
     void onViewCompendiumSideNav(ActionEvent actionEvent) throws IOException {
         Parent popUp;
-        popUp = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/Compendium/GAIT/GenerateCompendiumSide.fxml")));
+        popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Compendium/GAIT/GenerateCompendiumSide.fxml")));
         Stage stage1 = new Stage();
-        popUp.getStylesheets().add(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/styles.css")).toExternalForm());
+        popUp.getStylesheets().add(Objects.requireNonNull(Launcher.class.getResource("/styles.css")).toExternalForm());
         stage1.setTitle("Patient Compendium");
         stage1.setScene(new Scene(popUp, 800, 680));
         stage1.setScene(popUp.getScene());
@@ -1701,9 +1701,9 @@ public class VisitDetailsGaitController implements Initializable {
 
     public void onViewInterpretation(ActionEvent actionEvent) throws IOException {
         Parent popUp;
-        popUp = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/Interpretation/GAIT/GenerateGAITInterpretation.fxml")));
+        popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Interpretation/GAIT/GenerateGAITInterpretation.fxml")));
         Stage stage1 = new Stage();
-        popUp.getStylesheets().add(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/styles.css")).toExternalForm());
+        popUp.getStylesheets().add(Objects.requireNonNull(Launcher.class.getResource("/styles.css")).toExternalForm());
         stage1.setTitle("Patient Interpretation");
         stage1.setScene(new Scene(popUp, 900, 680));
         stage1.setScene(popUp.getScene());

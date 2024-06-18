@@ -1,7 +1,7 @@
 package com.example.gaitlabapp.controllers;
 
 
-import com.example.gaitlabapp.GaitLabAppApplication;
+import com.example.gaitlabapp.Launcher;
 import com.example.gaitlabapp.services.PatientService;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -16,8 +16,10 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import org.springframework.context.ApplicationEvent;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -33,19 +35,41 @@ public class UserLoginController {
     private Stage stage;
     @FXML
     private Scene scene;
+    private PatientService patientService;
     @FXML
     private Parent root;
-//    Timeline alertTimer = new Timeline(new KeyFrame(Duration.minutes(1), event1 -> {
+    //    Timeline alertTimer = new Timeline(new KeyFrame(Duration.minutes(1), event1 -> {
 //
 //    }));
     Timeline alertTimer;
 
+    public UserLoginController(Stage stage) throws IOException {
+        try {
 
-    public void login(ActionEvent event) throws IOException{
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/UserLogin.fxml"));
+            Parent root = fxmlLoader.load();
 
-        FXMLLoader loader = new FXMLLoader(GaitLabAppApplication.class.getResource("/PatientModule.fxml"));
+            Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
+
+            stage.getIcons().add(icon);
+            stage.setTitle("Login");
+            stage.setWidth(450);
+            stage.setHeight(250);
+
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+//            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void login(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(Launcher.class.getResource("/PatientModule.fxml"));
         root = loader.load();
-        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setTitle("Patient Module");
         stage.setHeight(750);
@@ -57,17 +81,17 @@ public class UserLoginController {
         }));
     }
 
-    public void showAlert(){
-        Platform.runLater(()-> {
+    public void showAlert() {
+        Platform.runLater(() -> {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Logout");
             alert.setHeaderText("You're about to be logged out!");
             alert.setContentText("Are you sure you would like to logout?");
             Optional<ButtonType> result = alert.showAndWait();
 
-            if(result.isEmpty()){
+            if (result.isEmpty()) {
                 alertTimer.play();
-            }else if(result.get() == ButtonType.OK){
+            } else if (result.get() == ButtonType.OK) {
                 stage = (Stage) root.getScene().getWindow();
                 stage.close();
             } else if (result.get() == ButtonType.CANCEL) {

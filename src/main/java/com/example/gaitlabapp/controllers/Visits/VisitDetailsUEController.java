@@ -1,6 +1,6 @@
 package com.example.gaitlabapp.controllers.Visits;
 
-import com.example.gaitlabapp.GaitLabAppApplication;
+import com.example.gaitlabapp.Launcher;
 import com.example.gaitlabapp.config.Config;
 import javafx.animation.PauseTransition;
 import javafx.beans.value.ChangeListener;
@@ -1467,7 +1467,7 @@ public class VisitDetailsUEController implements Initializable {
     @FXML
     void onViewCompendium(ActionEvent actionEvent) throws IOException {
         Parent popUp;
-        popUp = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/Compendium/UE/GenerateUECompendium.fxml")));
+        popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Compendium/UE/GenerateUECompendium.fxml")));
         Stage stage1 = new Stage();
         stage1.setTitle("Patient Compendium");
         stage1.setScene(new Scene(popUp, 800, 680));
@@ -1479,49 +1479,49 @@ public class VisitDetailsUEController implements Initializable {
     private BorderPane bp;
     public void onVideoAssessment(MouseEvent mouseEvent) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/Interpretation/UE/InterpretationVideoUE.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Interpretation/UE/InterpretationVideoUE.fxml")));
         bp.setCenter(root);
     }
 
     public void onUEPhys(MouseEvent mouseEvent) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/UpperExtremityForm.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/UpperExtremityForm.fxml")));
         bp.setCenter(root);
     }
 
     public void onKinematics(MouseEvent mouseEvent) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/Interpretation/UE/InterpretationKinematics.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Interpretation/UE/InterpretationKinematics.fxml")));
         bp.setCenter(root);
     }
 
     public void onPhotos(MouseEvent mouseEvent) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/Interpretation/UE/InterpretationPhotos.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Interpretation/UE/InterpretationPhotos.fxml")));
         bp.setCenter(root);
     }
 
     public void onAssessmentForm(MouseEvent mouseEvent) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/Interpretation/UE/InterpretationAssessment.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Interpretation/UE/InterpretationAssessment.fxml")));
         bp.setCenter(root);
     }
 
     public void onRecomendations(MouseEvent mouseEvent) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/Interpretation/UE/InterpretationRecommendations.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Interpretation/UE/InterpretationRecommendations.fxml")));
         bp.setCenter(root);
     }
 
     public void onSignatures(MouseEvent mouseEvent) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/Interpretation/UE/InterpretationSignature.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Interpretation/UE/InterpretationSignature.fxml")));
         bp.setCenter(root);
     }
 
     public void onViewInterpretation(ActionEvent actionEvent) throws IOException {
         Parent popUp;
-        popUp = FXMLLoader.load(Objects.requireNonNull(GaitLabAppApplication.class.getResource("/Forms/Interpretation/UE/GenerateUEInterpretation.fxml")));
+        popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Interpretation/UE/GenerateUEInterpretation.fxml")));
         Stage stage1 = new Stage();
         stage1.setTitle("Patient Compendium");
         stage1.setScene(new Scene(popUp, 700, 680));

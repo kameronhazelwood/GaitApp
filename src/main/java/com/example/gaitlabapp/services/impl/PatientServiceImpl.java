@@ -13,6 +13,7 @@ public class PatientServiceImpl implements PatientService {
 
     @Autowired
     private PatientRepo repo;
+
     @Override
     public Optional<IPatientModel> save(IPatientModel patientModel) {
         return Optional.of(repo.save(patientModel));

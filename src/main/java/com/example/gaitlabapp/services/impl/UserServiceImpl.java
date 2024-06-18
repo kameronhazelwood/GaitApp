@@ -3,6 +3,7 @@ package com.example.gaitlabapp.services.impl;
 
 import com.example.gaitlabapp.model.users.IUsersModel;
 import com.example.gaitlabapp.repo.UserRepo;
+import com.example.gaitlabapp.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +12,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class UserServiceImpl {
+public class UserServiceImpl implements UserService {
     private final UserRepo repo;
 
     public Optional<IUsersModel> save(IUsersModel usersModel){
