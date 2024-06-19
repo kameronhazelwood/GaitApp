@@ -12,7 +12,7 @@ public class SQLServerDriver implements Driver {
 
     @Override
     public boolean acceptsURL(String url) throws SQLException {
-        return false;
+        return true;
     }
 
     @Override

@@ -35,6 +35,15 @@ public class FxApplication extends Application {
         fireStartUpEvent(new StartUpEvent(stage));
     }
 
+    @Override
+    public void init() throws Exception{
+        super.init();
+        ARGS = getParameters()
+                .getRaw()
+                .toArray(new String[0]);
+        start();
+    }
+
     public static String[] getArgs(){
         return ARGS;
     }
