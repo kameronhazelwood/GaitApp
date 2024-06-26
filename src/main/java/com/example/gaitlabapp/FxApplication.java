@@ -15,11 +15,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import java.io.IOException;
 import java.util.Optional;
 
 @SpringBootApplication
+@EnableJpaRepositories("com.example.gaitlabapp.repo")
+//@ComponentScan("com.example.gaitlabapp.repo")
 public class FxApplication extends Application {
 
     private static String[] ARGS = null;

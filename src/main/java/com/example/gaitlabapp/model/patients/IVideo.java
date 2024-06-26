@@ -12,7 +12,7 @@ import jakarta.persistence.*;
 @Getter
 @Setter
 @NoArgsConstructor(force = true)
-@Table(name = "Video")
+@Table(name = "video")
 public class IVideo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

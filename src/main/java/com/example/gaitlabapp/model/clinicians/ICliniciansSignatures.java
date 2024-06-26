@@ -19,7 +19,7 @@ import lombok.Setter;
 @Table(name = "ClinicianSignatures" )
 public class ICliniciansSignatures {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "clinSigId")
     private Integer clinSigId;
     @Column(name = "comment")

@@ -9,6 +9,7 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -19,17 +20,18 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import org.springframework.context.ApplicationEvent;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.Optional;
+import java.util.ResourceBundle;
 
-public class UserLoginController {
+public class UserLoginController implements Initializable {
 
     @FXML
     public TextField nameTextField;
     @FXML
-    public Button loginButton;
+    private Button loginButton;
 
     @FXML
     private Stage stage;
@@ -46,8 +48,9 @@ public class UserLoginController {
     public UserLoginController(Stage stage) throws IOException {
         try {
 
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/UserLogin.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(Launcher.class.getResource("/UserLogin.fxml"));
             Parent root = fxmlLoader.load();
+//            Parent root = load("UserLogin.fxml", this);
 
             Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
 
@@ -56,9 +59,7 @@ public class UserLoginController {
             stage.setWidth(450);
             stage.setHeight(250);
 
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-//            stage.setScene(new Scene(root));
+            stage.setScene(new Scene(root));
             stage.setResizable(false);
             stage.show();
         } catch (IOException e) {
@@ -66,10 +67,23 @@ public class UserLoginController {
         }
     }
 
+    public static Parent load(final String location, Object controller) throws IOException{
+        FXMLLoader loader = new FXMLLoader(load(location));
+        if (controller!=null){
+            loader.setController(controller);
+        }
+        return loader.load();
+
+    }
+
+    public static URL load(final String location){
+        return Launcher.class.getResource(location);
+    }
+
     public void login(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(Launcher.class.getResource("/PatientModule.fxml"));
         root = loader.load();
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+       stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setTitle("Patient Module");
         stage.setHeight(750);
@@ -100,4 +114,14 @@ public class UserLoginController {
         });
     }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        loginButton.setOnAction(event -> {
+            try {
+                login(event);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+    }
 }

@@ -16,36 +16,41 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "ADL")
+@Table(name = "adl")
 public class IAdlModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "adlId")
-    private IntegerProperty adlId;
-    @Column(name = "ueDressing")
-    private StringProperty ueDressing;
-    @Column(name = "leDressing")
-    private StringProperty leDressing;
+    private Integer adlId;
+    @Column(name = "ueDressingIndep")
+    private String ueDressingIndep;
+    @Column(name = "leDressingIndep")
+    private String leDressing;
+    @Column(name = "ueDressingDep")
+    private String ueDressingDep;
+    @Column(name = "ueDressingAssist")
+    private String ueDressingAssist;
+    @Column(name = "ueDressingComments")
+    private String ueDressingComments;
+    @Column(name = "leDressingAssist")
+    private String leDressingAssist;
+    @Column(name = "orthIndep")
+    private String orthIndep;
+    @Column(name = "orthDep")
+    private String orthDep;
+    @Column(name = "orthAssist")
+    private String orthAssist;
+    @Column(name = "orthComments")
+    private String orthComments;
     @Column(name = "orthotic")
-    private StringProperty orthotic;
+    private String orthotic;
     @Column(name = "adlShoes")
-    private StringProperty adlShoes;
+    private String adlShoes;
     @Column(name = "adlSocks")
-    private StringProperty adlSocks;
+    private String adlSocks;
     @Column(name = "adlFasteners")
-    private StringProperty adlFasteners;
+    private String adlFasteners;
     @Column(name = "adlHygiene")
-    private StringProperty adlHygiene;
-
-    public IAdlModel(Integer adlId, String ueDressing, String leDressing, String orthotic, String adlShoes, String adlSocks, String adlFasteners, String adlHygiene) {
-        this.adlId = new SimpleIntegerProperty(adlId);
-        this.ueDressing = new SimpleStringProperty(ueDressing);
-        this.leDressing = new SimpleStringProperty(leDressing);
-        this.orthotic = new SimpleStringProperty(orthotic);
-        this.adlShoes = new SimpleStringProperty(adlShoes);
-        this.adlSocks = new SimpleStringProperty(adlSocks);
-        this.adlFasteners = new SimpleStringProperty(adlFasteners);
-        this.adlHygiene = new SimpleStringProperty(adlHygiene);
-    }
+    private String adlHygiene;
 
 }

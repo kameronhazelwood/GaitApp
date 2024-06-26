@@ -7,9 +7,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
+@Getter
 @Data
 @Setter
-@Getter
 @NoArgsConstructor
 @Entity
 @Table(name = "Hip")
@@ -47,75 +48,4 @@ public class IHipModel {
         this.circumduction = circumduction;
     }
 
-    public Integer getHipId() {
-        return hipId;
-    }
-
-    public void setHipId(Integer hipId) {
-        this.hipId = hipId;
-    }
-
-    public String getInternallyRotated() {
-        return internallyRotated;
-    }
-
-    public void setInternallyRotated(String internallyRotated) {
-        this.internallyRotated = internallyRotated;
-    }
-
-    public String getExtRotated() {
-        return extRotated;
-    }
-
-    public void setExtRotated(String extRotated) {
-        this.extRotated = extRotated;
-    }
-
-    public String getIncFlexion() {
-        return incFlexion;
-    }
-
-    public void setIncFlexion(String incFlexion) {
-        this.incFlexion = incFlexion;
-    }
-
-    public String getDecFlexion() {
-        return decFlexion;
-    }
-
-    public void setDecFlexion(String decFlexion) {
-        this.decFlexion = decFlexion;
-    }
-
-    public String getHipAdbucted() {
-        return hipAdbucted;
-    }
-
-    public void setHipAdbucted(String hipAdbucted) {
-        this.hipAdbucted = hipAdbucted;
-    }
-
-    public String getHipAdducted() {
-        return hipAdducted;
-    }
-
-    public void setHipAdducted(String hipAdducted) {
-        this.hipAdducted = hipAdducted;
-    }
-
-    public String getDecRangeMotion() {
-        return decRangeMotion;
-    }
-
-    public void setDecRangeMotion(String decRangeMotion) {
-        this.decRangeMotion = decRangeMotion;
-    }
-
-    public String getCircumduction() {
-        return circumduction;
-    }
-
-    public void setCircumduction(String circumduction) {
-        this.circumduction = circumduction;
-    }
 }

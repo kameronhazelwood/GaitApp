@@ -15,7 +15,7 @@ import jakarta.persistence.*;
 public class IO2Comparison {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "o2IdComp")
+    @Column(name = "o2CompId")
     private Integer o2IdComp;
     @Column(name = "o2CostIndex")
     private String o2CostIndex;

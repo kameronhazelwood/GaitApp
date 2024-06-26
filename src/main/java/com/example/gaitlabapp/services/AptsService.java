@@ -7,8 +7,8 @@ import java.util.Optional;
 
 public interface AptsService {
     Optional<IAppointmentModel> save(IAppointmentModel appointmentModel);
-    Optional<IAppointmentModel> findByAptType(String aptType);
-    Optional<IAppointmentModel> findByAptSubType(String aptSubType);
+    Optional<IAppointmentModel> findByVisitType(String visitType);
+    Optional<IAppointmentModel> findByVisitSubType(String visitSubType);
     List<IAppointmentModel> findAll();
     void delete(Long id);
 }

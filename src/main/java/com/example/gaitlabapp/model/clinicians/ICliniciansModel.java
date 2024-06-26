@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
 
 
 
@@ -14,41 +13,41 @@ import org.springframework.data.annotation.Id;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "Clinicians")
+@Table(name = "clinicians")
 public class ICliniciansModel {
     @jakarta.persistence.Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "clinicianId")
+    @Column(name = "clinician_Id")
     private Integer clinicianId;
     @Column(name = "clincianFName")
     private String clinicianFName;
     @Column(name = "clinicianLName")
     private String clinicianLName;
-    @Column(name = "clinType")
+    @Column(name = "clin_type")
     private String clinType;
-    @Column(name = "clinSpeciality")
+    @Column(name = "clin_speciality")
     private String clinSpeciality;
-    @Column(name = "clinPhone")
+    @Column(name = "clin_phone")
     private String clinPhone;
-    @Column(name = "clinAddress1")
+    @Column(name = "clin_address1")
     private String clinAddress1;
-    @Column(name = "clinAddress2")
+    @Column(name = "clin_address2")
     private String clinAddress2;
-    @Column(name = "clinAddress3")
+    @Column(name = "clin_address3")
     private String clinAddress3;
-    @Column(name = "clinCity")
+    @Column(name = "clin_city")
     private String clinCity;
-    @Column(name = "clinState")
+    @Column(name = "clin_state")
     private String clinState;
-    @Column(name = "clinZip")
+    @Column(name = "clin_zip")
     private String clinZip;
-    @Column(name = "clinEmail")
+    @Column(name = "clin_email")
     private String clinEmail;
-    @Column(name = "clinBillCode")
+    @Column(name = "clin_bill_code")
     private String clinBillCode;
     @Column(name = "active")
     private Integer active;
-    @Column(name = "clinGender")
+    @Column(name = "clin_gender")
     private String clinGender;
 
 }

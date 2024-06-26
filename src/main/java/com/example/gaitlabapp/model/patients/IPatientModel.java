@@ -17,7 +17,7 @@ import lombok.Setter;
 public class IPatientModel {
 
     @jakarta.persistence.Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "IdOrGenerated")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "patientID", nullable = false)
     private final Integer patientID;
 

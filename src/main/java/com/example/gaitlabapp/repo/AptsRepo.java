@@ -8,6 +8,7 @@ import java.util.Optional;
 
 @Repository
 public interface AptsRepo extends JpaRepository<IAppointmentModel, String> {
-    Optional<IAppointmentModel> findByAptType(String aptType);
-    Optional<IAppointmentModel> findByAptSubType(String aptSubType);
+
+    Optional<IAppointmentModel> findByVisitType(String visitType);
+    Optional<IAppointmentModel> findByVisitSubType(String visitSubType);
 }

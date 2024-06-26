@@ -11,15 +11,15 @@ import jakarta.persistence.*;
 @Setter
 @Entity
 @NoArgsConstructor(force = true)
-@Table(name = "Visits")
+@Table(name = "Appointments")
 public class IAppointmentModel  {
 
     public enum Type{GAIT, UE, FOOT}
 
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.AUTO)
-//    @Column(name = "visitId")
-//    private final StringProperty visitId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "aptId")
+    private final Integer aptId;
     @Column(name = "aptDate")
     private final String aptDate;
 //    @Column(name = "attended")
@@ -32,8 +32,8 @@ public class IAppointmentModel  {
 //    private final StringProperty dateScheduled;
     @Column(name = "visitType")
     private final String visitType;
-//    @Column(name = "visitSubType")
-//    private final StringProperty visitSubType;
+    @Column(name = "visitSubType")
+    private final String visitSubType;
 //    @Column(name = "dateToEpic")
 //    private final BooleanProperty dateToEpic;
 //    @Column(name = "dateProcessed")
@@ -63,9 +63,11 @@ public class IAppointmentModel  {
     @Column(name = "type")
     private final Type type;
 
-    public IAppointmentModel(String aptDate, String visitType, String referringPhys, Type type) {
+    public IAppointmentModel(Integer aptId, String aptDate, String visitType, String visitSubType, String referringPhys, Type type) {
+        this.aptId = aptId;
         this.aptDate = aptDate;
         this.visitType = visitType;
+        this.visitSubType = visitSubType;
         this.referringPhys = referringPhys;
         this.type = type;
     }

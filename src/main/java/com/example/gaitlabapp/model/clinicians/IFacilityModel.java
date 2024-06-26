@@ -15,21 +15,21 @@ import lombok.Setter;
 @Table(name = "Facility")
 public class IFacilityModel {
     @Id
-    @GeneratedValue
-    @Column(name = "facilityId")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "facility_id")
     private Integer facilityId;
-    @Column(name = "facName")
+    @Column(name = "fac_name")
     private String facName;
-    @Column(name = "facAddress1")
+    @Column(name = "fac_address1")
     private String facAddress1;
-    @Column(name = "facAddress2")
+    @Column(name = "fac_address2")
     private String facAddress2;
-    @Column(name = "facAddress2")
+    @Column(name = "fac_address3")
     private String facAddress3;
-    @Column(name = "facZip")
+    @Column(name = "fac_zip")
     private String facZip;
-    @Column(name = "facState")
+    @Column(name = "fac_state")
     private String facState;
-    @Column(name = "facCity")
+    @Column(name = "fac_city")
     private String facCity;
 }

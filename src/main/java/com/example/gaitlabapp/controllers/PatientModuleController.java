@@ -69,9 +69,9 @@ public class PatientModuleController implements Initializable {
     public TabPane patientTabPane;
 
     ObservableList<IAppointmentModel> initialData() {
-        IAppointmentModel apt1 = new IAppointmentModel("10/31/2023", "GAIT - Full Diagnostic", "Dr. Smith", GAIT);
-        IAppointmentModel apt2 = new IAppointmentModel("2/8/2023", "Upper Extremity - Full Diagnostic", "Dr. Smith", UE);
-        IAppointmentModel apt3 = new IAppointmentModel("3/12/2024", "Gait - Foot Evaluation", "Dr. Smith", FOOT);
+        IAppointmentModel apt1 = new IAppointmentModel(1, "", "10/31/2023", "GAIT - Full Diagnostic", "Dr. Smith", GAIT);
+        IAppointmentModel apt2 = new IAppointmentModel(2, "", "2/8/2023", "Upper Extremity - Full Diagnostic", "Dr. Smith", UE);
+        IAppointmentModel apt3 = new IAppointmentModel(3, "", "3/12/2024", "Gait - Foot Evaluation", "Dr. Smith", FOOT);
         return FXCollections.<IAppointmentModel>observableArrayList(apt1, apt2, apt3);
     }
 

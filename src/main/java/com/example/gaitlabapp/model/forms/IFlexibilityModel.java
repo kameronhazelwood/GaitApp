@@ -1,9 +1,6 @@
 package com.example.gaitlabapp.model.forms;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,27 +13,27 @@ import lombok.Setter;
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "Flexibility")
+@Table(name = "flexibility")
 public class IFlexibilityModel {
     @jakarta.persistence.Id
-    @GeneratedValue
-    @Column(name = "flexId")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "flex_Id")
     private Integer flexId;
     @Column(name = "ober")
     private String ober;
-    @Column(name = "oberInterp")
+    @Column(name = "ober_interp")
     private String oberInterp;
     @Column(name = "thomas")
     private String thomas;
-    @Column(name = "thomasInterp")
+    @Column(name = "thomas_interp")
     private String thomasInterp;
-    @Column(name = "poplitealAngle")
+    @Column(name = "popliteal_angle")
     private String poplitealAngle;
-    @Column(name = "poplitealAngleInterp")
+    @Column(name = "popliteal_angle_interp")
     private String poplitealAngleInterp;
-    @Column(name = "ankleDorsiKneeExt")
+    @Column(name = "ankle_dorsi_knee_ext")
     private String ankleDorsiKneeExt;
-    @Column(name = "ankleDorsiKneeExtInterp")
+    @Column(name = "ankle_dorsi_knee_ext_interp")
     private String ankleDorsiKneeExtInterp;
 
 }

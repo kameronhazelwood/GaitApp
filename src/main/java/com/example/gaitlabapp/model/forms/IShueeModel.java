@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @NoArgsConstructor
-@Table(name = "Shuee")
+@Table(name = "shuee")
 public class IShueeModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

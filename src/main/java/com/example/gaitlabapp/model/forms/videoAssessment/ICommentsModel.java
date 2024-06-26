@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @Entity
-@Table
+@Table(name = "Comments")
 public class ICommentsModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

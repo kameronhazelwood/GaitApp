@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @Entity
-@Table(name = "Ambulatory")
+@Table(name = "ambulatory")
 public class IAmbulatoryModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
