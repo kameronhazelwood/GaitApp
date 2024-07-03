@@ -43,8 +43,7 @@ import java.util.ResourceBundle;
 
 import static com.example.gaitlabapp.model.visits.IAppointmentModel.Type.*;
 
-@Controller
-@EnableJpaRepositories
+
 public class PatientModuleController implements Initializable {
 
     public Button patient;

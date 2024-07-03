@@ -42,10 +42,9 @@ public class FxApplication extends Application {
     @Override
     public void init() throws Exception{
         super.init();
-        ARGS = getParameters()
-                .getRaw()
-                .toArray(new String[0]);
-        start();
+        SPRING_CONTEXT = Optional.ofNullable(SpringApplication.run(FxApplication.class));
+      //  start();
+
     }
 
     public static String[] getArgs(){
@@ -62,9 +61,10 @@ public class FxApplication extends Application {
     }
 
     private void start(){
-        SPRING_CONTEXT = Optional.ofNullable(
-                new SpringApplicationBuilder(FxApplication.class).run(getArgs())
-        );
+//        SPRING_CONTEXT = Optional.ofNullable(
+//                new SpringApplicationBuilder(FxApplication.class).run(getArgs())
+//        );
+        SPRING_CONTEXT = Optional.ofNullable(SpringApplication.run(FxApplication.class));
     }
 
 }

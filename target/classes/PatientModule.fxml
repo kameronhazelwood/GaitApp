@@ -18,20 +18,20 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="736.0" prefWidth="1036.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.PatientModuleController">
+<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="736.0" prefWidth="1036.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" >
 
     <HBox VBox.vgrow="NEVER">
         <children>
             <ToolBar maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="91.0" prefWidth="1027.0" HBox.hgrow="ALWAYS">
                 <items>
                     <Button fx:id="patient" layoutX="130.0" layoutY="50" mnemonicParsing="false" prefHeight="80.0" prefWidth="120.0" styleClass="buttonTransparent" text="Patients" />
-                    <Button fx:id="forms" layoutX="130.0" layoutY="50" mnemonicParsing="false" onAction="#onFormClick" prefHeight="80.0" prefWidth="120.0" text="Forms" />
-                    <Button fx:id="scheduler" layoutX="130.0" layoutY="50" mnemonicParsing="false" onAction="#onSchedulerClick" prefHeight="80.0" prefWidth="120.0" text="Scheduler" />
-                    <Button fx:id="reports" layoutX="130.0" layoutY="50" mnemonicParsing="false" onAction="#onReportClick" prefHeight="80.0" prefWidth="120.0" text="Reports" />
-                    <Button fx:id="admin" layoutX="130.0" layoutY="50" mnemonicParsing="false" onAction="#onAdminClick" prefHeight="80.0" prefWidth="120.0" text="Admin" />
-                    <Button fx:id="newPatient" layoutX="130.0" layoutY="50" mnemonicParsing="false" onAction="#OnNewPatientClick" prefHeight="80.0" prefWidth="120.0" text="New Patient" />
-                    <Button fx:id="queries" layoutX="130.0" layoutY="50" mnemonicParsing="false" onAction="#onQueriesClick" prefHeight="80.0" prefWidth="120.0" text="Queries" />
-                    <Button fx:id="logout" layoutX="130.0" layoutY="50" mnemonicParsing="false" onAction="#logout" prefHeight="80.0" prefWidth="120.0" text="Logout" />
+                    <Button fx:id="forms" layoutX="130.0" layoutY="50" mnemonicParsing="false"  prefHeight="80.0" prefWidth="120.0" text="Forms" />
+                    <Button fx:id="scheduler" layoutX="130.0" layoutY="50" mnemonicParsing="false"  prefHeight="80.0" prefWidth="120.0" text="Scheduler" />
+                    <Button fx:id="reports" layoutX="130.0" layoutY="50" mnemonicParsing="false"  prefHeight="80.0" prefWidth="120.0" text="Reports" />
+                    <Button fx:id="admin" layoutX="130.0" layoutY="50" mnemonicParsing="false"  prefHeight="80.0" prefWidth="120.0" text="Admin" />
+                    <Button fx:id="newPatient" layoutX="130.0" layoutY="50" mnemonicParsing="false"  prefHeight="80.0" prefWidth="120.0" text="New Patient" />
+                    <Button fx:id="queries" layoutX="130.0" layoutY="50" mnemonicParsing="false"  prefHeight="80.0" prefWidth="120.0" text="Queries" />
+                    <Button fx:id="logout" layoutX="130.0" layoutY="50" mnemonicParsing="false"  prefHeight="80.0" prefWidth="120.0" text="Logout" />
                 </items>
             </ToolBar>
         </children>
@@ -74,7 +74,7 @@
                                  <TableColumn fx:id="diagDescription" prefWidth="363.3333740234375" text="Description" />
                              </columns>
                            </TableView>
-                           <Button fx:id="addNewDiagnosis" layoutX="958.0" layoutY="254.0" mnemonicParsing="false" onAction="#addDiagnosisCode" text="Add New" />
+                           <Button fx:id="addNewDiagnosis" layoutX="958.0" layoutY="254.0" mnemonicParsing="false"  text="Add New" />
                         </children>
                      </Pane>
                   </children>
@@ -140,9 +140,9 @@
                                        <Font name="System Bold" size="14.0" />
                                     </font>
                                  </Label>
-                                 <Button fx:id="addSurgicalHistory" layoutX="450.0" layoutY="41.0" mnemonicParsing="false" onAction="#addSurgery" text="Add Surgical History" />
-                                 <Button fx:id="addBotox" layoutX="486.0" layoutY="299.0" mnemonicParsing="false" onAction="#addBotox" text="Add Botox" />
-                                 <Button fx:id="addHealthHistory" layoutX="454.0" layoutY="555.0" mnemonicParsing="false" onAction="#addHealthHistory" text="Add Health History" />
+                                 <Button fx:id="addSurgicalHistory" layoutX="450.0" layoutY="41.0" mnemonicParsing="false"  text="Add Surgical History" />
+                                 <Button fx:id="addBotox" layoutX="486.0" layoutY="299.0" mnemonicParsing="false" text="Add Botox" />
+                                 <Button fx:id="addHealthHistory" layoutX="454.0" layoutY="555.0" mnemonicParsing="false" text="Add Health History" />
                               </children></AnchorPane>
                        </content>
                      </ScrollPane>
@@ -158,9 +158,9 @@
                         <top>
                            <HBox prefHeight="95.0" prefWidth="1023.0" BorderPane.alignment="CENTER">
                               <children>
-                                 <RadioButton fx:id="photoRadio" mnemonicParsing="false" onAction="#onPhoto" prefHeight="45.0" prefWidth="90.0" text="Photos" />
-                                 <RadioButton fx:id="videoRadio" mnemonicParsing="false" onAction="#onVideo" prefHeight="45.0" prefWidth="90.0" text="Videos" />
-                                 <RadioButton fx:id="PDFViewer" mnemonicParsing="false" onAction="#onPDFViewer" prefHeight="45.0" prefWidth="90.0" text="PDFs" />
+                                 <RadioButton fx:id="photoRadio" mnemonicParsing="false" prefHeight="45.0" prefWidth="90.0" text="Photos" />
+                                 <RadioButton fx:id="videoRadio" mnemonicParsing="false"  prefHeight="45.0" prefWidth="90.0" text="Videos" />
+                                 <RadioButton fx:id="PDFViewer" mnemonicParsing="false"  prefHeight="45.0" prefWidth="90.0" text="PDFs" />
                               </children>
                            </HBox>
                         </top>
@@ -174,6 +174,6 @@
          </Tab>
         </tabs>
     </TabPane>
-    <Button fx:id="dropDownBtn" layoutX="382.0" layoutY="110.0" onAction="#onDisplayPatients" prefWidth="300.0" />
+    <Button fx:id="dropDownBtn" layoutX="382.0" layoutY="110.0" prefWidth="300.0" />
     <Label layoutX="245.0" layoutY="115.0" text="Patient Dropdown" />
 </AnchorPane>

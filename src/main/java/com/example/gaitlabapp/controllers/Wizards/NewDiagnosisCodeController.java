@@ -16,6 +16,8 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.stereotype.Controller;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -23,6 +25,8 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
+@Controller
+@EnableJpaRepositories
 public class NewDiagnosisCodeController implements Initializable {
 
 

@@ -17,13 +17,24 @@ public class IDiagnosisModel {
 
     @Id
     @Column(name="code")
-    private final String diagnosisCode;
+    @Getter
+    @Setter
+    private String code;
+    @Getter
+    @Setter
     @Column(name = "description")
-    private final String diagnosisDescription;
+    private String description;
 
-    public IDiagnosisModel(String diagnosisCode, String diagnosisDescription){
-        this.diagnosisCode = diagnosisCode;
-        this.diagnosisDescription = diagnosisDescription;
+    public IDiagnosisModel(String code, String description){
+        this.code = code;
+        this.description = description;
     }
 
+    public String getDiagnosisDescription() {
+        return code;
+    }
+
+    public String getDiagnosisCode() {
+        return description;
+    }
 }

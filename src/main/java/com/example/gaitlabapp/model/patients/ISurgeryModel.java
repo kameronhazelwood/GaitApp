@@ -7,6 +7,7 @@ import jakarta.persistence.*;
 
 
 @Data
+@Entity
 @Getter
 @NoArgsConstructor(force = true)
 @Table(name = "Surgery")
