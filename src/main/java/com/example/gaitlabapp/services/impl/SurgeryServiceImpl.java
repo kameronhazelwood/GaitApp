@@ -24,7 +24,7 @@ public class SurgeryServiceImpl implements SurgeryService {
     }
 
     @Override
-    public Optional<ISurgeryModel> findBySurgeryId(String surgeryId) {
+    public Optional<ISurgeryModel> findBySurgeryId(Integer surgeryId) {
         return surgeryRepo.findBySurgeryId(surgeryId);
     }
 

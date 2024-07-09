@@ -121,16 +121,9 @@ public class AdminModuleController {
         stage.show();
     }
     public void logout(ActionEvent event){
-
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Logout");
-        alert.setHeaderText("You're about to logout!");
-        alert.setContentText("Are you sure you would like to logout?");
-
-        if(alert.showAndWait().get() == ButtonType.OK) {
-            stage = (Stage) scenePane.getScene().getWindow();
-            stage.close();
-        }
+        stage = (Stage) scenePane.getScene().getWindow();
+        stage.close();
+        //springContext.close();
     }
     public void OnNewPatientClick(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/NewPatientModule.fxml")));

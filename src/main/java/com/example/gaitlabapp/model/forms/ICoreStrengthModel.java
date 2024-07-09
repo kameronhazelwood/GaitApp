@@ -11,23 +11,23 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "CoreStrength")
+@Table(name = "core_strength")
 public class ICoreStrengthModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "coreStrengthId")
+    @Column(name = "core_strength_id")
     private Integer coreStrengthId;
-    @Column(name = "situpsCompleted")
+    @Column(name = "situps_completed")
     private Integer situpsCompleted;
-    @Column(name = "situpCompletedInterp")
+    @Column(name = "situp_completed_interp")
     private String situpCompletedInterp;
-    @Column(name = "holdTime")
+    @Column(name = "hold_time")
     private String holdTime;
-    @Column(name = "holdTimeInterp")
+    @Column(name = "hold_time_interp")
     private String holdTimeInterp;
     @Column(name = "plank")
     private String plank;
-    @Column(name = "plankInterp")
+    @Column(name = "plank_interp")
     private String plankInterp;
 
 }

@@ -32,7 +32,7 @@ public class IPromModel {
     private String hipAbdSRInterp;
     @Column(name = "hip_abdsl")
     private String hipAbdSL;
-    @Column(name = "hip_abdSlinterp")
+    @Column(name = "hip_abd_slinterp")
     private String hipAbdSLInterp;
     @Column(name = "hip_extr")
     private Integer hipExtr;

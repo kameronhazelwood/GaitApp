@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(force = true)
 @Setter
 @Entity
-@Table(name="DiagnosisCode")
+@Table(name="diagnosis_code")
 public class IDiagnosisModel {
 
     @Id

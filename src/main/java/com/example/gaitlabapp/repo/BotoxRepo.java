@@ -9,6 +9,6 @@ import java.util.Optional;
 
 @Repository
 public interface BotoxRepo extends JpaRepository<IBotoxModel, String> {
-    Optional<IBotoxModel> findById(String botoxId);
+ //   Optional<IBotoxModel> findById(Integer botoxId);
 //    Optional<IBotoxModel> findByDate(String botoxDate);
 }

@@ -11,11 +11,11 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @Entity
-@Table(name = "EMG")
+@Table(name = "emg")
 public class IEMGModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "emgId")
+    @Column(name = "emg_id")
     private Integer emgId;
     @Column(name = "muscle")
     private String muscle;

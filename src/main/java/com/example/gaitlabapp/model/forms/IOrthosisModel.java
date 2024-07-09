@@ -16,11 +16,11 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @Setter
-@Table(name = "Orthosis")
+@Table(name = "orthosis")
 public class IOrthosisModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "orthosisId")
+    @Column(name = "orthosis_id")
     private Integer orthosisId;
     @Column(name = "orthosis")
     private String orthosis;

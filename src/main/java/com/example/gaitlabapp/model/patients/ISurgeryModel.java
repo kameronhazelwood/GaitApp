@@ -10,20 +10,20 @@ import jakarta.persistence.*;
 @Entity
 @Getter
 @NoArgsConstructor(force = true)
-@Table(name = "Surgery")
+@Table(name = "surgery")
 public class ISurgeryModel  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "surgeryId")
+    @Column(name = "surgery_id")
     @Setter
-    private String surgeryId;
-    @Column(name = "surgeryDate")
+    private Integer surgeryId;
+    @Column(name = "surgery_date")
     @Setter
     private String surgeryDate;
-    @Column(name = "surgeryProcedure")
+    @Column(name = "surgery_procedure")
     @Setter
     private String surgeryProcedure;
-    @Column(name = "surgerySide")
+    @Column(name = "surgery_side")
     @Setter
     private String surgerySide;
     @Column(name = "surgeon")
@@ -36,7 +36,7 @@ public class ISurgeryModel  {
     @Setter
     private String comments;
 
-    public ISurgeryModel(String surgeryId, String surgeryDate, String surgeryProcedure, String surgerySide, String surgeon, String facility, String comments){
+    public ISurgeryModel(Integer surgeryId, String surgeryDate, String surgeryProcedure, String surgerySide, String surgeon, String facility, String comments){
         this.surgeryId = surgeryId;
         this.surgeryDate = surgeryDate;
         this.surgeryProcedure = surgeryProcedure;

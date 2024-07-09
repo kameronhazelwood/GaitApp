@@ -20,10 +20,10 @@ public class BotoxServiceImpl implements BotoxService {
         return Optional.of(botoxRepo.save(botoxModel));
     }
 
-    @Override
-    public Optional<IBotoxModel> findById(String botoxId) {
-        return botoxRepo.findById(botoxId);
-    }
+//    @Override
+//    public Optional<IBotoxModel> findById(String botoxId) {
+//        return botoxRepo.findById(botoxId);
+//    }
 
 //    @Override
 //    public Optional<IBotoxModel> findbyDate(String botoxDate) {

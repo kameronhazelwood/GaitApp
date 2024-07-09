@@ -12,32 +12,32 @@ import org.springframework.context.annotation.PropertySource;
 @Entity
 @Getter
 @NoArgsConstructor(force = true)
-@Table(name = "Botox")
+@Table(name = "botox")
 public class IBotoxModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "botoxId")
-    private final String botoxId;
-    @Column(name = "botoxDate")
+    @Column(name = "botox_Id")
+    private final Integer botoxId;
+    @Column(name = "botox_date")
     @Setter
     private String botoxDate;
-    @Column(name = "botoxLocation")
+    @Column(name = "botox_location")
     @Setter
     private String botoxLocation;
     @Setter
-    @Column(name = "botoxSide")
+    @Column(name = "botox_side")
     private String botoxSide;
-    @Column(name = "botoxMd")
+    @Column(name = "botox_md")
     @Setter
     private String botoxMd;
-    @Column(name = "botoxComments")
+    @Column(name = "botox_comments")
     @Setter
     private String botoxComments;
-    @Column(name = "botoxFacility")
+    @Column(name = "botox_facility")
     @Setter
     private String botoxFacility;
 
-    public IBotoxModel(String botoxId, String botoxDate, String botoxLocation, String botoxSide, String botoxMd, String botoxComments) {
+    public IBotoxModel(Integer botoxId, String botoxDate, String botoxLocation, String botoxSide, String botoxMd, String botoxComments) {
         this.botoxId = botoxId;
         this.botoxDate = botoxDate;
         this.botoxLocation = botoxLocation;

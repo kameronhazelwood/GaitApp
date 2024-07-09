@@ -12,23 +12,23 @@ import lombok.NoArgsConstructor;
 @Setter
 @Entity
 @NoArgsConstructor
-@Table(name = "GenMarkInfo")
+@Table(name = "gen_mark_info")
 public class IGenMarkInfoModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "genMarkerId")
+    @Column(name = "gen_marker_id")
     private Integer genMarkerId;
     @Column(name = "height")
     private Integer height;
     @Column(name = "weight")
     private Integer weight;
-    @Column(name = "rightFootLength")
+    @Column(name = "right_foot_length")
     private String rightFootLength;
-    @Column(name = "leftFootLength")
+    @Column(name = "left_foot_length")
     private String leftFootLength;
-    @Column(name = "rightFootWidth")
+    @Column(name = "right_foot_width")
     private String rightFootWidth;
-    @Column(name = "leftFootWidth")
+    @Column(name = "left_foot_width")
     private String leftFootWidth;
     @Column(name = "gmfcs")
     private String gmfcs;

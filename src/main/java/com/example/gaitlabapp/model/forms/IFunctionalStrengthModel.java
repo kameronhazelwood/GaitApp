@@ -16,51 +16,51 @@ import lombok.NoArgsConstructor;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "FunctionalStrength")
+@Table(name = "functional_strength")
 public class IFunctionalStrengthModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "functionalStrengthId")
+    @Column(name = "functional_strength_id")
     private Integer functionalStrengthId;
-    @Column(name = "pullToStandR")
+    @Column(name = "pull_to_standR")
     private String pullToStandR;
-    @Column(name = "standingArmsFreeR_3sec")
+    @Column(name = "standing_arms_freeR_3sec")
     private String standingArmsFreeR_3sec;
-    @Column(name = "standingArmsFreeR_20sec")
+    @Column(name = "standing_arms_freeR_20sec")
     private String standingArmsFreeR_20sec;
-    @Column(name = "legStandHandHeldR")
+    @Column(name = "leg_stand_hand_heldR")
     private String legStandHandHeldR;
-    @Column(name = "oneLegStanceR")
+    @Column(name = "one_leg_stanceR")
     private String oneLegStanceR;
-    @Column(name = "shortSitToStandR")
+    @Column(name = "short_sit_to_standR")
     private String shortSitToStandR;
-    @Column(name = "highKneeStandR")
+    @Column(name = "high_knee_standR")
     private String highKneeStandR;
-    @Column(name = "lowersToFloorR")
+    @Column(name = "lowers_to_floorR")
     private String lowersToFloorR;
     @Column(name = "squatsR")
     private String squatsR;
-    @Column(name = "penFromFloorR")
+    @Column(name = "pen_from_floorR")
     private String penFromFloorR;
-    @Column(name = "pullToStandL")
+    @Column(name = "pull_to_standL")
     private String pullToStandL;
-    @Column(name = "standingArmsFreeL_3sec")
+    @Column(name = "standing_arms_freeL_3sec")
     private String standingArmsFreeL_3sec;
-    @Column(name = "standingArmsFreeL_20sec")
+    @Column(name = "standing_arms_freeL_20sec")
     private String standingArmsFreeL_20sec;
-    @Column(name = "legStandHandHeldL")
+    @Column(name = "leg_stand_hand_heldL")
     private String legStandHandHeldL;
-    @Column(name = "oneLegStanceL")
+    @Column(name = "one_leg_stanceL")
     private String oneLegStanceL;
-    @Column(name = "shortSitToStandL")
+    @Column(name = "short_sit_to_standL")
     private String shortSitToStandL;
-    @Column(name = "highKneeStandL")
+    @Column(name = "high_knee_standL")
     private String highKneeStandL;
-    @Column(name = "lowersToFloorL")
+    @Column(name = "lowers_to_floorL")
     private String lowersToFloorL;
     @Column(name = "squatsL")
     private String squatsL;
-    @Column(name = "penFromFloorL")
+    @Column(name = "pen_from_floorL")
     private String penFromFloorL;
 
 

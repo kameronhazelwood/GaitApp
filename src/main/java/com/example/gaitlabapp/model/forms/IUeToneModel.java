@@ -11,75 +11,75 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @Entity
-@Table(name = "UeTone")
+@Table(name = "ue_tone")
 public class IUeToneModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ueToneId")
+    @Column(name = "ue_Tone_Id")
     private Integer ueToneId;
-    @Column(name = "shoulderExtR")
+    @Column(name = "shoulder_ExtR")
     private Integer shoulderExtR;
     @Column(name = "shoulderextRInterp")
     private String shoulderextRInterp;
-    @Column(name = "shoulderExtL")
+    @Column(name = "shoulder_ExtL")
     private Integer shoulderExtL;
-    @Column(name = "shoulderExtLInterp")
+    @Column(name = "shoulder_ExtLInterp")
     private String shoulderExtLInterp;
-    @Column(name = "elbowExtR")
+    @Column(name = "elbow_ExtR")
     private Integer elbowExtR;
-    @Column(name = "elbowExtRInterp")
+    @Column(name = "elbow_ExtRInterp")
     private String elbowExtRInterp;
-    @Column(name = "elbowExtL")
+    @Column(name = "elbow_ExtL")
     private Integer elbowExtL;
-    @Column(name = "elbowExtLInterp")
+    @Column(name = "elbow_ExtLInterp")
     private String elbowExtLInterp;
-    @Column(name = "elbowFlexR")
+    @Column(name = "elbow_FlexR")
     private Integer elbowFlexR;
-    @Column(name = "elbowFlexRInterp")
+    @Column(name = "elbow_FlexRInterp")
     private String elbowFlexRInterp;
-    @Column(name = "elbowFlexL")
+    @Column(name = "elbow_FlexL")
     private Integer elbowFlexL;
-    @Column(name = "elbowFlexLInterp")
+    @Column(name = "elbow_FlexLInterp")
     private String elbowFlexLInterp;
-    @Column(name = "wristExtL")
+    @Column(name = "wrist_ExtL")
     private Integer wristExtL;
-    @Column(name = "wristExtLInterp")
+    @Column(name = "wrist_ExtLInterp")
     private String wristExtLInterp;
-    @Column(name = "wristExtR")
+    @Column(name = "wrist_ExtR")
     private Integer wristExtR;
-    @Column(name = "wristExtRInterp")
+    @Column(name = "wrist_ExtRInterp")
     private String wristExtRInterp;
-    @Column(name = "wristFlexR")
+    @Column(name = "wrist_FlexR")
     private Integer wristFlexR;
-    @Column(name = "wristFlexRInterp")
+    @Column(name = "wrist_FlexRInterp")
     private String wristFlexRInterp;
-    @Column(name = "wristFlexL")
+    @Column(name = "wrist_FlexL")
     private Integer wristFlexL;
-    @Column(name = "wristFlexLInterp")
+    @Column(name = "wrist_FlexLInterp")
     private String wristFlexLInterp;
-    @Column(name = "ueProximalMuscleToneR")
+    @Column(name = "ue_Proximal_Muscle_ToneR")
     private String ueProximalMuscleToneR;
-    @Column(name = "ueProximalMuscleToneRInterp")
+    @Column(name = "ue_Proximal_Muscle_ToneRInterp")
     private String ueProximalMuscleToneRInterp;
-    @Column(name = "ueProximalMuscleToneL")
+    @Column(name = "ue_Proximal_Muscle_ToneL")
     private String ueProximalMuscleToneL;
-    @Column(name = "ueProximalMuscleToneLInterp")
+    @Column(name = "ue_Proximal_Muscle_ToneLInterp")
     private String ueProximalMuscleToneLInterp;
-    @Column(name = "ueDistalMuscleToneR")
+    @Column(name = "ue_Distal_Muscle_ToneR")
     private String ueDistalMuscleToneR;
-    @Column(name = "ueDistalMuscleToneL")
+    @Column(name = "ue_Distal_Muscle_ToneL")
     private String ueDistalMuscleToneL;
-    @Column(name = "ueDistalMuscleToneRInterp")
+    @Column(name = "ue_Distal_Muscle_ToneRInterp")
     private String ueDistalMuscleToneRInterp;
-    @Column(name = "ueDistalMuscleToneLInterp")
+    @Column(name = "ue_Distal_Muscle_ToneLInterp")
     private String ueDistalMuscleToneLInterp;
-    @Column(name = "shoulderFlexR")
+    @Column(name = "shoulder_FlexR")
     private String shoulderFlexR;
-    @Column(name = "shoulderFlexRInterp")
+    @Column(name = "shoulder_FlexRInterp")
     private String shoulderFlexRInterp;
-    @Column(name = "shoulderFlexLInterp")
+    @Column(name = "shoulder_FlexLInterp")
     private String shoulderFlexLInterp;
-    @Column(name = "shoulderFlexL")
+    @Column(name = "shoulder_FlexL")
     private String shoulderFlexL;
 
 

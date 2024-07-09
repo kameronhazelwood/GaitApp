@@ -10,39 +10,39 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @Entity
-@Table(name = "PROMComparison")
+@Table(name = "promcomparison")
 public class IPromComparison {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "promCompId")
+    @Column(name = "prom_comp_id")
     private Integer promCompId;
-    @Column(name = "hipAbdR")
+    @Column(name = "hip_abdR")
     private Integer hipAbdR;
-    @Column(name = "hipAbdRSd")
+    @Column(name = "hip_abdRSd")
     private String hipAbdRSd;
-    @Column(name = "hipAbdL")
+    @Column(name = "hip_abdL")
     private Integer hipAbdL;
-    @Column(name = "hipAbdLSd")
+    @Column(name = "hip_abdLSd")
     private String hipAbdLSd;
-    @Column(name = "hipAbdSR")
+    @Column(name = "hip_abdSR")
     private String hipAbdSR;
-    @Column(name = "hipAbdSRSd")
+    @Column(name = "hip_abdSRSd")
     private String hipAbdSRSd;
-    @Column(name = "hipAbdSL")
+    @Column(name = "hip_abdSL")
     private String hipAbdSL;
-    @Column(name = "hipAbdSLSd")
+    @Column(name = "hip_abdSLSd")
     private String hipAbdSLSd;
 //    @Column(name = "compHipExtr")
 //    private Integer compHipExtr;
 //    @Column(name = "hipExtrSd")
 //    private String hipExtrSd;
-    @Column(name = "hipExtL")
+    @Column(name = "hip_extL")
     private Integer hipExtL;
-    @Column(name = "hipExtLSd")
+    @Column(name = "hip_extLSd")
     private String hipExtLSd;
-    @Column(name = "hipExtSR")
+    @Column(name = "hip_extSR")
     private String hipExtSR;
-    @Column(name = "hipExtSRSd")
+    @Column(name = "hip_extSRSd")
     private String hipExtSRSd;
     @Column(name = "popRLow")
     private Integer popRLow;
@@ -80,53 +80,53 @@ public class IPromComparison {
     private String dorsiFSL;
     @Column(name = "dorsiFSLSd")
     private String dorsiFSLSd;
-    @Column(name = "shoulderAbductionl")
+    @Column(name = "shoulder_abductionl")
     private Integer shoulderAbductionl;
-    @Column(name = "shoulderAbdubctionr")
+    @Column(name = "shoulder_abdubctionr")
     private Integer shoulderAbdubctionr;
-    @Column(name = "shoulderAbductionRSd")
+    @Column(name = "shoulder_abductionRSd")
     private String shoulderAbductionRSd;
-    @Column(name = "shoulderAbductionLSd")
+    @Column(name = "shoulder_abductionLSd")
     private String shoulderAbductionLSd;
-    @Column(name = "shoulderAbductionSL")
+    @Column(name = "shoulder_abductionSL")
     private String shoulderAbductionSL;
-    @Column(name = "shoulderAbdubctionSR")
+    @Column(name = "shoulder_abdubctionSR")
     private String shoulderAbdubctionSR;
-    @Column(name = "shoulderAbductionSLSd")
+    @Column(name = "shoulder_abductionSLSd")
     private String shoulderAbductionSLSd;
-    @Column(name = "shoulderAbductionSRSd")
+    @Column(name = "shoulder_abductionSRSd")
     private String shoulderAbductionSRSd;
-    @Column(name = "elbowExtL")
+    @Column(name = "elbow_extL")
     private Integer elbowExtL;
-    @Column(name = "elbowExtR")
+    @Column(name = "elbow_extR")
     private Integer elbowExtR;
-    @Column(name = "elbowExtLSd")
+    @Column(name = "elbow_extLSd")
     private String elbowExtLSd;
-    @Column(name = "elbowExtRSd")
+    @Column(name = "elbow_extRSd")
     private String elbowExtRSd;
-    @Column(name = "elbowExtSL")
+    @Column(name = "elbow_extSL")
     private String elbowExtSL;
-    @Column(name = "elbowExtSR")
+    @Column(name = "elbow_extSR")
     private String elbowExtSR;
-    @Column(name = "elbowExtSLSd")
+    @Column(name = "elbow_extSLSd")
     private String elbowExtSLSd;
-    @Column(name = "elbowExtSRSd")
+    @Column(name = "elbow_extSRSd")
     private String elbowExtSRSd;
-    @Column(name = "wristExtL")
+    @Column(name = "wrist_extL")
     private Integer wristExtL;
-    @Column(name = "wristExtR")
+    @Column(name = "wrist_extR")
     private Integer wristExtR;
-    @Column(name = "wristExtLSd")
+    @Column(name = "wrist_extLSd")
     private String wristExtLSd;
-    @Column(name = "wristExtRSd")
+    @Column(name = "wrist_extRSd")
     private String wristExtRSd;
-    @Column(name = "wristExtSR")
+    @Column(name = "wrist_extSR")
     private String wristExtSR;
-    @Column(name = "wristExtSL")
+    @Column(name = "wrist_extSL")
     private String wristExtSL;
-    @Column(name = "wristExtSLSd")
+    @Column(name = "wrist_extSLSd")
     private String wristExtSLSd;
-    @Column(name = "wristExtSRSd")
+    @Column(name = "wrist_extSRSd")
     private String wristExtSRSd;
     @Column(name = "tma")
     private String tma;
@@ -140,15 +140,15 @@ public class IPromComparison {
     private String tfaRSd;
     @Column(name = "tfaLSd")
     private String tfaLSd;
-    @Column(name = "calcanealInv")
+    @Column(name = "calcaneal_inv")
     private String calcanealInv;
-    @Column(name = "calcanealEver")
+    @Column(name = "calcaneal_ever")
     private String calcanealEver;
-    @Column(name = "kneeVargus")
+    @Column(name = "knee_vargus")
     private String kneeVargus;
-    @Column(name = "ryderTest")
+    @Column(name = "ryder_test")
     private String ryderTest;
-    @Column(name = "elyTest")
+    @Column(name = "ely_test")
     private String elyTest;
     @Column(name = "elyL")
     private Integer elyL;
@@ -168,88 +168,88 @@ public class IPromComparison {
     private String plantarLSd;
     @Column(name = "plantarRSd")
     private String plantarRSd;
-    @Column(name = "hipFlexR")
+    @Column(name = "hip_flexR")
     private String hipFlexR;
-    @Column(name = "hipFlexRSd")
+    @Column(name = "hip_flexRSd")
     private String hipFlexRSd;
-    @Column(name = "hipFlexL")
+    @Column(name = "hip_flexL")
     private String hipFlexL;
-    @Column(name = "hipFlexLSd")
+    @Column(name = "hip_flexLSd")
     private String hipFlexLSd;
-    @Column(name = "compHipExtr")
+    @Column(name = "comp_hip_extr")
     private String hipExtR;
-    @Column(name = "hipExtRSd")
+    @Column(name = "hip_extRSd")
     private String hipExtRSd;
-    @Column(name = "hipIntRotL")
+    @Column(name = "hip_int_rotL")
     private String hipIntRotL;
-    @Column(name = "hipIntRotR")
+    @Column(name = "hip_int_rotR")
     private String hipIntRotR;
-    @Column(name = "hipIntRotRSd")
+    @Column(name = "hip_int_rotRSd")
     private String hipIntRotRSd;
-    @Column(name = "hipIntRotLSd")
+    @Column(name = "hip_int_rotLSd")
     private String hipIntRotLSd;
-    @Column(name = "kneeIntRotL")
+    @Column(name = "knee_int_rotL")
     private String kneeIntRotL;
-    @Column(name = "kneeIntRotRSd")
+    @Column(name = "knee_int_rotRSd")
     private String kneeIntRotRSd;
-    @Column(name = "kneeIntRotLSd")
+    @Column(name = "knee_int_rotLSd")
     private String kneeIntRotLSd;
-    @Column(name = "kneeIntRotR")
+    @Column(name = "knee_int_rotR")
     private String kneeIntRotR;
-    @Column(name = "kneeExtR")
+    @Column(name = "knee_extR")
     private String kneeExtR;
-    @Column(name = "kneeExtL")
+    @Column(name = "knee_extL")
     private String kneeExtL;
-    @Column(name = "kneeExtRSd")
+    @Column(name = "knee_extRSd")
     private String kneeExtRSd;
-    @Column(name = "kneeExtLSd")
+    @Column(name = "knee_extLSd")
     private String kneeExtLSd;
-    @Column(name = "kneeFlexR")
+    @Column(name = "knee_flexR")
     private String kneeFlexR;
-    @Column(name = "kneeFlexL")
+    @Column(name = "knee_flexL")
     private String kneeFlexL;
-    @Column(name = "kneeFlexRSd")
+    @Column(name = "knee_flexRSd")
     private String kneeFlexRSd;
-    @Column(name = "kneeFlexLSd")
+    @Column(name = "knee_flexLSd")
     private String kneeFlexLSd;
-    @Column(name = "ankleEverR")
+    @Column(name = "ankle_everR")
     private String ankleEverR;
-    @Column(name = "ankleEverL")
+    @Column(name = "ankle_everL")
     private String ankleEverL;
-    @Column(name = "ankleEverRSd")
+    @Column(name = "ankle_everRSd")
     private String ankleEverRSd;
-    @Column(name = "ankleEverLSd")
+    @Column(name = "ankle_everLSd")
     private String ankleEverLSd;
-    @Column(name = "ankleInvL")
+    @Column(name = "ankle_invL")
     private String ankleInvL;
-    @Column(name = "ankleInvR")
+    @Column(name = "ankle_invR")
     private String ankleInvR;
-    @Column(name = "ankleInvLSd")
+    @Column(name = "ankle_invLSd")
     private String ankleInvLSd;
-    @Column(name = "ankleInvRSD")
+    @Column(name = "ankle_invRSD")
     private String ankleInvRSD;
-    @Column(name = "ffAbaddLSd")
+    @Column(name = "ff_abaddLSd")
     private String ffAbaddLSd;
-    @Column(name = "ffAbaddRSd")
+    @Column(name = "ff_abaddRSd")
     private String ffAbaddRSd;
-    @Column(name = "ffAbaddL")
+    @Column(name = "ff_abaddL")
     private String ffAbaddL;
-    @Column(name = "ffAbaddR")
+    @Column(name = "ff_abaddR")
     private String ffAbaddR;
-    @Column(name = "legLengthR")
+    @Column(name = "leg_lengthR")
     private String legLengthR;
-    @Column(name = "legLengthL")
+    @Column(name = "leg_lengthL")
     private String legLengthL;
-    @Column(name = "qAngleR")
+    @Column(name = "q_angleR")
     private String qAngleR;
-    @Column(name = "qAnkleL")
+    @Column(name = "q_ankleL")
     private String qAnkleL;
-    @Column(name = "bilateralPopR")
+    @Column(name = "bilateral_popR")
     private String bilateralPopR;
-    @Column(name = "bilateralPopL")
+    @Column(name = "bilateral_popL")
     private String bilateralPopL;
-    @Column(name = "bilateralPopRSd")
+    @Column(name = "bilateral_popRSd")
     private String bilateralPopRSd;
-    @Column(name = "bilaterPopLSd")
+    @Column(name = "bilater_popLSd")
     private String bilaterPopLSd;
 }

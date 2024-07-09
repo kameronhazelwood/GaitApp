@@ -55,7 +55,7 @@
          <Label fx:id="fieldLabel2" layoutX="322.0" layoutY="91.0" text="Value" />
          <ListView fx:id="listview" layoutX="744.0" layoutY="57.0" prefHeight="441.0" prefWidth="226.0" />
          <Label layoutX="502.0" layoutY="27.0" text="Database fields to include" />
-         <Button fx:id="runQuery" layoutX="664.0" layoutY="533.0" mnemonicParsing="false" onAction="#onRunQuery" prefHeight="62.0" prefWidth="149.0" text="Run Query" />
+         <Button fx:id="runQuery" layoutX="664.0" layoutY="533.0" mnemonicParsing="false"  prefHeight="62.0" prefWidth="149.0" text="Run Query" />
       </children>
    </Pane>
 </AnchorPane>

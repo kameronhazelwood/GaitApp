@@ -12,21 +12,21 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "PNG")
+@Table(name = "png")
 public class IPngModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "pngId")
+    @Column(name = "png_id")
     private Integer pngId;
     @Column(name = "label")
     private String label;
-    @Column(name = "fileName")
+    @Column(name = "file_name")
     private String fileName;
-    @Column(name = "subDir")
+    @Column(name = "sub_dir")
     private String subDir;
     @Column(name = "level")
     private Integer level;
-    @Column(name = "sortOrder")
+    @Column(name = "sort_order")
     private Integer sortOrder;
     @Column(name = "active")
     private Boolean active;

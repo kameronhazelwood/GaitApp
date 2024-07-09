@@ -16,13 +16,13 @@ import jakarta.persistence.*;
 public class IVideo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "videoId")
+    @Column(name = "video_id")
     private Integer videoId;
-    @Column(name = "videoName")
+    @Column(name = "video_name")
     private String videoName;
-    @Column(name = "videoComments")
+    @Column(name = "video_comments")
     private String videoComments;
-    @Column(name = "videoDate")
+    @Column(name = "video_date")
     private String videoDate;
 
 }

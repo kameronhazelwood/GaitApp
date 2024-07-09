@@ -11,16 +11,16 @@ import jakarta.persistence.*;
 @Setter
 @Entity
 @NoArgsConstructor(force = true)
-@Table(name = "Appointments")
+@Table(name = "appointments")
 public class IAppointmentModel  {
 
     public enum Type{GAIT, UE, FOOT}
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "aptId")
+    @Column(name = "apt_id")
     private final Integer aptId;
-    @Column(name = "aptDate")
+    @Column(name = "apt_date")
     private final String aptDate;
 //    @Column(name = "attended")
 //    private final StringProperty attended;
@@ -30,9 +30,9 @@ public class IAppointmentModel  {
 //    private final StringProperty stopTime;
 //    @Column(name = "dateScheduled")
 //    private final StringProperty dateScheduled;
-    @Column(name = "visitType")
+    @Column(name = "visit_type")
     private final String visitType;
-    @Column(name = "visitSubType")
+    @Column(name = "visit_sub_type")
     private final String visitSubType;
 //    @Column(name = "dateToEpic")
 //    private final BooleanProperty dateToEpic;
@@ -50,7 +50,7 @@ public class IAppointmentModel  {
 //    private final StringProperty interpMD;
 //    @Column(name = "interpPT")
 //    private final StringProperty interpPT;
-    @Column(name = "referringPhys")
+    @Column(name = "referring_phys")
     private final String referringPhys;
 //    @Column(name = "visitPT")
 //    private final StringProperty visitPT;

@@ -11,23 +11,23 @@ import lombok.Setter;
 @Data
 @NoArgsConstructor
 @Entity
-@Table(name = "CoreStrengthComparison")
+@Table(name = "core_strength_comparison")
 public class ICoreStrengthComparison {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "coreStrengthComparisonId")
+    @Column(name = "core_strength_comparison_id")
     private Integer coreStrengthComparisonId;
-    @Column(name = "situpsCompleted")
+    @Column(name = "situps_completed")
     private String situpsCompleted;
-    @Column(name = "situpsCompletedSd")
+    @Column(name = "situps_completed_sd")
     private String situpsCompletedSd;
-    @Column(name = "superManHoldTime")
+    @Column(name = "super_man_hold_time")
     private String superManHoldTime;
-    @Column(name = "superManHoldTimeSd")
+    @Column(name = "super_man_hold_time_sd")
     private String superManHoldTimeSd;
     @Column(name = "plank")
     private String plank;
-    @Column(name = "plankSd")
+    @Column(name = "plank_sd")
     private String plankSd;
 
 }

@@ -18,20 +18,20 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="736.0" prefWidth="1036.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" >
+<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="736.0" prefWidth="1036.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.PatientModuleController">
 
     <HBox VBox.vgrow="NEVER">
         <children>
             <ToolBar maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="91.0" prefWidth="1027.0" HBox.hgrow="ALWAYS">
                 <items>
                     <Button fx:id="patient" layoutX="130.0" layoutY="50" mnemonicParsing="false" prefHeight="80.0" prefWidth="120.0" styleClass="buttonTransparent" text="Patients" />
-                    <Button fx:id="forms" layoutX="130.0" layoutY="50" mnemonicParsing="false"  prefHeight="80.0" prefWidth="120.0" text="Forms" />
-                    <Button fx:id="scheduler" layoutX="130.0" layoutY="50" mnemonicParsing="false"  prefHeight="80.0" prefWidth="120.0" text="Scheduler" />
-                    <Button fx:id="reports" layoutX="130.0" layoutY="50" mnemonicParsing="false"  prefHeight="80.0" prefWidth="120.0" text="Reports" />
-                    <Button fx:id="admin" layoutX="130.0" layoutY="50" mnemonicParsing="false"  prefHeight="80.0" prefWidth="120.0" text="Admin" />
-                    <Button fx:id="newPatient" layoutX="130.0" layoutY="50" mnemonicParsing="false"  prefHeight="80.0" prefWidth="120.0" text="New Patient" />
-                    <Button fx:id="queries" layoutX="130.0" layoutY="50" mnemonicParsing="false"  prefHeight="80.0" prefWidth="120.0" text="Queries" />
-                    <Button fx:id="logout" layoutX="130.0" layoutY="50" mnemonicParsing="false"  prefHeight="80.0" prefWidth="120.0" text="Logout" />
+                    <Button fx:id="forms" layoutX="130.0" onAction="#onFormClick" layoutY="50" mnemonicParsing="false"  prefHeight="80.0" prefWidth="120.0" text="Forms" />
+                    <Button fx:id="scheduler" layoutX="130.0" onAction="#onSchedulerClick" layoutY="50" mnemonicParsing="false"  prefHeight="80.0" prefWidth="120.0" text="Scheduler" />
+                    <Button fx:id="reports" layoutX="130.0" layoutY="50"  onAction="#onReportClick" mnemonicParsing="false"  prefHeight="80.0" prefWidth="120.0" text="Reports" />
+                    <Button fx:id="admin" layoutX="130.0" layoutY="50" mnemonicParsing="false" onAction="#onAdminClick" prefHeight="80.0" prefWidth="120.0" text="Admin" />
+                    <Button fx:id="newPatient" layoutX="130.0" layoutY="50" mnemonicParsing="false" onAction="#OnNewPatientClick" prefHeight="80.0" prefWidth="120.0" text="New Patient" />
+                    <Button fx:id="queries" layoutX="130.0" layoutY="50" mnemonicParsing="false"  onAction="#onQueriesClick" prefHeight="80.0" prefWidth="120.0" text="Queries" />
+                    <Button fx:id="logout" layoutX="130.0" layoutY="50" mnemonicParsing="false" onAction="#logout" prefHeight="80.0" prefWidth="120.0" text="Logout" />
                 </items>
             </ToolBar>
         </children>

@@ -12,11 +12,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Getter
 @Setter
-@Table(name = "MotorControl")
+@Table(name = "motor_control")
 public class IMotorControlModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "motorControlId")
+    @Column(name = "motor_control_id")
     private Integer motorControlId;
     @Column(name = "iliopsoasR")
     private String iliopsoasR;
@@ -26,21 +26,21 @@ public class IMotorControlModel {
     private String iliopsoasRInterp;
     @Column(name = "iliopsoasLInterp")
     private String iliopsoasLInterp;
-    @Column(name = "gluteMedR")
+    @Column(name = "glute_medR")
     private String gluteMedR;
-    @Column(name = "gluteMedL")
+    @Column(name = "glute_medL")
     private String gluteMedL;
-    @Column(name = "gluteMedRInterp")
+    @Column(name = "glute_medRInterp")
     private String gluteMedRInterp;
-    @Column(name = "gluteMedLInterp")
+    @Column(name = "glute_medLInterp")
     private String gluteMedLInterp;
-    @Column(name = "hipAbductorR")
+    @Column(name = "hip_abductorR")
     private String hipAbductorR;
-    @Column(name = "hipAbductorL")
+    @Column(name = "hip_abductorL")
     private String hipAbductorL;
-    @Column(name = "hipAbductorRInterp")
+    @Column(name = "hip_abductorRInterp")
     private String hipAbductorRInterp;
-    @Column(name = "hipAbductorLInterp")
+    @Column(name = "hip_abductorLInterp")
     private String hipAbductorLInterp;
     @Column(name = "quadsR")
     private String quadsR;
@@ -58,13 +58,13 @@ public class IMotorControlModel {
     private String hamstringRInterp;
     @Column(name = "hamstringLInterp")
     private String hamstringLInterp;
-    @Column(name = "antTibialisL")
+    @Column(name = "ant_tibialisL")
     private String antTibialisL;
-    @Column(name = "antTibialisR")
+    @Column(name = "ant_tibialisR")
     private String antTibialisR;
-    @Column(name = "antTibialisLInterp")
+    @Column(name = "ant_tibialisLInterp")
     private String antTibialisLInterp;
-    @Column(name = "antTibialisRInterp")
+    @Column(name = "ant_tibialisRInterp")
     private String antTibialisRInterp;
     @Column(name = "gastrocnemiusR")
     private String gastrocnemiusR;
@@ -74,13 +74,13 @@ public class IMotorControlModel {
     private String gastrocnemiusRInterp;
     @Column(name = "gastrocnemiusLInterp")
     private String gastrocnemiusLInterp;
-    @Column(name = "postTibialisR")
+    @Column(name = "post_tibialisR")
     private String postTibialisR;
-    @Column(name = "postTibialisRInterp")
+    @Column(name = "post_tibialisRInterp")
     private String postTibialisRInterp;
-    @Column(name = "postTibialisL")
+    @Column(name = "post_tibialisL")
     private String postTibialisL;
-    @Column(name = "postTibialisLInterp")
+    @Column(name = "post_tibialisLInterp")
     private String postTibialisLInterp;
     @Column(name = "soleusR")
     private String soleusR;
@@ -98,20 +98,20 @@ public class IMotorControlModel {
     private String personealsLInterp;
     @Column(name = "peronealsRInterp")
     private String peronealsRInterp;
-    @Column(name = "proximalMuscleControlL")
+    @Column(name = "proximal_muscle_controlL")
     private String proximalMuscleControlL;
-    @Column(name = "proximalMuscleControlR")
+    @Column(name = "proximal_muscle_controlR")
     private String proximalMuscleControlR;
-    @Column(name = "proximalMuscleControlLInterp")
+    @Column(name = "proximal_muscle_controlLInterp")
     private String proximalMuscleControlLInterp;
-    @Column(name = "proximalMuscleControlRInterp")
+    @Column(name = "proximal_muscle_controlRInterp")
     private String proximalMuscleControlRInterp;
-    @Column(name = "distalMuscleControlR")
+    @Column(name = "distal_muscle_controlR")
     private String distalMuscleControlR;
-    @Column(name = "distalMuscleControlL")
+    @Column(name = "distal_muscle_controlL")
     private String distalMuscleControlL;
-    @Column(name = "distalMuscleControlRInterp")
+    @Column(name = "distal_muscle_controlRInterp")
     private String distalMuscleControlRInterp;
-    @Column(name = "distalMuscleControlLInterp")
+    @Column(name = "distal_muscle_controlLInterp")
     private String distalMuscleControlLInterp;
 }

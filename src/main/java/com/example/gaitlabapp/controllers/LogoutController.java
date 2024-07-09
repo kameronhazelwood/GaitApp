@@ -14,7 +14,7 @@ public class LogoutController {
 
     public void logout(ActionEvent event){
         stage = (Stage) scenePane.getScene().getWindow();
-        System.out.println("You successfully logged out");
         stage.close();
+        //springContext.close();
     }
 }

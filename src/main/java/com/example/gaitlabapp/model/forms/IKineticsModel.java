@@ -12,11 +12,11 @@ import lombok.NoArgsConstructor;
 @Getter
 @Setter
 @NoArgsConstructor
-@Table(name = "Kinetics")
+@Table(name = "kinetics")
 public class IKineticsModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "kinId")
+    @Column(name = "kin_id")
     private Integer kinId;
     @Column(name = "side")
     private String side;

@@ -7,6 +7,7 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -20,10 +21,14 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import net.rgielen.fxweaver.core.FxmlView;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationListener;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.stereotype.Controller;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.net.URL;
@@ -31,15 +36,16 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 
-
+@Component
+@Scope("prototype")
 public class UserLoginController implements Initializable {
+
+
 
     @FXML
     public TextField nameTextField;
     @FXML
     private Button loginButton;
-
-
     private ApplicationContext context;
     @FXML
     private Stage stage;
@@ -52,44 +58,8 @@ public class UserLoginController implements Initializable {
 //    }));
     Timeline alertTimer;
 
-
-    public UserLoginController(Stage stage) throws IOException {
-        try {
-
-            FXMLLoader fxmlLoader = new FXMLLoader(Launcher.class.getResource("/UserLogin.fxml"));
-            fxmlLoader.setController(UserLoginController.class);
-            Parent root = fxmlLoader.load();
-//            Parent root = load("UserLogin.fxml", this);
-
-            Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
-
-            stage.getIcons().add(icon);
-            stage.setTitle("Login");
-            stage.setWidth(450);
-            stage.setHeight(250);
-
-            stage.setScene(new Scene(root));
-            stage.setResizable(false);
-            stage.show();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        loginButton.setOnAction(event -> {
-            try {
-                login(event);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        });
-    }
-
-
-
-   @FXML
-    private void openPatientModule(ActionEvent event){
 
     }
 
@@ -97,7 +67,7 @@ public class UserLoginController implements Initializable {
     public void login(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(Launcher.class.getResource("/PatientModule.fxml"));
         root = loader.load();
-       stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setTitle("Patient Module");
         stage.setHeight(750);
@@ -107,6 +77,7 @@ public class UserLoginController implements Initializable {
         alertTimer = new Timeline(new KeyFrame(Duration.hours(1), event1 -> {
             showAlert();
         }));
+
     }
 
     public void showAlert() {
@@ -127,19 +98,5 @@ public class UserLoginController implements Initializable {
             }
         });
     }
-
- //   public static Parent load(final String location, Object controller) throws IOException{
-//        FXMLLoader loader = new FXMLLoader(load(location));
-//        if (controller!=null){
-//            loader.setController(controller);
-//        }
-//        return loader.load();
-//
-//    }
-//
-//    public static URL load(final String location){
-//        return Launcher.class.getResource(location);
-//    }
-
 
 }

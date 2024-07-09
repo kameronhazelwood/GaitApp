@@ -13,20 +13,20 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @Entity
-@Table(name = "O2")
+@Table(name = "o2")
 public class IO2Model {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "o2Id")
     private Integer o2Id;
-    @Column(name = "timeTest")
+    @Column(name = "time_test")
     private String timeTest;
-    @Column(name = "startTime")
+    @Column(name = "start_Time")
     private String startTime;
     @Column(name = "o2Start")
     private String o2Start;
     @Column(name = "o2Finish")
     private String o2Finish;
-    @Column(name = "sitTime")
+    @Column(name = "sit_Time")
     private String sitTime;
 }

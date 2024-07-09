@@ -16,131 +16,131 @@ import lombok.NoArgsConstructor;
 public class IShueeModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "shueeId")
+    @Column(name = "shuee_Id")
     private Integer shueeId;
-    @Column(name = "moneyWalletThumbR")
+    @Column(name = "money_Wallet_ThumbR")
     private String moneyWalletThumbR;
-    @Column(name = "moneyWalletThumbL")
+    @Column(name = "money_Wallet_ThumbL")
     private String moneyWalletThumbL;
-    @Column(name = "moneyWalletFingerR")
+    @Column(name = "money_Wallet_FingerR")
     private String moneyWalletFingerR;
-    @Column(name = "moneyWalletFingerL")
+    @Column(name = "money_Wallet_FingerL")
     private String moneyWalletFingerL;
-    @Column(name = "foldPaperThumbR")
+    @Column(name = "fold_Paper_ThumbR")
     private String foldPaperThumbR;
-    @Column(name = "foldPaperThumbL")
+    @Column(name = "fold_Paper_ThumbL")
     private String foldPaperThumbL;
-    @Column(name = "foldPaperFingerR")
+    @Column(name = "fold_Paper_FingerR")
     private String foldPaperFingerR;
-    @Column(name = "foldPaperFingerL")
+    @Column(name = "fold_Paper_FingerL")
     private String foldPaperFingerL;
-    @Column(name = "tearPaperThumbR")
+    @Column(name = "tear_Paper_ThumbR")
     private String tearPaperThumbR;
-    @Column(name = "tearPaperThumbL")
+    @Column(name = "tear_Paper_ThumbL")
     private String tearPaperThumbL;
-    @Column(name = "tearPaperFingerR")
+    @Column(name = "tear_Paper_FingerR")
     private String tearPaperFingerR;
-    @Column(name = "tearPaperFingerL")
+    @Column(name = "tear_Paper_FingerL")
     private String tearPaperFingerL;
-    @Column(name = "handToMouthR")
+    @Column(name = "hand_To_MouthR")
     private String handToMouthR;
-    @Column(name = "handToMouthL")
+    @Column(name = "hand_To_MouthL")
     private String handToMouthL;
-    @Column(name = "earWithPalmR")
+    @Column(name = "ear_With_PalmR")
     private String earWithPalmR;
-    @Column(name = "earWithPalmL")
+    @Column(name = "ear_With_PalmL")
     private String earWithPalmL;
-    @Column(name = "stickerOnBallR")
+    @Column(name = "sticker_On_BallR")
     private String stickerOnBallR;
-    @Column(name = "stickerOnBallL")
+    @Column(name = "sticker_On_BallL")
     private String stickerOnBallL;
-    @Column(name = "socksOnR")
+    @Column(name = "socks_OnR")
     private String socksOnR;
-    @Column(name = "socksOnL")
+    @Column(name = "socks_OnL")
     private String socksOnL;
-    @Column(name = "fastenShoeR")
+    @Column(name = "fasten_ShoeR")
     private String fastenShoeR;
-    @Column(name = "fastenShoeL")
+    @Column(name = "fasten_ShoeL")
     private String fastenShoeL;
     @Column(name = "crawlR")
     private String crawlR;
     @Column(name = "crawlL")
     private String crawlL;
-    @Column(name = "wristFlexGraspR")
+    @Column(name = "wrist_Flex_GraspR")
     private String wristFlexGraspR;
-    @Column(name = "wristFlexGraspL")
+    @Column(name = "wrist_Flex_GraspL")
     private String wristFlexGraspL;
-    @Column(name = "wristFlexRelR")
+    @Column(name = "wrist_Flex_RelR")
     private String wristFlexRelR;
-    @Column(name = "wristFlexRelL")
+    @Column(name = "wrist_Flex_RelL")
     private String wristFlexRelL;
-    @Column(name = "wristNeutGraspR")
+    @Column(name = "wrist_Neut_GraspR")
     private String wristNeutGraspR;
-    @Column(name = "wristNeutGraspL")
+    @Column(name = "wrist_Neut_GraspL")
     private String wristNeutGraspL;
-    @Column(name = "wristNeutRelR")
+    @Column(name = "wrist_Neut_RelR")
     private String wristNeutRelR;
-    @Column(name = "wristNeutRelL")
+    @Column(name = "wrist_Neut_RelL")
     private String wristNeutRelL;
-    @Column(name = "wristExtRelR")
+    @Column(name = "wrist_Ext_RelR")
     private String wristExtRelR;
-    @Column(name = "wristExtRelL")
+    @Column(name = "wrist_Ext_RelL")
     private String wristExtRelL;
-    @Column(name = "wristExtGraspR")
+    @Column(name = "wrist_Ext_GraspR")
     private String wristExtGraspR;
-    @Column(name = "wristExtGraspL")
+    @Column(name = "wrist_Ext_GraspL")
     private String wristExtGraspL;
-    @Column(name = "shueeComments")
+    @Column(name = "shuee_Comments")
     private String shueeComments;
-    @Column(name = "stringBeadThumbR")
+    @Column(name = "string_Bead_ThumbR")
     private String stringBeadThumbR;
-    @Column(name = "stringBeadThumbL")
+    @Column(name = "string_Bead_ThumbL")
     private String stringBeadThumbL;
-    @Column(name = "stringBeadFingerR")
+    @Column(name = "string_Bead_FingerR")
     private String stringBeadFingerR;
-    @Column(name = "stringBeadFingerL")
+    @Column(name = "string_Bead_FingerL")
     private String stringBeadFingerL;
-    @Column(name = "tearPapeR_SFA")
+    @Column(name = "tear_PapeR_SFA")
     private String tearPapeR_SFA;
-    @Column(name = "foldPaperR_SFA")
+    @Column(name = "fold_PaperR_SFA")
     private String foldPaperR_SFA;
-    @Column(name = "moneyFromWalletR_SFA")
+    @Column(name = "money_From_WalletR_SFA")
     private String moneyFromWalletR_SFA;
-    @Column(name = "unscrewBottleR")
+    @Column(name = "unscrew_BottleR")
     private String unscrewBottleR;
-    @Column(name = "unscrewBottleL")
+    @Column(name = "unscrew_BottleL")
     private String unscrewBottleL;
-    @Column(name = "unscrewBottleL_SFA")
+    @Column(name = "unscrew_BottleL_SFA")
     private String unscrewBottleL_SFA;
-    @Column(name = "pullPlaydoughR")
+    @Column(name = "pull_PlaydoughR")
     private String pullPlaydoughR;
-    @Column(name = "pullPlaydoughL")
+    @Column(name = "pull_PlaydoughL")
     private String pullPlaydoughL;
-    @Column(name = "pullPlaydoughR_SFA")
+    @Column(name = "pull_PlaydoughR_SFA")
     private String pullPlaydoughR_SFA;
-    @Column(name = "pullPlaydoughL_SFA")
+    @Column(name = "pull_PlaydoughL_SFA")
     private String pullPlaydoughL_SFA;
-    @Column(name = "cutPlaydoughL")
+    @Column(name = "cut_PlaydoughL")
     private String cutPlaydoughL;
-    @Column(name = "cutPlaydoughR")
+    @Column(name = "cut_PlaydoughR")
     private String cutPlaydoughR;
-    @Column(name = "cutPlaydoughR_SFA")
+    @Column(name = "cut_PlaydoughR_SFA")
     private String cutPlaydoughR_SFA;
-    @Column(name = "cutPlaydoughL_SFA")
+    @Column(name = "cut_PlaydoughL_SFA")
     private String cutPlaydoughL_SFA;
-    @Column(name = "throwLargeBallR")
+    @Column(name = "throw_Large_BallR")
     private String throwLargeBallR;
-    @Column(name = "throwLargeBallL")
+    @Column(name = "throw_Large_BallL")
     private String throwLargeBallL;
-    @Column(name = "acceptCoinsR")
+    @Column(name = "accept_CoinsR")
     private String acceptCoinsR;
-    @Column(name = "acceptCoinsL")
+    @Column(name = "accept_CoinsL")
     private String acceptCoinsL;
     @Column(name = "receive5R")
     private String receive5R;
     @Column(name = "receive5L")
     private String receive5L;
-    @Column(name = "staticHouse")
+    @Column(name = "static_House")
     private String staticHouse;
 
 

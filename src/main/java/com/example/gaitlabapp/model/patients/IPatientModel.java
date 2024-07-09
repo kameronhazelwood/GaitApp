@@ -10,39 +10,49 @@ import lombok.Setter;
 
 @Entity
 @Getter
-@Setter
 @NoArgsConstructor(force = true)
 @Data
-@Table(name = "Patients")
+@Table(name = "patients")
 public class IPatientModel {
 
-    @jakarta.persistence.Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "patientID", nullable = false)
     private final Integer patientID;
 
-    @Column(name = "firstName")
-    private final String firstName;
-    @Column(name = "lastName")
-    private final String lastName;
-    @Column(name = "prefferedFirstName")
-    private final String preferredFirstName;
+    @Column(name = "first_name")
+    @Setter
+    private String firstName;
+    @Column(name = "last_name")
+    @Setter
+    private String lastName;
+    @Column(name = "preffered_first_name")
+    @Setter
+    private String preferredFirstName;
     @Column(name = "mrn")
-    private final String mrn;
-    @Column(name = "formerLastName")
-    private final String formerLastName;
+    @Setter
+    private String mrn;
+    @Column(name = "former_last_name")
+    @Setter
+    private String formerLastName;
     @Column(name = "address")
-    private final String address;
+    @Setter
+    private String address;
     @Column(name = "gender")
-    private final String gender;
+    @Setter
+    private String gender;
     @Column(name = "dob")
-    private final String dob;
+    @Setter
+    private String dob;
     @Column(name = "comments")
-    private final String comments;
+    @Setter
+    private String comments;
     @Column(name = "state")
-    private final String state;
-    @Column(name = "genDiagnosis")
-    private final String genDiagnosis;
+    @Setter
+    private String state;
+    @Column(name = "gen_diagnosis")
+    @Setter
+    private String genDiagnosis;
 
     public IPatientModel(Integer patientID, String firstName, String lastName, String preferredFirstName, String mrn, String formerLastName, String address, String gender, String dob, String comments, String state, String genDiagnosis) {
         this.patientID = patientID;

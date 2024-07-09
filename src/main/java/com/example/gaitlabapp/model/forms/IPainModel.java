@@ -12,29 +12,29 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @Entity
-@Table(name = "Pain")
+@Table(name = "pain")
 public class IPainModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "painId")
+    @Column(name = "pain_id")
     private Integer painId;
-    @Column(name = "painAssessmentMethod")
+    @Column(name = "pain_assessment_method")
     private String painAssessmentMethod;
-    @Column(name = "aggravatingFactors")
+    @Column(name = "aggravating_factors")
     private String aggravatingFactors;
-    @Column(name = "activitiesImpacted")
+    @Column(name = "activities_impacted")
     private String activitiesImpacted;
-    @Column(name = "currentLevel")
+    @Column(name = "current_level")
     private Integer currentLevel;
-    @Column(name = "lowestLevel")
+    @Column(name = "lowest_level")
     private Integer lowestLevel;
-    @Column(name = "highestLevel")
+    @Column(name = "highest_level")
     private Integer highestLevel;
-    @Column(name = "locationOfPain")
+    @Column(name = "location_of_pain")
     private String locationOfPain;
-    @Column(name = "frequencyOfPain")
+    @Column(name = "frequency_of_pain")
     private String frequencyOfPain;
-    @Column(name = "durationOfPain")
+    @Column(name = "duration_of_pain")
     private String durationOfPain;
 
 }

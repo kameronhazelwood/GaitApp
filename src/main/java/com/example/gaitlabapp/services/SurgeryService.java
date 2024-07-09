@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface SurgeryService {
     Optional<ISurgeryModel> save(ISurgeryModel surgeryModel);
     Optional<ISurgeryModel> findBySurgeryProcedure(String surgeryProcedure);
-    Optional<ISurgeryModel> findBySurgeryId(String surgeryId);
+    Optional<ISurgeryModel> findBySurgeryId(Integer surgeryId);
     Optional<ISurgeryModel> findBySurgeryDate(String surgeryDate);
     List<ISurgeryModel> findAll();
     void delete(Long id);

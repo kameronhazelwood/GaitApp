@@ -11,13 +11,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "CpQuestionnaire")
+@Table(name = "cp_questionnaire")
 public class CpQuestionnaireModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "cpQuestionnaireId")
+    @Column(name = "cp_questionnaire_id")
     private Integer cpQuestionnaireId;
-    @Column(name = "personalCare")
+    @Column(name = "personal_care")
     private String personalCare;
     @Column(name = "positioning")
     private String positioning;
@@ -27,7 +27,7 @@ public class CpQuestionnaireModel {
     private String communication;
     @Column(name = "health")
     private String health;
-    @Column(name = "qualityOfLife")
+    @Column(name = "quality_of_life")
     private String qualityOfLife;
 
 

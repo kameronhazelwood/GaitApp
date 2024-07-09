@@ -12,11 +12,11 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @Entity
-@Table(name = "Tone")
+@Table(name = "tone")
 public class IToneModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "toneId")
+    @Column(name = "tone_id")
     private Integer toneId;
     @Column(name = "iliopsoasR")
     private String iliopsoasR;
@@ -26,13 +26,13 @@ public class IToneModel {
     private String iliopsoasRInterp;
     @Column(name = "iliopsoasLInterp")
     private String iliopsoasLInterp;
-    @Column(name = "gluteMaxR")
+    @Column(name = "glute_MaxR")
     private String gluteMaxR;
-    @Column(name = "gluteMaxL")
+    @Column(name = "glute_MaxL")
     private String gluteMaxL;
-    @Column(name = "gluteMaxRInterp")
+    @Column(name = "glute_MaxRInterp")
     private String gluteMaxRInterp;
-    @Column(name = "gluteMaxLInterp")
+    @Column(name = "glute_MaxLInterp")
     private String gluteMaxLInterp;
     @Column(name = "adductorR")
     private String adductorR;
@@ -42,21 +42,21 @@ public class IToneModel {
     private String adductorRInterp;
     @Column(name = "adductorLInterp")
     private String adductorLInterp;
-    @Column(name = "rectusFemorisR")
+    @Column(name = "rectus_FemorisR")
     private String rectusFemorisR;
-    @Column(name = "rectusFemorisL")
+    @Column(name = "rectus_FemorisL")
     private String rectusFemorisL;
-    @Column(name = "rectusFemorisLInterp")
+    @Column(name = "rectus_FemorisLInterp")
     private String rectusFemorisLInterp;
-    @Column(name = "rectusFemorisRInterp")
+    @Column(name = "rectus_FemorisRInterp")
     private String rectusFemorisRInterp;
-    @Column(name = "vastusMedialisR")
+    @Column(name = "vastus_MedialisR")
     private String vastusMedialisR;
-    @Column(name = "vastusMedialisL")
+    @Column(name = "vastus_MedialisL")
     private String vastusMedialisL;
-    @Column(name = "vastusMedialisRInterp")
+    @Column(name = "vastus_MedialisRInterp")
     private String vastusMedialisRInterp;
-    @Column(name = "vastusMedialisLInterp")
+    @Column(name = "vastus_MedialisLInterp")
     private String vastusMedialisLInterp;
     @Column(name = "hamstringR")
     private String hamstringR;
@@ -66,21 +66,21 @@ public class IToneModel {
     private String hamstringLInterp;
     @Column(name = "hamstringRInterp")
     private String hamstringRInterp;
-    @Column(name = "postTibR")
+    @Column(name = "post_TibR")
     private String postTibR;
-    @Column(name = "postTibL")
+    @Column(name = "post_TibL")
     private String postTibL;
-    @Column(name = "postTibRInterp")
+    @Column(name = "post_TibRInterp")
     private String postTibRInterp;
-    @Column(name = "postTibLInterp")
+    @Column(name = "post_TibLInterp")
     private String postTibLInterp;
-    @Column(name = "antTibR")
+    @Column(name = "ant_TibR")
     private String antTibR;
-    @Column(name = "antTibL")
+    @Column(name = "ant_TibL")
     private String antTibL;
-    @Column(name = "antTibRInterp")
+    @Column(name = "ant_TibRInterp")
     private String antTibRInterp;
-    @Column(name = "antTibLInterp")
+    @Column(name = "ant_TibLInterp")
     private String antTibLInterp;
     @Column(name = "gastrocL")
     private String gastrocL;
@@ -98,21 +98,21 @@ public class IToneModel {
     private String colnusRInterp;
     @Column(name = "colnusLInterp")
     private String colnusLInterp;
-    @Column(name = "kneeJerkL")
+    @Column(name = "knee_JerkL")
     private String kneeJerkL;
-    @Column(name = "kneeJerkR")
+    @Column(name = "knee_JerkR")
     private String kneeJerkR;
-    @Column(name = "kneeJerkRInterp")
+    @Column(name = "knee_JerkRInterp")
     private String kneeJerkRInterp;
-    @Column(name = "kneeJerkLInterp")
+    @Column(name = "knee_JerkLInterp")
     private String kneeJerkLInterp;
-    @Column(name = "ankleJerkL")
+    @Column(name = "ankle_JerkL")
     private String ankleJerkL;
-    @Column(name = "ankleJerkR")
+    @Column(name = "ankle_JerkR")
     private String ankleJerkR;
-    @Column(name = "ankleJerkLInterp")
+    @Column(name = "ankle_JerkLInterp")
     private String ankleJerkLInterp;
-    @Column(name = "ankleJerkRInterp")
+    @Column(name = "ankle_JerkRInterp")
     private String ankleJerkRInterp;
     @Column(name = "babinskiR")
     private String babinskiR;
@@ -122,21 +122,21 @@ public class IToneModel {
     private String babinskiRInterp;
     @Column(name = "babinskiLInterp")
     private String babinskiLInterp;
-    @Column(name = "proximalMuscleToneR")
+    @Column(name = "proximal_Muscle_ToneR")
     private String proximalMuscleToneR;
-    @Column(name = "proximalMuscleToneL")
+    @Column(name = "proximal_Muscle_ToneL")
     private String proximalMuscleToneL;
-    @Column(name = "proximalMuscleToneRInterp")
+    @Column(name = "proximal_Muscle_ToneRInterp")
     private String proximalMuscleToneRInterp;
-    @Column(name = "proximalMuscleToneLInterp")
+    @Column(name = "proximal_Muscle_ToneLInterp")
     private String proximalMuscleToneLInterp;
-    @Column(name = "distalMuscleToneR")
+    @Column(name = "distal_Muscle_ToneR")
     private String distalMuscleToneR;
-    @Column(name = "distalMuscleToneL")
+    @Column(name = "distal_Muscle_ToneL")
     private String distalMuscleToneL;
-    @Column(name = "distalMuscleToneRInterp")
+    @Column(name = "distal_Muscle_ToneRInterp")
     private String distalMuscleToneRInterp;
-    @Column(name = "distalMuscleToneLInterp")
+    @Column(name = "distal_Muscle_ToneLInterp")
     private String distalMuscleToneLInterp;
 
 }

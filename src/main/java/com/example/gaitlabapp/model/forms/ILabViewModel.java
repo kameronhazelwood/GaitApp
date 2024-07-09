@@ -16,11 +16,11 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @Setter
-@Table(name = "LabView")
+@Table(name = "lab_view")
 public class ILabViewModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "labId")
+    @Column(name = "lab_id")
     private Integer labId;
     @Column(name = "category")
     private String  category;

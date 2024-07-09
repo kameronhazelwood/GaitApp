@@ -32,8 +32,11 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 import javafx.stage.*;
 import com.example.gaitlabapp.Launcher;
+import net.rgielen.fxweaver.core.FxmlView;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 
 import java.io.IOException;
@@ -43,8 +46,9 @@ import java.util.ResourceBundle;
 
 import static com.example.gaitlabapp.model.visits.IAppointmentModel.Type.*;
 
-
+@Component
 public class PatientModuleController implements Initializable {
+    private ConfigurableApplicationContext springContext;
 
     public Button patient;
     @FXML
@@ -105,17 +109,17 @@ public class PatientModuleController implements Initializable {
     public TableView<IDiagnosisModel> diagnosisCodeTable;
 
     ObservableList<ISurgeryModel> initialPTSurgData() {
-        ISurgeryModel ptSur1 = new ISurgeryModel("", "10/20/2023", "Other", "L", "surgeon", "facility", "comments");
+        ISurgeryModel ptSur1 = new ISurgeryModel(12, "10/20/2023", "Other", "L", "surgeon", "facility", "comments");
         return FXCollections.observableArrayList(ptSur1);
     }
 
     ObservableList<IBotoxModel> initialPtBotData() {
-        IBotoxModel ptBot1 = new IBotoxModel("", "10/20/2023", "R - Arm", "botoxSide", "Dr. Smith", "Test Comments");
+        IBotoxModel ptBot1 = new IBotoxModel(12, "10/20/2023", "R - Arm", "botoxSide", "Dr. Smith", "Test Comments");
         return FXCollections.observableArrayList(ptBot1);
     }
 
     ObservableList<IHealthHistoryModel> initialPtHealthData() {
-        IHealthHistoryModel ptHea1 = new IHealthHistoryModel("", "3", "Stroke");
+        IHealthHistoryModel ptHea1 = new IHealthHistoryModel(12, "3", "Stroke");
         return FXCollections.observableArrayList(ptHea1);
     }
 
@@ -149,6 +153,7 @@ public class PatientModuleController implements Initializable {
     private AnchorPane scenePane;
 
     @Override
+    @FXML
     public void initialize(URL PatientModule, ResourceBundle resourceBundle) {
 
         /*
@@ -495,7 +500,6 @@ public class PatientModuleController implements Initializable {
     ObjectProperty<IPatientModel> valueObj = new SimpleObjectProperty<>();
     TableView<IPatientModel> patientTable = buildTable(valueObj);
 
-    @Autowired
     PatientService patientService;
 
     public void onDisplayPatients() {
@@ -867,6 +871,7 @@ public class PatientModuleController implements Initializable {
     public void logout() {
             stage = (Stage) scenePane.getScene().getWindow();
             stage.close();
+            //springContext.close();
     }
 
     public void OnNewPatientClick(ActionEvent event) throws IOException {

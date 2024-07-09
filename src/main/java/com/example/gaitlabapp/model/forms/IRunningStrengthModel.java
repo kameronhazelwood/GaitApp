@@ -12,46 +12,46 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @NoArgsConstructor
-@Table(name = "RunningStrength")
+@Table(name = "running_strength")
 public class IRunningStrengthModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "runningStrengthId")
+    @Column(name = "running_strength_id")
     private Integer runningStrengthId;
-    @Column(name = "hipExt")
+    @Column(name = "hip_ext")
     private String hipExt;
-    @Column(name = "hipExtInterp")
+    @Column(name = "hip_ext_interp")
     private String hipExtInterp;
-    @Column(name = "hipExtRot")
+    @Column(name = "hip_ext_rot")
     private String hipExtRot;
-    @Column(name = "hipExtRotInterp")
+    @Column(name = "hip_ext_rot_interp")
     private String hipExtRotInterp;
-    @Column(name = "hipAbd")
+    @Column(name = "hip_Abd")
     private String hipAbd;
-    @Column(name = "hipAbdInterp")
+    @Column(name = "hip_Abd_Interp")
     private String hipAbdInterp;
-    @Column(name = "kneeExt")
+    @Column(name = "knee_Ext")
     private String kneeExt;
-    @Column(name = "kneeExtInterp")
+    @Column(name = "knee_Ext_Interp")
     private String kneeExtInterp;
-    @Column(name = "hipExt2")
+    @Column(name = "hip_Ext2")
     private String hipExt2;
-    @Column(name = "hipExt3")
+    @Column(name = "hip_Ext3")
     private String hipExt3;
-    @Column(name = "hipExtRot2")
+    @Column(name = "hip_Ext_Rot2")
     private String hipExtRot2;
-    @Column(name = "hipExtRot3")
+    @Column(name = "hip_Ext_Rot3")
     private String hipExtRot3;
-    @Column(name = "hipAbd2")
+    @Column(name = "hip_Abd2")
     private String hipAbd2;
-    @Column(name = "hipAbd3")
+    @Column(name = "hip_Abd3")
     private String hipAbd3;
-    @Column(name = "kneeExt2")
+    @Column(name = "knee_Ext2")
     private String kneeExt2;
-    @Column(name = "kneeExt3")
+    @Column(name = "knee_Ext3")
     private String kneeExt3;
-    @Column(name = "kneeFlex2")
+    @Column(name = "knee_Flex2")
     private String kneeFlex2;
-    @Column(name = "kneeFlex3")
+    @Column(name = "knee_Flex3")
     private String kneeFlex3;
 }

@@ -13,13 +13,13 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @Entity
-@Table(name = "MovementDisorder")
+@Table(name = "Movement_Disorder")
 public class IMovementDisorderModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "movementDisorderId")
+    @Column(name = "movement_Disorder_Id")
     private Integer movementDisorderId;
-    @Column(name = "ambScale")
+    @Column(name = "amb_Scale")
     private String ambScale;
     @Column(name = "gmfcs")
     private String gmfcs;

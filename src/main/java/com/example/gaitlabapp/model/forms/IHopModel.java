@@ -12,27 +12,27 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @NoArgsConstructor
-@Table(name = "Hop")
+@Table(name = "hop")
 public class IHopModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "hopId")
+    @Column(name = "hop_id")
     private Integer hopId;
-    @Column(name = "unilateralHop")
+    @Column(name = "unilateral_hop")
     private String unilateralHop;
-    @Column(name = "unilaterHopInterp")
+    @Column(name = "unilater_hop_interp")
     private String unilaterHopInterp;
-    @Column(name = "tripleHop")
+    @Column(name = "triple_hop")
     private String tripleHop;
-    @Column(name = "tripleHopInterp")
+    @Column(name = "triple_hop_interp")
     private String tripleHopInterp;
-    @Column(name = "unilateralHop2")
+    @Column(name = "unilateral_hop2")
     private String unilateralHop2;
-    @Column(name = "unilateralHope3")
+    @Column(name = "unilateral_hope3")
     private String unilateralHope3;
-    @Column(name = "tripleHop2")
+    @Column(name = "triple_hop2")
     private String tripleHop2;
-    @Column(name = "tripleHop3")
+    @Column(name = "triple_hop3")
     private String tripleHop3;
 
 }

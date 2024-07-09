@@ -23,10 +23,10 @@ public class HealthHistoryServiceImpl implements HealthHistoryService {
         return healthHistoryRepo.findByCondition(healthHistoryName);
     }
 
-    @Override
-    public Optional<IHealthHistoryModel> findById(String healthHistoryId) {
-        return healthHistoryRepo.findById(healthHistoryId);
-    }
+//    @Override
+//    public Optional<IHealthHistoryModel> findById(Integer healthHistoryId) {
+//        return healthHistoryRepo.findByHealthId(healthHistoryId);
+//    }
 
     @Override
     public List<IHealthHistoryModel> findAll() {

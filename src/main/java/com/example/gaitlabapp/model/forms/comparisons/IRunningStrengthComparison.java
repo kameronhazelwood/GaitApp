@@ -12,27 +12,27 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @Entity
-@Table(name = "RunningStrengthComparison")
+@Table(name = "running_strength_comparison")
 public class IRunningStrengthComparison {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "runningStrengthCompId")
+    @Column(name = "running_strength_comp_id")
     private Integer runningStrengthCompId;
-    @Column(name = "hipExt")
+    @Column(name = "hip_ext")
     private String hipExt;
-    @Column(name = "hipExtSd")
+    @Column(name = "hip_ext_sd")
     private String hipExtSd;
-    @Column(name = "hipExtRot")
+    @Column(name = "hip_ext_rot")
     private String hipExtRot;
-    @Column(name = "hipExtRotSd")
+    @Column(name = "hip_ext_rot_sd")
     private String hipExtRotSd;
-    @Column(name = "hipAbd")
+    @Column(name = "hip_abd")
     private String hipAbd;
-    @Column(name = "hipAbdSd")
+    @Column(name = "hip_abd_sd")
     private String hipAbdSd;
-    @Column(name = "kneeExt")
+    @Column(name = "knee_ext")
     private String kneeExt;
-    @Column(name = "KneeExtSd")
+    @Column(name = "Knee_ext_sd")
     private String kneeExtSd;
 
 

@@ -10,7 +10,7 @@ import java.util.Optional;
 public interface BotoxService {
 
     Optional<IBotoxModel> save(IBotoxModel botoxModel);
-    Optional<IBotoxModel> findById(String botoxId);
+  //  Optional<IBotoxModel> findById(String botoxId);
 //    Optional<IBotoxModel> findbyDate(String botoxDate);
     List<IBotoxModel> findAll();
     void delete(Long id);

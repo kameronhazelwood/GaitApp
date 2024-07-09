@@ -11,39 +11,39 @@ import jakarta.persistence.*;
 @Getter
 @Data
 @Entity
-@Table(name = "O2Comparison")
+@Table(name = "o2comparison")
 public class IO2Comparison {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "o2CompId")
+    @Column(name = "o2comp_id")
     private Integer o2IdComp;
-    @Column(name = "o2CostIndex")
+    @Column(name = "o2cost_index")
     private String o2CostIndex;
-    @Column(name = "o2CostIndexSd")
+    @Column(name = "o2cost_index_sd")
     private String o2CostIndexSd;
-    @Column(name = "vo2RestIndex")
+    @Column(name = "vo2rest_index")
     private String vo2RestIndex;
-    @Column(name = "vo2RestIndexSd")
+    @Column(name = "vo2rest_index_sd")
     private String vo2RestIndexSd;
-    @Column(name = "vo2ExerIndex")
+    @Column(name = "vo2exer_index")
     private String vo2ExerIndex;
-    @Column(name = "vo2ExerIndexSd")
+    @Column(name = "vo2exer_index_sd")
     private String vo2ExerIndexSd;
-    @Column(name = "respRateEx")
+    @Column(name = "resp_rate_ex")
     private String respRateEx;
-    @Column(name = "respRateExSd")
+    @Column(name = "resp_rate_ex_sd")
     private String respRateExSd;
-    @Column(name = "velmEx")
+    @Column(name = "velm_ex")
     private String velmEx;
-    @Column(name = "velmExSd")
+    @Column(name = "velm_ex_sd")
     private String velmExSd;
-    @Column(name = "v02KgEx")
+    @Column(name = "v02kg_ex")
     private String v02KgEx;
-    @Column(name = "v02KgExSd")
+    @Column(name = "v02kg_ex_sd")
     private String v02KgExSd;
-    @Column(name = "heartRateEx")
+    @Column(name = "heart_rate_ex")
     private String heartRateEx;
-    @Column(name = "heartRateExSd")
+    @Column(name = "heart_rate_ex_sd")
     private String heartRateExSd;
 
 

@@ -11,11 +11,11 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @Entity
-@Table(name = "AROM")
+@Table(name = "arom")
 public class IAROMModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "aromId")
+    @Column(name = "arom_id")
     private Integer aromId;
     private String shoulderAbductionR_act;
     private String shoulderAbductionR_pass;

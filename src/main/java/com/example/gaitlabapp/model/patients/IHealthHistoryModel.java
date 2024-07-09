@@ -1,5 +1,6 @@
 package com.example.gaitlabapp.model.patients;
 
+import jakarta.persistence.criteria.CriteriaBuilder;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import lombok.Data;
@@ -12,21 +13,21 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor(force = true)
 @Entity
-@Table(name = "HealthHistory")
+@Table(name = "health_history")
 public class IHealthHistoryModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "healthHistoryId")
+    @Column(name = "health_history_id")
     @Setter
-    private String healthHistoryId;
-    @Column(name = "conditionAge")
+    private Integer healthHistoryId;
+    @Column(name = "condition_age")
     @Setter
     private String conditionAge;
     @Column(name = "condition")
     @Setter
     private String condition;
 
-    public IHealthHistoryModel(String healthHistoryId, String conditionAge, String condition) {
+    public IHealthHistoryModel(Integer healthHistoryId, String conditionAge, String condition) {
         this.healthHistoryId = healthHistoryId;
         this.conditionAge = conditionAge;
         this.condition = condition;

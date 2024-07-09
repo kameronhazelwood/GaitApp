@@ -11,21 +11,21 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @Entity
-@Table(name = "HipScores")
+@Table(name = "hip_scores")
 public class IHipScoresModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "hipScoreId")
+    @Column(name = "hip_score_id")
     private Integer hipScoreId;
-    @Column(name = "activityScore")
+    @Column(name = "activity_score")
     private String activityScore;
     @Column(name = "pain")
     private String pain;
     @Column(name = "stiffness")
     private String stiffness;
-    @Column(name = "physicalFunction")
+    @Column(name = "physical_function")
     private String physicalFunction;
-    @Column(name = "harrisHipScore")
+    @Column(name = "harris_hip_score")
     private String harrisHipScore;
 
     public IHipScoresModel(String harrisHipScore, Integer hipScoreId, String activityScore, String pain, String stiffness, String physicalFunction) {

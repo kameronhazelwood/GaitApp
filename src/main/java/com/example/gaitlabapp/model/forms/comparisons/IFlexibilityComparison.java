@@ -12,27 +12,27 @@ import lombok.Setter;
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "FlexibilityComparison")
+@Table(name = "flexibility_comparison")
 public class IFlexibilityComparison {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "flexCompId")
+    @Column(name = "flex_comp_id")
     private Integer flexCompId;
     @Column(name = "ober")
     private String ober;
-    @Column(name = "oberSd")
+    @Column(name = "ober_sd")
     private String oberSd;
     @Column(name = "thomas")
     private String thomas;
-    @Column(name = "thomasSd")
+    @Column(name = "thomas_sd")
     private String thomasSd;
-    @Column(name = "poplitealAngle")
+    @Column(name = "popliteal_angle")
     private String poplitealAngle;
-    @Column(name = "poplitealAngleSd")
+    @Column(name = "popliteal_angle_sd")
     private String poplitealAngleSd;
-    @Column(name = "ankleDorsiKneeExt")
+    @Column(name = "ankle_dorsi_knee_ext")
     private String ankleDorsiKneeExt;
-    @Column(name = "ankleDorsiKneeExtSd")
+    @Column(name = "ankle_dorsi_knee_ext_sd")
     private String ankleDorsiKneeExtSd;
 
 

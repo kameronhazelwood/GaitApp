@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface HealthHistoryService {
     Optional<IHealthHistoryModel> save(IHealthHistoryModel healthHistoryModel);
     Optional<IHealthHistoryModel> findByCondition(String healthHistoryName);
-    Optional<IHealthHistoryModel> findById(String healthHistoryId);
+ //   Optional<IHealthHistoryModel> findById(Integer healthHistoryId);
     List<IHealthHistoryModel> findAll();
     void delete(Long id);
 }

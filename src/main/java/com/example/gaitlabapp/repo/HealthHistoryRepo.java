@@ -10,5 +10,5 @@ import java.util.Optional;
 @Repository
 public interface HealthHistoryRepo extends JpaRepository<IHealthHistoryModel, String> {
     Optional<IHealthHistoryModel> findByCondition(String healthHistoryName);
-    Optional<IHealthHistoryModel> findById(String healthHistoryId);
+   // Optional<IHealthHistoryModel> findByHealthId(Integer healthHistoryId);
 }
