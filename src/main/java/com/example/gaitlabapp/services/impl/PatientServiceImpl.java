@@ -12,13 +12,13 @@ import java.util.Optional;
 @Service
 @RequiredArgsConstructor
 public class PatientServiceImpl implements PatientService {
-    @Autowired
-    private PatientRepo repo;
+    private final PatientRepo repo;
 
     @Override
-    public Optional<IPatientModel> save(IPatientModel patientModel) {
-        return Optional.of(repo.save(patientModel));
-    }
+    public IPatientModel save(IPatientModel patientModel) { return repo.save(patientModel);}
+
+    @Override
+    public IPatientModel update(IPatientModel patientModel){ return repo.save(patientModel);}
 
     @Override
     public Optional<IPatientModel> findByFirstName(String firstName) {

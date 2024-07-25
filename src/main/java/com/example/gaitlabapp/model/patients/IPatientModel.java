@@ -19,7 +19,6 @@ public class IPatientModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "patientID", nullable = false)
     private final Integer patientID;
-
     @Column(name = "first_name")
     @Setter
     private String firstName;
@@ -54,18 +53,18 @@ public class IPatientModel {
     @Setter
     private String genDiagnosis;
 
-    public IPatientModel(Integer patientID, String firstName, String lastName, String preferredFirstName, String mrn, String formerLastName, String address, String gender, String dob, String comments, String state, String genDiagnosis) {
-        this.patientID = patientID;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.preferredFirstName = preferredFirstName;
-        this.mrn = mrn;
-        this.formerLastName = formerLastName;
-        this.address = address;
-        this.gender = gender;
-        this.dob = dob;
-        this.comments = comments;
-        this.state = state;
-        this.genDiagnosis = genDiagnosis;
-    }
+//    public IPatientModel(Integer patientID, String firstName, String lastName, String preferredFirstName, String mrn, String formerLastName, String address, String gender, String dob, String comments, String state, String genDiagnosis) {
+//        this.patientID = patientID;
+//        this.firstName = firstName;
+//        this.lastName = lastName;
+//        this.preferredFirstName = preferredFirstName;
+//        this.mrn = mrn;
+//        this.formerLastName = formerLastName;
+//        this.address = address;
+//        this.gender = gender;
+//        this.dob = dob;
+//        this.comments = comments;
+//        this.state = state;
+//        this.genDiagnosis = genDiagnosis;
+//    }
 }

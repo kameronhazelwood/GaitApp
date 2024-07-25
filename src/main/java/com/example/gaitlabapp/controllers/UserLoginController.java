@@ -1,7 +1,7 @@
 package com.example.gaitlabapp.controllers;
 
 
-import com.example.gaitlabapp.Launcher;
+import com.example.gaitlabapp.FxApplicationLauncher;
 import com.example.gaitlabapp.services.PatientService;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -21,32 +21,34 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import lombok.RequiredArgsConstructor;
 import net.rgielen.fxweaver.core.FxmlView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
+import java.util.function.Consumer;
 
 
 @Component
-@Scope("prototype")
-public class UserLoginController implements Initializable {
-
-
-
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+@RequiredArgsConstructor
+public class UserLoginController  {
     @FXML
     public TextField nameTextField;
     @FXML
     private Button loginButton;
-    private ApplicationContext context;
     @FXML
     private Stage stage;
     @FXML
@@ -58,14 +60,10 @@ public class UserLoginController implements Initializable {
 //    }));
     Timeline alertTimer;
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
-    }
-
     @FXML
     public void login(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(Launcher.class.getResource("/PatientModule.fxml"));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/PatientModule.fxml"));
         root = loader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);

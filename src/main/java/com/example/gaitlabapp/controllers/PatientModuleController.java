@@ -8,6 +8,7 @@ import com.example.gaitlabapp.controllers.Wizards.AddHealthConditionController;
 import com.example.gaitlabapp.controllers.Wizards.AddBotoxController;
 import com.example.gaitlabapp.model.Model;
 import com.example.gaitlabapp.model.patients.*;
+import com.example.gaitlabapp.repo.PatientRepo;
 import com.example.gaitlabapp.services.PatientService;
 import com.example.gaitlabapp.model.visits.IAppointmentModel;
 import javafx.beans.property.ObjectProperty;
@@ -32,9 +33,13 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 import javafx.stage.*;
 import com.example.gaitlabapp.Launcher;
+import lombok.RequiredArgsConstructor;
 import net.rgielen.fxweaver.core.FxmlView;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Scope;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
@@ -47,9 +52,10 @@ import java.util.ResourceBundle;
 import static com.example.gaitlabapp.model.visits.IAppointmentModel.Type.*;
 
 @Component
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+@RequiredArgsConstructor
 public class PatientModuleController implements Initializable {
-    private ConfigurableApplicationContext springContext;
-
+    @FXML
     public Button patient;
     @FXML
     public TableColumn<IAppointmentModel, String> referringMd;
@@ -57,25 +63,32 @@ public class PatientModuleController implements Initializable {
     public TableColumn<IAppointmentModel, String> visitType;
     @FXML
     public TableColumn<IAppointmentModel, String> aptData;
+    @FXML
     public Button dropDownBtn;
-
     @FXML
     public TableView<IAppointmentModel> tableView;
+    @FXML
     public Button addSurgicalHistory;
-
+    @FXML
     public Label lastName;
+    @FXML
     public Pane demographicsPane;
+    @FXML
     public Button addNewDiagnosis;
+    @FXML
     public RadioButton photoRadio;
+    @FXML
     public RadioButton videoRadio;
+    @FXML
     public RadioButton PDFViewer;
+    @FXML
     public TabPane patientTabPane;
 
     ObservableList<IAppointmentModel> initialData() {
         IAppointmentModel apt1 = new IAppointmentModel(1, "", "10/31/2023", "GAIT - Full Diagnostic", "Dr. Smith", GAIT);
         IAppointmentModel apt2 = new IAppointmentModel(2, "", "2/8/2023", "Upper Extremity - Full Diagnostic", "Dr. Smith", UE);
         IAppointmentModel apt3 = new IAppointmentModel(3, "", "3/12/2024", "Gait - Foot Evaluation", "Dr. Smith", FOOT);
-        return FXCollections.<IAppointmentModel>observableArrayList(apt1, apt2, apt3);
+        return FXCollections.observableArrayList(apt1, apt2, apt3);
     }
 
     @FXML
@@ -127,7 +140,7 @@ public class PatientModuleController implements Initializable {
         IDiagnosisModel ptDiag1 = new IDiagnosisModel("G800", "Spastic Quadriplegic Cerebral Palsy");
         return FXCollections.observableArrayList(ptDiag1);
     }
-
+    @FXML
     public Tab visits;
     @FXML
     private Stage stage;
@@ -152,9 +165,11 @@ public class PatientModuleController implements Initializable {
     @FXML
     private AnchorPane scenePane;
 
+
     @Override
-    @FXML
     public void initialize(URL PatientModule, ResourceBundle resourceBundle) {
+//        System.out.println(patientRepo);
+      //  System.out.println(patientService);
 
         /*
         apt data and context menu
@@ -500,32 +515,9 @@ public class PatientModuleController implements Initializable {
     ObjectProperty<IPatientModel> valueObj = new SimpleObjectProperty<>();
     TableView<IPatientModel> patientTable = buildTable(valueObj);
 
-    PatientService patientService;
-
     public void onDisplayPatients() {
-
-        FilteredList<IPatientModel> filteredList = new FilteredList<>(listviewPatient, b -> true);
-        patientSearch.textProperty().addListener((obs, oldValue, newValue) -> {
-            filteredList.setPredicate(ptList -> {
-                if(newValue == null || newValue.isEmpty()){
-                    return true;
-                }
-                String lowerCaseFilter = newValue.toLowerCase();
-                if(ptList.getFirstName().toLowerCase().contains(lowerCaseFilter)){
-                    return true;
-                }else return ptList.getFirstName().toLowerCase().contains(lowerCaseFilter);
-            });
-        });
-        SortedList<IPatientModel> sortedList = new SortedList<>(filteredList);
-        sortedList.comparatorProperty().bind(patientTable.comparatorProperty());
-        patientTable.setItems(sortedList);
-        Model model = new Model();
-
-        patientSearch.setPromptText("Please Type a Patient Name: ");
-
         Popup popup = new Popup();
         popup.getContent().addAll(patientTable);
-
         popup.setAutoHide(true);
 
 //        try {
@@ -554,13 +546,13 @@ public class PatientModuleController implements Initializable {
 //            throw new RuntimeException(e);
 //        }
 
-        listView.addAll(patientService.findAll());
+       // patientTable.setItems(FXCollections.observableArrayList(patientRepo.findAll()));
+//
+//        TextField patientSearch = new TextField();
+//        patientSearch.setMaxWidth(800);
+//        patientSearch.setAlignment(Pos.TOP_CENTER);
 
-        TextField patientSearch = new TextField();
-        patientSearch.setMaxWidth(800);
-        patientSearch.setAlignment(Pos.TOP_CENTER);
 
-          patientTable.setItems(listView);
 //        patientTable.setItems(sortedList);
 
         Label valueLabel = new Label(defaultVal);
@@ -602,7 +594,7 @@ public class PatientModuleController implements Initializable {
 
     }
 
-    private ObservableList<IPatientModel> listView = FXCollections.observableArrayList();
+    private final ObservableList<IPatientModel> listView = FXCollections.observableArrayList();
 
     private TableView<IPatientModel> buildTable(ObjectProperty<IPatientModel> valueObj) {
         TableView<IPatientModel> tableView1 = new TableView<>();
@@ -871,20 +863,24 @@ public class PatientModuleController implements Initializable {
     public void logout() {
             stage = (Stage) scenePane.getScene().getWindow();
             stage.close();
-            //springContext.close();
     }
-
+    @Autowired
+     ConfigurableApplicationContext applicationContext;
     public void OnNewPatientClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/NewPatientModule.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/NewPatientModule.fxml"));
+        Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
+        Parent root = loader.load();
+
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
-
         stage.getIcons().add(icon);
-        stage.setTitle("Nemours Children's Hospital Gait Lab");
+        stage.setTitle("Nemours");
         stage.setScene(scene);
         stage.show();
     }
+
 
 //    public void onNewForm(ActionEvent event) throws IOException {
 //        Parent popUp;

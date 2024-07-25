@@ -28,26 +28,24 @@
             </ToolBar>
         </children>
     </HBox>
-   <Pane layoutX="-2.0" layoutY="91.0" prefHeight="800.0" prefWidth="1004.0">
-      <children>
-         <Label layoutX="14.0" layoutY="14.0" text="New Patient Form">
-            <font>
+    <Pane fx:id="newPatientPane" layoutX="-2.0" layoutY="91.0" prefHeight="800.0" prefWidth="1004.0">
+        <Label layoutX="14.0" layoutY="14.0" text="New Patient Form">
+           <font>
                <Font size="20.0" />
-            </font>
-         </Label>
-         <Label layoutX="14.0" layoutY="69.0" text="First Name" />
-         <Label layoutX="16.0" layoutY="130.0" text="Last name" />
-         <Label layoutX="4.0" layoutY="181.0" text="Preferred Name" />
-         <Label layoutX="317.0" layoutY="69.0" text="MRN" />
-         <Label layoutX="268.0" layoutY="130.0" text="Former Last Name" />
-         <TextField fx:id="fName" layoutX="98.0" layoutY="66.0" />
-         <TextField fx:id="lName" layoutX="98.0" layoutY="126.0" />
-         <TextField fx:id="preferredName" layoutX="98.0" layoutY="177.0" />
-         <TextField fx:id="mrn" layoutX="367.0" layoutY="65.0" />
-         <TextField fx:id="formerLName" layoutX="373.0" layoutY="126.0" />
-         <Button fx:id="saveNewPatient" layoutX="803.0" layoutY="333.0" mnemonicParsing="false" onAction="#onSaveNewPatient" prefHeight="58.0" prefWidth="187.0" text="Save New Patient" />
-         <Label layoutX="597.0" layoutY="70.0" text="DOB" />
-         <TextField fx:id="dob" layoutX="691.0" layoutY="66.0" />
-      </children>
-   </Pane>
+           </font>
+        </Label>
+        <Label layoutX="14.0" layoutY="69.0" text="First Name" />
+        <Label layoutX="16.0" layoutY="130.0" text="Last name" />
+        <Label layoutX="4.0" layoutY="181.0" text="Preferred Name" />
+        <Label layoutX="317.0" layoutY="69.0" text="MRN" />
+        <Label layoutX="268.0" layoutY="130.0" text="Former Last Name" />
+        <TextField fx:id="fName" layoutX="98.0" layoutY="66.0" />
+        <TextField fx:id="lName" layoutX="98.0" layoutY="126.0" />
+        <TextField fx:id="preferredName" layoutX="98.0" layoutY="177.0" />
+        <TextField fx:id="mrn" layoutX="367.0" layoutY="65.0" />
+        <TextField fx:id="formerLName" layoutX="373.0" layoutY="126.0" />
+        <Button fx:id="saveNewPatient" layoutX="803.0" layoutY="333.0" mnemonicParsing="false" onAction="#onSaveNewPatient" prefHeight="58.0" prefWidth="187.0" text="Save New Patient" />
+        <Label layoutX="597.0" layoutY="70.0" text="DOB" />
+        <TextField fx:id="dob" layoutX="691.0" layoutY="66.0" />
+    </Pane>
 </AnchorPane>
