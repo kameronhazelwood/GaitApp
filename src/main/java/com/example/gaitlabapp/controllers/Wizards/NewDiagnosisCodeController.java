@@ -5,6 +5,8 @@ import com.example.gaitlabapp.controllers.PatientModuleController;
 import com.example.gaitlabapp.config.Config;
 import com.example.gaitlabapp.model.patients.IDiagnosisModel;
 import com.example.gaitlabapp.model.patients.IPatientModel;
+import com.example.gaitlabapp.services.DiagnosisService;
+import com.example.gaitlabapp.services.PatientService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -16,14 +18,18 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Controller;
+import org.yaml.snakeyaml.events.Event;
 
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ResourceBundle;
+import java.util.Set;
 
 @Controller
 @EnableJpaRepositories
@@ -40,7 +46,12 @@ public class NewDiagnosisCodeController implements Initializable {
     public AnchorPane diagCodePane;
     private boolean saved;
     int patientID = 13;
-
+    @Autowired
+    ConfigurableApplicationContext applicationContext;
+    @Autowired
+    DiagnosisService diagnosisService;
+    @Autowired
+    PatientService patientService;
     private ObservableList<IDiagnosisModel> listView = FXCollections.observableArrayList();
 
 
@@ -56,8 +67,6 @@ public class NewDiagnosisCodeController implements Initializable {
     public boolean isSaved() {
         return saved;
     }
-
-    private IDiagnosisModel diagnosisModel;
     Connection connection = null;
     Config db = new Config();
     Statement statement = null;
@@ -66,28 +75,27 @@ public class NewDiagnosisCodeController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        codeCol.setCellValueFactory((new PropertyValueFactory<IDiagnosisModel, String>("code")));
-        descripCol.setCellValueFactory((new PropertyValueFactory<IDiagnosisModel, String>("diagnosis")));
+        codeCol.setCellValueFactory((new PropertyValueFactory<>("Code")));
+        descripCol.setCellValueFactory((new PropertyValueFactory<>("Description")));
         newDiagCodeTable.getColumns().setAll(codeCol, descripCol);
+        newDiagCodeTable.setItems(FXCollections.observableArrayList(diagnosisService.findAll()));
 
+    }
+    @FXML
+    public void onSaveDiagCode(ActionEvent event) {
+        saved = true;
 
-        try {
-            connection = db.getDBConnection();
-            statement = connection.createStatement();
-            resultSet = statement.executeQuery("SELECT * FROM DiagnosisCode");
+        IDiagnosisModel diagCode = newDiagCodeTable.getSelectionModel().getSelectedItem();
 
-            while (resultSet.next()) {
-                listView.add((new IDiagnosisModel(
-                        resultSet.getString("Code"),
-                        resultSet.getString("Description")
-                )));
-            }
-            newDiagCodeTable.setItems(listView);
+        diagCode.setGenDiagnosis(codeCol.getText());
+        IPatientModel patientModel = new IPatientModel();
+        patientModel.setGen_diagnosis((Set<IDiagnosisModel>) diagCode);
 
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+        getmyStage().close();
+    }
 
+    @FXML
+    public void sortData(){
         FilteredList<IDiagnosisModel> filteredData = new FilteredList<>(listView, b -> true);
         searchCodes.textProperty().addListener((obs, oldValue, newValue) -> {
             filteredData.setPredicate(diagnosisCode -> {
@@ -106,28 +114,7 @@ public class NewDiagnosisCodeController implements Initializable {
         });
         SortedList<IDiagnosisModel> sortedData = new SortedList<>(filteredData);
         sortedData.comparatorProperty().bind(newDiagCodeTable.comparatorProperty());
-        newDiagCodeTable.setItems(sortedData);
-
-    }
-
-    @FXML
-    public void onSaveDiagCode(ActionEvent event) {
-        saved = true;
-
-        IDiagnosisModel idiagnosisModel = newDiagCodeTable.getSelectionModel().getSelectedItem();
-
-        String SQL = "UPDATE Patients SET "
-                + "genDiagnosis= '" + idiagnosisModel + "' WHERE patientID = '" + patientID + "'";
-        try {
-            connection = db.getDBConnection();
-            System.out.println("Connected to Database");
-            statement.executeUpdate(SQL);
-            System.out.println(SQL);
-
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-        getmyStage().close();
+        //newDiagCodeTable.setItems(sortedData)
     }
 
     @FXML

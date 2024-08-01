@@ -1,29 +1,28 @@
 package com.example.gaitlabapp.model.patients;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-
+import lombok.*;
 import jakarta.persistence.*;
-import lombok.NoArgsConstructor;
+import java.util.Set;
 
-@Data
-@Getter
-@NoArgsConstructor(force = true)
 @Setter
+@Getter
+@Data
+@NoArgsConstructor(force = true)
 @Entity
 @Table(name="diagnosis_code")
 public class IDiagnosisModel {
 
     @Id
     @Column(name="code")
-    @Getter
-    @Setter
     private String code;
-    @Getter
-    @Setter
     @Column(name = "description")
     private String description;
+
+    @ManyToMany
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "code"),
+    inverseJoinColumns = @JoinColumn(name = "gen_diagnosis"))
+
+     Set<IPatientModel> genDiagnosis;
 
     public IDiagnosisModel(String code, String description){
         this.code = code;
@@ -33,8 +32,12 @@ public class IDiagnosisModel {
     public String getDiagnosisDescription() {
         return code;
     }
-
     public String getDiagnosisCode() {
         return description;
+    }
+    public final String codeProperty(){
+        return code;
+    }
+    public void setGenDiagnosis(String text) {
     }
 }

@@ -16,14 +16,24 @@ import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
-
+@Component
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+@RequiredArgsConstructor
 public class FormModuleController implements Initializable {
 
+    @Autowired
+    ConfigurableApplicationContext applicationContext;
     public CheckBox chooseFormsCheckBox;
 
     public TextField changeDateTextfield;
@@ -60,7 +70,10 @@ public class FormModuleController implements Initializable {
 
     }
     public void onPatientClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/PatientModule.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/PatientModule.fxml"));
+        Parent root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
@@ -76,7 +89,10 @@ public class FormModuleController implements Initializable {
 
 
     public void onSchedulerClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/SchedulerModule.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(Launcher.class.getResource("/SchedulerModule.fxml"));
+        Parent root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
@@ -91,7 +107,10 @@ public class FormModuleController implements Initializable {
     }
 
     public void onReportsClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/ReportsModule.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/ReportsModule.fxml"));
+        Parent root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
@@ -106,7 +125,10 @@ public class FormModuleController implements Initializable {
     }
 
     public void onAdminClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/AdminModule.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/AdminModule.fxml"));
+        Parent root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
@@ -121,7 +143,10 @@ public class FormModuleController implements Initializable {
 
     @FXML
     public  void onQueriesClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/QueriesModule.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/QueriesModule.fxml"));
+        Parent root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
@@ -138,7 +163,10 @@ public class FormModuleController implements Initializable {
     }
 
     public  void OnNewPatientClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/NewPatientModule.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/NewPatientModule.fxml"));
+        Parent root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));

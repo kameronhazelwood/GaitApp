@@ -59,10 +59,13 @@ public class UserLoginController  {
 //
 //    }));
     Timeline alertTimer;
+    @Autowired
+    ConfigurableApplicationContext applicationContext;
 
     @FXML
     public void login(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
         loader.setLocation(getClass().getResource("/PatientModule.fxml"));
         root = loader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

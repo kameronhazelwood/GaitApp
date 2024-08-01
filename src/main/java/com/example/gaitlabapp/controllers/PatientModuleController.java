@@ -9,10 +9,12 @@ import com.example.gaitlabapp.controllers.Wizards.AddBotoxController;
 import com.example.gaitlabapp.model.Model;
 import com.example.gaitlabapp.model.patients.*;
 import com.example.gaitlabapp.repo.PatientRepo;
+import com.example.gaitlabapp.services.DiagnosisService;
 import com.example.gaitlabapp.services.PatientService;
 import com.example.gaitlabapp.model.visits.IAppointmentModel;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -33,6 +35,7 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 import javafx.stage.*;
 import com.example.gaitlabapp.Launcher;
+import javafx.util.converter.DateStringConverter;
 import lombok.RequiredArgsConstructor;
 import net.rgielen.fxweaver.core.FxmlView;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,6 +49,11 @@ import org.springframework.stereotype.Controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
@@ -55,6 +63,7 @@ import static com.example.gaitlabapp.model.visits.IAppointmentModel.Type.*;
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 @RequiredArgsConstructor
 public class PatientModuleController implements Initializable {
+
     @FXML
     public Button patient;
     @FXML
@@ -83,6 +92,10 @@ public class PatientModuleController implements Initializable {
     public RadioButton PDFViewer;
     @FXML
     public TabPane patientTabPane;
+    public DatePicker datePicker;
+    public Label dobLabel;
+
+
 
     ObservableList<IAppointmentModel> initialData() {
         IAppointmentModel apt1 = new IAppointmentModel(1, "", "10/31/2023", "GAIT - Full Diagnostic", "Dr. Smith", GAIT);
@@ -164,14 +177,21 @@ public class PatientModuleController implements Initializable {
     public TextArea commentsTextField;
     @FXML
     private AnchorPane scenePane;
+    @Autowired
+    ConfigurableApplicationContext applicationContext;
+    @FXML
+    public TextField dobTexfield12;
 
 
     @Override
     public void initialize(URL PatientModule, ResourceBundle resourceBundle) {
-//        System.out.println(patientRepo);
-      //  System.out.println(patientService);
-
-        /*
+//        DateFormat dobFormat = new SimpleDateFormat("MM-dd-yyyy");
+//        try {
+//            dobTexfield12.setTextFormatter(new TextFormatter<>(new DateStringConverter(dobFormat), dobFormat.parse("MM-dd-yyyy")));
+//        } catch (ParseException e) {
+//            throw new RuntimeException(e);
+//        }
+       /*
         apt data and context menu
          */
         tableView.setRowFactory(tv -> {
@@ -514,50 +534,22 @@ public class PatientModuleController implements Initializable {
     private final String defaultVal = "Select...";
     ObjectProperty<IPatientModel> valueObj = new SimpleObjectProperty<>();
     TableView<IPatientModel> patientTable = buildTable(valueObj);
+    @Autowired
+    PatientService patientService;
 
     public void onDisplayPatients() {
         Popup popup = new Popup();
         popup.getContent().addAll(patientTable);
         popup.setAutoHide(true);
-
-//        try {
-//            listView.clear();
-//            connection = db.getDBConnection();
-//            statement = connection.createStatement();
-//            resultSet = statement.executeQuery("SELECT * FROM Patients;");
-//
-//            while (resultSet.next()) {
-//                listView.add(new IPatientModel(
-//                        resultSet.getString("MRN"),
-//                        resultSet.getString("lastName"),
-//                        resultSet.getString("firstName"),
-//                        resultSet.getInt("address"),
-//                        resultSet.getString("city"),
-//                        resultSet.getString("state"),
-//                        resultSet.getString("DOB"),
-//                        resultSet.getString("Gender"),
-//                        resultSet.getString("comments"),
-//                        resultSet.getString("genDiagnosis"),
-//                        resultSet.getString("formerLastName"),
-//                        resultSet.getString("prefferedFirstName")
-//                ));
-//            }
-//        } catch (SQLException e) {
-//            throw new RuntimeException(e);
-//        }
-
-       // patientTable.setItems(FXCollections.observableArrayList(patientRepo.findAll()));
-//
-//        TextField patientSearch = new TextField();
-//        patientSearch.setMaxWidth(800);
-//        patientSearch.setAlignment(Pos.TOP_CENTER);
-
-
-//        patientTable.setItems(sortedList);
+       patientTable.setItems(FXCollections.observableArrayList(patientService.findAll()));
 
         Label valueLabel = new Label(defaultVal);
         valueLabel.setMaxWidth(Double.POSITIVE_INFINITY);
         HBox.setHgrow(valueLabel, Priority.ALWAYS);
+
+        StackPane arrow = new StackPane();
+        arrow.setStyle("-fx-background-color:#444444;-fx-shape:\"M 0 0 h 7 l -3.5 4 z\";-fx-padding: 4px;");
+        arrow.setMaxSize(8, 8);
 
         HBox pane = new HBox(100, valueLabel);
         pane.setSpacing(100);
@@ -596,22 +588,19 @@ public class PatientModuleController implements Initializable {
 
     private final ObservableList<IPatientModel> listView = FXCollections.observableArrayList();
 
+
     private TableView<IPatientModel> buildTable(ObjectProperty<IPatientModel> valueObj) {
+
         TableView<IPatientModel> tableView1 = new TableView<>();
 
         TableColumn<IPatientModel, String> fnCol = new TableColumn<>("First Name");
         TableColumn<IPatientModel, String> lnCol = new TableColumn<>("Last Name");
         TableColumn<IPatientModel, String> mrnCol = new TableColumn<>("MRN");
 
-        fnCol.setCellValueFactory((new PropertyValueFactory<IPatientModel, String>("First Name")));
-        lnCol.setCellValueFactory((new PropertyValueFactory<IPatientModel, String>("Last Name")));
-        mrnCol.setCellValueFactory((new PropertyValueFactory<IPatientModel, String>("MRN")));
-//        fnCol.setCellValueFactory(param ->
-//                param.getValue().getFirstName());
-//        lnCol.setCellValueFactory(param ->
-//                param.getValue().lnameProperty());
-//        mrnCol.setCellValueFactory(param ->
-//                param.getValue().mrnProperty());
+        fnCol.setCellValueFactory((new PropertyValueFactory<>("firstName")));
+        lnCol.setCellValueFactory((new PropertyValueFactory<>("lastName")));
+        mrnCol.setCellValueFactory((new PropertyValueFactory<>("mrn")));
+
         ObservableList<IPatientModel> items = FXCollections.observableArrayList();
 
         tableView1.getColumns().addAll(mrnCol, fnCol, lnCol);
@@ -650,7 +639,7 @@ public class PatientModuleController implements Initializable {
     }
 
     private ISurgeryModel showSurgeryDialog(ISurgeryModel surgeryModel, String title) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Wizards/AddSurgery.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Wizards/AddSurgery.fxml"));
         Parent surgeryPane = fxmlLoader.load();
         AddSurgeryController addSurgeryController = fxmlLoader.getController();
 
@@ -672,8 +661,10 @@ public class PatientModuleController implements Initializable {
     /*
     add diagnosis codes
      */
+    private final DiagnosisService diagnosisService;
     public void addDiagnosisCode() {
         int selectedIndex = diagnosisCodeTable.getSelectionModel().getSelectedIndex();
+        String selectedItem = String.valueOf(diagnosisCodeTable.getSelectionModel().getSelectedItems());
 
         try {
             IDiagnosisModel newDiagnosisCode = showDiagnosisDialog(
@@ -693,7 +684,8 @@ public class PatientModuleController implements Initializable {
 
     private IDiagnosisModel showDiagnosisDialog(IDiagnosisModel diagnosisModel) throws IOException {
         IDiagnosisModel iDiagnosisModel = diagnosisCodeTable.getSelectionModel().getSelectedItem();
-        FXMLLoader fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Wizards/NewDiagnosisCode.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Wizards/NewDiagnosisCode.fxml"));
+        fxmlLoader.setControllerFactory(applicationContext::getBean);
         Parent diagCodePane = fxmlLoader.load();
         NewDiagnosisCodeController newDiagnosisCodeController = fxmlLoader.getController();
         newDiagnosisCodeController.setDiagCode(diagnosisModel);
@@ -798,7 +790,10 @@ public class PatientModuleController implements Initializable {
      */
     @FXML
     public void onFormClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/FormsModule.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/FormsModule.fxml"));
+        Parent root = loader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setTitle("Nemours Children's Hospital  Lab");
@@ -810,10 +805,13 @@ public class PatientModuleController implements Initializable {
 
     @FXML
     public void onSchedulerClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/SchedulerModule.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/SchedulerModule.fxml"));
+        Parent root = loader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        stage.setTitle("Nemours Children's Hospital  Lab");
+        stage.setTitle("Nemours Children's Hospital Lab");
 //        stage.setX(200);
 //        stage.setY(10);
         stage.setScene(scene);
@@ -822,7 +820,10 @@ public class PatientModuleController implements Initializable {
 
     @FXML
     public void onReportClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/ReportsModule.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/ReportsModule.fxml"));
+        Parent root = loader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setTitle("Nemours Children's Hospital  Lab");
@@ -834,7 +835,10 @@ public class PatientModuleController implements Initializable {
 
     @FXML
     public void onAdminClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/AdminModule.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/AdminModule.fxml"));
+        Parent root =loader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setTitle("Nemours Children's Hospital  Lab");
@@ -847,7 +851,10 @@ public class PatientModuleController implements Initializable {
 
     @FXML
     public void onQueriesClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/QueriesModule.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/QueriesModule.fxml"));
+        Parent root = loader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
@@ -864,14 +871,16 @@ public class PatientModuleController implements Initializable {
             stage = (Stage) scenePane.getScene().getWindow();
             stage.close();
     }
-    @Autowired
-     ConfigurableApplicationContext applicationContext;
+
     public void OnNewPatientClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setControllerFactory(applicationContext::getBean);
         loader.setLocation(getClass().getResource("/NewPatientModule.fxml"));
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
         Parent root = loader.load();
+        NewPatientModuleController newPatientModuleController = loader.getController();
+
+
 
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -931,4 +940,5 @@ public class PatientModuleController implements Initializable {
             videoRadio.setSelected(false);
         }
     }
+
 }

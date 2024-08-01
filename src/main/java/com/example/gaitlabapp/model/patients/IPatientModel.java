@@ -1,11 +1,12 @@
 package com.example.gaitlabapp.model.patients;
 
 import jakarta.persistence.*;
+import javafx.beans.property.StringProperty;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
+import java.util.Set;
 
 
 @Entity
@@ -52,6 +53,12 @@ public class IPatientModel {
     @Column(name = "gen_diagnosis")
     @Setter
     private String genDiagnosis;
+
+    @ManyToMany
+    @JoinTable(name = "diagnosis_code", joinColumns = @JoinColumn(referencedColumnName = "gen_diagnosis"),
+    inverseJoinColumns = @JoinColumn(name = "code"))
+
+     Set<IDiagnosisModel> gen_diagnosis;
 
 //    public IPatientModel(Integer patientID, String firstName, String lastName, String preferredFirstName, String mrn, String formerLastName, String address, String gender, String dob, String comments, String state, String genDiagnosis) {
 //        this.patientID = patientID;

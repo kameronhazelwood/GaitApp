@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
@@ -25,12 +26,12 @@
             <ToolBar maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="91.0" prefWidth="1027.0" HBox.hgrow="ALWAYS">
                 <items>
                     <Button fx:id="patient" layoutX="130.0" layoutY="50" mnemonicParsing="false" prefHeight="80.0" prefWidth="120.0" styleClass="buttonTransparent" text="Patients" />
-                    <Button fx:id="forms" layoutX="130.0" onAction="#onFormClick" layoutY="50" mnemonicParsing="false"  prefHeight="80.0" prefWidth="120.0" text="Forms" />
-                    <Button fx:id="scheduler" layoutX="130.0" onAction="#onSchedulerClick" layoutY="50" mnemonicParsing="false"  prefHeight="80.0" prefWidth="120.0" text="Scheduler" />
-                    <Button fx:id="reports" layoutX="130.0" layoutY="50"  onAction="#onReportClick" mnemonicParsing="false"  prefHeight="80.0" prefWidth="120.0" text="Reports" />
+                    <Button fx:id="forms" layoutX="130.0" layoutY="50" mnemonicParsing="false" onAction="#onFormClick" prefHeight="80.0" prefWidth="120.0" text="Forms" />
+                    <Button fx:id="scheduler" layoutX="130.0" layoutY="50" mnemonicParsing="false" onAction="#onSchedulerClick" prefHeight="80.0" prefWidth="120.0" text="Scheduler" />
+                    <Button fx:id="reports" layoutX="130.0" layoutY="50" mnemonicParsing="false" onAction="#onReportClick" prefHeight="80.0" prefWidth="120.0" text="Reports" />
                     <Button fx:id="admin" layoutX="130.0" layoutY="50" mnemonicParsing="false" onAction="#onAdminClick" prefHeight="80.0" prefWidth="120.0" text="Admin" />
                     <Button fx:id="newPatient" layoutX="130.0" layoutY="50" mnemonicParsing="false" onAction="#OnNewPatientClick" prefHeight="80.0" prefWidth="120.0" text="New Patient" />
-                    <Button fx:id="queries" layoutX="130.0" layoutY="50" mnemonicParsing="false"  onAction="#onQueriesClick" prefHeight="80.0" prefWidth="120.0" text="Queries" />
+                    <Button fx:id="queries" layoutX="130.0" layoutY="50" mnemonicParsing="false" onAction="#onQueriesClick" prefHeight="80.0" prefWidth="120.0" text="Queries" />
                     <Button fx:id="logout" layoutX="130.0" layoutY="50" mnemonicParsing="false" onAction="#logout" prefHeight="80.0" prefWidth="120.0" text="Logout" />
                 </items>
             </ToolBar>
@@ -56,10 +57,9 @@
                            <TextField fx:id="formerLastName" layoutX="104.0" layoutY="195.0" />
                            <Label layoutX="324.0" layoutY="79.0" text="MRN:" />
                            <Label layoutX="318.0" layoutY="118.0" text="Gender:" />
-                           <Label layoutX="325.0" layoutY="160.0" text="DOB:" />
+                           <Label fx:id="dobLabel" layoutX="325.0" layoutY="160.0" text="DOB:" />
                            <TextField fx:id="mrnTextfield" layoutX="400.0" layoutY="74.0" />
                            <TextField fx:id="genderTextfield" layoutX="400.0" layoutY="114.0" />
-                           <TextField fx:id="dobTextfield" layoutX="400.0" layoutY="156.0" />
                            <Label layoutX="6.0" layoutY="157.0" text="Preferred Name" />
                            <Label fx:id="lastName" layoutX="15.0" layoutY="117.0" text="Last Name" />
                            <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="167.0" text="Patient Demographics">
@@ -74,7 +74,9 @@
                                  <TableColumn fx:id="diagDescription" prefWidth="363.3333740234375" text="Description" />
                              </columns>
                            </TableView>
-                           <Button fx:id="addNewDiagnosis" layoutX="958.0" layoutY="254.0" mnemonicParsing="false"  text="Add New" />
+                           <Button fx:id="addNewDiagnosis" layoutX="958.0" layoutY="254.0" mnemonicParsing="false" onAction="#addDiagnosisCode" text="Add New" />
+                           <DatePicker fx:id="datePicker" layoutX="393.0" layoutY="155.0"  promptText="Enter a Date" />
+                           <TextField layoutX="393.0" layoutY="195.0" text="dobTextField" fx:id="dobTexfield12" />
                         </children>
                      </Pane>
                   </children>
@@ -140,7 +142,7 @@
                                        <Font name="System Bold" size="14.0" />
                                     </font>
                                  </Label>
-                                 <Button fx:id="addSurgicalHistory" layoutX="450.0" layoutY="41.0" mnemonicParsing="false"  text="Add Surgical History" />
+                                 <Button fx:id="addSurgicalHistory" layoutX="450.0" layoutY="41.0" mnemonicParsing="false" text="Add Surgical History" />
                                  <Button fx:id="addBotox" layoutX="486.0" layoutY="299.0" mnemonicParsing="false" text="Add Botox" />
                                  <Button fx:id="addHealthHistory" layoutX="454.0" layoutY="555.0" mnemonicParsing="false" text="Add Health History" />
                               </children></AnchorPane>
@@ -159,8 +161,8 @@
                            <HBox prefHeight="95.0" prefWidth="1023.0" BorderPane.alignment="CENTER">
                               <children>
                                  <RadioButton fx:id="photoRadio" mnemonicParsing="false" prefHeight="45.0" prefWidth="90.0" text="Photos" />
-                                 <RadioButton fx:id="videoRadio" mnemonicParsing="false"  prefHeight="45.0" prefWidth="90.0" text="Videos" />
-                                 <RadioButton fx:id="PDFViewer" mnemonicParsing="false"  prefHeight="45.0" prefWidth="90.0" text="PDFs" />
+                                 <RadioButton fx:id="videoRadio" mnemonicParsing="false" prefHeight="45.0" prefWidth="90.0" text="Videos" />
+                                 <RadioButton fx:id="PDFViewer" mnemonicParsing="false" prefHeight="45.0" prefWidth="90.0" text="PDFs" />
                               </children>
                            </HBox>
                         </top>
@@ -174,6 +176,6 @@
          </Tab>
         </tabs>
     </TabPane>
-    <Button fx:id="dropDownBtn" layoutX="382.0" layoutY="110.0" prefWidth="300.0" onAction="#onDisplayPatients"/>
+    <Button fx:id="dropDownBtn" layoutX="382.0" layoutY="110.0" onAction="#onDisplayPatients" prefWidth="300.0" />
     <Label layoutX="245.0" layoutY="115.0" text="Patient Dropdown" />
 </AnchorPane>

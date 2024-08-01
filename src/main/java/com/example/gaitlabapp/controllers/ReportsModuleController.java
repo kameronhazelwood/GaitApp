@@ -12,11 +12,23 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.util.Objects;
 
+@Component
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+@RequiredArgsConstructor
 public class ReportsModuleController {
+    @Autowired
+    ConfigurableApplicationContext applicationContext;
+
     @FXML
     private Stage stage;
     @FXML
@@ -29,8 +41,11 @@ public class ReportsModuleController {
 
     @FXML
     public  void onFormClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/FormsModule.fxml")));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/FormsModule.fxml"));
+        Parent root = loader.load();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setTitle("Nemours Children's Hospital  Lab");
 //        stage.setX(200);
@@ -41,8 +56,11 @@ public class ReportsModuleController {
 
     @FXML
     public  void onSchedulerClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/SchedulerModule.fxml")));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/SchedulerModule.fxml"));
+        Parent root = loader.load();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setTitle("Nemours Children's Hospital  Lab");
 //        stage.setX(200);
@@ -53,7 +71,10 @@ public class ReportsModuleController {
 
     @FXML
     public void onPatientClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/PatientModule.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/PatientModule.fxml"));
+        Parent root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
@@ -69,29 +90,28 @@ public class ReportsModuleController {
 
     @FXML
     public void onReportClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/ReportsModule.fxml")));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/ReportsModule.fxml"));
+        Parent root = loader.load();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
-
-        stage.getIcons().add(icon);
-        stage.setTitle("Nemours Children's Hospital Gait Lab");
+        stage.setTitle("Nemours Children's Hospital  Lab");
 //        stage.setX(200);
 //        stage.setY(10);
         stage.setScene(scene);
         stage.show();
-
     }
 
     @FXML
     public void onAdminClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/AdminModule.fxml")));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/AdminModule.fxml"));
+        Parent root =loader.load();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
-
-        stage.getIcons().add(icon);
-        stage.setTitle("Nemours Children's Hospital Gait Lab");
+        stage.setTitle("Nemours Children's Hospital  Lab");
 //        stage.setX(200);
 //        stage.setY(10);
         stage.setScene(scene);
@@ -101,8 +121,11 @@ public class ReportsModuleController {
 
     @FXML
     public  void onQueriesClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/QueriesModule.fxml")));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/QueriesModule.fxml"));
+        Parent root = loader.load();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
 
@@ -119,13 +142,16 @@ public class ReportsModuleController {
         //springContext.close();
     }
     public  void OnNewPatientClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/NewPatientModule.fxml")));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/NewPatientModule.fxml"));
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
+        Parent root = loader.load();
 
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
         stage.getIcons().add(icon);
-        stage.setTitle("Nemours Children's Hospital Gait Lab");
+        stage.setTitle("Nemours");
         stage.setScene(scene);
         stage.show();
     }

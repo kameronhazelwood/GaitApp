@@ -1,7 +1,6 @@
 package com.example.gaitlabapp.services;
 
 import com.example.gaitlabapp.model.patients.IDiagnosisModel;
-import org.yaml.snakeyaml.events.Event;
 
 import java.util.List;
 import java.util.Optional;

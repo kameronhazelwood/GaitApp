@@ -4,8 +4,8 @@ import com.example.gaitlabapp.model.patients.IPatientModel;
 import com.example.gaitlabapp.repo.PatientRepo;
 import com.example.gaitlabapp.services.PatientService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import java.util.List;
 
 import java.util.Optional;
 
@@ -36,8 +36,8 @@ public class PatientServiceImpl implements PatientService {
     }
 
     @Override
-    public IPatientModel findAll() {
-        return (IPatientModel) repo.findAll();
+    public List<IPatientModel> findAll() {
+        return repo.findAll();
     }
 
     @Override

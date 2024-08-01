@@ -17,6 +17,12 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.net.URL;
@@ -26,9 +32,13 @@ import java.sql.Statement;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
+@Component
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+@RequiredArgsConstructor
 public class QueriesModuleController implements Initializable {
 
-
+    @Autowired
+    ConfigurableApplicationContext applicationContext;
     public Button runQuery;
     public ListView listview;
     public Button exportToCsv;
@@ -69,39 +79,12 @@ public class QueriesModuleController implements Initializable {
 
     }
 
-//    public void onRunQuery(ActionEvent event) {
-//        try{
-//            connection = db.getDBConnection();
-//            statement = connection.createStatement();
-//            resultSet = statement.executeQuery("SELECT * FROM Patients");
-//
-//            while (resultSet.next()){
-//                patientList.add(new IPatientModel(
-//                        resultSet.getString("MRN"),
-//                        resultSet.getString("lastName"),
-//                        resultSet.getString("firstName"),
-//                        resultSet.getInt("address"),
-//                        resultSet.getString("city"),
-//                        resultSet.getString("state"),
-//                        resultSet.getString("DOB"),
-//                        resultSet.getString("Gender"),
-//                        resultSet.getString("comments"),
-//                        resultSet.getString("genDiagnosis"),
-//                        resultSet.getString("formerLastName"),
-//                        resultSet.getString("prefferedFirstName")
-
-//            }
-//            listview.setItems(patientList);
-//
-//        } catch (SQLException e) {
-//            throw new RuntimeException(e);
-//        }
-//
-//    }
-
     @FXML
     public  void onFormClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/FormsModule.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/FormsModule.fxml"));
+        Parent root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setTitle("Nemours Children's Hospital  Lab");
@@ -113,7 +96,10 @@ public class QueriesModuleController implements Initializable {
 
     @FXML
     public  void onSchedulerClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/SchedulerModule.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/SchedulerModule.fxml"));
+        Parent root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setTitle("Nemours Children's Hospital  Lab");
@@ -125,7 +111,10 @@ public class QueriesModuleController implements Initializable {
 
     @FXML
     public  void onReportClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/ReportsModule.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/ReportsModule.fxml"));
+        Parent root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setTitle("Nemours Children's Hospital  Lab");
@@ -137,7 +126,10 @@ public class QueriesModuleController implements Initializable {
 
     @FXML
     public  void onAdminClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/AdminModule.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/AdminModule.fxml"));
+        Parent root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setTitle("Nemours Children's Hospital  Lab");
@@ -149,7 +141,10 @@ public class QueriesModuleController implements Initializable {
 
     @FXML
     public void onPatientClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/PatientModule.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/PatientModule.fxml"));
+        Parent root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
@@ -170,7 +165,10 @@ public class QueriesModuleController implements Initializable {
     }
 
     public  void OnNewPatientClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/NewPatientModule.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/NewPatientModule.fxml"));
+        Parent root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));

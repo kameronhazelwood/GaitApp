@@ -17,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.*;
 import org.springframework.context.support.GenericApplicationContext;
@@ -77,7 +78,7 @@ public class FxApplicationLauncher {
                 try {
                     FXMLLoader fxmlLoader = new FXMLLoader();
                     fxmlLoader.setControllerFactory(applicationContext::getBean);
-                    fxmlLoader.setLocation(getClass().getResource("/PatientModule.fxml"));
+                    fxmlLoader.setLocation(getClass().getResource("/UserLogin.fxml"));
                     System.out.println(applicationContext);
                     Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
 

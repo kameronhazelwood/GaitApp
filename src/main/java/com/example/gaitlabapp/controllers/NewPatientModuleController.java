@@ -5,6 +5,7 @@ import com.example.gaitlabapp.model.patients.IPatientModel;
 import com.example.gaitlabapp.repo.PatientRepo;
 import com.example.gaitlabapp.services.PatientService;
 import com.example.gaitlabapp.services.impl.PatientServiceImpl;
+import jakarta.persistence.criteria.CriteriaBuilder;
 import javafx.application.Application;
 import javafx.application.HostServices;
 import javafx.application.Platform;
@@ -13,6 +14,7 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -33,17 +35,23 @@ import org.springframework.scheduling.config.Task;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.net.URL;
 import java.sql.*;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.ResourceBundle;
+import java.util.function.Predicate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 
 @Component
 @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 @RequiredArgsConstructor
-public class NewPatientModuleController {
+public class NewPatientModuleController implements Initializable {
 
+    @Autowired
+    ConfigurableApplicationContext applicationContext;
     @FXML
     public Pane newPatientPane;
     @FXML
@@ -74,12 +82,29 @@ public class NewPatientModuleController {
     private Stage stage;
     @FXML
     private Scene scene;
-    ObjectProperty<IPatientModel> newPatients = new SimpleObjectProperty<>();
+    @Autowired
     private final PatientService patientService;
+
+
+    Integer recordNumber = 1;
+    Integer newVersion = recordNumber++;
+    Pattern mrnPattern = Pattern.compile("-99887");
+    Integer mrnNumber = 99887;
+    Integer mrnIncrease = mrnNumber++;
+
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        // mrn.setText(recordNumber + mrnNumber);
+//        System.out.println(recordNumber);
+//        System.out.println(newVersion);
+    }
+
+
 
     @FXML
     public void onSaveNewPatient(ActionEvent event) throws SQLException {
-        try{
+        try {
             if (fName != null) {
                 IPatientModel patient = new IPatientModel();
                 patient.setFirstName(fName.getText());
@@ -88,91 +113,34 @@ public class NewPatientModuleController {
                 patient.setMrn(mrn.getText());
                 patient.setFormerLastName(formerLName.getText());
                 patient.setPreferredFirstName(preferredName.getText());
-                System.out.println(patient);
-                System.out.println(patientService);
                 patientService.save(patient);
-
-
             }
-        } catch(Throwable t){
+//            recordNumber++;
+//            mrnNumber++;
+//
+//            mrn.setText(recordNumber + "-" + mrnNumber);
+//
+//            Integer currentNumber = recordNumber + mrnNumber;
+//            System.out.println(currentNumber);
+            clearFields();
+
+        } catch (Throwable t) {
             t.printStackTrace();
         }
 
-
-
-
-//        connection = db.getDBConnection();
-//        String fname = fName.getText();
-//        String lname = lName.getText();
-//        String DOB = dob.getText();
-//        String MRN = mrn.getText();
-//
-//        if(fname.isEmpty() || lname.isEmpty() || MRN.isEmpty() || DOB.isEmpty() ){
-//            Alert alert = new Alert(Alert.AlertType.ERROR);
-//            alert.setHeaderText(null);
-//            alert.setContentText("First Name, DOB, MRN,  and Last name are required fields.");
-//            alert.showAndWait();
-//        }else {
-//            createPatients();
-//            cleanQuery();
-//        }
     }
 
-//    @FXML
-//    public void createPatients() {
-//        javafx.concurrent.Task<IPatientModel> task = new Task() {
-//            @Override
-//            protected IPatientModel call() throws Exception{
-//                IPatientModel patientModel = new IPatientModel();
-//
-//                patientModel.setFirstName(fName.getText());
-//                Optional<IPatientModel> newPatient = patientService.save(patientModel);
-//                return newPatient;
-//            }
-//        };
+    public void clearFields() {
+        fName.clear();
+        lName.clear();
+        dob.clear();
+        formerLName.clear();
+        preferredName.clear();
+    }
 
+    public void mrnNumberPattern() {
 
-//        IPatientModel patientModel = new IPatientModel();
-//
-//        patientModel.setFirstName("");
-//        patientModel.setLastName(patientModel.getLastName());
-//        IPatientModel newPatient = patientRepo.save(patientModel);
-//        saveAlert(Optional.of(newPatient));
-
-
-//          String SQL =  "INSERT INTO Patients( firstName, lastName, MRN, DOB) VALUES(?,?,?, ?);";
-//
-//        try{
-//
-//            connection = db.getDBConnection();
-//            PreparedStatement ps = connection.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
-//
-//            ps.setString(1, fName.getText());
-//            ps.setString(2, lName.getText());
-//            ps.setString(3, mrn.getText());
-//            ps.setString(4, dob.getText());
-//
-//            int affectedRows = ps.executeUpdate();
-//
-//            ResultSet rs = ps.getGeneratedKeys();
-//            if(rs.next()){
-//                patientId = rs.getInt(1);
-//            }
-//
-//            if(affectedRows == 0 ){
-//                throw new SQLException("Creating user failed, no rows affected");
-//            }
-//        } catch (SQLException e) {
-//            throw new RuntimeException(e);
-//        }
-    //   }
-    //   private void cleanQuery(){
-//        fName.setText(null);
-//        lName.setText(null);
-//        mrn.setText(null);
-//        dob.setText(null);
-    //   }
-
+    }
 
     private void saveAlert(Optional<IPatientModel> patientModel) {
 
@@ -220,9 +188,13 @@ public class NewPatientModuleController {
         alert.showAndWait();
     }
 
+
     @FXML
     public void onPatientClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/PatientModule.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/PatientModule.fxml"));
+        Parent root = loader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
@@ -237,7 +209,10 @@ public class NewPatientModuleController {
 
     @FXML
     public void onFormClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/FormsModule.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/FormsModule.fxml"));
+        Parent root = loader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
@@ -252,7 +227,10 @@ public class NewPatientModuleController {
 
     @FXML
     public void onSchedulerClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/SchedulerModule.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/SchedulerModule.fxml"));
+        Parent root = loader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
@@ -267,7 +245,10 @@ public class NewPatientModuleController {
 
     @FXML
     public void onReportClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/ReportsModule.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/ReportsModule.fxml"));
+        Parent root = loader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
@@ -282,7 +263,10 @@ public class NewPatientModuleController {
 
     @FXML
     public void onAdminClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/AdminModule.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/AdminModule.fxml"));
+        Parent root = loader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
@@ -297,7 +281,10 @@ public class NewPatientModuleController {
 
     @FXML
     public void onQueriesClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/QueriesModule.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/QueriesModule.fxml"));
+        Parent root = loader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
@@ -312,8 +299,10 @@ public class NewPatientModuleController {
     }
 
     public void OnNewPatientClick(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        Parent root = fxmlLoader.load(Objects.requireNonNull(Launcher.class.getResource("/NewPatientModule.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/NewPatientModule.fxml"));
+        Parent root = loader.load();
 
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
