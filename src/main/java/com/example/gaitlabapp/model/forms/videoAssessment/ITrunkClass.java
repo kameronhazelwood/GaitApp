@@ -15,42 +15,42 @@ import lombok.NoArgsConstructor;
 public class ITrunkClass {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "trunkId")
+    @Column(name = "trunk_Id")
     private Integer trunkId;
-    @Column(name = "leftSideForward")
+    @Column(name = "left_Side_Forward")
     private String leftSideForward;
-    @Column(name = "rightSideForward")
+    @Column(name = "right_Side_Forward")
     private String rightSideForward;
-    @Column(name = "leftLurch")
+    @Column(name = "left_Lurch")
     private String leftLurch;
-    @Column(name = "rightLurch")
+    @Column(name = "right_Lurch")
     private String rightLurch;
-    @Column(name = "leftLeaning")
+    @Column(name = "left_Leaning")
     private String leftLeaning;
-    @Column(name = "rightLeaning")
+    @Column(name = "right_Leaning")
     private String rightLeaning;
-    @Column(name = "forwardLeaning")
+    @Column(name = "forward_Leaning")
     private String forwardLeaning;
-    @Column(name = "posteriorLeaning")
+    @Column(name = "posterior_Leaning")
     private String posteriorLeaning;
-    @Column(name = "increasedLordosis")
+    @Column(name = "increased_Lordosis")
     private String increasedLordosis;
-    @Column(name = "increasedKyphosis")
+    @Column(name = "increased_Kyphosis")
     private String increasedKyphosis;
 
 
-    public ITrunkClass(String leftSideForward, String rightSideForward, String leftLurch, String rightLurch, String leftLeaning, String rightLeaning, String forwardLeaning, String posteriorLeaning, String increasedLordosis, String increasedKyphosis, Integer trunkId) {
-        this.leftSideForward = leftSideForward;
-        this.rightSideForward = rightSideForward;
-        this.leftLurch = leftLurch;
-        this.rightLurch = rightLurch;
-        this.leftLeaning = leftLeaning;
-        this.rightLeaning = rightLeaning;
-        this.forwardLeaning = forwardLeaning;
-        this.posteriorLeaning = posteriorLeaning;
-        this.increasedLordosis = increasedLordosis;
-        this.increasedKyphosis = increasedKyphosis;
-        this.trunkId = trunkId;
-    }
+//    public ITrunkClass(String leftSideForward, String rightSideForward, String leftLurch, String rightLurch, String leftLeaning, String rightLeaning, String forwardLeaning, String posteriorLeaning, String increasedLordosis, String increasedKyphosis, Integer trunkId) {
+//        this.leftSideForward = leftSideForward;
+//        this.rightSideForward = rightSideForward;
+//        this.leftLurch = leftLurch;
+//        this.rightLurch = rightLurch;
+//        this.leftLeaning = leftLeaning;
+//        this.rightLeaning = rightLeaning;
+//        this.forwardLeaning = forwardLeaning;
+//        this.posteriorLeaning = posteriorLeaning;
+//        this.increasedLordosis = increasedLordosis;
+//        this.increasedKyphosis = increasedKyphosis;
+//        this.trunkId = trunkId;
+//    }
 
 }

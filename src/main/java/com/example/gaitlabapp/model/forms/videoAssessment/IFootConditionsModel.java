@@ -10,15 +10,15 @@ import jakarta.persistence.*;
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "FootConditions")
+@Table(name = "Foot_Conditions")
 public class IFootConditionsModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "footConditionId")
+    @Column(name = "foot_Condition_Id")
     private Integer footConditionId;
     @Column(name = "other")
     private String other;
-    @Column(name = "shoesOnly")
+    @Column(name = "shoes_Only")
     private String shoesOnly;
     @Column(name = "solidAFO")
     private String solidAFO;
@@ -35,17 +35,17 @@ public class IFootConditionsModel {
     @Column(name = "barefoot")
     private String barefoot;
 
-    public IFootConditionsModel(Integer footConditionId, String other, String shoesOnly, String solidAFO, String articulatedAFO, String smo, String kafo, String hkafo, String grafo, String barefoot) {
-        this.footConditionId = footConditionId;
-        this.other = other;
-        this.shoesOnly = shoesOnly;
-        this.solidAFO = solidAFO;
-        this.articulatedAFO = articulatedAFO;
-        this.smo = smo;
-        this.kafo = kafo;
-        this.hkafo = hkafo;
-        this.grafo = grafo;
-        this.barefoot = barefoot;
-    }
+//    public IFootConditionsModel(Integer footConditionId, String other, String shoesOnly, String solidAFO, String articulatedAFO, String smo, String kafo, String hkafo, String grafo, String barefoot) {
+//        this.footConditionId = footConditionId;
+//        this.other = other;
+//        this.shoesOnly = shoesOnly;
+//        this.solidAFO = solidAFO;
+//        this.articulatedAFO = articulatedAFO;
+//        this.smo = smo;
+//        this.kafo = kafo;
+//        this.hkafo = hkafo;
+//        this.grafo = grafo;
+//        this.barefoot = barefoot;
+//    }
 
 }

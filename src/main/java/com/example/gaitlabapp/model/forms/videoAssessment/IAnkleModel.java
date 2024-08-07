@@ -15,15 +15,15 @@ import lombok.NoArgsConstructor;
 public class IAnkleModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ankleId")
+    @Column(name = "ankle_Id")
     private Integer ankleId;
-    @Column(name = "prematureHeelRise")
+    @Column(name = "premature_Heel_Rise")
     private String prematureHeelRise;
-    @Column(name = "ankleEquinus")
+    @Column(name = "ankle_Equinus")
     private String ankleEquinus;
-    @Column(name = "ankleVarus")
+    @Column(name = "ankle_Varus")
     private String ankleVarus;
-    @Column(name = "ankleValgus")
+    @Column(name = "ankle_Valgus")
     private String ankleValgus;
     @Column(name = "cavus")
     private String cavus;
@@ -31,19 +31,19 @@ public class IAnkleModel {
     private String planus;
     @Column(name = "planovalgus")
     private String planovalgus;
-    @Column(name = "forefootAdduction")
+    @Column(name = "forefoot_Adduction")
     private String forefootAdduction;
-    @Column(name = "forefootAbduction")
+    @Column(name = "forefoot_Abduction")
     private String forefootAbduction;
     @Column(name = "bunion")
     private String bunion;
-    @Column(name = "clawToes")
+    @Column(name = "claw_Toes")
     private String clawToes;
-    @Column(name = "hallusExt")
+    @Column(name = "hallus_Ext")
     private String hallusExt;
-    @Column(name = "persistentHighToe")
+    @Column(name = "persistent_High_Toe")
     private String persistentHighToe;
-    @Column(name = "noHeelContact")
+    @Column(name = "no_Heel_Contact")
     private String noHeelContact;
 
     public IAnkleModel(String noHeelContact, Integer ankleId, String prematureHeelRise, String ankleEquinus, String ankleVarus, String ankleValgus, String cavus, String planus, String planovalgus, String forefootAdduction, String forefootAbduction, String bunion, String clawToes, String hallusExt, String persistentHighToe) {

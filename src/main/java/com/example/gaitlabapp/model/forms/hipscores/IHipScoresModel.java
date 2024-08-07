@@ -28,13 +28,13 @@ public class IHipScoresModel {
     @Column(name = "harris_hip_score")
     private String harrisHipScore;
 
-    public IHipScoresModel(String harrisHipScore, Integer hipScoreId, String activityScore, String pain, String stiffness, String physicalFunction) {
-        this.harrisHipScore = harrisHipScore;
-        this.hipScoreId = hipScoreId;
-        this.activityScore = activityScore;
-        this.pain = pain;
-        this.stiffness = stiffness;
-        this.physicalFunction = physicalFunction;
-    }
+//    public IHipScoresModel(String harrisHipScore, Integer hipScoreId, String activityScore, String pain, String stiffness, String physicalFunction) {
+//        this.harrisHipScore = harrisHipScore;
+//        this.hipScoreId = hipScoreId;
+//        this.activityScore = activityScore;
+//        this.pain = pain;
+//        this.stiffness = stiffness;
+//        this.physicalFunction = physicalFunction;
+//    }
 
 }

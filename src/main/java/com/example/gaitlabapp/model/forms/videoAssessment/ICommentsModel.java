@@ -15,17 +15,17 @@ import lombok.NoArgsConstructor;
 public class ICommentsModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "commentId")
+    @Column(name = "comment_Id")
     private Integer commentId;
-    @Column(name = "commentsOnPast")
+    @Column(name = "comments_On_Past")
     private String commentsOnPast;
-    @Column(name = "evalComments")
+    @Column(name = "eval_Comments")
     private String evalComments;
 
-    public ICommentsModel(Integer commentId, String commentsOnPast, String evalComments) {
-        this.commentId = commentId;
-        this.commentsOnPast = commentsOnPast;
-        this.evalComments = evalComments;
-    }
+//    public ICommentsModel(Integer commentId, String commentsOnPast, String evalComments) {
+//        this.commentId = commentId;
+//        this.commentsOnPast = commentsOnPast;
+//        this.evalComments = evalComments;
+//    }
 
 }

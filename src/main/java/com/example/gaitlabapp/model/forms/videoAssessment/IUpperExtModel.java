@@ -12,48 +12,48 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "UpperExt")
+@Table(name = "Upper_Ext")
 public class IUpperExtModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "upperExtId")
+    @Column(name = "upper_Ext_Id")
     private Integer upperExtId;
-    @Column(name = "highGuard")
+    @Column(name = "high_Guard")
     private String highGuard;
-    @Column(name = "mediumGuard")
+    @Column(name = "medium_Guard")
     private String mediumGuard;
-    @Column(name = "decreasedSwingLeft")
+    @Column(name = "decreased_Swing_Left")
     private String decreasedSwingLeft;
-    @Column(name = "decreasedSwingRight")
+    @Column(name = "decreased_Swing_Right")
     private String decreasedSwingRight;
-    @Column(name = "hemiplegicPosturingRight")
+    @Column(name = "hemiplegic_Posturing_Right")
     private String hemiplegicPosturingRight;
-    @Column(name = "hemiplegicPosturingLeft")
+    @Column(name = "hemiplegic_Posturing_Left")
     private String hemiplegicPosturingLeft;
-    @Column(name = "extensorPosturingLeft")
+    @Column(name = "extensor_Posturing_Left")
     private String extensorPosturingLeft;
-    @Column(name = "extensorPosturingRight")
+    @Column(name = "extensor_Posturing_Right")
     private String extensorPosturingRight;
-    @Column(name = "dystonicMovement")
+    @Column(name = "dystonic_Movement")
     private String dystonicMovement;
-    @Column(name = "athetoidMovement")
+    @Column(name = "athetoid_Movement")
     private String athetoidMovement;
-    @Column(name = "assistDevice")
+    @Column(name = "assist_Device")
     private String assistDevice;
 
-    public IUpperExtModel(Integer upperExtId, String highGuard, String mediumGuard, String decreasedSwingLeft, String decreasedSwingRight, String hemiplegicPosturingRight, String hemiplegicPosturingLeft, String extensorPosturingLeft, String extensorPosturingRight, String dystonicMovement, String athetoidMovement, String assistDevice) {
-        this.upperExtId = upperExtId;
-        this.highGuard = highGuard;
-        this.mediumGuard = mediumGuard;
-        this.decreasedSwingLeft = decreasedSwingLeft;
-        this.decreasedSwingRight = decreasedSwingRight;
-        this.hemiplegicPosturingRight = hemiplegicPosturingRight;
-        this.hemiplegicPosturingLeft = hemiplegicPosturingLeft;
-        this.extensorPosturingLeft = extensorPosturingLeft;
-        this.extensorPosturingRight = extensorPosturingRight;
-        this.dystonicMovement = dystonicMovement;
-        this.athetoidMovement = athetoidMovement;
-        this.assistDevice = assistDevice;
-    }
+//    public IUpperExtModel(Integer upperExtId, String highGuard, String mediumGuard, String decreasedSwingLeft, String decreasedSwingRight, String hemiplegicPosturingRight, String hemiplegicPosturingLeft, String extensorPosturingLeft, String extensorPosturingRight, String dystonicMovement, String athetoidMovement, String assistDevice) {
+//        this.upperExtId = upperExtId;
+//        this.highGuard = highGuard;
+//        this.mediumGuard = mediumGuard;
+//        this.decreasedSwingLeft = decreasedSwingLeft;
+//        this.decreasedSwingRight = decreasedSwingRight;
+//        this.hemiplegicPosturingRight = hemiplegicPosturingRight;
+//        this.hemiplegicPosturingLeft = hemiplegicPosturingLeft;
+//        this.extensorPosturingLeft = extensorPosturingLeft;
+//        this.extensorPosturingRight = extensorPosturingRight;
+//        this.dystonicMovement = dystonicMovement;
+//        this.athetoidMovement = athetoidMovement;
+//        this.assistDevice = assistDevice;
+//    }
 
 }

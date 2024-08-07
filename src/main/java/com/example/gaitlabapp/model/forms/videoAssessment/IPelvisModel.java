@@ -15,35 +15,35 @@ import lombok.NoArgsConstructor;
 public class IPelvisModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "pelvisId")
+    @Column(name = "pelvis_Id")
     private Integer pelvisId;
-    @Column(name = "leftRotatedForward")
+    @Column(name = "left_Rotated_Forward")
     private String leftRotatedForward;
-    @Column(name = "rightRotatedForward")
+    @Column(name = "right_Rotated_Forward")
     private String rightRotatedForward;
-    @Column(name = "leftSideDown")
+    @Column(name = "left_Side_Down")
     private String leftSideDown;
-    @Column(name = "rightSideDown")
+    @Column(name = "right_Side_Down")
     private String rightSideDown;
-    @Column(name = "leftTrendelenburg")
+    @Column(name = "left_Trendelenburg")
     private String leftTrendelenburg;
-    @Column(name = "rightTrendelenburg")
+    @Column(name = "right_Trendelenburg")
     private String rightTrendelenburg;
-    @Column(name = "incAnteriorTilt")
+    @Column(name = "inc_Anterior_Tilt")
     private String incAnteriorTilt;
-    @Column(name = "incPosteriorTilt")
+    @Column(name = "inc_Posterior_Tilt")
     private String incPosteriorTilt;
 
-    public IPelvisModel(Integer pelvisId, String leftRotatedForward, String rightRotatedForward, String leftSideDown, String rightSideDown, String leftTrendelenburg, String rightTrendelenburg, String incAnteriorTilt, String incPosteriorTilt) {
-        this.pelvisId = pelvisId;
-        this.leftRotatedForward = leftRotatedForward;
-        this.rightRotatedForward = rightRotatedForward;
-        this.leftSideDown = leftSideDown;
-        this.rightSideDown = rightSideDown;
-        this.leftTrendelenburg = leftTrendelenburg;
-        this.rightTrendelenburg = rightTrendelenburg;
-        this.incAnteriorTilt = incAnteriorTilt;
-        this.incPosteriorTilt = incPosteriorTilt;
-    }
+//    public IPelvisModel(Integer pelvisId, String leftRotatedForward, String rightRotatedForward, String leftSideDown, String rightSideDown, String leftTrendelenburg, String rightTrendelenburg, String incAnteriorTilt, String incPosteriorTilt) {
+//        this.pelvisId = pelvisId;
+//        this.leftRotatedForward = leftRotatedForward;
+//        this.rightRotatedForward = rightRotatedForward;
+//        this.leftSideDown = leftSideDown;
+//        this.rightSideDown = rightSideDown;
+//        this.leftTrendelenburg = leftTrendelenburg;
+//        this.rightTrendelenburg = rightTrendelenburg;
+//        this.incAnteriorTilt = incAnteriorTilt;
+//        this.incPosteriorTilt = incPosteriorTilt;
+//    }
 
 }

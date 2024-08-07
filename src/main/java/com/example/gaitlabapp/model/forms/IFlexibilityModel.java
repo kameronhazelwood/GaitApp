@@ -15,7 +15,7 @@ import lombok.Setter;
 @Entity
 @Table(name = "flexibility")
 public class IFlexibilityModel {
-    @jakarta.persistence.Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "flex_Id")
     private Integer flexId;

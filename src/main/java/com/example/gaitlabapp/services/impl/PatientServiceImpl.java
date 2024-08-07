@@ -13,7 +13,6 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class PatientServiceImpl implements PatientService {
     private final PatientRepo repo;
-
     @Override
     public IPatientModel save(IPatientModel patientModel) { return repo.save(patientModel);}
 

@@ -15,6 +15,8 @@ import com.example.gaitlabapp.model.visits.IAppointmentModel;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.StringProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -92,9 +94,8 @@ public class PatientModuleController implements Initializable {
     public RadioButton PDFViewer;
     @FXML
     public TabPane patientTabPane;
-    public DatePicker datePicker;
     public Label dobLabel;
-
+    public DatePicker picker;
 
 
     ObservableList<IAppointmentModel> initialData() {
@@ -179,18 +180,31 @@ public class PatientModuleController implements Initializable {
     private AnchorPane scenePane;
     @Autowired
     ConfigurableApplicationContext applicationContext;
-    @FXML
-    public TextField dobTexfield12;
+
+
 
 
     @Override
     public void initialize(URL PatientModule, ResourceBundle resourceBundle) {
-//        DateFormat dobFormat = new SimpleDateFormat("MM-dd-yyyy");
-//        try {
-//            dobTexfield12.setTextFormatter(new TextFormatter<>(new DateStringConverter(dobFormat), dobFormat.parse("MM-dd-yyyy")));
-//        } catch (ParseException e) {
-//            throw new RuntimeException(e);
-//        }
+        dobTextfield.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> ov, String t, String t1) {
+                if(t1.length() == 2 || t1.length() == 5){
+                    dobTextfield.setText(t1+" " + "/");
+                }
+            }
+        });
+
+        preferredNameTextField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                if(newValue != null || newValue == null){
+                    preferredNameTextField.setText(newValue);
+
+                }
+            }
+        });
+
        /*
         apt data and context menu
          */

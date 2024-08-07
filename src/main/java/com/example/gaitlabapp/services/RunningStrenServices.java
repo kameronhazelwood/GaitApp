@@ -4,7 +4,7 @@ import com.example.gaitlabapp.model.forms.IRunningStrengthModel;
 
 import java.util.Optional;
 
-public interface RunningServices {
+public interface RunningStrenServices {
     Optional<IRunningStrengthModel> save(IRunningStrengthModel runningStrengthModel);
     IRunningStrengthModel findAll();
     void delete(Long id);

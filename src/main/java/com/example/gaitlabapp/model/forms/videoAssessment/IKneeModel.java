@@ -15,35 +15,35 @@ import lombok.NoArgsConstructor;
 public class IKneeModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "kneeId")
+    @Column(name = "knee_Id")
     private Integer kneeId;
-    @Column(name = "kneeValgus")
+    @Column(name = "knee_Valgus")
     private String kneeValgus;
-    @Column(name = "kneeVarus")
+    @Column(name = "knee_Varus")
     private String kneeVarus;
-    @Column(name = "incKneeFlexionContact")
+    @Column(name = "inc_Knee_Flexion_Contact")
     private String incKneeFlexionContact;
-    @Column(name = "decKneeFlexionContact")
+    @Column(name = "dec_Knee_Flexion_Contact")
     private String decKneeFlexionContact;
-    @Column(name = "backKneeing")
+    @Column(name = "back_Kneeing")
     private String backKneeing;
-    @Column(name = "decKneeFlexSwing")
+    @Column(name = "dec_Knee_Flex_Swing")
     private String decKneeFlexSwing;
-    @Column(name = "internalTibialTorsoin")
+    @Column(name = "internal_Tibial_Torsoin")
     private String internalTibialTorsoin;
-    @Column(name = "extTibialTorsoin")
+    @Column(name = "ext_Tibial_Torsoin")
     private String extTibialTorsoin;
 
-    public IKneeModel(String kneeValgus, Integer kneeId, String kneeVarus, String incKneeFlexionContact, String decKneeFlexionContact, String backKneeing, String decKneeFlexSwing, String internalTibialTorsoin, String extTibialTorsoin) {
-        this.kneeValgus = kneeValgus;
-        this.kneeId = kneeId;
-        this.kneeVarus = kneeVarus;
-        this.incKneeFlexionContact = incKneeFlexionContact;
-        this.decKneeFlexionContact = decKneeFlexionContact;
-        this.backKneeing = backKneeing;
-        this.decKneeFlexSwing = decKneeFlexSwing;
-        this.internalTibialTorsoin = internalTibialTorsoin;
-        this.extTibialTorsoin = extTibialTorsoin;
-    }
+//    public IKneeModel(String kneeValgus, Integer kneeId, String kneeVarus, String incKneeFlexionContact, String decKneeFlexionContact, String backKneeing, String decKneeFlexSwing, String internalTibialTorsoin, String extTibialTorsoin) {
+//        this.kneeValgus = kneeValgus;
+//        this.kneeId = kneeId;
+//        this.kneeVarus = kneeVarus;
+//        this.incKneeFlexionContact = incKneeFlexionContact;
+//        this.decKneeFlexionContact = decKneeFlexionContact;
+//        this.backKneeing = backKneeing;
+//        this.decKneeFlexSwing = decKneeFlexSwing;
+//        this.internalTibialTorsoin = internalTibialTorsoin;
+//        this.extTibialTorsoin = extTibialTorsoin;
+//    }
 
 }

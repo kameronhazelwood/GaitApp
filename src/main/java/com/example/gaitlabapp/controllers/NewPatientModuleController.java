@@ -11,6 +11,8 @@ import javafx.application.HostServices;
 import javafx.application.Platform;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,6 +22,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
@@ -84,28 +87,28 @@ public class NewPatientModuleController implements Initializable {
     private Scene scene;
     @Autowired
     private final PatientService patientService;
+    String mrnNumber = "9988";
 
-
-    Integer recordNumber = 1;
-    Integer newVersion = recordNumber++;
-    Pattern mrnPattern = Pattern.compile("-99887");
-    Integer mrnNumber = 99887;
-    Integer mrnIncrease = mrnNumber++;
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        // mrn.setText(recordNumber + mrnNumber);
-//        System.out.println(recordNumber);
-//        System.out.println(newVersion);
+        mrn.setText(" " + "-" + mrnNumber);
+
+        dob.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> ov, String t, String t1) {
+                if(t1.length() == 2 || t1.length() == 5){
+                    dob.setText(t1+" " + "/");
+                }
+            }
+        });
     }
-
-
 
     @FXML
     public void onSaveNewPatient(ActionEvent event) throws SQLException {
         try {
-            if (fName != null) {
+            if (fName != null && lName != null) {
                 IPatientModel patient = new IPatientModel();
                 patient.setFirstName(fName.getText());
                 patient.setLastName(lName.getText());
@@ -114,20 +117,17 @@ public class NewPatientModuleController implements Initializable {
                 patient.setFormerLastName(formerLName.getText());
                 patient.setPreferredFirstName(preferredName.getText());
                 patientService.save(patient);
+            }else {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Required Fields. ");
+                alert.setContentText("First Name, Last Name and Date of Birth is required. ");
+                alert.show();
             }
-//            recordNumber++;
-//            mrnNumber++;
-//
-//            mrn.setText(recordNumber + "-" + mrnNumber);
-//
-//            Integer currentNumber = recordNumber + mrnNumber;
-//            System.out.println(currentNumber);
             clearFields();
 
         } catch (Throwable t) {
             t.printStackTrace();
         }
-
     }
 
     public void clearFields() {
@@ -136,58 +136,9 @@ public class NewPatientModuleController implements Initializable {
         dob.clear();
         formerLName.clear();
         preferredName.clear();
+        mrn.clear();
+        mrn.setText(" " + "-" + mrnNumber);
     }
-
-    public void mrnNumberPattern() {
-
-    }
-
-    private void saveAlert(Optional<IPatientModel> patientModel) {
-
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("User saved successfully.");
-        alert.setHeaderText(null);
-        // alert.setContentText("The user "+patientModel.getFirstName()+" "+patientModel.getLastName() +" has been created and \n"+getGenderTitle(user.getGender())+" id is "+ user.getId() +".");
-        alert.showAndWait();
-    }
-
-    private boolean validate(String field, String value, String pattern) {
-        if (!value.isEmpty()) {
-            Pattern p = Pattern.compile(pattern);
-            Matcher m = p.matcher(value);
-            if (m.find() && m.group().equals(value)) {
-                return true;
-            } else {
-                validationAlert(field, false);
-                return false;
-            }
-        } else {
-            validationAlert(field, true);
-            return false;
-        }
-    }
-
-    private boolean emptyValidation(String field, boolean empty) {
-        if (!empty) {
-            return true;
-        } else {
-            validationAlert(field, true);
-            return false;
-        }
-    }
-
-    private void validationAlert(String field, boolean empty) {
-        Alert alert = new Alert(Alert.AlertType.WARNING);
-        alert.setTitle("Validation Error");
-        alert.setHeaderText(null);
-        if (field.equals("Role")) alert.setContentText("Please Select " + field);
-        else {
-            if (empty) alert.setContentText("Please Enter " + field);
-            else alert.setContentText("Please Enter Valid " + field);
-        }
-        alert.showAndWait();
-    }
-
 
     @FXML
     public void onPatientClick(ActionEvent event) throws IOException {
@@ -204,9 +155,7 @@ public class NewPatientModuleController implements Initializable {
 //        stage.setY(10);
         stage.setScene(scene);
         stage.show();
-
     }
-
     @FXML
     public void onFormClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();

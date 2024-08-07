@@ -26,6 +26,10 @@ import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
@@ -34,14 +38,13 @@ import java.sql.*;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-
+@Component
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+@RequiredArgsConstructor
 public class VisitDetailsGaitController implements Initializable {
-
-
     public ComboBox<String> hipAdbInterpR;
     public ComboBox<String> hipAdbInterpL;
     public TabPane visitTabPane;
-
     public ComboBox<String> GMFCSCombo;
     public ComboBox<String> hipExtRP;
     public ComboBox<String> hipExtLP;
