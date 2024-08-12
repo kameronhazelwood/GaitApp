@@ -10,7 +10,8 @@ public interface PatientService {
     IPatientModel update(IPatientModel patientModel);
     Optional<IPatientModel> findByFirstName(String firstName);
     Optional<IPatientModel> findByLastName(String lastName);
-    Optional<IPatientModel> findByMrn(String mrn);
+    IPatientModel findByMrn(String mrn);
     List<IPatientModel> findAll();
+    Optional<IPatientModel> findById(long id);
     void delete(Long id);
 }

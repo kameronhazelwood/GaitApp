@@ -57,6 +57,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 import static com.example.gaitlabapp.model.visits.IAppointmentModel.Type.*;
@@ -195,13 +196,47 @@ public class PatientModuleController implements Initializable {
             }
         });
 
-        preferredNameTextField.textProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                if(newValue != null || newValue == null){
-                    preferredNameTextField.setText(newValue);
+//        preferredNameTextField.setOnAction(e -> {
+//            IPatientModel patient = patientService.findByMrn(mrnTextfield.getText());
+//            System.out.println(patientService.findByMrn(mrnTextfield.getText()));
+//            patient.setPreferredFirstName(preferredNameTextField.getText());
+//            patientService.save(patient);
+//            System.out.println(patientService.save(patient));
+//        });
 
-                }
+//        preferredNameTextField.focusedProperty().addListener(new ChangeListener<Boolean>() {
+//            @Override
+//            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+//                if(newValue){
+//                    IPatientModel patient = patientService.findByMrn(mrnTextfield.getText());
+//                    System.out.println(patientService.findByMrn(mrnTextfield.getText()));
+//                    patient.setPreferredFirstName(preferredNameTextField.getText());
+//                    patientService.save(patient);
+//                    System.out.println(patientService.save(patient));
+//
+//                }else {
+//                    System.out.println("Textfield out focus");
+//                }
+//            }
+//        });
+//
+        preferredNameTextField.textProperty().addListener((obs, oldText, newText) -> {
+            IPatientModel patient = patientService.findByMrn(mrnTextfield.getText());
+            System.out.println(patientService.findByMrn(mrnTextfield.getText()));
+            patient.setPreferredFirstName(preferredNameTextField.getText());
+            patientService.save(patient);
+            System.out.println(patientService.save(patient));
+        });
+
+
+
+
+
+        formerLastName.textProperty().addListener((obs, oldText, newText) -> {
+            if(newText != null || newText == null){
+                IPatientModel patient = patientService.findByMrn(mrnTextfield.getText());
+                patient.setPreferredFirstName(formerLastName.getText());
+                patientService.save(patient);
             }
         });
 

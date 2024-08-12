@@ -30,9 +30,11 @@ public class PatientServiceImpl implements PatientService {
     }
 
     @Override
-    public Optional<IPatientModel> findByMrn(String mrn) {
+    public IPatientModel findByMrn(String mrn) {
         return repo.findByMrn(mrn);
     }
+    @Override
+    public Optional<IPatientModel> findById(long id){ return repo.findById(String.valueOf(id));}
 
     @Override
     public List<IPatientModel> findAll() {
