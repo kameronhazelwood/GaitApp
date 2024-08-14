@@ -2,11 +2,16 @@ package com.example.gaitlabapp.controllers.Visits;
 
 import com.example.gaitlabapp.Launcher;
 import com.example.gaitlabapp.config.Config;
+import com.example.gaitlabapp.controllers.PatientModuleController;
+import com.example.gaitlabapp.model.forms.IGenMarkInfoModel;
 import com.example.gaitlabapp.model.visits.IAppointmentModel;
+import com.example.gaitlabapp.services.AptsService;
+import com.example.gaitlabapp.services.GenMarkerService;
 import javafx.animation.PauseTransition;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -820,7 +825,7 @@ public class VisitDetailsGaitController implements Initializable {
     private Tab dataTab;
 
     @FXML
-    private TreeView<?> dataTable;
+    private TreeView<String> dataTable;
 
     @FXML
     private TextField date;
@@ -1075,6 +1080,8 @@ public class VisitDetailsGaitController implements Initializable {
 
     @FXML
     private TextField visitPt2;
+    @FXML
+    private Label visitMRN;
 
     @FXML
     private Tab visitTab;
@@ -1084,7 +1091,7 @@ public class VisitDetailsGaitController implements Initializable {
 
 
     //parent root
-    TreeItem<String> parentDataRoot = new TreeItem<>("");
+
     TreeItem<String> parentPhotoVideoRoot = new TreeItem<>("");
     // data types
     TreeItem<String> showAll = new TreeItem<>("Show all");
@@ -1105,19 +1112,81 @@ public class VisitDetailsGaitController implements Initializable {
     TreeItem<String> hipJoint = new TreeItem<>("Hip Joint Moments");
     TreeItem<String> kneeJoint = new TreeItem<>("Knee Joint Moments");
     TreeItem<String> ankleJoint = new TreeItem<>("Ankle Joint Moments");
+    TreeItem<String> parent2DataRoot = new TreeItem<>("");
+    private final AptsService aptsService;
+    private final GenMarkerService genMarkerService;
 
-    int patient = 13;
-    Connection connection;
-    Config db = new Config();
-    Statement statement;
-    public int visitId;
-    ResultSet resultSet;
-    IAppointmentModel.Type type;
-    private final ObservableList<IAppointmentModel> visitListView = FXCollections.observableArrayList();
-    ObjectProperty<IAppointmentModel> visitValue = new SimpleObjectProperty<>();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        /*
+        on saves for visit information
+         */
+        date.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                IAppointmentModel appointment = aptsService.findByMRN(visitMRN.getText());
+
+            }
+        });
+
+        /*
+        GAIT Eval on saves
+         */
+        GAITHeight.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                IGenMarkInfoModel height = genMarkerService.findByMRN(visitMRN.getText());
+                height.setHeight(Integer.valueOf(GAITHeight.getText()));
+                genMarkerService.save(height);
+            }
+        });
+        GAITWeight.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                IGenMarkInfoModel weight = genMarkerService.findByMRN(visitMRN.getText());
+                weight.setWeight(Integer.valueOf(GAITWeight.getText()));
+                genMarkerService.save(weight);
+            }
+        });
+        GAITRFL.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                IGenMarkInfoModel rfl = genMarkerService.findByMRN(visitMRN.getText());
+                rfl.setRightFootLength(GAITRFL.getText());
+                genMarkerService.save(rfl);
+            }
+        });
+        GAITLFL.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                IGenMarkInfoModel lfl = genMarkerService.findByMRN(visitMRN.getText());
+                lfl.setLeftFootLength(GAITLFL.getText());
+                genMarkerService.save(lfl);
+            }
+        });
+        GAITRFW.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                IGenMarkInfoModel rfw = genMarkerService.findByMRN(visitMRN.getText());
+                rfw.setRightFootWidth(GAITRFW.getText());
+                genMarkerService.save(rfw);
+            }
+        });
+        GAITLFW.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                IGenMarkInfoModel lfw =  genMarkerService.findByMRN(visitMRN.getText());
+                lfw.setLeftFootWidth(GAITLFW.getText());
+                genMarkerService.save(lfw);
+            }
+        });
+
+
+        /*
+        data tree
+         */
         GMFCSCombo.getItems().setAll(gmfcsOptions);
         FMS5M.getItems().setAll(fms5mOptions);
         FMS50M.getItems().setAll(fms50mOptions);
@@ -1256,6 +1325,8 @@ public class VisitDetailsGaitController implements Initializable {
         kneeVarusRP.getItems().setAll(promOptions);
 
 
+
+
         physExamGait.setOnSelectionChanged(e -> {
             PauseTransition delay = new PauseTransition(Duration.seconds(1));
 
@@ -1283,215 +1354,19 @@ public class VisitDetailsGaitController implements Initializable {
         kinematics.getChildren().addAll(hipJointAngles, ankleJointAngles);
         footKinematics.getChildren().addAll(lateralForefoot, medialForefoot);
         kinetics.getChildren().addAll(hipJoint, kneeJoint, ankleJoint);
-
         pngFiles.getChildren().addAll(kinematics);
         pngFiles.getChildren().addAll(footKinematics);
         pngFiles.getChildren().addAll(kinetics);
 
-        /*
-        Gen marker info
-//         */
-//        GAITHeight.textProperty().addListener(onSaveGenMarker());
-//        GAITWeight.textProperty().addListener(onSaveGenMarker());
-//        GAITRFL.textProperty().addListener(onSaveGenMarker());
-//        GAITRFW.textProperty().addListener(onSaveGenMarker());
-//        GAITLFL.textProperty().addListener(onSaveGenMarker());
-//        GAITLFW.textProperty().addListener(onSaveGenMarker());
-//        GAITAS1.textProperty().addListener(onSaveGenMarker());
-//        GAITAS2.textProperty().addListener(onSaveGenMarker());
-//        GAITAS3.textProperty().addListener(onSaveGenMarker());
-//        GAITAS4.textProperty().addListener(onSaveGenMarker());
-//        GAITAS5.textProperty().addListener(onSaveGenMarker());
-//        GAITAS6.textProperty().addListener(onSaveGenMarker());
-//
-//        /*
-//        visit details info
-//         */
-//
-//        aptDate.textProperty().addListener(onSaveVisit());
-//        aptStartTime.textProperty().addListener(onSaveVisit());
-//        aptStopTime.textProperty().addListener(onSaveVisit());
-//        date.textProperty().addListener(onSaveVisit());
-//        aptVisitType.textProperty().addListener(onSaveVisit());
-//        aptSubType.textProperty().addListener(onSaveVisit());
-//        dateToEpic.textProperty().addListener(onSaveVisit());
-//        aptDateProcessed.textProperty().addListener(onSaveVisit());
-//        aptDiagnosis.textProperty().addListener(onSaveVisit());
-//        aptReason.textProperty().addListener(onSaveVisit());
-//        aptComment.textProperty().addListener(onSaveVisit());
-//        interpDate.textProperty().addListener(onSaveVisit());
-//        aptPT.textProperty().addListener(onSaveVisit());
-//        aptReferringMd.textProperty().addListener(onSaveVisit());
-//        visitPt.textProperty().addListener(onSaveVisit());
-//        visitPt2.textProperty().addListener(onSaveVisit());
-//        visitBio.textProperty().addListener(onSaveVisit());
-//        visitBio2.textProperty().addListener(onSaveVisit());
+        parent2DataRoot.getChildren().addAll(showAll);
+        parent2DataRoot.getChildren().addAll(pngFiles);
 
-        //        try {
-//           visitListView.clear();
-//           connection = db.getDBConnection();
-//           statement = connection.createStatement();
-//           resultSet = statement.executeQuery("SELECT * FROM Visits;");
-//
-//           while(resultSet.next()){
-//               visitListView.add(new IAppointmentModel(
-//                       resultSet.getString("Date"),
-//                       resultSet.getString("Visit Type"),
-//                       resultSet.getString("Referring Phys"),
-//                       (IAppointmentModel.Type) resultSet.getObject(type.ordinal())
-//               ));
-//           }
-//
-//        } catch (Exception e) {
-//            throw new RuntimeException(e);
-//        }
-//
-//        visitValue.addListener((obs, old, val) -> {
-//            if(val != null){
-//                aptDate.setText(val.getAptDate());
-//            }
-//        });
+        parent2DataRoot.setExpanded(true);
+        dataTable.setRoot(parent2DataRoot);
+        this.dataTable.setShowRoot(false);
+
 
     }
-    public ChangeListener<? super String> onSaveGenMarker(){
-        String genMarkerUpdateQuery = "UPDATE GenMarkInfo SET " +
-                "height=?, weight=?, rightFootLength=?, leftFootLength=?, rightFootWidth=?, leftFootLength=?, " +
-                "leftFootWidth=?, AS1=?, AS2=?, AS3=?, AS4=?, AS5=?, AS6=?, gmfcs=?, fms5m=?, fms50m=?, fms500m=?, comments=?, macs=? " +
-                "WHERE patientID = '" + patientID + "'";
-        ChangeListener<String> genMarkerListener = ((obs, newVal, oldVal)-> {
-        try {
-            connection = db.getDBConnection();
-            PreparedStatement ps = connection.prepareStatement(genMarkerUpdateQuery);
-            ps.setString(1, GAITHeight.getText());
-            ps.setString(2, GAITWeight.getText());
-            ps.setString(3, GAITRFL.getText());
-            ps.setString(4, GAITLFL.getText());
-            ps.setString(5, GAITRFW.getText());
-            ps.setString(6, GAITLFW.getText());
-            ps.setString(7, GAITAS1.getText());
-            ps.setString(8, GAITAS2.getText());
-            ps.setString(9, GAITAS3.getText());
-            ps.setString(10, GAITAS4.getText());
-            ps.setString(11, GAITAS5.getText());
-            ps.setString(12, GAITAS6.getText());
-            ps.setString(13, GMFCS.toString());
-            ps.setString(14, FMS5M.toString());
-            ps.setString(15, FMS50M.toString());
-            ps.setString(16, FMS500M.toString());
-            ps.setString(17, GAITcomments.getText());
-            ps.executeUpdate();
-            System.out.println(genMarkerUpdateQuery);
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-        });
-        return null;
-    }
-
-    public ChangeListener<? super String> onSaveVisit(){
-
-        String visitUpdateQuery = "UPDATE Visits SET "
-                + "aptDate=?, startTime=?, stopTime=?, dateScheduled=?, visitType=?, visitSubType=?, dateToEpic=?, dateProcessed=?," +
-                "diagnosis=?, reasonForAnalysis=?, visitComment=?, interpDate=?, interpPT=?, referringPhys=?, visitPT=?," +
-                "visitPT2=?, visitBioMech=?, visitBioMech2=?   WHERE patientID = '" + patientID + "'";
-
-
-            try {
-                connection = db.getDBConnection();
-                PreparedStatement ps1 = connection.prepareStatement(visitUpdateQuery);
-                ps1.setString(1, aptDate.getText());
-                ps1.setString(2, aptStartTime.getText());
-                ps1.setString(3, aptStopTime.getText());
-                ps1.setString(4, date.getText());
-                ps1.setString(5, aptVisitType.getText());
-                ps1.setString(6, aptSubType.getText());
-                ps1.setString(7, dateToEpic.getText());
-                ps1.setString(8, aptDateProcessed.getText());
-                ps1.setString(9, aptDiagnosis.getText());
-                ps1.setString(10, aptReason.getText());
-                ps1.setString(11, aptComment.getText());
-                ps1.setString(12, interpDate.getText());
-                ps1.setString(13, aptPT.getText());
-                ps1.setString(14, aptReferringMd.getText());
-                ps1.setString(15, visitPt.getText());
-                ps1.setString(16, visitPt2.getText());
-                ps1.setString(17, visitBio.getText());
-                ps1.setString(18, visitBio2.getText());
-                ps1.executeUpdate();
-                System.out.println(visitUpdateQuery);
-
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
-
-        return null;
-    }
-
-     public ChangeListener<? super String> onFuncStrengthSave(){
-         String funcStrengthUpdateQuery = "UPDATE FunctionalStrength SET "
-                 + "pullToStandR=?, pullToStandL=?, standingArmsFreeL_3sec=?, standingArmsFreeR_3sec=?, standingArmsFreeL_20sec=?, standingArmsFreeR_20sec=?,"
-                 + " legStandHandHeldL=?, legStandHandHeldR=?, oneLegStanceL=?, oneLegStanceR=?, shortSitToStandL=?, shortSitToStandR=?, " +
-                 "highKneeStandL=?, highKneeStandR=?, lowersToFloorL=?, lowersToFloorR=?, squatsL=?, squatsR=?, penFromFloorL=?, penFromFloorR=?" +
-                 "  WHERE patientID = '" + patientID +  "'";
-
-         try {
-             connection = db.getDBConnection();
-             PreparedStatement ps = connection.prepareStatement(funcStrengthUpdateQuery);
-             ps.setString(1, GAITptsR.getText());
-             ps.setString(2, GAITptsL.getText());
-             ps.setString(3, GAITstand3L.getText());
-             ps.setString(4, GAITstand3R.getText());
-             ps.setString(5, GAITstand20L.getText());
-             ps.setString(6, GAITstand20R.getText());
-             ps.setString(7, oneLegStanceL.getText());
-             ps.setString(8, oneLegStanceR.getText());
-             ps.setString(9, sitStandR.getText());
-             ps.setString(10, sitStandL.getText());
-             ps.setString(11, kneeToStandL.getText());
-             ps.setString(12, kneeToStandR.getText());
-             ps.setString(13, lowerToFloorL.getText());
-             ps.setString(14, lowerToFloorR.getText());
-             ps.setString(15, squatsL.getText());
-             ps.setString(16, squatsR.getText());
-             ps.setString(17, standingL.getText());
-             ps.setString(18, standingR.getText());
-             ps.executeUpdate();
-             System.out.println(funcStrengthUpdateQuery);
-
-         } catch (SQLException e) {
-             throw new RuntimeException(e);
-         }
-
-         return null;
-     }
-
-    public ChangeListener<? super String> onPROMSave(){
-        String PROMUpdateQuery = "UPDATE PROM SET "
-                + "hipFlexR=?, hipFlexL=?, hipFlexStrenR, hipFlexStrenL, hipExtL=?, hipExtR=?, hipExtStrenL, hipExtStrenR" +
-                ",hipAbdR=?, hipAbdL=?, hipAbdStrenR, hipAbdStrenL,hipIntRotR=?, hipIntRotL=?, hipIntRotStrenR, hipIntRotStrenL" +
-                ", hipExtr, hipExtL, hipExtStrenR, hipExtStrenL, ryderTestR, ryderTestL, ryderTestStrenR, ryderTestStrenL," +
-                " kneeExtR, kneeExtL,  kneeExtStrenR, kneeExtStrenL, extLagR, extLagL, ExtLagStrenR, ExtLagStrenL, kneeFlexR," +
-                "kneeFlexL, kneeFlexStrenR, kneeFlexStrenL, popAngR, popAngR, PopAngStrenR, PopAngStrenL, bilateralPopR, bilateralPopL, elyR" +
-                ", elyL, dorsiFR, dorsiFL, dorsiER, dorsiEL, plantarR, plantarL, PlantarStrenR, PlantarStrenL, ankleInvL, ankleInvR, " +
-                "ankleEverL, ankleEverR, ankleEvStrengR, ankleEvStrengL, ankleInvR, ankleInvL, ankleInvStrengR, ankleInvStrengL," +
-                "tmaR, tmaL, tfaR, tfaL, ffAbaddR, ffAbaddL" +
-                "  WHERE patientID = '" + patientID +  "'";
-
-        try {
-            connection = db.getDBConnection();
-            PreparedStatement ps = connection.prepareStatement(PROMUpdateQuery);
-
-            ps.executeUpdate();
-            System.out.println(PROMUpdateQuery);
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-
-        return null;
-    }
-
 
     Image lateralForeFoot = new Image(String.valueOf(getClass().getResource("/images/99999999_052223_LateralForeFoot.png")));
     Image kneeJointMoments = new Image(String.valueOf(getClass().getResource("/images/99999999_052223_KneeJointMoments.png")));

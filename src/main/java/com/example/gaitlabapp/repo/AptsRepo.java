@@ -11,4 +11,5 @@ public interface AptsRepo extends JpaRepository<IAppointmentModel, String> {
 
     Optional<IAppointmentModel> findByVisitType(String visitType);
     Optional<IAppointmentModel> findByVisitSubType(String visitSubType);
+    IAppointmentModel findByMrn(String mrn);
 }

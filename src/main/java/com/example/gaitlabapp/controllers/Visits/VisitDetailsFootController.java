@@ -57,63 +57,8 @@ public class VisitDetailsFootController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-//        String visitSQL = "UPDATE Visits SET patientID, aptDate , attended, startTime, stopTime, dateScheduled, visitType, visitSubType," +
-//                "dateToEpic, dateProcessed, diagnosis, reasonForAnalysis, visitComment, interpDate, interpMD, interpPT,"
-//                + "referringPhys, visitPT, visitPT2, visitBioMech, visitBioMech2 WHERE patientID='" + patientId.getText() + "' ";
-//        ChangeListener<String> listener = ((observable, oldValue, newValue) -> {
-//
-//            try {
-//                connection = db.getDBConnection();
-//                PreparedStatement ps = connection.prepareStatement(visitSQL, Statement.RETURN_GENERATED_KEYS);
-//
-//                ps.setString(21, patientId.getText());
-//                ps.setString(1, FEaptDate.getText());
-//                ps.setString(2, FEaptAttended.getText());
-//                ps.setString(3, FEaptStartTime.getText());
-//                ps.setString(4, FEaptStopTime.getText());
-//                ps.setString(5, FEdate.getText());
-//                ps.setString(6, FEaptVisitType.getText());
-//                ps.setString(7, FEaptSubType.getText());
-//                ps.setString(8, FEDateSentEpic.getText());
-//                ps.setString(9, FEaptDateProcessed.getText());
-//                ps.setString(10, FEaptDiagnosis.getText());
-//                ps.setString(11, FEAptReason.getText());
-//                ps.setString(12, FEaptComment.getText());
-//                ps.setString(13, FEinterpDate.getText());
-//                ps.setString(14, FEaptMd.getText());
-//                ps.setString(15, FEaptPT.getText());
-//                ps.setString(16, FEvisitPt.getText());
-//                ps.setString(17, FEvisitPt2.getText());
-//                ps.setString(18, FEvisitBio.getText());
-//                ps.setString(19, FEvisitBio2.getText());
-//                ps.setString(20, FEaptReferringMd.getText());
-//
-//
-//            } catch (Exception e) {
-//                throw new RuntimeException(e);
-//            }
-//        });
-//
-//        FEdate.textProperty().addListener(listener);
-//        FEaptStartTime.textProperty().addListener(listener);
-//        FEaptTime.textProperty().addListener(listener);
-//        FEaptAttended.textProperty().addListener(listener);
-//        FEaptStopTime.textProperty().addListener(listener);
-//        FEaptComment.textProperty().addListener(listener);
-//        FEAptReason.textProperty().addListener(listener);
-//        FEaptDateProcessed.textProperty().addListener(listener);
-//        FEaptReferringMd.textProperty().addListener(listener);
-//        FEvisitBio2.textProperty().addListener(listener);
-//        FEvisitBio.textProperty().addListener(listener);
-//        FEvisitPt.textProperty().addListener(listener);
-//        FEvisitPt2.textProperty().addListener(listener);
-//        FEaptMd.textProperty().addListener(listener);
-//        FEinterpDate.textProperty().addListener(listener);
-//        FEaptComment.textProperty().addListener(listener);
-//        FEDateSentEpic.textProperty().addListener(listener);
-//        FEaptSubType.textProperty().addListener(listener);
-//        FEaptVisitType.textProperty().addListener(listener);
-//        FEaptDate.textProperty().addListener(listener);
+
+
 
 
         physExamFoot.setOnSelectionChanged(e -> {

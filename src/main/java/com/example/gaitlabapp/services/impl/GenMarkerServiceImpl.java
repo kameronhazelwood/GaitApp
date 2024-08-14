@@ -26,6 +26,8 @@ public class GenMarkerServiceImpl implements GenMarkerService {
     public List<IGenMarkInfoModel> findAll() {
         return genMarkerRepo.findAll();
     }
+    @Override
+    public IGenMarkInfoModel findByMRN(String mrn){ return genMarkerRepo.findByMRN(mrn);}
 
     @Override
     public void delete(Long id) {

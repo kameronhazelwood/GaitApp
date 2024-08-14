@@ -190,52 +190,59 @@ public class PatientModuleController implements Initializable {
         dobTextfield.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> ov, String t, String t1) {
-                if(t1.length() == 2 || t1.length() == 5){
+                if(t1.length() == 2 || t1.length() == 6){
                     dobTextfield.setText(t1+" " + "/");
                 }
             }
         });
 
-//        preferredNameTextField.setOnAction(e -> {
-//            IPatientModel patient = patientService.findByMrn(mrnTextfield.getText());
-//            System.out.println(patientService.findByMrn(mrnTextfield.getText()));
-//            patient.setPreferredFirstName(preferredNameTextField.getText());
-//            patientService.save(patient);
-//            System.out.println(patientService.save(patient));
-//        });
-
-//        preferredNameTextField.focusedProperty().addListener(new ChangeListener<Boolean>() {
-//            @Override
-//            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-//                if(newValue){
-//                    IPatientModel patient = patientService.findByMrn(mrnTextfield.getText());
-//                    System.out.println(patientService.findByMrn(mrnTextfield.getText()));
-//                    patient.setPreferredFirstName(preferredNameTextField.getText());
-//                    patientService.save(patient);
-//                    System.out.println(patientService.save(patient));
-//
-//                }else {
-//                    System.out.println("Textfield out focus");
-//                }
-//            }
-//        });
-//
-        preferredNameTextField.textProperty().addListener((obs, oldText, newText) -> {
-            IPatientModel patient = patientService.findByMrn(mrnTextfield.getText());
-            System.out.println(patientService.findByMrn(mrnTextfield.getText()));
-            patient.setPreferredFirstName(preferredNameTextField.getText());
-            patientService.save(patient);
-            System.out.println(patientService.save(patient));
+        patientNameTextField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                IPatientModel patient = patientService.findByMrn(mrnTextfield.getText());
+                patient.setFirstName(patientNameTextField.getText());
+                patientService.save(patient);
+            }
         });
 
-
-
-
-
-        formerLastName.textProperty().addListener((obs, oldText, newText) -> {
-            if(newText != null || newText == null){
+        LastNameTextField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
                 IPatientModel patient = patientService.findByMrn(mrnTextfield.getText());
-                patient.setPreferredFirstName(formerLastName.getText());
+                patient.setLastName(LastNameTextField.getText());
+                patientService.save(patient);
+            }
+        });
+
+        preferredNameTextField.textProperty().addListener((obs, oldText, newText) -> {
+            IPatientModel patient = patientService.findByMrn(mrnTextfield.getText());
+            patient.setPreferredFirstName(preferredNameTextField.getText());
+            patientService.save(patient);
+        });
+
+        formerLastName.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                IPatientModel patient = patientService.findByMrn(mrnTextfield.getText());
+                patient.setPreferredFirstName(preferredNameTextField.getText());
+                patientService.save(patient);
+            }
+        });
+
+        genderTextfield.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                IPatientModel patient = patientService.findByMrn(mrnTextfield.getText());
+                patient.setDob(dobTextfield.getText());
+                patientService.save(patient);
+            }
+        });
+
+        commentsTextField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                IPatientModel patient = patientService.findByMrn(mrnTextfield.getText());
+                patient.setComments(commentsTextField.getText());
                 patientService.save(patient);
             }
         });
