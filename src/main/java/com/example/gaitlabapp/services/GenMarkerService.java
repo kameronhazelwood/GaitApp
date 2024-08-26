@@ -8,6 +8,6 @@ public interface GenMarkerService {
     IGenMarkInfoModel save(IGenMarkInfoModel genMarkInfoModel);
     IGenMarkInfoModel update(IGenMarkInfoModel genMarkInfoModel);
     List<IGenMarkInfoModel> findAll();
-    IGenMarkInfoModel findByMRN(String mrn);
+    IGenMarkInfoModel findByPatientId(Integer patientId);
     void delete(Long id);
 }

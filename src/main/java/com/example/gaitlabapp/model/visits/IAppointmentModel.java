@@ -1,14 +1,17 @@
 package com.example.gaitlabapp.model.visits;
 
 
+import com.example.gaitlabapp.model.patients.IDiagnosisModel;
+import com.example.gaitlabapp.model.patients.IPatientModel;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import lombok.*;
 import jakarta.persistence.*;
 
-@Data
+import java.util.Set;
 @Getter
 @Setter
+@Data
 @Entity
 @NoArgsConstructor(force = true)
 @Table(name = "appointments")
@@ -62,14 +65,24 @@ public class IAppointmentModel  {
 //    private final StringProperty visitBioMech2;
     @Column(name = "type")
     private final Type type;
+    @Column(name = "patientId")
+    private Integer patientId;
 
-    public IAppointmentModel(Integer aptId, String aptDate, String visitType, String visitSubType, String referringPhys, Type type) {
+
+    @ManyToMany
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+            inverseJoinColumns = @JoinColumn(name = "patient_id"))
+
+    Set<IPatientModel> patientID;
+
+    public IAppointmentModel(Integer aptId, String aptDate, String visitType, String visitSubType, String referringPhys, Type type, Integer patientId) {
         this.aptId = aptId;
         this.aptDate = aptDate;
         this.visitType = visitType;
         this.visitSubType = visitSubType;
         this.referringPhys = referringPhys;
         this.type = type;
+        this.patientId = patientId;
     }
 
 //    public String getAptDate(){

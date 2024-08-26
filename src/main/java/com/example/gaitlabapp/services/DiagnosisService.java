@@ -1,6 +1,9 @@
 package com.example.gaitlabapp.services;
 
 import com.example.gaitlabapp.model.patients.IDiagnosisModel;
+import javafx.collections.ObservableList;
+import javafx.collections.transformation.SortedList;
+import org.springframework.data.domain.Sort;
 
 import java.util.List;
 import java.util.Optional;

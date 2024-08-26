@@ -1,10 +1,13 @@
 package com.example.gaitlabapp.model.forms.videoAssessment;
 
+import com.example.gaitlabapp.model.patients.IPatientModel;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
+
+import java.util.Set;
 
 @Setter
 @Getter
@@ -33,6 +36,15 @@ public class IKneeModel {
     private String internalTibialTorsoin;
     @Column(name = "ext_Tibial_Torsoin")
     private String extTibialTorsoin;
+    @Column(name = "patientId")
+    private Integer patientId;
+
+
+    @ManyToMany
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+            inverseJoinColumns = @JoinColumn(name = "patient_id"))
+
+    Set<IPatientModel> patientID;
 
 //    public IKneeModel(String kneeValgus, Integer kneeId, String kneeVarus, String incKneeFlexionContact, String decKneeFlexionContact, String backKneeing, String decKneeFlexSwing, String internalTibialTorsoin, String extTibialTorsoin) {
 //        this.kneeValgus = kneeValgus;

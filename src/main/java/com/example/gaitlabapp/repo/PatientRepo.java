@@ -12,8 +12,7 @@ public interface PatientRepo extends JpaRepository<IPatientModel, String> {
 
     Optional<IPatientModel> findByFirstName(String firstName);
     Optional<IPatientModel> findByLastName(String lastName);
-    IPatientModel findByMrn(String mrn);
+   // IPatientModel findByPatientId(Integer patientId);
     List<IPatientModel> findAll();
-
-
+    IPatientModel findByMrn(String mrn);
 }

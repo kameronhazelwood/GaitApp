@@ -1,11 +1,14 @@
 package com.example.gaitlabapp.model.forms.videoAssessment;
 
+import com.example.gaitlabapp.model.patients.IPatientModel;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
+
+import java.util.Set;
 
 @Setter
 @Getter
@@ -30,6 +33,15 @@ public class IAmbulatoryModel {
     private String handheld;
     @Column(name = "no_Aids")
     private String noAids;
+    @Column(name = "patientId")
+    private Integer patientId;
+
+
+    @ManyToMany
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+            inverseJoinColumns = @JoinColumn(name = "patient_id"))
+
+    Set<IPatientModel> patientID;
 
     public IAmbulatoryModel(Integer ambulatoryId, String crutches, String canes, String anteriorWalker, String posteriorWalker, String handheld, String noAids) {
         this.ambulatoryId = ambulatoryId;

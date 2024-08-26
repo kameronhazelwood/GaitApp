@@ -30,7 +30,9 @@ import java.io.IOException;
 @EnableJpaRepositories("com.example.gaitlabapp.repo")
 public class FxApplicationLauncher {
     public static void main(String[] args) {
+
         Application.launch(FxApplication.class, args);
+
     }
     public static class FxApplication extends Application {
         private ConfigurableApplicationContext context;
@@ -79,7 +81,6 @@ public class FxApplicationLauncher {
                     FXMLLoader fxmlLoader = new FXMLLoader();
                     fxmlLoader.setControllerFactory(applicationContext::getBean);
                     fxmlLoader.setLocation(getClass().getResource("/UserLogin.fxml"));
-                    System.out.println(applicationContext);
                     Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
 
                     Parent root = fxmlLoader.load();

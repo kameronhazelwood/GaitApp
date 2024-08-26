@@ -19,7 +19,11 @@ public class AptsServiceImpl implements AptsService {
     public Optional<IAppointmentModel> save(IAppointmentModel iAppointmentModel){ return Optional.of(apptsRepo.save(iAppointmentModel));}
     public Optional<IAppointmentModel> findByVisitType(String visitType) { return apptsRepo.findByVisitType(visitType);}
     public Optional<IAppointmentModel> findByVisitSubType(String visitSubType){ return apptsRepo.findByVisitSubType(visitSubType);}
-    public IAppointmentModel findByMRN(String mrn){ return apptsRepo.findByMrn(mrn); }
+
+    @Override
+    public IAppointmentModel findByPatientId(Integer patientId) { return apptsRepo.findByPatientId(patientId);}
+
+    // public IAppointmentModel findByPatientId(String patientId){ return apptsRepo.findByPatientId(patientId); }
     public List<IAppointmentModel> findAll() {return apptsRepo.findAll();}
     public void delete(Long id){ apptsRepo.deleteById(String.valueOf(id));}
 }

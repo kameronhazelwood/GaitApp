@@ -82,8 +82,8 @@ public class QueriesModuleController implements Initializable {
     @FXML
     public  void onFormClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setControllerFactory(applicationContext::getBean);
         loader.setLocation(getClass().getResource("/FormsModule.fxml"));
+        loader.setControllerFactory(applicationContext::getBean);
         Parent root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -97,8 +97,8 @@ public class QueriesModuleController implements Initializable {
     @FXML
     public  void onSchedulerClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setControllerFactory(applicationContext::getBean);
         loader.setLocation(getClass().getResource("/SchedulerModule.fxml"));
+        loader.setControllerFactory(applicationContext::getBean);
         Parent root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -112,8 +112,8 @@ public class QueriesModuleController implements Initializable {
     @FXML
     public  void onReportClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setControllerFactory(applicationContext::getBean);
         loader.setLocation(getClass().getResource("/ReportsModule.fxml"));
+        loader.setControllerFactory(applicationContext::getBean);
         Parent root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -127,8 +127,8 @@ public class QueriesModuleController implements Initializable {
     @FXML
     public  void onAdminClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setControllerFactory(applicationContext::getBean);
         loader.setLocation(getClass().getResource("/AdminModule.fxml"));
+        loader.setControllerFactory(applicationContext::getBean);
         Parent root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -142,8 +142,8 @@ public class QueriesModuleController implements Initializable {
     @FXML
     public void onPatientClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setControllerFactory(applicationContext::getBean);
         loader.setLocation(getClass().getResource("/PatientModule.fxml"));
+        loader.setControllerFactory(applicationContext::getBean);
         Parent root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -166,8 +166,8 @@ public class QueriesModuleController implements Initializable {
 
     public  void OnNewPatientClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setControllerFactory(applicationContext::getBean);
         loader.setLocation(getClass().getResource("/NewPatientModule.fxml"));
+        loader.setControllerFactory(applicationContext::getBean);
         Parent root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);

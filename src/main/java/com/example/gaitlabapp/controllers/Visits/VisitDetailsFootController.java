@@ -16,6 +16,12 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.net.URL;
@@ -24,7 +30,12 @@ import java.sql.Statement;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
+@Component
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+@RequiredArgsConstructor
 public class VisitDetailsFootController implements Initializable {
+    @Autowired
+    ConfigurableApplicationContext applicationContext;
     public TextField FEaptDateSent;
     public TextField FEaptReferringMd;
     public TextField FEvisitBio;

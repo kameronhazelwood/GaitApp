@@ -1,10 +1,13 @@
 package com.example.gaitlabapp.model.forms.videoAssessment;
 
+import com.example.gaitlabapp.model.patients.IPatientModel;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
+
+import java.util.Set;
 
 @Setter
 @Getter
@@ -37,6 +40,15 @@ public class ITrunkClass {
     private String increasedLordosis;
     @Column(name = "increased_Kyphosis")
     private String increasedKyphosis;
+    @Column(name = "patientId")
+    private Integer patientId;
+
+
+    @ManyToMany
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+            inverseJoinColumns = @JoinColumn(name = "patient_id"))
+
+    Set<IPatientModel> patientID;
 
 
 //    public ITrunkClass(String leftSideForward, String rightSideForward, String leftLurch, String rightLurch, String leftLeaning, String rightLeaning, String forwardLeaning, String posteriorLeaning, String increasedLordosis, String increasedKyphosis, Integer trunkId) {

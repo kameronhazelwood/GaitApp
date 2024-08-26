@@ -1,11 +1,15 @@
 package com.example.gaitlabapp.model.patients;
 
+
 import lombok.Data;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.nio.file.WatchEvent;
+
 
 @Data
 @Getter
@@ -22,6 +26,8 @@ public class IPngModel {
     private String label;
     @Column(name = "file_name")
     private String fileName;
+    private String image;
+    private byte image2;
     @Column(name = "sub_dir")
     private String subDir;
     @Column(name = "level")

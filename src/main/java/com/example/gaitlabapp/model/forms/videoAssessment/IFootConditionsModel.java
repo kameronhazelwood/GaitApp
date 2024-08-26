@@ -1,9 +1,12 @@
 package com.example.gaitlabapp.model.forms.videoAssessment;
 
+import com.example.gaitlabapp.model.patients.IPatientModel;
 import lombok.*;
 
 
 import jakarta.persistence.*;
+
+import java.util.Set;
 
 @Setter
 @Getter
@@ -34,6 +37,15 @@ public class IFootConditionsModel {
     private String grafo;
     @Column(name = "barefoot")
     private String barefoot;
+    @Column(name = "patientId")
+    private Integer patientId;
+
+
+    @ManyToMany
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+            inverseJoinColumns = @JoinColumn(name = "patient_id"))
+
+    Set<IPatientModel> patientID;
 
 //    public IFootConditionsModel(Integer footConditionId, String other, String shoesOnly, String solidAFO, String articulatedAFO, String smo, String kafo, String hkafo, String grafo, String barefoot) {
 //        this.footConditionId = footConditionId;

@@ -18,8 +18,8 @@ public class IPatientModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "patientID", nullable = false)
-    private final Integer patientID;
+    @Column(name = "patient_id", nullable = false)
+    private  Integer patientID;
     @Column(name = "first_name")
     @Setter
     private String firstName;
@@ -57,6 +57,7 @@ public class IPatientModel {
     @ManyToMany
     @JoinTable(name = "diagnosis_code", joinColumns = @JoinColumn(referencedColumnName = "gen_diagnosis"),
     inverseJoinColumns = @JoinColumn(name = "code"))
+
 
      Set<IDiagnosisModel> gen_diagnosis;
 

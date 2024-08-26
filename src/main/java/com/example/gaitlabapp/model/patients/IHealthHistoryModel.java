@@ -9,8 +9,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Data
+import java.util.Set;
 @Getter
+@Data
 @NoArgsConstructor(force = true)
 @Entity
 @Table(name = "health_history")
@@ -26,6 +27,15 @@ public class IHealthHistoryModel {
     @Column(name = "condition")
     @Setter
     private String condition;
+    @Column(name = "patientId")
+    private Integer patientId;
+
+
+    @ManyToMany
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+            inverseJoinColumns = @JoinColumn(name = "patient_id"))
+
+    Set<IPatientModel> patientID;
 
     public IHealthHistoryModel(Integer healthHistoryId, String conditionAge, String condition) {
         this.healthHistoryId = healthHistoryId;

@@ -98,7 +98,7 @@ public class NewPatientModuleController implements Initializable {
         dob.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> ov, String t, String t1) {
-                if(t1.length() == 2 || t1.length() == 5){
+                if(t1.length() == 2 || t1.length() == 6){
                     dob.setText(t1+" " + "/");
                 }
             }

@@ -1,8 +1,6 @@
 package com.example.gaitlabapp.controllers.Wizards;
 
 
-import com.example.gaitlabapp.controllers.PatientModuleController;
-import com.example.gaitlabapp.config.Config;
 import com.example.gaitlabapp.model.patients.IDiagnosisModel;
 import com.example.gaitlabapp.model.patients.IPatientModel;
 import com.example.gaitlabapp.services.DiagnosisService;
@@ -22,14 +20,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Controller;
-import org.yaml.snakeyaml.events.Event;
 
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.ResourceBundle;
-import java.util.Set;
+import java.util.*;
 
 @Controller
 @EnableJpaRepositories
@@ -67,35 +60,18 @@ public class NewDiagnosisCodeController implements Initializable {
     public boolean isSaved() {
         return saved;
     }
-    Connection connection = null;
-    Config db = new Config();
-    Statement statement = null;
-    ResultSet resultSet;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
         codeCol.setCellValueFactory((new PropertyValueFactory<>("Code")));
         descripCol.setCellValueFactory((new PropertyValueFactory<>("Description")));
         newDiagCodeTable.getColumns().setAll(codeCol, descripCol);
-        newDiagCodeTable.setItems(FXCollections.observableArrayList(diagnosisService.findAll()));
 
-    }
-    @FXML
-    public void onSaveDiagCode(ActionEvent event) {
-        saved = true;
+        listView.addAll(diagnosisService.findAll());
+        newDiagCodeTable.setItems(listView);
 
-        IDiagnosisModel diagCode = newDiagCodeTable.getSelectionModel().getSelectedItem();
 
-        diagCode.setGenDiagnosis(codeCol.getText());
-        IPatientModel patientModel = new IPatientModel();
-        patientModel.setGen_diagnosis((Set<IDiagnosisModel>) diagCode);
-
-        getmyStage().close();
-    }
-
-    @FXML
-    public void sortData(){
         FilteredList<IDiagnosisModel> filteredData = new FilteredList<>(listView, b -> true);
         searchCodes.textProperty().addListener((obs, oldValue, newValue) -> {
             filteredData.setPredicate(diagnosisCode -> {
@@ -114,9 +90,22 @@ public class NewDiagnosisCodeController implements Initializable {
         });
         SortedList<IDiagnosisModel> sortedData = new SortedList<>(filteredData);
         sortedData.comparatorProperty().bind(newDiagCodeTable.comparatorProperty());
-        //newDiagCodeTable.setItems(sortedData)
+        newDiagCodeTable.setItems(sortedData);
+
     }
 
+    @FXML
+    public void onSaveDiagCode(ActionEvent event) {
+        saved = true;
+
+        IDiagnosisModel diagCode = newDiagCodeTable.getSelectionModel().getSelectedItem();
+
+        diagCode.setGenDiagnosis(codeCol.getText());
+        IPatientModel patientModel = new IPatientModel();
+        patientModel.setGen_diagnosis((Set<IDiagnosisModel>) diagCode);
+
+        getmyStage().close();
+    }
     @FXML
     public void setDiagCode() {
 //        PatientModuleController patientModuleController = new PatientModuleController();

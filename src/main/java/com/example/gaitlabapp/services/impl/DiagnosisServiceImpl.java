@@ -3,7 +3,9 @@ package com.example.gaitlabapp.services.impl;
 import com.example.gaitlabapp.model.patients.IDiagnosisModel;
 import com.example.gaitlabapp.repo.DiagnosisRepo;
 import com.example.gaitlabapp.services.DiagnosisService;
+import javafx.collections.transformation.SortedList;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

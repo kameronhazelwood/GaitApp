@@ -4,9 +4,11 @@ import com.example.gaitlabapp.Launcher;
 import com.example.gaitlabapp.config.Config;
 import com.example.gaitlabapp.controllers.PatientModuleController;
 import com.example.gaitlabapp.model.forms.IGenMarkInfoModel;
+import com.example.gaitlabapp.model.patients.IPatientModel;
 import com.example.gaitlabapp.model.visits.IAppointmentModel;
 import com.example.gaitlabapp.services.AptsService;
 import com.example.gaitlabapp.services.GenMarkerService;
+import com.example.gaitlabapp.services.PatientService;
 import javafx.animation.PauseTransition;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
@@ -32,7 +34,9 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -1081,14 +1085,9 @@ public class VisitDetailsGaitController implements Initializable {
     @FXML
     private TextField visitPt2;
     @FXML
-    private Label visitMRN;
-
+    private Label patientId;
     @FXML
     private Tab visitTab;
-    int patientID = 13;
-
-
-
 
     //parent root
 
@@ -1113,8 +1112,14 @@ public class VisitDetailsGaitController implements Initializable {
     TreeItem<String> kneeJoint = new TreeItem<>("Knee Joint Moments");
     TreeItem<String> ankleJoint = new TreeItem<>("Ankle Joint Moments");
     TreeItem<String> parent2DataRoot = new TreeItem<>("");
-    private final AptsService aptsService;
-    private final GenMarkerService genMarkerService;
+
+    @Autowired
+    ConfigurableApplicationContext applicationContext;
+    @Autowired
+    private AptsService aptsService;
+    @Autowired
+    private GenMarkerService genMarkerService;
+
 
 
     @Override
@@ -1123,249 +1128,276 @@ public class VisitDetailsGaitController implements Initializable {
         /*
         on saves for visit information
          */
-        date.textProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                IAppointmentModel appointment = aptsService.findByMRN(visitMRN.getText());
-
-            }
-        });
+//        date.textProperty().addListener(new ChangeListener<String>() {
+//            @Override
+//            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+//                IAppointmentModel appointment = aptsService.findByPatientId((Integer.valueOf(patientId.getText())));
+//
+//            }
+//        });
 
         /*
         GAIT Eval on saves
          */
-        GAITHeight.textProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                IGenMarkInfoModel height = genMarkerService.findByMRN(visitMRN.getText());
-                height.setHeight(Integer.valueOf(GAITHeight.getText()));
-                genMarkerService.save(height);
-            }
-        });
-        GAITWeight.textProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                IGenMarkInfoModel weight = genMarkerService.findByMRN(visitMRN.getText());
-                weight.setWeight(Integer.valueOf(GAITWeight.getText()));
-                genMarkerService.save(weight);
-            }
-        });
-        GAITRFL.textProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                IGenMarkInfoModel rfl = genMarkerService.findByMRN(visitMRN.getText());
-                rfl.setRightFootLength(GAITRFL.getText());
-                genMarkerService.save(rfl);
-            }
-        });
-        GAITLFL.textProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                IGenMarkInfoModel lfl = genMarkerService.findByMRN(visitMRN.getText());
-                lfl.setLeftFootLength(GAITLFL.getText());
-                genMarkerService.save(lfl);
-            }
-        });
-        GAITRFW.textProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                IGenMarkInfoModel rfw = genMarkerService.findByMRN(visitMRN.getText());
-                rfw.setRightFootWidth(GAITRFW.getText());
-                genMarkerService.save(rfw);
-            }
-        });
-        GAITLFW.textProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                IGenMarkInfoModel lfw =  genMarkerService.findByMRN(visitMRN.getText());
-                lfw.setLeftFootWidth(GAITLFW.getText());
-                genMarkerService.save(lfw);
-            }
-        });
+//        GAITHeight.textProperty().addListener((observable, oldValue, newValue) -> {
+//            IGenMarkInfoModel height = genMarkerService.findByPatientId((Integer.valueOf(patientId.getText())));
+//            height.setHeight(Integer.valueOf(GAITHeight.getText()));
+//            genMarkerService.save(height);
+//            System.out.println(GAITHeight);
+//        });
+//        GAITWeight.textProperty().addListener((observable, oldValue, newValue) -> {
+//            IGenMarkInfoModel weight = genMarkerService.findByPatientId((Integer.valueOf(patientId.getText())));
+//            weight.setWeight(Integer.valueOf(GAITWeight.getText()));
+//            genMarkerService.save(weight);
+//        });
+//        GAITRFL.textProperty().addListener((observable, oldValue, newValue) -> {
+//            IGenMarkInfoModel rfl = genMarkerService.findByPatientId((Integer.valueOf(patientId.getText())));
+//            rfl.setRightFootLength(GAITRFL.getText());
+//            genMarkerService.save(rfl);
+//        });
+//        GAITLFL.textProperty().addListener((observable, oldValue, newValue) -> {
+//            IGenMarkInfoModel lfl = genMarkerService.findByPatientId((Integer.valueOf(patientId.getText())));
+//            lfl.setLeftFootLength(GAITLFL.getText());
+//            genMarkerService.save(lfl);
+//        });
+//        GAITRFW.textProperty().addListener((observable, oldValue, newValue) -> {
+//            IGenMarkInfoModel rfw = genMarkerService.findByPatientId((Integer.valueOf(patientId.getText())));
+//            rfw.setRightFootWidth(GAITRFW.getText());
+//            genMarkerService.save(rfw);
+//        });
+//        GAITLFW.textProperty().addListener((observable, oldValue, newValue) -> {
+//            IGenMarkInfoModel lfw =  genMarkerService.findByPatientId((Integer.valueOf(patientId.getText())));
+//            lfw.setLeftFootWidth(GAITLFW.getText());
+//            genMarkerService.save(lfw);
+//        });
+//        GAITAS1.textProperty().addListener((observable, oldValue, newValue) -> {
+//            IGenMarkInfoModel as1 = genMarkerService.findByPatientId((Integer.valueOf(patientId.getText())));
+//            as1.setAS1(GAITAS1.getText());
+//            genMarkerService.save(as1);
+//        });
+//        GAITAS2.textProperty().addListener((observable, oldValue, newValue) -> {
+//            IGenMarkInfoModel as2 = genMarkerService.findByPatientId((Integer.valueOf(patientId.getText())));
+//            as2.setAS1(GAITAS2.getText());
+//            genMarkerService.save(as2);
+//        });
+//        GAITAS3.textProperty().addListener((observable, oldValue, newValue) -> {
+//            IGenMarkInfoModel as3 = genMarkerService.findByPatientId((Integer.valueOf(patientId.getText())));
+//            as3.setAS1(GAITAS3.getText());
+//            genMarkerService.save(as3);
+//        });
+//        GAITAS4.textProperty().addListener((observable, oldValue, newValue) -> {
+//            IGenMarkInfoModel as4 = genMarkerService.findByPatientId((Integer.valueOf(patientId.getText())));
+//            as4.setAS1(GAITAS4.getText());
+//            genMarkerService.save(as4);
+//        });
+//        GAITAS5.textProperty().addListener((observable, oldValue, newValue) -> {
+//            IGenMarkInfoModel as5 = genMarkerService.findByPatientId((Integer.valueOf(patientId.getText())));
+//            as5.setAS1(GAITAS5.getText());
+//            genMarkerService.save(as5);
+//        });
+//        GAITAS6.textProperty().addListener((observable, oldValue, newValue) -> {
+//            IGenMarkInfoModel as6 = genMarkerService.findByPatientId((Integer.valueOf(patientId.getText())));
+//            as6.setAS1(GAITAS6.getText());
+//            genMarkerService.save(as6);
+//        });
 
+
+//        GMFCSCombo.getItems().addListener(new ChangeListener<String>() {
+//            @Override
+//            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+//                IGenMarkInfoModel gmfcs = genMarkerService.findByPatientId((Integer.valueOf(patientId.getText())));
+//                gmfcs.setGmfcs(GMFCSCombo.getValue());
+//                genMarkerService.save(gmfcs);
+//            }
+//        });
 
         /*
         data tree
          */
-        GMFCSCombo.getItems().setAll(gmfcsOptions);
-        FMS5M.getItems().setAll(fms5mOptions);
-        FMS50M.getItems().setAll(fms50mOptions);
-        FMS500M.getItems().setAll(fms500mOptions);
-        illopsoasRInterp.getItems().setAll(motorControlInterpCB);
-        illopsoasLInterp.getItems().setAll(motorControlInterpCB);
-        gluteMedLInterp.getItems().setAll(motorControlInterpCB);
-        gluteMaxRInterp.getItems().setAll(motorControlInterpCB);
-        hipAddRInterp.getItems().setAll(motorControlInterpCB);
-        hipAddLInterp.getItems().setAll(motorControlInterpCB);
-        gluteMedLInterp.getItems().setAll(motorControlInterpCB);
-        gluteMedRInterp.getItems().setAll(motorControlInterpCB);
-        quadsLinterp.getItems().setAll(motorControlInterpCB);
-        quadsRInterp.getItems().setAll(motorControlInterpCB);
-        hamstringLinterp.getItems().setAll(motorControlInterpCB);
-        hamstringRInterp.getItems().setAll(motorControlInterpCB);
-        antRInterp.getItems().setAll(motorControlInterpCB);
-        antLInterp.getItems().setAll(motorControlInterpCB);
-        gastroLInterp.getItems().setAll(motorControlInterpCB);
-        gastroRInterp.getItems().setAll(motorControlInterpCB);
-        postTibLinterp.getItems().setAll(motorControlInterpCB);
-        postTibRInterp.getItems().setAll(motorControlInterpCB);
-        soleusLinterp.getItems().setAll(motorControlInterpCB);
-        soleusRinterp.getItems().setAll(motorControlInterpCB);
-        peronLinterp.getItems().setAll(motorControlInterpCB);
-        peronRinterp.getItems().setAll(motorControlInterpCB);
-        proximalLinterp.getItems().setAll(motorControlInterpCB);
-        proximalRInterp.getItems().setAll(motorControlInterpCB);
-        distaleLinterp.getItems().setAll(motorControlInterpCB);
-        distaleRinterp.getItems().setAll(motorControlInterpCB);
-        TillipsoasLinterp.getItems().setAll(toneOptions);
-        TillipsoasRinterp.getItems().setAll(toneOptions);
-        TgluteMaxLinterp.getItems().setAll(toneOptions);
-        TgluteMaxRinterp.getItems().setAll(toneOptions);
-        TaddRinterp.getItems().setAll(toneOptions);
-        TaddLinterp.getItems().setAll(toneOptions);
-        TrecFemLinterp.getItems().setAll(toneOptions);
-        TrecFemRInterp.getItems().setAll(toneOptions);
-        TrecCatchLinterp.getItems().setAll(toneOptions);
-        TrecCatchRinterp.getItems().setAll(toneOptions);
-        TvastmedLinterp.getItems().setAll(toneOptions);
-        TvastmedRInterp.getItems().setAll(toneOptions);
-        ThamstringLinterp.getItems().setAll(toneOptions);
-        ThamstringRinterp.getItems().setAll(toneOptions);
-        TpostTibLinterp.getItems().setAll(toneOptions);
-        TpostTibRInterp.getItems().setAll(toneOptions);
-        TantRInterp.getItems().setAll(toneOptions);
-        TantLinterp.getItems().setAll(toneOptions);
-        TgastroLinterp.getItems().setAll(toneOptions);
-        TgastroRinterp.getItems().setAll(toneOptions);
-        TclonusLinterp.getItems().setAll(toneOptions);
-        TclonusRinterp.getItems().setAll(toneOptions);
-        TkneeJerLinterp.getItems().setAll(toneOptions);
-        TkneeJerRinterp.getItems().setAll(toneOptions);
-        RankJerLinterp.getItems().setAll(toneOptions);
-        RankJerRinterp.getItems().setAll(toneOptions);
-        TbabinLinterp.getItems().setAll(toneOptions);
-        TbabinRinterp.getItems().setAll(toneOptions);
-        TproxLinterp.getItems().setAll(toneOptions);
-        TproxRinterp.getItems().setAll(toneOptions);
-        TdistalLinterp.getItems().setAll(toneOptions);
-        TdistalRinterp.getItems().setAll(toneOptions);
-        hipRP.getItems().setAll(promOptions);
-        hipLP.getItems().setAll(promOptions);
-        hipRS.getItems().setAll(promOptions);
-        hipLS.getItems().setAll(promOptions);
-        hipExtRP.getItems().setAll(promOptions);
-        hipExtLP.getItems().setAll(promOptions);
-        hipExtLS.getItems().setAll(promOptions);
-        hipExtRS.getItems().setAll(promOptions);
-        hipAbdRP.getItems().setAll(promOptions);
-        hipAbdLP.getItems().setAll(promOptions);
-        hipAbdLS.getItems().setAll(promOptions);
-        hipAbdRS.getItems().setAll(promOptions);
-        hipIntRotLP.getItems().setAll(promOptions);
-        hipIntRotRP.getItems().setAll(promOptions);
-        hipIntRotLS.getItems().setAll(promOptions);
-        hipIntRotRS.getItems().setAll(promOptions);
-        hipExtRotRS.getItems().setAll(promOptions);
-        hipExtRotLS.getItems().setAll(promOptions);
-        hipExtRotRP.getItems().setAll(promOptions);
-        hipExtRotLP.getItems().setAll(promOptions);
-        ryderLP.getItems().setAll(promOptions);
-        ryderLS.getItems().setAll(promOptions);
-        ryderRP.getItems().setAll(promOptions);
-        ryderRS.getItems().setAll(promOptions);
-        kneeExtRP.getItems().setAll(promOptions);
-        kneeExtLP.getItems().setAll(promOptions);
-        kneeExtRS.getItems().setAll(promOptions);
-        kneeExtLS.getItems().setAll(promOptions);
-        extLagLP.getItems().setAll(promOptions);
-        extLagLS.getItems().setAll(promOptions);
-        extLagRP.getItems().setAll(promOptions);
-        extLagRS.getItems().setAll(promOptions);
-        kneeFlexRP.getItems().setAll(promOptions);
-        kneeFlexLP.getItems().setAll(promOptions);
-        kneeFlexLS.getItems().setAll(promOptions);
-        kneeFlexRS.getItems().setAll(promOptions);
-        popAngLP.getItems().setAll(promOptions);
-        popAngRP.getItems().setAll(promOptions);
-        popAngLS.getItems().setAll(promOptions);
-        popAngRS.getItems().setAll(promOptions);
-        biPopAngLP.getItems().setAll(promOptions);
-        biPopAngRP.getItems().setAll(promOptions);
-        elyTestLP.getItems().setAll(promOptions);
-        elyTestRP.getItems().setAll(promOptions);
-        dorsiFlexLP.getItems().setAll(promOptions);
-        dorsiFlexRP.getItems().setAll(promOptions);
-        dorsiExtLP.getItems().setAll(promOptions);
-        dorsiExtRP.getItems().setAll(promOptions);
-        plantarLP.getItems().setAll(promOptions);
-        plantarRP.getItems().setAll(promOptions);
-        plantarLS.getItems().setAll(promOptions);
-        plantarRS.getItems().setAll(promOptions);
-        ankleInvLP.getItems().setAll(promOptions);
-        ankleInvRP.getItems().setAll(promOptions);
-        ankleInvLS.getItems().setAll(promOptions);
-        ankleInvRS.getItems().setAll(promOptions);
-        ankleEverLP.getItems().setAll(promOptions);
-        ankleEverRP.getItems().setAll(promOptions);
-        ankleEverLS.getItems().setAll(promOptions);
-        ankleEverRS.getItems().setAll(promOptions);
-        tmaLP.getItems().setAll(promOptions);
-        tmaRP.getItems().setAll(promOptions);
-        tfaLP.getItems().setAll(promOptions);
-        tfaRP.getItems().setAll(promOptions);
-        ffLP.getItems().setAll(promOptions);
-        ffRP.getItems().setAll(promOptions);
-        calEverLP.getItems().setAll(promOptions);
-        calEverRP.getItems().setAll(promOptions);
-        calInvLP.getItems().setAll(promOptions);
-        calInvRP.getItems().setAll(promOptions);
-        legLengthRP.getItems().setAll(promOptions);
-        legLengthLP.getItems().setAll(promOptions);
-        kneeVarusLP.getItems().setAll(promOptions);
-        kneeVarusRP.getItems().setAll(promOptions);
+//        GMFCSCombo.getItems().setAll(gmfcsOptions);
+//        FMS5M.getItems().setAll(fms5mOptions);
+//        FMS50M.getItems().setAll(fms50mOptions);
+//        FMS500M.getItems().setAll(fms500mOptions);
+//        illopsoasRInterp.getItems().setAll(motorControlInterpCB);
+//        illopsoasLInterp.getItems().setAll(motorControlInterpCB);
+//        gluteMedLInterp.getItems().setAll(motorControlInterpCB);
+//        gluteMaxRInterp.getItems().setAll(motorControlInterpCB);
+//        hipAddRInterp.getItems().setAll(motorControlInterpCB);
+//        hipAddLInterp.getItems().setAll(motorControlInterpCB);
+//        gluteMedLInterp.getItems().setAll(motorControlInterpCB);
+//        gluteMedRInterp.getItems().setAll(motorControlInterpCB);
+//        quadsLinterp.getItems().setAll(motorControlInterpCB);
+//        quadsRInterp.getItems().setAll(motorControlInterpCB);
+//        hamstringLinterp.getItems().setAll(motorControlInterpCB);
+//        hamstringRInterp.getItems().setAll(motorControlInterpCB);
+//        antRInterp.getItems().setAll(motorControlInterpCB);
+//        antLInterp.getItems().setAll(motorControlInterpCB);
+//        gastroLInterp.getItems().setAll(motorControlInterpCB);
+//        gastroRInterp.getItems().setAll(motorControlInterpCB);
+//        postTibLinterp.getItems().setAll(motorControlInterpCB);
+//        postTibRInterp.getItems().setAll(motorControlInterpCB);
+//        soleusLinterp.getItems().setAll(motorControlInterpCB);
+//        soleusRinterp.getItems().setAll(motorControlInterpCB);
+//        peronLinterp.getItems().setAll(motorControlInterpCB);
+//        peronRinterp.getItems().setAll(motorControlInterpCB);
+//        proximalLinterp.getItems().setAll(motorControlInterpCB);
+//        proximalRInterp.getItems().setAll(motorControlInterpCB);
+//        distaleLinterp.getItems().setAll(motorControlInterpCB);
+//        distaleRinterp.getItems().setAll(motorControlInterpCB);
+//        TillipsoasLinterp.getItems().setAll(toneOptions);
+//        TillipsoasRinterp.getItems().setAll(toneOptions);
+//        TgluteMaxLinterp.getItems().setAll(toneOptions);
+//        TgluteMaxRinterp.getItems().setAll(toneOptions);
+//        TaddRinterp.getItems().setAll(toneOptions);
+//        TaddLinterp.getItems().setAll(toneOptions);
+//        TrecFemLinterp.getItems().setAll(toneOptions);
+//        TrecFemRInterp.getItems().setAll(toneOptions);
+//        TrecCatchLinterp.getItems().setAll(toneOptions);
+//        TrecCatchRinterp.getItems().setAll(toneOptions);
+//        TvastmedLinterp.getItems().setAll(toneOptions);
+//        TvastmedRInterp.getItems().setAll(toneOptions);
+//        ThamstringLinterp.getItems().setAll(toneOptions);
+//        ThamstringRinterp.getItems().setAll(toneOptions);
+//        TpostTibLinterp.getItems().setAll(toneOptions);
+//        TpostTibRInterp.getItems().setAll(toneOptions);
+//        TantRInterp.getItems().setAll(toneOptions);
+//        TantLinterp.getItems().setAll(toneOptions);
+//        TgastroLinterp.getItems().setAll(toneOptions);
+//        TgastroRinterp.getItems().setAll(toneOptions);
+//        TclonusLinterp.getItems().setAll(toneOptions);
+//        TclonusRinterp.getItems().setAll(toneOptions);
+//        TkneeJerLinterp.getItems().setAll(toneOptions);
+//        TkneeJerRinterp.getItems().setAll(toneOptions);
+//        RankJerLinterp.getItems().setAll(toneOptions);
+//        RankJerRinterp.getItems().setAll(toneOptions);
+//        TbabinLinterp.getItems().setAll(toneOptions);
+//        TbabinRinterp.getItems().setAll(toneOptions);
+//        TproxLinterp.getItems().setAll(toneOptions);
+//        TproxRinterp.getItems().setAll(toneOptions);
+//        TdistalLinterp.getItems().setAll(toneOptions);
+//        TdistalRinterp.getItems().setAll(toneOptions);
+//        hipRP.getItems().setAll(promOptions);
+//        hipLP.getItems().setAll(promOptions);
+//        hipRS.getItems().setAll(promOptions);
+//        hipLS.getItems().setAll(promOptions);
+//        hipExtRP.getItems().setAll(promOptions);
+//        hipExtLP.getItems().setAll(promOptions);
+//        hipExtLS.getItems().setAll(promOptions);
+//        hipExtRS.getItems().setAll(promOptions);
+//        hipAbdRP.getItems().setAll(promOptions);
+//        hipAbdLP.getItems().setAll(promOptions);
+//        hipAbdLS.getItems().setAll(promOptions);
+//        hipAbdRS.getItems().setAll(promOptions);
+//        hipIntRotLP.getItems().setAll(promOptions);
+//        hipIntRotRP.getItems().setAll(promOptions);
+//        hipIntRotLS.getItems().setAll(promOptions);
+//        hipIntRotRS.getItems().setAll(promOptions);
+//        hipExtRotRS.getItems().setAll(promOptions);
+//        hipExtRotLS.getItems().setAll(promOptions);
+//        hipExtRotRP.getItems().setAll(promOptions);
+//        hipExtRotLP.getItems().setAll(promOptions);
+//        ryderLP.getItems().setAll(promOptions);
+//        ryderLS.getItems().setAll(promOptions);
+//        ryderRP.getItems().setAll(promOptions);
+//        ryderRS.getItems().setAll(promOptions);
+//        kneeExtRP.getItems().setAll(promOptions);
+//        kneeExtLP.getItems().setAll(promOptions);
+//        kneeExtRS.getItems().setAll(promOptions);
+//        kneeExtLS.getItems().setAll(promOptions);
+//        extLagLP.getItems().setAll(promOptions);
+//        extLagLS.getItems().setAll(promOptions);
+//        extLagRP.getItems().setAll(promOptions);
+//        extLagRS.getItems().setAll(promOptions);
+//        kneeFlexRP.getItems().setAll(promOptions);
+//        kneeFlexLP.getItems().setAll(promOptions);
+//        kneeFlexLS.getItems().setAll(promOptions);
+//        kneeFlexRS.getItems().setAll(promOptions);
+//        popAngLP.getItems().setAll(promOptions);
+//        popAngRP.getItems().setAll(promOptions);
+//        popAngLS.getItems().setAll(promOptions);
+//        popAngRS.getItems().setAll(promOptions);
+//        biPopAngLP.getItems().setAll(promOptions);
+//        biPopAngRP.getItems().setAll(promOptions);
+//        elyTestLP.getItems().setAll(promOptions);
+//        elyTestRP.getItems().setAll(promOptions);
+//        dorsiFlexLP.getItems().setAll(promOptions);
+//        dorsiFlexRP.getItems().setAll(promOptions);
+//        dorsiExtLP.getItems().setAll(promOptions);
+//        dorsiExtRP.getItems().setAll(promOptions);
+//        plantarLP.getItems().setAll(promOptions);
+//        plantarRP.getItems().setAll(promOptions);
+//        plantarLS.getItems().setAll(promOptions);
+//        plantarRS.getItems().setAll(promOptions);
+//        ankleInvLP.getItems().setAll(promOptions);
+//        ankleInvRP.getItems().setAll(promOptions);
+//        ankleInvLS.getItems().setAll(promOptions);
+//        ankleInvRS.getItems().setAll(promOptions);
+//        ankleEverLP.getItems().setAll(promOptions);
+//        ankleEverRP.getItems().setAll(promOptions);
+//        ankleEverLS.getItems().setAll(promOptions);
+//        ankleEverRS.getItems().setAll(promOptions);
+//        tmaLP.getItems().setAll(promOptions);
+//        tmaRP.getItems().setAll(promOptions);
+//        tfaLP.getItems().setAll(promOptions);
+//        tfaRP.getItems().setAll(promOptions);
+//        ffLP.getItems().setAll(promOptions);
+//        ffRP.getItems().setAll(promOptions);
+//        calEverLP.getItems().setAll(promOptions);
+//        calEverRP.getItems().setAll(promOptions);
+//        calInvLP.getItems().setAll(promOptions);
+//        calInvRP.getItems().setAll(promOptions);
+//        legLengthRP.getItems().setAll(promOptions);
+//        legLengthLP.getItems().setAll(promOptions);
+//        kneeVarusLP.getItems().setAll(promOptions);
+//        kneeVarusRP.getItems().setAll(promOptions);
+//
+//
+//
+//
+//        physExamGait.setOnSelectionChanged(e -> {
+//            PauseTransition delay = new PauseTransition(Duration.seconds(1));
+//
+//            BorderPane borderPane = new BorderPane();
+//            Scene currentScene=new Scene(borderPane,200,10);
+//            Stage popoverStage= new Stage();
+//
+//            popoverStage.alwaysOnTopProperty();
+//            popoverStage.initStyle(StageStyle.UTILITY);
+//            popoverStage.setTitle("All changes have been saved.");
+//            popoverStage.setScene(currentScene);
+//            popoverStage.setY(650);
+//            popoverStage.setX(100);
+//            popoverStage.show();
+//            delay.setOnFinished(event -> popoverStage.close());
+//            delay.play();
+//        });
+//
+//
+//
+//        /*
+//        need to see if this is in use.
+//         */
+//        // adding to the tree view
+//        kinematics.getChildren().addAll(hipJointAngles, ankleJointAngles);
+//        footKinematics.getChildren().addAll(lateralForefoot, medialForefoot);
+//        kinetics.getChildren().addAll(hipJoint, kneeJoint, ankleJoint);
+//        pngFiles.getChildren().addAll(kinematics);
+//        pngFiles.getChildren().addAll(footKinematics);
+//        pngFiles.getChildren().addAll(kinetics);
+//
+//        parent2DataRoot.getChildren().addAll(showAll);
+//        parent2DataRoot.getChildren().addAll(pngFiles);
+//
+//        parent2DataRoot.setExpanded(true);
+//        dataTable.setRoot(parent2DataRoot);
+//        this.dataTable.setShowRoot(false);
 
 
-
-
-        physExamGait.setOnSelectionChanged(e -> {
-            PauseTransition delay = new PauseTransition(Duration.seconds(1));
-
-            BorderPane borderPane = new BorderPane();
-            Scene currentScene=new Scene(borderPane,200,10);
-            Stage popoverStage= new Stage();
-
-            popoverStage.alwaysOnTopProperty();
-            popoverStage.initStyle(StageStyle.UTILITY);
-            popoverStage.setTitle("All changes have been saved.");
-            popoverStage.setScene(currentScene);
-            popoverStage.setY(650);
-            popoverStage.setX(100);
-            popoverStage.show();
-            delay.setOnFinished(event -> popoverStage.close());
-            delay.play();
-        });
-
-
-
-        /*
-        need to see if this is in use.
-         */
-        // adding to the tree view
-        kinematics.getChildren().addAll(hipJointAngles, ankleJointAngles);
-        footKinematics.getChildren().addAll(lateralForefoot, medialForefoot);
-        kinetics.getChildren().addAll(hipJoint, kneeJoint, ankleJoint);
-        pngFiles.getChildren().addAll(kinematics);
-        pngFiles.getChildren().addAll(footKinematics);
-        pngFiles.getChildren().addAll(kinetics);
-
-        parent2DataRoot.getChildren().addAll(showAll);
-        parent2DataRoot.getChildren().addAll(pngFiles);
-
-        parent2DataRoot.setExpanded(true);
-        dataTable.setRoot(parent2DataRoot);
-        this.dataTable.setShowRoot(false);
-
-
+    }
+    private IPatientModel patientModel;
+   public void setPatientId(IPatientModel patientModel){
+        this.patientModel = patientModel;
+        patientId.setText(String.valueOf(patientModel.getPatientID()));
     }
 
     Image lateralForeFoot = new Image(String.valueOf(getClass().getResource("/images/99999999_052223_LateralForeFoot.png")));

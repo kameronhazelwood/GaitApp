@@ -71,8 +71,8 @@ public class FormModuleController implements Initializable {
     }
     public void onPatientClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setControllerFactory(applicationContext::getBean);
         loader.setLocation(getClass().getResource("/PatientModule.fxml"));
+        loader.setControllerFactory(applicationContext::getBean);
         Parent root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -90,8 +90,8 @@ public class FormModuleController implements Initializable {
 
     public void onSchedulerClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setControllerFactory(applicationContext::getBean);
         loader.setLocation(Launcher.class.getResource("/SchedulerModule.fxml"));
+        loader.setControllerFactory(applicationContext::getBean);
         Parent root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -108,8 +108,8 @@ public class FormModuleController implements Initializable {
 
     public void onReportsClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setControllerFactory(applicationContext::getBean);
         loader.setLocation(getClass().getResource("/ReportsModule.fxml"));
+        loader.setControllerFactory(applicationContext::getBean);
         Parent root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -126,8 +126,8 @@ public class FormModuleController implements Initializable {
 
     public void onAdminClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setControllerFactory(applicationContext::getBean);
         loader.setLocation(getClass().getResource("/AdminModule.fxml"));
+        loader.setControllerFactory(applicationContext::getBean);
         Parent root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -144,8 +144,8 @@ public class FormModuleController implements Initializable {
     @FXML
     public  void onQueriesClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setControllerFactory(applicationContext::getBean);
         loader.setLocation(getClass().getResource("/QueriesModule.fxml"));
+        loader.setControllerFactory(applicationContext::getBean);
         Parent root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -164,8 +164,8 @@ public class FormModuleController implements Initializable {
 
     public  void OnNewPatientClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setControllerFactory(applicationContext::getBean);
         loader.setLocation(getClass().getResource("/NewPatientModule.fxml"));
+        loader.setControllerFactory(applicationContext::getBean);
         Parent root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -173,6 +173,20 @@ public class FormModuleController implements Initializable {
 
         stage.getIcons().add(icon);
         stage.setTitle("Nemours Children's Hospital Gait Lab");
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    public void onFormClick(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/FormsModule.fxml"));
+        loader.setControllerFactory(applicationContext::getBean);
+        Parent root = loader.load();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setTitle("Nemours Children's Hospital  Lab");
+//        stage.setX(200);
+//        stage.setY(10);
         stage.setScene(scene);
         stage.show();
     }

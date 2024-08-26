@@ -1,14 +1,16 @@
 package com.example.gaitlabapp.model.clinicians;
 
+import com.example.gaitlabapp.model.patients.IPatientModel;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Set;
 
-@Data
 @Getter
+@Data
 @Setter
 @NoArgsConstructor
 @Entity
@@ -32,4 +34,14 @@ public class IFacilityModel {
     private String facState;
     @Column(name = "fac_city")
     private String facCity;
+    @Column(name = "patientId")
+    private Integer patientId;
+
+
+    @ManyToMany
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+            inverseJoinColumns = @JoinColumn(name = "patient_id"))
+
+    Set<IPatientModel> patientID;
+
 }

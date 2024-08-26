@@ -1,11 +1,15 @@
 package com.example.gaitlabapp.model.forms;
 
+import com.example.gaitlabapp.model.patients.IPatientModel;
+import com.example.gaitlabapp.model.visits.IAppointmentModel;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
+
+import java.util.Set;
 
 @Getter
 @Data
@@ -305,5 +309,14 @@ public class IPromModel {
     @Column(name = "ankle_ev_strengl")
     private String ankleEvStrengL;
 
+    @Column(name = "patientId")
+    private Integer patientId;
+
+
+    @ManyToMany
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+            inverseJoinColumns = @JoinColumn(name = "patient_id"))
+
+    Set<IPatientModel> patientID;
 
 }

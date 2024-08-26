@@ -169,10 +169,16 @@ public class SchedulerModuleController implements Initializable {
 
     @FXML
     public void onSchedulerClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/SchedulerModule.fxml")));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Launcher.class.getResource("/SchedulerModule.fxml"));
+        loader.setControllerFactory(applicationContext::getBean);
+        Parent root = loader.load();
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        stage.setTitle("Nemours Children's Hospital  Lab");
+        Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
+
+        stage.getIcons().add(icon);
+        stage.setTitle("Nemours Children's Hospital Gait Lab");
 //        stage.setX(200);
 //        stage.setY(10);
         stage.setScene(scene);
@@ -180,7 +186,10 @@ public class SchedulerModuleController implements Initializable {
     }
 
     public void onFormClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/FormsModule.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/FormsModule.fxml"));
+        loader.setControllerFactory(applicationContext::getBean);
+        Parent root = loader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setTitle("Nemours Children's Hospital  Lab");
@@ -192,8 +201,11 @@ public class SchedulerModuleController implements Initializable {
 
     @FXML
     public void onPatientClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/PatientModule.fxml")));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/PatientModule.fxml"));
+        loader.setControllerFactory(applicationContext::getBean);
+        Parent root = loader.load();
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
 
@@ -208,8 +220,11 @@ public class SchedulerModuleController implements Initializable {
 
     @FXML
     public void onReportsClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/ReportsModule.fxml")));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/ReportsModule.fxml"));
+        loader.setControllerFactory(applicationContext::getBean);
+        Parent root = loader.load();
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
 
@@ -220,12 +235,16 @@ public class SchedulerModuleController implements Initializable {
         stage.setScene(scene);
         stage.show();
 
+
     }
 
     @FXML
     public void onAdminClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/AdminModule.fxml")));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/AdminModule.fxml"));
+        loader.setControllerFactory(applicationContext::getBean);
+        Parent root = loader.load();
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
 
@@ -240,15 +259,16 @@ public class SchedulerModuleController implements Initializable {
 
     @FXML
     public void onQueriesClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/QueriesModule.fxml")));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/QueriesModule.fxml"));
+        loader.setControllerFactory(applicationContext::getBean);
+        Parent root = loader.load();
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
 
         stage.getIcons().add(icon);
         stage.setTitle("Nemours Children's Hospital Gait Lab");
-//        stage.setX(200);
-//        stage.setY(10);
         stage.setScene(scene);
         stage.show();
     }
@@ -260,13 +280,19 @@ public class SchedulerModuleController implements Initializable {
     }
 
     public void OnNewPatientClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/NewPatientModule.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/NewPatientModule.fxml"));
+        loader.setControllerFactory(applicationContext::getBean);
+        Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
+        Parent root = loader.load();
+        NewPatientModuleController newPatientModuleController = loader.getController();
+
+
+
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
-
         stage.getIcons().add(icon);
-        stage.setTitle("Nemours Children's Hospital Gait Lab");
+        stage.setTitle("Nemours");
         stage.setScene(scene);
         stage.show();
     }

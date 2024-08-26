@@ -1,10 +1,13 @@
 package com.example.gaitlabapp.model.forms;
 
+import com.example.gaitlabapp.model.patients.IPatientModel;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
+
+import java.util.Set;
 
 @Setter
 @Getter
@@ -151,6 +154,15 @@ public class IAROMModel {
     private String thumbOppL_act;
     @Column(name = "thumb_oppL_pass")
     private String thumbOppL_pass;
+    @Column(name = "patientId")
+    private Integer patientId;
+
+
+    @ManyToMany
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+            inverseJoinColumns = @JoinColumn(name = "patient_id"))
+
+    Set<IPatientModel> patientID;
 
 //    public IAROMModel(Integer aromId, String shoulderAbductionR_act, String shoulderAbductionR_pass, String shoulderAbductionL_pass, String shoulderAbductionL_act, String shoulderFlexR_act, String shoulderFlexR_pass, String shoulderFlexL_act, String shoulderFlexL_pass, String shoulderInternRotR_act, String shoulderInternRotL_act, String shoulderInternRotL_pass, String shoulderInternRotR_pass, String shoulderExtRotR_pass, String shoulderExtRotR_act, String shoulderExtRotL_pass, String shoulderExtRotL_act, String elbowFlexR_act, String elbowFlexR_pass, String elbowFlexL_act, String elbowFlexL_pass, String elbowExtR_act, String elbowExtR_pass, String elbowExtL_act, String elbowExtL_pass, String forearmSupR_act, String forearmSupR_pass, String forearmSupL_pass, String forearmSupL_act, String forearmProL_pass, String forearmProR_pass, String forearmProR_act, String wristFlexR_act, String wristFlexR_pass, String wristFlexL_act, String wristFlexL_pass, String wristExtL_pass, String wristExtL_act, String wristExtR_pass, String wristExtR_act, String wristUlnarDevR_pass, String wristUlnarDevR_act, String wristUlnarDevL_pass, String wristUlnarDevL_act, String wristRadialDevR_act, String wristRadialDevR_pass, String wristRadialDevL_act, String wristRadialDevL_pass, String fingerFlexR_act, String fingerFlexR_pass, String fingerFlexL_act, String fingerFlexL_pass, String fingerExtR_pass, String fingerExtR_act, String fingerExtL_act, String fingerExtL_pass, String thumbPalmerR_pass, String thumbPalmerR_act, String thumbPalmerL_act, String thumbPalmerL_pass, String thumbMcpR_pass, String thumbMcpR_act, String thumbMcpL_act, String thumbMcpL_pass, String thumbOppR_pass, String thumbOppR_act, String thumbOppL_act, String thumbOppL_pass) {
 //        this.aromId = aromId;

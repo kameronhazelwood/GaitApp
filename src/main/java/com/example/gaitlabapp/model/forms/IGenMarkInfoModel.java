@@ -1,5 +1,6 @@
 package com.example.gaitlabapp.model.forms;
 
+import com.example.gaitlabapp.model.patients.IPatientModel;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -7,8 +8,9 @@ import lombok.Setter;
 import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
 
-@Data
+import java.util.Set;
 @Getter
+@Data
 @Setter
 @Entity
 @NoArgsConstructor
@@ -54,5 +56,14 @@ public class IGenMarkInfoModel {
     private String AS5;
     @Column(name = "AS6")
     private String AS6;
+    @Column(name = "patientId")
+    private Integer patientId;
+
+
+    @ManyToMany
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+            inverseJoinColumns = @JoinColumn(name = "patient_id"))
+
+    Set<IPatientModel> patientID;
 
 }

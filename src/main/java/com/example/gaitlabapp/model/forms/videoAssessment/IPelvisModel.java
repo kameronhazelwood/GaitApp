@@ -1,10 +1,13 @@
 package com.example.gaitlabapp.model.forms.videoAssessment;
 
+import com.example.gaitlabapp.model.patients.IPatientModel;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
+
+import java.util.Set;
 
 @Setter
 @Getter
@@ -33,6 +36,15 @@ public class IPelvisModel {
     private String incAnteriorTilt;
     @Column(name = "inc_Posterior_Tilt")
     private String incPosteriorTilt;
+    @Column(name = "patientId")
+    private Integer patientId;
+
+
+    @ManyToMany
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+            inverseJoinColumns = @JoinColumn(name = "patient_id"))
+
+    Set<IPatientModel> patientID;
 
 //    public IPelvisModel(Integer pelvisId, String leftRotatedForward, String rightRotatedForward, String leftSideDown, String rightSideDown, String leftTrendelenburg, String rightTrendelenburg, String incAnteriorTilt, String incPosteriorTilt) {
 //        this.pelvisId = pelvisId;

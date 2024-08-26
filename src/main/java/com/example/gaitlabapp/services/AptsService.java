@@ -9,7 +9,7 @@ public interface AptsService {
     Optional<IAppointmentModel> save(IAppointmentModel appointmentModel);
     Optional<IAppointmentModel> findByVisitType(String visitType);
     Optional<IAppointmentModel> findByVisitSubType(String visitSubType);
-    IAppointmentModel findByMRN(String mrn);
+    IAppointmentModel findByPatientId(Integer patientId);
     List<IAppointmentModel> findAll();
     void delete(Long id);
 }

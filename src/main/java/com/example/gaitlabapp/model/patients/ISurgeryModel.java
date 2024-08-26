@@ -5,38 +5,42 @@ import lombok.*;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
 
+@Getter
+@Setter
 @Data
 @Entity
-@Getter
 @NoArgsConstructor(force = true)
 @Table(name = "surgery")
 public class ISurgeryModel  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "surgery_id")
-    @Setter
     private Integer surgeryId;
     @Column(name = "surgery_date")
-    @Setter
     private String surgeryDate;
     @Column(name = "surgery_procedure")
-    @Setter
     private String surgeryProcedure;
     @Column(name = "surgery_side")
-    @Setter
     private String surgerySide;
     @Column(name = "surgeon")
-    @Setter
     private String surgeon;
     @Column(name = "facility")
-    @Setter
     private String facility;
     @Column(name = "comments")
-    @Setter
     private String comments;
+    @Column(name = "patientId")
+    private Integer patientId;
 
-    public ISurgeryModel(Integer surgeryId, String surgeryDate, String surgeryProcedure, String surgerySide, String surgeon, String facility, String comments){
+
+    @ManyToMany
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+            inverseJoinColumns = @JoinColumn(name = "patient_id"))
+
+    Set<IPatientModel> patientID;
+
+    public ISurgeryModel(Integer surgeryId, String surgeryDate, String surgeryProcedure, String surgerySide, String surgeon, String facility, String comments, Integer patientId){
         this.surgeryId = surgeryId;
         this.surgeryDate = surgeryDate;
         this.surgeryProcedure = surgeryProcedure;
@@ -44,6 +48,7 @@ public class ISurgeryModel  {
         this.surgeon = surgeon;
         this.facility = facility;
         this.comments = comments;
+        this.patientId = patientId;
     }
 
 

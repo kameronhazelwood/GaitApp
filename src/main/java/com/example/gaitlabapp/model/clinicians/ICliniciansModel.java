@@ -1,15 +1,17 @@
 package com.example.gaitlabapp.model.clinicians;
 
+import com.example.gaitlabapp.model.patients.IDiagnosisModel;
+import com.example.gaitlabapp.model.patients.IPatientModel;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Set;
 
-
-@Data
 @Getter
+@Data
 @Setter
 @NoArgsConstructor
 @Entity
@@ -49,5 +51,16 @@ public class ICliniciansModel {
     private Integer active;
     @Column(name = "clin_gender")
     private String clinGender;
+    @Column(name = "patientId")
+    private Integer patientid;
 
+    @ManyToMany
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+            inverseJoinColumns = @JoinColumn(name = "patient_id"))
+
+    Set<IPatientModel> patientID;
+
+    public ICliniciansModel(Integer patientid) {
+        this.patientid = patientid;
+    }
 }

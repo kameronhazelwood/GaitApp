@@ -1,5 +1,6 @@
 package com.example.gaitlabapp.controllers.Details;
 
+import com.example.gaitlabapp.services.WatchDirService;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
@@ -8,8 +9,12 @@ import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+import javax.swing.filechooser.FileView;
 import java.io.File;
 import java.net.URL;
+import java.nio.file.Path;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 public class PatientsPDFController implements Initializable {
@@ -17,6 +22,10 @@ public class PatientsPDFController implements Initializable {
     public Button addNewButton;
     public Pane pane;
     public ListView<File> files;
+    private static final String PDF_FILE_EXT = ".pdf";
+    private static final String WATCH_DIR = System.getProperty("C:\\Users\\sh0184\\images");
+    private WatchDirService watchDirService;
+    private Map<Path, FileView> fileViews = new HashMap<>();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -35,7 +44,8 @@ public class PatientsPDFController implements Initializable {
             if (selectedFile != null) {
                 files.getItems().add(new File(selectedFile.getName()));
             }
-            ;
+
+
 
 
 //                files.setCellFactory(file -> {

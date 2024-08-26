@@ -1,19 +1,21 @@
 package com.example.gaitlabapp.controllers;
 
 
-
+import com.example.gaitlabapp.controllers.Visits.VisitDetailsFootController;
+import com.example.gaitlabapp.controllers.Visits.VisitDetailsGaitController;
+import com.example.gaitlabapp.controllers.Visits.VisitDetailsUEController;
 import com.example.gaitlabapp.controllers.Wizards.AddSurgeryController;
 import com.example.gaitlabapp.controllers.Wizards.NewDiagnosisCodeController;
 import com.example.gaitlabapp.controllers.Wizards.AddHealthConditionController;
 import com.example.gaitlabapp.controllers.Wizards.AddBotoxController;
-import com.example.gaitlabapp.model.Model;
 import com.example.gaitlabapp.model.patients.*;
-import com.example.gaitlabapp.repo.PatientRepo;
 import com.example.gaitlabapp.services.DiagnosisService;
 import com.example.gaitlabapp.services.PatientService;
 import com.example.gaitlabapp.model.visits.IAppointmentModel;
+import javafx.beans.binding.Bindings;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -21,6 +23,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
+import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -34,31 +37,24 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.stage.*;
 import com.example.gaitlabapp.Launcher;
-import javafx.util.converter.DateStringConverter;
 import lombok.RequiredArgsConstructor;
-import net.rgielen.fxweaver.core.FxmlView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Scope;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
 
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.net.URL;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+import java.nio.file.*;
 import java.util.Objects;
-import java.util.Optional;
 import java.util.ResourceBundle;
+import java.util.function.Predicate;
 
 import static com.example.gaitlabapp.model.visits.IAppointmentModel.Type.*;
 
@@ -97,12 +93,13 @@ public class PatientModuleController implements Initializable {
     public TabPane patientTabPane;
     public Label dobLabel;
     public DatePicker picker;
+    public ScrollPane sp;
 
 
     ObservableList<IAppointmentModel> initialData() {
-        IAppointmentModel apt1 = new IAppointmentModel(1, "", "10/31/2023", "GAIT - Full Diagnostic", "Dr. Smith", GAIT);
-        IAppointmentModel apt2 = new IAppointmentModel(2, "", "2/8/2023", "Upper Extremity - Full Diagnostic", "Dr. Smith", UE);
-        IAppointmentModel apt3 = new IAppointmentModel(3, "", "3/12/2024", "Gait - Foot Evaluation", "Dr. Smith", FOOT);
+        IAppointmentModel apt1 = new IAppointmentModel(1, "", "10/31/2023", "GAIT - Full Diagnostic", "Dr. Smith", GAIT, 2);
+        IAppointmentModel apt2 = new IAppointmentModel(2, "", "2/8/2023", "Upper Extremity - Full Diagnostic", "Dr. Smith", UE, 2);
+        IAppointmentModel apt3 = new IAppointmentModel(3, "", "3/12/2024", "Gait - Foot Evaluation", "Dr. Smith", FOOT, 2);
         return FXCollections.observableArrayList(apt1, apt2, apt3);
     }
 
@@ -137,7 +134,7 @@ public class PatientModuleController implements Initializable {
     public TableView<IDiagnosisModel> diagnosisCodeTable;
 
     ObservableList<ISurgeryModel> initialPTSurgData() {
-        ISurgeryModel ptSur1 = new ISurgeryModel(12, "10/20/2023", "Other", "L", "surgeon", "facility", "comments");
+        ISurgeryModel ptSur1 = new ISurgeryModel(12, "10/20/2023", "Other", "L", "surgeon", "facility", "comments", 1);
         return FXCollections.observableArrayList(ptSur1);
     }
 
@@ -155,6 +152,7 @@ public class PatientModuleController implements Initializable {
         IDiagnosisModel ptDiag1 = new IDiagnosisModel("G800", "Spastic Quadriplegic Cerebral Palsy");
         return FXCollections.observableArrayList(ptDiag1);
     }
+
     @FXML
     public Tab visits;
     @FXML
@@ -179,73 +177,73 @@ public class PatientModuleController implements Initializable {
     public TextArea commentsTextField;
     @FXML
     private AnchorPane scenePane;
+
     @Autowired
     ConfigurableApplicationContext applicationContext;
 
 
-
-
     @Override
     public void initialize(URL PatientModule, ResourceBundle resourceBundle) {
+
         dobTextfield.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> ov, String t, String t1) {
-                if(t1.length() == 2 || t1.length() == 6){
-                    dobTextfield.setText(t1+" " + "/");
+                if (t1.length() == 2 || t1.length() == 6) {
+                    dobTextfield.setText(t1 + " " + "/");
                 }
             }
         });
-
-        patientNameTextField.textProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                IPatientModel patient = patientService.findByMrn(mrnTextfield.getText());
-                patient.setFirstName(patientNameTextField.getText());
-                patientService.save(patient);
-            }
-        });
-
-        LastNameTextField.textProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                IPatientModel patient = patientService.findByMrn(mrnTextfield.getText());
-                patient.setLastName(LastNameTextField.getText());
-                patientService.save(patient);
-            }
-        });
-
+//
+//        patientNameTextField.textProperty().addListener(new ChangeListener<String>() {
+//            @Override
+//            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+//                IPatientModel patient = patientService.findByMrn(mrnTextfield.getText());
+//                patient.setFirstName(patientNameTextField.getText());
+//                patientService.save(patient);
+//            }
+//        });
+//
+//        LastNameTextField.textProperty().addListener(new ChangeListener<String>() {
+//            @Override
+//            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+//                IPatientModel patient = patientService.findByMrn(mrnTextfield.getText());
+//                patient.setLastName(LastNameTextField.getText());
+//                patientService.save(patient);
+//            }
+//        });
+//
         preferredNameTextField.textProperty().addListener((obs, oldText, newText) -> {
             IPatientModel patient = patientService.findByMrn(mrnTextfield.getText());
             patient.setPreferredFirstName(preferredNameTextField.getText());
             patientService.save(patient);
         });
-
-        formerLastName.textProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                IPatientModel patient = patientService.findByMrn(mrnTextfield.getText());
-                patient.setPreferredFirstName(preferredNameTextField.getText());
-                patientService.save(patient);
-            }
-        });
-
-        genderTextfield.textProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                IPatientModel patient = patientService.findByMrn(mrnTextfield.getText());
-                patient.setDob(dobTextfield.getText());
-                patientService.save(patient);
-            }
-        });
-
-        commentsTextField.textProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                IPatientModel patient = patientService.findByMrn(mrnTextfield.getText());
-                patient.setComments(commentsTextField.getText());
-                patientService.save(patient);
-            }
-        });
+//
+//        formerLastName.textProperty().addListener(new ChangeListener<String>() {
+//            @Override
+//            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+//                IPatientModel patient = patientService.findByMrn(mrnTextfield.getText());
+//                patient.setPreferredFirstName(preferredNameTextField.getText());
+//                patientService.save(patient);
+//            }
+//        });
+//
+//        genderTextfield.textProperty().addListener(new ChangeListener<String>() {
+//            @Override
+//            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+//                IPatientModel patient = patientService.findByMrn(mrnTextfield.getText());
+//                patient.setDob(dobTextfield.getText());
+//                patientService.save(patient);
+//            }
+//        });
+//
+//        commentsTextField.textProperty().addListener(new ChangeListener<String>() {
+//            @Override
+//            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+//                IPatientModel patient = patientService.findByMrn(mrnTextfield.getText());
+//                patient.setComments(commentsTextField.getText());
+//                patientService.save(patient);
+//            }
+//        });
 
        /*
         apt data and context menu
@@ -455,37 +453,21 @@ public class PatientModuleController implements Initializable {
         /*
         patient filter
          */
-//        TextField patientSearch = new TextField();
-//        patientSearch.setPrefWidth(200);
-//        FilteredList<IPatientModel> filteredList = new FilteredList<>(listviewPatient, b -> true);
-//        patientSearch.textProperty().addListener((obs, oldValue, newValue) -> {
-//            filteredList.setPredicate(patient -> {
-//                if (newValue == null || newValue.isEmpty()) {
-//                    return true;
-//                }
-//                String lowerCaseFilter = newValue.toLowerCase();
-//
-//                if (patient.getFname().toLowerCase().contains(lowerCaseFilter)) {
-//                    return true;
-//                } else if(patient.getLname().toLowerCase().contains(lowerCaseFilter)) {
-//                    return true;
-//                }else if(String.valueOf(patient.getMrn()).contains(lowerCaseFilter)){
-//                    return true;
-//                }else return false;
-//            });
-//        });
-//        SortedList<IPatientModel> sortedList = new SortedList<>(filteredList);
-//        sortedList.comparatorProperty().bind(patientTable.comparatorProperty());
-//        patientTable.setItems(sortedList);
+
 
     }
 
-    private static void showDetails(IAppointmentModel appointmentModel) {
+    public void showDetails(IAppointmentModel appointmentModel) {
         try {
             switch (appointmentModel.getType()) {
                 case GAIT -> {
+
                     Parent popUp;
-                    popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Visits/VisitDetailsGait.fxml")));
+                    FXMLLoader fxmlLoader = new FXMLLoader(PatientModuleController.class.getResource("/Visits/VisitDetailsGait.fxml"));
+                    fxmlLoader.setControllerFactory(applicationContext::getBean);
+                    VisitDetailsGaitController visitDetailsGaitController = fxmlLoader.getController();
+                    //   visitDetailsGaitController.setPatientId(patientModel);
+                    popUp = fxmlLoader.load();
                     Stage stage1 = new Stage();
                     stage1.setTitle("GAIT Visit Details:   ");
                     //height 680 width 800
@@ -494,7 +476,10 @@ public class PatientModuleController implements Initializable {
                 }
                 case UE -> {
                     Parent popUp;
-                    popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Visits/VisitDetailsUE.fxml")));
+                    FXMLLoader fxmlLoader = new FXMLLoader(PatientModuleController.class.getResource("/Visits/VisitDetailsUE.fxml"));
+                    fxmlLoader.setControllerFactory(applicationContext::getBean);
+                    VisitDetailsUEController visitDetailsUEController = fxmlLoader.getController();
+                    popUp = fxmlLoader.load();
                     Stage stage1 = new Stage();
                     stage1.setTitle("UE Visit Details:   ");
                     //height 680 width 800
@@ -503,7 +488,10 @@ public class PatientModuleController implements Initializable {
                 }
                 case FOOT -> {
                     Parent popUp;
-                    popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Visits/VisitDetailsFootEval.fxml")));
+                    FXMLLoader fxmlLoader = new FXMLLoader(PatientModuleController.class.getResource("/Visits/VisitDetailsFootEval.fxml"));
+                    fxmlLoader.setControllerFactory(applicationContext::getBean);
+                    VisitDetailsFootController visitDetailsFootController = fxmlLoader.getController();
+                    popUp = fxmlLoader.load();
                     Stage stage1 = new Stage();
                     stage1.setTitle("Foot Eval Visit Details:   ");
                     //height 680 width 800
@@ -584,20 +572,57 @@ public class PatientModuleController implements Initializable {
         }
     }
 
-   TextField patientSearch = new TextField();
+    TextField patientSearch = new TextField();
     private final ObservableList<IPatientModel> listviewPatient = FXCollections.observableArrayList();
-
-    private final String defaultVal = "Select...";
+    private final String defaultVal = "Select Patient...";
     ObjectProperty<IPatientModel> valueObj = new SimpleObjectProperty<>();
     TableView<IPatientModel> patientTable = buildTable(valueObj);
     @Autowired
     PatientService patientService;
 
     public void onDisplayPatients() {
+        patientTable.refresh();
         Popup popup = new Popup();
-        popup.getContent().addAll(patientTable);
+        popup.getContent().addAll(patientTable, patientSearch);
         popup.setAutoHide(true);
-       patientTable.setItems(FXCollections.observableArrayList(patientService.findAll()));
+
+        listviewPatient.addAll(FXCollections.observableArrayList(patientService.findAll()));
+        patientTable.setItems(listviewPatient);
+
+        //patientTable.setItems(FXCollections.observableArrayList(patientService.findAll()));
+
+        VBox vBox = new VBox(1, patientSearch, patientTable);
+        popup.getContent().add(vBox);
+        patientTable.setPrefWidth(300);
+        patientSearch.setPrefWidth(300);
+
+        /*
+        patient search filtering
+         */
+        ObjectProperty<Predicate<IPatientModel>> fnameFilter = new SimpleObjectProperty<>();
+        ObjectProperty<Predicate<IPatientModel>> lnameFilter = new SimpleObjectProperty<>();
+        ObjectProperty<Predicate<IPatientModel>> mrnFilter = new SimpleObjectProperty<>();
+
+        fnameFilter.bind(Bindings.createObjectBinding(() ->
+                        person -> person.getFirstName().toLowerCase().contains(patientSearch.getText().toLowerCase()),
+                patientSearch.textProperty()));
+        lnameFilter.bind(Bindings.createObjectBinding(() ->
+                        person -> person.getLastName().toLowerCase().contains(patientSearch.getText().toLowerCase()),
+                patientSearch.textProperty()));
+        mrnFilter.bind(Bindings.createObjectBinding(() ->
+                        person -> person.getMrn().toLowerCase().contains(patientSearch.getText().toLowerCase()),
+                patientSearch.textProperty()));
+
+        FilteredList<IPatientModel> filteredItems = new FilteredList<>(FXCollections.observableList(listviewPatient));
+        patientTable.setItems(filteredItems);
+
+        filteredItems.predicateProperty().bind(Bindings.createObjectBinding(
+                () -> fnameFilter.get().or(lnameFilter.get().or(mrnFilter.get())),
+                fnameFilter, lnameFilter, mrnFilter));
+
+        /*
+        styling of the dropdown
+         */
 
         Label valueLabel = new Label(defaultVal);
         valueLabel.setMaxWidth(Double.POSITIVE_INFINITY);
@@ -609,6 +634,7 @@ public class PatientModuleController implements Initializable {
 
         HBox pane = new HBox(100, valueLabel);
         pane.setSpacing(100);
+        patientSearch.setPromptText("Keywords");
 
         pane.setAlignment(Pos.CENTER);
         pane.setMaxWidth(Double.POSITIVE_INFINITY);
@@ -622,10 +648,16 @@ public class PatientModuleController implements Initializable {
             }
         });
 
+        dropDownBtn.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                patientSearch.clear();
+            }
+        });
+
         valueObj.addListener((obs, old, val) -> {
             if (val != null) {
-                valueLabel.setText(val.getMrn() + " ");
-               // valueLabel.setText(val.getMrn() + "  " + val.getFirstName()) + "  " + val.getLastName());
+                valueLabel.setText(val.getMrn() + ",  " + val.getFirstName() + "  " + val.getLastName());
                 patientNameTextField.setText(val.getFirstName());
                 LastNameTextField.setText(val.getLastName());
                 preferredNameTextField.setText(val.getPreferredFirstName());
@@ -639,11 +671,7 @@ public class PatientModuleController implements Initializable {
             }
             popup.hide();
         });
-
     }
-
-    private final ObservableList<IPatientModel> listView = FXCollections.observableArrayList();
-
 
     private TableView<IPatientModel> buildTable(ObjectProperty<IPatientModel> valueObj) {
 
@@ -710,6 +738,7 @@ public class PatientModuleController implements Initializable {
 
         return addSurgeryController.isSaved() ? surgeryModel : null;
     }
+
     private Window getMyWindow() {
         return surgeryTableView.getScene().getWindow();
     }
@@ -718,6 +747,7 @@ public class PatientModuleController implements Initializable {
     add diagnosis codes
      */
     private final DiagnosisService diagnosisService;
+
     public void addDiagnosisCode() {
         int selectedIndex = diagnosisCodeTable.getSelectionModel().getSelectedIndex();
         String selectedItem = String.valueOf(diagnosisCodeTable.getSelectionModel().getSelectedItems());
@@ -894,7 +924,7 @@ public class PatientModuleController implements Initializable {
         FXMLLoader loader = new FXMLLoader();
         loader.setControllerFactory(applicationContext::getBean);
         loader.setLocation(getClass().getResource("/AdminModule.fxml"));
-        Parent root =loader.load();
+        Parent root = loader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setTitle("Nemours Children's Hospital  Lab");
@@ -924,8 +954,8 @@ public class PatientModuleController implements Initializable {
     }
 
     public void logout() {
-            stage = (Stage) scenePane.getScene().getWindow();
-            stage.close();
+        stage = (Stage) scenePane.getScene().getWindow();
+        stage.close();
     }
 
     public void OnNewPatientClick(ActionEvent event) throws IOException {
@@ -935,7 +965,6 @@ public class PatientModuleController implements Initializable {
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
         Parent root = loader.load();
         NewPatientModuleController newPatientModuleController = loader.getController();
-
 
 
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -985,6 +1014,8 @@ public class PatientModuleController implements Initializable {
             videoRadio.setSelected(false);
             PDFViewer.setSelected(false);
         }
+
+
     }
 
     public void onPDFViewer(ActionEvent event) throws IOException {
@@ -995,6 +1026,10 @@ public class PatientModuleController implements Initializable {
             photoRadio.setSelected(false);
             videoRadio.setSelected(false);
         }
+
+
     }
+
+
 
 }

@@ -1,5 +1,7 @@
 package com.example.gaitlabapp.model.clinicians;
 
+import com.example.gaitlabapp.model.patients.IDiagnosisModel;
+import com.example.gaitlabapp.model.patients.IPatientModel;
 import jakarta.persistence.*;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -10,25 +12,35 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Set;
 
-@Data
 @Getter
+@Data
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "ClinicianSignatures" )
+@Table(name = "Clinician_Signatures" )
 public class ICliniciansSignatures {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "clinSigId")
+    @Column(name = "clin_Sig_Id")
     private Integer clinSigId;
     @Column(name = "comment")
     private String  comment;
-    @Column(name = "userId")
+    @Column(name = "user_Id")
     private String userId;
-    @Column(name = "signedTime")
+    @Column(name = "signed_Time")
     private String signedTime;
-    @Column(name = "visitId")
+    @Column(name = "visit_Id")
     private Integer visitId;
+    @Column(name = "patientId")
+    private Integer patientId;
+
+
+    @ManyToMany
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+            inverseJoinColumns = @JoinColumn(name = "patient_id"))
+
+    Set<IPatientModel> patientID;
 
 }

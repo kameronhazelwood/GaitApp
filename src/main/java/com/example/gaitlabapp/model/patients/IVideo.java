@@ -7,9 +7,12 @@ import javafx.beans.property.StringProperty;
 import lombok.*;
 
 import jakarta.persistence.*;
+
+import java.util.Set;
+
+@Getter
 @Entity
 @Data
-@Getter
 @Setter
 @NoArgsConstructor(force = true)
 @Table(name = "video")
@@ -24,5 +27,14 @@ public class IVideo {
     private String videoComments;
     @Column(name = "video_date")
     private String videoDate;
+    @Column(name = "patientId")
+    private Integer patientId;
+
+
+    @ManyToMany
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+            inverseJoinColumns = @JoinColumn(name = "patient_id"))
+
+    Set<IPatientModel> patientID;
 
 }

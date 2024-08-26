@@ -31,3 +31,27 @@
     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
     box-shadow: inset 0px 0px 5px #c1c1c1;
 }
+/*.text-field{*/
+/*    -fx-background-color: #ffffff;*/
+/*    -fx-background-insets: 0, 0 0 1 0 ;*/
+/*    -fx-background-radius: 0 ;*/
+/*}*/
+/*.tab-pane{*/
+/*    -fx-background-color: #b9bbbb;*/
+/*    -fx-background-insets: 0, 0 0 1 0 ;*/
+/*    -fx-background-radius: 0 ;*/
+
+/*}*/
+/*.label{*/
+/*    -fx-font-weight: bold;*/
+/*    -fx-font-family: Verdana;*/
+/*}*/
+/*.scroll-pane{*/
+/*    -fx-font-weight: bold;*/
+/*    -fx-font-family: Verdana;*/
+/*    -fx-background-color: #b9bbbb;*/
+/*}*/
+/*.radio-button{*/
+/*    -fx-font-weight: bold;*/
+/*    -fx-font-family: Verdana;*/
+/*}*/

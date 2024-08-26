@@ -7,10 +7,11 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.context.annotation.PropertySource;
 
+import java.util.Set;
 
+@Getter
 @Data
 @Entity
-@Getter
 @NoArgsConstructor(force = true)
 @Table(name = "botox")
 public class IBotoxModel {
@@ -36,6 +37,15 @@ public class IBotoxModel {
     @Column(name = "botox_facility")
     @Setter
     private String botoxFacility;
+    @Column(name = "patientId")
+    private Integer patientId;
+
+
+    @ManyToMany
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+            inverseJoinColumns = @JoinColumn(name = "patient_id"))
+
+    Set<IPatientModel> patientID;
 
     public IBotoxModel(Integer botoxId, String botoxDate, String botoxLocation, String botoxSide, String botoxMd, String botoxComments) {
         this.botoxId = botoxId;

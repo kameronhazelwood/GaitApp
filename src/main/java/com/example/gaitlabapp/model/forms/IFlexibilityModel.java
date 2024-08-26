@@ -1,11 +1,13 @@
 package com.example.gaitlabapp.model.forms;
 
+import com.example.gaitlabapp.model.patients.IPatientModel;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Set;
 
 
 @Setter
@@ -35,5 +37,14 @@ public class IFlexibilityModel {
     private String ankleDorsiKneeExt;
     @Column(name = "ankle_dorsi_knee_ext_interp")
     private String ankleDorsiKneeExtInterp;
+    @Column(name = "patientId")
+    private Integer patientId;
+
+
+    @ManyToMany
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+            inverseJoinColumns = @JoinColumn(name = "patient_id"))
+
+    Set<IPatientModel> patientID;
 
 }

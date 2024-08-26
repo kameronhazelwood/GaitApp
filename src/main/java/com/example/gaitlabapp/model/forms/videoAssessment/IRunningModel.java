@@ -1,14 +1,17 @@
 package com.example.gaitlabapp.model.forms.videoAssessment;
 
+import com.example.gaitlabapp.model.patients.IPatientModel;
 import lombok.Data;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Set;
+
+@Getter
 @Data
 @Entity
-@Getter
 @Setter
 @NoArgsConstructor
 @Table(name = "Running")
@@ -25,6 +28,15 @@ public class IRunningModel {
     private String increasedSpeedNoFloat;
     @Column(name = "slow_with_float")
     private String slowWithFloat;
+    @Column(name = "patientId")
+    private Integer patientId;
+
+
+    @ManyToMany
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+            inverseJoinColumns = @JoinColumn(name = "patient_id"))
+
+    Set<IPatientModel> patientID;
 
 //    public IRunningModel(Integer runId, String normalRunning, String noneRunning, String increasedSpeedNoFloat, String slowWithFloat) {
 //        this.runId = runId;

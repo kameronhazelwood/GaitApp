@@ -1,10 +1,13 @@
 package com.example.gaitlabapp.model.forms.hipscores;
 
+import com.example.gaitlabapp.model.patients.IPatientModel;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
+
+import java.util.Set;
 
 @Setter
 @Getter
@@ -27,6 +30,15 @@ public class IHipScoresModel {
     private String physicalFunction;
     @Column(name = "harris_hip_score")
     private String harrisHipScore;
+    @Column(name = "patientId")
+    private Integer patientId;
+
+
+    @ManyToMany
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+            inverseJoinColumns = @JoinColumn(name = "patient_id"))
+
+    Set<IPatientModel> patientID;
 
 //    public IHipScoresModel(String harrisHipScore, Integer hipScoreId, String activityScore, String pain, String stiffness, String physicalFunction) {
 //        this.harrisHipScore = harrisHipScore;

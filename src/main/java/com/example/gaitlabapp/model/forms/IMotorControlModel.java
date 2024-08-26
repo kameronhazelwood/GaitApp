@@ -1,5 +1,6 @@
 package com.example.gaitlabapp.model.forms;
 
+import com.example.gaitlabapp.model.patients.IPatientModel;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -7,10 +8,13 @@ import lombok.Setter;
 
 import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
+
+import java.util.Set;
+
+@Getter
 @Data
 @Entity
 @NoArgsConstructor
-@Getter
 @Setter
 @Table(name = "motor_control")
 public class IMotorControlModel {
@@ -114,4 +118,13 @@ public class IMotorControlModel {
     private String distalMuscleControlRInterp;
     @Column(name = "distal_muscle_controlLInterp")
     private String distalMuscleControlLInterp;
+    @Column(name = "patientId")
+    private Integer patientId;
+
+
+    @ManyToMany
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+            inverseJoinColumns = @JoinColumn(name = "patient_id"))
+
+    Set<IPatientModel> patientID;
 }

@@ -17,7 +17,7 @@
             <TableColumn fx:id="descripCol" prefWidth="511.3333435058594" text="Description" />
         </columns>
       </TableView>
-      <TextField fx:id="searchCodes" layoutX="14.0" layoutY="41.0" prefHeight="26.0" prefWidth="572.0" promptText="Keywords..." />
+      <TextField fx:id="searchCodes"   layoutX="14.0" layoutY="41.0" prefHeight="26.0" prefWidth="572.0" promptText="Keywords..." />
       <Button fx:id="addCodes" layoutX="406.0" layoutY="362.0" mnemonicParsing="false" onAction="#onSaveDiagCode" prefHeight="26.0" prefWidth="75.0" text="Add" />
       <Button fx:id="cancel" layoutX="496.0" layoutY="362.0" mnemonicParsing="false" onAction="#onCancel" prefHeight="26.0" prefWidth="75.0" text="Cancel" />
    </children>

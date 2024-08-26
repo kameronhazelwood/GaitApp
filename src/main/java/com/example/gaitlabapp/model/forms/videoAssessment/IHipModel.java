@@ -1,11 +1,14 @@
 package com.example.gaitlabapp.model.forms.videoAssessment;
 
+import com.example.gaitlabapp.model.patients.IPatientModel;
 import lombok.Data;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.Set;
 
 
 @Getter
@@ -35,6 +38,15 @@ public class IHipModel {
     private String decRangeMotion;
     @Column(name = "circumduction")
     private String circumduction;
+    @Column(name = "patientId")
+    private Integer patientId;
+
+
+    @ManyToMany
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+            inverseJoinColumns = @JoinColumn(name = "patient_id"))
+
+    Set<IPatientModel> patientID;
 
 //    public IHipModel(Integer hipId, String internallyRotated, String extRotated, String incFlexion, String decFlexion, String hipAdbucted, String hipAdducted, String decRangeMotion, String circumduction) {
 //        this.hipId = hipId;

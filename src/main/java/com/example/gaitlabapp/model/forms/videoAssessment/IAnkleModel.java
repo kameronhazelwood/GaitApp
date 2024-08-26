@@ -1,10 +1,13 @@
 package com.example.gaitlabapp.model.forms.videoAssessment;
 
+import com.example.gaitlabapp.model.patients.IPatientModel;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
+
+import java.util.Set;
 
 @Setter
 @Getter
@@ -45,6 +48,15 @@ public class IAnkleModel {
     private String persistentHighToe;
     @Column(name = "no_Heel_Contact")
     private String noHeelContact;
+    @Column(name = "patientId")
+    private Integer patientId;
+
+
+    @ManyToMany
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+            inverseJoinColumns = @JoinColumn(name = "patient_id"))
+
+    Set<IPatientModel> patientID;
 
     public IAnkleModel(String noHeelContact, Integer ankleId, String prematureHeelRise, String ankleEquinus, String ankleVarus, String ankleValgus, String cavus, String planus, String planovalgus, String forefootAdduction, String forefootAbduction, String bunion, String clawToes, String hallusExt, String persistentHighToe) {
         this.noHeelContact = noHeelContact;
