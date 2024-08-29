@@ -272,4 +272,44 @@ public class NewPatientModuleController implements Initializable {
     }
 
 
+    public void onSaveAndSchedule(ActionEvent event) throws IOException {
+        try {
+            if (fName != null && lName != null) {
+                IPatientModel patient = new IPatientModel();
+                patient.setFirstName(fName.getText());
+                patient.setLastName(lName.getText());
+                patient.setDob(dob.getText());
+                patient.setMrn(mrn.getText());
+                patient.setFormerLastName(formerLName.getText());
+                patient.setPreferredFirstName(preferredName.getText());
+                patientService.save(patient);
+            }else {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Required Fields. ");
+                alert.setContentText("First Name, Last Name and Date of Birth is required. ");
+                alert.show();
+            }
+            clearFields();
+
+        } catch (Throwable t) {
+            t.printStackTrace();
+        }
+
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/SchedulerModule.fxml"));
+        Parent root = loader.load();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
+
+        stage.getIcons().add(icon);
+        stage.setTitle("Nemours Children's Hospital Gait Lab");
+//        stage.setX(200);
+//        stage.setY(10);
+        stage.setScene(scene);
+        stage.show();
+
+
+    }
 }

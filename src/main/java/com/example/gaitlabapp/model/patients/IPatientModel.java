@@ -61,6 +61,13 @@ public class IPatientModel {
 
      Set<IDiagnosisModel> gen_diagnosis;
 
+    public IPatientModel(String s, String s1, String s2) {
+        this.setFirstName(s);
+        this.firstName = s;
+        this.lastName = s1;
+        this.mrn = s2;
+    }
+
 //    public IPatientModel(Integer patientID, String firstName, String lastName, String preferredFirstName, String mrn, String formerLastName, String address, String gender, String dob, String comments, String state, String genDiagnosis) {
 //        this.patientID = patientID;
 //        this.firstName = firstName;

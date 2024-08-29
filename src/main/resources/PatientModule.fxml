@@ -18,7 +18,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="736.0" prefWidth="1036.0"  xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.PatientModuleController">
+<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="736.0" prefWidth="1036.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.PatientModuleController">
 
     <HBox VBox.vgrow="NEVER">
         <children>
@@ -36,7 +36,7 @@
             </ToolBar>
         </children>
     </HBox>
-    <TabPane fx:id="patientTabPane" stylesheets="styles.css" layoutY="154.0" prefHeight="617.0" prefWidth="1027.0" tabClosingPolicy="UNAVAILABLE">
+    <TabPane fx:id="patientTabPane" layoutY="154.0" prefHeight="617.0" prefWidth="1027.0" stylesheets="styles.css" tabClosingPolicy="UNAVAILABLE">
         <tabs>
             <Tab fx:id="demographics" closable="false" text="Demographics">
             <content>
@@ -87,13 +87,14 @@
                 <content>
                     <Pane prefHeight="540.0" prefWidth="952.0">
                         <children>
-                     <TableView fx:id="tableView" layoutX="9.0" layoutY="26.0" prefHeight="425.0" prefWidth="1003.0">
+                     <TableView fx:id="tableView" layoutX="9.0" layoutY="89.0" prefHeight="425.0" prefWidth="1003.0">
                        <columns>
                            <TableColumn fx:id="aptData" prefWidth="155.99999487400055" text="Date" />
                            <TableColumn fx:id="visitType" minWidth="0.0" prefWidth="585.0" text="Visit Type" />
                            <TableColumn fx:id="referringMd" prefWidth="266.00001525878906" text="Referring MD" />
                        </columns>
                      </TableView>
+                     <Button fx:id="addNewAppointment"  onAction="#onAddNewApt" layoutX="14.0" layoutY="28.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="148.0" text="Add New" />
                         </children>
                     </Pane>
                 </content>
@@ -157,17 +158,13 @@
                         <BorderPane fx:id="bp">
                             <top>
                                 <HBox prefHeight="95.0" prefWidth="1023.0" BorderPane.alignment="CENTER">
-                                    <RadioButton fx:id="photoRadio" mnemonicParsing="false" prefHeight="45.0"
-                                                 prefWidth="90.0" text="Photos" onAction="#onPhoto"/>
-                                    <RadioButton fx:id="videoRadio" mnemonicParsing="false" prefHeight="45.0"
-                                                 prefWidth="90.0" text="Videos" onAction="#onVideo"/>
-                                    <RadioButton fx:id="PDFViewer" mnemonicParsing="false" prefHeight="45.0"
-                                                 prefWidth="90.0" text="PDFs" onAction="#onPDFViewer"/>
+                                    <RadioButton fx:id="photoRadio" mnemonicParsing="false" onAction="#onPhoto" prefHeight="45.0" prefWidth="90.0" text="Photos" />
+                                    <RadioButton fx:id="videoRadio" mnemonicParsing="false" onAction="#onVideo" prefHeight="45.0" prefWidth="90.0" text="Videos" />
+                                    <RadioButton fx:id="PDFViewer" mnemonicParsing="false" onAction="#onPDFViewer" prefHeight="45.0" prefWidth="90.0" text="PDFs" />
                                 </HBox>
                             </top>
                             <center>
-                                <AnchorPane fx:id="ap" prefHeight="516.0" prefWidth="1010.0"
-                                            BorderPane.alignment="CENTER"/>
+                                <AnchorPane fx:id="ap" prefHeight="516.0" prefWidth="1010.0" BorderPane.alignment="CENTER" />
                             </center>
                         </BorderPane>
                     </content>

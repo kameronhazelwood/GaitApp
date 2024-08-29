@@ -97,10 +97,10 @@ public class PatientModuleController implements Initializable {
 
 
     ObservableList<IAppointmentModel> initialData() {
-        IAppointmentModel apt1 = new IAppointmentModel(1, "", "10/31/2023", "GAIT - Full Diagnostic", "Dr. Smith", GAIT, 2);
-        IAppointmentModel apt2 = new IAppointmentModel(2, "", "2/8/2023", "Upper Extremity - Full Diagnostic", "Dr. Smith", UE, 2);
-        IAppointmentModel apt3 = new IAppointmentModel(3, "", "3/12/2024", "Gait - Foot Evaluation", "Dr. Smith", FOOT, 2);
-        return FXCollections.observableArrayList(apt1, apt2, apt3);
+        IAppointmentModel apt1 = new IAppointmentModel(1, "8/28/2024", "8/28/2024", "GAIT - Full Diagnostic", "Dr. Smith", GAIT, 2);
+//        IAppointmentModel apt2 = new IAppointmentModel(2, "", "2/8/2023", "Upper Extremity - Full Diagnostic", "Dr. Smith", UE, 2);
+//        IAppointmentModel apt3 = new IAppointmentModel(3, "", "3/12/2024", "Gait - Foot Evaluation", "Dr. Smith", FOOT, 2);
+        return FXCollections.observableArrayList(apt1);
     }
 
     @FXML
@@ -185,7 +185,8 @@ public class PatientModuleController implements Initializable {
     @Override
     public void initialize(URL PatientModule, ResourceBundle resourceBundle) {
 
-        dobTextfield.textProperty().addListener(new ChangeListener<String>() {
+
+        dobTextfield.textProperty().addListener(new ChangeListener<>() {
             @Override
             public void changed(ObservableValue<? extends String> ov, String t, String t1) {
                 if (t1.length() == 2 || t1.length() == 6) {
@@ -1029,7 +1030,17 @@ public class PatientModuleController implements Initializable {
 
 
     }
-
-
-
+    public void onAddNewApt(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setControllerFactory(applicationContext::getBean);
+        loader.setLocation(getClass().getResource("/SchedulerModule.fxml"));
+        Parent root = loader.load();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setTitle("Nemours Children's Hospital Lab");
+//        stage.setX(200);
+//        stage.setY(10);
+        stage.setScene(scene);
+        stage.show();
+    }
 }

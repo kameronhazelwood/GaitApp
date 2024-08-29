@@ -3,7 +3,6 @@ package com.example.gaitlabapp.controllers.Details;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.ListCell;
@@ -16,17 +15,12 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.nio.file.*;
-import java.util.ResourceBundle;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.WatchEvent;
 
-import static javafx.scene.image.Image.*;
-import java.io.IOException;
-import java.nio.file.*;
 
 public class PatientPhotosController {
     public Button addNewButton;
@@ -41,6 +35,7 @@ public class PatientPhotosController {
 
     @FXML
     public void initialize() throws IOException{
+
         if (! Files.exists(IMAGES_FOLDER)) {
             try {
                 Files.createDirectory(IMAGES_FOLDER);
@@ -64,7 +59,6 @@ public class PatientPhotosController {
                     setText(null);
                     setGraphic(null);
                 } else {
-                    // TODO: make this prettier
                     imageview1.setImage(image);
                     setGraphic(imageview1);
                     //setText(image.getUrl());
@@ -94,33 +88,6 @@ public class PatientPhotosController {
     }
 
     public void onWatchListener() {
-//        try {
-//            Path directoryPath = Paths.get("C:\\Users\\sh0184\\images");
-//
-//            WatchService watchService = FileSystems.getDefault().newWatchService();
-//
-//            directoryPath.register(watchService,
-//                    StandardWatchEventKinds.ENTRY_CREATE);
-//
-//            System.out.println("Watching directory: " + directoryPath);
-//
-//            while (true) {
-//              //  ListView<String> events = new ListView<>();
-//                WatchKey key = watchService.take();
-//
-//                for (WatchEvent<?> event : key.pollEvents()) {
-//                    if (event.kind() == StandardWatchEventKinds.ENTRY_CREATE) {
-//                        System.out.println("File created: " + event.context());
-//
-//
-//                    }
-//                }
-//                key.reset();
-//            }
-//        } catch (IOException | InterruptedException e) {
-//            e.printStackTrace();
-//        }
-
         try {
             WatchService watchService = FileSystems.getDefault().newWatchService();
             IMAGES_FOLDER.register(watchService, StandardWatchEventKinds.ENTRY_CREATE);

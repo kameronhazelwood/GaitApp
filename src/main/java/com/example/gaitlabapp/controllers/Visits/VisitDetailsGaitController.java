@@ -1125,6 +1125,14 @@ public class VisitDetailsGaitController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+        date.setText("08/28/2024");
+        aptTime.setText("12:00");
+        aptStartTime.setText("12:00");
+        aptStopTime.setText("1:00");
+        aptVisitType.setText("Gait");
+        aptSubType.setText("Full Diagnostic");
+
+
         /*
         on saves for visit information
          */

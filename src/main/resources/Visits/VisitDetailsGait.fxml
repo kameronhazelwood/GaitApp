@@ -846,7 +846,6 @@
                   <Separator layoutX="17.0" layoutY="5126.0" prefHeight="2.0" prefWidth="580.0" />
                   <TextField fx:id="durOfPain" layoutX="146.0" layoutY="5133.0" prefHeight="66.0" prefWidth="326.0" />
                   <Separator layoutX="18.0" layoutY="5204.0" prefHeight="2.0" prefWidth="580.0" />
-            <Button layoutX="629.0" layoutY="25.0" mnemonicParsing="false" text="Button" />
               </Pane>
           </ScrollPane>
       </Tab>

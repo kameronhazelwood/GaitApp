@@ -44,8 +44,9 @@
         <TextField fx:id="preferredName" layoutX="98.0" layoutY="177.0" />
         <TextField fx:id="mrn" layoutX="367.0" layoutY="65.0" />
         <TextField fx:id="formerLName" layoutX="373.0" layoutY="126.0" />
-        <Button fx:id="saveNewPatient" layoutX="803.0" layoutY="333.0" mnemonicParsing="false" onAction="#onSaveNewPatient" prefHeight="58.0" prefWidth="187.0" text="Save New Patient" />
+        <Button fx:id="saveNewPatient" layoutX="568.0" layoutY="342.0" mnemonicParsing="false" onAction="#onSaveNewPatient" prefHeight="58.0" prefWidth="187.0" text="Save New Patient" />
         <Label layoutX="597.0" layoutY="70.0" text="DOB" />
         <TextField fx:id="dob" layoutX="691.0" layoutY="66.0" />
+      <Button fx:id="saveAndSchedule" layoutX="794.0" layoutY="342.0" mnemonicParsing="false" onAction="#onSaveAndSchedule" prefHeight="58.0" prefWidth="187.0" text="Save and Schedule" />
     </Pane>
 </AnchorPane>
