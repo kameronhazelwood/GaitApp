@@ -57,9 +57,12 @@ public class IPatientModel {
     @ManyToMany
     @JoinTable(name = "diagnosis_code", joinColumns = @JoinColumn(referencedColumnName = "gen_diagnosis"),
     inverseJoinColumns = @JoinColumn(name = "code"))
-
-
      Set<IDiagnosisModel> gen_diagnosis;
+
+
+//    @ManyToOne
+//    @JoinColumn(name = "patient_id")
+//    private IBotoxModel botoxModel;
 
     public IPatientModel(String s, String s1, String s2) {
         this.setFirstName(s);

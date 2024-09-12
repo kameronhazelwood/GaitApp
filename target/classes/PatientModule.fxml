@@ -76,6 +76,7 @@
                            <Button fx:id="addNewDiagnosis" layoutX="958.0" layoutY="254.0" mnemonicParsing="false" onAction="#addDiagnosisCode" text="Add New" />
                            <TextField fx:id="dobTextfield" layoutX="400.0" layoutY="156.0" />
                            <Label fx:id="patientIdLabel" layoutX="409.0" layoutY="207.0" prefHeight="17.0" prefWidth="120.0" />
+                           <Button layoutX="831.0" layoutY="447.0" mnemonicParsing="false" onAction="#onSaveUpdate" prefHeight="73.0" prefWidth="169.0" text="Save" />
                         </children>
                      </Pane>
                   </children>
@@ -94,7 +95,7 @@
                            <TableColumn fx:id="referringMd" prefWidth="266.00001525878906" text="Referring MD" />
                        </columns>
                      </TableView>
-                     <Button fx:id="addNewAppointment"  onAction="#onAddNewApt" layoutX="14.0" layoutY="28.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="148.0" text="Add New" />
+                     <Button fx:id="addNewAppointment" layoutX="14.0" layoutY="28.0" mnemonicParsing="false" onAction="#onAddNewApt" prefHeight="42.0" prefWidth="148.0" text="Add New" />
                         </children>
                     </Pane>
                 </content>
@@ -142,9 +143,9 @@
                                        <Font name="System Bold" size="14.0" />
                                     </font>
                                  </Label>
-                                 <Button fx:id="addSurgicalHistory" layoutX="450.0" layoutY="41.0" mnemonicParsing="false" text="Add Surgical History" />
-                                 <Button fx:id="addBotox" layoutX="486.0" layoutY="299.0" mnemonicParsing="false" text="Add Botox" />
-                                 <Button fx:id="addHealthHistory" layoutX="454.0" layoutY="555.0" mnemonicParsing="false" text="Add Health History" />
+                                 <Button fx:id="addSurgicalHistory" layoutX="450.0" layoutY="41.0" mnemonicParsing="false" text="Add Surgical History" onAction="#addSurgery"/>
+                                 <Button fx:id="addBotox" layoutX="486.0" layoutY="299.0" mnemonicParsing="false" text="Add Botox" onAction="#addBotox"/>
+                                 <Button fx:id="addHealthHistory" layoutX="454.0" layoutY="555.0" mnemonicParsing="false" text="Add Health History" onAction="#addHealthHistory"/>
                               </children></AnchorPane>
                        </content>
                      </ScrollPane>

@@ -38,7 +38,6 @@ public class NewDiagnosisCodeController implements Initializable {
     public Button cancel;
     public AnchorPane diagCodePane;
     private boolean saved;
-    int patientID = 13;
     @Autowired
     ConfigurableApplicationContext applicationContext;
     @Autowired
@@ -60,6 +59,7 @@ public class NewDiagnosisCodeController implements Initializable {
     public boolean isSaved() {
         return saved;
     }
+    private IDiagnosisModel diagnosisModel;
 
 
     @Override
@@ -68,9 +68,8 @@ public class NewDiagnosisCodeController implements Initializable {
         descripCol.setCellValueFactory((new PropertyValueFactory<>("Description")));
         newDiagCodeTable.getColumns().setAll(codeCol, descripCol);
 
-        listView.addAll(diagnosisService.findAll());
+        listView.addAll(FXCollections.observableArrayList(diagnosisService.findAll()));
         newDiagCodeTable.setItems(listView);
-
 
         FilteredList<IDiagnosisModel> filteredData = new FilteredList<>(listView, b -> true);
         searchCodes.textProperty().addListener((obs, oldValue, newValue) -> {
@@ -91,19 +90,16 @@ public class NewDiagnosisCodeController implements Initializable {
         SortedList<IDiagnosisModel> sortedData = new SortedList<>(filteredData);
         sortedData.comparatorProperty().bind(newDiagCodeTable.comparatorProperty());
         newDiagCodeTable.setItems(sortedData);
-
     }
 
     @FXML
     public void onSaveDiagCode(ActionEvent event) {
-        saved = true;
-
         IDiagnosisModel diagCode = newDiagCodeTable.getSelectionModel().getSelectedItem();
 
-        diagCode.setGenDiagnosis(codeCol.getText());
-        IPatientModel patientModel = new IPatientModel();
-        patientModel.setGen_diagnosis((Set<IDiagnosisModel>) diagCode);
+        diagCode.setCode(codeCol.getText());
+        diagCode.setDescription(descripCol.getText());
 
+        saved = true;
         getmyStage().close();
     }
     @FXML
@@ -142,6 +138,11 @@ public class NewDiagnosisCodeController implements Initializable {
 //            });
 //            return row;
 //        });
+
+        codeCol.setText(diagnosisModel.getDiagnosisCode());
+        descripCol.setText(diagnosisModel.getDiagnosisDescription());
+
+
     }
 }
 

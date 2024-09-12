@@ -9,11 +9,10 @@ import lombok.*;
 import jakarta.persistence.*;
 
 import java.util.Set;
-@Getter
-@Setter
 @Data
 @Entity
 @NoArgsConstructor(force = true)
+@Getter
 @Table(name = "appointments")
 public class IAppointmentModel  {
 
@@ -24,7 +23,8 @@ public class IAppointmentModel  {
     @Column(name = "apt_id")
     private final Integer aptId;
     @Column(name = "apt_date")
-    private final String aptDate;
+    @Setter
+    private String aptDate;
 //    @Column(name = "attended")
 //    private final StringProperty attended;
 //    @Column(name = "startTime")
@@ -34,9 +34,11 @@ public class IAppointmentModel  {
 //    @Column(name = "dateScheduled")
 //    private final StringProperty dateScheduled;
     @Column(name = "visit_type")
-    private final String visitType;
+    @Setter
+    private  String visitType;
     @Column(name = "visit_sub_type")
-    private final String visitSubType;
+    @Setter
+    private String visitSubType;
 //    @Column(name = "dateToEpic")
 //    private final BooleanProperty dateToEpic;
 //    @Column(name = "dateProcessed")
@@ -54,7 +56,8 @@ public class IAppointmentModel  {
 //    @Column(name = "interpPT")
 //    private final StringProperty interpPT;
     @Column(name = "referring_phys")
-    private final String referringPhys;
+    @Setter
+    private String referringPhys;
 //    @Column(name = "visitPT")
 //    private final StringProperty visitPT;
 //    @Column(name = "visitPT2")
@@ -69,11 +72,11 @@ public class IAppointmentModel  {
     private Integer patientId;
 
 
-    @ManyToMany
+    @OneToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
             inverseJoinColumns = @JoinColumn(name = "patient_id"))
 
-    Set<IPatientModel> patientID;
+    public Set<IPatientModel> patientModel;
 
     public IAppointmentModel(Integer aptId, String aptDate, String visitType, String visitSubType, String referringPhys, Type type, Integer patientId) {
         this.aptId = aptId;

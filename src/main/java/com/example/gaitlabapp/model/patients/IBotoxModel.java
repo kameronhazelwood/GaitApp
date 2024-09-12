@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.context.annotation.PropertySource;
 
+import java.util.List;
 import java.util.Set;
 
 @Getter
@@ -41,11 +42,11 @@ public class IBotoxModel {
     private Integer patientId;
 
 
-    @ManyToMany
+    @OneToMany
     @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
             inverseJoinColumns = @JoinColumn(name = "patient_id"))
 
-    Set<IPatientModel> patientID;
+    private List<IPatientModel> patientModel;
 
     public IBotoxModel(Integer botoxId, String botoxDate, String botoxLocation, String botoxSide, String botoxMd, String botoxComments) {
         this.botoxId = botoxId;

@@ -1119,18 +1119,19 @@ public class VisitDetailsGaitController implements Initializable {
     private AptsService aptsService;
     @Autowired
     private GenMarkerService genMarkerService;
+    private IAppointmentModel appointmentModel;
 
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
-        date.setText("08/28/2024");
-        aptTime.setText("12:00");
-        aptStartTime.setText("12:00");
-        aptStopTime.setText("1:00");
-        aptVisitType.setText("Gait");
+        date.setText("9/11/2024");
+        aptTime.setText("12pm");
+        aptStartTime.setText("2pm");
+        aptStopTime.setText("3pm");
+        aptVisitType.setText("GAIT");
         aptSubType.setText("Full Diagnostic");
+
 
 
         /*
@@ -1399,13 +1400,20 @@ public class VisitDetailsGaitController implements Initializable {
 //        parent2DataRoot.setExpanded(true);
 //        dataTable.setRoot(parent2DataRoot);
 //        this.dataTable.setShowRoot(false);
-
-
     }
-    private IPatientModel patientModel;
-   public void setPatientId(IPatientModel patientModel){
-        this.patientModel = patientModel;
-        patientId.setText(String.valueOf(patientModel.getPatientID()));
+
+    void onSaveVisitDetailsGait(ActionEvent event){
+        appointmentModel.setVisitType(aptVisitType.getText());
+    }
+
+    public void setAppointmentModel(IAppointmentModel appointmentModel){
+
+
+
+        aptDate.setText(appointmentModel.getAptDate());
+        aptVisitType.setText(appointmentModel.getVisitType());
+        aptSubType.setText(appointmentModel.getVisitSubType());
+        
     }
 
     Image lateralForeFoot = new Image(String.valueOf(getClass().getResource("/images/99999999_052223_LateralForeFoot.png")));
@@ -1626,6 +1634,10 @@ public class VisitDetailsGaitController implements Initializable {
         stage1.setScene(new Scene(popUp, 900, 680));
         stage1.setScene(popUp.getScene());
         stage1.show();
+    }
+
+    public void onGaitVisitSave(ActionEvent event) {
+
     }
 }
 

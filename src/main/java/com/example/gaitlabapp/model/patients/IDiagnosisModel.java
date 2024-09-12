@@ -35,9 +35,4 @@ public class IDiagnosisModel {
     public String getDiagnosisCode() {
         return description;
     }
-    public final String codeProperty(){
-        return code;
-    }
-    public void setGenDiagnosis(String text) {
-    }
 }

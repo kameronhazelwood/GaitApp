@@ -12,6 +12,6 @@ public interface PatientService {
     Optional<IPatientModel> findByLastName(String lastName);
     IPatientModel findByMrn(String mrn);
     List<IPatientModel> findAll();
-    Optional<IPatientModel> findById(long id);
+//    IPatientModel findByPatientId(Integer patientId);
     void delete(Long id);
 }

@@ -83,19 +83,38 @@ public class SchedulerModuleController implements Initializable {
 
 
         Calendar<String> gaitFullEval = new Calendar<>("Gait - Full Diagnostic");
-        Calendar gaitFootEval = new Calendar("Gait - Foot Evaluation");
-        Calendar gaitStepWatch = new Calendar("Gait - Step Watch");
-        Calendar prostheticsClinic = new Calendar("Prosthetics Clinic");
+        Calendar<String> gaitFootEval = new Calendar<>("Gait - Foot Evaluation");
+        Calendar<String> gaitStepWatch = new Calendar<>("Gait - Step Watch");
+        Calendar<String> gaitStepWatchReturn = new Calendar<>("Gait - Step Watch Return");
+        Calendar<String> upperExtShuee = new Calendar<>("Upper Extremity - SHUEE Only");
+        Calendar<String> upperExtFull = new Calendar<>("Upper Extremity - Full Diagnostic");
+        Calendar<String> movementDisorder = new Calendar<>("Movement Disorder - Evalulation");
+        Calendar<String> videoOnly = new Calendar<>("Gait - Video Only");
+        Calendar<String> postOpOutcome = new Calendar<>("Gait - Post-Op Outcome");
+        Calendar<String> prostheticsClinic = new Calendar<>("Prosthetics Clinic");
 
         gaitFullEval.setShortName("Gait Full Eval");
         gaitFootEval.setShortName("Gait Foot Eval");
         gaitStepWatch.setShortName("Gait Step Watch");
         prostheticsClinic.setShortName("Prosthetics");
+        gaitStepWatchReturn.setName("Gait Step Watch Return");
+        upperExtShuee.setName("Upper Ext SHUEE Only");
+        upperExtFull.setName("Upper Ext Full Diagnostic");
+        movementDisorder.setName("Movement Disorder Evaluation");
+        videoOnly.setName("Gait Video Only");
+        postOpOutcome.setName("Gait Post-Op Outcome");
 
         gaitFullEval.setStyle(Style.STYLE1);
         gaitFootEval.setStyle(Style.STYLE2);
         gaitStepWatch.setStyle(Style.STYLE3);
         prostheticsClinic.setStyle(Style.STYLE4);
+        gaitStepWatchReturn.setStyle(Style.STYLE5);
+        upperExtShuee.setStyle(Style.STYLE6);
+        upperExtFull.setStyle(Style.STYLE7);
+
+        movementDisorder.setStyle(Style.STYLE7);
+        videoOnly.setStyle(Style.STYLE7);
+        postOpOutcome.setStyle(Style.STYLE7);
 
         Entry<String> entry = new Entry<>();
         entry.setLocation("Nemours Hospital Gait Lab");
@@ -117,7 +136,7 @@ public class SchedulerModuleController implements Initializable {
 
 
         CalendarSource familyCalendarSource = new CalendarSource("Appointments");
-        familyCalendarSource.getCalendars().addAll(gaitFullEval, gaitFootEval, gaitStepWatch, prostheticsClinic);
+        familyCalendarSource.getCalendars().addAll(gaitFullEval, gaitFootEval, gaitStepWatch, prostheticsClinic, gaitStepWatchReturn, upperExtFull, upperExtShuee, movementDisorder, videoOnly, postOpOutcome);
 
         calendarView.getCalendarSources().setAll(familyCalendarSource);
         calendarView.setRequestedTime(LocalTime.now());

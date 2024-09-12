@@ -15,15 +15,11 @@ import com.example.gaitlabapp.model.visits.IAppointmentModel;
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
-import javafx.collections.transformation.SortedList;
-import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -48,10 +44,8 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.net.URL;
-import java.nio.file.*;
 import java.util.Objects;
 import java.util.ResourceBundle;
 import java.util.function.Predicate;
@@ -97,7 +91,7 @@ public class PatientModuleController implements Initializable {
 
 
     ObservableList<IAppointmentModel> initialData() {
-        IAppointmentModel apt1 = new IAppointmentModel(1, "8/28/2024", "8/28/2024", "GAIT - Full Diagnostic", "Dr. Smith", GAIT, 2);
+        IAppointmentModel apt1 = new IAppointmentModel(1, "9/11/2024", "9/11/202", "GAIT - Full Diagnostic", "Dr. Smith", GAIT, 2);
 //        IAppointmentModel apt2 = new IAppointmentModel(2, "", "2/8/2023", "Upper Extremity - Full Diagnostic", "Dr. Smith", UE, 2);
 //        IAppointmentModel apt3 = new IAppointmentModel(3, "", "3/12/2024", "Gait - Foot Evaluation", "Dr. Smith", FOOT, 2);
         return FXCollections.observableArrayList(apt1);
@@ -148,10 +142,10 @@ public class PatientModuleController implements Initializable {
         return FXCollections.observableArrayList(ptHea1);
     }
 
-    ObservableList<IDiagnosisModel> initialDiagCodeData() {
-        IDiagnosisModel ptDiag1 = new IDiagnosisModel("G800", "Spastic Quadriplegic Cerebral Palsy");
-        return FXCollections.observableArrayList(ptDiag1);
-    }
+//    ObservableList<IDiagnosisModel> initialDiagCodeData() {
+//        IDiagnosisModel ptDiag1 = new IDiagnosisModel("G800", "Spastic Quadriplegic Cerebral Palsy");
+//        return FXCollections.observableArrayList(ptDiag1);
+//    }
 
     @FXML
     public Tab visits;
@@ -168,7 +162,7 @@ public class PatientModuleController implements Initializable {
     @FXML
     private TextField genderTextfield;
     @FXML
-    private TextField mrnTextfield;
+    public TextField mrnTextfield;
     @FXML
     private TextField patientNameTextField;
     @FXML
@@ -199,8 +193,10 @@ public class PatientModuleController implements Initializable {
 //            @Override
 //            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
 //                IPatientModel patient = patientService.findByMrn(mrnTextfield.getText());
+//                System.out.println(mrnTextfield);
 //                patient.setFirstName(patientNameTextField.getText());
 //                patientService.save(patient);
+//                System.out.println(patient);
 //            }
 //        });
 //
@@ -213,11 +209,11 @@ public class PatientModuleController implements Initializable {
 //            }
 //        });
 //
-        preferredNameTextField.textProperty().addListener((obs, oldText, newText) -> {
-            IPatientModel patient = patientService.findByMrn(mrnTextfield.getText());
-            patient.setPreferredFirstName(preferredNameTextField.getText());
-            patientService.save(patient);
-        });
+//        preferredNameTextField.textProperty().addListener((obs, oldText, newText) -> {
+//            IPatientModel patient = patientService.findByMrn(mrnTextfield.getText());
+//            patient.setPreferredFirstName(preferredNameTextField.getText());
+//            patientService.save(patient);
+//        });
 //
 //        formerLastName.textProperty().addListener(new ChangeListener<String>() {
 //            @Override
@@ -462,18 +458,21 @@ public class PatientModuleController implements Initializable {
         try {
             switch (appointmentModel.getType()) {
                 case GAIT -> {
-
+                    patientService.findByMrn(mrnTextfield.getText());
                     Parent popUp;
-                    FXMLLoader fxmlLoader = new FXMLLoader(PatientModuleController.class.getResource("/Visits/VisitDetailsGait.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Visits/VisitDetailsGait.fxml"));
                     fxmlLoader.setControllerFactory(applicationContext::getBean);
                     VisitDetailsGaitController visitDetailsGaitController = fxmlLoader.getController();
-                    //   visitDetailsGaitController.setPatientId(patientModel);
+
+                    visitDetailsGaitController.setAppointmentModel(appointmentModel);
                     popUp = fxmlLoader.load();
-                    Stage stage1 = new Stage();
+                    Stage stage1 = new Stage((StageStyle.UTILITY));
+                    stage1.initModality(Modality.WINDOW_MODAL);
+                    stage1.initOwner(getVisitGaitDetails());
                     stage1.setTitle("GAIT Visit Details:   ");
                     //height 680 width 800
                     stage1.setScene(new Scene(popUp, 800, 680));
-                    stage1.show();
+                    stage1.showAndWait();
                 }
                 case UE -> {
                     Parent popUp;
@@ -505,6 +504,7 @@ public class PatientModuleController implements Initializable {
         }
     }
 
+    private Window getVisitGaitDetails() {return tableView.getScene().getWindow();}
     private static void showCompendium(IAppointmentModel appointmentModel) throws IOException {
         try {
             switch (appointmentModel.getType()) {
@@ -580,6 +580,7 @@ public class PatientModuleController implements Initializable {
     TableView<IPatientModel> patientTable = buildTable(valueObj);
     @Autowired
     PatientService patientService;
+    Label valueLabel = new Label(defaultVal);
 
     public void onDisplayPatients() {
         patientTable.refresh();
@@ -625,7 +626,7 @@ public class PatientModuleController implements Initializable {
         styling of the dropdown
          */
 
-        Label valueLabel = new Label(defaultVal);
+
         valueLabel.setMaxWidth(Double.POSITIVE_INFINITY);
         HBox.setHgrow(valueLabel, Priority.ALWAYS);
 
@@ -813,7 +814,9 @@ public class PatientModuleController implements Initializable {
     }
 
     private IBotoxModel showBotoxDialog(IBotoxModel botoxModel) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Wizards/AddBotox.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Launcher.class.getResource("/Wizards/AddBotox.fxml"));
+        fxmlLoader.setControllerFactory(applicationContext::getBean);
         Parent botoxPane = fxmlLoader.load();
         AddBotoxController addBotoxController = fxmlLoader.getController();
 
@@ -1042,5 +1045,37 @@ public class PatientModuleController implements Initializable {
 //        stage.setY(10);
         stage.setScene(scene);
         stage.show();
+    }
+
+    public void onSaveUpdate(ActionEvent event) {
+        IPatientModel patient = patientService.findByMrn(mrnTextfield.getText());
+        patient.setFirstName(patientNameTextField.getText());
+        patient.setLastName(LastNameTextField.getText());
+        patient.setPreferredFirstName(preferredNameTextField.getText());
+        patient.setGender(genderTextfield.getText());
+        patient.setDob(dobTextfield.getText());
+        patient.setFormerLastName(formerLastName.getText());
+        patient.setComments(commentsTextField.getText());
+
+
+        patientNameTextField.setText(patient.getFirstName());
+        LastNameTextField.setText(patient.getLastName());
+        preferredNameTextField.setText(patient.getPreferredFirstName());
+        genderTextfield.setText(patient.getGender());
+        dobTextfield.setText(patient.getDob());
+        formerLastName.setText(patient.getFormerLastName());
+        commentsTextField.setText(patient.getComments());
+
+        patientService.save(patient);
+        valueLabel.setText(patient.getMrn() + ",  " + patient.getFirstName() + "  " + patient.getLastName());
+        loadUserDetails();
+
+    }
+
+    public void loadUserDetails() {
+        listviewPatient.clear();
+        listviewPatient.addAll(patientService.findAll());
+
+        patientTable.setItems(listviewPatient);
     }
 }

@@ -28,8 +28,10 @@
             <TextField fx:id="md" layoutX="121.0" layoutY="155.0" />
             <TextField fx:id="facility" layoutX="120.0" layoutY="189.0" />
             <TextField fx:id="comments" layoutX="116.0" layoutY="229.0" prefHeight="104.0" prefWidth="327.0" />
-            <Button fx:id="saveButton" layoutX="300.0" layoutY="352.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Save" onAction="#onSaveBotox"/>
-            <Button fx:id="cancel" layoutX="378.0" layoutY="352.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Cancel" onAction="#onCancel" />
+            <Button fx:id="saveButton" layoutX="300.0" layoutY="352.0" mnemonicParsing="false" onAction="#onSaveBotox" prefHeight="25.0" prefWidth="75.0" text="Save" />
+            <Button fx:id="cancel" layoutX="378.0" layoutY="352.0" mnemonicParsing="false" onAction="#onCancel" prefHeight="25.0" prefWidth="75.0" text="Cancel" />
+            <TextField fx:id="mrn" layoutX="416.0" layoutY="49.0" />
+            <Label layoutX="347.0" layoutY="53.0" text="MRN" />
          </children>
       </Pane>
    </children>
