@@ -5,6 +5,7 @@ import com.calendarfx.model.Calendar;
 import com.calendarfx.model.Entry;
 import com.calendarfx.view.CalendarSelector;
 import com.calendarfx.view.CalendarView;
+import com.example.gaitlabapp.Launcher;
 import com.example.gaitlabapp.model.patients.IPatientModel;
 import com.example.gaitlabapp.services.PatientService;
 import javafx.beans.binding.Bindings;
@@ -23,6 +24,7 @@ import javafx.geometry.VPos;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.stage.Popup;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -58,7 +60,7 @@ public class EntryHeaderView extends GridPane {
         this.entry = requireNonNull(entry);
         requireNonNull(calendars);
 
-        getStylesheets().add(CalendarView.class.getResource("calendar.css").toExternalForm());
+        getStylesheets().add(requireNonNull(Launcher.class.getResource("/calendar.css")).toExternalForm());
 
         Bindings.bindBidirectional(titleField.textProperty(), entry.titleProperty());
 
@@ -196,6 +198,12 @@ public class EntryHeaderView extends GridPane {
         Label valueLabel = new Label(defaultVal);
         valueLabel.setMaxWidth(Double.POSITIVE_INFINITY);
         HBox.setHgrow(valueLabel, Priority.ALWAYS);
+        //valueLabel.setStyle("-fx-background-color: #ee1717");
+        valueLabel.setStyle("-fx-font-family: Arial");
+        valueLabel.setTextFill(Color.rgb(126, 138, 119, 0.9));
+        valueLabel.setStyle("-fx-alignment: center;");
+      //  valueLabel.setStyle("-fx-text-fill: rgba(119.0, 192.0, 75.0, 0.9)");
+
 
         StackPane arrow = new StackPane();
         arrow.setStyle("-fx-background-color:#444444;-fx-shape:\"M 0 0 h 7 l -3.5 4 z\";-fx-padding: 4px;");

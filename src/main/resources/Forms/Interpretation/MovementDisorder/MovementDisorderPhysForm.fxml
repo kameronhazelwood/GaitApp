@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Interpretation.MovementDisorder.MovementDisorderPhysForm">
+
+    <ScrollPane>
+        <Pane prefHeight="5606.0" prefWidth="773.0">
+            <Label layoutX="21.0" layoutY="75.0" prefHeight="17.0" prefWidth="67.0" text="Height (cm)" />
+            <Label layoutX="323.0" layoutY="75.0" text="Weight (kg)" />
+            <Label layoutX="21.0" layoutY="101.0" text="Right Foot Length(cm)" />
+            <Label layoutX="323.0" layoutY="101.0" text="Left Foot Length(cm)" />
+            <Label layoutX="21.0" layoutY="128.0" text="Right Foot Width (cm)" />
+            <Label layoutX="322.0" layoutY="128.0" text="Left foot Width (cm)" />
+            <Label layoutX="21.0" layoutY="169.0" prefHeight="25.0" prefWidth="127.0" text="Ambulation Scale" />
+            <Label layoutX="21.0" layoutY="197.0" prefHeight="25.0" prefWidth="127.0" text="GMFCS" />
+            <Label layoutX="21.0" layoutY="228.0" prefHeight="25.0" prefWidth="127.0" text="FMS (5m)" />
+            <Label layoutX="21.0" layoutY="261.0" prefHeight="25.0" prefWidth="127.0" text="FMS (50m)" />
+            <Label layoutX="21.0" layoutY="291.0" prefHeight="25.0" prefWidth="127.0" text="FMS (500m)" />
+            <Label layoutX="21.0" layoutY="371.0" prefHeight="24.0" prefWidth="67.0" text="Comments" />
+            <Label layoutX="204.0" layoutY="482.0" text="PROM">
+                <font>
+                    <Font name="System Bold" size="13.0" />
+                </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="574.0" text="Hip Abd" />
+            <Label layoutX="149.0" layoutY="518.0" text="Right" />
+            <Label layoutX="23.0" layoutY="635.0" text="Knee Ext" />
+            <Label layoutX="25.0" layoutY="703.0" text="Pop Angle" />
+            <Label layoutX="21.0" layoutY="828.0" text="Dorsi (ext)" />
+            <Label layoutX="254.0" layoutY="518.0" text="Left" />
+            <Label layoutX="16.0" layoutY="1062.0" prefHeight="24.0" prefWidth="83.0" text="Orthotics">
+                <font>
+                    <Font name="System Bold" size="14.0" />
+                </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="1093.0" prefHeight="17.0" prefWidth="132.0" text="Add Orthosis to Visit:">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Label>
+            <Label layoutX="43.0" layoutY="1124.0" text="Orthosis:" />
+            <Label layoutX="63.0" layoutY="1161.0" text="Side:" />
+            <RadioButton fx:id="movementOrthosisLeft" layoutX="110.0" layoutY="1160.0" mnemonicParsing="false" text="Left" />
+            <RadioButton fx:id="movementOrthosisRight" layoutX="179.0" layoutY="1160.0" mnemonicParsing="false" text="Right" />
+            <Label layoutX="21.0" layoutY="1411.0" text="Tone">
+                <font>
+                    <Font name="System Bold" size="13.0" />
+                </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="1458.0" text="Iliopsoas" />
+            <Label layoutX="21.0" layoutY="1509.0" text="Glute Max" />
+            <Label layoutX="21.0" layoutY="1560.0" text="Adductor" />
+            <Label layoutX="21.0" layoutY="1610.0" text="Rectus Femoris" />
+            <Label layoutX="21.0" layoutY="1663.0" text="Rectus Catch Angle" />
+            <Label layoutX="21.0" layoutY="1715.0" text="Vastus Medialis" />
+            <Label layoutX="21.0" layoutY="1762.0" text="Hamstring" />
+            <Label layoutX="21.0" layoutY="1813.0" text="Post Tib" />
+            <Label layoutX="21.0" layoutY="1864.0" text="Ant Tib" />
+            <Label layoutX="21.0" layoutY="1920.0" text="Gastroc" />
+            <Label layoutX="21.0" layoutY="1976.0" text="Shoulder Extensors" wrapText="true" />
+            <Label layoutX="21.0" layoutY="2029.0" text="Shoulder Flexors" />
+            <Label layoutX="21.0" layoutY="2087.0" text="Elbow Extensors" />
+            <Label layoutX="21.0" layoutY="2136.0" text="Elbow Flexors" />
+            <Label layoutX="22.0" layoutY="2192.0" text="Wrist Extensors" />
+            <Label layoutX="21.0" layoutY="2255.0" text="Wrist Flexors" />
+            <Label layoutX="21.0" layoutY="2331.0" prefHeight="19.0" prefWidth="45.0" text="Pain:">
+                <font>
+                    <Font name="System Bold" size="13.0" />
+                </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="2360.0" prefHeight="46.0" prefWidth="105.0" text="Pain Assessment Method:" wrapText="true" />
+            <Label layoutX="21.0" layoutY="2443.0" text="Aggravating Factors:" />
+            <Label layoutX="21.0" layoutY="2512.0" text="Activities Impacted:" />
+            <Label layoutX="24.0" layoutY="2566.0" text="Current Level" />
+            <Label layoutX="21.0" layoutY="2621.0" text="Lowest Level" />
+            <Label layoutX="21.0" layoutY="2670.0" text="Highest Level" />
+            <Label layoutX="21.0" layoutY="2727.0" text="Location of Pain" />
+            <Label layoutX="21.0" layoutY="2810.0" text="Frequency of Pain" />
+            <Label layoutX="21.0" layoutY="2891.0" text="Duration of Pain" />
+            <Label layoutX="21.0" layoutY="43.0" text=" General: ">
+                <font>
+                    <Font name="System Bold" size="14.0" />
+                </font>
+            </Label>
+            <Separator layoutX="17.0" layoutY="224.0" prefHeight="0.0" prefWidth="563.0" />
+            <Separator layoutX="18.0" layoutY="256.0" prefHeight="0.0" prefWidth="563.0" />
+            <Separator layoutX="19.0" layoutY="288.0" prefHeight="0.0" prefWidth="563.0" />
+            <Separator layoutX="17.0" layoutY="318.0" prefHeight="0.0" prefWidth="563.0" />
+            <TextArea fx:id="Movementcomments" layoutX="90.0" layoutY="323.0" prefHeight="127.0" prefWidth="485.0" />
+            <Separator blendMode="DIFFERENCE" layoutX="19.0" layoutY="539.0" prefHeight="3.0" prefWidth="557.0" />
+            <Separator blendMode="DIFFERENCE" layoutX="332.0" layoutY="542.0" orientation="VERTICAL" prefHeight="504.0" prefWidth="0.0" />
+            <Label layoutX="418.0" layoutY="482.0" text="Strength">
+                <font>
+                    <Font name="System Bold" size="13.0" />
+                </font>
+            </Label>
+            <Label layoutX="383.0" layoutY="518.0" text="Right" />
+            <Label layoutX="499.0" layoutY="518.0" text="Left" />
+            <Separator layoutX="211.0" layoutY="543.0" orientation="VERTICAL" prefHeight="504.0" prefWidth="0.0" />
+            <Separator layoutX="456.0" layoutY="542.0" orientation="VERTICAL" prefHeight="504.0" prefWidth="0.0" />
+            <Separator layoutX="105.0" layoutY="543.0" orientation="VERTICAL" prefHeight="504.0" prefWidth="0.0" />
+            <Separator layoutX="13.0" layoutY="609.0" prefHeight="2.0" prefWidth="557.0" />
+            <Separator layoutX="14.0" layoutY="674.0" prefHeight="4.0" prefWidth="557.0" />
+            <Separator layoutX="15.0" layoutY="742.0" prefHeight="4.0" prefWidth="557.0" />
+            <Separator layoutX="15.0" layoutY="807.0" prefHeight="4.0" prefWidth="557.0" />
+            <Separator layoutX="13.0" layoutY="871.0" prefHeight="3.0" prefWidth="557.0" />
+            <Separator layoutX="14.0" layoutY="931.0" prefHeight="4.0" prefWidth="557.0" />
+            <Separator layoutX="15.0" layoutY="988.0" prefHeight="4.0" prefWidth="557.0" />
+            <Separator blendMode="DIFFERENCE" layoutX="13.0" layoutY="1046.0" prefHeight="2.0" prefWidth="564.0" />
+            <Label layoutX="23.0" layoutY="767.0" text="Dorsi (flex)" />
+            <ComboBox fx:id="movementOrthosisSelection" layoutX="114.0" layoutY="1122.0" prefHeight="17.0" prefWidth="178.0" />
+            <RadioButton fx:id="movementOrthosisBoth" layoutX="244.0" layoutY="1160.0" mnemonicParsing="false" text="Both" />
+            <Button fx:id="movementOrthAddButton" layoutX="328.0" layoutY="1135.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Add" />
+            <Separator layoutX="14.0" layoutY="1391.0" prefHeight="4.0" prefWidth="618.0" />
+            <Separator blendMode="DIFFERENCE" layoutX="18.0" layoutY="1437.0" prefHeight="2.0" prefWidth="578.0" />
+            <Label layoutX="194.0" layoutY="1412.0" text="Right" />
+            <Label layoutX="298.0" layoutY="1412.0" text="R Interp" />
+            <Label layoutX="416.0" layoutY="1412.0" text="Left" />
+            <Label layoutX="522.0" layoutY="1412.0" text="L Interp" />
+            <Separator layoutX="149.0" layoutY="1439.0" orientation="VERTICAL" prefHeight="859.0" prefWidth="0.0" />
+            <Separator layoutX="264.0" layoutY="1439.0" orientation="VERTICAL" prefHeight="859.0" prefWidth="0.0" />
+            <Separator layoutX="376.0" layoutY="1439.0" orientation="VERTICAL" prefHeight="859.0" prefWidth="0.0" />
+            <Separator layoutX="479.0" layoutY="1439.0" orientation="VERTICAL" prefHeight="859.0" prefWidth="7.0" />
+            <Separator blendMode="DIFFERENCE" layoutX="593.0" layoutY="1439.0" orientation="VERTICAL" prefHeight="859.0" prefWidth="1.0" />
+            <Separator layoutX="15.0" layoutY="1489.0" prefHeight="3.0" prefWidth="578.0" />
+            <Separator layoutX="15.0" layoutY="1538.0" prefHeight="3.0" prefWidth="578.0" />
+            <Separator layoutX="18.0" layoutY="1591.0" prefHeight="3.0" prefWidth="578.0" />
+            <Separator layoutX="15.0" layoutY="1644.0" prefHeight="3.0" prefWidth="578.0" />
+            <Separator layoutX="17.0" layoutY="1693.0" prefHeight="3.0" prefWidth="578.0" />
+            <Separator layoutX="16.0" layoutY="1742.0" prefHeight="3.0" prefWidth="578.0" />
+            <Separator layoutX="16.0" layoutY="1791.0" prefHeight="3.0" prefWidth="578.0" />
+            <Separator layoutX="15.0" layoutY="1843.0" prefHeight="3.0" prefWidth="578.0" />
+            <Separator layoutX="12.0" layoutY="1898.0" prefHeight="3.0" prefWidth="578.0" />
+            <Separator layoutX="15.0" layoutY="1955.0" prefHeight="3.0" prefWidth="578.0" />
+            <Separator layoutX="15.0" layoutY="2008.0" prefHeight="3.0" prefWidth="578.0" />
+            <Separator layoutX="15.0" layoutY="2065.0" prefHeight="3.0" prefWidth="578.0" />
+            <Separator layoutX="15.0" layoutY="2116.0" prefHeight="3.0" prefWidth="578.0" />
+            <Separator layoutX="13.0" layoutY="2169.0" prefHeight="3.0" prefWidth="578.0" />
+            <Separator layoutX="16.0" layoutY="2230.0" prefHeight="3.0" prefWidth="578.0" />
+            <Separator blendMode="DIFFERENCE" layoutX="16.0" layoutY="2298.0" prefHeight="3.0" prefWidth="578.0" />
+            <Separator blendMode="DIFFERENCE" layoutX="8.0" layoutY="2358.0" prefHeight="3.0" prefWidth="591.0" />
+            <Separator layoutX="138.0" layoutY="2360.0" orientation="VERTICAL" prefHeight="580.0" prefWidth="4.0" />
+            <Separator layoutX="19.0" layoutY="2413.0" prefHeight="2.0" prefWidth="580.0" />
+            <Separator blendMode="DIFFERENCE" layoutX="597.0" layoutY="2360.0" orientation="VERTICAL" prefHeight="579.0" prefWidth="2.0" />
+            <Separator layoutX="17.0" layoutY="2481.0" prefHeight="3.0" prefWidth="580.0" />
+            <Separator layoutX="17.0" layoutY="2548.0" prefHeight="3.0" prefWidth="580.0" />
+            <Separator layoutX="18.0" layoutY="2601.0" prefHeight="2.0" prefWidth="580.0" />
+            <Separator layoutX="18.0" layoutY="2647.0" prefHeight="2.0" prefWidth="580.0" />
+            <Separator layoutX="18.0" layoutY="2697.0" prefHeight="2.0" prefWidth="580.0" />
+            <Separator layoutX="17.0" layoutY="2778.0" prefHeight="2.0" prefWidth="580.0" />
+            <Separator layoutX="17.0" layoutY="2860.0" prefHeight="2.0" prefWidth="580.0" />
+            <Separator blendMode="DIFFERENCE" layoutX="18.0" layoutY="2938.0" prefHeight="2.0" prefWidth="580.0" />
+            <Button layoutX="620.0" layoutY="26.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="114.0" text="Save" />
+            <Separator blendMode="DIFFERENCE" layoutX="574.0" layoutY="542.0" orientation="VERTICAL" prefHeight="506.0" prefWidth="0.0" />
+            <Separator prefHeight="0.0" prefWidth="744.0" />
+            <Separator prefHeight="0.0" prefWidth="744.0" />
+            <Separator prefHeight="0.0" prefWidth="744.0" />
+            <Separator prefHeight="0.0" prefWidth="744.0" />
+            <Separator prefHeight="0.0" prefWidth="744.0" />
+            <Separator prefHeight="0.0" prefWidth="744.0" />
+            <Separator orientation="VERTICAL" prefHeight="842.0" prefWidth="0.0" />
+            <Separator orientation="VERTICAL" prefHeight="842.0" prefWidth="0.0" />
+            <Separator orientation="VERTICAL" prefHeight="842.0" prefWidth="0.0" />
+            <Separator orientation="VERTICAL" prefHeight="842.0" prefWidth="0.0" />
+            <Separator orientation="VERTICAL" prefHeight="842.0" prefWidth="0.0" />
+            <Separator prefHeight="0.0" prefWidth="744.0" />
+            <Separator prefHeight="0.0" prefWidth="744.0" />
+            <Separator prefHeight="0.0" prefWidth="744.0" />
+            <Separator prefHeight="0.0" prefWidth="744.0" />
+            <Separator prefHeight="0.0" prefWidth="744.0" />
+            <Separator prefHeight="0.0" prefWidth="744.0" />
+            <Separator orientation="VERTICAL" prefHeight="842.0" prefWidth="0.0" />
+            <Separator orientation="VERTICAL" prefHeight="842.0" prefWidth="0.0" />
+            <Separator orientation="VERTICAL" prefHeight="842.0" prefWidth="0.0" />
+            <Separator orientation="VERTICAL" prefHeight="842.0" prefWidth="0.0" />
+            <Separator orientation="VERTICAL" prefHeight="842.0" prefWidth="0.0" />
+            <Label layoutX="13.0" layoutY="2976.0" prefHeight="17.0" prefWidth="70.0" text="HAT :">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Label>
+            <Separator layoutY="3036.0" prefHeight="0.0" prefWidth="714.0" />
+            <Separator layoutX="158.0" layoutY="2993.0" orientation="VERTICAL" prefHeight="771.0" prefWidth="0.0" />
+            <Label layoutX="194.0" layoutY="3005.0" text="UER Score" />
+            <Separator layoutX="297.0" layoutY="2993.0" orientation="VERTICAL" prefHeight="771.0" prefWidth="0.0" />
+            <Label layoutX="2.0" layoutY="3025.0" prefHeight="130.0" prefWidth="149.0" text="Increased involuntary movements/postrues of the designated limb with tactile stimulus of another body part" wrapText="true" />
+            <Separator layoutY="3140.0" prefHeight="0.0" prefWidth="714.0" />
+            <Label layoutX="331.0" layoutY="3005.0" text="LER Score" />
+            <Separator layoutX="434.0" layoutY="2990.0" orientation="VERTICAL" prefHeight="771.0" prefWidth="0.0" />
+            <Label layoutX="473.0" layoutY="3005.0" text="UEL Score" />
+            <Separator layoutX="573.0" layoutY="2990.0" orientation="VERTICAL" prefHeight="771.0" prefWidth="0.0" />
+            <Label layoutX="623.0" layoutY="3005.0" text="LEL Score" />
+            <Label layoutX="2.0" layoutY="3146.0" prefHeight="89.0" prefWidth="147.0" text="Increased involuntary movements/postrues with purposeful movements of another body part" wrapText="true" />
+            <Separator layoutY="3233.0" prefHeight="0.0" prefWidth="714.0" />
+            <Label layoutX="2.0" layoutY="3237.0" prefHeight="89.0" prefWidth="147.0" text="Velocity dependent resistance to stretch" wrapText="true" />
+            <Separator layoutY="3339.0" prefHeight="0.0" prefWidth="714.0" />
+            <Label layoutX="2.0" layoutY="3350.0" prefHeight="89.0" prefWidth="147.0" text="Presence of a spastic catch" wrapText="true" />
+            <Separator layoutY="3450.0" prefHeight="0.0" prefWidth="714.0" />
+            <Label layoutX="2.0" layoutY="3457.0" prefHeight="89.0" prefWidth="147.0" text="Equal resistance to passive stretch during bi-directional movement of a joint" wrapText="true" />
+            <Separator layoutY="3561.0" prefHeight="0.0" prefWidth="714.0" />
+            <Label layoutX="2.0" layoutY="3569.0" prefHeight="89.0" prefWidth="147.0" text="Increased tone with movement of another body part" wrapText="true" />
+            <Separator layoutY="3665.0" prefHeight="0.0" prefWidth="714.0" />
+            <Label layoutX="2.0" layoutY="3675.0" prefHeight="89.0" prefWidth="147.0" text="Maintenance of limb position after passive movement" wrapText="true" />
+            <Separator layoutY="3764.0" prefHeight="0.0" prefWidth="714.0" />
+            <Label layoutX="13.0" layoutY="3867.0" text="Dystonia Scale: ">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Label>
+            <Separator prefHeight="0.0" prefWidth="745.0" />
+            <Separator layoutY="3894.0" prefHeight="0.0" prefWidth="737.0" />
+            <Label layoutX="244.0" layoutY="3871.0" text="Score">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Label>
+            <Separator layoutX="175.0" layoutY="3863.0" orientation="VERTICAL" prefHeight="733.0" prefWidth="0.0" />
+            <Label layoutX="12.0" layoutY="3907.0" prefHeight="103.0" prefWidth="137.0" text="Eyes: signs of dystonia of the eyes include: prolonged eyelid spasms, and/or force eye deviations" wrapText="true" />
+            <Separator layoutY="4048.0" prefHeight="0.0" prefWidth="737.0" />
+            <Label layoutX="2.0" layoutY="4058.0" prefHeight="103.0" prefWidth="137.0" text="Mouth: signs of dystonia of the mouth include: grimacing, clenched or deviated jaw, forced open mouth, and/or forceful tongue thrusting" wrapText="true" />
+            <Separator layoutY="4215.0" prefHeight="0.0" prefWidth="737.0" />
+            <Label layoutX="2.0" layoutY="4233.0" prefHeight="103.0" prefWidth="137.0" text="Neck: signs of dystonia of the neck include: pulling of the neck into any plane of motion: extension, flexion, lateral flexion or rotation" wrapText="true" />
+            <Separator layoutY="4400.0" prefHeight="2.0" prefWidth="737.0" />
+            <Label layoutX="2.0" layoutY="4436.0" prefHeight="103.0" prefWidth="137.0" text="Trunk: signs of dystonia of the trunk include: pulling of the trunk into any plane of motion: extension, flexion, lateral flexion or rotation" wrapText="true" />
+            <Separator layoutY="4594.0" prefHeight="2.0" prefWidth="737.0" />
+            <Separator layoutX="735.0" layoutY="4867.0" orientation="VERTICAL" prefHeight="702.0" prefWidth="0.0" />
+            <Separator layoutX="711.0" layoutY="3910.0" orientation="VERTICAL" prefHeight="862.0" prefWidth="0.0" />
+            <Label layoutX="10.0" layoutY="7.0" text="Movement Disorder Phys Exam: ">
+                <font>
+                    <Font name="System Bold" size="14.0" />
+                </font>
+            </Label>
+         <Text fx:id="movementHeightInterp" layoutX="183.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="RFLmovementInterp" layoutX="183.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="RFWmovementInterp" layoutX="186.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="weightMovementInterp" layoutX="464.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="LFLmovementInterp" layoutX="464.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="LFWmovementInterp" layoutX="464.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="ambulationScaleInterp" layoutX="186.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="FMS5MovementInterp" layoutX="186.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="FMS50MovementInterp" layoutX="186.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="FMS500MovementInterp" layoutX="186.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="GMFCSMovementInterp" layoutX="186.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Separator layoutX="17.0" layoutY="194.0" prefHeight="0.0" prefWidth="563.0" />
+         <Separator layoutX="17.0" layoutY="149.0" prefHeight="0.0" prefWidth="563.0" />
+         <Separator layoutX="17.0" layoutY="121.0" prefHeight="0.0" prefWidth="563.0" />
+         <Separator layoutX="17.0" layoutY="95.0" prefHeight="0.0" prefWidth="563.0" />
+         <Label layoutX="21.0" layoutY="883.0" prefHeight="35.0" prefWidth="75.0" text="Shoulder Abduction" wrapText="true" />
+         <Label layoutX="21.0" layoutY="944.0" prefHeight="35.0" prefWidth="75.0" text="Elbow Extension" wrapText="true" />
+         <Label layoutX="21.0" layoutY="1000.0" prefHeight="35.0" prefWidth="75.0" text="Wrist Extension" wrapText="true" />
+         <Text fx:id="movementHipAbdPR" layoutX="149.0" layoutY="587.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementHipAbdPL" layoutX="256.0" layoutY="587.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementKneeExtPR" layoutX="150.0" layoutY="648.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementHipAbdSR" layoutX="386.0" layoutY="587.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementHipAbdSL" layoutX="499.0" layoutY="587.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementKneeExtPL" layoutX="255.0" layoutY="648.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementKneeExtSR" layoutX="386.0" layoutY="648.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementKneeExtSL" layoutX="499.0" layoutY="648.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementPopAnglePR" layoutX="152.0" layoutY="716.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementPopAnglePL" layoutX="259.0" layoutY="716.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementPopAngleSR" layoutX="389.0" layoutY="716.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementPopAngleSL" layoutX="498.0" layoutY="716.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementDorsiFlexPR" layoutX="153.0" layoutY="780.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementDorsiExtPR" layoutX="152.0" layoutY="841.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementShoulderPR" layoutX="153.0" layoutY="905.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementElbowPR" layoutX="153.0" layoutY="966.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementWristPR" layoutX="153.0" layoutY="1022.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementDorsiFLexPL" layoutX="258.0" layoutY="780.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementDorsiExtPL" layoutX="258.0" layoutY="841.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementShoulderPL" layoutX="259.0" layoutY="905.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementElbowPL" layoutX="261.0" layoutY="966.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementWristPL" layoutX="264.0" layoutY="1022.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementWristSR" layoutX="389.0" layoutY="1022.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementWristSL" layoutX="499.0" layoutY="1022.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementElbowSR" layoutX="389.0" layoutY="966.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementElbowSL" layoutX="496.0" layoutY="966.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementShoulderSR" layoutX="389.0" layoutY="905.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementDorsiExtSR" layoutX="389.0" layoutY="841.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementDorsiFlexSR" layoutX="388.0" layoutY="780.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementDorsiFlexSL" layoutX="499.0" layoutY="780.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementDorsiExtSL" layoutX="499.0" layoutY="841.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementShoulderSL" layoutX="499.0" layoutY="905.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <TextArea fx:id="movementOrthosisComments" layoutX="39.0" layoutY="1248.0" prefHeight="118.0" prefWidth="493.0" />
+         <Label layoutX="34.0" layoutY="1194.0" text="Comments">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Label>
+         <Text fx:id="movementIlliopsoasR" layoutX="197.0" layoutY="1471.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementIlliopsoasRInterp" layoutX="307.0" layoutY="1471.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementIlliopsoasL" layoutX="415.0" layoutY="1471.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementIlliopsoasLInterp" layoutX="523.0" layoutY="1471.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementGluteR" layoutX="197.0" layoutY="1522.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementGluteRInterp" layoutX="311.0" layoutY="1522.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementGluteL" layoutX="417.0" layoutY="1522.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementGluteLInterp" layoutX="523.0" layoutY="1522.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementAdductorR" layoutX="196.0" layoutY="1573.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementAdductorRInterp" layoutX="312.0" layoutY="1573.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementAdductorL" layoutX="418.0" layoutY="1573.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementAdductorLInterp" layoutX="523.0" layoutY="1573.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementRectusFemR" layoutX="197.0" layoutY="1623.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementRectusCatchR" layoutX="197.0" layoutY="1676.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementVastusR" layoutX="200.0" layoutY="1728.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementHamstringR" layoutX="200.0" layoutY="1775.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementRectusFemRInterp" layoutX="312.0" layoutY="1623.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementRectusFemL" layoutX="418.0" layoutY="1622.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementRectusFemLInterp" layoutX="523.0" layoutY="1622.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementRectusCatchRInterp" layoutX="312.0" layoutY="1676.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementRectusCatchL" layoutX="417.0" layoutY="1676.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementRectusCatchLInterp" layoutX="523.0" layoutY="1676.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementVastusRInterp" layoutX="312.0" layoutY="1728.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementVastusL" layoutX="418.0" layoutY="1728.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementVastusLInterp" layoutX="521.0" layoutY="1728.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementHamstringRInterp" layoutX="312.0" layoutY="1775.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementHamstringL" layoutX="418.0" layoutY="1775.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementHamstringLInterp" layoutX="521.0" layoutY="1775.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementPostR" layoutX="200.0" layoutY="1826.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementAntR" layoutX="200.0" layoutY="1877.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementGastrocR" layoutX="200.0" layoutY="1933.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementShoulderExtR" layoutX="203.0" layoutY="1989.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementShoulderFlexR" layoutX="203.0" layoutY="2042.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementElbowExtR" layoutX="203.0" layoutY="2100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementElbowFlexR" layoutX="203.0" layoutY="2149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementWristExtPR" layoutX="205.0" layoutY="2205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementWristFlexPR" layoutX="207.0" layoutY="2268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementPostRInterp" layoutX="312.0" layoutY="1826.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementPostL" layoutX="418.0" layoutY="1826.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementPostLInterp" layoutX="523.0" layoutY="1826.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementAntRInterp" layoutX="312.0" layoutY="1877.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementAntL" layoutX="418.0" layoutY="1877.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementAntLInterp" layoutX="523.0" layoutY="1877.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text layoutX="312.0" layoutY="1933.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text layoutX="418.0" layoutY="1933.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text layoutX="523.0" layoutY="1933.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementShoulderExtRInterp" layoutX="312.0" layoutY="1989.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementShoulderExtL" layoutX="418.0" layoutY="1989.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementShoulderExtLInterp" layoutX="521.0" layoutY="1989.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementShoulderFlexRInterp" layoutX="312.0" layoutY="2042.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementElbowExtRInterp" layoutX="312.0" layoutY="2100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementElbowFlexRInterp" layoutX="312.0" layoutY="2149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementWristExtPRInterp" layoutX="312.0" layoutY="2205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementWristFlexPLInterp" layoutX="312.0" layoutY="2268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementShoulderFlexL" layoutX="417.0" layoutY="2042.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementElbowExtL" layoutX="418.0" layoutY="2100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementElbowFlexL" layoutX="418.0" layoutY="2149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementWristExtL" layoutX="418.0" layoutY="2205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementWristFlexSR" layoutX="417.0" layoutY="2268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementShoulderFlexLInterp" layoutX="521.0" layoutY="2042.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementElbowExtLInterp" layoutX="523.0" layoutY="2100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementElbowFlexLInterp" layoutX="521.0" layoutY="2149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementWristExtSLInterp" layoutX="523.0" layoutY="2205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementWristFlexPLInterp" layoutX="523.0" layoutY="2268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="movementPainAssessment" layoutX="145.0" layoutY="2389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="390.1367492675781" />
+         <Text fx:id="movementPainFactors" layoutX="145.0" layoutY="2456.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="350.8033447265625" />
+         <Text fx:id="movementPainActivities" layoutX="145.0" layoutY="2525.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="390.1367492675781" />
+         <Text fx:id="movementPainCurrent" layoutX="145.0" layoutY="2579.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="390.1367492675781" />
+         <Text fx:id="movementPainLowest" layoutX="145.0" layoutY="2634.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="390.1367492675781" />
+         <Text fx:id="movementPainHighest" layoutX="145.0" layoutY="2683.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="390.1367492675781" />
+         <Text fx:id="movementPainLocation" layoutX="145.0" layoutY="2740.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="390.1367492675781" />
+         <Text fx:id="movementPainFrequency" layoutX="145.0" layoutY="2823.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="390.1367492675781" />
+         <Text fx:id="movementPainDuration" layoutX="145.0" layoutY="2904.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="390.1367492675781" />
+         <Text fx:id="hatTactileUER" layoutX="205.0" layoutY="3095.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="hatTactileLER" layoutX="347.0" layoutY="3095.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="hatTactileUEL" layoutX="487.0" layoutY="3095.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="hatTactileLEL" layoutX="632.0" layoutY="3095.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="hatpurposefulUER" layoutX="208.0" layoutY="3195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="hatpurposefulLER" layoutX="348.0" layoutY="3195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="hatpurposefulUEL" layoutX="488.0" layoutY="3195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="hatpurposefulLEL" layoutX="632.0" layoutY="3195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="hatStretchUER" layoutX="210.0" layoutY="3286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="hatStretchLER" layoutX="346.0" layoutY="3286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="hatStretchUEL" layoutX="488.0" layoutY="3286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="hatStretchLEL" layoutX="632.0" layoutY="3286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="hatSpasticUER" layoutX="211.0" layoutY="3408.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="hatSpasticLER" layoutX="348.0" layoutY="3408.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="hatSpasticUEL" layoutX="488.0" layoutY="3408.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="hatSpasticLEL" layoutX="632.0" layoutY="3408.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="hatEqualUER" layoutX="214.0" layoutY="3515.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="hatEqualLER" layoutX="348.0" layoutY="3515.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="hatEqualUEL" layoutX="488.0" layoutY="3515.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="hatEqualLEL" layoutX="632.0" layoutY="3515.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="hatToneUER" layoutX="216.0" layoutY="3618.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="hatToneLER" layoutX="348.0" layoutY="3618.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="hatToneUEL" layoutX="488.0" layoutY="3618.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="hatToneLEL" layoutX="632.0" layoutY="3618.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="hatPassiveUER" layoutX="217.0" layoutY="3716.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="hatPassiveLER" layoutX="348.0" layoutY="3716.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="hatPassiveUEL" layoutX="488.0" layoutY="3716.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="hatPassiveLEL" layoutX="632.0" layoutY="3716.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="DystScaleEyes" layoutX="189.0" layoutY="3910.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="534.8033447265625" />
+         <Text fx:id="DystScaleMouth" layoutX="183.0" layoutY="4067.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="562.1366577148438" />
+         <Text fx:id="DystScaleNeck" layoutX="185.0" layoutY="4236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="500.13671875" />
+         <Text fx:id="DystScaleTrunk" layoutX="186.0" layoutY="4419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="525.4700927734375" />
+        </Pane>
+    </ScrollPane>
+
+</AnchorPane>

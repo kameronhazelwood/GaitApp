@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Compendium.MovementDisorder.HipScoresComp">
+   <children>
+      <Label layoutX="28.0" layoutY="22.0" text="Hip Scores">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="90.0" text="Modified Harris Hip Score" />
+      <Label layoutX="14.0" layoutY="124.0" text="UCLA Activity Score" />
+      <Label layoutX="14.0" layoutY="154.0" text="WOMAC - Pain" />
+      <Label layoutX="14.0" layoutY="184.0" text="WOMAC - Stiffness" />
+      <Label layoutX="14.0" layoutY="214.0" text="WOMAC - Physical Function" />
+      <Separator layoutX="171.0" layoutY="56.0" orientation="VERTICAL" prefHeight="188.0" prefWidth="0.0" />
+      <Separator layoutY="83.0" prefHeight="0.0" prefWidth="453.0" />
+      <Label layoutX="233.0" layoutY="62.0" text="Manual" />
+      <Separator layoutX="338.0" layoutY="56.0" orientation="VERTICAL" prefHeight="188.0" prefWidth="0.0" />
+      <TextField layoutX="177.0" layoutY="86.0" prefHeight="20.0" prefWidth="111.0" />
+      <Label layoutX="308.0" layoutY="90.0" text="/ 91" />
+      <Label layoutX="359.0" layoutY="62.0" text="Computed" />
+      <Label layoutX="366.0" layoutY="90.0" text="--" />
+      <Label layoutX="391.0" layoutY="90.0" text="/ 91" />
+      <Separator layoutX="450.0" layoutY="56.0" orientation="VERTICAL" prefHeight="188.0" prefWidth="0.0" />
+      <Separator layoutY="56.0" prefHeight="0.0" prefWidth="452.0" />
+      <TextField layoutX="177.0" layoutY="120.0" prefHeight="20.0" prefWidth="111.0" />
+      <Label layoutX="308.0" layoutY="124.0" text="/ 10" />
+      <Separator layoutY="115.0" prefHeight="0.0" prefWidth="453.0" />
+      <Label layoutX="366.0" layoutY="124.0" text="--" />
+      <Label layoutX="391.0" layoutY="124.0" text="/ 10" />
+      <Separator layoutY="148.0" prefHeight="0.0" prefWidth="453.0" />
+      <TextField layoutX="177.0" layoutY="151.0" prefHeight="20.0" prefWidth="111.0" />
+      <Label layoutX="308.0" layoutY="154.0" text="/ 20" />
+      <Label layoutX="368.0" layoutY="154.0" text="--" />
+      <Label layoutX="393.0" layoutY="154.0" text="/ 20" />
+      <Separator layoutY="179.0" prefHeight="0.0" prefWidth="453.0" />
+      <TextField layoutX="177.0" layoutY="182.0" prefHeight="20.0" prefWidth="111.0" />
+      <Label layoutX="308.0" layoutY="185.0" text="/ 8" />
+      <Label layoutX="367.0" layoutY="186.0" text="--" />
+      <Label layoutX="392.0" layoutY="186.0" text="/ 8" />
+      <Separator layoutY="211.0" prefHeight="0.0" prefWidth="453.0" />
+      <TextField layoutX="177.0" layoutY="215.0" prefHeight="20.0" prefWidth="111.0" />
+      <Label layoutX="308.0" layoutY="218.0" text="/ 68" />
+      <Label layoutX="367.0" layoutY="219.0" text="--" />
+      <Label layoutX="392.0" layoutY="219.0" text="/ 68" />
+      <Separator layoutY="244.0" prefHeight="0.0" prefWidth="453.0" />
+   </children>
+</AnchorPane>
