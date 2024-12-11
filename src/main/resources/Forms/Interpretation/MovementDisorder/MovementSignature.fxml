@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Interpretation.MovementDisorder.MovementSignature">
+   <children>
+      <CheckBox layoutX="34.0" layoutY="41.0" mnemonicParsing="false" prefHeight="13.0" prefWidth="281.0" text="Interpreting Physician Signature" />
+      <CheckBox layoutX="34.0" layoutY="95.0" mnemonicParsing="false" text="Interpretting Physical Therapist Signature" />
+      <CheckBox layoutX="34.0" layoutY="143.0" mnemonicParsing="false" text="Addendum Signature" />
+   </children>
+</AnchorPane>
