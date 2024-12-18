@@ -1122,7 +1122,6 @@ public class VisitDetailsGaitController implements Initializable {
     private IAppointmentModel appointmentModel;
 
 
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         date.setText("9/11/2024");
@@ -1402,20 +1401,32 @@ public class VisitDetailsGaitController implements Initializable {
 //        this.dataTable.setShowRoot(false);
     }
 
-    void onSaveVisitDetailsGait(ActionEvent event){
+    void onSaveVisitDetailsGait(ActionEvent event) {
         appointmentModel.setVisitType(aptVisitType.getText());
     }
 
-    public void setAppointmentModel(IAppointmentModel appointmentModel){
-
-
-
+    public void setAppointmentModel(IAppointmentModel appointmentModel) {
         aptDate.setText(appointmentModel.getAptDate());
         aptVisitType.setText(appointmentModel.getVisitType());
         aptSubType.setText(appointmentModel.getVisitSubType());
-        
+
     }
 
+    @FXML
+    public void onSetDatesVisitGait(IAppointmentModel appointmentModel1) throws IOException {
+        /*
+        service needs to show all dates for an appointment. also shows if pics are available or grayed out.
+        i think a new popup window that displays all apointment dates would be best
+         */
+        Parent popUp;
+        popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("Wizards/SetDatesWizard.fxml")));
+        Stage stage1 = new Stage();
+        stage1.setTitle("Select Comparison Dates Below: ");
+        stage1.setScene(new Scene(popUp, 600, 450));
+        stage1.show();
+
+
+    }
     Image lateralForeFoot = new Image(String.valueOf(getClass().getResource("/images/99999999_052223_LateralForeFoot.png")));
     Image kneeJointMoments = new Image(String.valueOf(getClass().getResource("/images/99999999_052223_KneeJointMoments.png")));
     Image kneeJointAngles = new Image(String.valueOf(getClass().getResource("/images/99999999_052223_KneeJointAngles.png")));

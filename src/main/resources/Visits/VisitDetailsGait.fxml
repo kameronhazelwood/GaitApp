@@ -24,9 +24,9 @@
 <?import javafx.scene.text.Text?>
 <?import org.controlsfx.control.HyperlinkLabel?>
 
-<TabPane fx:id="visitTabPane" prefHeight="6000.0" prefWidth="760.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Visits.VisitDetailsGaitController">
+<TabPane fx:id="visitTabPane" prefHeight="2000.0" prefWidth="760.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Visits.VisitDetailsGaitController">
       <Tab fx:id="visitTab" text="Visit Information">
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="731.0" prefWidth="725.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="693.0">
               <Label layoutX="14.0" layoutY="14.0" text="Visit Information:">
                   <font>
                       <Font name="System Bold" size="14.0" />
@@ -47,32 +47,30 @@
                       <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                       <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   </rowConstraints>
-                  <children>
-                      <Label prefHeight="34.0" prefWidth="85.0" text="Date" />
-                      <TextField fx:id="date" GridPane.columnIndex="1" />
-                      <Label text="Time" GridPane.columnIndex="2" />
-                      <TextField fx:id="aptTime" GridPane.columnIndex="3" />
-                      <Label text="Attended?" GridPane.columnIndex="4" />
-                      <TextField fx:id="aptAttended" GridPane.columnIndex="5" />
-                      <Label prefHeight="34.0" prefWidth="85.0" text="Start Time" GridPane.rowIndex="1" />
-                      <TextField fx:id="aptStartTime" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                      <Label text="Stop Time" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                      <TextField fx:id="aptStopTime" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                      <Label text="Date Sched" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                      <TextField fx:id="aptDate" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-                      <Label text="Visit Type" GridPane.rowIndex="2" />
-                      <TextField fx:id="aptVisitType" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                      <Label text="Visit Sub-Type" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                      <TextField fx:id="aptSubType" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                      <Label text="Date Sent to EPIC" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                      <TextField fx:id="dateToEpic" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-                      <Label text="Date Processed" GridPane.rowIndex="3" />
-                      <TextField fx:id="aptDateProcessed" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                      <Label text="Date Printed" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                      <TextField GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                      <Label text="Date Finalized" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-                      <TextField GridPane.columnIndex="5" GridPane.rowIndex="3" />
-                  </children>
+                  <Label prefHeight="34.0" prefWidth="85.0" text="Date" />
+                  <TextField fx:id="date" GridPane.columnIndex="1" />
+                  <Label text="Time" GridPane.columnIndex="2" />
+                  <TextField fx:id="aptTime" GridPane.columnIndex="3" />
+                  <Label text="Attended?" GridPane.columnIndex="4" />
+                  <TextField fx:id="aptAttended" GridPane.columnIndex="5" />
+                  <Label prefHeight="34.0" prefWidth="85.0" text="Start Time" GridPane.rowIndex="1" />
+                  <TextField fx:id="aptStartTime" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="Stop Time" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <TextField fx:id="aptStopTime" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Label text="Date Sched" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <TextField fx:id="aptDate" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                  <Label text="Visit Type" GridPane.rowIndex="2" />
+                  <TextField fx:id="aptVisitType" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Visit Sub-Type" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <TextField fx:id="aptSubType" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Label text="Date Sent to EPIC" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <TextField fx:id="dateToEpic" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                  <Label text="Date Processed" GridPane.rowIndex="3" />
+                  <TextField fx:id="aptDateProcessed" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label text="Date Printed" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <TextField GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Label text="Date Finalized" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                  <TextField GridPane.columnIndex="5" GridPane.rowIndex="3" />
               </GridPane>
               <Label layoutX="22.0" layoutY="195.0" text="Diagnosis" />
               <TextField fx:id="aptDiagnosis" layoutX="139.0" layoutY="191.0" prefHeight="25.0" prefWidth="579.0" />
@@ -933,167 +931,234 @@
 <!--      </Tab>-->
       <Tab fx:id="reportTab" text="Reports">
           <ScrollPane prefHeight="773.0" prefWidth="773.0">
-              <Pane maxWidth="900.0" prefHeight="1221.0" prefWidth="900.0">
-                  <children>
-                      <Label layoutX="12.0" layoutY="200.0" text="Gait Pictures " />
-                      <Label layoutX="12.0" layoutY="129.0" prefWidth="1085.0" text="Gray boxes indicate that some data is present for that test/visit combination." />
-                      <Label layoutX="12.0" layoutY="146.0" text=" A question mark (?) indicates there are comments associated with that test. Hover the mouse over the box to see the comments." />
-                      <Label layoutX="12.0" layoutY="226.0" text="Gait Video" />
-                      <Label layoutX="12.0" layoutY="252.0" text="Gait Foot Pressure" />
-                      <Label layoutX="12.0" layoutY="276.0" text="Gait Kinematics " />
-                      <Label layoutX="12.0" layoutY="302.0" text="Gait Multisegment" />
-                      <Label layoutX="12.0" layoutY="328.0" text="Gait EMG Surface" />
-                      <Label layoutX="12.0" layoutY="352.0" text="Gait EMG Fine Wire" />
-                      <Label layoutX="12.0" layoutY="376.0" text="Gait PT Exam" />
-                      <Label layoutX="12.0" layoutY="402.0" text="Gait Walking Only" />
-                      <Label layoutX="12.0" layoutY="426.0" text="Gait Exercise" />
-                      <Label layoutX="12.0" layoutY="452.0" text="Gait Walking and Exercise" />
-                      <Label layoutX="12.0" layoutY="477.0" text="Gait Step Watch" />
-                      <Separator layoutY="222.0" prefHeight="3.0" prefWidth="783.0" />
-                      <Label layoutX="279.0" layoutY="170.0" text="Date 1" />
-                      <Label layoutX="335.0" layoutY="170.0" text="Date 2" />
-                      <Label layoutX="389.0" layoutY="170.0" text="Date 3" />
-                      <CheckBox layoutX="288.0" layoutY="200.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="344.0" layoutY="200.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="399.0" layoutY="200.0" mnemonicParsing="false" />
-                      <Separator layoutY="247.0" prefHeight="3.0" prefWidth="783.0" />
-                      <CheckBox layoutX="288.0" layoutY="225.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="344.0" layoutY="225.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="399.0" layoutY="225.0" mnemonicParsing="false" />
-                      <Separator layoutY="272.0" prefHeight="3.0" prefWidth="783.0" />
-                      <CheckBox layoutX="288.0" layoutY="250.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="344.0" layoutY="250.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="399.0" layoutY="250.0" mnemonicParsing="false" />
-                      <Separator layoutY="297.0" prefHeight="3.0" prefWidth="783.0" />
-                      <CheckBox layoutX="288.0" layoutY="275.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="344.0" layoutY="275.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="399.0" layoutY="276.0" mnemonicParsing="false" />
-                      <Separator layoutY="322.0" prefHeight="3.0" prefWidth="783.0" />
-                      <CheckBox layoutX="288.0" layoutY="301.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="344.0" layoutY="301.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="399.0" layoutY="301.0" mnemonicParsing="false" />
-                      <Separator layoutY="347.0" prefHeight="3.0" prefWidth="783.0" />
-                      <Separator layoutY="372.0" prefHeight="3.0" prefWidth="783.0" />
-                      <CheckBox layoutX="288.0" layoutY="326.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="344.0" layoutY="326.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="399.0" layoutY="326.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="288.0" layoutY="351.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="344.0" layoutY="351.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="399.0" layoutY="351.0" mnemonicParsing="false" />
-                      <Separator layoutY="397.0" prefHeight="3.0" prefWidth="783.0" />
-                      <CheckBox layoutX="344.0" layoutY="375.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="288.0" layoutY="375.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="399.0" layoutY="375.0" mnemonicParsing="false" />
-                      <Separator layoutY="422.0" prefHeight="3.0" prefWidth="783.0" />
-                      <Separator layoutY="447.0" prefHeight="3.0" prefWidth="783.0" />
-                      <Separator layoutY="472.0" prefHeight="3.0" prefWidth="783.0" />
-                      <Separator layoutY="497.0" prefHeight="3.0" prefWidth="783.0" />
-                      <CheckBox layoutX="288.0" layoutY="400.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="344.0" layoutY="400.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="399.0" layoutY="400.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="288.0" layoutY="425.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="344.0" layoutY="425.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="399.0" layoutY="425.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="288.0" layoutY="450.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="344.0" layoutY="450.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="399.0" layoutY="450.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="288.0" layoutY="476.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="344.0" layoutY="476.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="399.0" layoutY="475.0" mnemonicParsing="false" />
-                      <Separator layoutX="260.0" layoutY="176.0" orientation="VERTICAL" prefHeight="919.0" prefWidth="0.0" />
-                      <Separator layoutX="324.0" layoutY="176.0" orientation="VERTICAL" prefHeight="921.0" prefWidth="0.0" />
-                      <Separator layoutX="380.0" layoutY="179.0" orientation="VERTICAL" prefHeight="924.0" prefWidth="0.0" />
-                      <Separator layoutX="434.0" layoutY="179.0" orientation="VERTICAL" prefHeight="923.0" prefWidth="0.0" />
-                      <Label layoutX="12.0" layoutY="502.0" text="Gait History" />
-                      <CheckBox layoutX="288.0" layoutY="500.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="344.0" layoutY="500.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="399.0" layoutY="500.0" mnemonicParsing="false" />
-                      <Separator layoutY="522.0" prefHeight="3.0" prefWidth="783.0" />
-                      <Label layoutX="12.0" layoutY="528.0" text="Gait - Interpretation Full" />
-                      <CheckBox layoutX="288.0" layoutY="527.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="344.0" layoutY="527.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="399.0" layoutY="527.0" mnemonicParsing="false" />
-                      <Separator layoutY="547.0" prefHeight="3.0" prefWidth="783.0" />
-                      <Label layoutX="12.0" layoutY="553.0" text="Gait Interpretation Modified" />
-                      <CheckBox layoutX="288.0" layoutY="551.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="344.0" layoutY="551.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="399.0" layoutY="551.0" mnemonicParsing="false" />
-                      <Separator layoutY="572.0" prefHeight="3.0" prefWidth="783.0" />
-                      <Label layoutX="12.0" layoutY="577.0" text="UE - Pics" />
-                      <CheckBox layoutX="288.0" layoutY="577.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="344.0" layoutY="577.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="399.0" layoutY="577.0" mnemonicParsing="false" />
-                      <Separator layoutY="597.0" prefHeight="3.0" prefWidth="783.0" />
-                      <Label layoutX="12.0" layoutY="601.0" text="UE - Video" />
-                      <Separator layoutY="622.0" prefHeight="3.0" prefWidth="783.0" />
-                      <CheckBox layoutX="288.0" layoutY="601.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="344.0" layoutY="601.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="399.0" layoutY="601.0" mnemonicParsing="false" />
-                      <Label layoutX="12.0" layoutY="625.0" text="UE - Kinematics" />
-                      <Separator layoutY="647.0" prefHeight="3.0" prefWidth="783.0" />
-                      <CheckBox layoutX="288.0" layoutY="625.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="344.0" layoutY="625.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="399.0" layoutY="625.0" mnemonicParsing="false" />
-                      <Label layoutX="12.0" layoutY="650.0" text="UE - Physical Exam" />
-                      <CheckBox layoutX="288.0" layoutY="650.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="344.0" layoutY="650.0" mnemonicParsing="false" />
-                      <CheckBox layoutX="399.0" layoutY="650.0" mnemonicParsing="false" />
-                      <Separator layoutY="672.0" prefHeight="3.0" prefWidth="783.0" />
-                      <Separator blendMode="EXCLUSION" layoutX="3.0" layoutY="53.0" prefHeight="3.0" prefWidth="783.0" />
-                      <Button fx:id="comSideNav" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#onViewCompendiumSideNav" prefHeight="31.0" prefWidth="126.0" text="View Compendium " />
-                      <Button layoutX="620.0" layoutY="66.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="117.0" text="Set Dates" />
-                      <Label layoutX="565.0" layoutY="100.0" text="Current Comparison:" />
-                      <Text layoutX="716.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                      <Button fx:id="interpSideNav1" layoutX="148.0" layoutY="14.0" mnemonicParsing="false" onAction="#onViewInterpretation" prefHeight="31.0" prefWidth="126.0" text="View Interpretation " />
-               <Label layoutX="12.0" layoutY="676.0" text="UE - History" />
-               <Separator layoutY="697.0" prefHeight="3.0" prefWidth="783.0" />
-               <CheckBox layoutX="288.0" layoutY="676.0" mnemonicParsing="false" />
-               <CheckBox layoutX="344.0" layoutY="676.0" mnemonicParsing="false" />
-               <CheckBox layoutX="398.0" layoutY="676.0" mnemonicParsing="false" />
-               <Label layoutX="12.0" layoutY="703.0" text="UE - Interpretation" />
-               <Separator layoutY="722.0" prefHeight="3.0" prefWidth="783.0" />
-               <CheckBox layoutX="288.0" layoutY="701.0" mnemonicParsing="false" />
-               <CheckBox layoutX="344.0" layoutY="701.0" mnemonicParsing="false" />
-               <CheckBox layoutX="399.0" layoutY="701.0" mnemonicParsing="false" />
-               <Label layoutX="12.0" layoutY="726.0" text="Running - Pics" />
-               <Separator layoutY="747.0" prefHeight="3.0" prefWidth="783.0" />
-               <CheckBox layoutX="288.0" layoutY="726.0" mnemonicParsing="false" />
-               <CheckBox layoutX="344.0" layoutY="726.0" mnemonicParsing="false" />
-               <CheckBox layoutX="398.0" layoutY="726.0" mnemonicParsing="false" />
-               <Label layoutX="12.0" layoutY="752.0" text="Running - Video" />
-               <Separator layoutY="772.0" prefHeight="3.0" prefWidth="783.0" />
-               <CheckBox layoutX="288.0" layoutY="752.0" mnemonicParsing="false" />
-               <CheckBox layoutX="344.0" layoutY="752.0" mnemonicParsing="false" />
-               <CheckBox layoutX="399.0" layoutY="752.0" mnemonicParsing="false" />
-               <Label layoutX="12.0" layoutY="776.0" text="Running - Kinematics" />
-               <Separator layoutY="797.0" prefHeight="3.0" prefWidth="783.0" />
-               <CheckBox layoutX="288.0" layoutY="776.0" mnemonicParsing="false" />
-               <CheckBox layoutX="344.0" layoutY="776.0" mnemonicParsing="false" />
-               <CheckBox layoutX="398.0" layoutY="776.0" mnemonicParsing="false" />
-               <Label layoutX="12.0" layoutY="801.0" text="Running - Kinetics" />
-               <Separator layoutY="822.0" prefHeight="3.0" prefWidth="783.0" />
-               <CheckBox layoutX="288.0" layoutY="801.0" mnemonicParsing="false" />
-               <CheckBox layoutX="344.0" layoutY="801.0" mnemonicParsing="false" />
-               <CheckBox layoutX="399.0" layoutY="801.0" mnemonicParsing="false" />
-               <Label layoutX="12.0" layoutY="826.0" text="Running - PTExam" />
-               <Separator layoutY="847.0" prefHeight="3.0" prefWidth="783.0" />
-                  </children>
+              <Pane maxWidth="900.0" prefHeight="1386.0" prefWidth="900.0">
+                  <Label layoutX="12.0" layoutY="200.0" text="Gait Pictures " />
+                  <Label layoutX="12.0" layoutY="129.0" prefWidth="1085.0" text="Gray boxes indicate that some data is present for that test/visit combination." />
+                  <Label layoutX="12.0" layoutY="146.0" text=" A question mark (?) indicates there are comments associated with that test. Hover the mouse over the box to see the comments." />
+                  <Label layoutX="12.0" layoutY="226.0" text="Gait Video" />
+                  <Label layoutX="12.0" layoutY="252.0" text="Gait Foot Pressure" />
+                  <Label layoutX="12.0" layoutY="276.0" text="Gait Kinematics " />
+                  <Label layoutX="12.0" layoutY="302.0" text="Gait Multisegment" />
+                  <Label layoutX="12.0" layoutY="328.0" text="Gait EMG Surface" />
+                  <Label layoutX="12.0" layoutY="352.0" text="Gait EMG Fine Wire" />
+                  <Label layoutX="12.0" layoutY="376.0" text="Gait PT Exam" />
+                  <Label layoutX="12.0" layoutY="402.0" text="Gait Walking Only" />
+                  <Label layoutX="12.0" layoutY="426.0" text="Gait Exercise" />
+                  <Label layoutX="12.0" layoutY="452.0" text="Gait Walking and Exercise" />
+                  <Label layoutX="12.0" layoutY="477.0" text="Gait Step Watch" />
+                  <Separator layoutY="222.0" prefHeight="3.0" prefWidth="783.0" />
+                  <Label layoutX="279.0" layoutY="170.0" text="Date 1" />
+                  <Label layoutX="335.0" layoutY="170.0" text="Date 2" />
+                  <Label layoutX="389.0" layoutY="170.0" text="Date 3" />
+                  <CheckBox layoutX="288.0" layoutY="200.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="200.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="200.0" mnemonicParsing="false" />
+                  <Separator layoutY="247.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="225.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="225.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="225.0" mnemonicParsing="false" />
+                  <Separator layoutY="272.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="250.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="250.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="250.0" mnemonicParsing="false" />
+                  <Separator layoutY="297.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="275.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="275.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="276.0" mnemonicParsing="false" />
+                  <Separator layoutY="322.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="301.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="301.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="301.0" mnemonicParsing="false" />
+                  <Separator layoutY="347.0" prefHeight="3.0" prefWidth="783.0" />
+                  <Separator layoutY="372.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="326.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="326.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="326.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="288.0" layoutY="351.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="351.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="351.0" mnemonicParsing="false" />
+                  <Separator layoutY="397.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="344.0" layoutY="375.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="288.0" layoutY="375.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="375.0" mnemonicParsing="false" />
+                  <Separator layoutY="422.0" prefHeight="3.0" prefWidth="783.0" />
+                  <Separator layoutY="447.0" prefHeight="3.0" prefWidth="783.0" />
+                  <Separator layoutY="472.0" prefHeight="3.0" prefWidth="783.0" />
+                  <Separator layoutY="497.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="400.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="400.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="400.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="288.0" layoutY="425.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="425.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="425.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="288.0" layoutY="450.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="450.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="450.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="288.0" layoutY="476.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="476.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="475.0" mnemonicParsing="false" />
+                  <Separator layoutX="260.0" layoutY="176.0" orientation="VERTICAL" prefHeight="1179.0" prefWidth="0.0" />
+                  <Separator layoutX="324.0" layoutY="176.0" orientation="VERTICAL" prefHeight="1179.0" prefWidth="0.0" />
+                  <Separator layoutX="380.0" layoutY="179.0" orientation="VERTICAL" prefHeight="1179.0" prefWidth="0.0" />
+                  <Separator layoutX="434.0" layoutY="179.0" orientation="VERTICAL" prefHeight="1179.0" prefWidth="0.0" />
+                  <Label layoutX="12.0" layoutY="502.0" text="Gait History" />
+                  <CheckBox layoutX="288.0" layoutY="500.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="500.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="500.0" mnemonicParsing="false" />
+                  <Separator layoutY="522.0" prefHeight="3.0" prefWidth="783.0" />
+                  <Label layoutX="12.0" layoutY="528.0" text="Gait - Interpretation Full" />
+                  <CheckBox layoutX="288.0" layoutY="527.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="527.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="527.0" mnemonicParsing="false" />
+                  <Separator layoutY="547.0" prefHeight="3.0" prefWidth="783.0" />
+                  <Label layoutX="12.0" layoutY="553.0" text="Gait Interpretation Modified" />
+                  <CheckBox layoutX="288.0" layoutY="551.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="551.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="551.0" mnemonicParsing="false" />
+                  <Separator layoutY="572.0" prefHeight="3.0" prefWidth="783.0" />
+                  <Label layoutX="12.0" layoutY="577.0" text="UE - Pics" />
+                  <CheckBox layoutX="288.0" layoutY="577.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="577.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="577.0" mnemonicParsing="false" />
+                  <Separator layoutY="597.0" prefHeight="3.0" prefWidth="783.0" />
+                  <Label layoutX="12.0" layoutY="601.0" text="UE - Video" />
+                  <Separator layoutY="622.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="601.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="601.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="601.0" mnemonicParsing="false" />
+                  <Label layoutX="12.0" layoutY="625.0" text="UE - Kinematics" />
+                  <Separator layoutY="647.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="625.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="625.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="625.0" mnemonicParsing="false" />
+                  <Label layoutX="12.0" layoutY="650.0" text="UE - Physical Exam" />
+                  <CheckBox layoutX="288.0" layoutY="650.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="650.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="650.0" mnemonicParsing="false" />
+                  <Separator layoutY="672.0" prefHeight="3.0" prefWidth="783.0" />
+                  <Separator blendMode="EXCLUSION" layoutX="3.0" layoutY="53.0" prefHeight="3.0" prefWidth="783.0" />
+                  <Button fx:id="comSideNav" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#onViewCompendiumSideNav" prefHeight="31.0" prefWidth="126.0" text="View Compendium " />
+                  <Button fx:id="setDatesVisitGait" layoutX="620.0" layoutY="66.0" mnemonicParsing="false" onAction="#onSetDatesVisitGait" prefHeight="23.0" prefWidth="117.0" text="Set Dates" />
+                  <Label layoutX="565.0" layoutY="100.0" text="Current Comparison:" />
+                  <Text layoutX="716.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Button fx:id="interpSideNav1" layoutX="148.0" layoutY="14.0" mnemonicParsing="false" onAction="#onViewInterpretation" prefHeight="31.0" prefWidth="126.0" text="View Interpretation " />
+                  <Label layoutX="12.0" layoutY="676.0" text="UE - History" />
+                  <Separator layoutY="697.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="676.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="676.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="398.0" layoutY="676.0" mnemonicParsing="false" />
+                  <Label layoutX="12.0" layoutY="703.0" text="UE - Interpretation" />
+                  <Separator layoutY="722.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="701.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="701.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="701.0" mnemonicParsing="false" />
+                  <Label layoutX="12.0" layoutY="726.0" text="Running - Pics" />
+                  <Separator layoutY="747.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="726.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="726.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="398.0" layoutY="726.0" mnemonicParsing="false" />
+                  <Label layoutX="12.0" layoutY="752.0" text="Running - Video" />
+                  <Separator layoutY="772.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="752.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="752.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="752.0" mnemonicParsing="false" />
+                  <Label layoutX="12.0" layoutY="776.0" text="Running - Kinematics" />
+                  <Separator layoutY="797.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="776.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="776.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="398.0" layoutY="776.0" mnemonicParsing="false" />
+                  <Label layoutX="12.0" layoutY="801.0" text="Running - Kinetics" />
+                  <Separator layoutY="822.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="801.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="801.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="801.0" mnemonicParsing="false" />
+                  <Label layoutX="12.0" layoutY="826.0" text="Running - PTExam" />
+                  <Separator layoutY="847.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="826.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="826.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="826.0" mnemonicParsing="false" />
+                  <Label layoutX="12.0" layoutY="850.0" text="Running - History" />
+                  <Separator layoutY="872.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="850.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="850.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="850.0" mnemonicParsing="false" />
+                  <Label layoutX="12.0" layoutY="876.0" text="Running - Interpretation" />
+                  <Separator layoutY="897.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="876.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="876.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="876.0" mnemonicParsing="false" />
+                  <Label layoutX="12.0" layoutY="901.0" text="Dystonia - Video" />
+                  <Separator layoutY="922.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="901.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="901.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="901.0" mnemonicParsing="false" />
+                  <Label layoutX="12.0" layoutY="926.0" text="PODSI - Parent Reported" />
+                  <Separator layoutY="947.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="926.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="926.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="926.0" mnemonicParsing="false" />
+                  <Label layoutX="12.0" layoutY="951.0" text="PODSI - Adolescent Reported" />
+                  <Separator layoutY="972.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="951.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="951.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="951.0" mnemonicParsing="false" />
+                  <Label layoutX="12.0" layoutY="976.0" text="Other - Pictures" />
+                  <Separator layoutY="997.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="976.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="976.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="976.0" mnemonicParsing="false" />
+                  <Label layoutX="12.0" layoutY="1001.0" text="Other - Video" />
+                  <Separator layoutY="1022.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="1001.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="1001.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="398.0" layoutY="1001.0" mnemonicParsing="false" />
+                  <Label layoutX="12.0" layoutY="1025.0" text="Other - Foot Pressure" />
+                  <Separator layoutY="1047.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="1025.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="1025.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="1025.0" mnemonicParsing="false" />
+                  <Label layoutX="12.0" layoutY="1051.0" text="Other - Kinematics" />
+                  <Separator layoutY="1072.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="1050.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="1050.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="1050.0" mnemonicParsing="false" />
+                  <Label layoutX="12.0" layoutY="1076.0" text="Other - Kinetics" />
+                  <Separator layoutY="1097.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="1076.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="1076.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="1076.0" mnemonicParsing="false" />
+                  <Label layoutX="12.0" layoutY="1101.0" text="Other - Surface EMG" />
+                  <Separator layoutY="1122.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="1101.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="1101.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="398.0" layoutY="1101.0" mnemonicParsing="false" />
+                  <Label layoutX="12.0" layoutY="1126.0" text="Other - Metabolic" />
+                  <Separator layoutY="1147.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="1126.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="1126.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="398.0" layoutY="1126.0" mnemonicParsing="false" />
+                  <Label layoutX="12.0" layoutY="1151.0" text="Other - PT Exam" />
+                  <Separator layoutY="1172.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="1151.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="1151.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="399.0" layoutY="1151.0" mnemonicParsing="false" />
+                  <Label layoutX="12.0" layoutY="1176.0" text="Other - History" />
+                  <Separator layoutY="1197.0" prefHeight="3.0" prefWidth="783.0" />
+                  <CheckBox layoutX="288.0" layoutY="1176.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="344.0" layoutY="1176.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="398.0" layoutY="1176.0" mnemonicParsing="false" />
               </Pane>
           </ScrollPane>
       </Tab>
-      <Tab fx:id="dataTab" text="Data">
-          <content>
-              <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                  <children>
-                      <TreeView fx:id="dataTable" layoutX="9.0" layoutY="19.0" onMouseClicked="#selectedItem" prefHeight="546.0" prefWidth="222.0">
-                                <!--    <columns>-->
-                                <!--   <TreeTableColumn fx:id="dataColumn" prefWidth="207.99999936421713" text="Data" />-->
-                                <!--    </columns>-->
-                            </TreeView>
-                      <HBox layoutX="355.0" layoutY="161.0" prefHeight="236.0" prefWidth="379.0">
-                            </HBox>
-                  </children>
-              </AnchorPane>
-          </content>
-      </Tab>
+    <Tab fx:id="dataTab" text="Data">
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <TreeView fx:id="dataTable" layoutX="9.0" layoutY="19.0" onMouseClicked="#selectedItem" prefHeight="546.0" prefWidth="222.0">
+                <!--    <columns>-->
+                <!--   <TreeTableColumn fx:id="dataColumn" prefWidth="207.99999936421713" text="Data" />-->
+                <!--    </columns>-->
+            </TreeView>
+            <HBox layoutX="355.0" layoutY="161.0" prefHeight="236.0" prefWidth="379.0">
+            </HBox>
+        </AnchorPane>
+    </Tab>
   </TabPane>
