@@ -1,15 +1,140 @@
 package com.example.gaitlabapp.controllers.Visits;
 
+import com.example.gaitlabapp.model.forms.IPainModel;
+import com.example.gaitlabapp.model.forms.IPromModel;
+import com.example.gaitlabapp.model.forms.IToneModel;
+import com.example.gaitlabapp.services.PainService;
+import com.example.gaitlabapp.services.PromService;
+import com.example.gaitlabapp.services.ToneService;
 import javafx.collections.FXCollections;
+import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.RadioButton;
+import javafx.scene.control.*;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
+@Component
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+@RequiredArgsConstructor
 public class VisitsDetailsMovementDisorder implements Initializable {
+    public TextField PROMHipR;
+    public TextField PROMHipL;
+    public TextField StrenHipFlexR;
+    public TextField StrenHipFlexL;
+    public TextField PROMHipExtL;
+    public TextField StrengHipExtL;
+    public TextField StrengHipExtR;
+    public TextField PROMHipExtR;
+    public TextField PROMHipabdR;
+    public TextField PROMHipabdL;
+    public TextField StregHipAbdR;
+    public TextField StregHipAbdL;
+    public TextField PROMHipIntRotL;
+    public TextField StrengHipIntRotR;
+    public TextField StrengHipIntRotL;
+    public TextField PROMHipExtRotR;
+    public TextField PROMHipExtRotL;
+    public TextField StrengthHipExtRotR;
+    public TextField StrengthHipExtRotL;
+    public TextField PROMRyderTestR;
+    public TextField PROMRyderTestL;
+    public TextField StregRyertestL;
+    public TextField PROMKneeExtR;
+    public TextField PROMKneeExtL;
+    public TextField StrengthKneeExtR;
+    public TextField StrengthKneeExtL;
+    public TextField PROMExtLagR;
+    public TextField PROMExtLagL;
+    public TextField StrengthExtLagR;
+    public TextField StrengthExtLagL;
+    public TextField PROMKneeFlexR;
+    public TextField PROMKneeFlexL;
+    public TextField StrengthKneeFlexR;
+    public TextField StrengthKneeFlexL;
+    public TextField PROMPopAngleR;
+    public TextField PROMPopAngleL;
+    public TextField PROMBilatR;
+    public TextField PROMBilatL;
+    public TextField PROMElyR;
+    public TextField PROMElyL;
+    public TextField PROMDorsiFR;
+    public TextField PROMDorsiFL;
+    public TextField PROMDorsiER;
+    public TextField PROMDorsiEL;
+    public TextField PROMPlantarR;
+    public TextField PROMPlantarL;
+    public TextField StrengPlantarR;
+    public TextField StrengPlantarL;
+    public TextField PROMAnkInvR;
+    public TextField PROMAnkInvL;
+    public TextField StrengAnklInvR;
+    public TextField StrengAnklInvL;
+    public TextField PROMAnkEvR;
+    public TextField PROMAnkEvL;
+    public TextField StrengAnkEvR;
+    public TextField StrengAnkEvL;
+    public TextField PROMtmaR;
+    public TextField PROMtmaL;
+    public TextField PROMtfaR;
+    public TextField PROMtfaL;
+    public TextField PROMffR;
+    public TextField PROMffL;
+    public TextField PROMCalInvR;
+    public TextField PROMCalInvL;
+    public TextField PROMCalEvR;
+    public TextField PROMCalEvL;
+    public TextField legLengthR;
+    public TextField legLengthL;
+    public TextField kneeVarR;
+    public TextField kneeVarL;
+    public ComboBox orthosisDropdown;
+    public TextField StrengthPopAngleR;
+    public TextField StrengthPopAngleL;
+    public TextField TillipsoasL;
+    public TextField TillipsoasR;
+    public TextField TgluteMaxL;
+    public TextField TgluteMaxR;
+    public TextField TaddL;
+    public TextField TaddR;
+    public TextField TrecFemL;
+    public TextField TrecFemR;
+    public TextField TrecCatchR;
+    public TextField TrecCatchL;
+    public TextField TvastmedL;
+    public TextField TvastmedR;
+    public TextField ThamstringL;
+    public TextField ThamstringR;
+    public TextField TpostTibL;
+    public TextField TpostTibR;
+    public TextField TantL;
+    public TextField TantR;
+    public TextField TgastroL;
+    public TextField TgastroR;
+    public TextField TclonusL;
+    public TextField TclonusR;
+    public TextField TkneeJerR;
+    public TextField RankJerL;
+    public TextField RankJerR;
+    public TextField TkneeJerL;
+    public TextField TbabinL;
+    public TextField TproxR;
+    public TextField TproxL;
+    public TextField TbabinR;
+    public TextField TdistalL;
+    public TextField TdistalR;
+    public TextField locOfPain;
+    public TextField freqOfPain;
+    public TextField durOfPain;
+    public Button MovementDisSave;
+    @Autowired
+    PromService promService;
     public CheckBox CL0;
     public CheckBox CL1;
     public CheckBox CL2;
@@ -174,6 +299,35 @@ public class VisitsDetailsMovementDisorder implements Initializable {
     public CheckBox AIsports;
     public CheckBox AIfuncMob;
     public CheckBox AIother;
+    public RadioButton eye0;
+    public RadioButton eye1;
+    public RadioButton eye2;
+    public RadioButton eye3;
+    public RadioButton eye4;
+    public RadioButton eyeUnable;
+    public RadioButton mouth0;
+    public RadioButton mouth1;
+    public RadioButton mouth2;
+    public RadioButton mouth3;
+    public RadioButton mouth4;
+    public RadioButton mouthUnable;
+    public RadioButton neck0;
+    public RadioButton neck1;
+    public RadioButton neck2;
+    public RadioButton neck3;
+    public RadioButton neck4;
+    public RadioButton neckUnable;
+    public RadioButton trunk0;
+    public RadioButton trunk1;
+    public RadioButton trunk2;
+    public RadioButton trunk3;
+    public RadioButton trunk4;
+    public RadioButton trunkUnable;
+    @Autowired
+    ToneService toneService;
+    @Autowired
+    PainService painService;
+
 
 
     @Override
@@ -292,10 +446,231 @@ public class VisitsDetailsMovementDisorder implements Initializable {
         TdistalLinterp.getSelectionModel().selectFirst();
         TdistalRinterp.getSelectionModel().selectFirst();
 
+    }
+
+    public void OnMovementDisSave(ActionEvent event){
+        //Save textfields
+        IPromModel promModel = promService.save(new IPromModel());
+        promModel.setHipFlexR(PROMHipR.getText());
+        promModel.setHipFlexL(PROMHipL.getText());
+        promModel.setHipFlexStrenR(StrenHipFlexR.getText());
+        promModel.setHipFlexStrenL(StrenHipFlexL.getText());
+        promModel.setHipExtL(Integer.valueOf(PROMHipExtL.getText()));
+        promModel.setHipExtr(Integer.valueOf(PROMHipExtR.getText()));
+        promModel.setHipExtStrenL(StrengHipExtL.getText());
+        promModel.setHipExtStrenR(StrengHipExtR.getText());
+        promModel.setHipAbdL(Integer.valueOf(PROMHipabdL.getText()));
+        promModel.setHipAbdR(Integer.getInteger(PROMHipabdR.getText()));
+        promModel.setHipAbdStrenR(StregHipAbdR.getText());
+        promModel.setHipAbdStrenL(StregHipAbdL.getText());
+        promModel.setHipIntRotL(PROMHipIntRotL.getText());
+        promModel.setHipIntRotR(PROMHipExtRotR.getText());
+        promModel.setHipIntRotStrenR(StrengHipIntRotR.getText());
+        promModel.setHipIntRotStrenL(StrengHipIntRotL.getText());
+        promModel.setHipExtr(Integer.valueOf(PROMHipExtR.getText()));
+        promModel.setHipExtL(Integer.getInteger(PROMHipExtL.getText()));
+        promModel.setHipExtStrenR(StrengHipExtR.getText());
+        promModel.setHipExtStrenL(StrengHipExtL.getText());
+        promModel.setRyderTestR(PROMRyderTestR.getText());
+        promModel.setRyderTestL(PROMRyderTestL.getText());
+        promModel.setRyderTestStrenL(StregRyertestL.getText());
+        promModel.setRyderTestStrenR(StregRyertestL.getText());
+        promModel.setKneeExtR(PROMKneeExtR.getText());
+        promModel.setKneeExtL(PROMKneeExtL.getText());
+        promModel.setExtLagL(PROMExtLagL.getText());
+        promModel.setExtLagR(PROMExtLagR.getText());
+        promModel.setExtLagStrenL(StrengthExtLagL.getText());
+        promModel.setExtLagStrenR(StrengthExtLagR.getText());
+        promModel.setKneeFlexL(PROMKneeFlexL.getText());
+        promModel.setKneeFlexR(PROMKneeFlexR.getText());
+        promModel.setKneeFlextStrenL(StrengthKneeFlexL.getText());
+        promModel.setKneeFlextStrenR(StrengthKneeFlexR.getText());
+        promModel.setPopAngL(PROMPopAngleL.getText());
+        promModel.setPopAngR(PROMPopAngleR.getText());
+        promModel.setPopAngStrenL(StrengthPopAngleL.getText());
+        promModel.setPopAngStrenR(StrengthPopAngleR.getText());
+        promModel.setBilateralPopL(PROMBilatL.getText());
+        promModel.setBilateralPopR(PROMBilatR.getText());
+        promModel.setElyL(Integer.valueOf(PROMElyL.getText()));
+        promModel.setElyR(Integer.valueOf(PROMElyR.getText()));
+        promModel.setDorsiFL(Integer.valueOf(PROMDorsiFL.getText()));
+        promModel.setDorsiFR(Integer.valueOf(PROMDorsiFR.getText()));
+        promModel.setDorsiEL(Integer.valueOf(PROMDorsiEL.getText()));
+        promModel.setDorsiER(Integer.valueOf(PROMDorsiER.getText()));
+        promModel.setPlantarR(Integer.valueOf(PROMPlantarR.getText()));
+        promModel.setPlantarL(Integer.valueOf(PROMPlantarL.getText()));
+        promModel.setPlantarStrenL(StrengPlantarL.getText());
+        promModel.setPlantarStrenR(StrengPlantarR.getText());
+        promModel.setAnkleInvL(PROMAnkInvL.getText());
+        promModel.setAnkleInvR(PROMAnkInvR.getText());
+        promModel.setAnkInvStrenL(StrengAnklInvL.getText());
+        promModel.setAnkInvStrenR(StrengAnklInvR.getText());
+        promModel.setAnkleEverL(PROMAnkEvL.getText());
+        promModel.setAnkleEverR(PROMAnkEvR.getText());
+        promModel.setAnkleEvStrengR(StrengAnkEvR.getText());
+        promModel.setAnkleEvStrengL(StrengAnkEvL.getText());
+        promModel.setTfaL(PROMtfaL.getText());
+        promModel.setTfaR(PROMtfaR.getText());
+        promModel.setFfAbaddL(PROMffL.getText());
+        promModel.setFfAbaddR(PROMffR.getText());
+        promModel.setCalcanealInv(PROMCalInvL.getText());
+        promModel.setCalcanealEver(PROMCalEvR.getText());
+        promModel.setLegLengthL(legLengthL.getText());
+        promModel.setLegLengthR(legLengthR.getText());
+        promModel.setKneeVargus(kneeVarL.getText());
+
+        //Tone
+        IToneModel toneModel = toneService.save(new IToneModel());
+        toneModel.setIliopsoasL(TillipsoasL.getText());
+        toneModel.setIliopsoasR(TillipsoasR.getText());
+        toneModel.setGluteMaxL(TgluteMaxL.getText());
+        toneModel.setGluteMaxR(TgluteMaxR.getText());
+        toneModel.setAdductorL(TaddL.getText());
+        toneModel.setAdductorR(TaddR.getText());
+        toneModel.setRectusFemorisL(TrecFemL.getText());
+        toneModel.setRectusFemorisR(TrecFemR.getText());
+        toneModel.setVastusMedialisL(TvastmedL.getText());
+        toneModel.setVastusMedialisR(TvastmedR.getText());
+        toneModel.setHamstringL(ThamstringL.getText());
+        toneModel.setHamstringR(ThamstringR.getText());
+        toneModel.setPostTibL(TpostTibL.getText());
+        toneModel.setPostTibR(TpostTibR.getText());
+        toneModel.setAntTibL(TantL.getText());
+        toneModel.setAntTibR(TantR.getText());
+        toneModel.setGastrocL(TgastroL.getText());
+        toneModel.setGastrocR(TgastroR.getText());
+        toneModel.setColnusL(TclonusL.getText());
+        toneModel.setColnusR(TclonusR.getText());
+        toneModel.setKneeJerkL(TkneeJerL.getText());
+        toneModel.setKneeJerkR(TkneeJerR.getText());
+        toneModel.setAnkleJerkL(RankJerL.getText());
+        toneModel.setAnkleJerkR(RankJerR.getText());
+        toneModel.setBabinskiL(TbabinL.getText());
+        toneModel.setBabinskiR(TbabinR.getText());
+        toneModel.setProximalMuscleToneL(TproxL.getText());
+        toneModel.setProximalMuscleToneR(TproxR.getText());
+        toneModel.setDistalMuscleToneL(TdistalL.getText());
+        toneModel.setDistalMuscleToneR(TdistalR.getText());
+
         //Pain
+        IPainModel painModel = painService.save(new IPainModel());
+        if(PAMNum.isSelected()){
+            painModel.setPainAssessmentMethod(PAMNum.getText());
+            painService.save(painModel);
+        }
+        if(PAMWrong.isSelected()){
+            painModel.setPainAssessmentMethod(PAMWrong.getText());
+            painService.save(painModel);
+        }
+        if(PAMflacc.isSelected()){
+            painModel.setPainAssessmentMethod(PAMflacc.getText());
+            painService.save(painModel);
+        }
+        if(AFwb.isSelected()){
+            painModel.setPainAssessmentMethod(AFwb.getText());
+            painService.save(painModel);
+        }
+        if(AFstand.isSelected()){
+            painModel.setPainAssessmentMethod(AFstand.getText());
+            painService.save(painModel);
+        }
+        if(AFwalk.isSelected()){
+            painModel.setPainAssessmentMethod(AFwalk.getText());
+            painService.save(painModel);
+        }
+        if(AFrun.isSelected()){
+            painModel.setPainAssessmentMethod(AFrun.getText());
+            painService.save(painModel);
+        }
+        if(AFadl.isSelected()){
+            painModel.setPainAssessmentMethod(AFadl.getText());
+            painService.save(painModel);
+        }
+        if(AFtouch.isSelected()){
+            painModel.setPainAssessmentMethod(AFtouch.getText());
+            painService.save(painModel);
+        }
+        if(AFmovement.isSelected()){
+            painModel.setPainAssessmentMethod(AFmovement.getText());
+            painService.save(painModel);
+        }
+        if(AFother.isSelected()){
+            painModel.setPainAssessmentMethod(AFother.getText());
+            painService.save(painModel);
+        }
+        if(AIsleep.isSelected()){
+            painModel.setPainAssessmentMethod(AIsleep.getText());
+            painService.save(painModel);
+        }
+        if(AIads.isSelected()){
+            painModel.setPainAssessmentMethod(AIads.getText());
+            painService.save(painModel);
+        }
+        if(AIschool.isSelected()){
+            painModel.setPainAssessmentMethod(AIschool.getText());
+            painService.save(painModel);
+        }
+        if(AIfuncMob.isSelected()){
+            painModel.setPainAssessmentMethod(AIfuncMob.getText());
+            painService.save(painModel);
+        }
+        if(AIother.isSelected()){
+            painModel.setPainAssessmentMethod(AIother.getText());
+            painService.save(painModel);
+        }
+        if(CL0.isSelected()){
+            painModel.setPainAssessmentMethod(CL0.getText());
+            painService.save(painModel);
+        }
+        if(CL1.isSelected()){
+            painModel.setPainAssessmentMethod(CL1.getText());
+            painService.save(painModel);
+        }
+        if(CL2.isSelected()){
+            painModel.setPainAssessmentMethod(CL2.getText());
+            painService.save(painModel);
+        }
+        if(CL3.isSelected()){
+            painModel.setPainAssessmentMethod(CL3.getText());
+            painService.save(painModel);
+        }
+        if(CL4.isSelected()){
+            painModel.setPainAssessmentMethod(CL4.getText());
+            painService.save(painModel);
+        }
+        if(CL5.isSelected()){
+            painModel.setPainAssessmentMethod(CL5.getText());
+            painService.save(painModel);
+        }
+        if(CL6.isSelected()){
+            painModel.setPainAssessmentMethod(CL6.getText());
+            painService.save(painModel);
+        }
+        if(CL7.isSelected()){
+            painModel.setPainAssessmentMethod(CL7.getText());
+            painService.save(painModel);
+        }
+        if(CL8.isSelected()){
+            painModel.setPainAssessmentMethod(CL8.getText());
+            painService.save(painModel);
+        }
+        if(CL9.isSelected()){
+            painModel.setPainAssessmentMethod(CL9.getText());
+            painService.save(painModel);
+        }
+        if(CL10.isSelected()){
+            painModel.setPainAssessmentMethod(CL10.getText());
+            painService.save(painModel);
+        }
+
 
 
 
 
     }
+
+    //TODO
+    /*
+    Save combobox options
+     */
 }

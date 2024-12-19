@@ -1538,7 +1538,7 @@
                     <Separator layoutX="17.0" layoutY="3783.0" prefHeight="2.0" prefWidth="580.0" />
                     <TextField fx:id="durOfPain" layoutX="146.0" layoutY="3790.0" prefHeight="66.0" prefWidth="326.0" />
                     <Separator blendMode="DIFFERENCE" layoutX="18.0" layoutY="3861.0" prefHeight="2.0" prefWidth="580.0" />
-                    <Button layoutX="620.0" layoutY="26.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="114.0" text="Save" />
+                    <Button fx:id="MovementDisSave" layoutX="620.0" layoutY="26.0" mnemonicParsing="false" onAction="#OnMovementDisSave" prefHeight="38.0" prefWidth="114.0" text="Save" />
             <Separator blendMode="DIFFERENCE" layoutX="627.0" layoutY="542.0" orientation="VERTICAL" prefHeight="1448.0" prefWidth="0.0" />
             <Separator prefHeight="0.0" prefWidth="744.0" />
             <Separator prefHeight="0.0" prefWidth="744.0" />
@@ -1573,7 +1573,7 @@
             <Separator layoutX="297.0" layoutY="3912.0" orientation="VERTICAL" prefHeight="862.0" prefWidth="0.0" />
             <Label layoutX="2.0" layoutY="3944.0" prefHeight="130.0" prefWidth="149.0" text="Increased involuntary movements/postrues of the designated limb with tactile stimulus of another body part" wrapText="true" />
             <RadioButton fx:id="uerDesignated0" layoutX="168.0" layoutY="3956.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton fx:id="uerDesignated0" layoutX="168.0" layoutY="4009.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uerDesignated1" layoutX="168.0" layoutY="4009.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
             <Separator layoutY="4072.0" prefHeight="0.0" prefWidth="714.0" />
             <Label layoutX="331.0" layoutY="3924.0" text="LER Score" />
             <RadioButton fx:id="lerDesignated0" layoutX="308.0" layoutY="3956.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
@@ -1660,36 +1660,36 @@
             </Label>
             <Separator layoutX="175.0" layoutY="4837.0" orientation="VERTICAL" prefHeight="733.0" prefWidth="0.0" />
             <Label layoutX="12.0" layoutY="4881.0" prefHeight="103.0" prefWidth="137.0" text="Eyes: signs of dystonia of the eyes include: prolonged eyelid spasms, and/or force eye deviations" wrapText="true" />
-            <RadioButton layoutX="187.0" layoutY="4873.0" mnemonicParsing="false" text="0=Absence of eye dystonia" />
-            <RadioButton layoutX="187.0" layoutY="4892.0" mnemonicParsing="false" text="1=Slight. Dystonia less than 10% of the time and does not interfere with tracking" />
-            <RadioButton layoutX="187.0" layoutY="4909.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="537.0" text="2=Mild. Frequent blinking without prolonged spasms of eye closure, and/or eye movements less than 50% of the time." wrapText="true" />
-            <RadioButton layoutX="187.0" layoutY="4941.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="515.0" text="3=Moderate. Prolonged spasms of eyelid closure, but eyes open" wrapText="true" />
-            <RadioButton layoutX="187.0" layoutY="4963.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="515.0" text="4=Severe. Prolonged spams of eyelid closure, with eyes closed at least 30% of the time, and/or eye movements more than 50% f the time that prevent tracking" wrapText="true" />
-            <RadioButton layoutX="187.0" layoutY="4986.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="542.0" text="*=Unable to assess eye movements" wrapText="true" />
+            <RadioButton fx:id="eye0" layoutX="187.0" layoutY="4873.0" mnemonicParsing="false" text="0=Absence of eye dystonia" />
+            <RadioButton fx:id="eye1" layoutX="187.0" layoutY="4892.0" mnemonicParsing="false" text="1=Slight. Dystonia less than 10% of the time and does not interfere with tracking" />
+            <RadioButton fx:id="eye2" layoutX="187.0" layoutY="4909.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="537.0" text="2=Mild. Frequent blinking without prolonged spasms of eye closure, and/or eye movements less than 50% of the time." wrapText="true" />
+            <RadioButton fx:id="eye3" layoutX="187.0" layoutY="4941.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="515.0" text="3=Moderate. Prolonged spasms of eyelid closure, but eyes open" wrapText="true" />
+            <RadioButton fx:id="eye4" layoutX="187.0" layoutY="4963.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="515.0" text="4=Severe. Prolonged spams of eyelid closure, with eyes closed at least 30% of the time, and/or eye movements more than 50% f the time that prevent tracking" wrapText="true" />
+            <RadioButton fx:id="eyeUnable" layoutX="187.0" layoutY="4986.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="542.0" text="*=Unable to assess eye movements" wrapText="true" />
             <Separator layoutY="5022.0" prefHeight="0.0" prefWidth="737.0" />
             <Label layoutX="2.0" layoutY="5032.0" prefHeight="103.0" prefWidth="137.0" text="Mouth: signs of dystonia of the mouth include: grimacing, clenched or deviated jaw, forced open mouth, and/or forceful tongue thrusting" wrapText="true" />
-            <RadioButton layoutX="187.0" layoutY="5030.0" mnemonicParsing="false" text="0=Absence of mouth dystonia" />
-            <RadioButton layoutX="187.0" layoutY="5049.0" mnemonicParsing="false" text="1=Slight. Pulling less than 10% of the time and does not interfere with speech and/or feeding" />
-            <RadioButton layoutX="187.0" layoutY="5066.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="537.0" text="2=Mild. Dystonia less than 50% of the time and does not interfere with speech and/or feeding" wrapText="true" />
-            <RadioButton layoutX="187.0" layoutY="5098.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="515.0" text="3=Moderate. Dystonia more than 50% of the time, and/or dystonia that interferes with speech and/or feeding" wrapText="true" />
-            <RadioButton layoutX="187.0" layoutY="5129.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="515.0" text="4=Severe. Dystonia more than 50% of the time, and/or dystonia that prevents speech and/or feeding" wrapText="true" />
-            <RadioButton layoutX="187.0" layoutY="5152.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="515.0" text="*=Unable to assess mouth movements" wrapText="true" />
+            <RadioButton fx:id="mouth0" layoutX="187.0" layoutY="5030.0" mnemonicParsing="false" text="0=Absence of mouth dystonia" />
+            <RadioButton fx:id="mouth1" layoutX="187.0" layoutY="5049.0" mnemonicParsing="false" text="1=Slight. Pulling less than 10% of the time and does not interfere with speech and/or feeding" />
+            <RadioButton fx:id="mouth2" layoutX="187.0" layoutY="5066.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="537.0" text="2=Mild. Dystonia less than 50% of the time and does not interfere with speech and/or feeding" wrapText="true" />
+            <RadioButton fx:id="mouth3" layoutX="187.0" layoutY="5098.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="515.0" text="3=Moderate. Dystonia more than 50% of the time, and/or dystonia that interferes with speech and/or feeding" wrapText="true" />
+            <RadioButton fx:id="mouth4" layoutX="187.0" layoutY="5129.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="515.0" text="4=Severe. Dystonia more than 50% of the time, and/or dystonia that prevents speech and/or feeding" wrapText="true" />
+            <RadioButton fx:id="mouthUnable" layoutX="187.0" layoutY="5152.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="515.0" text="*=Unable to assess mouth movements" wrapText="true" />
             <Separator layoutY="5189.0" prefHeight="0.0" prefWidth="737.0" />
             <Label layoutX="2.0" layoutY="5207.0" prefHeight="103.0" prefWidth="137.0" text="Neck: signs of dystonia of the neck include: pulling of the neck into any plane of motion: extension, flexion, lateral flexion or rotation" wrapText="true" />
-            <RadioButton layoutX="187.0" layoutY="5193.0" mnemonicParsing="false" text="0=Absence of neck dystonia" />
-            <RadioButton layoutX="187.0" layoutY="5212.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="549.0" text="1=Slight. Pulling less than 10% of the time and does not interfere with lying, sitting, standing and/or walking" wrapText="true" />
-            <RadioButton layoutX="187.0" layoutY="5245.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="537.0" text="2=Mild. Pulling less than 50% of the time and does not interfere with lying, sitting, standing and/or walking" wrapText="true" />
-            <RadioButton layoutX="187.0" layoutY="5278.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="515.0" text="3=Moderate. Pulling more than 50% of the time, and/or dystonia that interferes with lying, sitting, standing and/or walking" wrapText="true" />
-            <RadioButton layoutX="187.0" layoutY="5314.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="515.0" text="4=Severe. Pulling more than 50% of the time, and/or dystonia that prevents positioning in wheelchair, standing and/or walking (e.g. requires adapted system to control posturing)" wrapText="true" />
-            <RadioButton layoutX="187.0" layoutY="5339.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="515.0" text="*=Unable to assess mouth movements" wrapText="true" />
+            <RadioButton fx:id="neck0" layoutX="187.0" layoutY="5193.0" mnemonicParsing="false" text="0=Absence of neck dystonia" />
+            <RadioButton fx:id="neck1" layoutX="187.0" layoutY="5212.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="549.0" text="1=Slight. Pulling less than 10% of the time and does not interfere with lying, sitting, standing and/or walking" wrapText="true" />
+            <RadioButton fx:id="neck2" layoutX="187.0" layoutY="5245.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="537.0" text="2=Mild. Pulling less than 50% of the time and does not interfere with lying, sitting, standing and/or walking" wrapText="true" />
+            <RadioButton fx:id="neck3" layoutX="187.0" layoutY="5278.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="515.0" text="3=Moderate. Pulling more than 50% of the time, and/or dystonia that interferes with lying, sitting, standing and/or walking" wrapText="true" />
+            <RadioButton fx:id="neck4" layoutX="187.0" layoutY="5314.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="515.0" text="4=Severe. Pulling more than 50% of the time, and/or dystonia that prevents positioning in wheelchair, standing and/or walking (e.g. requires adapted system to control posturing)" wrapText="true" />
+            <RadioButton fx:id="neckUnable" layoutX="187.0" layoutY="5339.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="515.0" text="*=Unable to assess mouth movements" wrapText="true" />
             <Separator layoutY="5375.0" prefHeight="2.0" prefWidth="737.0" />
             <Label layoutX="2.0" layoutY="5411.0" prefHeight="103.0" prefWidth="137.0" text="Trunk: signs of dystonia of the trunk include: pulling of the trunk into any plane of motion: extension, flexion, lateral flexion or rotation" wrapText="true" />
-            <RadioButton layoutX="185.0" layoutY="5383.0" mnemonicParsing="false" text="0=Absence of trunk dystonia" />
-            <RadioButton layoutX="185.0" layoutY="5402.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="548.0" text="1=Slight. Pulling less than 10% of the time and does not interfere with lying, sitting, standing and/or walking" wrapText="true" />
-            <RadioButton layoutX="185.0" layoutY="5435.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="537.0" text="2=Mild. Pulling less than 50% of the time and does not interfere with lying, sitting, standing and/or walking" wrapText="true" />
-            <RadioButton layoutX="185.0" layoutY="5468.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="515.0" text="3=Moderate. Pulling more than 50% of the time, and/or dystonia that interferes with lying, sitting, standing and/or walking" wrapText="true" />
-            <RadioButton layoutX="185.0" layoutY="5504.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="515.0" text="4=Severe. Pulling more than 50% of the time, and/or dystonia that prevents positioning in wheelchair, standing and/or walking (e.g. requires adapted system to control posturing)" wrapText="true" />
-            <RadioButton layoutX="185.0" layoutY="5529.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="515.0" text="*=Unable to assess mouth movements" wrapText="true" />
+            <RadioButton fx:id="trunk0" layoutX="185.0" layoutY="5383.0" mnemonicParsing="false" text="0=Absence of trunk dystonia" />
+            <RadioButton fx:id="trunk1" layoutX="185.0" layoutY="5402.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="548.0" text="1=Slight. Pulling less than 10% of the time and does not interfere with lying, sitting, standing and/or walking" wrapText="true" />
+            <RadioButton fx:id="trunk2" layoutX="185.0" layoutY="5435.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="537.0" text="2=Mild. Pulling less than 50% of the time and does not interfere with lying, sitting, standing and/or walking" wrapText="true" />
+            <RadioButton fx:id="trunk3" layoutX="185.0" layoutY="5468.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="515.0" text="3=Moderate. Pulling more than 50% of the time, and/or dystonia that interferes with lying, sitting, standing and/or walking" wrapText="true" />
+            <RadioButton fx:id="trunk4" layoutX="185.0" layoutY="5504.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="515.0" text="4=Severe. Pulling more than 50% of the time, and/or dystonia that prevents positioning in wheelchair, standing and/or walking (e.g. requires adapted system to control posturing)" wrapText="true" />
+            <RadioButton fx:id="trunkUnable" layoutX="185.0" layoutY="5529.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="515.0" text="*=Unable to assess mouth movements" wrapText="true" />
             <Separator layoutY="5569.0" prefHeight="2.0" prefWidth="737.0" />
             <Separator layoutX="735.0" layoutY="4867.0" orientation="VERTICAL" prefHeight="702.0" prefWidth="0.0" />
             <Separator layoutX="711.0" layoutY="3910.0" orientation="VERTICAL" prefHeight="862.0" prefWidth="0.0" />

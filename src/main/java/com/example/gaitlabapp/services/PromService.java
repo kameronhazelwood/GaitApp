@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface PromService {
-    Optional<IPromModel> save(IPromModel promModel);
+    IPromModel save(IPromModel promModel);
     List<IPromModel> findAll();
     void delete(Long id);
 }
