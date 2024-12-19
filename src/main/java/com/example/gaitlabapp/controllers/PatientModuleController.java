@@ -464,7 +464,7 @@ public class PatientModuleController implements Initializable {
                     fxmlLoader.setControllerFactory(applicationContext::getBean);
                     VisitDetailsGaitController visitDetailsGaitController = fxmlLoader.getController();
 
-                    visitDetailsGaitController.setAppointmentModel(appointmentModel);
+                   // visitDetailsGaitController.setAppointmentModel(appointmentModel);
                     popUp = fxmlLoader.load();
                     Stage stage1 = new Stage((StageStyle.UTILITY));
                     stage1.initModality(Modality.WINDOW_MODAL);

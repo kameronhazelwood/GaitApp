@@ -1406,9 +1406,9 @@ public class VisitDetailsGaitController implements Initializable {
     }
 
     public void setAppointmentModel(IAppointmentModel appointmentModel) {
-        aptDate.setText(appointmentModel.getAptDate());
-        aptVisitType.setText(appointmentModel.getVisitType());
-        aptSubType.setText(appointmentModel.getVisitSubType());
+//        aptDate.setText(appointmentModel.getAptDate());
+//        aptVisitType.setText(appointmentModel.getVisitType());
+//        aptSubType.setText(appointmentModel.getVisitSubType());
 
     }
 

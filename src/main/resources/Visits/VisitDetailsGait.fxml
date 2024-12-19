@@ -997,10 +997,10 @@
                   <CheckBox layoutX="288.0" layoutY="476.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="476.0" mnemonicParsing="false" />
                   <CheckBox layoutX="399.0" layoutY="475.0" mnemonicParsing="false" />
-                  <Separator layoutX="260.0" layoutY="176.0" orientation="VERTICAL" prefHeight="1179.0" prefWidth="0.0" />
-                  <Separator layoutX="324.0" layoutY="176.0" orientation="VERTICAL" prefHeight="1179.0" prefWidth="0.0" />
-                  <Separator layoutX="380.0" layoutY="179.0" orientation="VERTICAL" prefHeight="1179.0" prefWidth="0.0" />
-                  <Separator layoutX="434.0" layoutY="179.0" orientation="VERTICAL" prefHeight="1179.0" prefWidth="0.0" />
+                  <Separator layoutX="260.0" layoutY="176.0" orientation="VERTICAL" prefHeight="1022.0" prefWidth="0.0" />
+                  <Separator layoutX="324.0" layoutY="176.0" orientation="VERTICAL" prefHeight="1022.0" prefWidth="0.0" />
+                  <Separator layoutX="380.0" layoutY="176.0" orientation="VERTICAL" prefHeight="1022.0" prefWidth="0.0" />
+                  <Separator layoutX="434.0" layoutY="179.0" orientation="VERTICAL" prefHeight="1022.0" prefWidth="0.0" />
                   <Label layoutX="12.0" layoutY="502.0" text="Gait History" />
                   <CheckBox layoutX="288.0" layoutY="500.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="500.0" mnemonicParsing="false" />
@@ -1038,7 +1038,7 @@
                   <Separator layoutY="672.0" prefHeight="3.0" prefWidth="783.0" />
                   <Separator blendMode="EXCLUSION" layoutX="3.0" layoutY="53.0" prefHeight="3.0" prefWidth="783.0" />
                   <Button fx:id="comSideNav" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#onViewCompendiumSideNav" prefHeight="31.0" prefWidth="126.0" text="View Compendium " />
-                  <Button fx:id="setDatesVisitGait" layoutX="620.0" layoutY="66.0" mnemonicParsing="false" onAction="#onSetDatesVisitGait" prefHeight="23.0" prefWidth="117.0" text="Set Dates" />
+                  <Button fx:id="setDatesVisitGait" layoutX="620.0" layoutY="66.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="117.0" text="Set Dates" />
                   <Label layoutX="565.0" layoutY="100.0" text="Current Comparison:" />
                   <Text layoutX="716.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                   <Button fx:id="interpSideNav1" layoutX="148.0" layoutY="14.0" mnemonicParsing="false" onAction="#onViewInterpretation" prefHeight="31.0" prefWidth="126.0" text="View Interpretation " />

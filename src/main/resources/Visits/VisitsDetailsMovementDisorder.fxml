@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
@@ -187,7 +189,7 @@
                     <Label layoutX="21.0" layoutY="228.0" prefHeight="25.0" prefWidth="127.0" text="FMS (5m)" />
                     <Label layoutX="21.0" layoutY="261.0" prefHeight="25.0" prefWidth="127.0" text="FMS (50m)" />
                     <Label layoutX="21.0" layoutY="291.0" prefHeight="25.0" prefWidth="127.0" text="FMS (500m)" />
-                    <Label layoutX="21.0" layoutY="371.0" prefHeight="24.0" prefWidth="67.0" text="Comments" />
+                    <Label layoutX="21.0" layoutY="401.0" prefHeight="24.0" prefWidth="67.0" text="Comments" />
                     <Label layoutX="204.0" layoutY="482.0" text="PROM">
                         <font>
                             <Font name="System Bold" size="13.0" />
@@ -275,15 +277,59 @@
                     <RadioButton fx:id="GAITAS4" layoutX="270.0" layoutY="173.0" mnemonicParsing="false" text="4" />
                     <RadioButton fx:id="GAITAS5" layoutX="310.0" layoutY="173.0" mnemonicParsing="false" text="5" />
                     <RadioButton fx:id="GAITAS6" layoutX="350.0" layoutY="173.0" mnemonicParsing="false" text="6" />
-                    <ComboBox fx:id="GMFCSCombo" layoutX="148.0" layoutY="197.0" prefHeight="25.0" prefWidth="73.0" />
+                    <ComboBox fx:id="GMFCSCombo" layoutX="148.0" layoutY="197.0" prefHeight="25.0" prefWidth="82.0" promptText="Select">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="" />
+                                <String fx:value="I" />
+                                <String fx:value="II" />
+                                <String fx:value="III" />
+                                <String fx:value="IV" />
+                                <String fx:value="V" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Separator layoutX="17.0" layoutY="224.0" prefHeight="0.0" prefWidth="563.0" />
                     <Separator layoutX="18.0" layoutY="256.0" prefHeight="0.0" prefWidth="563.0" />
-                    <ComboBox fx:id="FMS5M" layoutX="148.0" layoutY="228.0" prefHeight="25.0" prefWidth="73.0" />
-                    <ComboBox fx:id="FMS50M" layoutX="148.0" layoutY="261.0" prefHeight="25.0" prefWidth="73.0" />
+                    <ComboBox fx:id="FMS5M" layoutX="148.0" layoutY="228.0" prefHeight="25.0" prefWidth="82.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="" />
+                            <String fx:value="I" />
+                            <String fx:value="II" />
+                            <String fx:value="III" />
+                            <String fx:value="IV" />
+                            <String fx:value="V" />
+                        </FXCollections>
+                    </items>
+                    </ComboBox>
+                    <ComboBox fx:id="FMS50M" layoutX="148.0" layoutY="261.0" prefHeight="25.0" prefWidth="82.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="" />
+                            <String fx:value="I" />
+                            <String fx:value="II" />
+                            <String fx:value="III" />
+                            <String fx:value="IV" />
+                            <String fx:value="V" />
+                        </FXCollections>
+                    </items>
+                    </ComboBox>
                     <Separator layoutX="19.0" layoutY="288.0" prefHeight="0.0" prefWidth="563.0" />
-                    <ComboBox fx:id="FMS500M" layoutX="148.0" layoutY="291.0" prefHeight="25.0" prefWidth="73.0" />
+                    <ComboBox fx:id="FMS500M" layoutX="148.0" layoutY="291.0" prefHeight="25.0" prefWidth="82.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="" />
+                            <String fx:value="I" />
+                            <String fx:value="II" />
+                            <String fx:value="III" />
+                            <String fx:value="IV" />
+                            <String fx:value="V" />
+                        </FXCollections>
+                    </items>
+                    </ComboBox>
                     <Separator layoutX="17.0" layoutY="318.0" prefHeight="0.0" prefWidth="563.0" />
-                    <TextArea fx:id="GAITcomments" layoutX="90.0" layoutY="323.0" prefHeight="127.0" prefWidth="485.0" />
+                    <TextArea fx:id="GAITcomments" layoutX="90.0" layoutY="353.0" prefHeight="127.0" prefWidth="485.0" />
                     <Separator blendMode="DIFFERENCE" layoutX="19.0" layoutY="539.0" prefHeight="4.0" prefWidth="611.0" />
                     <Separator blendMode="DIFFERENCE" layoutX="316.0" layoutY="542.0" orientation="VERTICAL" prefHeight="1450.0" prefWidth="0.0" />
                     <Separator blendMode="DIFFERENCE" layoutX="412.0" layoutY="542.0" orientation="VERTICAL" prefHeight="1449.0" prefWidth="0.0" />
@@ -304,205 +350,1030 @@
                     <Separator layoutX="524.0" layoutY="542.0" orientation="VERTICAL" prefHeight="1450.0" prefWidth="0.0" />
                     <Separator layoutX="105.0" layoutY="543.0" orientation="VERTICAL" prefHeight="1447.0" prefWidth="0.0" />
                     <TextField fx:id="PROMHipR" layoutX="123.0" layoutY="552.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="hipRP" layoutX="130.0" layoutY="580.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="hipRP" layoutX="130.0" layoutY="580.0" prefHeight="19.0" prefWidth="60.0" promptText=" ">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value=" " />
+                            <String fx:value="N" />
+                            <String fx:value="VN" />
+                            <String fx:value="H" />
+                            <String fx:value="L" />
+                            <String fx:value="VL" />
+                        </FXCollections>
+                    </items>
+                    </ComboBox>
                     <TextField fx:id="PROMHipL" layoutX="233.0" layoutY="552.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="hipLP" layoutX="240.0" layoutY="580.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="hipLP" layoutX="240.0" layoutY="580.0" prefHeight="19.0" prefWidth="60.0" promptText=" ">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value=" " />
+                            <String fx:value="N" />
+                            <String fx:value="VN" />
+                            <String fx:value="H" />
+                            <String fx:value="L" />
+                            <String fx:value="VL" />
+                        </FXCollections>
+                    </items>
+                    </ComboBox>
                     <Separator layoutX="13.0" layoutY="609.0" prefHeight="2.0" prefWidth="614.0" />
                     <Label fx:id="norms" layoutX="343.0" layoutY="565.0" text="100 -130" wrapText="true" />
                     <TextField fx:id="StrenHipFlexR" layoutX="431.0" layoutY="552.0" prefHeight="20.0" prefWidth="75.0" />
                     <TextField fx:id="StrenHipFlexL" layoutX="538.0" layoutY="552.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="hipRS" layoutX="439.0" layoutY="579.0" prefHeight="19.0" prefWidth="60.0" />
-                    <ComboBox fx:id="hipLS" layoutX="545.0" layoutY="579.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="hipRS" layoutX="439.0" layoutY="579.0" prefHeight="19.0" prefWidth="60.0" promptText=" ">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value=" " />
+                            <String fx:value="N" />
+                            <String fx:value="VN" />
+                            <String fx:value="H" />
+                            <String fx:value="L" />
+                            <String fx:value="VL" />
+                        </FXCollections>
+                    </items>
+                    </ComboBox>
+                    <ComboBox fx:id="hipLS" layoutX="545.0" layoutY="579.0" prefHeight="19.0" prefWidth="60.0" promptText=" ">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value=" " />
+                            <String fx:value="N" />
+                            <String fx:value="VN" />
+                            <String fx:value="H" />
+                            <String fx:value="L" />
+                            <String fx:value="VL" />
+                        </FXCollections>
+                    </items>
+                    </ComboBox>
                     <TextField fx:id="PROMHipExtR" layoutX="123.0" layoutY="618.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="hipExtRP" layoutX="130.0" layoutY="647.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="hipExtRP" layoutX="130.0" layoutY="647.0" prefHeight="19.0" prefWidth="60.0" promptText=" ">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value=" " />
+                            <String fx:value="N" />
+                            <String fx:value="VN" />
+                            <String fx:value="H" />
+                            <String fx:value="L" />
+                            <String fx:value="VL" />
+                        </FXCollections>
+                    </items>
+                    </ComboBox>
                     <TextField fx:id="PROMHipExtL" layoutX="233.0" layoutY="618.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="hipExtLP" layoutX="240.0" layoutY="647.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="hipExtLP" layoutX="240.0" layoutY="647.0" prefHeight="19.0" prefWidth="60.0" promptText=" ">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value=" " />
+                            <String fx:value="N" />
+                            <String fx:value="VN" />
+                            <String fx:value="H" />
+                            <String fx:value="L" />
+                            <String fx:value="VL" />
+                        </FXCollections>
+                    </items>
+                    </ComboBox>
                     <Label layoutX="343.0" layoutY="635.0" text="4.7 - 12.7" />
                     <TextField fx:id="StrengHipExtR" layoutX="431.0" layoutY="616.0" prefHeight="20.0" prefWidth="75.0" />
                     <TextField fx:id="StrengHipExtL" layoutX="538.0" layoutY="616.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="hipExtLS" layoutX="545.0" layoutY="644.0" prefHeight="19.0" prefWidth="60.0" />
-                    <ComboBox fx:id="hipExtRS" layoutX="439.0" layoutY="645.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="hipExtLS" layoutX="545.0" layoutY="644.0" prefHeight="19.0" prefWidth="60.0" promptText=" ">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value=" " />
+                            <String fx:value="N" />
+                            <String fx:value="VN" />
+                            <String fx:value="H" />
+                            <String fx:value="L" />
+                            <String fx:value="VL" />
+                        </FXCollections>
+                    </items>
+                    </ComboBox>
+                    <ComboBox fx:id="hipExtRS" layoutX="439.0" layoutY="645.0" prefHeight="19.0" prefWidth="60.0" promptText=" ">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Separator layoutX="14.0" layoutY="674.0" prefHeight="4.0" prefWidth="614.0" />
                     <TextField fx:id="PROMHipabdR" layoutX="123.0" layoutY="683.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="hipAbdRP" layoutX="130.0" layoutY="710.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="hipAbdRP" layoutX="130.0" layoutY="710.0" prefHeight="19.0" prefWidth="60.0" promptText=" ">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value=" " />
+                            <String fx:value="N" />
+                            <String fx:value="VN" />
+                            <String fx:value="H" />
+                            <String fx:value="L" />
+                            <String fx:value="VL" />
+                        </FXCollections>
+                    </items>
+                    </ComboBox>
                     <TextField fx:id="PROMHipabdL" layoutX="233.0" layoutY="683.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="hipAbdLP" layoutX="240.0" layoutY="710.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="hipAbdLP" layoutX="240.0" layoutY="710.0" prefHeight="19.0" prefWidth="60.0" promptText=" ">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value=" " />
+                            <String fx:value="N" />
+                            <String fx:value="VN" />
+                            <String fx:value="H" />
+                            <String fx:value="L" />
+                            <String fx:value="VL" />
+                        </FXCollections>
+                    </items>
+                    </ComboBox>
                     <Label layoutX="343.0" layoutY="702.0" text="37.5 - 45.7" />
                     <TextField fx:id="StregHipExtR" layoutX="431.0" layoutY="683.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="hipAbdRS" layoutX="439.0" layoutY="710.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="hipAbdRS" layoutX="439.0" layoutY="710.0" prefHeight="19.0" prefWidth="60.0" promptText=" ">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value=" " />
+                            <String fx:value="N" />
+                            <String fx:value="VN" />
+                            <String fx:value="H" />
+                            <String fx:value="L" />
+                            <String fx:value="VL" />
+                        </FXCollections>
+                    </items>
+                    </ComboBox>
                     <TextField fx:id="StregHipExtL" layoutX="538.0" layoutY="683.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="hipAbdLS" layoutX="545.0" layoutY="710.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="hipAbdLS" layoutX="545.0" layoutY="710.0" prefHeight="19.0" prefWidth="60.0" promptText=" ">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value=" " />
+                            <String fx:value="N" />
+                            <String fx:value="VN" />
+                            <String fx:value="H" />
+                            <String fx:value="L" />
+                            <String fx:value="VL" />
+                        </FXCollections>
+                    </items>
+                    </ComboBox>
                     <Separator layoutX="15.0" layoutY="742.0" prefHeight="4.0" prefWidth="614.0" />
                     <TextField fx:id="PROMHipIntRotR" layoutX="123.0" layoutY="750.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="hipIntRotRP" layoutX="130.0" layoutY="777.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="hipIntRotRP" layoutX="130.0" layoutY="777.0" prefHeight="19.0" prefWidth="60.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value=" " />
+                            <String fx:value="N" />
+                            <String fx:value="VN" />
+                            <String fx:value="H" />
+                            <String fx:value="L" />
+                            <String fx:value="VL" />
+                        </FXCollections>
+                    </items>
+                    </ComboBox>
                     <TextField fx:id="PROMHipIntRotL" layoutX="233.0" layoutY="750.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="hipIntRotLP" layoutX="240.0" layoutY="777.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="hipIntRotLP" layoutX="240.0" layoutY="777.0" prefHeight="19.0" prefWidth="60.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value=" " />
+                            <String fx:value="N" />
+                            <String fx:value="VN" />
+                            <String fx:value="H" />
+                            <String fx:value="L" />
+                            <String fx:value="VL" />
+                        </FXCollections>
+                    </items>
+                    </ComboBox>
                     <Label layoutX="340.0" layoutY="767.0" text="49.3 - 70.3" />
                     <TextField fx:id="StrengHipIntRotR" layoutX="431.0" layoutY="750.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="hipIntRotRS" layoutX="439.0" layoutY="777.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="hipIntRotRS" layoutX="439.0" layoutY="777.0" prefHeight="19.0" prefWidth="60.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value=" " />
+                            <String fx:value="N" />
+                            <String fx:value="VN" />
+                            <String fx:value="H" />
+                            <String fx:value="L" />
+                            <String fx:value="VL" />
+                        </FXCollections>
+                    </items>
+                    </ComboBox>
                     <TextField fx:id="StrengHipIntRotL" layoutX="538.0" layoutY="750.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="hipIntRotLS" layoutX="545.0" layoutY="777.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="hipIntRotLS" layoutX="545.0" layoutY="777.0" prefHeight="19.0" prefWidth="60.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value=" " />
+                            <String fx:value="N" />
+                            <String fx:value="VN" />
+                            <String fx:value="H" />
+                            <String fx:value="L" />
+                            <String fx:value="VL" />
+                        </FXCollections>
+                    </items>
+                    </ComboBox>
                     <Separator layoutX="15.0" layoutY="807.0" prefHeight="4.0" prefWidth="614.0" />
                     <TextField fx:id="PROMHipExtRotR" layoutX="123.0" layoutY="814.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="hipExtRotRP" layoutX="130.0" layoutY="841.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="hipExtRotRP" layoutX="130.0" layoutY="841.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <TextField fx:id="PROMHipExtRotL" layoutX="233.0" layoutY="814.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="hipExtRotLP" layoutX="240.0" layoutY="841.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="hipExtRotLP" layoutX="240.0" layoutY="841.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Label layoutX="346.0" layoutY="828.0" text="41 - 60" />
                     <TextField fx:id="StrengthHipExtRotR" layoutX="435.0" layoutY="813.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="hipExtRotRS" layoutX="439.0" layoutY="840.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="hipExtRotRS" layoutX="439.0" layoutY="840.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <TextField fx:id="StrengthHipExtRotL" layoutX="538.0" layoutY="813.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="hipExtRotLS" layoutX="545.0" layoutY="840.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="hipExtRotLS" layoutX="545.0" layoutY="840.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Separator layoutX="13.0" layoutY="871.0" prefHeight="3.0" prefWidth="614.0" />
                     <TextField fx:id="PROMRyderTestR" layoutX="123.0" layoutY="876.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="ryderRP" layoutX="130.0" layoutY="902.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="ryderRP" layoutX="130.0" layoutY="902.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <TextField fx:id="PROMRyderTestL" layoutX="230.0" layoutY="876.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="ryderLP" layoutX="240.0" layoutY="902.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="ryderLP" layoutX="240.0" layoutY="902.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Label layoutX="354.0" layoutY="894.0" text="0 - 0" />
                     <TextField fx:id="StregRyertestR" layoutX="436.0" layoutY="876.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="ryderRS" layoutX="439.0" layoutY="902.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="ryderRS" layoutX="439.0" layoutY="902.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <TextField fx:id="StregRyertestL" layoutX="545.0" layoutY="876.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="ryderLS" layoutX="540.0" layoutY="902.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="ryderLS" layoutX="540.0" layoutY="902.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Separator layoutX="14.0" layoutY="931.0" prefHeight="4.0" prefWidth="614.0" />
                     <TextField fx:id="PROMKneeExtR" layoutX="123.0" layoutY="936.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="kneeExtRP" layoutX="130.0" layoutY="962.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="kneeExtRP" layoutX="130.0" layoutY="962.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <TextField fx:id="PROMKneeExtL" layoutX="233.0" layoutY="936.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="kneeExtLP" layoutX="240.0" layoutY="962.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="kneeExtLP" layoutX="240.0" layoutY="962.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Label layoutX="343.0" layoutY="953.0" text="0.2 - 7.6" />
                     <TextField fx:id="StrengthKneeExtR" layoutX="431.0" layoutY="936.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="kneeExtRS" layoutX="439.0" layoutY="962.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="kneeExtRS" layoutX="439.0" layoutY="962.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <TextField fx:id="StrengthKneeExtL" layoutX="538.0" layoutY="936.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="kneeExtLS" layoutX="545.0" layoutY="962.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="kneeExtLS" layoutX="545.0" layoutY="962.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Separator layoutX="15.0" layoutY="988.0" prefHeight="4.0" prefWidth="614.0" />
                     <TextField fx:id="PROMExtLagR" layoutX="123.0" layoutY="993.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="extLagRP" layoutX="130.0" layoutY="1019.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="extLagRP" layoutX="130.0" layoutY="1019.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <TextField fx:id="PROMExtLagL" layoutX="233.0" layoutY="993.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="extLagLP" layoutX="240.0" layoutY="1019.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="extLagLP" layoutX="240.0" layoutY="1019.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Label layoutX="357.0" layoutY="1009.0" text="0 - 0" />
                     <TextField fx:id="StrengthExtLagR" layoutX="431.0" layoutY="993.0" prefHeight="20.0" prefWidth="75.0" />
                     <TextField fx:id="StrengthExtLagL" layoutX="538.0" layoutY="993.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="extLagRS" layoutX="439.0" layoutY="1019.0" prefHeight="19.0" prefWidth="60.0" />
-                    <ComboBox fx:id="extLagLS" layoutX="545.0" layoutY="1019.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="extLagRS" layoutX="439.0" layoutY="1019.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+                    <ComboBox fx:id="extLagLS" layoutX="545.0" layoutY="1019.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Separator layoutX="15.0" layoutY="1046.0" prefHeight="4.0" prefWidth="614.0" />
                     <TextField fx:id="PROMKneeFlexR" layoutX="123.0" layoutY="1051.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="kneeFlexRP" layoutX="130.0" layoutY="1077.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="kneeFlexRP" layoutX="130.0" layoutY="1077.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <TextField fx:id="PROMKneeFlexL" layoutX="233.0" layoutY="1050.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="kneeFlexLP" layoutX="240.0" layoutY="1077.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="kneeFlexLP" layoutX="240.0" layoutY="1077.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Label layoutX="343.0" layoutY="1068.0" text="125 - 150" />
                     <TextField fx:id="StrengthKneeFlexR" layoutX="431.0" layoutY="1051.0" prefHeight="20.0" prefWidth="75.0" />
                     <TextField fx:id="StrengthKneeFlexL" layoutX="538.0" layoutY="1051.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="kneeFlexRS" layoutX="439.0" layoutY="1078.0" prefHeight="19.0" prefWidth="60.0" />
-                    <ComboBox fx:id="kneeFlexLS" layoutX="545.0" layoutY="1079.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="kneeFlexRS" layoutX="439.0" layoutY="1078.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+                    <ComboBox fx:id="kneeFlexLS" layoutX="545.0" layoutY="1079.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Separator layoutX="14.0" layoutY="1105.0" prefHeight="4.0" prefWidth="614.0" />
                     <TextField fx:id="PROMPopAngleR" layoutX="123.0" layoutY="1108.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="popAngRP" layoutX="130.0" layoutY="1134.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="popAngRP" layoutX="130.0" layoutY="1134.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <TextField fx:id="PROMPopAngleL" layoutX="233.0" layoutY="1108.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="popAngLP" layoutX="240.0" layoutY="1133.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="popAngLP" layoutX="240.0" layoutY="1133.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Label layoutX="343.0" layoutY="1125.0" text="25.2 - 48.8" />
                     <TextField fx:id="StrengthPopAngleR" layoutX="431.0" layoutY="1108.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="popAngRS" layoutX="439.0" layoutY="1133.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="popAngRS" layoutX="439.0" layoutY="1133.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <TextField fx:id="StrengthPopAngleL" layoutX="538.0" layoutY="1108.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="popAngLS" layoutX="545.0" layoutY="1133.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="popAngLS" layoutX="545.0" layoutY="1133.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Separator layoutX="18.0" layoutY="1160.0" prefHeight="4.0" prefWidth="608.0" />
                     <TextField fx:id="PROMBilatR" layoutX="123.0" layoutY="1165.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="biPopAngRP" layoutX="130.0" layoutY="1191.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="biPopAngRP" layoutX="130.0" layoutY="1191.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <TextField fx:id="PROMBilatL" layoutX="233.0" layoutY="1165.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="biPopAngLP" layoutX="240.0" layoutY="1191.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="biPopAngLP" layoutX="240.0" layoutY="1191.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Label layoutX="352.0" layoutY="1183.0" text="0 - 0" />
                     <Separator layoutX="15.0" layoutY="1215.0" prefHeight="4.0" prefWidth="614.0" />
                     <TextField fx:id="PROMElyR" layoutX="123.0" layoutY="1218.0" prefHeight="20.0" prefWidth="75.0" />
                     <TextField fx:id="PROMElyL" layoutX="233.0" layoutY="1218.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="elyTestRP" layoutX="130.0" layoutY="1244.0" prefHeight="19.0" prefWidth="60.0" />
-                    <ComboBox fx:id="elyTestLP" layoutX="240.0" layoutY="1244.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="elyTestRP" layoutX="130.0" layoutY="1244.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+                    <ComboBox fx:id="elyTestLP" layoutX="240.0" layoutY="1244.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Label layoutX="343.0" layoutY="1236.0" text="100 - 140" />
                     <Separator layoutX="14.0" layoutY="1272.0" prefHeight="4.0" prefWidth="614.0" />
                     <Label layoutX="21.0" layoutY="1293.0" text="Dorsi (flex)" />
                     <TextField fx:id="PROMDorsiFR" layoutX="123.0" layoutY="1276.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="dorsiFlexRP" layoutX="130.0" layoutY="1303.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="dorsiFlexRP" layoutX="130.0" layoutY="1303.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <TextField fx:id="PROMDorsiFL" layoutX="233.0" layoutY="1276.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="dorsiFlexLP" layoutX="240.0" layoutY="1303.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="dorsiFlexLP" layoutX="240.0" layoutY="1303.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Label layoutX="343.0" layoutY="1295.0" text="7.4 - 18.8" />
                     <Separator layoutX="16.0" layoutY="1330.0" prefHeight="4.0" prefWidth="614.0" />
                     <TextField fx:id="PROMDorsiER" layoutX="123.0" layoutY="1333.0" prefHeight="20.0" prefWidth="75.0" />
                     <TextField fx:id="PROMDorsiEL" layoutX="233.0" layoutY="1333.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="dorsiExtRP" layoutX="130.0" layoutY="1358.0" prefHeight="19.0" prefWidth="60.0" />
-                    <ComboBox fx:id="dorsiExtLP" layoutX="240.0" layoutY="1358.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="dorsiExtRP" layoutX="130.0" layoutY="1358.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+                    <ComboBox fx:id="dorsiExtLP" layoutX="240.0" layoutY="1358.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Label layoutX="343.0" layoutY="1349.0" text="0.2 - 10" />
                     <Separator layoutX="16.0" layoutY="1387.0" prefHeight="4.0" prefWidth="614.0" />
                     <TextField fx:id="PROMPlantarR" layoutX="123.0" layoutY="1391.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="plantarRP" layoutX="130.0" layoutY="1416.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="plantarRP" layoutX="130.0" layoutY="1416.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <TextField fx:id="PROMPlantarL" layoutX="233.0" layoutY="1391.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="plantarLP" layoutX="240.0" layoutY="1416.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="plantarLP" layoutX="240.0" layoutY="1416.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Label layoutX="343.0" layoutY="1407.0" text="45.1 -61.9" />
                     <TextField fx:id="StrengPlantarR" layoutX="431.0" layoutY="1391.0" prefHeight="20.0" prefWidth="75.0" />
                     <TextField fx:id="StrengPlantarL" layoutX="538.0" layoutY="1391.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="plantarRS" layoutX="441.0" layoutY="1417.0" prefHeight="19.0" prefWidth="60.0" />
-                    <ComboBox fx:id="plantarLS" layoutX="545.0" layoutY="1417.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="plantarRS" layoutX="441.0" layoutY="1417.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+                    <ComboBox fx:id="plantarLS" layoutX="545.0" layoutY="1417.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Separator layoutX="15.0" layoutY="1444.0" prefHeight="4.0" prefWidth="614.0" />
                     <TextField fx:id="PROMAnkInvR" layoutX="123.0" layoutY="1448.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="ankleInvRP" layoutX="130.0" layoutY="1474.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="ankleInvRP" layoutX="130.0" layoutY="1474.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <TextField fx:id="PROMAnkInvL" layoutX="233.0" layoutY="1448.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="ankleInvLP" layoutX="240.0" layoutY="1474.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="ankleInvLP" layoutX="240.0" layoutY="1474.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Separator layoutX="13.0" layoutY="1511.0" prefHeight="4.0" prefWidth="614.0" />
                     <Separator layoutX="13.0" layoutY="1568.0" prefHeight="0.0" prefWidth="614.0" />
                     <Label layoutX="343.0" layoutY="1467.0" text="20 - 45" />
                     <TextField fx:id="StrengAnklInvR" layoutX="431.0" layoutY="1448.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="ankleInvRS" layoutX="439.0" layoutY="1474.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="ankleInvRS" layoutX="439.0" layoutY="1474.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <TextField fx:id="StrengAnklInvL" layoutX="538.0" layoutY="1448.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="ankleInvLS" layoutX="545.0" layoutY="1474.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="ankleInvLS" layoutX="545.0" layoutY="1474.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <TextField fx:id="PROMAnkEvR" layoutX="123.0" layoutY="1515.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="ankleEverRP" layoutX="130.0" layoutY="1541.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="ankleEverRP" layoutX="130.0" layoutY="1541.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <TextField fx:id="PROMAnkEvL" layoutX="233.0" layoutY="1515.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="ankleEverLP" layoutX="240.0" layoutY="1541.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="ankleEverLP" layoutX="240.0" layoutY="1541.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Label layoutX="343.0" layoutY="1533.0" text="20 -45" />
                     <TextField fx:id="StrengAnkEvR" layoutX="431.0" layoutY="1514.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="ankleEverRS" layoutX="439.0" layoutY="1539.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="ankleEverRS" layoutX="439.0" layoutY="1539.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <TextField fx:id="StrengAnkEvL" layoutX="538.0" layoutY="1514.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="ankleEverLS" layoutX="545.0" layoutY="1540.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="ankleEverLS" layoutX="545.0" layoutY="1540.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <TextField fx:id="PROMtmaR" layoutX="123.0" layoutY="1573.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="tmaRP" layoutX="130.0" layoutY="1599.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="tmaRP" layoutX="130.0" layoutY="1599.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <TextField fx:id="PROMtmaL" layoutX="233.0" layoutY="1573.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="tmaLP" layoutX="240.0" layoutY="1599.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="tmaLP" layoutX="240.0" layoutY="1599.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Label layoutX="343.0" layoutY="1590.0" text="0 - 25" />
                     <Separator layoutX="14.0" layoutY="1626.0" prefHeight="4.0" prefWidth="614.0" />
                     <TextField fx:id="PROMtfaR" layoutX="123.0" layoutY="1631.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="tfaRP" layoutX="130.0" layoutY="1659.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="tfaRP" layoutX="130.0" layoutY="1659.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <TextField fx:id="PROMtfaL" layoutX="233.0" layoutY="1633.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="tfaLP" layoutX="240.0" layoutY="1659.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="tfaLP" layoutX="240.0" layoutY="1659.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Label layoutX="343.0" layoutY="1650.0" text="2.5 - 13.5" />
                     <Separator layoutX="14.0" layoutY="1687.0" prefHeight="4.0" prefWidth="614.0" />
                     <TextField fx:id="PROMffR" layoutX="123.0" layoutY="1691.0" prefHeight="20.0" prefWidth="75.0" />
                     <TextField fx:id="PROMffL" layoutX="233.0" layoutY="1691.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="ffRP" layoutX="130.0" layoutY="1717.0" prefHeight="19.0" prefWidth="60.0" />
-                    <ComboBox fx:id="ffLP" layoutX="240.0" layoutY="1717.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="ffRP" layoutX="130.0" layoutY="1717.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+                    <ComboBox fx:id="ffLP" layoutX="240.0" layoutY="1717.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Separator layoutX="15.0" layoutY="1745.0" prefHeight="4.0" prefWidth="614.0" />
                     <Label layoutX="21.0" layoutY="1769.0" text="Calcaneal Inv" />
                     <TextField fx:id="PROMCalInvR" layoutX="123.0" layoutY="1750.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="calInvRP" layoutX="130.0" layoutY="1777.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="calInvRP" layoutX="130.0" layoutY="1777.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <TextField fx:id="PROMCalInvL" layoutX="233.0" layoutY="1750.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="calInvLP" layoutX="240.0" layoutY="1776.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="calInvLP" layoutX="240.0" layoutY="1776.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Label layoutX="343.0" layoutY="1709.0" text="-5 - 5" />
                     <Label layoutX="343.0" layoutY="1768.0" text="5 - 15" />
                     <Separator layoutX="14.0" layoutY="1803.0" prefHeight="4.0" prefWidth="614.0" />
                     <Label layoutX="21.0" layoutY="1824.0" text="Calcaneal Ever" />
                     <TextField fx:id="PROMCalEvR" layoutX="123.0" layoutY="1812.0" prefHeight="20.0" prefWidth="75.0" />
                     <TextField fx:id="PROMCalEvL" layoutX="233.0" layoutY="1812.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="calEverRP" layoutX="130.0" layoutY="1838.0" prefHeight="19.0" prefWidth="60.0" />
-                    <ComboBox fx:id="calEverLP" layoutX="240.0" layoutY="1838.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="calEverRP" layoutX="130.0" layoutY="1838.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+                    <ComboBox fx:id="calEverLP" layoutX="240.0" layoutY="1838.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Label layoutX="343.0" layoutY="1829.0" text="5 - 15" />
                     <Separator layoutX="13.0" layoutY="1865.0" prefHeight="4.0" prefWidth="614.0" />
                     <Separator layoutX="13.0" layoutY="1928.0" prefHeight="4.0" prefWidth="614.0" />
                     <TextField fx:id="legLengthR" layoutX="123.0" layoutY="1873.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="legLengthRP" layoutX="130.0" layoutY="1900.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="legLengthRP" layoutX="130.0" layoutY="1900.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <TextField fx:id="legLengthL" layoutX="233.0" layoutY="1873.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="legLengthLP" layoutX="240.0" layoutY="1899.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="legLengthLP" layoutX="240.0" layoutY="1899.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Label layoutX="17.0" layoutY="1942.0" prefHeight="41.0" prefWidth="70.0" text="Knee Varus/Valgus" wrapText="true" />
                     <TextField fx:id="kneeVarR" layoutX="123.0" layoutY="1938.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="kneeVarusRP" layoutX="130.0" layoutY="1964.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="kneeVarusRP" layoutX="130.0" layoutY="1964.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <TextField fx:id="kneeVarL" layoutX="233.0" layoutY="1938.0" prefHeight="20.0" prefWidth="75.0" />
-                    <ComboBox fx:id="kneeVarusLP" layoutX="238.0" layoutY="1964.0" prefHeight="19.0" prefWidth="60.0" />
+                    <ComboBox fx:id="kneeVarusLP" layoutX="238.0" layoutY="1964.0" prefHeight="19.0" prefWidth="60.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <Label layoutX="340.0" layoutY="1954.0" text="-13 - 5" />
                     <Separator blendMode="DIFFERENCE" layoutX="12.0" layoutY="1990.0" prefHeight="4.0" prefWidth="614.0" />
-                    <ComboBox layoutX="119.0" layoutY="2072.0" prefHeight="17.0" prefWidth="178.0" />
+                    <ComboBox fx:id="orthosisDropdown" layoutX="119.0" layoutY="2072.0" prefHeight="17.0" prefWidth="178.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value=" " />
+                                <String fx:value="N" />
+                                <String fx:value="VN" />
+                                <String fx:value="H" />
+                                <String fx:value="L" />
+                                <String fx:value="VL" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                     <RadioButton layoutX="249.0" layoutY="2110.0" mnemonicParsing="false" text="Both" />
                     <Button layoutX="333.0" layoutY="2085.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Add" />
                     <TableView layoutX="31.0" layoutY="2173.0" prefHeight="149.0" prefWidth="419.0">
@@ -701,79 +1572,79 @@
             <Label layoutX="194.0" layoutY="3924.0" text="UER Score" />
             <Separator layoutX="297.0" layoutY="3912.0" orientation="VERTICAL" prefHeight="862.0" prefWidth="0.0" />
             <Label layoutX="2.0" layoutY="3944.0" prefHeight="130.0" prefWidth="149.0" text="Increased involuntary movements/postrues of the designated limb with tactile stimulus of another body part" wrapText="true" />
-            <RadioButton layoutX="168.0" layoutY="3956.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="168.0" layoutY="4009.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uerDesignated0" layoutX="168.0" layoutY="3956.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uerDesignated0" layoutX="168.0" layoutY="4009.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
             <Separator layoutY="4072.0" prefHeight="0.0" prefWidth="714.0" />
             <Label layoutX="331.0" layoutY="3924.0" text="LER Score" />
-            <RadioButton layoutX="308.0" layoutY="3956.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="308.0" layoutY="4009.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="lerDesignated0" layoutX="308.0" layoutY="3956.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="lerDesignated1" layoutX="308.0" layoutY="4009.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
             <Separator layoutX="434.0" layoutY="3909.0" orientation="VERTICAL" prefHeight="862.0" prefWidth="0.0" />
             <Label layoutX="473.0" layoutY="3924.0" text="UEL Score" />
-            <RadioButton layoutX="446.0" layoutY="3956.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="446.0" layoutY="4009.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uelDesignated0" layoutX="446.0" layoutY="3956.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uelDesignated1" layoutX="446.0" layoutY="4009.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
             <Separator layoutX="573.0" layoutY="3909.0" orientation="VERTICAL" prefHeight="862.0" prefWidth="0.0" />
             <Label layoutX="623.0" layoutY="3924.0" text="LEL Score" />
-            <RadioButton layoutX="584.0" layoutY="3956.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="584.0" layoutY="4009.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="lelDesignated0" layoutX="584.0" layoutY="3956.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="lelDesignated1" layoutX="584.0" layoutY="4009.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
             <Label layoutX="2.0" layoutY="4079.0" prefHeight="89.0" prefWidth="147.0" text="Increased involuntary movements/postrues with purposeful movements of another body part" wrapText="true" />
-            <RadioButton layoutX="168.0" layoutY="4075.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="168.0" layoutY="4128.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="308.0" layoutY="4075.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="308.0" layoutY="4128.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="446.0" layoutY="4075.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="446.0" layoutY="4128.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="584.0" layoutY="4075.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="584.0" layoutY="4128.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uerPurposeful0" layoutX="168.0" layoutY="4075.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uerPurposeful1" layoutX="168.0" layoutY="4128.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="lerPurposeful0" layoutX="308.0" layoutY="4075.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="lerPurposeful1" layoutX="308.0" layoutY="4128.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uelPurposeful0" layoutX="446.0" layoutY="4075.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uelPurposeful1" layoutX="446.0" layoutY="4128.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="lelPurposeful0" layoutX="584.0" layoutY="4075.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="lelPurposeful1" layoutX="584.0" layoutY="4128.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
             <Separator layoutY="4189.0" prefHeight="0.0" prefWidth="714.0" />
             <Label layoutX="2.0" layoutY="4191.0" prefHeight="89.0" prefWidth="147.0" text="Velocity dependent resistance to stretch" wrapText="true" />
-            <RadioButton layoutX="168.0" layoutY="4190.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="168.0" layoutY="4243.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="308.0" layoutY="4190.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="308.0" layoutY="4243.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="446.0" layoutY="4190.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="446.0" layoutY="4243.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="584.0" layoutY="4190.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="584.0" layoutY="4243.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uerStretch0" layoutX="168.0" layoutY="4190.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uerStretch1" layoutX="168.0" layoutY="4243.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="lerStretch0" layoutX="308.0" layoutY="4190.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="lerStretch1" layoutX="308.0" layoutY="4243.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uelStretch0" layoutX="446.0" layoutY="4190.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uelStretch1" layoutX="446.0" layoutY="4243.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="lelStretch0" layoutX="584.0" layoutY="4190.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="lelStretch1" layoutX="584.0" layoutY="4243.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
             <Separator layoutY="4303.0" prefHeight="0.0" prefWidth="714.0" />
             <Label layoutX="2.0" layoutY="4314.0" prefHeight="89.0" prefWidth="147.0" text="Presence of a spastic catch" wrapText="true" />
-            <RadioButton layoutX="168.0" layoutY="4306.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="168.0" layoutY="4359.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="308.0" layoutY="4306.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="308.0" layoutY="4359.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="446.0" layoutY="4306.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="446.0" layoutY="4359.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="584.0" layoutY="4306.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="584.0" layoutY="4359.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uerSpastic0" layoutX="168.0" layoutY="4306.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uerSpastic1" layoutX="168.0" layoutY="4359.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="lerSpastic0" layoutX="308.0" layoutY="4306.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="lerSpastic1" layoutX="308.0" layoutY="4359.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uelSpastic0" layoutX="446.0" layoutY="4306.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uelSpastic1" layoutX="446.0" layoutY="4359.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="lelSpastic0" layoutX="584.0" layoutY="4306.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="lelSpastic1" layoutX="584.0" layoutY="4359.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
             <Separator layoutY="4420.0" prefHeight="0.0" prefWidth="714.0" />
             <Label layoutX="2.0" layoutY="4425.0" prefHeight="89.0" prefWidth="147.0" text="Equal resistance to passive stretch during bi-directional movement of a joint" wrapText="true" />
-            <RadioButton layoutX="168.0" layoutY="4422.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="168.0" layoutY="4475.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="308.0" layoutY="4422.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="308.0" layoutY="4475.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="446.0" layoutY="4422.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="446.0" layoutY="4475.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="584.0" layoutY="4422.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="584.0" layoutY="4475.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uerJoint0" layoutX="168.0" layoutY="4422.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uerJoint1" layoutX="168.0" layoutY="4475.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="lerJoint0" layoutX="308.0" layoutY="4422.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="lerJoint1" layoutX="308.0" layoutY="4475.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uelJoint0" layoutX="446.0" layoutY="4422.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uelJoint1" layoutX="446.0" layoutY="4475.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="lelJoint0" layoutX="584.0" layoutY="4422.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="lelJoint1" layoutX="584.0" layoutY="4475.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
             <Separator layoutY="4537.0" prefHeight="0.0" prefWidth="714.0" />
             <Label layoutX="2.0" layoutY="4549.0" prefHeight="89.0" prefWidth="147.0" text="Increased tone with movement of another body part" wrapText="true" />
-            <RadioButton layoutX="168.0" layoutY="4540.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="168.0" layoutY="4593.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="308.0" layoutY="4540.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="308.0" layoutY="4593.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="446.0" layoutY="4540.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="446.0" layoutY="4593.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="584.0" layoutY="4540.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="584.0" layoutY="4593.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uerTone0" layoutX="168.0" layoutY="4540.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uerTone1" layoutX="168.0" layoutY="4593.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="lerTone0" layoutX="308.0" layoutY="4540.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="lerTone1" layoutX="308.0" layoutY="4593.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uelTone0" layoutX="446.0" layoutY="4540.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uelTone1" layoutX="446.0" layoutY="4593.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="lelTone0" layoutX="584.0" layoutY="4540.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="lelTone1" layoutX="584.0" layoutY="4593.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
             <Separator layoutY="4655.0" prefHeight="0.0" prefWidth="714.0" />
             <Label layoutX="2.0" layoutY="4659.0" prefHeight="89.0" prefWidth="147.0" text="Maintenance of limb position after passive movement" wrapText="true" />
-            <RadioButton layoutX="168.0" layoutY="4659.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="168.0" layoutY="4712.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="308.0" layoutY="4659.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="308.0" layoutY="4712.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="446.0" layoutY="4659.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="446.0" layoutY="4712.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="584.0" layoutY="4659.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
-            <RadioButton layoutX="584.0" layoutY="4712.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uerPosition0" layoutX="168.0" layoutY="4659.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uerPosition1" layoutX="168.0" layoutY="4712.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="lerPosition0" layoutX="308.0" layoutY="4659.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="lerPosition1" layoutX="308.0" layoutY="4712.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uelPosition0" layoutX="446.0" layoutY="4659.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="uelPosition1" layoutX="446.0" layoutY="4712.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="lelPosition0" layoutX="584.0" layoutY="4659.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="125.0" text="0=No involuntary movements or postures observed" wrapText="true" />
+            <RadioButton fx:id="lelPosition1" layoutX="584.0" layoutY="4712.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="120.0" text="1=Involuntary movements or postures observed" wrapText="true" />
             <Separator layoutY="4773.0" prefHeight="0.0" prefWidth="714.0" />
             <Label layoutX="13.0" layoutY="4795.0" text="Dystonia Scale: ">
                <font>
@@ -827,6 +1698,32 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
+            <Label layoutX="312.0" layoutY="197.0" prefHeight="25.0" prefWidth="127.0" text="MACS:" />
+            <ComboBox fx:id="MACSCombobox" layoutX="439.0" layoutY="197.0" prefHeight="25.0" prefWidth="82.0">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="" />
+                     <String fx:value="I" />
+                     <String fx:value="II" />
+                     <String fx:value="III" />
+                     <String fx:value="IV" />
+                     <String fx:value="V" />
+                  </FXCollections>
+               </items>
+            </ComboBox>
+            <Label layoutX="311.0" layoutY="228.0" prefHeight="25.0" prefWidth="127.0" text="CFCS:" />
+            <ComboBox fx:id="CFCSComboBox" layoutX="439.0" layoutY="228.0" prefHeight="25.0" prefWidth="82.0">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="" />
+                     <String fx:value="I" />
+                     <String fx:value="II" />
+                     <String fx:value="III" />
+                     <String fx:value="IV" />
+                     <String fx:value="V" />
+                  </FXCollections>
+               </items>
+            </ComboBox>
                 </Pane>
             </ScrollPane>
         </Tab>
