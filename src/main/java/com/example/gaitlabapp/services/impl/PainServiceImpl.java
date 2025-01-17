@@ -13,8 +13,8 @@ import java.util.Optional;
 public class PainServiceImpl implements PainService {
     private PainRepo painRepo;
     @Override
-    public Optional<IPainModel> save(IPainModel painModel) {
-        return Optional.of(painRepo.save(painModel));
+    public IPainModel save(IPainModel painModel) {
+        return painRepo.save(painModel);
     }
 
     @Override

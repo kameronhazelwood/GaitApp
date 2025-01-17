@@ -5,6 +5,9 @@ import com.example.gaitlabapp.repo.PatientRepo;
 import com.example.gaitlabapp.services.PatientService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.IOException;
 import java.util.List;
 
 import java.util.Optional;
@@ -38,7 +41,22 @@ public class PatientServiceImpl implements PatientService {
     public List<IPatientModel> findAll() {
         return repo.findAll();
     }
-//    @Override
+
+    private final String FILE_PATH = "user.home";
+    @Override
+    public String uploadFileToDirectory(MultipartFile file) throws IOException {
+        String filePath = FILE_PATH+file.getOriginalFilename();
+
+        return filePath;
+
+    }
+
+    @Override
+    public IPatientModel findByImagePath(String imagePath) {
+        return null;
+    }
+
+    //    @Override
 //    public IPatientModel findByPatientId(Integer patientId) { return repo.findByPatientId(patientId); }
     @Override
     public void delete(Long id) {

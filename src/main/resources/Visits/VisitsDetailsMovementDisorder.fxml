@@ -484,7 +484,7 @@
                     </items>
                     </ComboBox>
                     <Label layoutX="343.0" layoutY="702.0" text="37.5 - 45.7" />
-                    <TextField fx:id="StregHipExtR" layoutX="431.0" layoutY="683.0" prefHeight="20.0" prefWidth="75.0" />
+                    <TextField fx:id="StregHipAbdR" layoutX="431.0" layoutY="683.0" prefHeight="20.0" prefWidth="75.0" />
                     <ComboBox fx:id="hipAbdRS" layoutX="439.0" layoutY="710.0" prefHeight="19.0" prefWidth="60.0" promptText=" ">
                     <items>
                         <FXCollections fx:factory="observableArrayList">
@@ -497,7 +497,7 @@
                         </FXCollections>
                     </items>
                     </ComboBox>
-                    <TextField fx:id="StregHipExtL" layoutX="538.0" layoutY="683.0" prefHeight="20.0" prefWidth="75.0" />
+                    <TextField fx:id="StregHipAbdL" layoutX="538.0" layoutY="683.0" prefHeight="20.0" prefWidth="75.0" />
                     <ComboBox fx:id="hipAbdLS" layoutX="545.0" layoutY="710.0" prefHeight="19.0" prefWidth="60.0" promptText=" ">
                     <items>
                         <FXCollections fx:factory="observableArrayList">
@@ -1669,11 +1669,11 @@
             <Separator layoutY="5022.0" prefHeight="0.0" prefWidth="737.0" />
             <Label layoutX="2.0" layoutY="5032.0" prefHeight="103.0" prefWidth="137.0" text="Mouth: signs of dystonia of the mouth include: grimacing, clenched or deviated jaw, forced open mouth, and/or forceful tongue thrusting" wrapText="true" />
             <RadioButton fx:id="mouth0" layoutX="187.0" layoutY="5030.0" mnemonicParsing="false" text="0=Absence of mouth dystonia" />
-            <RadioButton fx:id="mouth1" layoutX="187.0" layoutY="5049.0" mnemonicParsing="false" text="1=Slight. Pulling less than 10% of the time and does not interfere with speech and/or feeding" />
-            <RadioButton fx:id="mouth2" layoutX="187.0" layoutY="5066.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="537.0" text="2=Mild. Dystonia less than 50% of the time and does not interfere with speech and/or feeding" wrapText="true" />
-            <RadioButton fx:id="mouth3" layoutX="187.0" layoutY="5098.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="515.0" text="3=Moderate. Dystonia more than 50% of the time, and/or dystonia that interferes with speech and/or feeding" wrapText="true" />
-            <RadioButton fx:id="mouth4" layoutX="187.0" layoutY="5129.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="515.0" text="4=Severe. Dystonia more than 50% of the time, and/or dystonia that prevents speech and/or feeding" wrapText="true" />
-            <RadioButton fx:id="mouthUnable" layoutX="187.0" layoutY="5152.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="515.0" text="*=Unable to assess mouth movements" wrapText="true" />
+            <RadioButton fx:id="mounth1" layoutX="187.0" layoutY="5049.0" mnemonicParsing="false" text="1=Slight. Pulling less than 10% of the time and does not interfere with speech and/or feeding" />
+            <RadioButton fx:id="mounth2" layoutX="187.0" layoutY="5066.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="537.0" text="2=Mild. Dystonia less than 50% of the time and does not interfere with speech and/or feeding" wrapText="true" />
+            <RadioButton fx:id="mounth3" layoutX="187.0" layoutY="5098.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="515.0" text="3=Moderate. Dystonia more than 50% of the time, and/or dystonia that interferes with speech and/or feeding" wrapText="true" />
+            <RadioButton fx:id="mounth4" layoutX="187.0" layoutY="5129.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="515.0" text="4=Severe. Dystonia more than 50% of the time, and/or dystonia that prevents speech and/or feeding" wrapText="true" />
+            <RadioButton fx:id="mounthUnable" layoutX="187.0" layoutY="5152.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="515.0" text="*=Unable to assess mouth movements" wrapText="true" />
             <Separator layoutY="5189.0" prefHeight="0.0" prefWidth="737.0" />
             <Label layoutX="2.0" layoutY="5207.0" prefHeight="103.0" prefWidth="137.0" text="Neck: signs of dystonia of the neck include: pulling of the neck into any plane of motion: extension, flexion, lateral flexion or rotation" wrapText="true" />
             <RadioButton fx:id="neck0" layoutX="187.0" layoutY="5193.0" mnemonicParsing="false" text="0=Absence of neck dystonia" />
@@ -1917,7 +1917,7 @@
                         <Separator layoutY="666.0" prefHeight="3.0" prefWidth="783.0" />
                         <Separator blendMode="EXCLUSION" layoutX="3.0" layoutY="53.0" prefHeight="3.0" prefWidth="783.0" />
                         <Button fx:id="comSideNav" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="126.0" text="View Compendium " />
-                        <Button layoutX="620.0" layoutY="66.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="117.0" text="Set Dates" />
+                        <Button fx:id="setDates" onAction="#setDates" layoutX="620.0" layoutY="66.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="117.0" text="Set Dates" />
                         <Label layoutX="565.0" layoutY="100.0" text="Current Comparison:" />
                         <Text layoutX="716.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                         <Button fx:id="interpSideNav1" layoutX="148.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="126.0" text="View Interpretation " />

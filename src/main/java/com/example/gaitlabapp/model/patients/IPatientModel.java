@@ -2,10 +2,9 @@ package com.example.gaitlabapp.model.patients;
 
 import jakarta.persistence.*;
 import javafx.beans.property.StringProperty;
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import lombok.Builder;
+
 import java.util.Set;
 
 
@@ -14,6 +13,8 @@ import java.util.Set;
 @NoArgsConstructor(force = true)
 @Data
 @Table(name = "patients")
+
+
 public class IPatientModel {
 
     @Id
@@ -26,6 +27,9 @@ public class IPatientModel {
     @Column(name = "last_name")
     @Setter
     private String lastName;
+    @Column(name = "images")
+    @Setter
+    private String imagePath;
     @Column(name = "preffered_first_name")
     @Setter
     private String preferredFirstName;
@@ -70,6 +74,8 @@ public class IPatientModel {
         this.lastName = s1;
         this.mrn = s2;
     }
+
+
 
 //    public IPatientModel(Integer patientID, String firstName, String lastName, String preferredFirstName, String mrn, String formerLastName, String address, String gender, String dob, String comments, String state, String genDiagnosis) {
 //        this.patientID = patientID;

@@ -125,6 +125,7 @@ public class VisitDetailsGaitController implements Initializable {
     public ComboBox<String> legLengthLP;
     public ComboBox<String> kneeVarusRP;
     public ComboBox<String> kneeVarusLP;
+    public Button setDatesVisitGait;
 
 
     String gmfcsOptions[] = {"I", "II", "III", "IV", "V"};
@@ -1646,9 +1647,20 @@ public class VisitDetailsGaitController implements Initializable {
         stage1.setScene(popUp.getScene());
         stage1.show();
     }
-
     public void onGaitVisitSave(ActionEvent event) {
+        /*
+        TODO - write up the onsave for the gait values
+         */
+    }
 
+    public void onSetDatesVisitGait(ActionEvent event) throws IOException {
+        Parent popUp;
+        popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Wizards/SetDatesWizard.fxml")));
+        Stage stage1 = new Stage();
+        stage1.setTitle("Set Dates:  ");
+        stage1.setScene(new Scene(popUp, 900, 680));
+        stage1.setScene(popUp.getScene());
+        stage1.show();
     }
 }
 

@@ -15,5 +15,6 @@ public interface PatientRepo extends JpaRepository<IPatientModel, String> {
    // IPatientModel findByPatientId(Integer patientId);
     List<IPatientModel> findAll();
     IPatientModel findByMrn(String mrn);
+    IPatientModel findByImageName(String imagePath);
 //    IPatientModel findByPatientId(Integer patientId);
 }

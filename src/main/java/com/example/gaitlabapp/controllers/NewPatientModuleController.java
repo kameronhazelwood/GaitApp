@@ -37,8 +37,11 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.scheduling.config.Task;
 import org.springframework.stereotype.Component;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.*;
 import java.util.Objects;
 import java.util.Optional;
@@ -112,11 +115,72 @@ public class NewPatientModuleController implements Initializable {
                 IPatientModel patient = new IPatientModel();
                 patient.setFirstName(fName.getText());
                 patient.setLastName(lName.getText());
+                System.out.println(lName.getText());
                 patient.setDob(dob.getText());
                 patient.setMrn(mrn.getText());
                 patient.setFormerLastName(formerLName.getText());
                 patient.setPreferredFirstName(preferredName.getText());
+
+
+
+
+                // Specify the Directory Name
+                String directoryName = fName.getText() + ", " + lName.getText()+ ", " + mrn.getText();
+                String pngFiles = "PNG Files";
+                String imagesName = "Patient Photos";
+                String dataValues = "Data";
+
+                // Address of Current Directory
+                Path currentDirectory = Paths.get("C:\\dev\\GaitApp\\PatientDocuments");
+
+                // Specify the path of the directory to be created
+                String directoryPath = currentDirectory + File.separator + directoryName;
+                String pngFilesPath = directoryPath + File.separator + pngFiles;
+                String imagesPath = directoryPath + File.separator + imagesName;
+                String dataPath = directoryPath + File.separator + dataValues;
+
+                // Create a File object representing the directory
+                File directory = new File(directoryPath);
+                File pngDirectory = new File(pngFilesPath);
+                File imagesDirectory = new File(imagesPath);
+                File dataDirectory =  new File(dataPath);
+
+                // Attempt to create the directory
+                boolean directoryCreated = directory.mkdir();
+                boolean pngDirectoryCreated = pngDirectory.mkdir();
+                boolean imagesDirectoryCreated = imagesDirectory.mkdir();
+                boolean dataDirectoryCreated = dataDirectory.mkdir();
+
+                if (directoryCreated) {
+                    System.out.println("Directory created successfully at: " + directoryCreated);
+                    System.out.println(directoryName);
+                } else {
+                    System.out.println("Failed to create directory. It may already exist at: " + directoryCreated);
+                }
+
+                if (pngDirectoryCreated) {
+                    System.out.println("Directory created successfully at: " + pngDirectoryCreated);
+                    System.out.println(directoryName);
+                } else {
+                    System.out.println("Failed to create directory. It may already exist at: " + pngDirectoryCreated);
+                }
+
+                if (imagesDirectoryCreated) {
+                    System.out.println("Directory created successfully at: " + imagesDirectoryCreated);
+                    System.out.println(directoryName);
+                } else {
+                    System.out.println("Failed to create directory. It may already exist at: " + imagesDirectoryCreated);
+                }
+
+                if (dataDirectoryCreated) {
+                    System.out.println("Directory created successfully at: " + dataDirectoryCreated);
+                    System.out.println(directoryName);
+                } else {
+                    System.out.println("Failed to create directory. It may already exist at: " + dataDirectoryCreated);
+                }
+
                 patientService.save(patient);
+
             }else {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Required Fields. ");
@@ -128,6 +192,8 @@ public class NewPatientModuleController implements Initializable {
         } catch (Throwable t) {
             t.printStackTrace();
         }
+
+
     }
 
     public void clearFields() {

@@ -13,8 +13,8 @@ import java.util.Optional;
 public class ToneServiceImpl implements ToneService {
     private ToneRepo toneRepo;
     @Override
-    public Optional<IToneModel> save(IToneModel toneModel) {
-        return Optional.of(toneRepo.save(toneModel));
+    public IToneModel save(IToneModel toneModel) {
+        return toneRepo.save(toneModel);
     }
 
     @Override

@@ -1,5 +1,7 @@
 package com.example.gaitlabapp.controllers.Visits;
 
+import com.example.gaitlabapp.Launcher;
+import com.example.gaitlabapp.controllers.PatientModuleController;
 import com.example.gaitlabapp.model.forms.IPainModel;
 import com.example.gaitlabapp.model.forms.IPromModel;
 import com.example.gaitlabapp.model.forms.IToneModel;
@@ -8,15 +10,23 @@ import com.example.gaitlabapp.services.PromService;
 import com.example.gaitlabapp.services.ToneService;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -24,6 +34,16 @@ import java.util.ResourceBundle;
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 @RequiredArgsConstructor
 public class VisitsDetailsMovementDisorder implements Initializable {
+    public TextField GAITRFL;
+    public TextField GAITRFW;
+    public TextField GAITLFL;
+    public TextField GAITLFW;
+    public RadioButton GAITAS1;
+    public RadioButton GAITAS2;
+    public RadioButton GAITAS3;
+    public RadioButton GAITAS4;
+    public RadioButton GAITAS5;
+    public RadioButton GAITAS6;
     public TextField PROMHipR;
     public TextField PROMHipL;
     public TextField StrenHipFlexR;
@@ -133,6 +153,93 @@ public class VisitsDetailsMovementDisorder implements Initializable {
     public TextField freqOfPain;
     public TextField durOfPain;
     public Button MovementDisSave;
+    public RadioButton uerDesignated0;
+    public RadioButton uerDesignated1;
+    public RadioButton lerDesignated0;
+    public RadioButton lerDesignated1;
+    public RadioButton uelDesignated0;
+    public RadioButton uelDesignated1;
+    public RadioButton lelDesignated0;
+    public RadioButton lelDesignated1;
+    public RadioButton uerPurposeful0;
+    public RadioButton uerPurposeful1;
+    public RadioButton lerPurposeful0;
+    public RadioButton lerPurposeful1;
+    public RadioButton uelPurposeful0;
+    public RadioButton uelPurposeful1;
+    public RadioButton lelPurposeful0;
+    public RadioButton lelPurposeful1;
+    public RadioButton uerStretch0;
+    public RadioButton uerStretch1;
+    public RadioButton lerStretch0;
+    public RadioButton lerStretch1;
+    public RadioButton uelStretch0;
+    public RadioButton uelStretch1;
+    public RadioButton lelStretch0;
+    public RadioButton lelStretch1;
+    public RadioButton uerSpastic0;
+    public RadioButton uerSpastic1;
+    public RadioButton lerSpastic0;
+    public RadioButton lerSpastic1;
+    public RadioButton uelSpastic0;
+    public RadioButton uelSpastic1;
+    public RadioButton lelSpastic0;
+    public RadioButton lelSpastic1;
+    public RadioButton uerJoint0;
+    public RadioButton uerJoint1;
+    public RadioButton lerJoint0;
+    public RadioButton lerJoint1;
+    public RadioButton uelJoint0;
+    public RadioButton uelJoint1;
+    public RadioButton lelJoint0;
+    public RadioButton lelJoint1;
+    public RadioButton uerTone0;
+    public RadioButton uerTone1;
+    public RadioButton lerTone0;
+    public RadioButton lerTone1;
+    public RadioButton uelTone0;
+    public RadioButton uelTone1;
+    public RadioButton lelTone0;
+    public RadioButton lelTone1;
+    public RadioButton uerPosition0;
+    public RadioButton uerPosition1;
+    public RadioButton lerPosition0;
+    public RadioButton lerPosition1;
+    public RadioButton uelPosition0;
+    public RadioButton uelPosition1;
+    public RadioButton lelPosition0;
+    public RadioButton lelPosition1;
+    public RadioButton mounth1;
+    public RadioButton mounth2;
+    public RadioButton mounth3;
+    public RadioButton mounth4;
+    public RadioButton mounthUnable;
+    public TextField date;
+    public TextField aptTime;
+    public TextField aptAttended;
+    public TextField aptStartTime;
+    public TextField aptStopTime;
+    public TextField aptDate;
+    public TextField aptVisitType;
+    public TextField aptSubType;
+    public TextField dateToEpic;
+    public TextField aptDateProcessed;
+    public TextField aptDiagnosis;
+    public TextField aptReason;
+    public TextField aptComment;
+    public TextField interpDate;
+    public TextField aptPT;
+    public TextField aptMd;
+    public TextField visitPt;
+    public TextField visitPt2;
+    public TextField visitBio;
+    public TextField visitBio2;
+    public TextField aptReferringMd;
+    public TextField aptDateSent;
+    public TextField GAITHeight;
+    public TextField GAITWeight;
+    public TextArea GAITcomments;
+    public Button setDates;
     @Autowired
     PromService promService;
     public CheckBox CL0;
@@ -141,7 +248,7 @@ public class VisitsDetailsMovementDisorder implements Initializable {
     public CheckBox CL3;
     public CheckBox CL4;
     public CheckBox CL5;
-    public  CheckBox CL6;
+    public CheckBox CL6;
     public CheckBox CL7;
     public CheckBox CL8;
     public CheckBox CL9;
@@ -170,9 +277,9 @@ public class VisitsDetailsMovementDisorder implements Initializable {
     public CheckBox HL10;
 
 
-    public  ComboBox<String> FMS5M;
-    public  ComboBox<String> FMS50M;
-    public  ComboBox<String> FMS500M;
+    public ComboBox<String> FMS5M;
+    public ComboBox<String> FMS50M;
+    public ComboBox<String> FMS500M;
     public ComboBox<String> GMFCSCombo;
     public ComboBox<String> CFCSComboBox;
     public ComboBox<String> MACSCombobox;
@@ -329,7 +436,6 @@ public class VisitsDetailsMovementDisorder implements Initializable {
     PainService painService;
 
 
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         /*
@@ -448,7 +554,7 @@ public class VisitsDetailsMovementDisorder implements Initializable {
 
     }
 
-    public void OnMovementDisSave(ActionEvent event){
+    public void OnMovementDisSave(ActionEvent event) {
         //Save textfields
         IPromModel promModel = promService.save(new IPromModel());
         promModel.setHipFlexR(PROMHipR.getText());
@@ -552,121 +658,547 @@ public class VisitsDetailsMovementDisorder implements Initializable {
         toneModel.setDistalMuscleToneL(TdistalL.getText());
         toneModel.setDistalMuscleToneR(TdistalR.getText());
 
-        //Pain
+        //Pain Assessment
         IPainModel painModel = painService.save(new IPainModel());
-        if(PAMNum.isSelected()){
+        if (PAMNum.isSelected()) {
             painModel.setPainAssessmentMethod(PAMNum.getText());
             painService.save(painModel);
         }
-        if(PAMWrong.isSelected()){
+        if (PAMWrong.isSelected()) {
             painModel.setPainAssessmentMethod(PAMWrong.getText());
             painService.save(painModel);
         }
-        if(PAMflacc.isSelected()){
+        if (PAMflacc.isSelected()) {
             painModel.setPainAssessmentMethod(PAMflacc.getText());
             painService.save(painModel);
         }
-        if(AFwb.isSelected()){
+        if (AFwb.isSelected()) {
             painModel.setPainAssessmentMethod(AFwb.getText());
             painService.save(painModel);
         }
-        if(AFstand.isSelected()){
+        if (AFstand.isSelected()) {
             painModel.setPainAssessmentMethod(AFstand.getText());
             painService.save(painModel);
         }
-        if(AFwalk.isSelected()){
+        if (AFwalk.isSelected()) {
             painModel.setPainAssessmentMethod(AFwalk.getText());
             painService.save(painModel);
         }
-        if(AFrun.isSelected()){
+        if (AFrun.isSelected()) {
             painModel.setPainAssessmentMethod(AFrun.getText());
             painService.save(painModel);
         }
-        if(AFadl.isSelected()){
+        if (AFadl.isSelected()) {
             painModel.setPainAssessmentMethod(AFadl.getText());
             painService.save(painModel);
         }
-        if(AFtouch.isSelected()){
+        if (AFtouch.isSelected()) {
             painModel.setPainAssessmentMethod(AFtouch.getText());
             painService.save(painModel);
         }
-        if(AFmovement.isSelected()){
+        if (AFmovement.isSelected()) {
             painModel.setPainAssessmentMethod(AFmovement.getText());
             painService.save(painModel);
         }
-        if(AFother.isSelected()){
+        if (AFother.isSelected()) {
             painModel.setPainAssessmentMethod(AFother.getText());
             painService.save(painModel);
         }
-        if(AIsleep.isSelected()){
+        if (AIsleep.isSelected()) {
             painModel.setPainAssessmentMethod(AIsleep.getText());
             painService.save(painModel);
         }
-        if(AIads.isSelected()){
+        if (AIads.isSelected()) {
             painModel.setPainAssessmentMethod(AIads.getText());
             painService.save(painModel);
         }
-        if(AIschool.isSelected()){
+        if (AIschool.isSelected()) {
             painModel.setPainAssessmentMethod(AIschool.getText());
             painService.save(painModel);
         }
-        if(AIfuncMob.isSelected()){
+        if (AIfuncMob.isSelected()) {
             painModel.setPainAssessmentMethod(AIfuncMob.getText());
             painService.save(painModel);
         }
-        if(AIother.isSelected()){
+        if (AIother.isSelected()) {
             painModel.setPainAssessmentMethod(AIother.getText());
             painService.save(painModel);
         }
-        if(CL0.isSelected()){
+        if (CL0.isSelected()) {
             painModel.setPainAssessmentMethod(CL0.getText());
             painService.save(painModel);
         }
-        if(CL1.isSelected()){
+        if (CL1.isSelected()) {
             painModel.setPainAssessmentMethod(CL1.getText());
             painService.save(painModel);
         }
-        if(CL2.isSelected()){
+        if (CL2.isSelected()) {
             painModel.setPainAssessmentMethod(CL2.getText());
             painService.save(painModel);
         }
-        if(CL3.isSelected()){
+        if (CL3.isSelected()) {
             painModel.setPainAssessmentMethod(CL3.getText());
             painService.save(painModel);
         }
-        if(CL4.isSelected()){
+        if (CL4.isSelected()) {
             painModel.setPainAssessmentMethod(CL4.getText());
             painService.save(painModel);
         }
-        if(CL5.isSelected()){
+        if (CL5.isSelected()) {
             painModel.setPainAssessmentMethod(CL5.getText());
             painService.save(painModel);
         }
-        if(CL6.isSelected()){
+        if (CL6.isSelected()) {
             painModel.setPainAssessmentMethod(CL6.getText());
             painService.save(painModel);
         }
-        if(CL7.isSelected()){
+        if (CL7.isSelected()) {
             painModel.setPainAssessmentMethod(CL7.getText());
             painService.save(painModel);
         }
-        if(CL8.isSelected()){
+        if (CL8.isSelected()) {
             painModel.setPainAssessmentMethod(CL8.getText());
             painService.save(painModel);
         }
-        if(CL9.isSelected()){
+        if (CL9.isSelected()) {
             painModel.setPainAssessmentMethod(CL9.getText());
             painService.save(painModel);
         }
-        if(CL10.isSelected()){
+        if (CL10.isSelected()) {
             painModel.setPainAssessmentMethod(CL10.getText());
             painService.save(painModel);
         }
+        if (LL0.isSelected()) {
+            painModel.setPainAssessmentMethod(LL0.getText());
+            painService.save(painModel);
+        }
+        if (LL1.isSelected()) {
+            painModel.setPainAssessmentMethod(LL1.getText());
+            painService.save(painModel);
+        }
+        if (LL2.isSelected()) {
+            painModel.setPainAssessmentMethod(LL2.getText());
+            painService.save(painModel);
+        }
+        if (LL3.isSelected()) {
+            painModel.setPainAssessmentMethod(LL3.getText());
+            painService.save(painModel);
+        }
+        if (LL4.isSelected()) {
+            painModel.setPainAssessmentMethod(LL4.getText());
+            painService.save(painModel);
+        }
+        if (LL5.isSelected()) {
+            painModel.setPainAssessmentMethod(LL5.getText());
+            painService.save(painModel);
+        }
+        if (LL6.isSelected()) {
+            painModel.setPainAssessmentMethod(LL6.getText());
+            painService.save(painModel);
+        }
+        if (LL7.isSelected()) {
+            painModel.setPainAssessmentMethod(LL7.getText());
+            painService.save(painModel);
+        }
+        if (LL8.isSelected()) {
+            painModel.setPainAssessmentMethod(LL8.getText());
+            painService.save(painModel);
+        }
+        if (LL9.isSelected()) {
+            painModel.setPainAssessmentMethod(LL9.getText());
+            painService.save(painModel);
+        }
+        if (LL10.isSelected()) {
+            painModel.setPainAssessmentMethod(LL10.getText());
+            painService.save(painModel);
+        }
+        if (HL0.isSelected()) {
+            painModel.setPainAssessmentMethod(HL0.getText());
+            painService.save(painModel);
+        }
+        if (HL1.isSelected()) {
+            painModel.setPainAssessmentMethod(HL1.getText());
+            painService.save(painModel);
+        }
+        if (HL2.isSelected()) {
+            painModel.setPainAssessmentMethod(HL2.getText());
+            painService.save(painModel);
+        }
+        if (HL3.isSelected()) {
+            painModel.setPainAssessmentMethod(HL3.getText());
+            painService.save(painModel);
+        }
+        if (HL4.isSelected()) {
+            painModel.setPainAssessmentMethod(HL4.getText());
+            painService.save(painModel);
+        }
+        if (HL5.isSelected()) {
+            painModel.setPainAssessmentMethod(HL5.getText());
+            painService.save(painModel);
+        }
+        if (HL6.isSelected()) {
+            painModel.setPainAssessmentMethod(HL6.getText());
+            painService.save(painModel);
+        }
+        if (HL7.isSelected()) {
+            painModel.setPainAssessmentMethod(HL7.getText());
+            painService.save(painModel);
+        }
+        if (HL8.isSelected()) {
+            painModel.setPainAssessmentMethod(HL8.getText());
+            painService.save(painModel);
+        }
+        if (HL9.isSelected()) {
+            painModel.setPainAssessmentMethod(HL9.getText());
+            painService.save(painModel);
+        }
+        if (HL10.isSelected()) {
+            painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+
+        painModel.setLocationOfPain(locOfPain.getText());
+        painModel.setFrequencyOfPain(freqOfPain.getText());
+        painModel.setDurationOfPain(durOfPain.getText());
+
+        //HAT scale
+        if (uerDesignated0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (uerDesignated1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (lerDesignated0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (lerDesignated1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (uelDesignated0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (uelDesignated1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (lelDesignated0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (lelDesignated1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (uerPurposeful0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (uerPurposeful1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (lerPurposeful0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (lerPurposeful1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (uelPurposeful0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (uelPurposeful1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (lelPurposeful0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (lelPurposeful1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (uerStretch0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (uerStretch1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (lerStretch0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (lerStretch1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (uelStretch0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (uelStretch1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (lelStretch0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (lelStretch1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (uerSpastic0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (uerSpastic1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (lerSpastic0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (lerSpastic1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (uelSpastic0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (uelSpastic1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (lelSpastic0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (lelSpastic1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (uerJoint0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (uerJoint1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (lerJoint0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (lerJoint1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (uelJoint0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (uelJoint1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (lelJoint0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (lelJoint1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (uerTone0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (uerTone1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (lerTone0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (lerTone1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (uelTone0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (uelTone1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (lelTone0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (lelTone1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (uerPosition0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (uerPosition1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (lerPosition0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (lerPosition1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (uelPosition0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (uelPosition1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (lelPosition0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (lelPosition1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+
+        //Dystonia Scale
+        if (eye0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (eye1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (eye2.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (eye3.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (eye4.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (eyeUnable.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (mouth0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (mouth1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (mouth2.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (mouth3.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (mouth4.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (mounthUnable.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (neck0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (neck1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (neck2.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (neck3.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (neck4.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (neckUnable.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (trunk0.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (trunk1.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (trunk2.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (trunk3.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (trunk4.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+        if (trunkUnable.isSelected()) {
+            //painModel.setPainAssessmentMethod(HL10.getText());
+            painService.save(painModel);
+        }
+
+        //Visit details information
 
 
+    }
 
-
-
+    public void setDates(ActionEvent event) throws IOException {
+        Parent popUp;
+        popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Interpretation/GAIT/GenerateGAITInterpretation.fxml")));
+        Stage stage1 = new Stage();
+        popUp.getStylesheets().add(Objects.requireNonNull(Launcher.class.getResource("/styles.css")).toExternalForm());
+        stage1.setTitle("Patient Interpretation");
+        stage1.setScene(new Scene(popUp, 900, 680));
+        stage1.setScene(popUp.getScene());
+        stage1.show();
     }
 
     //TODO

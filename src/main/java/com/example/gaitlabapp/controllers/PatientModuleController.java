@@ -44,8 +44,12 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Objects;
 import java.util.ResourceBundle;
 import java.util.function.Predicate;
@@ -969,6 +973,17 @@ public class PatientModuleController implements Initializable {
         Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
         Parent root = loader.load();
         NewPatientModuleController newPatientModuleController = loader.getController();
+
+//        File f  = new File("user.home");
+//        try {
+//            if(f.mkdirs()){
+//                System.out.println("Directory Created");
+//            } else{
+//                System.out.println("Directory not ");
+//            }
+//        } catch (Exception e ){
+//            e.printStackTrace();
+//        }
 
 
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

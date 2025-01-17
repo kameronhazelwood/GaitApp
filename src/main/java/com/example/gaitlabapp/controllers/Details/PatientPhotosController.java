@@ -26,12 +26,14 @@ public class PatientPhotosController {
     public Button addNewButton;
     public Pane pane;
     public ImageView imageview1;
+
     @FXML
     public ListView<Image> photoListView;
 
     private static final Path IMAGES_FOLDER = Paths.get(
             System.getProperty("user.home"), "Images"
     );
+
 
     @FXML
     public void initialize() throws IOException{
@@ -51,8 +53,7 @@ public class PatientPhotosController {
         watchFilesThread.start();
 
         photoListView.getSelectionModel().selectedItemProperty();
-        photoListView.setCellFactory( p -> new ListCell<>() {
-            @Override
+        photoListView.setCellFactory( p -> new ListCell<Image>() {
             protected void updateItem(Image image, boolean empty) {
                 super.updateItem(image, empty);
                 if (empty || image == null) {

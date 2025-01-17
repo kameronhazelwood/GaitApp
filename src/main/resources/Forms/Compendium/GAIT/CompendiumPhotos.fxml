@@ -1,49 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-
 
 <ScrollPane xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Compendium.CompendiumPhotoController">
    <content>
       <AnchorPane fx:id="anchorPane" prefHeight="655.0" prefWidth="658.0">
-          <GridPane gridLinesVisible="true" layoutX="3.0" layoutY="79.0" prefHeight="214.0" prefWidth="601.0">
-              <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="285.33331298828125" minWidth="10.0" prefWidth="198.66666666666663" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.33334350585938" minWidth="10.0" prefWidth="192.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.33334350585938" minWidth="10.0" prefWidth="192.0" />
-              </columnConstraints>
-              <rowConstraints>
-                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-              <ImageView fx:id="photoImageView2" fitHeight="185.0" fitWidth="201.0" onDragDetected="#imageViewDragDetected" onDragDone="#imageViewDraggedOn" onDragDropped="#imageViewDragDropped" onDragOver="#imageViewDragOver" pickOnBounds="true" preserveRatio="true" />
-              <ImageView fx:id="photoImageView4" fitHeight="173.0" fitWidth="191.0" onDragDetected="#imageViewDragDetected1" onDragDone="#imageViewDraggedOn1" onDragDropped="#imageViewDragDropped1" onDragOver="#imageViewDragOver1" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
-              <ImageView fx:id="photoImageView6" fitHeight="168.0" fitWidth="200.0" onDragDetected="#imageViewDragDetected5" onDragDone="#imageViewDraggedOn5" onDragDropped="#imageViewDragDropped5" onDragOver="#imageViewDragOver5" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
-          </GridPane>
-          <GridPane gridLinesVisible="true" layoutX="4.0" layoutY="364.0" prefHeight="249.0" prefWidth="601.0">
-              <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="199.9999796549479" minWidth="10.0" prefWidth="192.66668701171875" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.33331298828125" minWidth="10.0" prefWidth="198.33331298828125" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.33331298828125" minWidth="10.0" prefWidth="198.33331298828125" />
-              </columnConstraints>
-              <rowConstraints>
-                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-              <ImageView fx:id="photoImageView" fitHeight="176.0" fitWidth="189.0" onDragDetected="#imageViewDragDetected" onDragDone="#imageViewDraggedOn" onDragDropped="#imageViewDragDropped" onDragOver="#imageViewDragOver" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
-              <ImageView fx:id="photoImageView1" fitHeight="184.0" fitWidth="187.0" onDragDetected="#imageViewDragDetected1" onDragDone="#imageViewDraggedOn1" onDragDropped="#imageViewDragDropped1" onDragOver="#imageViewDragOver1" pickOnBounds="true" preserveRatio="true" />
-              <ImageView fx:id="photoImageView5" fitHeight="176.0" fitWidth="190.0" onDragDetected="#imageViewDragDetected5" onDragDone="#imageViewDraggedOn5" onDragDropped="#imageViewDragDropped5" onDragOver="#imageViewDragOver5" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
-          </GridPane>
           <Label layoutX="70.0" layoutY="49.0" text="Photo 1" />
           <Label layoutX="64.0" layoutY="339.0" text="Photo 1" />
           <Label layoutX="270.0" layoutY="49.0" text="Photo 2" />
-          <Label layoutX="282.0" layoutY="339.0" text="Photo 2" />
-          <Label layoutX="471.0" layoutY="49.0" text="Photo 3" />
-          <Label layoutX="471.0" layoutY="339.0" text="Photo 3" />
+          <Label layoutX="293.0" layoutY="339.0" text="Photo 2" />
+          <Label layoutX="513.0" layoutY="49.0" text="Photo 3" />
+          <Label layoutX="496.0" layoutY="339.0" text="Photo 3" />
+         <ListView fx:id="photoListView" layoutX="12.0" layoutY="70.0" prefHeight="202.0" prefWidth="200.0" />
+         <ImageView fx:id="photoImageView" fitHeight="189.0" fitWidth="194.0" layoutX="12.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true" />
+         <ListView fx:id="photoListView1" layoutX="232.0" layoutY="71.0" prefHeight="200.0" prefWidth="200.0" />
+         <ListView fx:id="photoListView2" layoutX="444.0" layoutY="76.0" prefHeight="200.0" prefWidth="200.0" />
+         <ListView fx:id="photoListView3" layoutX="22.0" layoutY="377.0" prefHeight="200.0" prefWidth="200.0" />
+         <ListView fx:id="photoListView4" layoutX="229.0" layoutY="377.0" prefHeight="200.0" prefWidth="200.0" />
+         <ListView fx:id="photoListView5" layoutX="434.0" layoutY="377.0" prefHeight="200.0" prefWidth="200.0" />
+         <ImageView fx:id="photoImageView4" fitHeight="150.0" fitWidth="200.0" layoutX="22.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true" />
+         <ImageView fx:id="photoImageView5" fitHeight="150.0" fitWidth="200.0" layoutX="229.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true" />
+         <ImageView fx:id="photoImageView6" fitHeight="150.0" fitWidth="200.0" layoutX="434.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true" />
+         <ImageView fx:id="photoImageView1" fitHeight="150.0" fitWidth="200.0" layoutX="235.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true" />
+         <ImageView fx:id="photoImageView2" fitHeight="150.0" fitWidth="200.0" layoutX="444.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true" />
       </AnchorPane>
    </content>
 </ScrollPane>

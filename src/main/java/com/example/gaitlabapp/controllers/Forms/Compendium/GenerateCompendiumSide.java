@@ -55,28 +55,28 @@ public class GenerateCompendiumSide {
     @FXML
     void adolescentParent(MouseEvent event) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("Forms/Compendium/GAIT/CompendiumAdolescentParent.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Compendium/GAIT/CompendiumAdolescentParent.fxml")));
         bp.setCenter(root);
     }
 
     @FXML
     void adolescentSelf(MouseEvent event) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("Forms/Compendium/GAIT/CompendiumAdolescentSelf.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Compendium/GAIT/CompendiumAdolescentSelf.fxml")));
         bp.setCenter(root);
     }
 
     @FXML
     void infoPage(MouseEvent event) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("Forms/Compendium/GAIT/CompendiumInfoPage.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Compendium/GAIT/CompendiumInfoPage.fxml")));
         bp.setCenter(root);
     }
 
     @FXML
     void lowerExam(MouseEvent event) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("Forms/Compendium/GAIT/CompendiumLower.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Compendium/GAIT/CompendiumLower.fxml")));
         bp.setCenter(root);
     }
 
@@ -84,31 +84,31 @@ public class GenerateCompendiumSide {
 
     public void ptHistory(MouseEvent mouseEvent) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("Forms/Compendium/GAIT/CompendiumPtHistory.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Compendium/GAIT/CompendiumPtHistory.fxml")));
         bp.setCenter(root);
     }
 
     public void questionnaire(MouseEvent mouseEvent) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("Forms/Compendium/GAIT/CompendiumQuestionnaire.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Compendium/GAIT/CompendiumQuestionnaire.fxml")));
         bp.setCenter(root);
     }
 
     public void png(MouseEvent mouseEvent) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("Forms/Compendium/GAIT/CompendiumPng.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Compendium/GAIT/CompendiumPng.fxml")));
         bp.setCenter(root);
     }
 
     public void photos(MouseEvent mouseEvent) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("Forms/Compendium/GAIT/CompendiumPhotos.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Compendium/GAIT/CompendiumPhotos.fxml")));
         bp.setCenter(root);
     }
 
     public void videos(MouseEvent mouseEvent) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("Details/Videos.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Details/Videos.fxml")));
         bp.setCenter(root);
     }
 }

@@ -14,8 +14,8 @@ import java.util.Optional;
 public class PromServiceImpl implements PromService {
     private PromRepo promRepo;
     @Override
-    public Optional<IPromModel> save(IPromModel promModel) {
-        return Optional.of(promRepo.save(promModel));
+    public IPromModel save(IPromModel promModel) {
+        return promRepo.save(promModel);
     }
 
     @Override

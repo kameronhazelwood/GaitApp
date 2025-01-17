@@ -1,16 +1,23 @@
 package com.example.gaitlabapp.controllers.Forms.Compendium;
 
 
+import com.example.gaitlabapp.controllers.NewPatientModuleController;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ListCell;
+import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.*;
 import javafx.scene.layout.AnchorPane;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.URL;
+import java.nio.file.*;
 import java.util.ResourceBundle;
 
 public class CompendiumPhotoController implements Initializable {
@@ -21,10 +28,26 @@ public class CompendiumPhotoController implements Initializable {
     public ImageView photoImageView5;
     public AnchorPane anchorPane;
     public ImageView photoImageView6;
-    public ImageView imageView1;
-    public ImageView imageView2;
-    public ImageView imageView3;
+    @FXML
+    private ListView<Image> photoListView;
 
+    @FXML
+    private ListView<Image> photoListView1;
+
+    @FXML
+    private ListView<Image> photoListView2;
+
+    @FXML
+    private ListView<Image> photoListView3;
+
+    @FXML
+    private ListView<Image> photoListView4;
+
+    @FXML
+    private ListView<Image> photoListView5;
+    NewPatientModuleController newPatientModuleController;
+    Path currentDirectory = Paths.get("C:\\dev\\GaitApp\\PatientDocuments");
+    private static final Path PATIENTS_PHOTOS = Paths.get("C:\\dev\\GaitApp\\PatientDocuments");
 
 
     Image bodyPosterior = new Image(String.valueOf(getClass().getResource("/TestPhotos/99999999_081823_body posterior.jpg")));
@@ -35,21 +58,22 @@ public class CompendiumPhotoController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        ImageView imageView1 = new ImageView(bodyPosterior);
+
+        ImageView imageView1 = new ImageView();
         imageView1.setFitWidth(180);
         imageView1.setFitHeight(180);
 
         imageView1.setX(210);
         imageView1.setY(95);
 
-        ImageView imageView2 = new ImageView(bodyAnterior);
+        ImageView imageView2 = new ImageView();
         imageView2.setFitWidth(180);
         imageView2.setFitHeight(180);
 
         imageView2.setY(95);
         imageView2.setX(13);
 
-        ImageView imageView3 = new ImageView(feetPosterior);
+        ImageView imageView3 = new ImageView();
         imageView3.setFitWidth(180);
         imageView3.setFitHeight(180);
 
@@ -60,6 +84,65 @@ public class CompendiumPhotoController implements Initializable {
         anchorPane.getChildren().add(imageView2);
         anchorPane.getChildren().add(imageView3);
 
+
+        if (!Files.exists(PATIENTS_PHOTOS)) {
+            try {
+                Files.createDirectory(PATIENTS_PHOTOS);
+                System.out.println(PATIENTS_PHOTOS);
+                System.out.println(Files.createDirectory(PATIENTS_PHOTOS));
+
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        Thread watchFilesThread = new Thread(this::onWatchListener);
+        watchFilesThread.setDaemon(true);
+        watchFilesThread.start();
+
+        photoListView.getSelectionModel().selectedItemProperty();
+        photoListView.setCellFactory(p -> new ListCell<Image>() {
+            protected void updateItem(Image image, boolean empty) {
+                super.updateItem(image, empty);
+                if (empty || image == null) {
+                    setText(null);
+                    setGraphic(null);
+                } else {
+                    photoImageView.setImage(image);
+                    setGraphic(photoImageView);
+                    //setText(image.getUrl());
+                }
+            }
+        });
+
+    }
+
+    public void onWatchListener() {
+        try {
+            WatchService watchService = FileSystems.getDefault().newWatchService();
+            PATIENTS_PHOTOS.register(watchService, StandardWatchEventKinds.ENTRY_CREATE);
+            boolean done = false;
+            while (!done) {
+                WatchKey key = watchService.take();
+                System.out.println("key");
+                for (WatchEvent<?> event : key.pollEvents()) {
+                    System.out.println("Event");
+                    if (event.kind().type() == Path.class) {
+                        Path path = ((WatchEvent<Path>) event).context();
+                        Platform.runLater(() -> addImage(PATIENTS_PHOTOS.resolve(path)));
+                    }
+                    done = !key.reset();
+                }
+            }
+        } catch (Exception exc) {
+            exc.printStackTrace();
+        }
+    }
+
+    private void addImage(Path imagePath) {
+        Image image = new Image(imagePath.toUri().toString());
+        photoListView.getItems().add(image);
+        photoListView.getSelectionModel().select(image);
     }
 
     @FXML
@@ -70,6 +153,7 @@ public class CompendiumPhotoController implements Initializable {
         }
         event.consume();
     }
+
     @FXML
     void imageViewDragDropped1(DragEvent event) {
         Dragboard dragboard = event.getDragboard();
@@ -82,6 +166,7 @@ public class CompendiumPhotoController implements Initializable {
         }
         event.consume();
     }
+
     @FXML
     void imageViewDragDropped2(DragEvent event) {
         Dragboard dragboard = event.getDragboard();
@@ -94,6 +179,7 @@ public class CompendiumPhotoController implements Initializable {
         }
         event.consume();
     }
+
     @FXML
     void imageViewDragDropped4(DragEvent event) {
         Dragboard dragboard = event.getDragboard();
@@ -106,6 +192,7 @@ public class CompendiumPhotoController implements Initializable {
         }
         event.consume();
     }
+
     @FXML
     void imageViewDragDropped5(DragEvent event) {
         Dragboard dragboard = event.getDragboard();
@@ -114,6 +201,7 @@ public class CompendiumPhotoController implements Initializable {
         }
         event.consume();
     }
+
     @FXML
     void imageViewDragDropped6(DragEvent event) {
         Dragboard dragboard = event.getDragboard();
@@ -136,6 +224,7 @@ public class CompendiumPhotoController implements Initializable {
 
         event.consume();
     }
+
     @FXML
     void imageViewDragOver1(DragEvent event) {
         Dragboard dragboard = event.getDragboard();
@@ -145,6 +234,7 @@ public class CompendiumPhotoController implements Initializable {
 
         event.consume();
     }
+
     @FXML
     void imageViewDragOver2(DragEvent event) {
         Dragboard dragboard = event.getDragboard();
@@ -154,6 +244,7 @@ public class CompendiumPhotoController implements Initializable {
 
         event.consume();
     }
+
     @FXML
     void imageViewDragOver4(DragEvent event) {
         Dragboard dragboard = event.getDragboard();
@@ -163,6 +254,7 @@ public class CompendiumPhotoController implements Initializable {
 
         event.consume();
     }
+
     @FXML
     void imageViewDragOver5(DragEvent event) {
         Dragboard dragboard = event.getDragboard();
@@ -172,6 +264,7 @@ public class CompendiumPhotoController implements Initializable {
 
         event.consume();
     }
+
     @FXML
     void imageViewDragOver6(DragEvent event) {
         Dragboard dragboard = event.getDragboard();
@@ -182,7 +275,7 @@ public class CompendiumPhotoController implements Initializable {
     }
 
     @FXML
-    void imageViewDragDetected(MouseEvent event)  {
+    void imageViewDragDetected(MouseEvent event) {
         Dragboard dragboard = photoImageView.startDragAndDrop(TransferMode.ANY);
         ClipboardContent content = new ClipboardContent();
         content.putImage(photoImageView.getImage());
@@ -198,6 +291,7 @@ public class CompendiumPhotoController implements Initializable {
         dragboard.setContent(content);
         event.consume();
     }
+
     @FXML
     void imageViewDragDetected2(MouseEvent event) {
         Dragboard dragboard = photoImageView2.startDragAndDrop(TransferMode.ANY);
@@ -206,6 +300,7 @@ public class CompendiumPhotoController implements Initializable {
         dragboard.setContent(content);
         event.consume();
     }
+
     @FXML
     void imageViewDragDetected5(MouseEvent event) {
         Dragboard dragboard = photoImageView5.startDragAndDrop(TransferMode.ANY);
@@ -214,6 +309,7 @@ public class CompendiumPhotoController implements Initializable {
         dragboard.setContent(content);
         event.consume();
     }
+
     @FXML
     void imageViewDragDetected6(MouseEvent event) {
         Dragboard dragboard = photoImageView6.startDragAndDrop(TransferMode.ANY);
@@ -222,6 +318,7 @@ public class CompendiumPhotoController implements Initializable {
         dragboard.setContent(content);
         event.consume();
     }
+
     @FXML
     void imageViewDragDetected4(MouseEvent event) {
         Dragboard dragboard = photoImageView4.startDragAndDrop(TransferMode.ANY);
@@ -234,7 +331,7 @@ public class CompendiumPhotoController implements Initializable {
     @FXML
     void imageViewDraggedOn(DragEvent event) {
         Dragboard dragboard = event.getDragboard();
-        if(dragboard.hasImage()){
+        if (dragboard.hasImage()) {
             photoImageView.setImage(dragboard.getImage());
         }
         event.consume();
@@ -243,23 +340,25 @@ public class CompendiumPhotoController implements Initializable {
     @FXML
     void imageViewDraggedOn1(DragEvent event) {
         Dragboard dragboard = event.getDragboard();
-        if (dragboard.hasImage()){
+        if (dragboard.hasImage()) {
             photoImageView1.setImage(dragboard.getImage());
         }
         event.consume();
     }
+
     @FXML
     void imageViewDraggedOn2(DragEvent event) {
         Dragboard dragboard = event.getDragboard();
-        if (dragboard.hasImage()){
+        if (dragboard.hasImage()) {
             photoImageView2.setImage(dragboard.getImage());
         }
         event.consume();
     }
+
     @FXML
     void imageViewDraggedOn5(DragEvent event) {
         Dragboard dragboard = event.getDragboard();
-        if (dragboard.hasImage()){
+        if (dragboard.hasImage()) {
             photoImageView5.setImage(dragboard.getImage());
         }
         event.consume();
@@ -268,15 +367,16 @@ public class CompendiumPhotoController implements Initializable {
     @FXML
     void imageViewDraggedOn4(DragEvent event) {
         Dragboard dragboard = event.getDragboard();
-        if (dragboard.hasImage()){
+        if (dragboard.hasImage()) {
             photoImageView4.setImage(dragboard.getImage());
         }
         event.consume();
     }
+
     @FXML
     void imageViewDraggedOn6(DragEvent event) {
         Dragboard dragboard = event.getDragboard();
-        if (dragboard.hasImage()){
+        if (dragboard.hasImage()) {
             photoImageView6.setImage(dragboard.getImage());
         }
         event.consume();
