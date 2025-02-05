@@ -3,7 +3,7 @@ package com.example.gaitlabapp.model.patients;
 import jakarta.persistence.*;
 import javafx.beans.property.StringProperty;
 import lombok.*;
-import lombok.Builder;
+
 
 import java.util.Set;
 
@@ -27,9 +27,9 @@ public class IPatientModel {
     @Column(name = "last_name")
     @Setter
     private String lastName;
-    @Column(name = "images")
-    @Setter
-    private String imagePath;
+//    @Column(name = "images")
+//    @Setter
+//    private String imagePath;
     @Column(name = "preffered_first_name")
     @Setter
     private String preferredFirstName;
@@ -77,18 +77,18 @@ public class IPatientModel {
 
 
 
-//    public IPatientModel(Integer patientID, String firstName, String lastName, String preferredFirstName, String mrn, String formerLastName, String address, String gender, String dob, String comments, String state, String genDiagnosis) {
-//        this.patientID = patientID;
-//        this.firstName = firstName;
-//        this.lastName = lastName;
-//        this.preferredFirstName = preferredFirstName;
-//        this.mrn = mrn;
-//        this.formerLastName = formerLastName;
-//        this.address = address;
-//        this.gender = gender;
-//        this.dob = dob;
-//        this.comments = comments;
-//        this.state = state;
-//        this.genDiagnosis = genDiagnosis;
-//    }
+    public IPatientModel(Integer patientID, String firstName, String lastName, String preferredFirstName, String mrn, String formerLastName, String address, String gender, String dob, String comments, String state, String genDiagnosis) {
+        this.patientID = patientID;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.preferredFirstName = preferredFirstName;
+        this.mrn = mrn;
+        this.formerLastName = formerLastName;
+        this.address = address;
+        this.gender = gender;
+        this.dob = dob;
+        this.comments = comments;
+        this.state = state;
+        this.genDiagnosis = genDiagnosis;
+    }
 }

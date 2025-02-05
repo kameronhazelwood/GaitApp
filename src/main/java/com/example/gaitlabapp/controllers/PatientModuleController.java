@@ -95,10 +95,11 @@ public class PatientModuleController implements Initializable {
 
 
     ObservableList<IAppointmentModel> initialData() {
-        IAppointmentModel apt1 = new IAppointmentModel(1, "9/11/2024", "9/11/202", "GAIT - Full Diagnostic", "Dr. Smith", GAIT, 2);
+        IAppointmentModel apt1 = new IAppointmentModel(1, "1/21/2025", "9/21/202", "GAIT - Full Diagnostic", "Dr. Smith", GAIT, "",  2);
+        IAppointmentModel apt2 = new IAppointmentModel(1, "1/22/2025", "9/22/202", "GAIT - Full Diagnostic", "Dr. Smith", GAIT, "", 2);
 //        IAppointmentModel apt2 = new IAppointmentModel(2, "", "2/8/2023", "Upper Extremity - Full Diagnostic", "Dr. Smith", UE, 2);
 //        IAppointmentModel apt3 = new IAppointmentModel(3, "", "3/12/2024", "Gait - Foot Evaluation", "Dr. Smith", FOOT, 2);
-        return FXCollections.observableArrayList(apt1);
+        return FXCollections.observableArrayList(apt2, apt1);
     }
 
     @FXML
@@ -458,23 +459,25 @@ public class PatientModuleController implements Initializable {
 
     }
 
+
     public void showDetails(IAppointmentModel appointmentModel) {
         try {
             switch (appointmentModel.getType()) {
                 case GAIT -> {
-                    patientService.findByMrn(mrnTextfield.getText());
-                    Parent popUp;
-                    FXMLLoader fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Visits/VisitDetailsGait.fxml"));
+                    IPatientModel patientModel = new IPatientModel();
+                //    patientService.findByMrn(mrnTextfield.getText());
+                    FXMLLoader fxmlLoader = new FXMLLoader();
+                    fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Visits/VisitDetailsGait.fxml"));
                     fxmlLoader.setControllerFactory(applicationContext::getBean);
+                    Parent popUp = fxmlLoader.load();
                     VisitDetailsGaitController visitDetailsGaitController = fxmlLoader.getController();
 
-                   // visitDetailsGaitController.setAppointmentModel(appointmentModel);
-                    popUp = fxmlLoader.load();
+                    visitDetailsGaitController.setAppointmentModel(appointmentModel);
+                    visitDetailsGaitController.setPatientModel(patientModel);
                     Stage stage1 = new Stage((StageStyle.UTILITY));
                     stage1.initModality(Modality.WINDOW_MODAL);
                     stage1.initOwner(getVisitGaitDetails());
                     stage1.setTitle("GAIT Visit Details:   ");
-                    //height 680 width 800
                     stage1.setScene(new Scene(popUp, 800, 680));
                     stage1.showAndWait();
                 }
@@ -863,7 +866,6 @@ public class PatientModuleController implements Initializable {
         FXMLLoader fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Wizards/AddHealthCondition.fxml"));
         Parent healthPane = fxmlLoader.load();
         AddHealthConditionController addHealthConditionController = fxmlLoader.getController();
-
         addHealthConditionController.setHealthHistory(healthHistoryModel);
 
         Stage addHealthStage = new Stage((StageStyle.UTILITY));
@@ -1080,7 +1082,6 @@ public class PatientModuleController implements Initializable {
         dobTextfield.setText(patient.getDob());
         formerLastName.setText(patient.getFormerLastName());
         commentsTextField.setText(patient.getComments());
-
         patientService.save(patient);
         valueLabel.setText(patient.getMrn() + ",  " + patient.getFirstName() + "  " + patient.getLastName());
         loadUserDetails();

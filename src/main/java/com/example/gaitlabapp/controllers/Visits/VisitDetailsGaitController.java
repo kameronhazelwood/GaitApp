@@ -1,18 +1,18 @@
 package com.example.gaitlabapp.controllers.Visits;
 
 import com.example.gaitlabapp.Launcher;
-import com.example.gaitlabapp.config.Config;
-import com.example.gaitlabapp.controllers.PatientModuleController;
-import com.example.gaitlabapp.model.forms.IGenMarkInfoModel;
+import com.example.gaitlabapp.controllers.Forms.Compendium.CompendiumInfoPageController;
+import com.example.gaitlabapp.controllers.Forms.Compendium.GenerateCompendiumSide;
+import com.example.gaitlabapp.controllers.Wizards.AddBotoxController;
+import com.example.gaitlabapp.controllers.Wizards.AddOrthosisWizard;
+import com.example.gaitlabapp.model.forms.IOrthosisModel;
 import com.example.gaitlabapp.model.patients.IPatientModel;
 import com.example.gaitlabapp.model.visits.IAppointmentModel;
 import com.example.gaitlabapp.services.AptsService;
 import com.example.gaitlabapp.services.GenMarkerService;
-import com.example.gaitlabapp.services.PatientService;
-import javafx.animation.PauseTransition;
-import javafx.beans.property.ObjectProperty;
+import jakarta.persistence.Table;
+import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.beans.property.SimpleObjectProperty;
-import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -23,17 +23,25 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.scene.control.cell.CheckBoxTableCell;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import javafx.util.Duration;
+import javafx.stage.Window;
+import javafx.util.Callback;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+import org.hibernate.annotations.Check;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -43,7 +51,6 @@ import org.springframework.stereotype.Component;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.sql.*;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
@@ -51,6 +58,19 @@ import java.util.ResourceBundle;
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 @RequiredArgsConstructor
 public class VisitDetailsGaitController implements Initializable {
+    public TableView<String> reportsTable;
+    public TableColumn<String, String> test;
+    @FXML
+    public TableColumn<Table, Boolean> aptDateReport;
+    public TableColumn<String, String> aptReasonReport;
+    public Tooltip tooltip;
+    public Button addOrthosis;
+    public TableView<IOrthosisModel> orthosisTable;
+    public TableColumn<IOrthosisModel, String> orthosisColumn;
+    public TableColumn<IOrthosisModel, String> sideColumn;
+    public Button gaitVisitSave;
+    @Autowired
+    ConfigurableApplicationContext applicationContext;
     public ComboBox<String> hipAdbInterpR;
     public ComboBox<String> hipAdbInterpL;
     public TabPane visitTabPane;
@@ -126,6 +146,28 @@ public class VisitDetailsGaitController implements Initializable {
     public ComboBox<String> kneeVarusRP;
     public ComboBox<String> kneeVarusLP;
     public Button setDatesVisitGait;
+    public CheckBox videoGait;
+    public CheckBox videoGait1;
+    public CheckBox GAITKinematics;
+    public CheckBox GAITKinematics1;
+    public CheckBox gaitMultiSegment;
+    public CheckBox gaitMultiSegment1;
+    public CheckBox gaitEMG;
+    public CheckBox gaitEMG1;
+    public CheckBox gaitEMGFine;
+    public CheckBox gaitEMGFine1;
+    public CheckBox GAITPTExam1;
+    public CheckBox GAITPTExam;
+    public CheckBox GAITWalking;
+    public CheckBox GAITWalking1;
+    public CheckBox GAITExercise;
+    public CheckBox GAITExercise1;
+    public CheckBox GAITExerciseWalk;
+    public CheckBox GAITExerciseWalk1;
+    public CheckBox GAITStep;
+    public CheckBox GAITStep1;
+    public CheckBox GAITHistory;
+    public CheckBox GAITHistory1;
 
 
     String gmfcsOptions[] = {"I", "II", "III", "IV", "V"};
@@ -1113,9 +1155,7 @@ public class VisitDetailsGaitController implements Initializable {
     TreeItem<String> kneeJoint = new TreeItem<>("Knee Joint Moments");
     TreeItem<String> ankleJoint = new TreeItem<>("Ankle Joint Moments");
     TreeItem<String> parent2DataRoot = new TreeItem<>("");
-
-    @Autowired
-    ConfigurableApplicationContext applicationContext;
+    private boolean gaitTest = false;
     @Autowired
     private AptsService aptsService;
     @Autowired
@@ -1125,100 +1165,1070 @@ public class VisitDetailsGaitController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        date.setText("9/11/2024");
-        aptTime.setText("12pm");
-        aptStartTime.setText("2pm");
-        aptStopTime.setText("3pm");
-        aptVisitType.setText("GAIT");
-        aptSubType.setText("Full Diagnostic");
+//        date.setText("9/22/2025");
+//        aptTime.setText("12pm");
+//        aptStartTime.setText("2pm");
+//        aptStopTime.setText("3pm");
+//        aptVisitType.setText("GAIT");
+//        aptSubType.setText("Full Diagnostic");
+
+        GMFCSCombo.getItems().addAll(
+                " ",
+                "I",
+                "II",
+                "III",
+                "IV",
+                "V"
+
+        );
+        FMS5M.getItems().addAll(
+                " ",
+                "N",
+                "C",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+        );
+        FMS50M.getItems().addAll(
+                " ",
+                "N",
+                "C",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+        );
+        FMS500M.getItems().addAll(
+                " ",
+                "N",
+                "C",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+        );
+
+        hipRP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        hipLP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        hipRS.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        hipLS.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        hipExtRP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        hipExtLP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        hipExtRS.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        hipExtLS.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        hipAbdRP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        hipAbdLP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        hipAbdRS.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        hipAbdLS.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        hipIntRotRP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        hipIntRotLP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        hipIntRotRS.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        hipIntRotLS.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        hipExtRotRP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        hipExtRotLP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        hipExtRotRS.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        hipExtRotLS.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        ryderRP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        ryderLP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        ryderRS.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        ryderLS.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        kneeExtRP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        kneeExtLP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        kneeExtRS.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        kneeExtLS.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        extLagRP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        extLagLP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        extLagRS.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        extLagLS.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        kneeFlexRP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        kneeFlexLP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        kneeFlexRS.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        kneeFlexLS.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        popAngRP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        popAngLP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        popAngRS.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        popAngLS.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        biPopAngRP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        biPopAngLP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        elyTestRP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        elyTestLP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        dorsiFlexRP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        dorsiFlexRP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        dorsiFlexLP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        dorsiExtRP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        dorsiExtLP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        plantarRP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        plantarRS.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        plantarLS.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        ankleInvRP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        ankleInvLP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        ankleInvRS.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        ankleInvLS.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        ankleEverRP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        ankleEverLP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        ankleEverRS.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        ankleEverLS.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        tmaRP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        tmaRP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        tmaLP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        tfaRP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        ffRP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        ffLP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        calInvRP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        calInvLP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        calEverRP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        kneeVarusRP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        kneeVarusLP.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+
+        illopsoasRInterp.getItems().addAll(
+                " ",
+                "Good",
+                "Fair",
+                "Poor"
+        );
+        illopsoasLInterp.getItems().addAll(
+                " ",
+                "Good",
+                "Fair",
+                "Poor"
+        );
+        gluteMedRInterp.getItems().addAll(
+                " ",
+                "Good",
+                "Fair",
+                "Poor"
+        );
+        gluteMedLInterp.getItems().addAll(
+                " ",
+                "Good",
+                "Fair",
+                "Poor"
+        );
+        hipAddRInterp.getItems().addAll(
+                " ",
+                "Good",
+                "Fair",
+                "Poor"
+        );
+        hipAddLInterp.getItems().addAll(
+                " ",
+                "Good",
+                "Fair",
+                "Poor"
+        );
+        gluteMaxRInterp.getItems().addAll(
+                " ",
+                "Good",
+                "Fair",
+                "Poor"
+        );
+        gluteMaxLInterp.getItems().addAll(
+                " ",
+                "Good",
+                "Fair",
+                "Poor"
+        );
+        quadsRInterp.getItems().addAll(
+                " ",
+                "Good",
+                "Fair",
+                "Poor"
+        );
+        quadsLinterp.getItems().addAll(
+                " ",
+                "Good",
+                "Fair",
+                "Poor"
+        );
+        hamstringRInterp.getItems().addAll(
+                " ",
+                "Good",
+                "Fair",
+                "Poor"
+        );
+        hamstringLinterp.getItems().addAll(
+                " ",
+                "Good",
+                "Fair",
+                "Poor"
+        );
+        antRInterp.getItems().addAll(
+                " ",
+                "Good",
+                "Fair",
+                "Poor"
+        );
+        antLInterp.getItems().addAll(
+                " ",
+                "Good",
+                "Fair",
+                "Poor"
+        );
+        gastroRInterp.getItems().addAll(
+                " ",
+                "Good",
+                "Fair",
+                "Poor"
+        );
+        gastroLInterp.getItems().addAll(
+                " ",
+                "Good",
+                "Fair",
+                "Poor"
+        );
+        postTibRInterp.getItems().addAll(
+                " ",
+                "Good",
+                "Fair",
+                "Poor"
+        );
+        postTibLinterp.getItems().addAll(
+                " ",
+                "Good",
+                "Fair",
+                "Poor"
+        );
+        soleusRinterp.getItems().addAll(
+                " ",
+                "Good",
+                "Fair",
+                "Poor"
+        );
+        soleusLinterp.getItems().addAll(
+                " ",
+                "Good",
+                "Fair",
+                "Poor"
+        );
+        peronRinterp.getItems().addAll(
+                " ",
+                "Good",
+                "Fair",
+                "Poor"
+        );
+        peronLinterp.getItems().addAll(
+                " ",
+                "Good",
+                "Fair",
+                "Poor"
+        );
+        proximalRInterp.getItems().addAll(
+                " ",
+                "Good",
+                "Fair",
+                "Poor"
+        );
+        proximalLinterp.getItems().addAll(
+                " ",
+                "Good",
+                "Fair",
+                "Poor"
+        );
+        distaleRinterp.getItems().addAll(
+                " ",
+                "Good",
+                "Fair",
+                "Poor"
+        );
+        distaleLinterp.getItems().addAll(
+                " ",
+                "Good",
+                "Fair",
+                "Poor"
+        );
+        TillipsoasRinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        TillipsoasLinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        TgluteMaxRinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        TgluteMaxLinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        TaddRinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        TaddLinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        TrecFemRInterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        TrecFemLinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        TrecCatchRinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        TrecCatchRinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        TrecCatchLinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        TvastmedRInterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        TvastmedLinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        ThamstringRinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        ThamstringLinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        TpostTibRInterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        TpostTibLinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        TantRInterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        TantLinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        TgastroRinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        TgastroLinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        TclonusRinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        TclonusLinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        TkneeJerRinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        TkneeJerLinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        RankJerRinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        RankJerLinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        TbabinRinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        TbabinLinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        TproxRinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        TproxLinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        TdistalRinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+        TdistalLinterp.getItems().addAll(
+                " ",
+                "N",
+                "VH",
+                "H",
+                "VL",
+                "L"
+        );
+
+
+
+
+
+
+
+
+
+
+        gaitpics.setSelected(true);
+        gaitpics1.setSelected(true);
+        gaitFootPressure.setSelected(true);
+        gaitFootPressure1.setSelected(true);
+
 
 
 
         /*
-        on saves for visit information
+        report table. first row apt date along with include test checkboxes below
          */
-//        date.textProperty().addListener(new ChangeListener<String>() {
+//        aptDateReport.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Table, Boolean>, ObservableValue<Boolean>>() {
 //            @Override
-//            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-//                IAppointmentModel appointment = aptsService.findByPatientId((Integer.valueOf(patientId.getText())));
-//
+//            public ObservableValue<Boolean> call(TableColumn.CellDataFeatures<Table, Boolean> param) {
+//                return param.getValue().
 //            }
 //        });
 
-        /*
-        GAIT Eval on saves
-         */
-//        GAITHeight.textProperty().addListener((observable, oldValue, newValue) -> {
-//            IGenMarkInfoModel height = genMarkerService.findByPatientId((Integer.valueOf(patientId.getText())));
-//            height.setHeight(Integer.valueOf(GAITHeight.getText()));
-//            genMarkerService.save(height);
-//            System.out.println(GAITHeight);
-//        });
-//        GAITWeight.textProperty().addListener((observable, oldValue, newValue) -> {
-//            IGenMarkInfoModel weight = genMarkerService.findByPatientId((Integer.valueOf(patientId.getText())));
-//            weight.setWeight(Integer.valueOf(GAITWeight.getText()));
-//            genMarkerService.save(weight);
-//        });
-//        GAITRFL.textProperty().addListener((observable, oldValue, newValue) -> {
-//            IGenMarkInfoModel rfl = genMarkerService.findByPatientId((Integer.valueOf(patientId.getText())));
-//            rfl.setRightFootLength(GAITRFL.getText());
-//            genMarkerService.save(rfl);
-//        });
-//        GAITLFL.textProperty().addListener((observable, oldValue, newValue) -> {
-//            IGenMarkInfoModel lfl = genMarkerService.findByPatientId((Integer.valueOf(patientId.getText())));
-//            lfl.setLeftFootLength(GAITLFL.getText());
-//            genMarkerService.save(lfl);
-//        });
-//        GAITRFW.textProperty().addListener((observable, oldValue, newValue) -> {
-//            IGenMarkInfoModel rfw = genMarkerService.findByPatientId((Integer.valueOf(patientId.getText())));
-//            rfw.setRightFootWidth(GAITRFW.getText());
-//            genMarkerService.save(rfw);
-//        });
-//        GAITLFW.textProperty().addListener((observable, oldValue, newValue) -> {
-//            IGenMarkInfoModel lfw =  genMarkerService.findByPatientId((Integer.valueOf(patientId.getText())));
-//            lfw.setLeftFootWidth(GAITLFW.getText());
-//            genMarkerService.save(lfw);
-//        });
-//        GAITAS1.textProperty().addListener((observable, oldValue, newValue) -> {
-//            IGenMarkInfoModel as1 = genMarkerService.findByPatientId((Integer.valueOf(patientId.getText())));
-//            as1.setAS1(GAITAS1.getText());
-//            genMarkerService.save(as1);
-//        });
-//        GAITAS2.textProperty().addListener((observable, oldValue, newValue) -> {
-//            IGenMarkInfoModel as2 = genMarkerService.findByPatientId((Integer.valueOf(patientId.getText())));
-//            as2.setAS1(GAITAS2.getText());
-//            genMarkerService.save(as2);
-//        });
-//        GAITAS3.textProperty().addListener((observable, oldValue, newValue) -> {
-//            IGenMarkInfoModel as3 = genMarkerService.findByPatientId((Integer.valueOf(patientId.getText())));
-//            as3.setAS1(GAITAS3.getText());
-//            genMarkerService.save(as3);
-//        });
-//        GAITAS4.textProperty().addListener((observable, oldValue, newValue) -> {
-//            IGenMarkInfoModel as4 = genMarkerService.findByPatientId((Integer.valueOf(patientId.getText())));
-//            as4.setAS1(GAITAS4.getText());
-//            genMarkerService.save(as4);
-//        });
-//        GAITAS5.textProperty().addListener((observable, oldValue, newValue) -> {
-//            IGenMarkInfoModel as5 = genMarkerService.findByPatientId((Integer.valueOf(patientId.getText())));
-//            as5.setAS1(GAITAS5.getText());
-//            genMarkerService.save(as5);
-//        });
-//        GAITAS6.textProperty().addListener((observable, oldValue, newValue) -> {
-//            IGenMarkInfoModel as6 = genMarkerService.findByPatientId((Integer.valueOf(patientId.getText())));
-//            as6.setAS1(GAITAS6.getText());
-//            genMarkerService.save(as6);
-//        });
-
-
-//        GMFCSCombo.getItems().addListener(new ChangeListener<String>() {
-//            @Override
-//            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-//                IGenMarkInfoModel gmfcs = genMarkerService.findByPatientId((Integer.valueOf(patientId.getText())));
-//                gmfcs.setGmfcs(GMFCSCombo.getValue());
-//                genMarkerService.save(gmfcs);
-//            }
-//        });
 
         /*
         data tree
@@ -1400,17 +2410,86 @@ public class VisitDetailsGaitController implements Initializable {
 //        parent2DataRoot.setExpanded(true);
 //        dataTable.setRoot(parent2DataRoot);
 //        this.dataTable.setShowRoot(false);
+
+
+        gaitpics.selectedProperty().addListener((o, newValue, oldValue) -> {
+            if (newValue) {
+                addTestReason();
+                gaitpics.getStylesheets().add("/styles.css");
+                tooltip.setText("This is a test reason");
+
+            }
+        });
+        gaitpics1.selectedProperty().addListener((o, newValue, oldValue) -> {
+            if (newValue) {
+                addTestReason();
+                gaitpics1.getStylesheets().add("/styles.css");
+            }
+        });
+        gaitFootPressure.selectedProperty().addListener((o, newValue, oldValue) -> {
+            if (newValue) {
+                addTestReason();
+                gaitFootPressure.getStylesheets().add("/styles.css");
+            }
+        });
+        gaitFootPressure1.selectedProperty().addListener((o, newValue, oldValue) -> {
+            if (newValue) {
+                addTestReason();
+                gaitFootPressure1.getStylesheets().add("/styles.css");
+            }
+        });
+        videoGait.selectedProperty().addListener((o, newValue, oldValue) -> {
+            if (newValue) {
+                addTestReason();
+                videoGait.getStylesheets().add("/styles.css");
+            }
+        });
+        videoGait1.selectedProperty().addListener((o, newValue, oldValue) -> {
+            if (newValue) {
+                addTestReason();
+                videoGait.getStylesheets().add("/styles.css");
+
+            }
+        });
+
     }
 
-    void onSaveVisitDetailsGait(ActionEvent event) {
-        appointmentModel.setVisitType(aptVisitType.getText());
+    private IAppointmentModel showTestNoteDialog(IAppointmentModel appointmentModel) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Launcher.class.getResource("/Visits/TestNote.fxml"));
+        fxmlLoader.setControllerFactory(applicationContext::getBean);
+        Parent popup = fxmlLoader.load();
+        TestNoteController testNoteController =  fxmlLoader.getController();
+        testNoteController.setTestNote(appointmentModel);
+
+        Stage stage1 = new Stage();
+        stage1.setTitle("Reason: ");
+        stage1.setScene(new Scene(popup, 380, 200));
+        stage1.show();
+
+        return testNoteController.isSaved() ? appointmentModel : null;
+
     }
+
+    public void addTestReason(){
+        try{
+            IAppointmentModel newTestReason = showTestNoteDialog(
+                    new IAppointmentModel(null, null, null, null, null, null, null, null)
+            );
+        } catch (IOException ignored){
+
+        }
+    }
+
+
+
 
     public void setAppointmentModel(IAppointmentModel appointmentModel) {
-//        aptDate.setText(appointmentModel.getAptDate());
-//        aptVisitType.setText(appointmentModel.getVisitType());
-//        aptSubType.setText(appointmentModel.getVisitSubType());
+        this.appointmentModel = appointmentModel;
 
+        aptDate.setText(appointmentModel.getAptDate());
+        aptVisitType.setText(appointmentModel.getVisitType());
+        aptSubType.setText(appointmentModel.getVisitSubType());
     }
 
     @FXML
@@ -1625,17 +2704,76 @@ public class VisitDetailsGaitController implements Initializable {
 
     }
 
+    //patientId.setText(String.valueOf(patientModel.getPatientID()));
+    @Setter
+    IPatientModel patientModel;
     @FXML
-    void onViewCompendiumSideNav(ActionEvent actionEvent) throws IOException {
-        Parent popUp;
-        popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Compendium/GAIT/GenerateCompendiumSide.fxml")));
+    void onViewCompendiumSideNav(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Compendium/GAIT/GenerateCompendiumSide.fxml"));
+        fxmlLoader.setControllerFactory(applicationContext::getBean);
+        Parent popUp = fxmlLoader.load();
+        GenerateCompendiumSide generateCompendiumSide = fxmlLoader.getController();
+        generateCompendiumSide.setInfo(patientModel);
+
         Stage stage1 = new Stage();
         popUp.getStylesheets().add(Objects.requireNonNull(Launcher.class.getResource("/styles.css")).toExternalForm());
-        stage1.setTitle("Patient Compendium");
+        stage1.setTitle("Patient Compendium:  ");
         stage1.setScene(new Scene(popUp, 800, 680));
         stage1.setScene(popUp.getScene());
         stage1.show();
     }
+
+
+    private IPatientModel showPatientDetails(IPatientModel patientModel) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Compendium/GAIT/GenerateCompendiumSide.fxml"));
+        fxmlLoader.setControllerFactory(applicationContext::getBean);
+        Parent popUp = fxmlLoader.load();
+        GenerateCompendiumSide generateCompendiumSide = fxmlLoader.getController();
+        generateCompendiumSide.setInfo(patientModel);
+
+        Stage stage1 = new Stage();
+        popUp.getStylesheets().add(Objects.requireNonNull(Launcher.class.getResource("/styles.css")).toExternalForm());
+        stage1.setTitle("Patient Compendium:  ");
+        stage1.setScene(new Scene(popUp, 800, 680));
+        stage1.setScene(popUp.getScene());
+        stage1.show();
+
+        return generateCompendiumSide.isSaved() ? patientModel : null;
+    }
+
+//        if(gaitpics.isSelected() && gaitpics1.isSelected()){
+//            Parent popUp;
+//            FXMLLoader fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Compendium/GAIT/GenerateCompendiumSide.fxml"));
+//            popUp = fxmlLoader.load();
+//            Stage stage1 = new Stage();
+//            popUp.getStylesheets().add(Objects.requireNonNull(Launcher.class.getResource("/styles.css")).toExternalForm());
+//            stage1.setTitle("Patient Compendium:  ");
+//            stage1.setScene(new Scene(popUp, 800, 680));
+//            stage1.setScene(popUp.getScene());
+//            stage1.show();
+//        }else if(gaitFootPressure.isSelected() && gaitFootPressure1.isSelected()) {
+//            Parent popUp1;
+//            FXMLLoader fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Compendium/GAIT/test/GenerateCompendiumSide2.fxml"));
+//            popUp1 = fxmlLoader.load();
+//            Stage stage1 = new Stage();
+//            popUp1.getStylesheets().add(Objects.requireNonNull(Launcher.class.getResource("/styles.css")).toExternalForm());
+//            stage1.setTitle("Patient Compendium: ");
+//            stage1.setScene(new Scene(popUp1, 900, 680));
+//            stage1.setScene(popUp1.getScene());
+//            stage1.show();
+//        }  if(gaitFootPressure.isSelected() && gaitFootPressure1.isSelected() && gaitpics.isSelected() && gaitpics1.isSelected()){
+//            Parent popUp2;
+//            FXMLLoader fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Compendium/GAIT/test/GenerateCompendium3.fxml"));
+//            popUp2 = fxmlLoader.load();
+//            Stage stage1 = new Stage();
+//            popUp2.getStylesheets().add(Objects.requireNonNull(Launcher.class.getResource("/styles.css")).toExternalForm());
+//            stage1.setTitle("Patient Compendium: ");
+//            stage1.setScene(new Scene(popUp2, 900, 680));
+//            stage1.setScene(popUp2.getScene());
+//            stage1.show();
+//        }
 
     public void onViewInterpretation(ActionEvent actionEvent) throws IOException {
         Parent popUp;
@@ -1647,10 +2785,16 @@ public class VisitDetailsGaitController implements Initializable {
         stage1.setScene(popUp.getScene());
         stage1.show();
     }
+    private boolean saved;
+    private Stage getMyStage(){return (Stage) gaitVisitSave.getScene().getWindow(); }
+
     public void onGaitVisitSave(ActionEvent event) {
-        /*
-        TODO - write up the onsave for the gait values
-         */
+        appointmentModel.setAptDate(date.getText());
+        appointmentModel.setVisitType(aptVisitType.getText());
+        appointmentModel.setVisitSubType(aptSubType.getText());
+
+        saved = true;
+        getMyStage().close();
     }
 
     public void onSetDatesVisitGait(ActionEvent event) throws IOException {
@@ -1662,6 +2806,73 @@ public class VisitDetailsGaitController implements Initializable {
         stage1.setScene(popUp.getScene());
         stage1.show();
     }
+
+    Image testImage = new Image(String.valueOf(getClass().getResource("/Rowan/IMG_20241204_204827.jpg")));
+    @FXML
+    public CheckBox gaitpics;
+    @FXML
+    public CheckBox gaitpics1;
+    @FXML
+    public CheckBox gaitFootPressure;
+    @FXML
+    public CheckBox gaitFootPressure1;
+
+
+    public void onVideoGait1(ActionEvent event) {
+    }
+
+    public void onVideoGait(ActionEvent event) {
+    }
+
+    public void onGaitpics1(ActionEvent event) {
+    }
+    @FXML
+    public Boolean selected;
+    public void onGaitpics(ActionEvent event) {
+        if(gaitpics.isSelected()){
+            selected = true;
+        }
+    }
+    public IOrthosisModel onAddOrthosis(IOrthosisModel orthosisModel) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Launcher.class.getResource("/Wizards/AddOrthosis.fxml"));
+        fxmlLoader.setControllerFactory(applicationContext::getBean);
+        Parent orthosisPane = fxmlLoader.load();
+        AddOrthosisWizard addOrthosisWizard = fxmlLoader.getController();
+
+        addOrthosisWizard.setOrthosis(orthosisModel);
+        Stage addOrthosisStage = new Stage((StageStyle.UTILITY));
+        addOrthosisStage.initModality(Modality.WINDOW_MODAL);
+        addOrthosisStage.initOwner(getOrthosisWindow());
+        addOrthosisStage.setScene(new Scene(orthosisPane, 550, 250));
+        addOrthosisStage.showAndWait();
+
+        return addOrthosisWizard.isSaved() ? orthosisModel : null;
+
+    }
+
+    private Window getOrthosisWindow(){
+        return orthosisTable.getScene().getWindow();
+    }
+
+    public void addOrthosis(){
+        int selectedItem = orthosisTable.getSelectionModel().getSelectedIndex();
+
+        try {
+            IOrthosisModel newOrthosis = onAddOrthosis(new IOrthosisModel(null, null, null));
+
+            if(newOrthosis != null){
+                orthosisTable.getItems().add(
+                        selectedItem + 1, newOrthosis
+                );
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+
 }
 
 

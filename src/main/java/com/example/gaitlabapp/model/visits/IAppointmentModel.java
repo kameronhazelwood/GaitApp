@@ -1,10 +1,8 @@
 package com.example.gaitlabapp.model.visits;
 
 
-import com.example.gaitlabapp.model.patients.IDiagnosisModel;
 import com.example.gaitlabapp.model.patients.IPatientModel;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.property.BooleanProperty;
 import lombok.*;
 import jakarta.persistence.*;
 
@@ -68,8 +66,12 @@ public class IAppointmentModel  {
 //    private final StringProperty visitBioMech2;
     @Column(name = "type")
     private final Type type;
+    @Column(name = "test_reason")
+    @Setter
+    private String testReason;
     @Column(name = "patientId")
     private Integer patientId;
+    private Boolean collected = true;
 
 
     @OneToMany(cascade = CascadeType.ALL)
@@ -78,15 +80,17 @@ public class IAppointmentModel  {
 
     public Set<IPatientModel> patientModel;
 
-    public IAppointmentModel(Integer aptId, String aptDate, String visitType, String visitSubType, String referringPhys, Type type, Integer patientId) {
+    public IAppointmentModel(Integer aptId, String aptDate, String visitType, String visitSubType, String referringPhys, Type type, String testReason, Integer patientId) {
         this.aptId = aptId;
         this.aptDate = aptDate;
         this.visitType = visitType;
         this.visitSubType = visitSubType;
         this.referringPhys = referringPhys;
         this.type = type;
+        this.testReason = testReason;
         this.patientId = patientId;
     }
+
 
 //    public String getAptDate(){
 //        return aptDate.get();

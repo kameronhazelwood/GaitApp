@@ -23,8 +23,8 @@ public class PatientsPDFController implements Initializable {
     public Pane pane;
     public ListView<File> files;
     private static final String PDF_FILE_EXT = ".pdf";
-    private static final String WATCH_DIR = System.getProperty("C:\\Users\\sh0184\\images");
-    private WatchDirService watchDirService;
+    //private static final String WATCH_DIR = System.getProperty("C:\\Users\\sh0184\\images");
+    //private WatchDirService watchDirService;
     private Map<Path, FileView> fileViews = new HashMap<>();
 
     @Override

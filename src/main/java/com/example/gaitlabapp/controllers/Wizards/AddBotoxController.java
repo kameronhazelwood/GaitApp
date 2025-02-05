@@ -54,21 +54,21 @@ public class AddBotoxController {
     private final BotoxService botoxService;
 
     @FXML
-    void onCancel(ActionEvent event){
+    void onCancel(ActionEvent event) {
         this.addBotox.getScene().getWindow().hide();
     }
 
-    private Stage getMyStage(){
+    private Stage getMyStage() {
         return (Stage) saveButton.getScene().getWindow();
     }
 
-    public boolean isSaved(){
-        return  saved;
+    public boolean isSaved() {
+        return saved;
     }
 
 
     @FXML
-    void onSaveBotox(ActionEvent event){
+    void onSaveBotox(ActionEvent event) {
 
         botoxModel.setBotoxDate(date.getText());
         botoxModel.setBotoxMd(md.getText());
@@ -81,7 +81,7 @@ public class AddBotoxController {
 
     }
 
-    public void setBotox(IBotoxModel botoxModel){
+    public void setBotox(IBotoxModel botoxModel) {
         this.botoxModel = botoxModel;
 
         date.setText(botoxModel.getBotoxDate());

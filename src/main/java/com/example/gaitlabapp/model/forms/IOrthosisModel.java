@@ -18,18 +18,21 @@ import java.util.Set;
 @Data
 @Entity
 @NoArgsConstructor
-@Setter
 @Table(name = "orthosis")
 public class IOrthosisModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Setter
     @Column(name = "orthosis_id")
     private Integer orthosisId;
     @Column(name = "orthosis")
+    @Setter
     private String orthosis;
     @Column(name = "side")
+    @Setter
     private String side;
     @Column(name = "patientId")
+    @Setter
     private Integer patientId;
 
 
@@ -38,4 +41,10 @@ public class IOrthosisModel {
             inverseJoinColumns = @JoinColumn(name = "patient_id"))
 
     Set<IPatientModel> patientID;
+
+    public IOrthosisModel(Integer orthosisId, String orthosis, String side){
+        this.orthosis = orthosis;
+        this.orthosisId = orthosisId;
+        this.side = side;
+    }
 }

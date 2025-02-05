@@ -348,6 +348,62 @@ public class NewPatientModuleController implements Initializable {
                 patient.setMrn(mrn.getText());
                 patient.setFormerLastName(formerLName.getText());
                 patient.setPreferredFirstName(preferredName.getText());
+
+                // Specify the Directory Name
+                String directoryName = lName.getText() + ", " + fName.getText()+ ", " + mrn.getText();
+                String pngFiles = "PNG Files";
+                String imagesName = "Patient Photos";
+                String dataValues = "Data";
+
+                // Address of Current Directory
+                Path currentDirectory = Paths.get("C:\\dev\\GaitApp\\PatientDocuments");
+
+                // Specify the path of the directory to be created
+                String directoryPath = currentDirectory + File.separator + directoryName;
+                String pngFilesPath = directoryPath + File.separator + pngFiles;
+                String imagesPath = directoryPath + File.separator + imagesName;
+                String dataPath = directoryPath + File.separator + dataValues;
+
+                // Create a File object representing the directory
+                File directory = new File(directoryPath);
+                File pngDirectory = new File(pngFilesPath);
+                File imagesDirectory = new File(imagesPath);
+                File dataDirectory =  new File(dataPath);
+
+                // Attempt to create the directory
+                boolean directoryCreated = directory.mkdir();
+                boolean pngDirectoryCreated = pngDirectory.mkdir();
+                boolean imagesDirectoryCreated = imagesDirectory.mkdir();
+                boolean dataDirectoryCreated = dataDirectory.mkdir();
+
+                if (directoryCreated) {
+                    System.out.println("Directory created successfully at: " + directoryCreated);
+                    System.out.println(directoryName);
+                } else {
+                    System.out.println("Failed to create directory. It may already exist at: " + directoryCreated);
+                }
+
+                if (pngDirectoryCreated) {
+                    System.out.println("Directory created successfully at: " + pngDirectoryCreated);
+                    System.out.println(directoryName);
+                } else {
+                    System.out.println("Failed to create directory. It may already exist at: " + pngDirectoryCreated);
+                }
+
+                if (imagesDirectoryCreated) {
+                    System.out.println("Directory created successfully at: " + imagesDirectoryCreated);
+                    System.out.println(directoryName);
+                } else {
+                    System.out.println("Failed to create directory. It may already exist at: " + imagesDirectoryCreated);
+                }
+
+                if (dataDirectoryCreated) {
+                    System.out.println("Directory created successfully at: " + dataDirectoryCreated);
+                    System.out.println(directoryName);
+                } else {
+                    System.out.println("Failed to create directory. It may already exist at: " + dataDirectoryCreated);
+                }
+
                 patientService.save(patient);
             }else {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);

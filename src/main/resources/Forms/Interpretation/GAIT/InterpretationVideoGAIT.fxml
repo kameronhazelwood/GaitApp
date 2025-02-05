@@ -1,14 +1,761 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.gaitlabapp.controllers.Forms.Interpretation.UE.InterpretationVideoUEController"
-            prefHeight="400.0" prefWidth="600.0">
+<ScrollPane prefHeight="760.0" prefWidth="834.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Interpretation.UE.InterpretationVideoUEController">
 
-</AnchorPane>
+    <TabPane prefHeight="970.0" prefWidth="1380.0" tabClosingPolicy="UNAVAILABLE">
+        <Tab text="Comments">
+            <AnchorPane prefHeight="971.0" prefWidth="1335.0">
+                <Text layoutX="14.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comments on Past Video:" wrappingWidth="205.8963165283203">
+                    <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                    </font>
+                </Text>
+            <TextArea layoutX="17.0" layoutY="163.0" prefHeight="167.0" prefWidth="569.0" />
+            <Text layoutX="17.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Evaluation Comments:" wrappingWidth="205.8963165283203">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Text>
+            <TextArea layoutX="20.0" layoutY="406.0" prefHeight="167.0" prefWidth="569.0" />
+            <Button layoutX="553.0" layoutY="20.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="158.0" text="Save Changes" />
+            </AnchorPane>
+        </Tab>
+        <Tab text="Ambulatory Aids">
+            <content>
+                <AnchorPane prefHeight="1200.0" prefWidth="663.0">
+               <children>
+                  <Button layoutX="535.0" layoutY="24.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="197.0" text="Save Changes" />
+                  <Separator blendMode="EXCLUSION" layoutY="154.0" prefHeight="0.0" prefWidth="588.0" />
+                  <Separator blendMode="EXCLUSION" layoutX="59.0" layoutY="155.0" orientation="VERTICAL" prefHeight="163.0" prefWidth="0.0" />
+                  <Separator blendMode="EXCLUSION" layoutY="181.0" prefHeight="0.0" prefWidth="588.0" />
+                  <CheckBox layoutX="19.0" layoutY="160.0" mnemonicParsing="false" />
+                  <Separator blendMode="EXCLUSION" layoutY="208.0" prefHeight="0.0" prefWidth="588.0" />
+                  <CheckBox layoutX="19.0" layoutY="187.0" mnemonicParsing="false" />
+                  <Separator blendMode="EXCLUSION" layoutY="235.0" prefHeight="0.0" prefWidth="588.0" />
+                  <CheckBox layoutX="19.0" layoutY="213.0" mnemonicParsing="false" />
+                  <Separator blendMode="EXCLUSION" layoutY="262.0" prefHeight="0.0" prefWidth="588.0" />
+                  <CheckBox layoutX="19.0" layoutY="240.0" mnemonicParsing="false" />
+                  <Separator blendMode="EXCLUSION" layoutY="289.0" prefHeight="0.0" prefWidth="588.0" />
+                  <CheckBox layoutX="19.0" layoutY="267.0" mnemonicParsing="false" />
+                  <Separator blendMode="EXCLUSION" layoutY="316.0" prefHeight="0.0" prefWidth="588.0" />
+                  <CheckBox layoutX="19.0" layoutY="294.0" mnemonicParsing="false" />
+                  <Label layoutX="75.0" layoutY="160.0" text="Crutches" />
+                  <Label layoutX="75.0" layoutY="187.0" text="Canes" />
+                  <Label layoutX="77.0" layoutY="213.0" text="Anterior Walker" />
+                  <Label layoutX="77.0" layoutY="240.0" text="Posterior Walker" />
+                  <Label layoutX="77.0" layoutY="267.0" text="Handheld" />
+                  <Label layoutX="77.0" layoutY="294.0" text="No Ambulatory Aids used" />
+                  <Separator blendMode="EXCLUSION" layoutX="585.0" layoutY="155.0" orientation="VERTICAL" prefHeight="163.0" prefWidth="0.0" />
+               </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Foot Wear Conditions">
+            <content>
+                <AnchorPane prefHeight="1000.0" prefWidth="663.0">
+               <children>
+                  <Separator blendMode="EXCLUSION" layoutY="90.0" prefHeight="0.0" prefWidth="623.0" />
+                  <Separator blendMode="EXCLUSION" layoutX="29.0" layoutY="66.0" orientation="VERTICAL" prefHeight="251.0" prefWidth="0.0" />
+                  <RadioButton layoutX="6.0" layoutY="94.0" mnemonicParsing="false" />
+                  <Label layoutX="7.0" layoutY="64.0" text="N">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Separator blendMode="EXCLUSION" layoutX="58.0" layoutY="66.0" orientation="VERTICAL" prefHeight="251.0" prefWidth="0.0" />
+                  <Label layoutX="38.0" layoutY="64.0" text="R">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <RadioButton layoutX="38.0" layoutY="94.0" mnemonicParsing="false" />
+                  <Separator blendMode="EXCLUSION" layoutX="87.0" layoutY="66.0" orientation="VERTICAL" prefHeight="251.0" prefWidth="0.0" />
+                  <Label layoutX="67.0" layoutY="64.0" text="L">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <RadioButton layoutX="67.0" layoutY="94.0" mnemonicParsing="false" />
+                  <Separator blendMode="EXCLUSION" layoutX="116.0" layoutY="66.0" orientation="VERTICAL" prefHeight="251.0" prefWidth="0.0" />
+                  <Label layoutX="96.0" layoutY="64.0" text="B">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <RadioButton layoutX="96.0" layoutY="94.0" mnemonicParsing="false" />
+                  <Label layoutX="241.0" layoutY="64.0" text="Condition">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Separator blendMode="EXCLUSION" layoutY="115.0" prefHeight="0.0" prefWidth="623.0" />
+                  <Label layoutX="136.0" layoutY="94.0" text="Shoes Only" />
+                  <Separator blendMode="EXCLUSION" layoutY="140.0" prefHeight="0.0" prefWidth="623.0" />
+                  <Label layoutX="136.0" layoutY="120.0" text="Solid AFO" />
+                  <RadioButton layoutX="6.0" layoutY="119.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="38.0" layoutY="119.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="67.0" layoutY="119.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="96.0" layoutY="119.0" mnemonicParsing="false" />
+                  <Separator blendMode="EXCLUSION" layoutY="165.0" prefHeight="0.0" prefWidth="623.0" />
+                  <RadioButton layoutX="6.0" layoutY="144.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="38.0" layoutY="144.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="67.0" layoutY="144.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="96.0" layoutY="144.0" mnemonicParsing="false" />
+                  <Label layoutX="136.0" layoutY="145.0" text="Articulated AFO" />
+                  <Separator blendMode="EXCLUSION" layoutY="190.0" prefHeight="0.0" prefWidth="623.0" />
+                  <RadioButton layoutX="6.0" layoutY="169.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="38.0" layoutY="169.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="67.0" layoutY="169.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="96.0" layoutY="169.0" mnemonicParsing="false" />
+                  <Label layoutX="136.0" layoutY="169.0" text="SMO" />
+                  <Separator blendMode="EXCLUSION" layoutY="215.0" prefHeight="0.0" prefWidth="623.0" />
+                  <RadioButton layoutX="6.0" layoutY="193.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="38.0" layoutY="193.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="67.0" layoutY="193.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="96.0" layoutY="193.0" mnemonicParsing="false" />
+                  <Label layoutX="136.0" layoutY="194.0" text="KAFO" />
+                  <Separator blendMode="EXCLUSION" layoutY="240.0" prefHeight="0.0" prefWidth="623.0" />
+                  <RadioButton layoutX="6.0" layoutY="218.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="38.0" layoutY="218.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="67.0" layoutY="218.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="96.0" layoutY="218.0" mnemonicParsing="false" />
+                  <Label layoutX="136.0" layoutY="220.0" text="HKAFO" />
+                  <Separator blendMode="EXCLUSION" layoutY="265.0" prefHeight="0.0" prefWidth="623.0" />
+                  <RadioButton layoutX="6.0" layoutY="243.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="38.0" layoutY="243.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="67.0" layoutY="243.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="96.0" layoutY="243.0" mnemonicParsing="false" />
+                  <Label layoutX="136.0" layoutY="245.0" text="GRAFO" />
+                  <Separator blendMode="EXCLUSION" layoutY="290.0" prefHeight="0.0" prefWidth="623.0" />
+                  <RadioButton layoutX="6.0" layoutY="269.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="38.0" layoutY="269.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="67.0" layoutY="269.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="96.0" layoutY="269.0" mnemonicParsing="false" />
+                  <Label layoutX="136.0" layoutY="268.0" text="Bare foot walking" />
+                  <Separator blendMode="EXCLUSION" layoutY="315.0" prefHeight="0.0" prefWidth="623.0" />
+                  <RadioButton layoutX="6.0" layoutY="294.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="38.0" layoutY="294.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="67.0" layoutY="294.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="96.0" layoutY="294.0" mnemonicParsing="false" />
+                  <Label layoutX="132.0" layoutY="294.0" text="Other (See Comments)" />
+                  <Button layoutX="638.0" layoutY="21.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="127.0" text="Save Changes" />
+               </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Upper Extremity">
+            <content>
+                <AnchorPane prefHeight="1000.0" prefWidth="663.0">
+               <children>
+                  <Separator blendMode="EXCLUSION" layoutY="85.0" prefHeight="0.0" prefWidth="564.0" />
+                  <Separator blendMode="DIFFERENCE" layoutX="44.0" layoutY="85.0" orientation="VERTICAL" prefHeight="298.0" prefWidth="0.0" />
+                  <CheckBox layoutX="14.0" layoutY="91.0" mnemonicParsing="false" />
+                  <Separator blendMode="EXCLUSION" layoutY="112.0" prefHeight="0.0" prefWidth="564.0" />
+                  <Label layoutX="78.0" layoutY="91.0" text="High Guard Postion" />
+                  <Separator blendMode="EXCLUSION" layoutY="139.0" prefHeight="0.0" prefWidth="564.0" />
+                  <CheckBox layoutX="14.0" layoutY="117.0" mnemonicParsing="false" />
+                  <Label layoutX="78.0" layoutY="117.0" text="Medium Guard Position" />
+                  <Separator blendMode="EXCLUSION" layoutY="166.0" prefHeight="0.0" prefWidth="564.0" />
+                  <CheckBox layoutX="14.0" layoutY="144.0" mnemonicParsing="false" />
+                  <Label layoutX="78.0" layoutY="144.0" text="Decreased Swing Left" />
+                  <Separator blendMode="EXCLUSION" layoutY="193.0" prefHeight="0.0" prefWidth="564.0" />
+                  <CheckBox layoutX="14.0" layoutY="172.0" mnemonicParsing="false" />
+                  <Label layoutX="78.0" layoutY="172.0" text="Decreased Swing Right" />
+                  <Separator blendMode="EXCLUSION" layoutY="220.0" prefHeight="0.0" prefWidth="564.0" />
+                  <CheckBox layoutX="14.0" layoutY="199.0" mnemonicParsing="false" />
+                  <Label layoutX="78.0" layoutY="199.0" text="Hemiplegic Posturing Left" />
+                  <Separator blendMode="EXCLUSION" layoutY="247.0" prefHeight="0.0" prefWidth="564.0" />
+                  <CheckBox layoutX="14.0" layoutY="226.0" mnemonicParsing="false" />
+                  <Label layoutX="78.0" layoutY="226.0" text="Hemiplegic Posturing Right" />
+                  <Separator blendMode="EXCLUSION" layoutY="274.0" prefHeight="0.0" prefWidth="564.0" />
+                  <CheckBox layoutX="14.0" layoutY="252.0" mnemonicParsing="false" />
+                  <Label layoutX="78.0" layoutY="252.0" text="Extensor Posturing Left" />
+                  <Separator blendMode="EXCLUSION" layoutY="301.0" prefHeight="0.0" prefWidth="564.0" />
+                  <CheckBox layoutX="14.0" layoutY="279.0" mnemonicParsing="false" />
+                  <Label layoutX="78.0" layoutY="279.0" text="Extensor Posturing Right" />
+                  <Separator blendMode="EXCLUSION" layoutY="328.0" prefHeight="0.0" prefWidth="564.0" />
+                  <CheckBox layoutX="14.0" layoutY="306.0" mnemonicParsing="false" />
+                  <Label layoutX="78.0" layoutY="306.0" text="Dystonic Movement" />
+                  <Separator blendMode="EXCLUSION" layoutY="355.0" prefHeight="0.0" prefWidth="564.0" />
+                  <CheckBox layoutX="14.0" layoutY="334.0" mnemonicParsing="false" />
+                  <Label layoutX="76.0" layoutY="334.0" text="Athetoid Movement" />
+                  <Separator blendMode="EXCLUSION" layoutY="382.0" prefHeight="0.0" prefWidth="564.0" />
+                  <CheckBox layoutX="14.0" layoutY="360.0" mnemonicParsing="false" />
+                  <Label layoutX="76.0" layoutY="360.0" text="On Assist Device" />
+                  <Separator blendMode="DIFFERENCE" layoutX="561.0" layoutY="85.0" orientation="VERTICAL" prefHeight="298.0" prefWidth="0.0" />
+                  <Button layoutX="605.0" layoutY="23.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="136.0" text="Save Changes" />
+               </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Trunk">
+            <content>
+                <AnchorPane prefHeight="1000.0" prefWidth="663.0">
+                    <children>
+                        <Separator blendMode="EXCLUSION" layoutY="85.0" prefHeight="0.0" prefWidth="564.0" />
+                        <Separator blendMode="DIFFERENCE" layoutX="44.0" layoutY="85.0" orientation="VERTICAL" prefHeight="271.0" prefWidth="0.0" />
+                        <CheckBox layoutX="14.0" layoutY="91.0" mnemonicParsing="false" />
+                        <Separator blendMode="EXCLUSION" layoutY="112.0" prefHeight="0.0" prefWidth="564.0" />
+                        <Label layoutX="78.0" layoutY="91.0" text="Left Side Forward" />
+                        <Separator blendMode="EXCLUSION" layoutY="139.0" prefHeight="0.0" prefWidth="564.0" />
+                        <CheckBox layoutX="14.0" layoutY="117.0" mnemonicParsing="false" />
+                        <Label layoutX="78.0" layoutY="117.0" text="Right Side Forward" />
+                        <Separator blendMode="EXCLUSION" layoutY="166.0" prefHeight="0.0" prefWidth="564.0" />
+                        <CheckBox layoutX="14.0" layoutY="144.0" mnemonicParsing="false" />
+                        <Label layoutX="78.0" layoutY="144.0" text="Left Lurch" />
+                        <Separator blendMode="EXCLUSION" layoutY="193.0" prefHeight="0.0" prefWidth="564.0" />
+                        <CheckBox layoutX="14.0" layoutY="172.0" mnemonicParsing="false" />
+                        <Label layoutX="78.0" layoutY="172.0" text="Right Lurch" />
+                        <Separator blendMode="EXCLUSION" layoutY="220.0" prefHeight="0.0" prefWidth="564.0" />
+                        <CheckBox layoutX="14.0" layoutY="199.0" mnemonicParsing="false" />
+                        <Label layoutX="78.0" layoutY="199.0" text="Left Learning" />
+                        <Separator blendMode="EXCLUSION" layoutY="247.0" prefHeight="0.0" prefWidth="564.0" />
+                        <CheckBox layoutX="14.0" layoutY="226.0" mnemonicParsing="false" />
+                        <Label layoutX="78.0" layoutY="226.0" text="Right Learning" />
+                        <Separator blendMode="EXCLUSION" layoutY="274.0" prefHeight="0.0" prefWidth="564.0" />
+                        <CheckBox layoutX="14.0" layoutY="252.0" mnemonicParsing="false" />
+                        <Label layoutX="78.0" layoutY="252.0" text="Forward Leaning" />
+                        <Separator blendMode="EXCLUSION" layoutY="301.0" prefHeight="0.0" prefWidth="564.0" />
+                        <CheckBox layoutX="14.0" layoutY="279.0" mnemonicParsing="false" />
+                        <Label layoutX="78.0" layoutY="279.0" text="Posterior Leaning" />
+                        <Separator blendMode="EXCLUSION" layoutY="328.0" prefHeight="0.0" prefWidth="564.0" />
+                        <CheckBox layoutX="14.0" layoutY="306.0" mnemonicParsing="false" />
+                        <Label layoutX="78.0" layoutY="306.0" text="Increased Lordosis" />
+                        <Separator blendMode="EXCLUSION" layoutY="355.0" prefHeight="0.0" prefWidth="564.0" />
+                        <CheckBox layoutX="14.0" layoutY="334.0" mnemonicParsing="false" />
+                        <Label layoutX="76.0" layoutY="334.0" text="Increased Kyphosis" />
+                        <Separator blendMode="DIFFERENCE" layoutX="561.0" layoutY="85.0" orientation="VERTICAL" prefHeight="271.0" prefWidth="0.0" />
+                        <Button layoutX="605.0" layoutY="23.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="136.0" text="Save Changes" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Pelvis">
+            <content>
+                <AnchorPane prefHeight="1000.0" prefWidth="663.0">
+                    <children>
+                        <Separator blendMode="EXCLUSION" layoutY="85.0" prefHeight="0.0" prefWidth="564.0" />
+                        <Separator blendMode="DIFFERENCE" layoutX="44.0" layoutY="85.0" orientation="VERTICAL" prefHeight="218.0" prefWidth="0.0" />
+                        <CheckBox layoutX="14.0" layoutY="91.0" mnemonicParsing="false" />
+                        <Separator blendMode="EXCLUSION" layoutY="112.0" prefHeight="0.0" prefWidth="564.0" />
+                        <Label layoutX="78.0" layoutY="91.0" text="Left Rotated Forward" />
+                        <Separator blendMode="EXCLUSION" layoutY="139.0" prefHeight="0.0" prefWidth="564.0" />
+                        <CheckBox layoutX="14.0" layoutY="117.0" mnemonicParsing="false" />
+                        <Label layoutX="78.0" layoutY="117.0" text="Right Rotated Forward" />
+                        <Separator blendMode="EXCLUSION" layoutY="166.0" prefHeight="0.0" prefWidth="564.0" />
+                        <CheckBox layoutX="14.0" layoutY="144.0" mnemonicParsing="false" />
+                        <Label layoutX="78.0" layoutY="144.0" text="Life Side Down" />
+                        <Separator blendMode="EXCLUSION" layoutY="193.0" prefHeight="0.0" prefWidth="564.0" />
+                        <CheckBox layoutX="14.0" layoutY="172.0" mnemonicParsing="false" />
+                        <Label layoutX="78.0" layoutY="172.0" text="Right Side Down" />
+                        <Separator blendMode="EXCLUSION" layoutY="220.0" prefHeight="0.0" prefWidth="564.0" />
+                        <CheckBox layoutX="14.0" layoutY="199.0" mnemonicParsing="false" />
+                        <Label layoutX="78.0" layoutY="199.0" text="Left Trendelenburg" />
+                        <Separator blendMode="EXCLUSION" layoutY="247.0" prefHeight="0.0" prefWidth="564.0" />
+                        <CheckBox layoutX="14.0" layoutY="226.0" mnemonicParsing="false" />
+                        <Label layoutX="78.0" layoutY="226.0" text="Right Trendelenburg" />
+                        <Separator blendMode="EXCLUSION" layoutY="274.0" prefHeight="0.0" prefWidth="564.0" />
+                        <CheckBox layoutX="14.0" layoutY="252.0" mnemonicParsing="false" />
+                        <Label layoutX="78.0" layoutY="252.0" text="Increased Anterior Tilt" />
+                        <Separator blendMode="EXCLUSION" layoutY="301.0" prefHeight="0.0" prefWidth="564.0" />
+                        <CheckBox layoutX="14.0" layoutY="279.0" mnemonicParsing="false" />
+                        <Label layoutX="78.0" layoutY="279.0" text="Increased Posterior Tilt" />
+                        <Separator blendMode="DIFFERENCE" layoutX="561.0" layoutY="85.0" orientation="VERTICAL" prefHeight="218.0" prefWidth="0.0" />
+                        <Button layoutX="605.0" layoutY="23.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="136.0" text="Save Changes" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Hips">
+            <content>
+                <AnchorPane prefHeight="1000.0" prefWidth="663.0">
+                    <children>
+                        <Separator blendMode="EXCLUSION" layoutY="90.0" prefHeight="0.0" prefWidth="623.0" />
+                        <Separator blendMode="EXCLUSION" layoutX="29.0" layoutY="66.0" orientation="VERTICAL" prefHeight="225.0" prefWidth="0.0" />
+                        <RadioButton layoutX="6.0" layoutY="94.0" mnemonicParsing="false" />
+                        <Label layoutX="7.0" layoutY="64.0" text="N">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Separator blendMode="EXCLUSION" layoutX="58.0" layoutY="66.0" orientation="VERTICAL" prefHeight="225.0" prefWidth="0.0" />
+                        <Label layoutX="38.0" layoutY="64.0" text="R">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <RadioButton layoutX="38.0" layoutY="94.0" mnemonicParsing="false" />
+                        <Separator blendMode="EXCLUSION" layoutX="87.0" layoutY="66.0" orientation="VERTICAL" prefHeight="225.0" prefWidth="0.0" />
+                        <Label layoutX="67.0" layoutY="64.0" text="L">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <RadioButton layoutX="67.0" layoutY="94.0" mnemonicParsing="false" />
+                        <Separator blendMode="EXCLUSION" layoutX="116.0" layoutY="66.0" orientation="VERTICAL" prefHeight="225.0" prefWidth="0.0" />
+                        <Label layoutX="96.0" layoutY="64.0" text="B">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <RadioButton layoutX="96.0" layoutY="94.0" mnemonicParsing="false" />
+                        <Label layoutX="241.0" layoutY="64.0" text="Condition">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Separator blendMode="EXCLUSION" layoutY="115.0" prefHeight="0.0" prefWidth="623.0" />
+                        <Label layoutX="136.0" layoutY="94.0" text="Internally Rotated" />
+                        <Separator blendMode="EXCLUSION" layoutY="140.0" prefHeight="0.0" prefWidth="623.0" />
+                        <Label layoutX="136.0" layoutY="120.0" text="Externally Rotated" />
+                        <RadioButton layoutX="6.0" layoutY="119.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="38.0" layoutY="119.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="67.0" layoutY="119.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="119.0" mnemonicParsing="false" />
+                        <Separator blendMode="EXCLUSION" layoutY="165.0" prefHeight="0.0" prefWidth="623.0" />
+                        <RadioButton layoutX="6.0" layoutY="144.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="38.0" layoutY="144.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="67.0" layoutY="144.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="144.0" mnemonicParsing="false" />
+                        <Label layoutX="136.0" layoutY="145.0" text="Increased Flexion" />
+                        <Separator blendMode="EXCLUSION" layoutY="190.0" prefHeight="0.0" prefWidth="623.0" />
+                        <RadioButton layoutX="6.0" layoutY="169.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="38.0" layoutY="169.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="67.0" layoutY="169.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="169.0" mnemonicParsing="false" />
+                        <Label layoutX="136.0" layoutY="169.0" text="Decreased Flexion" />
+                        <Separator blendMode="EXCLUSION" layoutY="215.0" prefHeight="0.0" prefWidth="623.0" />
+                        <RadioButton layoutX="6.0" layoutY="193.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="38.0" layoutY="193.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="67.0" layoutY="193.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="193.0" mnemonicParsing="false" />
+                        <Label layoutX="136.0" layoutY="194.0" text="Abducted" />
+                        <Separator blendMode="EXCLUSION" layoutY="240.0" prefHeight="0.0" prefWidth="623.0" />
+                        <RadioButton layoutX="6.0" layoutY="218.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="38.0" layoutY="218.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="67.0" layoutY="218.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="218.0" mnemonicParsing="false" />
+                        <Label layoutX="136.0" layoutY="220.0" text="Adducted" />
+                        <Separator blendMode="EXCLUSION" layoutY="265.0" prefHeight="0.0" prefWidth="623.0" />
+                        <RadioButton layoutX="6.0" layoutY="243.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="38.0" layoutY="243.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="67.0" layoutY="243.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="243.0" mnemonicParsing="false" />
+                        <Label layoutX="136.0" layoutY="245.0" text="Decased Range of Motion" />
+                        <Separator blendMode="EXCLUSION" layoutY="290.0" prefHeight="0.0" prefWidth="623.0" />
+                        <RadioButton layoutX="6.0" layoutY="269.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="38.0" layoutY="269.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="67.0" layoutY="269.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="269.0" mnemonicParsing="false" />
+                        <Label layoutX="136.0" layoutY="268.0" text="Circumduction" />
+                        <Button layoutX="638.0" layoutY="21.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="127.0" text="Save Changes" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Knees">
+            <content>
+                <AnchorPane prefHeight="1000.0" prefWidth="663.0">
+                    <children>
+                        <Separator blendMode="EXCLUSION" layoutY="90.0" prefHeight="0.0" prefWidth="623.0" />
+                        <Separator blendMode="EXCLUSION" layoutX="29.0" layoutY="66.0" orientation="VERTICAL" prefHeight="250.0" prefWidth="0.0" />
+                        <RadioButton layoutX="6.0" layoutY="94.0" mnemonicParsing="false" />
+                        <Label layoutX="7.0" layoutY="64.0" text="N">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Separator blendMode="EXCLUSION" layoutX="58.0" layoutY="66.0" orientation="VERTICAL" prefHeight="250.0" prefWidth="0.0" />
+                        <Label layoutX="38.0" layoutY="64.0" text="R">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <RadioButton layoutX="38.0" layoutY="94.0" mnemonicParsing="false" />
+                        <Separator blendMode="EXCLUSION" layoutX="87.0" layoutY="66.0" orientation="VERTICAL" prefHeight="250.0" prefWidth="0.0" />
+                        <Label layoutX="67.0" layoutY="64.0" text="L">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <RadioButton layoutX="67.0" layoutY="94.0" mnemonicParsing="false" />
+                        <Separator blendMode="EXCLUSION" layoutX="116.0" layoutY="66.0" orientation="VERTICAL" prefHeight="250.0" prefWidth="0.0" />
+                        <Label layoutX="96.0" layoutY="64.0" text="B">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <RadioButton layoutX="96.0" layoutY="94.0" mnemonicParsing="false" />
+                        <Label layoutX="241.0" layoutY="64.0" text="Condition">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Separator blendMode="EXCLUSION" layoutY="115.0" prefHeight="0.0" prefWidth="623.0" />
+                        <Label layoutX="136.0" layoutY="94.0" text="Valgus" />
+                        <Separator blendMode="EXCLUSION" layoutY="140.0" prefHeight="0.0" prefWidth="623.0" />
+                        <Label layoutX="136.0" layoutY="120.0" text="Varus" />
+                        <RadioButton layoutX="6.0" layoutY="119.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="38.0" layoutY="119.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="67.0" layoutY="119.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="119.0" mnemonicParsing="false" />
+                        <Separator blendMode="EXCLUSION" layoutY="165.0" prefHeight="0.0" prefWidth="623.0" />
+                        <RadioButton layoutX="6.0" layoutY="144.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="38.0" layoutY="144.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="67.0" layoutY="144.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="144.0" mnemonicParsing="false" />
+                        <Label layoutX="136.0" layoutY="145.0" text="Increased knee flexion at foot contact" />
+                        <Separator blendMode="EXCLUSION" layoutY="190.0" prefHeight="0.0" prefWidth="623.0" />
+                        <RadioButton layoutX="6.0" layoutY="169.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="38.0" layoutY="169.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="67.0" layoutY="169.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="169.0" mnemonicParsing="false" />
+                        <Label layoutX="136.0" layoutY="169.0" text="Decreased knee flexion at foot contact" />
+                        <Separator blendMode="EXCLUSION" layoutY="215.0" prefHeight="0.0" prefWidth="623.0" />
+                        <RadioButton layoutX="6.0" layoutY="193.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="38.0" layoutY="193.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="67.0" layoutY="193.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="193.0" mnemonicParsing="false" />
+                        <Label layoutX="136.0" layoutY="194.0" text="Increased midstance knee flexion" />
+                        <Separator blendMode="EXCLUSION" layoutY="240.0" prefHeight="0.0" prefWidth="623.0" />
+                        <RadioButton layoutX="6.0" layoutY="218.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="38.0" layoutY="218.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="67.0" layoutY="218.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="218.0" mnemonicParsing="false" />
+                        <Label layoutX="136.0" layoutY="220.0" text="Back-kneeing" />
+                        <Separator blendMode="EXCLUSION" layoutY="265.0" prefHeight="0.0" prefWidth="623.0" />
+                        <RadioButton layoutX="6.0" layoutY="243.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="38.0" layoutY="243.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="67.0" layoutY="243.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="243.0" mnemonicParsing="false" />
+                        <Label layoutX="136.0" layoutY="245.0" text="Decreased knee flexion in swing" />
+                        <Separator blendMode="EXCLUSION" layoutY="290.0" prefHeight="0.0" prefWidth="623.0" />
+                        <RadioButton layoutX="6.0" layoutY="269.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="38.0" layoutY="269.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="67.0" layoutY="269.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="269.0" mnemonicParsing="false" />
+                        <Label layoutX="136.0" layoutY="268.0" text="Internal tibial torsion" />
+                        <Button layoutX="638.0" layoutY="21.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="127.0" text="Save Changes" />
+                  <Separator blendMode="EXCLUSION" layoutY="315.0" prefHeight="0.0" prefWidth="623.0" />
+                  <RadioButton layoutX="6.0" layoutY="293.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="38.0" layoutY="293.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="67.0" layoutY="293.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="96.0" layoutY="293.0" mnemonicParsing="false" />
+                  <Label layoutX="136.0" layoutY="294.0" text="External tibial torsion" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Ankle">
+            <content>
+                <AnchorPane prefHeight="1000.0" prefWidth="663.0">
+                    <children>
+                        <Separator blendMode="EXCLUSION" layoutY="90.0" prefHeight="0.0" prefWidth="623.0" />
+                        <Separator blendMode="EXCLUSION" layoutX="29.0" layoutY="66.0" orientation="VERTICAL" prefHeight="374.0" prefWidth="0.0" />
+                        <RadioButton layoutX="6.0" layoutY="94.0" mnemonicParsing="false" />
+                        <Label layoutX="7.0" layoutY="64.0" text="N">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Separator blendMode="EXCLUSION" layoutX="58.0" layoutY="66.0" orientation="VERTICAL" prefHeight="374.0" prefWidth="0.0" />
+                        <Label layoutX="38.0" layoutY="64.0" text="R">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <RadioButton layoutX="38.0" layoutY="94.0" mnemonicParsing="false" />
+                        <Separator blendMode="EXCLUSION" layoutX="87.0" layoutY="66.0" orientation="VERTICAL" prefHeight="374.0" prefWidth="0.0" />
+                        <Label layoutX="67.0" layoutY="64.0" text="L">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <RadioButton layoutX="67.0" layoutY="94.0" mnemonicParsing="false" />
+                        <Separator blendMode="EXCLUSION" layoutX="116.0" layoutY="66.0" orientation="VERTICAL" prefHeight="374.0" prefWidth="0.0" />
+                        <Label layoutX="96.0" layoutY="64.0" text="B">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <RadioButton layoutX="96.0" layoutY="94.0" mnemonicParsing="false" />
+                        <Label layoutX="241.0" layoutY="64.0" text="Condition">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Separator blendMode="EXCLUSION" layoutY="115.0" prefHeight="0.0" prefWidth="623.0" />
+                        <Label layoutX="136.0" layoutY="94.0" text="No heel contact" />
+                        <Separator blendMode="EXCLUSION" layoutY="140.0" prefHeight="0.0" prefWidth="623.0" />
+                        <Label layoutX="136.0" layoutY="120.0" text="Premature heel rise" />
+                        <RadioButton layoutX="6.0" layoutY="119.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="38.0" layoutY="119.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="67.0" layoutY="119.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="119.0" mnemonicParsing="false" />
+                        <Separator blendMode="EXCLUSION" layoutY="165.0" prefHeight="0.0" prefWidth="623.0" />
+                        <RadioButton layoutX="6.0" layoutY="144.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="38.0" layoutY="144.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="67.0" layoutY="144.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="144.0" mnemonicParsing="false" />
+                        <Label layoutX="136.0" layoutY="145.0" text="Ankle equinus midstance" />
+                        <Separator blendMode="EXCLUSION" layoutY="190.0" prefHeight="0.0" prefWidth="623.0" />
+                        <RadioButton layoutX="6.0" layoutY="169.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="38.0" layoutY="169.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="67.0" layoutY="169.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="169.0" mnemonicParsing="false" />
+                        <Label layoutX="136.0" layoutY="169.0" text="Varus" />
+                        <Separator blendMode="EXCLUSION" layoutY="215.0" prefHeight="0.0" prefWidth="623.0" />
+                        <RadioButton layoutX="6.0" layoutY="193.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="38.0" layoutY="193.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="67.0" layoutY="193.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="193.0" mnemonicParsing="false" />
+                        <Label layoutX="136.0" layoutY="194.0" text="Valgus" />
+                        <Separator blendMode="EXCLUSION" layoutY="240.0" prefHeight="0.0" prefWidth="623.0" />
+                        <RadioButton layoutX="6.0" layoutY="218.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="38.0" layoutY="218.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="67.0" layoutY="218.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="218.0" mnemonicParsing="false" />
+                        <Label layoutX="136.0" layoutY="220.0" text="Cavus" />
+                        <Separator blendMode="EXCLUSION" layoutY="265.0" prefHeight="0.0" prefWidth="623.0" />
+                        <RadioButton layoutX="6.0" layoutY="243.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="38.0" layoutY="243.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="67.0" layoutY="243.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="243.0" mnemonicParsing="false" />
+                        <Label layoutX="136.0" layoutY="245.0" text="Planus" />
+                        <Separator blendMode="EXCLUSION" layoutY="290.0" prefHeight="0.0" prefWidth="623.0" />
+                        <RadioButton layoutX="6.0" layoutY="269.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="38.0" layoutY="269.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="67.0" layoutY="269.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="96.0" layoutY="269.0" mnemonicParsing="false" />
+                        <Label layoutX="136.0" layoutY="268.0" text="Planovalgus" />
+                        <Button layoutX="638.0" layoutY="21.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="127.0" text="Save Changes" />
+                  <Separator blendMode="EXCLUSION" layoutY="315.0" prefHeight="0.0" prefWidth="623.0" />
+                  <RadioButton layoutX="6.0" layoutY="294.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="38.0" layoutY="294.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="67.0" layoutY="294.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="96.0" layoutY="294.0" mnemonicParsing="false" />
+                  <Label layoutX="136.0" layoutY="294.0" text="Forefoot Adduction" />
+                  <Separator blendMode="EXCLUSION" layoutY="340.0" prefHeight="0.0" prefWidth="623.0" />
+                  <RadioButton layoutX="6.0" layoutY="318.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="38.0" layoutY="318.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="67.0" layoutY="318.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="96.0" layoutY="318.0" mnemonicParsing="false" />
+                  <Label layoutX="135.0" layoutY="319.0" text="Forefoot Abduction" />
+                  <Separator blendMode="EXCLUSION" layoutY="365.0" prefHeight="0.0" prefWidth="623.0" />
+                  <RadioButton layoutX="6.0" layoutY="344.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="38.0" layoutY="344.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="67.0" layoutY="344.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="96.0" layoutY="344.0" mnemonicParsing="false" />
+                  <Label layoutX="135.0" layoutY="344.0" text="Bunion" />
+                  <Separator blendMode="EXCLUSION" layoutY="390.0" prefHeight="0.0" prefWidth="623.0" />
+                  <RadioButton layoutX="6.0" layoutY="368.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="38.0" layoutY="368.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="67.0" layoutY="368.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="96.0" layoutY="368.0" mnemonicParsing="false" />
+                  <Label layoutX="135.0" layoutY="369.0" text="Claw Toes" />
+                  <Separator blendMode="EXCLUSION" layoutY="415.0" prefHeight="0.0" prefWidth="623.0" />
+                  <RadioButton layoutX="6.0" layoutY="394.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="38.0" layoutY="394.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="67.0" layoutY="394.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="96.0" layoutY="394.0" mnemonicParsing="false" />
+                  <Label layoutX="135.0" layoutY="394.0" text="Hallus extension in swing" />
+                  <Separator blendMode="EXCLUSION" layoutY="440.0" prefHeight="0.0" prefWidth="623.0" />
+                  <RadioButton layoutX="6.0" layoutY="418.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="38.0" layoutY="418.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="67.0" layoutY="418.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="96.0" layoutY="418.0" mnemonicParsing="false" />
+                  <Label layoutX="133.0" layoutY="419.0" text="Persistent high toe walking" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+      <Tab text="Foot Progression">
+         <content>
+            <AnchorPane prefHeight="1000.0" prefWidth="663.0">
+               <children>
+                  <Separator blendMode="EXCLUSION" layoutY="90.0" prefHeight="0.0" prefWidth="623.0" />
+                  <Separator blendMode="EXCLUSION" layoutX="29.0" layoutY="66.0" orientation="VERTICAL" prefHeight="75.0" prefWidth="0.0" />
+                  <RadioButton layoutX="6.0" layoutY="94.0" mnemonicParsing="false" />
+                  <Label layoutX="7.0" layoutY="64.0" text="N">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Separator blendMode="EXCLUSION" layoutX="58.0" layoutY="66.0" orientation="VERTICAL" prefHeight="75.0" prefWidth="0.0" />
+                  <Label layoutX="38.0" layoutY="64.0" text="R">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <RadioButton layoutX="38.0" layoutY="94.0" mnemonicParsing="false" />
+                  <Separator blendMode="EXCLUSION" layoutX="87.0" layoutY="66.0" orientation="VERTICAL" prefHeight="75.0" prefWidth="0.0" />
+                  <Label layoutX="67.0" layoutY="64.0" text="L">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <RadioButton layoutX="67.0" layoutY="94.0" mnemonicParsing="false" />
+                  <Separator blendMode="EXCLUSION" layoutX="116.0" layoutY="66.0" orientation="VERTICAL" prefHeight="75.0" prefWidth="0.0" />
+                  <Label layoutX="96.0" layoutY="64.0" text="B">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <RadioButton layoutX="96.0" layoutY="94.0" mnemonicParsing="false" />
+                  <Label layoutX="241.0" layoutY="64.0" text="Condition">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Separator blendMode="EXCLUSION" layoutY="115.0" prefHeight="0.0" prefWidth="623.0" />
+                  <Label layoutX="136.0" layoutY="94.0" text="External" />
+                  <Separator blendMode="EXCLUSION" layoutY="140.0" prefHeight="0.0" prefWidth="623.0" />
+                  <Label layoutX="136.0" layoutY="120.0" text="Internal" />
+                  <RadioButton layoutX="6.0" layoutY="119.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="38.0" layoutY="119.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="67.0" layoutY="119.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="96.0" layoutY="119.0" mnemonicParsing="false" />
+                  <Button layoutX="638.0" layoutY="21.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="127.0" text="Save Changes" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Foot Clearance">
+         <content>
+            <AnchorPane prefHeight="1000.0" prefWidth="663.0">
+               <children>
+                  <Separator blendMode="EXCLUSION" layoutY="90.0" prefHeight="0.0" prefWidth="623.0" />
+                  <Separator blendMode="EXCLUSION" layoutX="29.0" layoutY="66.0" orientation="VERTICAL" prefHeight="75.0" prefWidth="0.0" />
+                  <RadioButton layoutX="6.0" layoutY="94.0" mnemonicParsing="false" />
+                  <Label layoutX="7.0" layoutY="64.0" text="N">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Separator blendMode="EXCLUSION" layoutX="58.0" layoutY="66.0" orientation="VERTICAL" prefHeight="75.0" prefWidth="0.0" />
+                  <Label layoutX="38.0" layoutY="64.0" text="R">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <RadioButton layoutX="38.0" layoutY="94.0" mnemonicParsing="false" />
+                  <Separator blendMode="EXCLUSION" layoutX="87.0" layoutY="66.0" orientation="VERTICAL" prefHeight="75.0" prefWidth="0.0" />
+                  <Label layoutX="67.0" layoutY="64.0" text="L">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <RadioButton layoutX="67.0" layoutY="94.0" mnemonicParsing="false" />
+                  <Separator blendMode="EXCLUSION" layoutX="116.0" layoutY="66.0" orientation="VERTICAL" prefHeight="75.0" prefWidth="0.0" />
+                  <Label layoutX="96.0" layoutY="64.0" text="B">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <RadioButton layoutX="96.0" layoutY="94.0" mnemonicParsing="false" />
+                  <Label layoutX="241.0" layoutY="64.0" text="Condition">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Separator blendMode="EXCLUSION" layoutY="115.0" prefHeight="0.0" prefWidth="623.0" />
+                  <Label layoutX="136.0" layoutY="94.0" text="Occasional Drag" />
+                  <Separator blendMode="EXCLUSION" layoutY="140.0" prefHeight="0.0" prefWidth="623.0" />
+                  <Label layoutX="136.0" layoutY="120.0" text="Consistent Drag" />
+                  <RadioButton layoutX="6.0" layoutY="119.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="38.0" layoutY="119.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="67.0" layoutY="119.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="96.0" layoutY="119.0" mnemonicParsing="false" />
+                  <Button layoutX="638.0" layoutY="21.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="127.0" text="Save Changes" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Running">
+         <content>
+            <AnchorPane prefHeight="1000.0" prefWidth="663.0">
+               <children>
+                  <Separator blendMode="EXCLUSION" layoutY="409.0" prefHeight="0.0" prefWidth="623.0" />
+                  <Separator blendMode="EXCLUSION" layoutX="29.0" layoutY="385.0" orientation="VERTICAL" prefHeight="99.0" prefWidth="0.0" />
+                  <RadioButton layoutX="6.0" layoutY="413.0" mnemonicParsing="false" />
+                  <Label layoutX="7.0" layoutY="383.0" text="N">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Separator blendMode="EXCLUSION" layoutX="58.0" layoutY="385.0" orientation="VERTICAL" prefHeight="99.0" prefWidth="0.0" />
+                  <Label layoutX="38.0" layoutY="383.0" text="R">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <RadioButton layoutX="38.0" layoutY="413.0" mnemonicParsing="false" />
+                  <Separator blendMode="EXCLUSION" layoutX="87.0" layoutY="385.0" orientation="VERTICAL" prefHeight="99.0" prefWidth="0.0" />
+                  <Label layoutX="67.0" layoutY="383.0" text="L">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <RadioButton layoutX="67.0" layoutY="413.0" mnemonicParsing="false" />
+                  <Separator blendMode="EXCLUSION" layoutX="116.0" layoutY="385.0" orientation="VERTICAL" prefHeight="99.0" prefWidth="0.0" />
+                  <Label layoutX="96.0" layoutY="383.0" text="B">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <RadioButton layoutX="96.0" layoutY="413.0" mnemonicParsing="false" />
+                  <Label layoutX="241.0" layoutY="383.0" text="Condition">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Separator blendMode="EXCLUSION" layoutY="434.0" prefHeight="0.0" prefWidth="623.0" />
+                  <Label layoutX="136.0" layoutY="413.0" text="Stiff Leg" />
+                  <Separator blendMode="EXCLUSION" layoutY="459.0" prefHeight="0.0" prefWidth="623.0" />
+                  <Label layoutX="136.0" layoutY="439.0" text="Increased Arm Posturing" />
+                  <RadioButton layoutX="6.0" layoutY="438.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="38.0" layoutY="438.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="67.0" layoutY="438.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="96.0" layoutY="438.0" mnemonicParsing="false" />
+                  <Button layoutX="638.0" layoutY="21.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="127.0" text="Save Changes" />
+                  <Separator blendMode="EXCLUSION" layoutY="484.0" prefHeight="0.0" prefWidth="623.0" />
+                  <RadioButton layoutX="96.0" layoutY="462.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="67.0" layoutY="462.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="38.0" layoutY="462.0" mnemonicParsing="false" />
+                  <RadioButton layoutX="6.0" layoutY="462.0" mnemonicParsing="false" />
+                  <Label layoutX="136.0" layoutY="462.0" text="Heel whip" />
+                  <Separator layoutY="64.0" prefHeight="0.0" prefWidth="576.0" />
+                  <Separator layoutX="68.0" layoutY="65.0" orientation="VERTICAL" prefHeight="143.0" prefWidth="0.0" />
+                  <Separator layoutY="100.0" prefHeight="0.0" prefWidth="576.0" />
+                  <RadioButton layoutX="27.0" layoutY="75.0" mnemonicParsing="false" />
+                  <Label layoutX="90.0" layoutY="75.0" text="Normal" />
+                  <Separator layoutY="136.0" prefHeight="0.0" prefWidth="576.0" />
+                  <RadioButton layoutX="27.0" layoutY="111.0" mnemonicParsing="false" />
+                  <Label layoutX="92.0" layoutY="111.0" text="None" />
+                  <Separator layoutY="172.0" prefHeight="0.0" prefWidth="576.0" />
+                  <Label layoutX="92.0" layoutY="146.0" text="Increased speed but no float" />
+                  <RadioButton layoutX="27.0" layoutY="146.0" mnemonicParsing="false" />
+                  <Separator layoutY="208.0" prefHeight="0.0" prefWidth="576.0" />
+                  <RadioButton layoutX="27.0" layoutY="182.0" mnemonicParsing="false" />
+                  <Label layoutX="92.0" layoutY="182.0" text="Slow speed with float" />
+                  <Separator layoutX="573.0" layoutY="64.0" orientation="VERTICAL" prefHeight="143.0" prefWidth="0.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+    </TabPane>
+
+</ScrollPane>

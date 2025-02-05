@@ -38,47 +38,47 @@ public class PatientVideoController {
 //            }
 //        }
 
-        Thread watchFilesThread = new Thread(this::onWatchListener);
-        watchFilesThread.setDaemon(true);
-        watchFilesThread.start();
+//        Thread watchFilesThread = new Thread(this::onWatchListener);
+//        watchFilesThread.setDaemon(true);
+//        watchFilesThread.start();
 
     }
 
-    public void onWatchListener() {
-        try {
-            Path directoryPath = Paths.get("C:\\Users\\test");
-
-            WatchService watchService = FileSystems.getDefault().newWatchService();
-
-            directoryPath.register(watchService,
-                    StandardWatchEventKinds.ENTRY_CREATE);
-
-            System.out.println("Watching directory: " + directoryPath);
-
-            while (true) {
-                WatchKey key = watchService.take();
-                    for (WatchEvent<?> event : key.pollEvents())
-                    {
-                        // Handle the specific event
-                        if (event.kind() == StandardWatchEventKinds.ENTRY_CREATE)
-                        {
-                            System.out.println("File created: " + event.context());
-                        }
-                        else if (event.kind() == StandardWatchEventKinds.ENTRY_DELETE)
-                        {
-                            System.out.println("File deleted: " + event.context());
-                        }
-                        else if (event.kind() == StandardWatchEventKinds.ENTRY_MODIFY)
-                        {
-                            System.out.println("File modified: " + event.context());
-                        }
-                    }
-                key.reset();
-            }
-        } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
+//    public void onWatchListener() {
+//        try {
+//            Path directoryPath = Paths.get("C:\\Users\\test");
+//
+//            WatchService watchService = FileSystems.getDefault().newWatchService();
+//
+//            directoryPath.register(watchService,
+//                    StandardWatchEventKinds.ENTRY_CREATE);
+//
+//            System.out.println("Watching directory: " + directoryPath);
+//
+//            while (true) {
+//                WatchKey key = watchService.take();
+//                    for (WatchEvent<?> event : key.pollEvents())
+//                    {
+//                        // Handle the specific event
+//                        if (event.kind() == StandardWatchEventKinds.ENTRY_CREATE)
+//                        {
+//                            System.out.println("File created: " + event.context());
+//                        }
+//                        else if (event.kind() == StandardWatchEventKinds.ENTRY_DELETE)
+//                        {
+//                            System.out.println("File deleted: " + event.context());
+//                        }
+//                        else if (event.kind() == StandardWatchEventKinds.ENTRY_MODIFY)
+//                        {
+//                            System.out.println("File modified: " + event.context());
+//                        }
+//                    }
+//                key.reset();
+//            }
+//        } catch (IOException | InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
 
     public void onAddNew(ActionEvent event) {

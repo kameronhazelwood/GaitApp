@@ -145,7 +145,7 @@ public class GenerateGAITInterpretationController {
     @FXML
     void onVideoAssessment(MouseEvent event) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Interpretation/UE/InterpretationVideoUE.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Interpretation/GAIT/InterpretationVideoGAIT.fxml")));
         bp.setCenter(root);
     }
 

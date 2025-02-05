@@ -23,7 +23,7 @@ public class PatientServiceImpl implements PatientService {
     public IPatientModel update(IPatientModel patientModel){ return repo.save(patientModel);}
 
     @Override
-    public Optional<IPatientModel> findByFirstName(String firstName) {
+    public IPatientModel findByFirstName(String firstName) {
         return repo.findByFirstName(firstName);
     }
 
@@ -43,18 +43,18 @@ public class PatientServiceImpl implements PatientService {
     }
 
     private final String FILE_PATH = "user.home";
-    @Override
-    public String uploadFileToDirectory(MultipartFile file) throws IOException {
-        String filePath = FILE_PATH+file.getOriginalFilename();
+//    @Override
+//    public String uploadFileToDirectory(MultipartFile file) throws IOException {
+//        String filePath = FILE_PATH+file.getOriginalFilename();
+//
+//        return filePath;
+//
+//    }
 
-        return filePath;
-
-    }
-
-    @Override
-    public IPatientModel findByImagePath(String imagePath) {
-        return null;
-    }
+//    @Override
+//    public IPatientModel findByImagePath(String imagePath) {
+//        return null;
+//    }
 
     //    @Override
 //    public IPatientModel findByPatientId(Integer patientId) { return repo.findByPatientId(patientId); }

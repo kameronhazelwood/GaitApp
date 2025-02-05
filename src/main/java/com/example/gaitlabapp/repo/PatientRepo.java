@@ -10,11 +10,11 @@ import java.util.Optional;
 @Repository
 public interface PatientRepo extends JpaRepository<IPatientModel, String> {
 
-    Optional<IPatientModel> findByFirstName(String firstName);
+    IPatientModel findByFirstName(String firstName);
     Optional<IPatientModel> findByLastName(String lastName);
    // IPatientModel findByPatientId(Integer patientId);
     List<IPatientModel> findAll();
     IPatientModel findByMrn(String mrn);
-    IPatientModel findByImageName(String imagePath);
+//    IPatientModel findByImageName(String imagePath);
 //    IPatientModel findByPatientId(Integer patientId);
 }

@@ -35,15 +35,15 @@ public class CompendiumPngController implements Initializable {
     @FXML
     private ImageView iv8;
 
-    Image ankleAngles = new Image(String.valueOf(getClass().getResource("/TestPhotos/comp/99999999_052223_AnkleJointAngles.png")));
-    Image ankleMovements = new Image(String.valueOf(getClass().getResource("/TestPhotos/comp/99999999_052223_AnkleJointMoments.png")));
-    Image arch = new Image(String.valueOf(getClass().getResource("/TestPhotos/comp/99999999_052223_Arch.png")));
-    Image armAngles = new Image(String.valueOf(getClass().getResource("/TestPhotos/comp/99999999_052223_ArmJointAngles.png")));
-    Image emgWave = new Image(String.valueOf(getClass().getResource("/TestPhotos/comp/99999999_052223_EmgWaveforms.png")));
-    Image footOrientation = new Image(String.valueOf(getClass().getResource("/TestPhotos/comp/99999999_052223_FootOrientation.png")));
-    Image forefoot = new Image(String.valueOf(getClass().getResource("/TestPhotos/comp/99999999_052223_ForeFoot.png")));
-    Image groundForces = new Image(String.valueOf(getClass().getResource("/TestPhotos/comp/99999999_052223_GroundReactionForces.png")));
-    Image hallux = new Image(String.valueOf(getClass().getResource("/TestPhotos/comp/99999999_052223_Hallux.png")));
+    Image ankleAngles = new Image(String.valueOf(getClass().getResource("/PNG/99999999_052223_AnkleJointAngles.png")));
+    Image ankleMovements = new Image(String.valueOf(getClass().getResource("/PNG/99999999_052223_AnkleJointMoments.png")));
+    Image arch = new Image(String.valueOf(getClass().getResource("/PNG/99999999_052223_Arch.png")));
+    Image armAngles = new Image(String.valueOf(getClass().getResource("/PNG/99999999_052223_AnkleJointAngles.png")));
+    Image emgWave = new Image(String.valueOf(getClass().getResource("/PNG/99999999_052223_EmgWaveforms.png")));
+    Image footOrientation = new Image(String.valueOf(getClass().getResource("/PNG/99999999_052223_FootOrientation.png")));
+    Image forefoot = new Image(String.valueOf(getClass().getResource("/PNG/99999999_052223_ForeFoot.png")));
+    Image groundForces = new Image(String.valueOf(getClass().getResource("/PNG/99999999_052223_GroundReactionForces.png")));
+    Image hallux = new Image(String.valueOf(getClass().getResource("/PNG/99999999_052223_Hallux.png")));
 
 
     @Override
