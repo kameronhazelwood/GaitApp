@@ -50,7 +50,7 @@ public class Videos  implements Initializable {
         labelOne.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                media = new Media(Objects.requireNonNull(getClass().getResource("/TestVideos/LanceG 30963671 082323.mp4")).toString());
+                media = new Media(Objects.requireNonNull(getClass().getResource("/PNG/DaumM 32581055 111122.mp4")).toString());
                 mediaPlayer = new MediaPlayer(media);
                 mediaViewer.setMediaPlayer(mediaPlayer);
                 mediaPlayer.currentTimeProperty().addListener(((observableValue, oldValue, newValue) -> {
@@ -69,24 +69,24 @@ public class Videos  implements Initializable {
             }
         });
 
-        labelTwo.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                media = new Media(Objects.requireNonNull(getClass().getResource("/TestVideos/LanceG 30963671 082323.mp4")).toString());
-                mediaPlayer = new MediaPlayer(media);
-                mediaViewer.setMediaPlayer(mediaPlayer);
-                mediaPlayer.currentTimeProperty().addListener(((observableValue, oldValue, newValue) -> {
-                    slider.setValue(newValue.toSeconds());
-                    lblDuration.setText("Duration: " + (int)slider.getValue() + " / " + (int)media.getDuration().toSeconds());
-                }));
-
-                mediaPlayer.setOnReady(() ->{
-                    Duration totalDuration = media.getDuration();
-                    slider.setMax(totalDuration.toSeconds());
-                    lblDuration.setText("Duration: 00 / " + (int)media.getDuration().toSeconds());
-                });
-            }
-        });
+//        labelTwo.setOnAction(new EventHandler<ActionEvent>() {
+//            @Override
+//            public void handle(ActionEvent event) {
+//                media = new Media(Objects.requireNonNull(getClass().getResource("/TestVideos/LanceG 30963671 082323.mp4")).toString());
+//                mediaPlayer = new MediaPlayer(media);
+//                mediaViewer.setMediaPlayer(mediaPlayer);
+//                mediaPlayer.currentTimeProperty().addListener(((observableValue, oldValue, newValue) -> {
+//                    slider.setValue(newValue.toSeconds());
+//                    lblDuration.setText("Duration: " + (int)slider.getValue() + " / " + (int)media.getDuration().toSeconds());
+//                }));
+//
+//                mediaPlayer.setOnReady(() ->{
+//                    Duration totalDuration = media.getDuration();
+//                    slider.setMax(totalDuration.toSeconds());
+//                    lblDuration.setText("Duration: 00 / " + (int)media.getDuration().toSeconds());
+//                });
+//            }
+//        });
 
     }
     @FXML

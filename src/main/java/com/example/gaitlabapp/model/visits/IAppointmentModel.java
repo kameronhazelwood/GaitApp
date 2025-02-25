@@ -56,14 +56,18 @@ public class IAppointmentModel  {
     @Column(name = "referring_phys")
     @Setter
     private String referringPhys;
-//    @Column(name = "visitPT")
-//    private final StringProperty visitPT;
-//    @Column(name = "visitPT2")
-//    private final StringProperty visitPT2;
-//    @Column(name = "visitBioMech")
-//    private final StringProperty visitBioMech;
-//    @Column(name = "visitBioMech2")
-//    private final StringProperty visitBioMech2;
+    @Column(name = "visitPT")
+    @Setter
+    private  String visitPT;
+    @Column(name = "visitPT2")
+    @Setter
+    private  String visitPT2;
+    @Column(name = "visitBioMech")
+    @Setter
+    private String visitBioMech;
+    @Column(name = "visitBioMech2")
+    @Setter
+    private String visitBioMech2;
     @Column(name = "type")
     private final Type type;
     @Column(name = "test_reason")
@@ -80,7 +84,7 @@ public class IAppointmentModel  {
 
     public Set<IPatientModel> patientModel;
 
-    public IAppointmentModel(Integer aptId, String aptDate, String visitType, String visitSubType, String referringPhys, Type type, String testReason, Integer patientId) {
+    public IAppointmentModel(Integer aptId, String aptDate, String visitType, String visitSubType, String referringPhys, Type type, String testReason, Integer patientId, String visitBioMech2, String visitBioMech, String visitPT, String visitPT2) {
         this.aptId = aptId;
         this.aptDate = aptDate;
         this.visitType = visitType;
@@ -89,6 +93,10 @@ public class IAppointmentModel  {
         this.type = type;
         this.testReason = testReason;
         this.patientId = patientId;
+        this.visitPT = visitPT;
+        this.visitPT2 = visitPT2;
+        this.visitBioMech = visitBioMech;
+        this.visitBioMech2 = visitBioMech2;
     }
 
 

@@ -88,11 +88,11 @@
                 <content>
                     <Pane prefHeight="540.0" prefWidth="952.0">
                         <children>
-                     <TableView fx:id="tableView" layoutX="9.0" layoutY="89.0" prefHeight="425.0" prefWidth="1003.0">
+                     <TableView fx:id="tableView" layoutX="98.0" layoutY="89.0" prefHeight="412.0" prefWidth="868.0">
                        <columns>
-                           <TableColumn fx:id="aptData" prefWidth="155.99999487400055" text="Date" />
-                           <TableColumn fx:id="visitType" minWidth="0.0" prefWidth="585.0" text="Visit Type" />
-                           <TableColumn fx:id="referringMd" prefWidth="266.00001525878906" text="Referring MD" />
+                           <TableColumn fx:id="aptData" editable="false" prefWidth="155.99999487400055" text="Date" />
+                           <TableColumn fx:id="visitType" editable="false" minWidth="0.0" prefWidth="265.3333435058594" text="Visit Type" />
+                           <TableColumn fx:id="visitsubtype" editable="false" prefWidth="444.6665954589844" text="Visit Sub Type" />
                        </columns>
                      </TableView>
                      <Button fx:id="addNewAppointment" layoutX="14.0" layoutY="28.0" mnemonicParsing="false" onAction="#onAddNewApt" prefHeight="42.0" prefWidth="148.0" text="Add New" />
@@ -143,9 +143,9 @@
                                        <Font name="System Bold" size="14.0" />
                                     </font>
                                  </Label>
-                                 <Button fx:id="addSurgicalHistory" layoutX="450.0" layoutY="41.0" mnemonicParsing="false" text="Add Surgical History" onAction="#addSurgery"/>
-                                 <Button fx:id="addBotox" layoutX="486.0" layoutY="299.0" mnemonicParsing="false" text="Add Botox" onAction="#addBotox"/>
-                                 <Button fx:id="addHealthHistory" layoutX="454.0" layoutY="555.0" mnemonicParsing="false" text="Add Health History" onAction="#addHealthHistory"/>
+                                 <Button fx:id="addSurgicalHistory" layoutX="450.0" layoutY="41.0" mnemonicParsing="false" onAction="#addSurgery" text="Add Surgical History" />
+                                 <Button fx:id="addBotox" layoutX="486.0" layoutY="299.0" mnemonicParsing="false" onAction="#addBotox" text="Add Botox" />
+                                 <Button fx:id="addHealthHistory" layoutX="454.0" layoutY="555.0" mnemonicParsing="false" onAction="#addHealthHistory" text="Add Health History" />
                               </children></AnchorPane>
                        </content>
                      </ScrollPane>

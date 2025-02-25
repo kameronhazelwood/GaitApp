@@ -5,11 +5,13 @@ import com.example.gaitlabapp.controllers.Forms.Compendium.CompendiumInfoPageCon
 import com.example.gaitlabapp.controllers.Forms.Compendium.GenerateCompendiumSide;
 import com.example.gaitlabapp.controllers.Wizards.AddBotoxController;
 import com.example.gaitlabapp.controllers.Wizards.AddOrthosisWizard;
+import com.example.gaitlabapp.model.forms.IGenMarkInfoModel;
 import com.example.gaitlabapp.model.forms.IOrthosisModel;
 import com.example.gaitlabapp.model.patients.IPatientModel;
 import com.example.gaitlabapp.model.visits.IAppointmentModel;
 import com.example.gaitlabapp.services.AptsService;
 import com.example.gaitlabapp.services.GenMarkerService;
+import com.example.gaitlabapp.services.PatientService;
 import jakarta.persistence.Table;
 import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.beans.property.SimpleObjectProperty;
@@ -58,6 +60,9 @@ import java.util.ResourceBundle;
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 @RequiredArgsConstructor
 public class VisitDetailsGaitController implements Initializable {
+    public TextField mrnTextField;
+    @Autowired
+    PatientService patientService;
     public TableView<String> reportsTable;
     public TableColumn<String, String> test;
     @FXML
@@ -77,6 +82,7 @@ public class VisitDetailsGaitController implements Initializable {
     public ComboBox<String> GMFCSCombo;
     public ComboBox<String> hipExtRP;
     public ComboBox<String> hipExtLP;
+
     public ComboBox<String> hipExtLS;
     public ComboBox<String> hipExtRS;
     public ComboBox<String> hipAbdRP;
@@ -2212,9 +2218,14 @@ public class VisitDetailsGaitController implements Initializable {
 
 
         gaitpics.setSelected(true);
-        gaitpics1.setSelected(true);
+        //gaitpics1.setSelected(true);
         gaitFootPressure.setSelected(true);
-        gaitFootPressure1.setSelected(true);
+       // gaitFootPressure1.setSelected(true);
+        videoGait.setSelected(true);
+        gaitMultiSegment.setSelected(true);
+        GAITKinematics.setSelected(true);
+
+
 
 
 
@@ -2474,12 +2485,13 @@ public class VisitDetailsGaitController implements Initializable {
     public void addTestReason(){
         try{
             IAppointmentModel newTestReason = showTestNoteDialog(
-                    new IAppointmentModel(null, null, null, null, null, null, null, null)
+                    new IAppointmentModel(null, null, null, null, null, null, null, null, null, null, null, null)
             );
         } catch (IOException ignored){
 
         }
     }
+
 
 
 
@@ -2490,6 +2502,22 @@ public class VisitDetailsGaitController implements Initializable {
         aptDate.setText(appointmentModel.getAptDate());
         aptVisitType.setText(appointmentModel.getVisitType());
         aptSubType.setText(appointmentModel.getVisitSubType());
+        aptReferringMd.setText(appointmentModel.getReferringPhys());
+        visitPt.setText(appointmentModel.getVisitPT());
+        visitPt2.setText(appointmentModel.getVisitPT2());
+        visitBio2.setText(appointmentModel.getVisitBioMech2());
+        visitBio.setText(appointmentModel.getVisitBioMech());
+        aptStartTime.setText("1:00pm");
+        aptStopTime.setText("3:00pm");
+
+    }
+
+    IPatientModel patientModel;
+
+    public void setPatient(IPatientModel patientModel){
+        this.patientModel = patientModel;
+         mrnTextField.setText("32581055");
+
     }
 
     @FXML
@@ -2705,8 +2733,7 @@ public class VisitDetailsGaitController implements Initializable {
     }
 
     //patientId.setText(String.valueOf(patientModel.getPatientID()));
-    @Setter
-    IPatientModel patientModel;
+
     @FXML
     void onViewCompendiumSideNav(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
@@ -2714,7 +2741,9 @@ public class VisitDetailsGaitController implements Initializable {
         fxmlLoader.setControllerFactory(applicationContext::getBean);
         Parent popUp = fxmlLoader.load();
         GenerateCompendiumSide generateCompendiumSide = fxmlLoader.getController();
+
         generateCompendiumSide.setInfo(patientModel);
+        //generateCompendiumSide.setAptInfo(appointmentModel);
 
         Stage stage1 = new Stage();
         popUp.getStylesheets().add(Objects.requireNonNull(Launcher.class.getResource("/styles.css")).toExternalForm());
@@ -2725,22 +2754,29 @@ public class VisitDetailsGaitController implements Initializable {
     }
 
 
-    private IPatientModel showPatientDetails(IPatientModel patientModel) throws IOException{
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Compendium/GAIT/GenerateCompendiumSide.fxml"));
-        fxmlLoader.setControllerFactory(applicationContext::getBean);
-        Parent popUp = fxmlLoader.load();
-        GenerateCompendiumSide generateCompendiumSide = fxmlLoader.getController();
-        generateCompendiumSide.setInfo(patientModel);
 
-        Stage stage1 = new Stage();
-        popUp.getStylesheets().add(Objects.requireNonNull(Launcher.class.getResource("/styles.css")).toExternalForm());
-        stage1.setTitle("Patient Compendium:  ");
-        stage1.setScene(new Scene(popUp, 800, 680));
-        stage1.setScene(popUp.getScene());
-        stage1.show();
 
-        return generateCompendiumSide.isSaved() ? patientModel : null;
+    public void showPatientDetails(IPatientModel patientModel) throws IOException{
+
+        //this.patientModel = patientModel;
+
+
+
+//        FXMLLoader fxmlLoader = new FXMLLoader();
+//        fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Compendium/GAIT/GenerateCompendiumSide.fxml"));
+//        fxmlLoader.setControllerFactory(applicationContext::getBean);
+//        Parent popUp = fxmlLoader.load();
+//        GenerateCompendiumSide generateCompendiumSide = fxmlLoader.getController();
+//        generateCompendiumSide.setInfo(patientModel);
+//
+//        Stage stage1 = new Stage();
+//        popUp.getStylesheets().add(Objects.requireNonNull(Launcher.class.getResource("/styles.css")).toExternalForm());
+//        stage1.setTitle("Patient Compendium:  ");
+//        stage1.setScene(new Scene(popUp, 800, 680));
+//        stage1.setScene(popUp.getScene());
+//        stage1.show();
+//
+//        return generateCompendiumSide.isSaved() ? patientModel : null;
     }
 
 //        if(gaitpics.isSelected() && gaitpics1.isSelected()){
@@ -2872,7 +2908,16 @@ public class VisitDetailsGaitController implements Initializable {
     }
 
 
+    public void onSavePTExam(ActionEvent event) {
+        /*
+        save gen marker data
+         */
+        IGenMarkInfoModel genMarkInfoModel = genMarkerService.findByMRN(mrnTextField.getText());
+        genMarkInfoModel.setHeight(Integer.valueOf(GAITHeight.getText()));
 
+        genMarkerService.save(genMarkInfoModel);
+
+    }
 }
 
 

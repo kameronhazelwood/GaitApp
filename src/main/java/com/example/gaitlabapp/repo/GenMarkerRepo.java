@@ -10,6 +10,5 @@ import java.util.List;
 @Repository
 public interface GenMarkerRepo extends JpaRepository<IGenMarkInfoModel, String> {
     List<IGenMarkInfoModel> findAll();
-    IGenMarkInfoModel findByPatientId(Integer patientId);
-
+    IGenMarkInfoModel findByMRN(String mrn);
 }

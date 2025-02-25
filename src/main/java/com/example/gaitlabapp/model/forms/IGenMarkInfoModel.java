@@ -8,6 +8,10 @@ import lombok.Setter;
 import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import java.io.Serializable;
 import java.util.Set;
 @Getter
 @Data
@@ -15,7 +19,7 @@ import java.util.Set;
 @Entity
 @NoArgsConstructor
 @Table(name = "gen_mark_info")
-public class IGenMarkInfoModel {
+public class IGenMarkInfoModel implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "gen_marker_id")
@@ -56,14 +60,15 @@ public class IGenMarkInfoModel {
     private String AS5;
     @Column(name = "AS6")
     private String AS6;
-    @Column(name = "patientId")
-    private Integer patientId;
+    @Column(name = "mrn")
+    private String MRN;
+//    @Column(name = "patientId")
+//    private Integer patientId;
 
 
-    @ManyToMany
-    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
-            inverseJoinColumns = @JoinColumn(name = "patient_id"))
+    @ManyToOne(fetch = FetchType.EAGER)
+  //  @JoinColumn(name = "patient_id")
+    private IPatientModel patientModel;
 
-    Set<IPatientModel> patientID;
 
 }

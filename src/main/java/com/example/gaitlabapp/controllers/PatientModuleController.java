@@ -64,8 +64,6 @@ public class PatientModuleController implements Initializable {
     @FXML
     public Button patient;
     @FXML
-    public TableColumn<IAppointmentModel, String> referringMd;
-    @FXML
     public TableColumn<IAppointmentModel, String> visitType;
     @FXML
     public TableColumn<IAppointmentModel, String> aptData;
@@ -92,14 +90,15 @@ public class PatientModuleController implements Initializable {
     public Label dobLabel;
     public DatePicker picker;
     public ScrollPane sp;
+    public TableColumn<IAppointmentModel, String> visitsubtype;
 
 
     ObservableList<IAppointmentModel> initialData() {
-        IAppointmentModel apt1 = new IAppointmentModel(1, "1/21/2025", "9/21/202", "GAIT - Full Diagnostic", "Dr. Smith", GAIT, "",  2);
-        IAppointmentModel apt2 = new IAppointmentModel(1, "1/22/2025", "9/22/202", "GAIT - Full Diagnostic", "Dr. Smith", GAIT, "", 2);
+        IAppointmentModel apt1 = new IAppointmentModel(1, "11/22/2022", "GAIT", "Full Diagnostic", "", GAIT, "",  2, "", "", "", "");
+       // IAppointmentModel apt2 = new IAppointmentModel(1, "1/22/2025", "GAIT", "Full Diagnostic", "Dr. Smith", GAIT, "", 2, "", "", "", "");
 //        IAppointmentModel apt2 = new IAppointmentModel(2, "", "2/8/2023", "Upper Extremity - Full Diagnostic", "Dr. Smith", UE, 2);
 //        IAppointmentModel apt3 = new IAppointmentModel(3, "", "3/12/2024", "Gait - Foot Evaluation", "Dr. Smith", FOOT, 2);
-        return FXCollections.observableArrayList(apt2, apt1);
+        return FXCollections.observableArrayList(apt1);
     }
 
     @FXML
@@ -286,8 +285,8 @@ public class PatientModuleController implements Initializable {
             return row;
         });
         aptData.setCellValueFactory((new PropertyValueFactory<IAppointmentModel, String>("aptDate")));
-        referringMd.setCellValueFactory((new PropertyValueFactory<IAppointmentModel, String>("referringPhys")));
         visitType.setCellValueFactory(new PropertyValueFactory<IAppointmentModel, String>("Type"));
+        visitsubtype.setCellValueFactory(new PropertyValueFactory<IAppointmentModel, String>("visitSubType"));
         tableView.setItems(initialData());
 
         /*
@@ -465,15 +464,16 @@ public class PatientModuleController implements Initializable {
             switch (appointmentModel.getType()) {
                 case GAIT -> {
                     IPatientModel patientModel = new IPatientModel();
-                //    patientService.findByMrn(mrnTextfield.getText());
+
                     FXMLLoader fxmlLoader = new FXMLLoader();
+
                     fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Visits/VisitDetailsGait.fxml"));
                     fxmlLoader.setControllerFactory(applicationContext::getBean);
                     Parent popUp = fxmlLoader.load();
                     VisitDetailsGaitController visitDetailsGaitController = fxmlLoader.getController();
 
                     visitDetailsGaitController.setAppointmentModel(appointmentModel);
-                    visitDetailsGaitController.setPatientModel(patientModel);
+                    visitDetailsGaitController.setPatient(patientModel);
                     Stage stage1 = new Stage((StageStyle.UTILITY));
                     stage1.initModality(Modality.WINDOW_MODAL);
                     stage1.initOwner(getVisitGaitDetails());
@@ -733,9 +733,9 @@ public class PatientModuleController implements Initializable {
 
     private ISurgeryModel showSurgeryDialog(ISurgeryModel surgeryModel, String title) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Wizards/AddSurgery.fxml"));
+        fxmlLoader.setControllerFactory(applicationContext::getBean);
         Parent surgeryPane = fxmlLoader.load();
         AddSurgeryController addSurgeryController = fxmlLoader.getController();
-
         addSurgeryController.setSurgery(surgeryModel);
 
         Stage addSurgeryStage = new Stage((StageStyle.UTILITY));

@@ -22,21 +22,21 @@
       <Label layoutX="20.0" layoutY="68.0" text="MRN: " />
       <Label layoutX="20.0" layoutY="85.0" text="Date of Birth: " />
       <Label layoutX="20.0" layoutY="103.0" text="Age at Eval: " />
-      <Label fx:id="patientName" layoutX="112.0" layoutY="68.0" text="123" />
-      <Label layoutX="112.0" layoutY="85.0" text="01/01/2000" />
-      <Label layoutX="112.0" layoutY="103.0" text="24" />
+      <Label fx:id="patientName" layoutX="112.0" layoutY="68.0" text="32581055" />
+      <Label fx:id="compDOB" layoutX="112.0" layoutY="85.0" text="3/14/14 " />
+      <Label layoutX="112.0" layoutY="103.0" text="Text" />
       <Label layoutX="203.0" layoutY="68.0" text="Height (cm):" />
       <Label layoutX="203.0" layoutY="85.0" text="Weight (kg):" />
       <Label layoutX="203.0" layoutY="103.0" text="Gender: " />
-      <Label layoutX="285.0" layoutY="68.0" text="null" />
-      <Label layoutX="285.0" layoutY="85.0" text="null" />
-      <Label layoutX="285.0" layoutY="103.0" text="null" />
+      <Label fx:id="compHeight" layoutX="285.0" layoutY="68.0" text="128.0  " />
+      <Label fx:id="compWeigh" layoutX="285.0" layoutY="85.0" text="21.0  " />
+      <Label fx:id="compGender" layoutX="285.0" layoutY="103.0" text="Female " />
       <Label layoutX="357.0" layoutY="68.0" text="Date of Eval: " />
       <Label layoutX="357.0" layoutY="85.0" text="Therapist: " />
       <Label layoutX="357.0" layoutY="103.0" text="Comparisons: " />
-      <Label layoutX="442.0" layoutY="68.0" text="null" />
-      <Label layoutX="442.0" layoutY="85.0" text="null" />
-      <Label layoutX="442.0" layoutY="103.0" text="null" />
+      <Label layoutX="442.0" layoutY="68.0" text="11/11/22 " />
+      <Label layoutX="442.0" layoutY="85.0" text="Freeman Miller" />
+      <Label layoutX="442.0" layoutY="103.0" text="Text" />
       <Separator layoutX="-1.0" layoutY="35.0" prefHeight="0.0" prefWidth="653.0" />
       <Separator blendMode="DIFFERENCE" layoutY="151.0" prefHeight="0.0" prefWidth="653.0" />
       <Label layoutX="101.0" layoutY="162.0" text="Passive ROM">
@@ -58,7 +58,7 @@
       <Separator layoutX="91.0" layoutY="178.0" orientation="VERTICAL" prefHeight="639.0" prefWidth="2.0" />
       <Label layoutX="134.0" layoutY="181.0" text="Right" />
       <Separator layoutX="199.0" layoutY="179.0" orientation="VERTICAL" prefHeight="637.0" prefWidth="1.0" />
-      <Text layoutX="101.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="101.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="125 " />
       <Separator layoutY="197.0" prefHeight="3.0" prefWidth="471.0" />
       <Separator layoutX="129.0" layoutY="199.0" orientation="VERTICAL" prefHeight="620.0" prefWidth="0.0" />
       <Text layoutX="135.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
@@ -67,7 +67,7 @@
       <Text layoutX="5.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip Flex" />
       <Separator layoutX="-1.0" layoutY="216.0" prefHeight="0.0" prefWidth="473.0" />
       <Label layoutX="237.0" layoutY="181.0" text="Left" />
-      <Text layoutX="208.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="208.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="125 " />
       <Text layoutX="241.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="274.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Separator layoutX="234.0" layoutY="199.0" orientation="VERTICAL" prefHeight="620.0" prefWidth="0.0" />
@@ -75,11 +75,11 @@
       <Separator layoutX="300.0" layoutY="179.0" orientation="VERTICAL" prefHeight="637.0" prefWidth="1.0" />
       <Label layoutX="329.0" layoutY="181.0" text="Right" />
       <Label layoutX="413.0" layoutY="181.0" text="Left" />
-      <Text layoutX="312.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="312.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4+ " />
       <Text layoutX="354.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Separator layoutX="341.0" layoutY="199.0" orientation="VERTICAL" prefHeight="619.0" prefWidth="0.0" />
       <Separator layoutX="381.0" layoutY="179.0" orientation="VERTICAL" prefHeight="639.0" prefWidth="0.0" />
-      <Text layoutX="392.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="392.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5 " />
       <Text layoutX="432.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Separator layoutX="422.0" layoutY="198.0" orientation="VERTICAL" prefHeight="617.0" prefWidth="3.0" />
       <Separator layoutX="469.0" layoutY="178.0" orientation="VERTICAL" prefHeight="639.0" prefWidth="1.0" />
@@ -125,40 +125,40 @@
       <Separator layoutX="-2.0" layoutY="742.0" prefHeight="0.0" prefWidth="473.0" />
       <Text layoutX="5.0" layoutY="761.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee Varus/Valgus" wrappingWidth="87.14907836914062" />
       <Separator layoutX="-3.0" layoutY="789.0" prefHeight="0.0" prefWidth="473.0" />
-      <Text layoutX="102.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="102.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
       <Text layoutX="137.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="173.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="208.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="208.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" />
       <Text layoutX="237.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="274.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="314.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="314.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4+ " />
       <Text layoutX="354.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="392.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="392.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5 " />
       <Text layoutX="432.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="101.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="101.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30 " />
       <Text layoutX="137.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="173.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="208.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="208.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30 " />
       <Text layoutX="241.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="274.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="314.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="354.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="392.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="432.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="102.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="102.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="60 " />
       <Text layoutX="135.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="173.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="208.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="208.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="55 " />
       <Text layoutX="241.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="274.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="102.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="102.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="25 " />
       <Text layoutX="137.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="173.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="208.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="208.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="25 " />
       <Text layoutX="241.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="274.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="101.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="101.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="101.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30" />
+      <Text layoutX="101.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-8" />
       <Text layoutX="101.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="101.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="137.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
@@ -173,11 +173,11 @@
       <Text layoutX="274.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="137.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="173.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="208.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="208.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-5" />
       <Text layoutX="241.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="137.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="173.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="208.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="208.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-20" />
       <Text layoutX="240.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="274.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="274.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
@@ -342,12 +342,12 @@
       <Label layoutX="5.0" layoutY="1203.0" prefHeight="38.0" prefWidth="105.0" text="Distal Muscle Control" wrapText="true" />
       <Separator layoutX="-1.0" layoutY="1242.0" prefHeight="1.0" prefWidth="433.0" />
       <Separator blendMode="DIFFERENCE" layoutY="829.0" prefHeight="1.0" prefWidth="675.0" />
-      <Text layoutX="162.0" layoutY="916.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="162.0" layoutY="916.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />
       <Text layoutX="240.0" layoutY="916.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="311.0" layoutY="916.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="311.0" layoutY="916.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />
       <Text layoutX="370.0" layoutY="916.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="162.0" layoutY="941.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="162.0" layoutY="966.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="162.0" layoutY="941.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />
+      <Text layoutX="162.0" layoutY="966.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />
       <Text layoutX="162.0" layoutY="990.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="162.0" layoutY="1015.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="162.0" layoutY="1038.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
@@ -363,9 +363,9 @@
       <Text layoutX="240.0" layoutY="990.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="240.0" layoutY="1014.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="240.0" layoutY="1037.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="311.0" layoutY="941.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="311.0" layoutY="941.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />
       <Text layoutX="370.0" layoutY="940.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="311.0" layoutY="966.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="311.0" layoutY="966.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />
       <Text layoutX="370.0" layoutY="965.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="311.0" layoutY="990.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="370.0" layoutY="989.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />

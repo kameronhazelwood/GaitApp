@@ -1,10 +1,12 @@
 package com.example.gaitlabapp.model.patients;
 
+import com.example.gaitlabapp.model.forms.IGenMarkInfoModel;
 import jakarta.persistence.*;
-import javafx.beans.property.StringProperty;
 import lombok.*;
 
 
+import java.io.Serializable;
+import java.util.List;
 import java.util.Set;
 
 
@@ -13,9 +15,7 @@ import java.util.Set;
 @NoArgsConstructor(force = true)
 @Data
 @Table(name = "patients")
-
-
-public class IPatientModel {
+public class IPatientModel implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,9 +27,6 @@ public class IPatientModel {
     @Column(name = "last_name")
     @Setter
     private String lastName;
-//    @Column(name = "images")
-//    @Setter
-//    private String imagePath;
     @Column(name = "preffered_first_name")
     @Setter
     private String preferredFirstName;
@@ -64,9 +61,11 @@ public class IPatientModel {
      Set<IDiagnosisModel> gen_diagnosis;
 
 
-//    @ManyToOne
-//    @JoinColumn(name = "patient_id")
-//    private IBotoxModel botoxModel;
+
+    @OneToMany(mappedBy= "patientModel")
+    private Set<ISurgeryModel> surgeryModels;
+
+
 
     public IPatientModel(String s, String s1, String s2) {
         this.setFirstName(s);
@@ -74,8 +73,6 @@ public class IPatientModel {
         this.lastName = s1;
         this.mrn = s2;
     }
-
-
 
     public IPatientModel(Integer patientID, String firstName, String lastName, String preferredFirstName, String mrn, String formerLastName, String address, String gender, String dob, String comments, String state, String genDiagnosis) {
         this.patientID = patientID;

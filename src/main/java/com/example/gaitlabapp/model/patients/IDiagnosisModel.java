@@ -1,5 +1,6 @@
 package com.example.gaitlabapp.model.patients;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.*;
 import jakarta.persistence.*;
 import java.util.Set;
@@ -18,9 +19,9 @@ public class IDiagnosisModel {
     @Column(name = "description")
     private String description;
 
-    @ManyToMany
-    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "code"),
-    inverseJoinColumns = @JoinColumn(name = "gen_diagnosis"))
+    @ManyToMany(mappedBy = "gen_diagnosis", fetch = FetchType.LAZY)
+    @JsonBackReference
+
 
      Set<IPatientModel> genDiagnosis;
 

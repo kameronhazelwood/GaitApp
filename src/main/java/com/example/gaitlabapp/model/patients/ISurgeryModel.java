@@ -30,15 +30,17 @@ public class ISurgeryModel  {
     private String facility;
     @Column(name = "comments")
     private String comments;
-    @Column(name = "patientId")
-    private Integer patientId;
 
 
-    @ManyToMany
-    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
-            inverseJoinColumns = @JoinColumn(name = "patient_id"))
+//    @ManyToMany
+//    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+//            inverseJoinColumns = @JoinColumn(name = "patient_id"))
+//    Set<IPatientModel> patientID;
 
-    Set<IPatientModel> patientID;
+
+    @ManyToOne
+    @JoinColumn(name = "patientId", insertable = false, updatable = false)
+    private IPatientModel patientModel;
 
     public ISurgeryModel(Integer surgeryId, String surgeryDate, String surgeryProcedure, String surgerySide, String surgeon, String facility, String comments, Integer patientId){
         this.surgeryId = surgeryId;
@@ -48,7 +50,6 @@ public class ISurgeryModel  {
         this.surgeon = surgeon;
         this.facility = facility;
         this.comments = comments;
-        this.patientId = patientId;
     }
 
 
@@ -63,5 +64,6 @@ public class ISurgeryModel  {
                 "Comments=" +
                 "}";
     }
+
 
 }

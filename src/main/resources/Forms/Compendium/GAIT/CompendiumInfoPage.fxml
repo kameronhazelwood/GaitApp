@@ -8,7 +8,6 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Compendium.CompendiumInfoPageController">
     <Pane layoutX="-41.0" prefHeight="420.0" prefWidth="650.0">
     <Label fx:id="nameLabel" layoutX="127.0" layoutY="223.0" text="Patient Name" textAlignment="CENTER" />
-    <Label fx:id="fName" layoutX="236.0" layoutY="223.0" text="name" textAlignment="CENTER" />
     <Label fx:id="dobLabel" layoutX="127.0" layoutY="246.0" text="Date of Birth: " textAlignment="CENTER" />
     <Label fx:id="dob" layoutX="236.0" layoutY="246.0" text="dob" textAlignment="CENTER" />
     <Label layoutX="98.0" layoutY="62.0" text="Motion Analysis Compendium Report" textAlignment="CENTER">
@@ -33,6 +32,7 @@
     <Label fx:id="examiningTherLabel" layoutX="352.0" layoutY="311.0" text="Examining Therapist" textAlignment="CENTER" />
     <Label fx:id="examiningTher" layoutX="471.0" layoutY="311.0" text="therapist" textAlignment="CENTER" />
     <Label fx:id="patientBioComments" layoutX="127.0" layoutY="354.0" prefHeight="0.0" prefWidth="343.0" text="These are test comments for the test patient. " textAlignment="CENTER" />
+      <Label fx:id="fName" layoutX="205.0" layoutY="224.0" prefHeight="17.0" prefWidth="119.0" text="patientName" />
 
     </Pane>
 

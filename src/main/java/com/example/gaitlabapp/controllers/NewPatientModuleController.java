@@ -90,14 +90,11 @@ public class NewPatientModuleController implements Initializable {
     private Scene scene;
     @Autowired
     private final PatientService patientService;
-    String mrnNumber = "9988";
 
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        mrn.setText(" " + "-" + mrnNumber);
-
         dob.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> ov, String t, String t1) {
@@ -203,7 +200,7 @@ public class NewPatientModuleController implements Initializable {
         formerLName.clear();
         preferredName.clear();
         mrn.clear();
-        mrn.setText(" " + "-" + mrnNumber);
+        mrn.clear();
     }
 
     @FXML

@@ -8,18 +8,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.media.MediaView?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0"
-            prefWidth="572.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.gaitlabapp.controllers.Details.Videos">
-   <Hyperlink fx:id="labelOne" layoutX="14.0" layoutY="35.0" text="Test Video One"/>
-   <Hyperlink fx:id="labelTwo" layoutX="14.0" layoutY="61.0" text="Test Video Two"/>
-   <MediaView fx:id="mediaViewer" fitHeight="200.0" fitWidth="200.0" layoutX="231.0" layoutY="47.0"/>
-   <Button fx:id="play" layoutX="270.0" layoutY="319.0" mnemonicParsing="false" onAction="#onPlayButton"
-           prefHeight="25.0" prefWidth="68.0" text="Play"/>
-   <Button fx:id="stop" layoutX="347.0" layoutY="319.0" mnemonicParsing="false" onAction="#onStopButton"
-           prefHeight="25.0" prefWidth="68.0" text="Stop"/>
-   <Slider fx:id="slider" layoutX="197.0" layoutY="300.0" onMousePressed="#sliderPressed" prefHeight="14.0"
-           prefWidth="284.0"/>
-   <Label fx:id="lblDuration" layoutX="215.0" layoutY="282.0" text="Duration: 00 / 00"/>
-   <Separator layoutX="121.0" layoutY="3.0" orientation="VERTICAL" prefHeight="360.0" prefWidth="18.0"/>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="572.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Details.Videos">
+   <Hyperlink fx:id="labelOne" layoutX="14.0" layoutY="35.0" text="11/22/2022" />
+   <MediaView fx:id="mediaViewer" fitHeight="200.0" fitWidth="300.0" layoutX="181.0" layoutY="47.0" />
+   <Button fx:id="play" layoutX="270.0" layoutY="319.0" mnemonicParsing="false" onAction="#onPlayButton" prefHeight="25.0" prefWidth="68.0" text="Play" />
+   <Button fx:id="stop" layoutX="347.0" layoutY="319.0" mnemonicParsing="false" onAction="#onStopButton" prefHeight="25.0" prefWidth="68.0" text="Stop" />
+   <Slider fx:id="slider" layoutX="197.0" layoutY="300.0" onMousePressed="#sliderPressed" prefHeight="14.0" prefWidth="284.0" />
+   <Label fx:id="lblDuration" layoutX="215.0" layoutY="282.0" text="Duration: 00 / 00" />
+   <Separator layoutX="121.0" layoutY="3.0" orientation="VERTICAL" prefHeight="360.0" prefWidth="18.0" />
 </AnchorPane>

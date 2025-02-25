@@ -4,6 +4,7 @@ package com.example.gaitlabapp.controllers.Forms.Compendium;
 
 import com.example.gaitlabapp.Launcher;
 import com.example.gaitlabapp.model.patients.IPatientModel;
+import com.example.gaitlabapp.model.visits.IAppointmentModel;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -60,6 +61,7 @@ public class GenerateCompendiumSide {
         this.patientModel = patientModel;
 
 
+
     }
 
     @FXML
@@ -92,6 +94,7 @@ public class GenerateCompendiumSide {
         Parent root = fxmlLoader.load();
         CompendiumInfoPageController compendiumInfoPageController = fxmlLoader.getController();
         compendiumInfoPageController.setInfoPage(patientModel);
+
 
         bp.setCenter(root);
 
@@ -129,7 +132,7 @@ public class GenerateCompendiumSide {
 
     public void photos(MouseEvent mouseEvent) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Details/PatientPhotos.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Compendium/GAIT/test/CompendiumPhotos3.fxml")));
         bp.setCenter(root);
     }
 
@@ -138,4 +141,6 @@ public class GenerateCompendiumSide {
         root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Details/Videos.fxml")));
         bp.setCenter(root);
     }
+
+
 }
