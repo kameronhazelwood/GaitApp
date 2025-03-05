@@ -10,6 +10,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +26,8 @@ import java.util.ResourceBundle;
 @RequiredArgsConstructor
 public class CompendiumInfoPageController implements Initializable {
 
+    public ImageView frontInfoPhoto;
+    public AnchorPane anchorPane;
     @Autowired
     ConfigurableApplicationContext applicationContext;
     @FXML
@@ -100,6 +105,15 @@ public class CompendiumInfoPageController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        Image faceImage = new Image(String.valueOf(getClass().getResource("/Rowan/photos/32581055_111122_face.jpg")));
+        ImageView imageView = new ImageView(faceImage);
+        imageView.setFitHeight(180);
+        imageView.setFitWidth(180);
+        imageView.setX(176);
+        imageView.setY(68);
+        anchorPane.getChildren().add(imageView);
+
+
         fName.setText("Madeline Daum");
         dob.setText("1/1/2000");
         mrn.setText("32581055");

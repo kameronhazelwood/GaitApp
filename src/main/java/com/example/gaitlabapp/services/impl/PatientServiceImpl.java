@@ -5,9 +5,7 @@ import com.example.gaitlabapp.repo.PatientRepo;
 import com.example.gaitlabapp.services.PatientService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
 import java.util.List;
 
 import java.util.Optional;
@@ -41,6 +39,17 @@ public class PatientServiceImpl implements PatientService {
     public List<IPatientModel> findAll() {
         return repo.findAll();
     }
+   @Override
+   public boolean findDistinctByMrn(String mrn){
+        IPatientModel patientModel = this.findByMrn(mrn);
+
+        if(patientModel == null){
+            return false;
+        }else {
+            if (mrn.equals(patientModel.getMrn())) return true;
+            else return false;
+        }
+   }
 
     private final String FILE_PATH = "user.home";
 //    @Override

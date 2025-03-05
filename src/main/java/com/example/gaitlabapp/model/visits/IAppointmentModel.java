@@ -14,7 +14,7 @@ import java.util.Set;
 @Table(name = "appointments")
 public class IAppointmentModel  {
 
-    public enum Type{GAIT, UE, FOOT}
+    public enum Type{GAIT, UE, FOOT, MOVEMENT, POSTOP}
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -14,6 +14,7 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -27,6 +28,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,6 +45,7 @@ import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.*;
+import java.util.Locale;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -93,6 +96,7 @@ public class NewPatientModuleController implements Initializable {
 
 
 
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         dob.textProperty().addListener(new ChangeListener<String>() {
@@ -108,7 +112,16 @@ public class NewPatientModuleController implements Initializable {
     @FXML
     public void onSaveNewPatient(ActionEvent event) throws SQLException {
         try {
-            if (fName != null && lName != null) {
+            if (patientService.findDistinctByMrn(mrn.getText())) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.initModality(Modality.APPLICATION_MODAL);
+                alert.setTitle("MRN Already Exists");
+                alert.setContentText("This patient's MRN number is already being used by another patient. ");
+                alert.setHeight(400);
+                alert.setWidth(400);
+                alert.showAndWait();
+
+            }else {
                 IPatientModel patient = new IPatientModel();
                 patient.setFirstName(fName.getText());
                 patient.setLastName(lName.getText());
@@ -177,14 +190,9 @@ public class NewPatientModuleController implements Initializable {
                 }
 
                 patientService.save(patient);
-
-            }else {
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Required Fields. ");
-                alert.setContentText("First Name, Last Name and Date of Birth is required. ");
-                alert.show();
+                clearFields();
             }
-            clearFields();
+
 
         } catch (Throwable t) {
             t.printStackTrace();
@@ -199,7 +207,6 @@ public class NewPatientModuleController implements Initializable {
         dob.clear();
         formerLName.clear();
         preferredName.clear();
-        mrn.clear();
         mrn.clear();
     }
 

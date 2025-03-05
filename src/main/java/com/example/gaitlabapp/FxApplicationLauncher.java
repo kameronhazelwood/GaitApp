@@ -40,6 +40,8 @@ public class FxApplicationLauncher {
 
         @Override
         public void init() throws IOException {
+
+
             context = new SpringApplicationBuilder()
                     .sources(FxApplicationLauncher.class)
                     .initializers((ApplicationContextInitializer<GenericApplicationContext>) applicationContext -> {
@@ -78,6 +80,8 @@ public class FxApplicationLauncher {
             @Override
             public void onApplicationEvent(StageIsReadyEvent event) {
                 try {
+                    System.out.println("java version: "+System.getProperty("java.version"));
+                    System.out.println("javafx.version: " + System.getProperty("javafx.version"));
                     FXMLLoader fxmlLoader = new FXMLLoader();
                     fxmlLoader.setControllerFactory(applicationContext::getBean);
                     fxmlLoader.setLocation(getClass().getResource("/UserLogin.fxml"));

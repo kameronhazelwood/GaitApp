@@ -143,9 +143,6 @@
                                        <Font name="System Bold" size="14.0" />
                                     </font>
                                  </Label>
-                                 <Button fx:id="addSurgicalHistory" layoutX="450.0" layoutY="41.0" mnemonicParsing="false" onAction="#addSurgery" text="Add Surgical History" />
-                                 <Button fx:id="addBotox" layoutX="486.0" layoutY="299.0" mnemonicParsing="false" onAction="#addBotox" text="Add Botox" />
-                                 <Button fx:id="addHealthHistory" layoutX="454.0" layoutY="555.0" mnemonicParsing="false" onAction="#addHealthHistory" text="Add Health History" />
                               </children></AnchorPane>
                        </content>
                      </ScrollPane>

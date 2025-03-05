@@ -12,7 +12,12 @@ public interface PatientRepo extends JpaRepository<IPatientModel, String> {
 
     IPatientModel findByFirstName(String firstName);
     Optional<IPatientModel> findByLastName(String lastName);
-   // IPatientModel findByPatientId(Integer patientId);
+
+      default boolean findDistinctByMrn(String mrn) {
+        return false;
+    }
+
+    // IPatientModel findByPatientId(Integer patientId);
     List<IPatientModel> findAll();
     IPatientModel findByMrn(String mrn);
 //    IPatientModel findByImageName(String imagePath);

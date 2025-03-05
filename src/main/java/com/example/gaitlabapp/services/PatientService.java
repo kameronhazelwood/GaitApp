@@ -14,7 +14,10 @@ public interface PatientService {
     Optional<IPatientModel> findByLastName(String lastName);
     IPatientModel findByMrn(String mrn);
     List<IPatientModel> findAll();
-  //  String uploadFileToDirectory(MultipartFile file) throws IOException;
+
+    boolean findDistinctByMrn(String mrn);
+
+    //  String uploadFileToDirectory(MultipartFile file) throws IOException;
 //    byte[] downloadFileFromFileDirectory(String imagePath) throws IOException;
 //    IPatientModel findByImagePath(String imagePath);
 //    IPatientModel findByPatientId(Integer patientId);

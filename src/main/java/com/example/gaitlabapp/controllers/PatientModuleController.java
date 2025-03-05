@@ -1,6 +1,7 @@
 package com.example.gaitlabapp.controllers;
 
 
+import com.example.gaitlabapp.controllers.Visits.TestVisit.GaitTestVisitController;
 import com.example.gaitlabapp.controllers.Visits.VisitDetailsFootController;
 import com.example.gaitlabapp.controllers.Visits.VisitDetailsGaitController;
 import com.example.gaitlabapp.controllers.Visits.VisitDetailsUEController;
@@ -95,10 +96,8 @@ public class PatientModuleController implements Initializable {
 
     ObservableList<IAppointmentModel> initialData() {
         IAppointmentModel apt1 = new IAppointmentModel(1, "11/22/2022", "GAIT", "Full Diagnostic", "", GAIT, "",  2, "", "", "", "");
-       // IAppointmentModel apt2 = new IAppointmentModel(1, "1/22/2025", "GAIT", "Full Diagnostic", "Dr. Smith", GAIT, "", 2, "", "", "", "");
-//        IAppointmentModel apt2 = new IAppointmentModel(2, "", "2/8/2023", "Upper Extremity - Full Diagnostic", "Dr. Smith", UE, 2);
-//        IAppointmentModel apt3 = new IAppointmentModel(3, "", "3/12/2024", "Gait - Foot Evaluation", "Dr. Smith", FOOT, 2);
-        return FXCollections.observableArrayList(apt1);
+        IAppointmentModel apt2 = new IAppointmentModel(1, "3/5/2025", "GAIT", "Post-Op Outcome", "Dr. Smith", POSTOP, "", 2, "", "", "", "");
+        return FXCollections.observableArrayList(apt2, apt1);
     }
 
     @FXML
@@ -131,20 +130,20 @@ public class PatientModuleController implements Initializable {
     @FXML
     public TableView<IDiagnosisModel> diagnosisCodeTable;
 
-    ObservableList<ISurgeryModel> initialPTSurgData() {
-        ISurgeryModel ptSur1 = new ISurgeryModel(12, "10/20/2023", "Other", "L", "surgeon", "facility", "comments", 1);
-        return FXCollections.observableArrayList(ptSur1);
-    }
-
-    ObservableList<IBotoxModel> initialPtBotData() {
-        IBotoxModel ptBot1 = new IBotoxModel(12, "10/20/2023", "R - Arm", "botoxSide", "Dr. Smith", "Test Comments");
-        return FXCollections.observableArrayList(ptBot1);
-    }
-
-    ObservableList<IHealthHistoryModel> initialPtHealthData() {
-        IHealthHistoryModel ptHea1 = new IHealthHistoryModel(12, "3", "Stroke");
-        return FXCollections.observableArrayList(ptHea1);
-    }
+//    ObservableList<ISurgeryModel> initialPTSurgData() {
+//        ISurgeryModel ptSur1 = new ISurgeryModel(12, "10/20/2023", "Other", "L", "surgeon", "facility", "comments", 1);
+//        return FXCollections.observableArrayList(ptSur1);
+//    }
+//
+//    ObservableList<IBotoxModel> initialPtBotData() {
+//        IBotoxModel ptBot1 = new IBotoxModel(12, "10/20/2023", "R - Arm", "botoxSide", "Dr. Smith", "Test Comments");
+//        return FXCollections.observableArrayList(ptBot1);
+//    }
+//
+//    ObservableList<IHealthHistoryModel> initialPtHealthData() {
+//        IHealthHistoryModel ptHea1 = new IHealthHistoryModel(12, "3", "Stroke");
+//        return FXCollections.observableArrayList(ptHea1);
+//    }
 
 //    ObservableList<IDiagnosisModel> initialDiagCodeData() {
 //        IDiagnosisModel ptDiag1 = new IDiagnosisModel("G800", "Spastic Quadriplegic Cerebral Palsy");
@@ -295,7 +294,7 @@ public class PatientModuleController implements Initializable {
         surgeryDate.setCellValueFactory((new PropertyValueFactory<ISurgeryModel, String>("surgeryDate")));
         surgeryProcedure.setCellValueFactory((new PropertyValueFactory<ISurgeryModel, String>("surgeryProcedure")));
         surgerySide.setCellValueFactory((new PropertyValueFactory<ISurgeryModel, String>("surgerySide")));
-        surgeryTableView.setItems(initialPTSurgData());
+      //  surgeryTableView.setItems(initialPTSurgData());
 
         ContextMenu surgContext = new ContextMenu();
         MenuItem viewSurgDetails = new MenuItem("View Surgery Details");
@@ -343,7 +342,7 @@ public class PatientModuleController implements Initializable {
         botoxDate.setCellValueFactory((new PropertyValueFactory<IBotoxModel, String>("botoxDate")));
         botoxLocation.setCellValueFactory((new PropertyValueFactory<IBotoxModel, String>("botoxLocation")));
         botoxFacility.setCellValueFactory((new PropertyValueFactory<IBotoxModel, String>("botoxFacility")));
-        botoxTableView.setItems(initialPtBotData());
+       // botoxTableView.setItems(initialPtBotData());
 
         ContextMenu botoxContext = new ContextMenu();
         MenuItem viewBotoxDetails = new MenuItem("View Botox Details");
@@ -388,7 +387,7 @@ public class PatientModuleController implements Initializable {
          */
         conditionAge.setCellValueFactory((new PropertyValueFactory<IHealthHistoryModel, String>("conditionAge")));
         condition.setCellValueFactory((new PropertyValueFactory<IHealthHistoryModel, String>("condition")));
-        healthTableView.setItems(initialPtHealthData());
+      //  healthTableView.setItems(initialPtHealthData());
 
         ContextMenu healthContext = new ContextMenu();
         MenuItem viewHealth = new MenuItem("View Health Condition");
@@ -463,6 +462,25 @@ public class PatientModuleController implements Initializable {
         try {
             switch (appointmentModel.getType()) {
                 case GAIT -> {
+                    IPatientModel patientModel = new IPatientModel();
+
+                    FXMLLoader fxmlLoader = new FXMLLoader();
+
+                    fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Visits/TestVisit/GaitTestVisit.fxml"));
+                    fxmlLoader.setControllerFactory(applicationContext::getBean);
+                    Parent popUp = fxmlLoader.load();
+                    GaitTestVisitController gaitTestVisitController = fxmlLoader.getController();
+
+                    gaitTestVisitController.setAppointmentModel(appointmentModel);
+                    gaitTestVisitController.setPatient(patientModel);
+                    Stage stage1 = new Stage((StageStyle.UTILITY));
+                    stage1.initModality(Modality.WINDOW_MODAL);
+                    stage1.initOwner(getVisitGaitDetails());
+                    stage1.setTitle("GAIT Visit Details:   ");
+                    stage1.setScene(new Scene(popUp, 800, 680));
+                    stage1.showAndWait();
+                }
+                case POSTOP -> {
                     IPatientModel patientModel = new IPatientModel();
 
                     FXMLLoader fxmlLoader = new FXMLLoader();

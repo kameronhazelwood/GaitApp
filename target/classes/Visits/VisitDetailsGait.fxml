@@ -23,150 +23,237 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<?import org.controlsfx.control.HyperlinkLabel?>
 
-<TabPane fx:id="visitTabPane" prefHeight="6000.0" prefWidth="760.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Visits.VisitDetailsGaitController">
+<TabPane fx:id="visitTabPane" prefHeight="1000.0" prefWidth="760.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Visits.VisitDetailsGaitController">
       <Tab fx:id="visitTab" text="Visit Information">
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="693.0">
-              <Label layoutX="14.0" layoutY="14.0" text="Visit Information:">
+      <ScrollPane prefHeight="500.0" prefWidth="713.0">
+         <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1667.0" prefWidth="771.0">
+                    <Label layoutX="14.0" layoutY="14.0" text="Visit Information:">
+                        <font>
+                            <Font name="System Bold" size="14.0" />
+                        </font>
+                    </Label>
+                    <GridPane layoutX="21.0" layoutY="62.0" prefHeight="119.0" prefWidth="698.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <Label prefHeight="34.0" prefWidth="85.0" text="Date" />
+                        <TextField fx:id="date" GridPane.columnIndex="1" />
+                        <Label text="Time" GridPane.columnIndex="2" />
+                        <TextField fx:id="aptTime" GridPane.columnIndex="3" />
+                        <Label text="Attended?" GridPane.columnIndex="4" />
+                        <TextField fx:id="aptAttended" GridPane.columnIndex="5" />
+                        <Label prefHeight="34.0" prefWidth="85.0" text="Start Time" GridPane.rowIndex="1" />
+                        <TextField fx:id="aptStartTime" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Stop Time" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField fx:id="aptStopTime" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Label text="Date Sched" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <TextField fx:id="aptDate" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                        <Label text="Visit Type" GridPane.rowIndex="2" />
+                        <TextField fx:id="aptVisitType" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Visit Sub-Type" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <TextField fx:id="aptSubType" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Label text="Date Sent to EPIC" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                        <TextField fx:id="dateToEpic" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                        <Label text="Date Processed" GridPane.rowIndex="3" />
+                        <TextField fx:id="aptDateProcessed" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Date Printed" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <TextField GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <Label text="Date Finalized" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                        <TextField GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                    </GridPane>
+                    <Label layoutX="22.0" layoutY="195.0" text="Diagnosis" />
+                    <TextField fx:id="aptDiagnosis" layoutX="139.0" layoutY="191.0" prefHeight="25.0" prefWidth="579.0" />
+                    <Label layoutX="21.0" layoutY="227.0" text="Reason for Analysis" />
+                    <TextField fx:id="aptReason" layoutX="139.0" layoutY="223.0" prefHeight="25.0" prefWidth="579.0" />
+                    <Label layoutX="21.0" layoutY="259.0" text="Internal Comment" />
+                    <TextField fx:id="aptComment" layoutX="139.0" layoutY="255.0" prefHeight="25.0" prefWidth="579.0" />
+                    <Label layoutX="22.0" layoutY="291.0" text="Keywords" />
+                    <TextField layoutX="139.0" layoutY="287.0" prefHeight="25.0" prefWidth="579.0" />
+                    <Label layoutX="22.0" layoutY="317.0" text="Interpretation Information">
+                        <font>
+                            <Font name="System Bold" size="13.0" />
+                        </font>
+                    </Label>
+                    <GridPane layoutX="23.0" layoutY="353.0" prefHeight="24.0" prefWidth="690.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints />
+                            <RowConstraints />
+                            <RowConstraints />
+                            <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <Label prefHeight="17.0" prefWidth="134.0" text=" Date" GridPane.rowIndex="3" />
+                        <Label text="          MD " GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Label text="                  PT" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                        <TextField fx:id="interpDate" prefHeight="45.0" prefWidth="119.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="aptMd" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <TextField fx:id="aptPT" prefHeight="27.0" prefWidth="112.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                    </GridPane>
+                    <Label layoutX="23.0" layoutY="379.0" text="Referring Physician Information">
+                        <font>
+                            <Font name="System Bold" size="13.0" />
+                        </font>
+                    </Label>
+                    <GridPane layoutX="25.0" layoutY="462.0" prefHeight="106.0" prefWidth="701.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="346.0" minWidth="10.0" prefWidth="128.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="573.0" minWidth="10.0" prefWidth="573.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <children>
+                            <Label text="Visit PT" />
+                            <Label text="Visit PT-2" GridPane.rowIndex="1" />
+                            <Label text="Visit Biomech" GridPane.rowIndex="2" />
+                            <Label text="Visit Biomech-2" GridPane.rowIndex="3" />
+                            <TextField fx:id="visitPt" GridPane.columnIndex="1" />
+                            <TextField fx:id="visitPt2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                            <TextField fx:id="visitBio" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                            <TextField fx:id="visitBio2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        </children>
+                    </GridPane>
+                    <Label layoutX="21.0" layoutY="443.0" text="Visit Personnel">
+                        <font>
+                            <Font name="System Bold" size="13.0" />
+                        </font>
+                    </Label>
+                    <GridPane layoutX="21.0" layoutY="398.0" prefHeight="30.0" prefWidth="710.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <Label text="Referring MD" />
+                        <Label text="                   Date Sent" GridPane.columnIndex="2" />
+                        <TextField fx:id="aptReferringMd" GridPane.columnIndex="1" />
+                        <TextField fx:id="aptDateSent" GridPane.columnIndex="3" />
+                    </GridPane>
+                    <Label layoutX="23.0" layoutY="573.0" text="Questionnaires:">
+                        <font>
+                            <Font name="System Bold" size="13.0" />
+                        </font>
+                    </Label>
+               <Label fx:id="patientId" layoutX="485.0" layoutY="16.0" prefHeight="17.0" prefWidth="109.0" />
+               <Button fx:id="gaitVisitSave" layoutX="608.0" layoutY="12.0" mnemonicParsing="false" onAction="#onGaitVisitSave" prefHeight="35.0" prefWidth="109.0" text="Save" />
+               <Label layoutX="21.0" layoutY="39.0" text="MRN: " />
+               <TextField fx:id="mrnTextField" layoutX="139.0" layoutY="34.0" prefHeight="25.0" prefWidth="118.0" />
+               <GridPane gridLinesVisible="true" layoutX="31.0" layoutY="645.0" prefHeight="186.0" prefWidth="521.0">
+                 <columnConstraints>
+                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                 </columnConstraints>
+                 <rowConstraints>
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                 </rowConstraints>
+                  <children>
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Person Reporting:" wrappingWidth="204.13674545288086" />
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Relationship to Patient:" wrappingWidth="212.80340194702148" GridPane.rowIndex="1" />
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Date Reported" wrappingWidth="212.1366844177246" GridPane.rowIndex="2" />
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" How Premature:" GridPane.rowIndex="3" />
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Age First Walked:" GridPane.rowIndex="4" />
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Age First Talked:" GridPane.rowIndex="5" />
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" How does child learn:" GridPane.rowIndex="6" />
+                  </children>
+               </GridPane>
+               <Text layoutX="56.0" layoutY="622.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Baseline Answers:">
                   <font>
-                      <Font name="System Bold" size="14.0" />
+                     <Font name="System Bold" size="14.0" />
                   </font>
-              </Label>
-              <GridPane layoutX="21.0" layoutY="62.0" prefHeight="119.0" prefWidth="698.0">
+               </Text>
+               <Button layoutX="360.0" layoutY="604.0" mnemonicParsing="false" text="Edit Baseline" />
+               <Text layoutX="56.0" layoutY="896.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Per Visit Answers: ">
+                  <font>
+                     <Font name="System Bold" size="14.0" />
+                  </font>
+               </Text>
+               <GridPane gridLinesVisible="true" layoutX="31.0" layoutY="917.0" prefHeight="220.0" prefWidth="521.0">
                   <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   </columnConstraints>
                   <rowConstraints>
-                      <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  </rowConstraints>
-                  <Label prefHeight="34.0" prefWidth="85.0" text="Date" />
-                  <TextField fx:id="date" GridPane.columnIndex="1" />
-                  <Label text="Time" GridPane.columnIndex="2" />
-                  <TextField fx:id="aptTime" GridPane.columnIndex="3" />
-                  <Label text="Attended?" GridPane.columnIndex="4" />
-                  <TextField fx:id="aptAttended" GridPane.columnIndex="5" />
-                  <Label prefHeight="34.0" prefWidth="85.0" text="Start Time" GridPane.rowIndex="1" />
-                  <TextField fx:id="aptStartTime" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Label text="Stop Time" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <TextField fx:id="aptStopTime" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                  <Label text="Date Sched" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                  <TextField fx:id="aptDate" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-                  <Label text="Visit Type" GridPane.rowIndex="2" />
-                  <TextField fx:id="aptVisitType" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Label text="Visit Sub-Type" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <TextField fx:id="aptSubType" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                  <Label text="Date Sent to EPIC" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                  <TextField fx:id="dateToEpic" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-                  <Label text="Date Processed" GridPane.rowIndex="3" />
-                  <TextField fx:id="aptDateProcessed" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <Label text="Date Printed" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                  <TextField GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                  <Label text="Date Finalized" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-                  <TextField GridPane.columnIndex="5" GridPane.rowIndex="3" />
-              </GridPane>
-              <Label layoutX="22.0" layoutY="195.0" text="Diagnosis" />
-              <TextField fx:id="aptDiagnosis" layoutX="139.0" layoutY="191.0" prefHeight="25.0" prefWidth="579.0" />
-              <Label layoutX="21.0" layoutY="227.0" text="Reason for Analysis" />
-              <TextField fx:id="aptReason" layoutX="139.0" layoutY="223.0" prefHeight="25.0" prefWidth="579.0" />
-              <Label layoutX="21.0" layoutY="259.0" text="Internal Comment" />
-              <TextField fx:id="aptComment" layoutX="139.0" layoutY="255.0" prefHeight="25.0" prefWidth="579.0" />
-              <Label layoutX="22.0" layoutY="291.0" text="Keywords" />
-              <TextField layoutX="139.0" layoutY="287.0" prefHeight="25.0" prefWidth="579.0" />
-              <Label layoutX="22.0" layoutY="317.0" text="Interpretation Information">
-                  <font>
-                      <Font name="System Bold" size="13.0" />
-                  </font>
-              </Label>
-              <GridPane layoutX="23.0" layoutY="353.0" prefHeight="24.0" prefWidth="690.0">
-                  <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
-                  </columnConstraints>
-                  <rowConstraints>
-                      <RowConstraints />
-                      <RowConstraints />
-                      <RowConstraints />
-                      <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
-                  </rowConstraints>
-                  <Label prefHeight="17.0" prefWidth="134.0" text="Date" GridPane.rowIndex="3" />
-                  <Label text="MD " GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                  <Label text="PT" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-                  <TextField fx:id="interpDate" prefHeight="45.0" prefWidth="119.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <TextField fx:id="aptMd" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                  <TextField fx:id="aptPT" prefHeight="27.0" prefWidth="112.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-              </GridPane>
-              <Label layoutX="23.0" layoutY="379.0" text="Referring Physician Information">
-                  <font>
-                      <Font name="System Bold" size="13.0" />
-                  </font>
-              </Label>
-              <GridPane layoutX="25.0" layoutY="462.0" prefHeight="106.0" prefWidth="701.0">
-                  <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="346.0" minWidth="10.0" prefWidth="128.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="573.0" minWidth="10.0" prefWidth="573.0" />
-                  </columnConstraints>
-                  <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   </rowConstraints>
                   <children>
-                      <Label text="Visit PT" />
-                      <Label text="Visit PT-2" GridPane.rowIndex="1" />
-                      <Label text="Visit Biomech" GridPane.rowIndex="2" />
-                      <Label text="Visit Biomech-2" GridPane.rowIndex="3" />
-                      <TextField fx:id="visitPt" GridPane.columnIndex="1" />
-                      <TextField fx:id="visitPt2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                      <TextField fx:id="visitBio" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                      <TextField fx:id="visitBio2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Visit Date:" wrappingWidth="204.13674545288086" />
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Person completing questionnaire:" wrappingWidth="212.80340194702148" GridPane.rowIndex="1" />
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Relationship to patient:" wrappingWidth="212.1366844177246" GridPane.rowIndex="2" />
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Recent change in ability to walk:" GridPane.rowIndex="3" />
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Need for support while walking:" GridPane.rowIndex="4" />
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" FMS5:" GridPane.rowIndex="5" />
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" FMS50:" GridPane.rowIndex="6" />
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" FMS500:" GridPane.rowIndex="7" />
                   </children>
-              </GridPane>
-              <Label layoutX="21.0" layoutY="443.0" text="Visit Personnel">
-                  <font>
-                      <Font name="System Bold" size="13.0" />
-                  </font>
-              </Label>
-              <GridPane layoutX="21.0" layoutY="398.0" prefHeight="30.0" prefWidth="710.0">
-                  <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  </columnConstraints>
-                  <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  </rowConstraints>
-                  <Label text="Referring MD" />
-                  <Label text="Date Sent" GridPane.columnIndex="2" />
-                  <TextField fx:id="aptReferringMd" GridPane.columnIndex="1" />
-                  <TextField fx:id="aptDateSent" GridPane.columnIndex="3" />
-              </GridPane>
-              <Label layoutX="23.0" layoutY="573.0" text="Questionnaires:">
-                  <font>
-                      <Font name="System Bold" size="13.0" />
-                  </font>
-              </Label>
-              <HyperlinkLabel layoutX="25.0" layoutY="599.0" text="Hyperlink Questionnaire Label" />
-         <Label fx:id="patientId" layoutX="485.0" layoutY="16.0" prefHeight="17.0" prefWidth="109.0" />
-         <Button fx:id="gaitVisitSave" layoutX="608.0" layoutY="12.0" mnemonicParsing="false" onAction="#onGaitVisitSave" prefHeight="35.0" prefWidth="109.0" text="Save" />
-         <Label layoutX="21.0" layoutY="39.0" text="MRN: " />
-         <TextField fx:id="mrnTextField" layoutX="139.0" layoutY="34.0" prefHeight="25.0" prefWidth="118.0" />
-          </AnchorPane>
+               </GridPane>
+               <GridPane gridLinesVisible="true" layoutX="31.0" layoutY="1236.0" prefHeight="197.0" prefWidth="521.0">
+                 <columnConstraints>
+                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                 </columnConstraints>
+                 <rowConstraints>
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                 </rowConstraints>
+                  <children>
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Current devices/braces:" />
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Gait Concerns:" GridPane.rowIndex="1" />
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Pain:" GridPane.rowIndex="2" />
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" PT Frequency:" GridPane.rowIndex="3" />
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" OT Frequency:" GridPane.rowIndex="4" />
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Date of Followup with MD:" GridPane.rowIndex="5" />
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" General Concerns" GridPane.rowIndex="6" />
+                  </children>
+               </GridPane>
+                </AnchorPane>
+         </content>
+      </ScrollPane>
       </Tab>
       <Tab fx:id="physExamGait" text="GAIT Physical Examination">
           <ScrollPane prefHeight="6000.0" prefWidth="763.0">
@@ -206,7 +293,6 @@
                           <Font name="System Bold" size="14.0" />
                       </font>
                   </Label>
-                  <TextField fx:id="GAITptsL" layoutX="454.0" layoutY="525.0" prefHeight="25.0" prefWidth="107.0" />
                   <Label layoutX="494.0" layoutY="498.0" text="Left">
                       <font>
                           <Font name="System Bold" size="14.0" />
@@ -225,18 +311,12 @@
                   <TextField fx:id="oneLegR" layoutX="291.0" layoutY="713.0" prefHeight="25.0" prefWidth="110.0" />
                   <TextField fx:id="oneLegStanceL" layoutX="454.0" layoutY="666.0" prefHeight="25.0" prefWidth="107.0" />
                   <TextField fx:id="oneLegL" layoutX="454.0" layoutY="713.0" prefHeight="25.0" prefWidth="107.0" />
-                  <TextField fx:id="GAITstand20L" layoutX="454.0" layoutY="619.0" prefHeight="25.0" prefWidth="107.0" />
-                  <TextField fx:id="GAITstand3L" layoutX="454.0" layoutY="566.0" prefHeight="25.0" prefWidth="107.0" />
                   <TextField fx:id="sitStandR" layoutX="291.0" layoutY="751.0" prefHeight="25.0" prefWidth="110.0" />
-                  <TextField fx:id="sitStandL" layoutX="454.0" layoutY="751.0" prefHeight="25.0" prefWidth="107.0" />
                   <TextField fx:id="kneeToStandR" layoutX="291.0" layoutY="786.0" prefHeight="25.0" prefWidth="110.0" />
                   <TextField fx:id="kneeToStandL" layoutX="454.0" layoutY="786.0" prefHeight="25.0" prefWidth="110.0" />
                   <TextField fx:id="lowerToFloorR" layoutX="291.0" layoutY="818.0" prefHeight="25.0" prefWidth="110.0" />
-                  <TextField fx:id="lowerToFloorL" layoutX="454.0" layoutY="818.0" prefHeight="25.0" prefWidth="110.0" />
                   <TextField fx:id="squatsR" layoutX="291.0" layoutY="852.0" prefHeight="25.0" prefWidth="110.0" />
-                  <TextField fx:id="squatsL" layoutX="454.0" layoutY="852.0" prefHeight="25.0" prefWidth="110.0" />
                   <TextField fx:id="standingR" layoutX="291.0" layoutY="885.0" prefHeight="25.0" prefWidth="110.0" />
-                  <TextField fx:id="standingL" layoutX="454.0" layoutY="885.0" prefHeight="25.0" prefWidth="110.0" />
                   <TextField fx:id="oneLegStanceR" layoutX="291.0" layoutY="666.0" prefHeight="25.0" prefWidth="110.0" />
                   <Label layoutX="204.0" layoutY="1094.0" text="PROM">
                       <font>
@@ -254,23 +334,23 @@
                   <Label layoutX="21.0" layoutY="1623.0" text="Extensor Lag" />
                   <Label layoutX="21.0" layoutY="1679.0" text="Knee Flex" />
                   <Label layoutX="21.0" layoutY="1740.0" text="Pop Angle" />
-                  <Label layoutX="21.0" layoutY="1782.0" prefHeight="41.0" prefWidth="81.0" text="Bilateral Pop Angle" wrapText="true" />
-                  <Label layoutX="21.0" layoutY="1847.0" text="Ely Test" />
-                  <Label layoutX="21.0" layoutY="1965.0" text="Dorsi (ext)" />
-                  <Label layoutX="21.0" layoutY="2027.0" text="Plantar" />
-                  <Label layoutX="21.0" layoutY="2084.0" text="Ankle Inv" />
-                  <Label layoutX="21.0" layoutY="2157.0" text="Ankle Ever" />
-                  <Label layoutX="21.0" layoutY="2203.0" text="TMA" />
-                  <Label layoutX="21.0" layoutY="2260.0" text="TFA" />
-                  <Label layoutX="21.0" layoutY="2323.0" text="FF AB/ADD" />
-                  <Label layoutX="21.0" layoutY="2504.0" text="Leg Length" />
+                  <Label layoutX="21.0" layoutY="1820.0" prefHeight="41.0" prefWidth="81.0" text="Bilateral Pop Angle" wrapText="true" />
+                  <Label layoutX="21.0" layoutY="1885.0" text="Ely Test" />
+                  <Label layoutX="21.0" layoutY="2003.0" text="Dorsi (ext)" />
+                  <Label layoutX="21.0" layoutY="2066.0" text="Plantar" />
+                  <Label layoutX="21.0" layoutY="2123.0" text="Ankle Inv" />
+                  <Label layoutX="21.0" layoutY="2196.0" text="Ankle Ever" />
+                  <Label layoutX="21.0" layoutY="2242.0" text="TMA" />
+                  <Label layoutX="21.0" layoutY="2299.0" text="TFA" />
+                  <Label layoutX="21.0" layoutY="2362.0" text="FF AB/ADD" />
+                  <Label layoutX="21.0" layoutY="2543.0" text="Leg Length" />
                   <Label layoutX="254.0" layoutY="1130.0" text="Left" />
-                  <Label layoutX="21.0" layoutY="2637.0" prefHeight="24.0" prefWidth="83.0" text="Orthotics">
+                  <Label layoutX="21.0" layoutY="2707.0" prefHeight="24.0" prefWidth="83.0" text="Orthotics">
                       <font>
                           <Font name="System Bold" size="14.0" />
                       </font>
                   </Label>
-                  <Label layoutX="24.0" layoutY="2668.0" prefHeight="17.0" prefWidth="132.0" text="Orthosis to Visit:">
+                  <Label layoutX="24.0" layoutY="2739.0" prefHeight="17.0" prefWidth="132.0" text="Orthosis to Visit:">
                       <font>
                           <Font name="System Bold" size="12.0" />
                       </font>
@@ -386,8 +466,8 @@
                   <Separator layoutX="18.0" layoutY="1045.0" prefHeight="0.0" prefWidth="542.0" />
                   <Separator blendMode="DIFFERENCE" layoutX="19.0" layoutY="1080.0" prefHeight="0.0" prefWidth="542.0" />
                   <Separator blendMode="DIFFERENCE" layoutX="19.0" layoutY="1152.0" prefHeight="3.0" prefWidth="605.0" />
-                  <Separator blendMode="DIFFERENCE" layoutX="316.0" layoutY="1122.0" orientation="VERTICAL" prefHeight="1500.0" prefWidth="6.0" />
-                  <Separator blendMode="DIFFERENCE" layoutX="416.0" layoutY="1125.0" orientation="VERTICAL" prefHeight="1497.0" prefWidth="3.0" />
+                  <Separator blendMode="DIFFERENCE" layoutX="316.0" layoutY="1106.0" orientation="VERTICAL" prefHeight="1535.0" prefWidth="4.0" />
+                  <Separator blendMode="DIFFERENCE" layoutX="416.0" layoutY="1109.0" orientation="VERTICAL" prefHeight="1531.0" prefWidth="0.0" />
                   <Label layoutX="345.0" layoutY="1130.0" text="15 to &lt;25" />
                   <Label layoutX="338.0" layoutY="1094.0" text="Normals">
                       <font>
@@ -401,9 +481,9 @@
                   </Label>
                   <Label layoutX="458.0" layoutY="1130.0" text="Right" />
                   <Label layoutX="565.0" layoutY="1130.0" text="Left" />
-                  <Separator layoutX="211.0" layoutY="1127.0" orientation="VERTICAL" prefHeight="1496.0" prefWidth="3.0" />
-                  <Separator layoutX="524.0" layoutY="1127.0" orientation="VERTICAL" prefHeight="1058.0" prefWidth="0.0" />
-                  <Separator layoutX="105.0" layoutY="1132.0" orientation="VERTICAL" prefHeight="1491.0" prefWidth="5.0" />
+                  <Separator layoutX="211.0" layoutY="1121.0" orientation="VERTICAL" prefHeight="1519.0" prefWidth="1.0" />
+                  <Separator layoutX="524.0" layoutY="1123.0" orientation="VERTICAL" prefHeight="1517.0" prefWidth="0.0" />
+                  <Separator layoutX="105.0" layoutY="1127.0" orientation="VERTICAL" prefHeight="1519.0" prefWidth="4.0" />
                   <TextField fx:id="PROMHipR" layoutX="123.0" layoutY="1164.0" prefHeight="20.0" prefWidth="75.0" />
                   <ComboBox fx:id="hipRP" layoutX="130.0" layoutY="1192.0" prefHeight="19.0" prefWidth="60.0" />
                   <TextField fx:id="PROMHipL" layoutX="233.0" layoutY="1164.0" prefHeight="20.0" prefWidth="75.0" />
@@ -439,30 +519,18 @@
                   <TextField fx:id="PROMHipIntRotL" layoutX="233.0" layoutY="1362.0" prefHeight="20.0" prefWidth="75.0" />
                   <ComboBox fx:id="hipIntRotLP" layoutX="240.0" layoutY="1389.0" prefHeight="19.0" prefWidth="60.0" />
                   <Label layoutX="340.0" layoutY="1379.0" text="49.3 - 70.3" />
-                  <TextField fx:id="StrengHipIntRotR" layoutX="431.0" layoutY="1362.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="hipIntRotRS" layoutX="439.0" layoutY="1389.0" prefHeight="19.0" prefWidth="60.0" />
-                  <TextField fx:id="StrengHipIntRotL" layoutX="538.0" layoutY="1362.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="hipIntRotLS" layoutX="545.0" layoutY="1389.0" prefHeight="19.0" prefWidth="60.0" />
                   <Separator layoutX="21.0" layoutY="1419.0" prefHeight="4.0" prefWidth="608.0" />
                   <TextField fx:id="PROMHipExtRotR" layoutX="123.0" layoutY="1426.0" prefHeight="20.0" prefWidth="75.0" />
                   <ComboBox fx:id="hipExtRotRP" layoutX="130.0" layoutY="1453.0" prefHeight="19.0" prefWidth="60.0" />
                   <TextField fx:id="PROMHipExtRotL" layoutX="233.0" layoutY="1426.0" prefHeight="20.0" prefWidth="75.0" />
                   <ComboBox fx:id="hipExtRotLP" layoutX="240.0" layoutY="1453.0" prefHeight="19.0" prefWidth="60.0" />
                   <Label layoutX="346.0" layoutY="1440.0" text="41 - 60" />
-                  <TextField fx:id="StrengthHipExtRotR" layoutX="435.0" layoutY="1425.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="hipExtRotRS" layoutX="439.0" layoutY="1452.0" prefHeight="19.0" prefWidth="60.0" />
-                  <TextField fx:id="StrengthHipExtRotL" layoutX="538.0" layoutY="1425.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="hipExtRotLS" layoutX="545.0" layoutY="1452.0" prefHeight="19.0" prefWidth="60.0" />
                   <Separator layoutX="13.0" layoutY="1483.0" prefHeight="4.0" prefWidth="608.0" />
                   <TextField fx:id="PROMRyderTestR" layoutX="123.0" layoutY="1488.0" prefHeight="20.0" prefWidth="75.0" />
                   <ComboBox fx:id="ryderRP" layoutX="130.0" layoutY="1514.0" prefHeight="19.0" prefWidth="60.0" />
                   <TextField fx:id="PROMRyderTestL" layoutX="230.0" layoutY="1488.0" prefHeight="20.0" prefWidth="75.0" />
                   <ComboBox fx:id="ryderLP" layoutX="240.0" layoutY="1514.0" prefHeight="19.0" prefWidth="60.0" />
                   <Label layoutX="354.0" layoutY="1506.0" text="0 - 0" />
-                  <TextField fx:id="StregRyertestR" layoutX="436.0" layoutY="1488.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="ryderRS" layoutX="439.0" layoutY="1514.0" prefHeight="19.0" prefWidth="60.0" />
-                  <TextField fx:id="StregRyertestL" layoutX="545.0" layoutY="1488.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="ryderLS" layoutX="540.0" layoutY="1514.0" prefHeight="19.0" prefWidth="60.0" />
                   <Separator layoutX="19.0" layoutY="1543.0" prefHeight="4.0" prefWidth="608.0" />
                   <TextField fx:id="PROMKneeExtR" layoutX="123.0" layoutY="1548.0" prefHeight="20.0" prefWidth="75.0" />
                   <ComboBox fx:id="kneeExtRP" layoutX="130.0" layoutY="1574.0" prefHeight="19.0" prefWidth="60.0" />
@@ -479,10 +547,6 @@
                   <TextField fx:id="PROMExtLagL" layoutX="233.0" layoutY="1605.0" prefHeight="20.0" prefWidth="75.0" />
                   <ComboBox fx:id="extLagLP" layoutX="240.0" layoutY="1631.0" prefHeight="19.0" prefWidth="60.0" />
                   <Label layoutX="357.0" layoutY="1621.0" text="0 - 0" />
-                  <TextField fx:id="StrengthExtLagR" layoutX="431.0" layoutY="1605.0" prefHeight="20.0" prefWidth="75.0" />
-                  <TextField fx:id="StrengthExtLagL" layoutX="538.0" layoutY="1605.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="extLagRS" layoutX="439.0" layoutY="1631.0" prefHeight="19.0" prefWidth="60.0" />
-                  <ComboBox fx:id="extLagLS" layoutX="545.0" layoutY="1631.0" prefHeight="19.0" prefWidth="60.0" />
                   <Separator layoutX="17.0" layoutY="1658.0" prefHeight="4.0" prefWidth="608.0" />
                   <TextField fx:id="PROMKneeFlexR" layoutX="123.0" layoutY="1663.0" prefHeight="20.0" prefWidth="75.0" />
                   <ComboBox fx:id="kneeFlexRP" layoutX="130.0" layoutY="1689.0" prefHeight="19.0" prefWidth="60.0" />
@@ -495,113 +559,109 @@
                   <ComboBox fx:id="kneeFlexLS" layoutX="545.0" layoutY="1691.0" prefHeight="19.0" prefWidth="60.0" />
                   <Separator layoutX="18.0" layoutY="1717.0" prefHeight="4.0" prefWidth="608.0" />
                   <TextField fx:id="PROMPopAngleR" layoutX="123.0" layoutY="1720.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="popAngRP" layoutX="130.0" layoutY="1746.0" prefHeight="19.0" prefWidth="60.0" />
+                  <ComboBox fx:id="popAngRP" layoutX="130.0" layoutY="1784.0" prefHeight="19.0" prefWidth="60.0" />
                   <TextField fx:id="PROMPopAngleL" layoutX="233.0" layoutY="1720.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="popAngLP" layoutX="240.0" layoutY="1745.0" prefHeight="19.0" prefWidth="60.0" />
+                  <ComboBox fx:id="popAngLP" layoutX="240.0" layoutY="1783.0" prefHeight="19.0" prefWidth="60.0" />
                   <Label layoutX="343.0" layoutY="1737.0" text="25.2 - 48.8" />
-                  <TextField fx:id="StrengthPopAngleR" layoutX="431.0" layoutY="1720.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="popAngRS" layoutX="439.0" layoutY="1745.0" prefHeight="19.0" prefWidth="60.0" />
-                  <TextField fx:id="StrengthPopAngleL" layoutX="538.0" layoutY="1720.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="popAngLS" layoutX="545.0" layoutY="1745.0" prefHeight="19.0" prefWidth="60.0" />
-                  <Separator layoutX="19.0" layoutY="1772.0" prefHeight="4.0" prefWidth="608.0" />
-                  <TextField fx:id="PROMBilatR" layoutX="123.0" layoutY="1777.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="biPopAngRP" layoutX="130.0" layoutY="1803.0" prefHeight="19.0" prefWidth="60.0" />
-                  <TextField fx:id="PROMBilatL" layoutX="233.0" layoutY="1777.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="biPopAngLP" layoutX="240.0" layoutY="1803.0" prefHeight="19.0" prefWidth="60.0" />
-                  <Label layoutX="352.0" layoutY="1795.0" text="0 - 0" />
-                  <Separator layoutX="18.0" layoutY="1830.0" prefHeight="4.0" prefWidth="608.0" />
-                  <TextField fx:id="PROMElyR" layoutX="123.0" layoutY="1833.0" prefHeight="20.0" prefWidth="75.0" />
-                  <TextField fx:id="PROMElyL" layoutX="233.0" layoutY="1833.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="elyTestRP" layoutX="130.0" layoutY="1859.0" prefHeight="19.0" prefWidth="60.0" />
-                  <ComboBox fx:id="elyTestLP" layoutX="240.0" layoutY="1859.0" prefHeight="19.0" prefWidth="60.0" />
-                  <Label layoutX="343.0" layoutY="1851.0" text="100 - 140" />
-                  <Separator layoutX="18.0" layoutY="1887.0" prefHeight="4.0" prefWidth="608.0" />
-                  <Label layoutX="21.0" layoutY="1908.0" text="Dorsi (flex)" />
-                  <TextField fx:id="PROMDorsiFR" layoutX="123.0" layoutY="1891.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="dorsiFlexRP" layoutX="130.0" layoutY="1918.0" prefHeight="19.0" prefWidth="60.0" />
-                  <TextField fx:id="PROMDorsiFL" layoutX="233.0" layoutY="1891.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="dorsiFlexLP" layoutX="240.0" layoutY="1918.0" prefHeight="19.0" prefWidth="60.0" />
-                  <Label layoutX="343.0" layoutY="1910.0" text="7.4 - 18.8" />
-                  <Separator layoutX="18.0" layoutY="1945.0" prefHeight="4.0" prefWidth="608.0" />
-                  <TextField fx:id="PROMDorsiER" layoutX="123.0" layoutY="1948.0" prefHeight="20.0" prefWidth="75.0" />
-                  <TextField fx:id="PROMDorsiEL" layoutX="233.0" layoutY="1948.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="dorsiExtRP" layoutX="130.0" layoutY="1973.0" prefHeight="19.0" prefWidth="60.0" />
-                  <ComboBox fx:id="dorsiExtLP" layoutX="240.0" layoutY="1973.0" prefHeight="19.0" prefWidth="60.0" />
-                  <Label layoutX="343.0" layoutY="1964.0" text="0.2 - 10" />
-                  <Separator layoutX="19.0" layoutY="2002.0" prefHeight="4.0" prefWidth="608.0" />
-                  <TextField fx:id="PROMPlantarR" layoutX="123.0" layoutY="2006.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="plantarRP" layoutX="130.0" layoutY="2031.0" prefHeight="19.0" prefWidth="60.0" />
-                  <TextField fx:id="PROMPlantarL" layoutX="233.0" layoutY="2006.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="plantarLP" layoutX="240.0" layoutY="2031.0" prefHeight="19.0" prefWidth="60.0" />
-                  <Label layoutX="343.0" layoutY="2022.0" text="45.1 -61.9" />
-                  <TextField fx:id="StrengPlantarR" layoutX="431.0" layoutY="2006.0" prefHeight="20.0" prefWidth="75.0" />
-                  <TextField fx:id="StrengPlantarL" layoutX="538.0" layoutY="2006.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="plantarRS" layoutX="441.0" layoutY="2032.0" prefHeight="19.0" prefWidth="60.0" />
-                  <ComboBox fx:id="plantarLS" layoutX="545.0" layoutY="2032.0" prefHeight="19.0" prefWidth="60.0" />
-                  <Separator layoutX="17.0" layoutY="2059.0" prefHeight="4.0" prefWidth="608.0" />
-                  <TextField fx:id="PROMAnkInvR" layoutX="123.0" layoutY="2063.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="ankleInvRP" layoutX="130.0" layoutY="2089.0" prefHeight="19.0" prefWidth="60.0" />
-                  <TextField fx:id="PROMAnkInvL" layoutX="233.0" layoutY="2063.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="ankleInvLP" layoutX="240.0" layoutY="2089.0" prefHeight="19.0" prefWidth="60.0" />
-                  <Separator layoutX="21.0" layoutY="2126.0" prefHeight="4.0" prefWidth="608.0" />
-                  <Separator layoutX="15.0" layoutY="2183.0" prefHeight="4.0" prefWidth="608.0" />
-                  <Label layoutX="343.0" layoutY="2082.0" text="20 - 45" />
-                  <TextField fx:id="StrengAnklInvR" layoutX="431.0" layoutY="2063.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="ankleInvRS" layoutX="439.0" layoutY="2089.0" prefHeight="19.0" prefWidth="60.0" />
-                  <TextField fx:id="StrengAnklInvL" layoutX="538.0" layoutY="2063.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="ankleInvLS" layoutX="545.0" layoutY="2089.0" prefHeight="19.0" prefWidth="60.0" />
-                  <TextField fx:id="PROMAnkEvR" layoutX="123.0" layoutY="2130.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="ankleEverRP" layoutX="130.0" layoutY="2156.0" prefHeight="19.0" prefWidth="60.0" />
-                  <TextField fx:id="PROMAnkEvL" layoutX="233.0" layoutY="2130.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="ankleEverLP" layoutX="240.0" layoutY="2156.0" prefHeight="19.0" prefWidth="60.0" />
-                  <Label layoutX="343.0" layoutY="2148.0" text="20 -45" />
-                  <TextField fx:id="StrengAnkEvR" layoutX="431.0" layoutY="2129.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="ankleEverRS" layoutX="439.0" layoutY="2154.0" prefHeight="19.0" prefWidth="60.0" />
-                  <TextField fx:id="StrengAnkEvL" layoutX="538.0" layoutY="2129.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="ankleEverLS" layoutX="545.0" layoutY="2155.0" prefHeight="19.0" prefWidth="60.0" />
-                  <TextField fx:id="PROMtmaR" layoutX="123.0" layoutY="2188.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="tmaRP" layoutX="130.0" layoutY="2214.0" prefHeight="19.0" prefWidth="60.0" />
-                  <TextField fx:id="PROMtmaL" layoutX="233.0" layoutY="2188.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="tmaLP" layoutX="240.0" layoutY="2214.0" prefHeight="19.0" prefWidth="60.0" />
-                  <Label layoutX="343.0" layoutY="2205.0" text="0 - 25" />
-                  <Separator layoutX="18.0" layoutY="2241.0" prefHeight="4.0" prefWidth="608.0" />
-                  <TextField fx:id="PROMtfaR" layoutX="123.0" layoutY="2246.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="tfaRP" layoutX="130.0" layoutY="2274.0" prefHeight="19.0" prefWidth="60.0" />
-                  <TextField fx:id="PROMtfaL" layoutX="233.0" layoutY="2248.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="tfaLP" layoutX="240.0" layoutY="2274.0" prefHeight="19.0" prefWidth="60.0" />
-                  <Label layoutX="343.0" layoutY="2265.0" text="2.5 - 13.5" />
-                  <Separator layoutX="17.0" layoutY="2301.0" prefHeight="4.0" prefWidth="608.0" />
-                  <TextField fx:id="PROMffR" layoutX="123.0" layoutY="2305.0" prefHeight="20.0" prefWidth="75.0" />
-                  <TextField fx:id="PROMffL" layoutX="233.0" layoutY="2305.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="ffRP" layoutX="130.0" layoutY="2331.0" prefHeight="19.0" prefWidth="60.0" />
-                  <ComboBox fx:id="ffLP" layoutX="240.0" layoutY="2331.0" prefHeight="19.0" prefWidth="60.0" />
-                  <Separator layoutX="15.0" layoutY="2359.0" prefHeight="4.0" prefWidth="608.0" />
-                  <Label layoutX="21.0" layoutY="2383.0" text="Calcaneal Inv" />
-                  <TextField fx:id="PROMCalInvR" layoutX="123.0" layoutY="2364.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="calInvRP" layoutX="130.0" layoutY="2391.0" prefHeight="19.0" prefWidth="60.0" />
-                  <TextField fx:id="PROMCalInvL" layoutX="233.0" layoutY="2364.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="calInvLP" layoutX="240.0" layoutY="2390.0" prefHeight="19.0" prefWidth="60.0" />
-                  <Label layoutX="343.0" layoutY="2323.0" text="-5 - 5" />
-                  <Label layoutX="343.0" layoutY="2382.0" text="5 - 15" />
-                  <Separator layoutX="21.0" layoutY="2417.0" prefHeight="4.0" prefWidth="608.0" />
-                  <Label layoutX="21.0" layoutY="2438.0" text="Calcaneal Ever" />
-                  <TextField fx:id="PROMCalEvR" layoutX="123.0" layoutY="2426.0" prefHeight="20.0" prefWidth="75.0" />
-                  <TextField fx:id="PROMCalEvL" layoutX="233.0" layoutY="2426.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="calEverRP" layoutX="130.0" layoutY="2452.0" prefHeight="19.0" prefWidth="60.0" />
-                  <ComboBox fx:id="calEverLP" layoutX="240.0" layoutY="2452.0" prefHeight="19.0" prefWidth="60.0" />
-                  <Label layoutX="343.0" layoutY="2443.0" text="5 - 15" />
-                  <Separator layoutX="18.0" layoutY="2479.0" prefHeight="4.0" prefWidth="608.0" />
-                  <Separator layoutX="18.0" layoutY="2551.0" prefHeight="4.0" prefWidth="608.0" />
-                  <TextField fx:id="legLengthR" layoutX="123.0" layoutY="2487.0" prefHeight="20.0" prefWidth="75.0" />
-                  <TextField fx:id="legLengthL" layoutX="233.0" layoutY="2487.0" prefHeight="20.0" prefWidth="75.0" />
-                  <Label layoutX="21.0" layoutY="2573.0" prefHeight="41.0" prefWidth="70.0" text="Knee Varus/Valgus" wrapText="true" />
-                  <TextField fx:id="kneeVarR" layoutX="123.0" layoutY="2557.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="kneeVarusRP" layoutX="130.0" layoutY="2584.0" prefHeight="19.0" prefWidth="60.0" />
-                  <TextField fx:id="kneeVarL" layoutX="233.0" layoutY="2557.0" prefHeight="20.0" prefWidth="75.0" />
-                  <ComboBox fx:id="kneeVarusLP" layoutX="240.0" layoutY="2583.0" prefHeight="19.0" prefWidth="60.0" />
-                  <Label layoutX="343.0" layoutY="2576.0" text="-13 - 5" />
-                  <Separator layoutX="18.0" layoutY="2622.0" prefHeight="4.0" prefWidth="608.0" />
-                  <Button fx:id="addOrthosis" layoutX="187.0" layoutY="2664.0" mnemonicParsing="false" onAction="#addOrthosis" prefHeight="25.0" prefWidth="75.0" text="Add" />
+                  <Separator layoutX="19.0" layoutY="1810.0" prefHeight="4.0" prefWidth="608.0" />
+                  <TextField fx:id="PROMBilatR" layoutX="123.0" layoutY="1815.0" prefHeight="20.0" prefWidth="75.0" />
+                  <ComboBox fx:id="biPopAngRP" layoutX="130.0" layoutY="1841.0" prefHeight="19.0" prefWidth="60.0" />
+                  <TextField fx:id="PROMBilatL" layoutX="233.0" layoutY="1815.0" prefHeight="20.0" prefWidth="75.0" />
+                  <ComboBox fx:id="biPopAngLP" layoutX="240.0" layoutY="1841.0" prefHeight="19.0" prefWidth="60.0" />
+                  <Label layoutX="352.0" layoutY="1833.0" text="0 - 0" />
+                  <Separator layoutX="18.0" layoutY="1868.0" prefHeight="4.0" prefWidth="608.0" />
+                  <TextField fx:id="PROMElyR" layoutX="123.0" layoutY="1871.0" prefHeight="20.0" prefWidth="75.0" />
+                  <TextField fx:id="PROMElyL" layoutX="233.0" layoutY="1871.0" prefHeight="20.0" prefWidth="75.0" />
+                  <ComboBox fx:id="elyTestRP" layoutX="130.0" layoutY="1897.0" prefHeight="19.0" prefWidth="60.0" />
+                  <ComboBox fx:id="elyTestLP" layoutX="240.0" layoutY="1897.0" prefHeight="19.0" prefWidth="60.0" />
+                  <Label layoutX="343.0" layoutY="1889.0" text="100 - 140" />
+                  <Separator layoutX="18.0" layoutY="1925.0" prefHeight="4.0" prefWidth="608.0" />
+                  <Label layoutX="21.0" layoutY="1946.0" text="Dorsi (flex)" />
+                  <TextField fx:id="PROMDorsiFR" layoutX="123.0" layoutY="1929.0" prefHeight="20.0" prefWidth="75.0" />
+                  <ComboBox fx:id="dorsiFlexRP" layoutX="130.0" layoutY="1956.0" prefHeight="19.0" prefWidth="60.0" />
+                  <TextField fx:id="PROMDorsiFL" layoutX="233.0" layoutY="1929.0" prefHeight="20.0" prefWidth="75.0" />
+                  <ComboBox fx:id="dorsiFlexLP" layoutX="240.0" layoutY="1956.0" prefHeight="19.0" prefWidth="60.0" />
+                  <Label layoutX="343.0" layoutY="1948.0" text="7.4 - 18.8" />
+                  <Separator layoutX="18.0" layoutY="1983.0" prefHeight="4.0" prefWidth="608.0" />
+                  <TextField fx:id="PROMDorsiER" layoutX="123.0" layoutY="1986.0" prefHeight="20.0" prefWidth="75.0" />
+                  <TextField fx:id="PROMDorsiEL" layoutX="233.0" layoutY="1986.0" prefHeight="20.0" prefWidth="75.0" />
+                  <ComboBox fx:id="dorsiExtRP" layoutX="130.0" layoutY="2011.0" prefHeight="19.0" prefWidth="60.0" />
+                  <ComboBox fx:id="dorsiExtLP" layoutX="240.0" layoutY="2011.0" prefHeight="19.0" prefWidth="60.0" />
+                  <Label layoutX="343.0" layoutY="2002.0" text="0.2 - 10" />
+                  <Separator layoutX="19.0" layoutY="2040.0" prefHeight="4.0" prefWidth="608.0" />
+                  <TextField fx:id="PROMPlantarR" layoutX="123.0" layoutY="2044.0" prefHeight="20.0" prefWidth="75.0" />
+                  <ComboBox fx:id="plantarRP" layoutX="130.0" layoutY="2070.0" prefHeight="19.0" prefWidth="60.0" />
+                  <TextField fx:id="PROMPlantarL" layoutX="233.0" layoutY="2044.0" prefHeight="20.0" prefWidth="75.0" />
+                  <ComboBox fx:id="plantarLP" layoutX="240.0" layoutY="2070.0" prefHeight="19.0" prefWidth="60.0" />
+                  <Label layoutX="343.0" layoutY="2061.0" text="45.1 -61.9" />
+                  <TextField fx:id="StrengPlantarR" layoutX="431.0" layoutY="2044.0" prefHeight="20.0" prefWidth="75.0" />
+                  <TextField fx:id="StrengPlantarL" layoutX="538.0" layoutY="2044.0" prefHeight="20.0" prefWidth="75.0" />
+                  <ComboBox fx:id="plantarRS" layoutX="441.0" layoutY="2071.0" prefHeight="19.0" prefWidth="60.0" />
+                  <ComboBox fx:id="plantarLS" layoutX="545.0" layoutY="2071.0" prefHeight="19.0" prefWidth="60.0" />
+                  <Separator layoutX="17.0" layoutY="2098.0" prefHeight="4.0" prefWidth="608.0" />
+                  <TextField fx:id="PROMAnkInvR" layoutX="123.0" layoutY="2102.0" prefHeight="20.0" prefWidth="75.0" />
+                  <ComboBox fx:id="ankleInvRP" layoutX="130.0" layoutY="2128.0" prefHeight="19.0" prefWidth="60.0" />
+                  <TextField fx:id="PROMAnkInvL" layoutX="233.0" layoutY="2102.0" prefHeight="20.0" prefWidth="75.0" />
+                  <ComboBox fx:id="ankleInvLP" layoutX="240.0" layoutY="2128.0" prefHeight="19.0" prefWidth="60.0" />
+                  <Separator layoutX="21.0" layoutY="2165.0" prefHeight="4.0" prefWidth="608.0" />
+                  <Separator layoutX="15.0" layoutY="2222.0" prefHeight="4.0" prefWidth="608.0" />
+                  <Label layoutX="343.0" layoutY="2121.0" text="20 - 45" />
+                  <TextField fx:id="StrengAnklInvR" layoutX="431.0" layoutY="2102.0" prefHeight="20.0" prefWidth="75.0" />
+                  <ComboBox fx:id="ankleInvRS" layoutX="439.0" layoutY="2128.0" prefHeight="19.0" prefWidth="60.0" />
+                  <TextField fx:id="StrengAnklInvL" layoutX="538.0" layoutY="2102.0" prefHeight="20.0" prefWidth="75.0" />
+                  <ComboBox fx:id="ankleInvLS" layoutX="545.0" layoutY="2128.0" prefHeight="19.0" prefWidth="60.0" />
+                  <TextField fx:id="PROMAnkEvR" layoutX="123.0" layoutY="2169.0" prefHeight="20.0" prefWidth="75.0" />
+                  <ComboBox fx:id="ankleEverRP" layoutX="130.0" layoutY="2195.0" prefHeight="19.0" prefWidth="60.0" />
+                  <TextField fx:id="PROMAnkEvL" layoutX="233.0" layoutY="2169.0" prefHeight="20.0" prefWidth="75.0" />
+                  <ComboBox fx:id="ankleEverLP" layoutX="240.0" layoutY="2195.0" prefHeight="19.0" prefWidth="60.0" />
+                  <Label layoutX="343.0" layoutY="2187.0" text="20 -45" />
+                  <TextField fx:id="StrengAnkEvR" layoutX="431.0" layoutY="2168.0" prefHeight="20.0" prefWidth="75.0" />
+                  <ComboBox fx:id="ankleEverRS" layoutX="439.0" layoutY="2193.0" prefHeight="19.0" prefWidth="60.0" />
+                  <TextField fx:id="StrengAnkEvL" layoutX="538.0" layoutY="2168.0" prefHeight="20.0" prefWidth="75.0" />
+                  <ComboBox fx:id="ankleEverLS" layoutX="545.0" layoutY="2194.0" prefHeight="19.0" prefWidth="60.0" />
+                  <TextField fx:id="PROMtmaR" layoutX="123.0" layoutY="2227.0" prefHeight="20.0" prefWidth="75.0" />
+                  <ComboBox fx:id="tmaRP" layoutX="130.0" layoutY="2253.0" prefHeight="19.0" prefWidth="60.0" />
+                  <TextField fx:id="PROMtmaL" layoutX="233.0" layoutY="2227.0" prefHeight="20.0" prefWidth="75.0" />
+                  <ComboBox fx:id="tmaLP" layoutX="240.0" layoutY="2253.0" prefHeight="19.0" prefWidth="60.0" />
+                  <Label layoutX="343.0" layoutY="2244.0" text="0 - 25" />
+                  <Separator layoutX="18.0" layoutY="2280.0" prefHeight="4.0" prefWidth="608.0" />
+                  <TextField fx:id="PROMtfaR" layoutX="123.0" layoutY="2285.0" prefHeight="20.0" prefWidth="75.0" />
+                  <ComboBox fx:id="tfaRP" layoutX="130.0" layoutY="2313.0" prefHeight="19.0" prefWidth="60.0" />
+                  <TextField fx:id="PROMtfaL" layoutX="233.0" layoutY="2287.0" prefHeight="20.0" prefWidth="75.0" />
+                  <ComboBox fx:id="tfaLP" layoutX="240.0" layoutY="2313.0" prefHeight="19.0" prefWidth="60.0" />
+                  <Label layoutX="343.0" layoutY="2304.0" text="2.5 - 13.5" />
+                  <Separator layoutX="17.0" layoutY="2340.0" prefHeight="4.0" prefWidth="608.0" />
+                  <TextField fx:id="PROMffR" layoutX="123.0" layoutY="2344.0" prefHeight="20.0" prefWidth="75.0" />
+                  <TextField fx:id="PROMffL" layoutX="233.0" layoutY="2344.0" prefHeight="20.0" prefWidth="75.0" />
+                  <ComboBox fx:id="ffRP" layoutX="130.0" layoutY="2370.0" prefHeight="19.0" prefWidth="60.0" />
+                  <ComboBox fx:id="ffLP" layoutX="240.0" layoutY="2370.0" prefHeight="19.0" prefWidth="60.0" />
+                  <Separator layoutX="15.0" layoutY="2398.0" prefHeight="4.0" prefWidth="608.0" />
+                  <Label layoutX="21.0" layoutY="2422.0" text="Calcaneal Inv" />
+                  <TextField fx:id="PROMCalInvR" layoutX="123.0" layoutY="2403.0" prefHeight="20.0" prefWidth="75.0" />
+                  <ComboBox fx:id="calInvRP" layoutX="130.0" layoutY="2430.0" prefHeight="19.0" prefWidth="60.0" />
+                  <TextField fx:id="PROMCalInvL" layoutX="233.0" layoutY="2403.0" prefHeight="20.0" prefWidth="75.0" />
+                  <ComboBox fx:id="calInvLP" layoutX="240.0" layoutY="2429.0" prefHeight="19.0" prefWidth="60.0" />
+                  <Label layoutX="343.0" layoutY="2362.0" text="-5 - 5" />
+                  <Label layoutX="343.0" layoutY="2421.0" text="5 - 15" />
+                  <Separator layoutX="21.0" layoutY="2456.0" prefHeight="4.0" prefWidth="608.0" />
+                  <Label layoutX="21.0" layoutY="2477.0" text="Calcaneal Ever" />
+                  <TextField fx:id="PROMCalEvR" layoutX="123.0" layoutY="2465.0" prefHeight="20.0" prefWidth="75.0" />
+                  <TextField fx:id="PROMCalEvL" layoutX="233.0" layoutY="2465.0" prefHeight="20.0" prefWidth="75.0" />
+                  <ComboBox fx:id="calEverRP" layoutX="130.0" layoutY="2491.0" prefHeight="19.0" prefWidth="60.0" />
+                  <ComboBox fx:id="calEverLP" layoutX="240.0" layoutY="2491.0" prefHeight="19.0" prefWidth="60.0" />
+                  <Label layoutX="343.0" layoutY="2482.0" text="5 - 15" />
+                  <Separator layoutX="18.0" layoutY="2518.0" prefHeight="4.0" prefWidth="608.0" />
+                  <Separator layoutX="18.0" layoutY="2572.0" prefHeight="4.0" prefWidth="608.0" />
+                  <TextField fx:id="legLengthR" layoutX="123.0" layoutY="2526.0" prefHeight="20.0" prefWidth="75.0" />
+                  <TextField fx:id="legLengthL" layoutX="233.0" layoutY="2526.0" prefHeight="20.0" prefWidth="75.0" />
+                  <Label layoutX="21.0" layoutY="2591.0" prefHeight="41.0" prefWidth="70.0" text="Knee Varus/Valgus" wrapText="true" />
+                  <TextField fx:id="kneeVarR" layoutX="123.0" layoutY="2575.0" prefHeight="20.0" prefWidth="75.0" />
+                  <ComboBox fx:id="kneeVarusRP" layoutX="130.0" layoutY="2602.0" prefHeight="19.0" prefWidth="60.0" />
+                  <TextField fx:id="kneeVarL" layoutX="233.0" layoutY="2575.0" prefHeight="20.0" prefWidth="75.0" />
+                  <ComboBox fx:id="kneeVarusLP" layoutX="240.0" layoutY="2601.0" prefHeight="19.0" prefWidth="60.0" />
+                  <Label layoutX="343.0" layoutY="2584.0" text="-13 - 5" />
+                  <Separator layoutX="18.0" layoutY="2639.0" prefHeight="4.0" prefWidth="608.0" />
+                  <Button fx:id="addOrthosis" layoutX="187.0" layoutY="2735.0" mnemonicParsing="false" onAction="#addOrthosis" prefHeight="25.0" prefWidth="75.0" text="Add" />
                   <TableView fx:id="orthosisTable" layoutX="31.0" layoutY="2798.0" prefHeight="149.0" prefWidth="419.0">
                       <columns>
                           <TableColumn fx:id="orthosisColumn" prefWidth="309.9999885559082" text="Orthosis" />
@@ -841,6 +901,12 @@
                   <TextField fx:id="durOfPain" layoutX="146.0" layoutY="5133.0" prefHeight="66.0" prefWidth="326.0" />
                   <Separator layoutX="18.0" layoutY="5204.0" prefHeight="2.0" prefWidth="580.0" />
             <Button layoutX="620.0" layoutY="26.0" mnemonicParsing="false" onAction="#onSavePTExam" prefHeight="38.0" prefWidth="114.0" text="Save" />
+            <TextField fx:id="PROMPopAngleR1" layoutX="123.0" layoutY="1749.0" prefHeight="20.0" prefWidth="75.0" />
+            <TextField fx:id="PROMPopAngleL1" layoutX="233.0" layoutY="1749.0" prefHeight="20.0" prefWidth="75.0" />
+            <TextField fx:id="StrengthKneeFlexR1" layoutX="431.0" layoutY="1928.0" prefHeight="20.0" prefWidth="75.0" />
+            <TextField fx:id="StrengthKneeFlexR2" layoutX="536.0" layoutY="1928.0" prefHeight="20.0" prefWidth="75.0" />
+            <ComboBox fx:id="kneeFlexRS1" layoutX="442.0" layoutY="1957.0" prefHeight="19.0" prefWidth="60.0" />
+            <ComboBox fx:id="kneeFlexRS11" layoutX="545.0" layoutY="1956.0" prefHeight="19.0" prefWidth="60.0" />
               </Pane>
           </ScrollPane>
       </Tab>
@@ -928,8 +994,8 @@
           <ScrollPane prefHeight="773.0" prefWidth="773.0">
               <Pane maxWidth="900.0" prefHeight="1386.0" prefWidth="900.0">
                   <Label layoutX="12.0" layoutY="200.0" text="Gait Pictures " />
-                  <Label layoutX="12.0" layoutY="129.0" prefWidth="1085.0" text="Gray boxes indicate that some data is present for that test/visit combination." />
-                  <Label layoutX="12.0" layoutY="146.0" text=" A red checkbox indicates there are comments associated with that test. Hover the mouse over the box to see the comments." />
+                  <Label layoutX="12.0" layoutY="119.0" prefWidth="1085.0" text="Gray boxes indicate that some data is present for that test/visit combination." />
+                  <Label layoutX="12.0" layoutY="136.0" text=" A red checkbox indicates there are comments associated with that test. Hover the mouse over the box to see the comments." />
                   <Label layoutX="12.0" layoutY="226.0" text="Gait Video" />
                   <Label layoutX="12.0" layoutY="252.0" text="Gait Foot Pressure" />
                   <Label layoutX="12.0" layoutY="276.0" text="Gait Kinematics " />
@@ -942,213 +1008,171 @@
                   <Label layoutX="12.0" layoutY="452.0" text="Gait Walking and Exercise" />
                   <Label layoutX="12.0" layoutY="477.0" text="Gait Step Watch" />
                   <Separator layoutY="222.0" prefHeight="3.0" prefWidth="783.0" />
-                  <Label layoutX="263.0" layoutY="168.0" text="11/11/2022" />
-                  <Label layoutX="328.0" layoutY="170.0" text="1/30/2025">
+                  <Label layoutX="263.0" layoutY="153.0" text="11/11/2022" />
+                  <Label layoutX="328.0" layoutY="155.0" text="3/5/2025">
                <font>
                   <Font size="11.0" />
                </font></Label>
-                  <Label layoutX="399.0" layoutY="170.0" text="Test" />
                   <CheckBox fx:id="gaitpics" layoutX="288.0" layoutY="200.0" mnemonicParsing="false" onAction="#onGaitpics">
                <tooltip>
                   <Tooltip fx:id="tooltip" text="Empty Tooltip" />
                </tooltip>
                   </CheckBox>
                   <CheckBox fx:id="gaitpics1" layoutX="344.0" layoutY="200.0" mnemonicParsing="false" onAction="#onGaitpics1" />
-                  <CheckBox layoutX="399.0" layoutY="200.0" mnemonicParsing="false" />
                   <Separator layoutY="247.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox fx:id="videoGait" layoutX="288.0" layoutY="225.0" mnemonicParsing="false" onAction="#onVideoGait" />
                   <CheckBox fx:id="videoGait1" layoutX="344.0" layoutY="225.0" mnemonicParsing="false" onAction="#onVideoGait1" />
-                  <CheckBox layoutX="399.0" layoutY="225.0" mnemonicParsing="false" />
                   <Separator layoutY="272.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox fx:id="gaitFootPressure" layoutX="288.0" layoutY="250.0" mnemonicParsing="false" />
                   <CheckBox fx:id="gaitFootPressure1" layoutX="344.0" layoutY="250.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="250.0" mnemonicParsing="false" />
                   <Separator layoutY="297.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox fx:id="GAITKinematics" layoutX="288.0" layoutY="275.0" mnemonicParsing="false" />
                   <CheckBox fx:id="GAITKinematics1" layoutX="344.0" layoutY="275.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="276.0" mnemonicParsing="false" />
                   <Separator layoutY="322.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox fx:id="gaitMultiSegment" layoutX="288.0" layoutY="301.0" mnemonicParsing="false" />
                   <CheckBox fx:id="gaitMultiSegment1" layoutX="344.0" layoutY="301.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="301.0" mnemonicParsing="false" />
                   <Separator layoutY="347.0" prefHeight="3.0" prefWidth="783.0" />
                   <Separator layoutY="372.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox fx:id="gaitEMG" layoutX="288.0" layoutY="326.0" mnemonicParsing="false" />
                   <CheckBox fx:id="gaitEMG1" layoutX="344.0" layoutY="326.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="326.0" mnemonicParsing="false" />
                   <CheckBox fx:id="gaitEMGFine" layoutX="288.0" layoutY="351.0" mnemonicParsing="false" />
                   <CheckBox fx:id="gaitEMGFine1" layoutX="344.0" layoutY="351.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="351.0" mnemonicParsing="false" />
                   <Separator layoutY="397.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox fx:id="GAITPTExam1" layoutX="344.0" layoutY="375.0" mnemonicParsing="false" />
                   <CheckBox fx:id="GAITPTExam" layoutX="288.0" layoutY="375.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="375.0" mnemonicParsing="false" />
                   <Separator layoutY="422.0" prefHeight="3.0" prefWidth="783.0" />
                   <Separator layoutY="447.0" prefHeight="3.0" prefWidth="783.0" />
                   <Separator layoutY="472.0" prefHeight="3.0" prefWidth="783.0" />
                   <Separator layoutY="497.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox fx:id="GAITWalking" layoutX="288.0" layoutY="400.0" mnemonicParsing="false" />
                   <CheckBox fx:id="GAITWalking1" layoutX="344.0" layoutY="400.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="400.0" mnemonicParsing="false" />
                   <CheckBox fx:id="GAITExercise" layoutX="288.0" layoutY="425.0" mnemonicParsing="false" />
                   <CheckBox fx:id="GAITExercise1" layoutX="344.0" layoutY="425.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="425.0" mnemonicParsing="false" />
                   <CheckBox fx:id="GAITExerciseWalk" layoutX="288.0" layoutY="450.0" mnemonicParsing="false" />
                   <CheckBox fx:id="GAITExerciseWalk1" layoutX="344.0" layoutY="450.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="450.0" mnemonicParsing="false" />
                   <CheckBox fx:id="GAITStep" layoutX="288.0" layoutY="476.0" mnemonicParsing="false" />
                   <CheckBox fx:id="GAITStep1" layoutX="344.0" layoutY="476.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="475.0" mnemonicParsing="false" />
                   <Separator blendMode="EXCLUSION" layoutX="260.0" layoutY="176.0" orientation="VERTICAL" prefHeight="1022.0" prefWidth="0.0" />
                   <Separator blendMode="EXCLUSION" layoutX="324.0" layoutY="176.0" orientation="VERTICAL" prefHeight="1022.0" prefWidth="0.0" />
                   <Separator blendMode="EXCLUSION" layoutX="381.0" layoutY="176.0" orientation="VERTICAL" prefHeight="1022.0" prefWidth="0.0" />
-                  <Separator blendMode="EXCLUSION" layoutX="434.0" layoutY="179.0" orientation="VERTICAL" prefHeight="1022.0" prefWidth="0.0" />
                   <Label layoutX="12.0" layoutY="502.0" text="Gait History" />
                   <CheckBox fx:id="GAITHistory" layoutX="288.0" layoutY="500.0" mnemonicParsing="false" />
                   <CheckBox fx:id="GAITHistory1" layoutX="344.0" layoutY="500.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="500.0" mnemonicParsing="false" />
                   <Separator layoutY="522.0" prefHeight="3.0" prefWidth="783.0" />
                   <Label layoutX="12.0" layoutY="528.0" text="Gait - Interpretation Full" />
                   <CheckBox layoutX="288.0" layoutY="527.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="527.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="527.0" mnemonicParsing="false" />
                   <Separator layoutY="547.0" prefHeight="3.0" prefWidth="783.0" />
                   <Label layoutX="12.0" layoutY="553.0" text="Gait Interpretation Modified" />
                   <CheckBox layoutX="288.0" layoutY="551.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="551.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="551.0" mnemonicParsing="false" />
                   <Separator layoutY="572.0" prefHeight="3.0" prefWidth="783.0" />
                   <Label layoutX="12.0" layoutY="577.0" text="UE - Pics" />
                   <CheckBox layoutX="288.0" layoutY="577.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="577.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="577.0" mnemonicParsing="false" />
                   <Separator layoutY="597.0" prefHeight="3.0" prefWidth="783.0" />
                   <Label layoutX="12.0" layoutY="601.0" text="UE - Video" />
                   <Separator layoutY="622.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox layoutX="288.0" layoutY="601.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="601.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="601.0" mnemonicParsing="false" />
                   <Label layoutX="12.0" layoutY="625.0" text="UE - Kinematics" />
                   <Separator layoutY="647.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox layoutX="288.0" layoutY="625.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="625.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="625.0" mnemonicParsing="false" />
                   <Label layoutX="12.0" layoutY="650.0" text="UE - Physical Exam" />
                   <CheckBox layoutX="288.0" layoutY="650.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="650.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="650.0" mnemonicParsing="false" />
                   <Separator layoutY="672.0" prefHeight="3.0" prefWidth="783.0" />
                   <Separator blendMode="EXCLUSION" layoutX="3.0" layoutY="53.0" prefHeight="3.0" prefWidth="783.0" />
                   <Button fx:id="onViewCompendiumSideNav" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#onViewCompendiumSideNav" prefHeight="31.0" prefWidth="126.0" text="View Compendium " />
                   <Button fx:id="setDatesVisitGait" layoutX="620.0" layoutY="66.0" mnemonicParsing="false" onAction="#onSetDatesVisitGait" prefHeight="23.0" prefWidth="117.0" text="Set Dates" />
                   <Label layoutX="565.0" layoutY="100.0" text="Current Comparison:" />
-                  <Text layoutX="716.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Test" />
+                  <Text layoutX="687.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11/11/2022" />
                   <Button fx:id="interpSideNav1" layoutX="148.0" layoutY="14.0" mnemonicParsing="false" onAction="#onViewInterpretation" prefHeight="31.0" prefWidth="126.0" text="View Interpretation " />
                   <Label layoutX="12.0" layoutY="676.0" text="UE - History" />
                   <Separator layoutY="697.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox layoutX="288.0" layoutY="676.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="676.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="398.0" layoutY="676.0" mnemonicParsing="false" />
                   <Label layoutX="12.0" layoutY="703.0" text="UE - Interpretation" />
                   <Separator layoutY="722.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox layoutX="288.0" layoutY="701.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="701.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="701.0" mnemonicParsing="false" />
                   <Label layoutX="12.0" layoutY="726.0" text="Running - Pics" />
                   <Separator layoutY="747.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox layoutX="288.0" layoutY="726.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="726.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="398.0" layoutY="726.0" mnemonicParsing="false" />
                   <Label layoutX="12.0" layoutY="752.0" text="Running - Video" />
                   <Separator layoutY="772.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox layoutX="288.0" layoutY="752.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="752.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="752.0" mnemonicParsing="false" />
                   <Label layoutX="12.0" layoutY="776.0" text="Running - Kinematics" />
                   <Separator layoutY="797.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox layoutX="288.0" layoutY="776.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="776.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="398.0" layoutY="776.0" mnemonicParsing="false" />
                   <Label layoutX="12.0" layoutY="801.0" text="Running - Kinetics" />
                   <Separator layoutY="822.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox layoutX="288.0" layoutY="801.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="801.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="801.0" mnemonicParsing="false" />
                   <Label layoutX="12.0" layoutY="826.0" text="Running - PTExam" />
                   <Separator layoutY="847.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox layoutX="288.0" layoutY="826.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="826.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="826.0" mnemonicParsing="false" />
                   <Label layoutX="12.0" layoutY="850.0" text="Running - History" />
                   <Separator layoutY="872.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox layoutX="288.0" layoutY="850.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="850.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="850.0" mnemonicParsing="false" />
                   <Label layoutX="12.0" layoutY="876.0" text="Running - Interpretation" />
                   <Separator layoutY="897.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox layoutX="288.0" layoutY="876.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="876.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="876.0" mnemonicParsing="false" />
                   <Label layoutX="12.0" layoutY="901.0" text="Dystonia - Video" />
                   <Separator layoutY="922.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox layoutX="288.0" layoutY="901.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="901.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="901.0" mnemonicParsing="false" />
                   <Label layoutX="12.0" layoutY="926.0" text="PODSI - Parent Reported" />
                   <Separator layoutY="947.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox layoutX="288.0" layoutY="926.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="926.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="926.0" mnemonicParsing="false" />
                   <Label layoutX="12.0" layoutY="951.0" text="PODSI - Adolescent Reported" />
                   <Separator layoutY="972.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox layoutX="288.0" layoutY="951.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="951.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="951.0" mnemonicParsing="false" />
                   <Label layoutX="12.0" layoutY="976.0" text="Other - Pictures" />
                   <Separator layoutY="997.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox layoutX="288.0" layoutY="976.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="976.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="976.0" mnemonicParsing="false" />
                   <Label layoutX="12.0" layoutY="1001.0" text="Other - Video" />
                   <Separator layoutY="1022.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox layoutX="288.0" layoutY="1001.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="1001.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="398.0" layoutY="1001.0" mnemonicParsing="false" />
                   <Label layoutX="12.0" layoutY="1025.0" text="Other - Foot Pressure" />
                   <Separator layoutY="1047.0" prefHeight="3.0" prefWidth="783.0" />
-                  <CheckBox layoutX="288.0" layoutY="1025.0" mnemonicParsing="false" stylesheets="@../styles.css" />
+                  <CheckBox layoutX="288.0" layoutY="1025.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="1025.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="1025.0" mnemonicParsing="false" />
                   <Label layoutX="12.0" layoutY="1051.0" text="Other - Kinematics" />
                   <Separator layoutY="1072.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox layoutX="288.0" layoutY="1050.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="1050.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="1050.0" mnemonicParsing="false" />
                   <Label layoutX="12.0" layoutY="1076.0" text="Other - Kinetics" />
                   <Separator layoutY="1097.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox layoutX="288.0" layoutY="1076.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="1076.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="1076.0" mnemonicParsing="false" />
                   <Label layoutX="12.0" layoutY="1101.0" text="Other - Surface EMG" />
                   <Separator layoutY="1122.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox layoutX="288.0" layoutY="1101.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="1101.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="398.0" layoutY="1101.0" mnemonicParsing="false" />
                   <Label layoutX="12.0" layoutY="1126.0" text="Other - Metabolic" />
                   <Separator layoutY="1147.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox layoutX="288.0" layoutY="1126.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="1126.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="398.0" layoutY="1126.0" mnemonicParsing="false" />
                   <Label layoutX="12.0" layoutY="1151.0" text="Other - PT Exam" />
                   <Separator layoutY="1172.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox layoutX="288.0" layoutY="1151.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="1151.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="399.0" layoutY="1151.0" mnemonicParsing="false" />
                   <Label layoutX="12.0" layoutY="1176.0" text="Other - History" />
                   <Separator layoutY="1197.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox layoutX="288.0" layoutY="1176.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="1176.0" mnemonicParsing="false" />
-                  <CheckBox layoutX="398.0" layoutY="1176.0" mnemonicParsing="false" />
               </Pane>
           </ScrollPane>
       </Tab>
