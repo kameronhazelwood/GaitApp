@@ -338,12 +338,12 @@
       <Text fill="#009900" layoutX="158.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-16" />
       <Text fill="#018749" layoutX="158.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="75" />
       <Text fill="#009900" layoutX="158.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="70" />
-      <Text fill="#009900" layoutX="158.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="60" />
+      <Text fill="#009900" layoutX="158.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text fill="#009900" layoutX="158.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text="95" />
       <Text fill="#009900" layoutX="158.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20" />
       <Text fill="#009900" layoutX="158.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-15" />
       <Text fill="#009900" layoutX="158.0" layoutY="491.0" strokeType="OUTSIDE" strokeWidth="0.0" text="65" />
-      <Text fill="#009900" layoutX="158.0" layoutY="513.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30" />
+      <Text fill="#009900" layoutX="158.0" layoutY="513.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text fill="#009900" layoutX="158.0" layoutY="536.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30" />
       <Text fill="#009900" layoutX="158.0" layoutY="563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15 EXT" />
       <Text fill="#009900" layoutX="158.0" layoutY="593.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WNL" />
@@ -351,7 +351,7 @@
       <Text fill="#009900" layoutX="158.0" layoutY="656.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7 ADD" />
       <Text fill="#009900" layoutX="158.0" layoutY="686.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" />
       <Text fill="#009900" layoutX="158.0" layoutY="712.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" />
-      <Text fill="#009900" layoutX="158.0" layoutY="736.0" strokeType="OUTSIDE" strokeWidth="0.0" text="70" />
+      <Text fill="#009900" layoutX="158.0" layoutY="736.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text fill="#009900" layoutX="158.0" layoutY="769.0" strokeType="OUTSIDE" strokeWidth="0.0" text="--" />
       <Text fill="#009900" layoutX="158.0" layoutY="807.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-51" />
       <Text fill="RED" layoutX="214.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="115" />
@@ -363,7 +363,7 @@
       <Text fill="RED" layoutX="214.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50" />
       <Text fill="#009900" layoutX="264.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="55" />
       <Text fill="RED" layoutX="214.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30" />
-      <Text fill="#009900" layoutX="264.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="25" />
+      <Text fill="#009900" layoutX="264.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text fill="RED" layoutX="214.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-30" />
       <Text fill="#009900" layoutX="264.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-20" />
       <Text fill="RED" layoutX="310.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" />
@@ -399,7 +399,7 @@
       <Text fill="RED" layoutX="390.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4+" />
       <Text fill="#009900" layoutX="431.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" />
       <Text fill="RED" layoutX="214.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15" />
-      <Text fill="#009900" layoutX="264.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" />
+      <Text fill="#009900" layoutX="264.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text fill="RED" layoutX="214.0" layoutY="491.0" strokeType="OUTSIDE" strokeWidth="0.0" text="55" />
       <Text fill="#009900" layoutX="264.0" layoutY="491.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50" />
       <Text fill="RED" layoutX="310.0" layoutY="491.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" />
@@ -433,7 +433,7 @@
       <Text fill="RED" layoutX="214.0" layoutY="686.0" strokeType="OUTSIDE" strokeWidth="0.0" text="25" />
       <Text fill="#009900" layoutX="264.0" layoutY="686.0" strokeType="OUTSIDE" strokeWidth="0.0" text="25" />
       <Text fill="RED" layoutX="214.0" layoutY="712.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" />
-      <Text fill="#009900" layoutX="264.0" layoutY="712.0" strokeType="OUTSIDE" strokeWidth="0.0" text="24" />
+      <Text fill="#009900" layoutX="264.0" layoutY="712.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text fill="RED" layoutX="214.0" layoutY="736.0" strokeType="OUTSIDE" strokeWidth="0.0" text="72" />
       <Text fill="RED" layoutX="214.0" layoutY="769.0" strokeType="OUTSIDE" strokeWidth="0.0" text="--" />
       <Text fill="RED" layoutX="214.0" layoutY="807.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-20" />
@@ -450,7 +450,7 @@
       <Text fill="#009900" layoutX="243.0" layoutY="1090.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />
       <Text fill="#009900" layoutX="243.0" layoutY="1113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />
       <Text fill="#009900" layoutX="243.0" layoutY="1135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />
-      <Text fill="#009900" layoutX="243.0" layoutY="1158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />
+      <Text fill="#009900" layoutX="243.0" layoutY="1158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text fill="RED" layoutX="310.0" layoutY="923.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />
       <Text fill="RED" layoutX="310.0" layoutY="948.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />
       <Text fill="RED" layoutX="310.0" layoutY="973.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />
@@ -472,7 +472,7 @@
       <Text fill="#009900" layoutX="383.0" layoutY="1090.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />
       <Text fill="#009900" layoutX="383.0" layoutY="1113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />
       <Text fill="#009900" layoutX="383.0" layoutY="1135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />
-      <Text fill="#009900" layoutX="383.0" layoutY="1158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />
+      <Text fill="#009900" layoutX="383.0" layoutY="1158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text fill="#009900" layoutX="316.0" layoutY="2099.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #009900;" text="1x week" />
       <Text fill="#009900" layoutX="316.0" layoutY="2054.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #009900;" text="ankle" />
       <Separator layoutX="392.0" layoutY="1839.0" orientation="VERTICAL" prefHeight="179.0" prefWidth="0.0" />
@@ -589,9 +589,9 @@
       <Text fill="RED" layoutX="162.0" layoutY="1639.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3+" />
       <Text fill="RED" layoutX="161.0" layoutY="1662.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2+" />
       <Text fill="RED" layoutX="159.0" layoutY="1683.0" strokeType="OUTSIDE" strokeWidth="0.0" text="up" />
-      <Text fill="#009900" layoutX="239.0" layoutY="1683.0" strokeType="OUTSIDE" strokeWidth="0.0" text="nr" />
+      <Text fill="#009900" layoutX="239.0" layoutY="1683.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text fill="RED" layoutX="307.0" layoutY="1683.0" strokeType="OUTSIDE" strokeWidth="0.0" text="down" />
-      <Text fill="#009900" layoutX="380.0" layoutY="1683.0" strokeType="OUTSIDE" strokeWidth="0.0" text="nr" />
+      <Text fill="#009900" layoutX="380.0" layoutY="1683.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text fill="#009900" layoutX="239.0" layoutY="1639.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3+" />
       <Text fill="RED" layoutX="305.0" layoutY="1640.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3+" />
       <Text fill="#009900" layoutX="377.0" layoutY="1640.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3+" />
@@ -599,6 +599,19 @@
       <Text fill="RED" layoutX="305.0" layoutY="1662.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3+" />
       <Text fill="#009900" layoutX="377.0" layoutY="1662.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3+" />
       <Label layoutX="442.0" layoutY="120.0" text="2022-11-11" textFill="#009900" />
+      <Label layoutX="472.0" layoutY="840.0" text="Comparisons: " />
+      <Label layoutX="557.0" layoutY="840.0" style="-fx-text-fill: #ff0000;" text="2025-01-17" />
+      <Label layoutX="557.0" layoutY="857.0" text="2022-11-11" textFill="#009900" />
+      <Label layoutX="484.0" layoutY="1290.0" text="Comparisons: " />
+      <Label layoutX="569.0" layoutY="1290.0" style="-fx-text-fill: #ff0000;" text="2025-01-17" />
+      <Label layoutX="569.0" layoutY="1307.0" text="2022-11-11" textFill="#009900" />
+      <Text fill="RED" layoutX="305.0" layoutY="2125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="---" />
+      <Text fill="#009900" layoutX="305.0" layoutY="2147.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #009900;" text="---" />
+      <Text fill="#009900" layoutX="242.0" layoutY="1190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fill="#009900" layoutX="385.0" layoutY="1190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fill="RED" layoutX="310.0" layoutY="1190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fill="RED" layoutX="309.0" layoutY="1242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fill="RED" layoutX="155.0" layoutY="1242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <!--             <fx:include source="GAITPhysExam.fxml"/>-->
    </AnchorPane>
 </ScrollPane>

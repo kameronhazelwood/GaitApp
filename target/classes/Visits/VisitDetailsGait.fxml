@@ -1087,7 +1087,7 @@
                   <Button fx:id="onViewCompendiumSideNav" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#onViewCompendiumSideNav" prefHeight="31.0" prefWidth="126.0" text="View Compendium " />
                   <Button fx:id="setDatesVisitGait" layoutX="620.0" layoutY="66.0" mnemonicParsing="false" onAction="#onSetDatesVisitGait" prefHeight="23.0" prefWidth="117.0" text="Set Dates" />
                   <Label layoutX="565.0" layoutY="100.0" text="Current Comparison:" />
-                  <Text layoutX="687.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11/11/2022" />
+                  <Text layoutX="676.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11/11/2022" />
                   <Button fx:id="interpSideNav1" layoutX="148.0" layoutY="14.0" mnemonicParsing="false" onAction="#onViewInterpretation" prefHeight="31.0" prefWidth="126.0" text="View Interpretation " />
                   <Label layoutX="12.0" layoutY="676.0" text="UE - History" />
                   <Separator layoutY="697.0" prefHeight="3.0" prefWidth="783.0" />
@@ -1173,6 +1173,11 @@
                   <Separator layoutY="1197.0" prefHeight="3.0" prefWidth="783.0" />
                   <CheckBox layoutX="288.0" layoutY="1176.0" mnemonicParsing="false" />
                   <CheckBox layoutX="344.0" layoutY="1176.0" mnemonicParsing="false" />
+            <Label layoutX="676.0" layoutY="118.0" prefHeight="17.0" prefWidth="63.0" text="3/5/2025">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
               </Pane>
           </ScrollPane>
       </Tab>

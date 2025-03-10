@@ -3,7 +3,9 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
@@ -49,20 +51,20 @@
                               </font>
                            </Label>
                            <Label fx:id="dateLabel" layoutX="20.0" layoutY="46.0" prefHeight="25.0" prefWidth="68.0" text="Date:" />
-                           <TextField fx:id="dateTextField" layoutX="87.0" layoutY="47.0" />
                            <Label fx:id="patientListLabel" layoutX="19.0" layoutY="128.0" prefHeight="17.0" prefWidth="71.0" text="Patient List:" />
                            <Label layoutX="361.0" layoutY="50.0" text="History Questionnaire">
                               <font>
                                  <Font name="System Bold" size="12.0" />
                               </font></Label>
-                           <CheckBox layoutX="363.0" layoutY="75.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="120.0" text="History" />
+                           <CheckBox fx:id="history" layoutX="363.0" layoutY="75.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="120.0" text="History" />
                            <Label layoutX="360.0" layoutY="119.0" prefHeight="17.0" prefWidth="120.0" text="PODSI Questionnaire">
                               <font>
                                  <Font name="System Bold" size="12.0" />
                               </font></Label>
                            <CheckBox layoutX="363.0" layoutY="148.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="224.0" text="Child/Adolescent (Parent Reported)" />
                            <CheckBox layoutX="364.0" layoutY="178.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="198.0" text="Adolescent (Self Reported)" />
-                           <CheckBox fx:id="patientNames" layoutX="101.0" layoutY="128.0" mnemonicParsing="false" text="Test, Test" />
+                           <ListView layoutX="30.0" layoutY="157.0" prefHeight="261.0" prefWidth="253.0" />
+                           <DatePicker layoutX="57.0" layoutY="46.0" prefHeight="25.0" prefWidth="175.0" />
                         </children>
                      </Pane>
                      <Label layoutX="363.0" layoutY="223.0" prefHeight="17.0" prefWidth="96.0" text="Other">
@@ -78,7 +80,7 @@
                         </font>
                      </Label>
                      <ComboBox layoutX="365.0" layoutY="348.0" prefHeight="25.0" prefWidth="129.0" />
-                     <Button layoutX="689.0" layoutY="361.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="143.0" text="Print" />
+                     <Button fx:id="start" layoutX="689.0" layoutY="361.0" mnemonicParsing="false" onAction="#onStart" prefHeight="69.0" prefWidth="143.0" text="Start" />
                   </children></AnchorPane>
          </content>
        </Tab>

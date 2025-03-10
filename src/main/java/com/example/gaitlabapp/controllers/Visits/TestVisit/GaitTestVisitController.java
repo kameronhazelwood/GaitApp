@@ -3002,7 +3002,7 @@ public class GaitTestVisitController implements Initializable {
 
         public void onSetDatesVisitGait(ActionEvent event) throws IOException {
             Parent popUp;
-            popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Visits/SetDatesTest.fxml")));
+            popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Visits/TestVisit/SetDatesTest.fxml")));
             Stage stage1 = new Stage();
             stage1.setTitle("Set Dates:  ");
             stage1.setScene(new Scene(popUp, 900, 680));

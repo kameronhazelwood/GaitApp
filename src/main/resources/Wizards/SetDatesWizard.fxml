@@ -49,16 +49,16 @@
       <Separator layoutY="628.0" prefHeight="0.0" prefWidth="614.0" />
       <Label layoutX="10.0" layoutY="633.0" text="Gait - Step Watch" />
       <Separator blendMode="EXCLUSION" layoutX="386.0" layoutY="64.0" orientation="VERTICAL" prefHeight="593.0" prefWidth="0.0" />
-      <CheckBox layoutX="278.0" layoutY="126.0" mnemonicParsing="false" onAction="#onGaitPTApt1" />
-      <CheckBox layoutX="278.0" layoutY="95.0" mnemonicParsing="false" />
-      <CheckBox layoutX="347.0" layoutY="95.0" mnemonicParsing="false" />
+      <CheckBox layoutX="278.0" layoutY="126.0" mnemonicParsing="false" onAction="#onGaitPTApt1" selected="true" />
+      <CheckBox layoutX="278.0" layoutY="95.0" mnemonicParsing="false" selected="true" />
+      <CheckBox layoutX="347.0" layoutY="95.0" mnemonicParsing="false" selected="true" />
       <CheckBox layoutX="278.0" layoutY="155.0" mnemonicParsing="false" />
       <CheckBox layoutX="278.0" layoutY="187.0" mnemonicParsing="false" />
-      <CheckBox layoutX="278.0" layoutY="221.0" mnemonicParsing="false" />
+      <CheckBox layoutX="278.0" layoutY="221.0" mnemonicParsing="false" selected="true" />
       <CheckBox layoutX="278.0" layoutY="251.0" mnemonicParsing="false" />
       <CheckBox layoutX="278.0" layoutY="283.0" mnemonicParsing="false" />
       <CheckBox layoutX="278.0" layoutY="317.0" mnemonicParsing="false" />
-      <CheckBox layoutX="278.0" layoutY="350.0" mnemonicParsing="false" />
+      <CheckBox layoutX="278.0" layoutY="350.0" mnemonicParsing="false" selected="true" />
       <CheckBox layoutX="347.0" layoutY="126.0" mnemonicParsing="false" />
       <CheckBox layoutX="347.0" layoutY="155.0" mnemonicParsing="false" />
       <CheckBox layoutX="347.0" layoutY="187.0" mnemonicParsing="false" />
@@ -69,7 +69,7 @@
       <CheckBox layoutX="347.0" layoutY="350.0" mnemonicParsing="false" />
       <CheckBox layoutX="347.0" layoutY="380.0" mnemonicParsing="false" />
       <CheckBox layoutX="278.0" layoutY="380.0" mnemonicParsing="false" />
-      <CheckBox layoutX="278.0" layoutY="412.0" mnemonicParsing="false" />
+      <CheckBox layoutX="278.0" layoutY="412.0" mnemonicParsing="false" selected="true" />
       <CheckBox layoutX="347.0" layoutY="412.0" mnemonicParsing="false" />
       <CheckBox layoutX="278.0" layoutY="443.0" mnemonicParsing="false" />
       <CheckBox layoutX="347.0" layoutY="443.0" mnemonicParsing="false" />
@@ -81,13 +81,13 @@
       <CheckBox layoutX="347.0" layoutY="539.0" mnemonicParsing="false" />
       <CheckBox layoutX="278.0" layoutY="571.0" mnemonicParsing="false" />
       <CheckBox layoutX="347.0" layoutY="571.0" mnemonicParsing="false" />
-      <CheckBox layoutX="278.0" layoutY="603.0" mnemonicParsing="false" />
+      <CheckBox layoutX="278.0" layoutY="603.0" mnemonicParsing="false" selected="true" />
       <CheckBox layoutX="347.0" layoutY="603.0" mnemonicParsing="false" />
       <CheckBox layoutX="278.0" layoutY="633.0" mnemonicParsing="false" />
       <CheckBox layoutX="347.0" layoutY="633.0" mnemonicParsing="false" />
       <Label layoutX="260.0" layoutY="46.0" text="11/11/2022" />
       <Label layoutX="328.0" layoutY="47.0" text="3/5/2025" />
-      <Button fx:id="setDate" layoutX="622.0" layoutY="52.0" mnemonicParsing="false" text="Set Dates" />
+      <Button fx:id="setDate" layoutX="622.0" layoutY="52.0" mnemonicParsing="false" onAction="#OnSetDate" text="Set Dates" />
       <Separator layoutX="-1.0" layoutY="656.0" prefHeight="0.0" prefWidth="614.0" />
    </AnchorPane>
 </ScrollPane>

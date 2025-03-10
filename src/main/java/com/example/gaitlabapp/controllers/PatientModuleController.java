@@ -96,7 +96,7 @@ public class PatientModuleController implements Initializable {
 
     ObservableList<IAppointmentModel> initialData() {
         IAppointmentModel apt1 = new IAppointmentModel(1, "11/22/2022", "GAIT", "Full Diagnostic", "", GAIT, "",  2, "", "", "", "");
-        IAppointmentModel apt2 = new IAppointmentModel(1, "3/5/2025", "GAIT", "Post-Op Outcome", "Dr. Smith", POSTOP, "", 2, "", "", "", "");
+        IAppointmentModel apt2 = new IAppointmentModel(1, "03/07/2025", "GAIT", "Post-Op Outcome", "Dr. Smith", POSTOP, "", 2, "", "", "", "");
         return FXCollections.observableArrayList(apt2, apt1);
     }
 

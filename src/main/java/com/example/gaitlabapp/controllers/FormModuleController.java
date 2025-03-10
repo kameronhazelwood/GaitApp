@@ -1,6 +1,8 @@
 package com.example.gaitlabapp.controllers;
 
 import com.example.gaitlabapp.Launcher;
+import com.example.gaitlabapp.controllers.Visits.TestVisit.GaitTestVisitController;
+import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,14 +10,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
@@ -32,6 +33,8 @@ import java.util.ResourceBundle;
 @RequiredArgsConstructor
 public class FormModuleController implements Initializable {
 
+    public CheckBox history;
+    public Button start;
     @Autowired
     ConfigurableApplicationContext applicationContext;
     public CheckBox chooseFormsCheckBox;
@@ -48,10 +51,33 @@ public class FormModuleController implements Initializable {
     @FXML
     private AnchorPane scenePane;
 
+
+
+    public enum Form {HISTORY, CHILD_PODSI, ADULT_PODSI, SPORTS, HIP}
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        patientNams.setSelected(true);
-        changeDateTextfield.setText("04/03/2024");
+        //start.setDisable(true);
+        start.disableProperty().bind(history.selectedProperty().not());
+    }
+
+
+
+    public void onStart(ActionEvent event) throws IOException {
+        if(history.isSelected()){
+
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/History/MainPage.fxml"));
+            // fxmlLoader.setControllerFactory(applicationContext::getBean);
+            Parent popUp = fxmlLoader.load();
+
+            Stage stage1 = new Stage((StageStyle.UTILITY));
+            stage1.initModality(Modality.WINDOW_MODAL);
+            stage1.setTitle("Questionnaire   ");
+           // stage1.setFullScreen(true);
+            stage1.setScene(new Scene(popUp, 950, 680));
+            stage1.showAndWait();
+        }
+
 
     }
 
@@ -69,6 +95,11 @@ public class FormModuleController implements Initializable {
         stage1.show();
 
     }
+
+
+
+
+
     public void onPatientClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/PatientModule.fxml"));

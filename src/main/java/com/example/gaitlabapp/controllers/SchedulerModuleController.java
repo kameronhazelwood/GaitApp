@@ -118,21 +118,21 @@ public class SchedulerModuleController implements Initializable {
 
         Entry<String> entry = new Entry<>();
         entry.setLocation("Nemours Hospital Gait Lab");
-        entry.setTitle("3333 -9988, Test Patient");
+        entry.setTitle("32581055,  Madeline Daum");
         entry.setCalendar(gaitFullEval);
         gaitFullEval.addEntry(entry);
 
-        Entry<String> entry1 = new Entry<>();
-        entry1.setLocation("Nemours Hospital Gait Lab");
-        entry1.setTitle("4444 -9988, Example Patient");
-        entry1.setCalendar(gaitStepWatch);
-        gaitStepWatch.addEntry(entry1);
-
-        Entry<String> entry2 = new Entry<>();
-        entry2.setLocation("Nemours Hospital Gait Lab");
-        entry2.setTitle("1111 -9988, Another Test Patient");
-        entry2.setCalendar(gaitFootEval);
-        gaitFootEval.addEntry(entry2);
+//        Entry<String> entry1 = new Entry<>();
+//        entry1.setLocation("Nemours Hospital Gait Lab");
+//        entry1.setTitle("4444 -9988, Example Patient");
+//        entry1.setCalendar(gaitStepWatch);
+//        gaitStepWatch.addEntry(entry1);
+//
+//        Entry<String> entry2 = new Entry<>();
+//        entry2.setLocation("Nemours Hospital Gait Lab");
+//        entry2.setTitle("1111 -9988, Another Test Patient");
+//        entry2.setCalendar(gaitFootEval);
+//        gaitFootEval.addEntry(entry2);
 
 
         CalendarSource familyCalendarSource = new CalendarSource("Appointments");

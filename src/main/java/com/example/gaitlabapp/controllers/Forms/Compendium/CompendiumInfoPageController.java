@@ -105,10 +105,10 @@ public class CompendiumInfoPageController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Image faceImage = new Image(String.valueOf(getClass().getResource("/Rowan/photos/32581055_111122_face.jpg")));
+        Image faceImage = new Image(String.valueOf(getClass().getResource("/Rowan/1/17/2025/32581055_011725_HeadShot.jpg")));
         ImageView imageView = new ImageView(faceImage);
         imageView.setFitHeight(180);
-        imageView.setFitWidth(180);
+        imageView.setFitWidth(300);
         imageView.setX(176);
         imageView.setY(68);
         anchorPane.getChildren().add(imageView);
@@ -122,7 +122,7 @@ public class CompendiumInfoPageController implements Initializable {
         bioMech.setText("John Henley");
         referringPhys.setText("Freeman Miller");
         examiningTher.setText("Chris Church");
-        dateOfEval.setText("11/22/2022");
+        dateOfEval.setText("03/05/2025");
 
     }
 
