@@ -12,14 +12,16 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
-public class HealthHistory {
-    public Button yesButton;
-    public Button noButton;
+public class NewBotoxShot {
+    public Button addButton;
+    public Button cancelButton;
 
-    private Stage getMyStage() { return (Stage) yesButton.getScene().getWindow(); }
-    public void onNoButton(ActionEvent event) throws IOException {
+    private Stage getMyStageCancel() { return (Stage) cancelButton.getScene().getWindow(); }
+    private Stage getMyStageAdd() { return (Stage) addButton.getScene().getWindow(); }
+
+    public void onAddShot(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/History/HealthConditions.fxml"));
+        fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/History/DevicesAndBraces.fxml"));
         // fxmlLoader.setControllerFactory(applicationContext::getBean);
         Parent popUp = fxmlLoader.load();
 
@@ -29,13 +31,13 @@ public class HealthHistory {
         // stage1.setFullScreen(true);
         stage1.setScene(new Scene(popUp, 950, 680));
         stage1.showAndWait();
-        getMyStage().close();
+        getMyStageAdd().close();
 
     }
 
-    public void onYesButton(ActionEvent event) throws IOException {
+    public void onCancelButton(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/History/HealthHistoryTable.fxml"));
+        fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/History/DevicesAndBraces.fxml"));
         // fxmlLoader.setControllerFactory(applicationContext::getBean);
         Parent popUp = fxmlLoader.load();
 
@@ -45,7 +47,6 @@ public class HealthHistory {
         // stage1.setFullScreen(true);
         stage1.setScene(new Scene(popUp, 950, 680));
         stage1.showAndWait();
-        getMyStage().close();
-
+        getMyStageCancel().close();
     }
 }

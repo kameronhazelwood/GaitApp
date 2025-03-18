@@ -12,14 +12,17 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
-public class HealthHistory {
-    public Button yesButton;
-    public Button noButton;
+public class BotoxShotInfo {
+    public Button nextQuestion;
+    public Button previousButton;
+    public Button addNewShotButton;
+    public Button nextQuestionButton;
 
-    private Stage getMyStage() { return (Stage) yesButton.getScene().getWindow(); }
-    public void onNoButton(ActionEvent event) throws IOException {
+    private Stage getMyStageAdd() { return (Stage) addNewShotButton.getScene().getWindow(); }
+    private Stage getMyStageNext() { return (Stage) nextQuestionButton.getScene().getWindow(); }
+    public void onNext(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/History/HealthConditions.fxml"));
+        fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/History/DevicesAndBraces.fxml"));
         // fxmlLoader.setControllerFactory(applicationContext::getBean);
         Parent popUp = fxmlLoader.load();
 
@@ -29,13 +32,12 @@ public class HealthHistory {
         // stage1.setFullScreen(true);
         stage1.setScene(new Scene(popUp, 950, 680));
         stage1.showAndWait();
-        getMyStage().close();
-
+        getMyStageNext().close();
     }
 
-    public void onYesButton(ActionEvent event) throws IOException {
+    public void onAddNew(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/History/HealthHistoryTable.fxml"));
+        fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/History/NewBotoxShot.fxml"));
         // fxmlLoader.setControllerFactory(applicationContext::getBean);
         Parent popUp = fxmlLoader.load();
 
@@ -45,7 +47,7 @@ public class HealthHistory {
         // stage1.setFullScreen(true);
         stage1.setScene(new Scene(popUp, 950, 680));
         stage1.showAndWait();
-        getMyStage().close();
+        getMyStageAdd().close();
 
     }
 }

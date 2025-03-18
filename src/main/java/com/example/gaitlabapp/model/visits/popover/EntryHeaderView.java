@@ -144,7 +144,8 @@ public class EntryHeaderView extends GridPane {
         IPatientModel patient3 = new IPatientModel("Test", "Patient", "3333 -9988");
         IPatientModel patient4 = new IPatientModel("Example", "Patient", "4444 -9988");
         IPatientModel patient5 = new IPatientModel("Madeline", "Daum", "32581055");
-        return FXCollections.observableArrayList(patient, patient1, patient3,patient4, patient5 );
+        IPatientModel patient6 = new IPatientModel("Rowan", "Hazelwood", "33069893");
+        return FXCollections.observableArrayList(patient, patient1, patient3,patient4, patient5, patient6 );
     }
 
     private final String defaultVal = "Select Patient...";

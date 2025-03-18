@@ -50,36 +50,38 @@
                                  <Font size="15.0" />
                               </font>
                            </Label>
-                           <Label fx:id="dateLabel" layoutX="20.0" layoutY="46.0" prefHeight="25.0" prefWidth="68.0" text="Date:" />
-                           <Label fx:id="patientListLabel" layoutX="19.0" layoutY="128.0" prefHeight="17.0" prefWidth="71.0" text="Patient List:" />
-                           <Label layoutX="361.0" layoutY="50.0" text="History Questionnaire">
+                           <Label fx:id="dateLabel" layoutX="7.0" layoutY="46.0" prefHeight="25.0" prefWidth="68.0" text="Date:" />
+                           <Label fx:id="patientListLabel" layoutX="7.0" layoutY="128.0" prefHeight="17.0" prefWidth="71.0" text="Patient List:" />
+                           <Label layoutX="481.0" layoutY="26.0" text="History Questionnaire">
                               <font>
                                  <Font name="System Bold" size="12.0" />
                               </font></Label>
-                           <CheckBox fx:id="history" layoutX="363.0" layoutY="75.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="120.0" text="History" />
-                           <Label layoutX="360.0" layoutY="119.0" prefHeight="17.0" prefWidth="120.0" text="PODSI Questionnaire">
+                           <CheckBox fx:id="history" layoutX="483.0" layoutY="51.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="120.0" text="History" />
+                           <Label layoutX="481.0" layoutY="95.0" prefHeight="17.0" prefWidth="120.0" text="PODCI Questionnaire">
                               <font>
                                  <Font name="System Bold" size="12.0" />
                               </font></Label>
-                           <CheckBox layoutX="363.0" layoutY="148.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="224.0" text="Child/Adolescent (Parent Reported)" />
-                           <CheckBox layoutX="364.0" layoutY="178.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="198.0" text="Adolescent (Self Reported)" />
-                           <ListView layoutX="30.0" layoutY="157.0" prefHeight="261.0" prefWidth="253.0" />
-                           <DatePicker layoutX="57.0" layoutY="46.0" prefHeight="25.0" prefWidth="175.0" />
+                           <CheckBox fx:id="childPODSI" layoutX="483.0" layoutY="124.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="224.0" text="Child/Adolescent (Parent Reported)" />
+                           <CheckBox fx:id="adolescentPODSI" layoutX="483.0" layoutY="154.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="198.0" text="Adolescent (Self Reported)" />
+                           <ListView fx:id="patientList" layoutX="41.0" layoutY="157.0" prefHeight="261.0" prefWidth="253.0" />
+                           <DatePicker fx:id="aptDate" layoutX="41.0" layoutY="46.0" prefHeight="25.0" prefWidth="175.0" />
+                           <Button fx:id="setDateButton" layoutX="241.0" layoutY="46.0" mnemonicParsing="false" onAction="#onSetDate" prefHeight="25.0" prefWidth="80.0" text="Set Date" />
+                           <Label layoutX="481.0" layoutY="198.0" prefHeight="17.0" prefWidth="96.0" text="Other">
+                              <font>
+                                 <Font name="System Bold" size="12.0" />
+                              </font>
+                           </Label>
+                           <CheckBox layoutX="483.0" layoutY="225.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="130.0" text="Sports" />
+                           <CheckBox layoutX="483.0" layoutY="255.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="89.0" text="Hip" />
+                           <ComboBox layoutX="483.0" layoutY="328.0" prefHeight="25.0" prefWidth="129.0" />
+                           <Label layoutX="481.0" layoutY="304.0" prefHeight="17.0" prefWidth="88.0" text="Language">
+                              <font>
+                                 <Font name="System Bold" size="12.0" />
+                              </font>
+                           </Label>
+                           <Button fx:id="clearDateButton" layoutX="339.0" layoutY="46.0" mnemonicParsing="false" onAction="#onClear" prefHeight="25.0" prefWidth="88.0" text="Clear Date" />
                         </children>
                      </Pane>
-                     <Label layoutX="363.0" layoutY="223.0" prefHeight="17.0" prefWidth="96.0" text="Other">
-                        <font>
-                           <Font name="System Bold" size="12.0" />
-                        </font>
-                     </Label>
-                     <CheckBox layoutX="363.0" layoutY="253.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="163.0" text="Sports" />
-                     <CheckBox layoutX="363.0" layoutY="277.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="203.0" text="Hip" />
-                     <Label layoutX="363.0" layoutY="323.0" prefHeight="17.0" prefWidth="120.0" text="Language">
-                        <font>
-                           <Font name="System Bold" size="12.0" />
-                        </font>
-                     </Label>
-                     <ComboBox layoutX="365.0" layoutY="348.0" prefHeight="25.0" prefWidth="129.0" />
                      <Button fx:id="start" layoutX="689.0" layoutY="361.0" mnemonicParsing="false" onAction="#onStart" prefHeight="69.0" prefWidth="143.0" text="Start" />
                   </children></AnchorPane>
          </content>

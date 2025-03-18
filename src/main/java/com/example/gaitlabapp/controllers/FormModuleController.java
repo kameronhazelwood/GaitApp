@@ -3,6 +3,7 @@ package com.example.gaitlabapp.controllers;
 import com.example.gaitlabapp.Launcher;
 import com.example.gaitlabapp.controllers.Visits.TestVisit.GaitTestVisitController;
 import javafx.beans.binding.Bindings;
+import javafx.beans.value.ObservableStringValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -35,6 +36,10 @@ public class FormModuleController implements Initializable {
 
     public CheckBox history;
     public Button start;
+    public DatePicker aptDate;
+    public ListView patientList;
+    public CheckBox childPODSI;
+    public CheckBox adolescentPODSI;
     @Autowired
     ConfigurableApplicationContext applicationContext;
     public CheckBox chooseFormsCheckBox;
@@ -51,16 +56,25 @@ public class FormModuleController implements Initializable {
     @FXML
     private AnchorPane scenePane;
 
+    public void onClear(ActionEvent event) {
+        patientList.getItems().clear();
+    }
 
 
     public enum Form {HISTORY, CHILD_PODSI, ADULT_PODSI, SPORTS, HIP}
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
         //start.setDisable(true);
-        start.disableProperty().bind(history.selectedProperty().not());
+       start.disableProperty().bind(history.selectedProperty().not().and(childPODSI.selectedProperty().not().and(adolescentPODSI.selectedProperty().not())));
+
     }
 
-
+    public void onSetDate(ActionEvent event) {
+        patientList.getItems().addAll(
+                "Rowan Hazelwood -- 33069893"
+        );
+    }
 
     public void onStart(ActionEvent event) throws IOException {
         if(history.isSelected()){

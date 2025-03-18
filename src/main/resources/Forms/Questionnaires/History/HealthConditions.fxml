@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="528.0" prefWidth="897.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.History.HealthConditions">
+    <children>
+        <Text layoutX="321.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add to the Health History" textAlignment="CENTER">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+        <Separator layoutX="26.0" layoutY="47.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
+        <Text layoutX="14.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Does Rowan have any conditions that are listed below? If so, please select them then move to the next question." wrappingWidth="882.7185707092285">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Separator layoutX="29.0" layoutY="482.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
+        <Button fx:id="addButton" layoutX="250.0" layoutY="398.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="206.0" text="PREVIOUS QUESTION" />
+        <Button fx:id="nextQuestion" layoutX="495.0" layoutY="398.0" mnemonicParsing="false" onAction="#onNext" prefHeight="48.0" prefWidth="206.0" text="NEXT QUESTION" />
+        <Text layoutX="431.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question 3 of 16" />
+      <CheckBox layoutX="15.0" layoutY="164.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="134.0" text="Seizures">
+         <font>
+            <Font size="14.0" />
+         </font></CheckBox>
+      <CheckBox layoutX="12.0" layoutY="211.0" mnemonicParsing="false" text=" Moderate Cognitive Impairment">
+         <font>
+            <Font size="14.0" />
+         </font></CheckBox>
+      <CheckBox layoutX="12.0" layoutY="255.0" mnemonicParsing="false" text="Feeding Problems">
+         <font>
+            <Font size="14.0" />
+         </font></CheckBox>
+      <CheckBox layoutX="266.0" layoutY="165.0" mnemonicParsing="false" text="Attention Disorder">
+         <font>
+            <Font size="14.0" />
+         </font></CheckBox>
+      <CheckBox layoutX="266.0" layoutY="211.0" mnemonicParsing="false" text="Heart Problems">
+         <font>
+            <Font size="14.0" />
+         </font></CheckBox>
+      <CheckBox layoutX="15.0" layoutY="302.0" mnemonicParsing="false" text="Speech Impairment">
+         <font>
+            <Font size="14.0" />
+         </font></CheckBox>
+      <CheckBox layoutX="266.0" layoutY="255.0" mnemonicParsing="false" text="Mild Cognitive Impairment">
+         <font>
+            <Font size="14.0" />
+         </font></CheckBox>
+      <CheckBox layoutX="266.0" layoutY="302.0" mnemonicParsing="false" text="Visual Impairment">
+         <font>
+            <Font size="14.0" />
+         </font></CheckBox>
+      <CheckBox layoutX="505.0" layoutY="165.0" mnemonicParsing="false" text="Poor Growth/Underweight">
+         <font>
+            <Font size="14.0" />
+         </font></CheckBox>
+      <CheckBox layoutX="505.0" layoutY="211.0" mnemonicParsing="false" text="Diabetes Mellitus Type I">
+         <font>
+            <Font size="14.0" />
+         </font></CheckBox>
+      <CheckBox layoutX="505.0" layoutY="256.0" mnemonicParsing="false" text="Severe Cognitive Impairment">
+         <font>
+            <Font size="14.0" />
+         </font></CheckBox>
+      <CheckBox layoutX="505.0" layoutY="302.0" mnemonicParsing="false" text="Asthma/Breathing Problems">
+         <font>
+            <Font size="14.0" />
+         </font></CheckBox>
+      <CheckBox layoutX="713.0" layoutY="165.0" mnemonicParsing="false" text="Hearing Impairment">
+         <font>
+            <Font size="14.0" />
+         </font></CheckBox>
+      <CheckBox layoutX="713.0" layoutY="211.0" mnemonicParsing="false" text="Obesity">
+         <font>
+            <Font size="14.0" />
+         </font></CheckBox>
+    </children>
+
+
+</AnchorPane>

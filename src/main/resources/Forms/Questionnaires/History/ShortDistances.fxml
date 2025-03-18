@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.History.ShortDistances">
+    <Separator layoutX="26.0" layoutY="57.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
+    <Separator layoutX="26.0" layoutY="457.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
+    <Button fx:id="previousButton" layoutX="250.0" layoutY="398.0" mnemonicParsing="false" onAction="#onPrevious" prefHeight="48.0" prefWidth="206.0" text="PREVIOUS QUESTION" />
+    <Text layoutX="431.0" layoutY="480.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question 11 of 16" />
+    <Button fx:id="nextButton" layoutX="511.0" layoutY="398.0" mnemonicParsing="false" onAction="#onNext" prefHeight="48.0" prefWidth="206.0" text="NEXT QUESTION" />
+    <Text layoutX="36.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How does child move around for short distances in the house?">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Text>
+   <RadioButton layoutX="284.0" layoutY="121.0" mnemonicParsing="false" text="6. Independent on all surfaces">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </RadioButton>
+   <RadioButton layoutX="284.0" layoutY="149.0" mnemonicParsing="false" text="5. Independent on level surfaces (Requires a rail for stairs)">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </RadioButton>
+   <RadioButton layoutX="284.0" layoutY="177.0" mnemonicParsing="false" text="4. Uses cane(s) or stick(s) (one or two)">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </RadioButton>
+   <RadioButton layoutX="284.0" layoutY="205.0" mnemonicParsing="false" text="3. Uses crutches">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </RadioButton>
+   <RadioButton layoutX="284.0" layoutY="233.0" mnemonicParsing="false" text="2. Uses a walker or frame">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </RadioButton>
+   <RadioButton layoutX="284.0" layoutY="261.0" mnemonicParsing="false" text="1. Uses a wheelchair">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </RadioButton>
+   <RadioButton layoutX="284.0" layoutY="289.0" mnemonicParsing="false" text="C. Crawling">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </RadioButton>
+   <RadioButton layoutX="284.0" layoutY="317.0" mnemonicParsing="false" text="N. does not apply">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </RadioButton>
+</AnchorPane>

@@ -22,7 +22,7 @@
             </font>
         </Text>
         <Separator layoutX="29.0" layoutY="482.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
-        <Button fx:id="start" layoutX="250.0" layoutY="398.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="206.0" text="ADD THIS TO RECORD" />
+        <Button fx:id="addButton" layoutX="250.0" layoutY="398.0" mnemonicParsing="false" onAction="#onAddRecord" prefHeight="48.0" prefWidth="206.0" text="ADD THIS TO RECORD" />
       <Text layoutX="242.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select One Problem" wrappingWidth="126.93670654296875">
          <font>
             <Font size="13.0" />
@@ -37,16 +37,16 @@
       <Separator blendMode="DIFFERENCE" layoutX="236.0" layoutY="105.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="0.0" />
       <Separator blendMode="DIFFERENCE" layoutX="238.0" layoutY="105.0" prefHeight="0.0" prefWidth="248.0" />
       <Separator blendMode="DIFFERENCE" layoutX="486.0" layoutY="105.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="0.0" />
-      <RadioButton layoutX="238.0" layoutY="143.0" mnemonicParsing="false" text="Asphyxia" />
-      <RadioButton layoutX="238.0" layoutY="172.0" mnemonicParsing="false" text="Brain Bleed" />
-      <RadioButton layoutX="238.0" layoutY="201.0" mnemonicParsing="false" text="Genetic Defect" />
-      <RadioButton layoutX="238.0" layoutY="230.0" mnemonicParsing="false" text="Meningitis or Brain Infection" />
-      <RadioButton layoutX="238.0" layoutY="259.0" mnemonicParsing="false" text="Orthopedic Injury or Trauma" />
-      <RadioButton layoutX="238.0" layoutY="288.0" mnemonicParsing="false" text="Spinal Cord Injury or Defect" />
-      <RadioButton layoutX="238.0" layoutY="317.0" mnemonicParsing="false" text="Stroke or Infarct" />
-      <RadioButton layoutX="238.0" layoutY="346.0" mnemonicParsing="false" text="Traumatic Brain Injury" />
-      <ComboBox layoutX="425.0" layoutY="138.0" prefHeight="26.0" prefWidth="69.0" />
-      <Button fx:id="start1" layoutX="495.0" layoutY="398.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="206.0" text="RETURN TO QUESTIONNAIRE" />
+      <RadioButton fx:id="asphyxia" layoutX="238.0" layoutY="143.0" mnemonicParsing="false" text="Asphyxia" />
+      <RadioButton fx:id="brainBleed" layoutX="238.0" layoutY="172.0" mnemonicParsing="false" text="Brain Bleed" />
+      <RadioButton fx:id="genetic" layoutX="238.0" layoutY="201.0" mnemonicParsing="false" text="Genetic Defect" />
+      <RadioButton fx:id="brainInfection" layoutX="238.0" layoutY="230.0" mnemonicParsing="false" text="Meningitis or Brain Infection" />
+      <RadioButton fx:id="orthoInjury" layoutX="238.0" layoutY="259.0" mnemonicParsing="false" text="Orthopedic Injury or Trauma" />
+      <RadioButton fx:id="spinalCord" layoutX="238.0" layoutY="288.0" mnemonicParsing="false" text="Spinal Cord Injury or Defect" />
+      <RadioButton fx:id="stroke" layoutX="238.0" layoutY="317.0" mnemonicParsing="false" text="Stroke or Infarct" />
+      <RadioButton fx:id="traumaBrain" layoutX="238.0" layoutY="346.0" mnemonicParsing="false" text="Traumatic Brain Injury" />
+      <ComboBox fx:id="ageComboBox" layoutX="425.0" layoutY="138.0" prefHeight="26.0" prefWidth="69.0" />
+      <Button fx:id="returnButton" layoutX="495.0" layoutY="398.0" mnemonicParsing="false" onAction="#onReturn" prefHeight="48.0" prefWidth="206.0" text="RETURN TO QUESTIONNAIRE" />
       <Text layoutX="431.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question 2 of 16" />
     </children>
 
