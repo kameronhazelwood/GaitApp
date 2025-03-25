@@ -1,4 +1,4 @@
-package com.example.gaitlabapp.controllers.Forms.Questionnaires.History;
+package com.example.gaitlabapp.controllers.Forms.Questionnaires.PODCI_Child.ParentReported;
 
 import com.example.gaitlabapp.Launcher;
 import javafx.event.ActionEvent;
@@ -12,15 +12,15 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
-public class AroundClass {
-    public Button previousButton;
-    public Button nextButton;
+public class MainPage {
+    public Button start;
 
-    private Stage getMyStageNext() { return (Stage) nextButton.getScene().getWindow(); }
 
-    public void onNext(ActionEvent event) throws IOException {
+    private Stage getMyStageNext() { return (Stage) start.getScene().getWindow(); }
+
+    public void onStart(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/History/LongDistances.fxml"));
+        fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/PODSI_Child/ParentReported/WelcomePage.fxml"));
         // fxmlLoader.setControllerFactory(applicationContext::getBean);
         Parent popUp = fxmlLoader.load();
 
@@ -31,8 +31,5 @@ public class AroundClass {
         stage1.setScene(new Scene(popUp, 950, 680));
         stage1.showAndWait();
         getMyStageNext().close();
-    }
-
-    public void onPrevious(ActionEvent event) {
     }
 }

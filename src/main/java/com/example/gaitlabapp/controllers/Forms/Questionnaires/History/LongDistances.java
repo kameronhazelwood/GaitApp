@@ -12,15 +12,15 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
-public class AroundClass {
+public class LongDistances {
     public Button previousButton;
     public Button nextButton;
 
     private Stage getMyStageNext() { return (Stage) nextButton.getScene().getWindow(); }
 
-    public void onNext(ActionEvent event) throws IOException {
+    public void onPrevious(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/History/LongDistances.fxml"));
+        fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/History/ChangesInWalking.fxml"));
         // fxmlLoader.setControllerFactory(applicationContext::getBean);
         Parent popUp = fxmlLoader.load();
 
@@ -33,6 +33,7 @@ public class AroundClass {
         getMyStageNext().close();
     }
 
-    public void onPrevious(ActionEvent event) {
+
+    public void onNext(ActionEvent event) {
     }
 }

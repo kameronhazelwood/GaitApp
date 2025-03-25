@@ -26,7 +26,7 @@
          <Font size="18.0" />
       </font>
    </Text>
-   <Text layoutX="40.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If no, please select them then move to the next question?" wrappingWidth="546.7862854003906">
+   <Text layoutX="40.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If so, please select them then move to the next question?" wrappingWidth="546.7862854003906">
       <font>
          <Font size="18.0" />
       </font>

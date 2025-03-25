@@ -78,7 +78,6 @@ public class FormModuleController implements Initializable {
 
     public void onStart(ActionEvent event) throws IOException {
         if(history.isSelected()){
-
             FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/History/MainPage.fxml"));
             // fxmlLoader.setControllerFactory(applicationContext::getBean);
@@ -91,7 +90,19 @@ public class FormModuleController implements Initializable {
             stage1.setScene(new Scene(popUp, 950, 680));
             stage1.showAndWait();
         }
+        if(childPODSI.isSelected()){
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/PODSI_Child/ParentReported/WelcomePage.fxml"));
+            // fxmlLoader.setControllerFactory(applicationContext::getBean);
+            Parent popUp = fxmlLoader.load();
 
+            Stage stage1 = new Stage((StageStyle.UTILITY));
+            stage1.initModality(Modality.WINDOW_MODAL);
+            stage1.setTitle("Questionnaire   ");
+            // stage1.setFullScreen(true);
+            stage1.setScene(new Scene(popUp, 950, 680));
+            stage1.showAndWait();
+        }
 
     }
 

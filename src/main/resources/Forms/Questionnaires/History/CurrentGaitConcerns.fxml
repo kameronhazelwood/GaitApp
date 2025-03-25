@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.History.CurrentGaitConcerns">
+
+    <Text layoutX="386.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Gait Concerns" textAlignment="CENTER">
+        <font>
+            <Font size="24.0" />
+        </font>
+    </Text>
+    <Separator layoutX="26.0" layoutY="57.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
+    <Separator layoutX="26.0" layoutY="457.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
+    <Button fx:id="previousButton" layoutX="250.0" layoutY="398.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="206.0" text="PREVIOUS QUESTION" />
+    <Text layoutX="431.0" layoutY="480.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question 15 of 16" />
+    <Button fx:id="nextQuestionBut" layoutX="511.0" layoutY="398.0" mnemonicParsing="false" onAction="#onNextButton" prefHeight="48.0" prefWidth="206.0" text="NEXT QUESTION" />
+    <Text layoutX="38.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do you currently have any concerns listed below?" wrappingWidth="445.1863098144531">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Text>
+    <Text layoutX="38.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If so, please select them then move to the next question. " wrappingWidth="546.7862854003906">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Text>
+   <CheckBox layoutX="52.0" layoutY="148.0" mnemonicParsing="false" text="Back Arches">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </CheckBox>
+   <CheckBox layoutX="52.0" layoutY="199.0" mnemonicParsing="false" text="Flat Feet">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </CheckBox>
+   <CheckBox layoutX="52.0" layoutY="250.0" mnemonicParsing="false" text="Frequent Falling">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </CheckBox>
+   <CheckBox layoutX="52.0" layoutY="301.0" mnemonicParsing="false" text="Limping">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </CheckBox>
+   <CheckBox layoutX="189.0" layoutY="148.0" mnemonicParsing="false" text="Swaying or swinging of the shoulders">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </CheckBox>
+   <CheckBox layoutX="189.0" layoutY="199.0" mnemonicParsing="false" text="Walking with bent knees">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </CheckBox>
+   <CheckBox layoutX="189.0" layoutY="250.0" mnemonicParsing="false" text="Elbow/Wrist Flexed">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </CheckBox>
+   <CheckBox layoutX="189.0" layoutY="301.0" mnemonicParsing="false" text="Frequent tripping">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </CheckBox>
+   <CheckBox layoutX="483.0" layoutY="148.0" mnemonicParsing="false" text="Frequent tripping">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </CheckBox>
+   <CheckBox layoutX="483.0" layoutY="199.0" mnemonicParsing="false" text="Shoes wearing out quickly">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </CheckBox>
+   <CheckBox layoutX="483.0" layoutY="250.0" mnemonicParsing="false" text="Toes drag or catch on floor">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </CheckBox>
+   <CheckBox layoutX="483.0" layoutY="301.0" mnemonicParsing="false" text="Feet cross over each other">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </CheckBox>
+   <CheckBox layoutX="697.0" layoutY="149.0" mnemonicParsing="false" text="Foot Turns Out">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </CheckBox>
+   <CheckBox layoutX="697.0" layoutY="199.0" mnemonicParsing="false" text="Knees Rub">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </CheckBox>
+   <CheckBox layoutX="697.0" layoutY="250.0" mnemonicParsing="false" text="Spinal Curvature">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </CheckBox>
+   <CheckBox layoutX="697.0" layoutY="301.0" mnemonicParsing="false" text="Walking up on the toes">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </CheckBox>
+
+</AnchorPane>
