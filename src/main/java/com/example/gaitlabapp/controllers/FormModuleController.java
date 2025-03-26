@@ -40,6 +40,7 @@ public class FormModuleController implements Initializable {
     public ListView patientList;
     public CheckBox childPODSI;
     public CheckBox adolescentPODSI;
+    public CheckBox sports;
     @Autowired
     ConfigurableApplicationContext applicationContext;
     public CheckBox chooseFormsCheckBox;
@@ -93,6 +94,19 @@ public class FormModuleController implements Initializable {
         if(childPODSI.isSelected()){
             FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/PODSI_Child/ParentReported/WelcomePage.fxml"));
+            // fxmlLoader.setControllerFactory(applicationContext::getBean);
+            Parent popUp = fxmlLoader.load();
+
+            Stage stage1 = new Stage((StageStyle.UTILITY));
+            stage1.initModality(Modality.WINDOW_MODAL);
+            stage1.setTitle("Questionnaire   ");
+            // stage1.setFullScreen(true);
+            stage1.setScene(new Scene(popUp, 950, 680));
+            stage1.showAndWait();
+        }
+        if(sports.isSelected()){
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/Sports/MainPage.fxml"));
             // fxmlLoader.setControllerFactory(applicationContext::getBean);
             Parent popUp = fxmlLoader.load();
 

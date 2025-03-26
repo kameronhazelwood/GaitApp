@@ -15,7 +15,7 @@
             </font>
         </Text>
         <Separator layoutX="29.0" layoutY="48.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
-        <Text layoutX="174.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Is it easy or hard for child to make friends with children his/her own age?" wrappingWidth="852.3184852600098">
+        <Text layoutX="174.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How much pain have child had during the last week?" wrappingWidth="852.3184852600098">
             <font>
                 <Font size="18.0" />
             </font>

@@ -15,7 +15,6 @@ import java.io.IOException;
 public class MainPage {
     public Button start;
 
-
     private Stage getMyStageNext() { return (Stage) start.getScene().getWindow(); }
 
     public void onStart(ActionEvent event) throws IOException {

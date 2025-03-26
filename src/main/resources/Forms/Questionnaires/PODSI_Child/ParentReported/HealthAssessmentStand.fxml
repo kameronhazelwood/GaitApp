@@ -36,7 +36,7 @@
         <Separator layoutX="127.0" layoutY="316.0" prefHeight="0.0" prefWidth="578.0" />
         <Separator layoutX="126.0" layoutY="385.0" prefHeight="3.0" prefWidth="578.0" />
         <Separator layoutX="352.0" layoutY="317.0" orientation="VERTICAL" prefHeight="239.0" prefWidth="0.0" />
-        <Text layoutX="129.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stand while washing his/her hands and face at a sink?" wrappingWidth="217.31835937499994" />
+        <Text layoutX="129.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stand while washing their hands and face at a sink?" wrappingWidth="217.31835937499994" />
         <Separator layoutX="424.0" layoutY="317.0" orientation="VERTICAL" prefHeight="239.0" prefWidth="0.0" />
         <Separator layoutX="703.0" layoutY="317.0" orientation="VERTICAL" prefHeight="239.0" prefWidth="0.0" />
         <Separator layoutX="126.0" layoutY="417.0" prefHeight="0.0" prefWidth="578.0" />

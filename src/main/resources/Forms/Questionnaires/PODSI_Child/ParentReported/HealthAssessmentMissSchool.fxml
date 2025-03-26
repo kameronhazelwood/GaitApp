@@ -8,7 +8,6 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="493.0" prefWidth="902.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.PODCI_Child.ParentReported.HealthAssessmentMissSchool">
-
     <children>
         <Text layoutX="174.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pediatric Health Assessment (Parent Reported)" textAlignment="CENTER">
             <font>
@@ -16,7 +15,7 @@
             </font>
         </Text>
         <Separator layoutX="29.0" layoutY="75.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
-        <Text layoutX="55.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="On average, over the last 12 months, how often did Rowanmiss school (preschool, day care, camp, etc.) because of his/her health?" wrappingWidth="852.3184852600098">
+        <Text layoutX="55.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="On average, over the last 12 months, how often did child miss school (preschool, day care, camp, etc.) because of their health?" wrappingWidth="852.3184852600098">
             <font>
                 <Font size="18.0" />
             </font>

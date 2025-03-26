@@ -33,26 +33,24 @@
                 <Font size="18.0" />
             </font>
         </Text>
-        <Separator layoutX="297.0" layoutY="197.0" orientation="VERTICAL" prefHeight="212.0" prefWidth="0.0" />
+        <Separator layoutX="297.0" layoutY="197.0" orientation="VERTICAL" prefHeight="185.0" prefWidth="0.0" />
         <Separator layoutX="299.0" layoutY="199.0" prefHeight="3.0" prefWidth="295.0" />
-        <Separator layoutX="525.0" layoutY="197.0" orientation="VERTICAL" prefHeight="212.0" prefWidth="0.0" />
-        <Text layoutX="302.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lift heavy books?" />
-        <Separator layoutX="591.0" layoutY="199.0" orientation="VERTICAL" prefHeight="212.0" prefWidth="6.0" />
+        <Separator layoutX="525.0" layoutY="197.0" orientation="VERTICAL" prefHeight="185.0" prefWidth="0.0" />
+        <Text layoutX="302.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pain?" />
+        <Separator layoutX="591.0" layoutY="199.0" orientation="VERTICAL" prefHeight="185.0" prefWidth="0.0" />
         <Separator layoutX="299.0" layoutY="225.0" prefHeight="0.0" prefWidth="295.0" />
         <Separator layoutX="299.0" layoutY="251.0" prefHeight="0.0" prefWidth="295.0" />
-        <Text layoutX="302.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pour a half gallon of milk?" />
+        <Text layoutX="302.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="General Health?" />
         <Separator layoutX="299.0" layoutY="277.0" prefHeight="0.0" prefWidth="295.0" />
-        <Text layoutX="302.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Open a jar that has been opened before?" />
+        <Text layoutX="302.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Doctor or parent instructions?" />
         <Separator layoutX="299.0" layoutY="303.0" prefHeight="0.0" prefWidth="295.0" />
-        <Text layoutX="302.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Use a forlk and spoon?" />
+        <Text layoutX="302.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fear the other kids won't like you?" />
         <Separator layoutX="299.0" layoutY="329.0" prefHeight="0.0" prefWidth="295.0" />
-        <Text layoutX="302.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comb their hair?" />
+        <Text layoutX="302.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dislike of gym/recess?" />
         <Separator layoutX="299.0" layoutY="355.0" prefHeight="0.0" prefWidth="295.0" />
-        <Text layoutX="302.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Button buttons?" />
+        <Text layoutX="302.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="School not in session?" />
         <Separator layoutX="299.0" layoutY="381.0" prefHeight="0.0" prefWidth="295.0" />
-        <Text layoutX="302.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Put on their coat?" />
-        <Separator layoutX="299.0" layoutY="407.0" prefHeight="0.0" prefWidth="295.0" />
-        <Text layoutX="302.0" layoutY="399.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Write with a pencil?" />
+        <Text layoutX="302.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I don't attend school?" />
       <CheckBox layoutX="536.0" layoutY="204.0" mnemonicParsing="false" text="Yes" />
       <CheckBox layoutX="536.0" layoutY="231.0" mnemonicParsing="false" text="Yes" />
       <CheckBox layoutX="536.0" layoutY="256.0" mnemonicParsing="false" text="Yes" />
@@ -60,7 +58,6 @@
       <CheckBox layoutX="536.0" layoutY="307.0" mnemonicParsing="false" text="Yes" />
       <CheckBox layoutX="536.0" layoutY="333.0" mnemonicParsing="false" text="Yes" />
       <CheckBox layoutX="536.0" layoutY="360.0" mnemonicParsing="false" text="Yes" />
-      <CheckBox layoutX="536.0" layoutY="385.0" mnemonicParsing="false" text="Yes" />
       <Text layoutX="262.0" layoutY="453.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Additional Comment for Selection(s) Above:" wrappingWidth="365.65185928344727">
          <font>
             <Font size="18.0" />
