@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="745.0" prefWidth="893.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.PODCI_Child.ParentReported.HealthAssessmentHelp">
+    <children>
+        <Text layoutX="174.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Evaluación de Salud Pediátrica (informado por los padres)" textAlignment="CENTER">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+        <Separator layoutX="29.0" layoutY="48.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
+        <Text layoutX="55.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Con qué frecuencia necesita Rowan ayuda de otra persona para caminar o subir?" wrappingWidth="852.3184852600098">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Separator layoutX="27.0" layoutY="703.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
+        <Button fx:id="start" layoutX="366.0" layoutY="620.0" mnemonicParsing="false" onAction="#onStart" prefHeight="48.0" prefWidth="206.0" text="Siguiente Pregunta" />
+        <Text layoutX="422.0" layoutY="691.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pregunta 10 of 27">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Text>
+        <CheckBox layoutX="52.0" layoutY="174.0" mnemonicParsing="false" text="Nunca">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </CheckBox>
+        <Separator layoutX="48.0" layoutY="161.0" prefHeight="0.0" prefWidth="823.0" />
+        <Separator layoutX="211.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <Separator layoutX="46.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox layoutX="217.0" layoutY="174.0" mnemonicParsing="false" text="Algunas veces">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </CheckBox>
+        <Separator layoutX="376.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox layoutX="380.0" layoutY="161.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="163.0" text=" Aproximadamente la mitad del tiempo" wrapText="true">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </CheckBox>
+        <Separator layoutX="541.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <Separator layoutX="47.0" layoutY="213.0" prefHeight="0.0" prefWidth="823.0" />
+        <Text layoutX="65.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Con qué frecuencia usa Rowan aparatos auxiliares (como férulas, muletas, andador o sillas de ruedas para caminar o subir?" wrappingWidth="852.3184852600098">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+      <Separator layoutX="706.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+      <CheckBox layoutX="548.0" layoutY="174.0" mnemonicParsing="false" text="Frecuentemente">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </CheckBox>
+      <Separator layoutX="868.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+      <CheckBox layoutX="712.0" layoutY="174.0" mnemonicParsing="false" text="Todo el tiempo">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </CheckBox>
+      <CheckBox layoutX="52.0" layoutY="462.0" mnemonicParsing="false" text="Nunca">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </CheckBox>
+      <Separator layoutX="47.0" layoutY="449.0" prefHeight="0.0" prefWidth="823.0" />
+      <Separator layoutX="211.0" layoutY="449.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+      <Separator layoutX="46.0" layoutY="449.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+      <CheckBox layoutX="216.0" layoutY="462.0" mnemonicParsing="false" text="Algunas veces">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </CheckBox>
+      <Separator layoutX="376.0" layoutY="449.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+      <Separator layoutX="541.0" layoutY="449.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+      <Separator layoutX="46.0" layoutY="501.0" prefHeight="0.0" prefWidth="823.0" />
+      <Separator layoutX="703.0" layoutY="449.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+      <CheckBox layoutX="548.0" layoutY="462.0" mnemonicParsing="false" text="Frecuentemente">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </CheckBox>
+      <CheckBox layoutX="710.0" layoutY="462.0" mnemonicParsing="false" text="Todo el tiempo">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </CheckBox>
+      <Separator layoutX="869.0" layoutY="449.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+      <CheckBox layoutX="380.0" layoutY="449.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="163.0" text=" Aproximadamente la mitad del tiempo" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </CheckBox>
+    </children>
+
+</AnchorPane>

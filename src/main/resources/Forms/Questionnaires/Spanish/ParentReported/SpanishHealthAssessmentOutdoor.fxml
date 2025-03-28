@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="587.0" prefWidth="1007.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.PODCI_Child.ParentReported.HealthAssessmentOutdoor">
+    <children>
+        <Text layoutX="174.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pediatric Health Assessment (Parent Reported)" textAlignment="CENTER">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+        <Separator layoutX="29.0" layoutY="48.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
+        <Text layoutX="55.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Can Rowan participate in recreational outdoor activitieswith other children the same age?" wrappingWidth="852.3184852600098">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Separator layoutX="14.0" layoutY="539.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
+        <Button fx:id="start" layoutX="353.0" layoutY="456.0" mnemonicParsing="false" onAction="#onStart" prefHeight="48.0" prefWidth="206.0" text="NEXT QUESTION" />
+        <Text layoutX="409.0" layoutY="527.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question 13 of 27">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Text>
+        <CheckBox layoutX="52.0" layoutY="278.0" mnemonicParsing="false" text=" Yes, easily">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </CheckBox>
+        <Separator layoutX="48.0" layoutY="265.0" prefHeight="0.0" prefWidth="823.0" />
+        <Separator layoutX="211.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <Separator layoutX="46.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox layoutX="217.0" layoutY="278.0" mnemonicParsing="false" text="Sometimes">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </CheckBox>
+        <Separator layoutX="376.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox layoutX="383.0" layoutY="278.0" mnemonicParsing="false" text="Yes, but a little hard">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </CheckBox>
+        <Separator layoutX="541.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <Separator layoutX="47.0" layoutY="317.0" prefHeight="0.0" prefWidth="823.0" />
+        <Text layoutX="200.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(For example: bicycling, tricycling, skating, hiking, jogging)" wrappingWidth="852.3184852600098">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Separator layoutX="706.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox layoutX="548.0" layoutY="278.0" mnemonicParsing="false" text=" No">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </CheckBox>
+        <Separator layoutX="868.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox layoutX="712.0" layoutY="278.0" mnemonicParsing="false" text="All the time">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </CheckBox>
+    </children>
+
+
+</AnchorPane>

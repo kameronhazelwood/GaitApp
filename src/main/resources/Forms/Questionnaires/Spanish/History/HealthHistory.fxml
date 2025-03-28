@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="553.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.Spanish.History.SpanishHealthHistory">
+    <children>
+        <Text layoutX="331.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="la historia de la salud" textAlignment="CENTER">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+        <Separator layoutX="29.0" layoutY="75.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
+        <Text layoutX="122.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Tiene child unos de los siguientes problemas que no están incluídos en la lista arriba?" wrappingWidth="710.2896766662598">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="90.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Asfixia">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Separator layoutX="29.0" layoutY="506.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
+        <Button fx:id="yesButton" layoutX="213.0" layoutY="409.0" mnemonicParsing="false" onAction="#onYesButton" prefHeight="48.0" prefWidth="206.0" text="SI" />
+        <Button fx:id="noButton" layoutX="437.0" layoutY="409.0" mnemonicParsing="false" onAction="#onNoButton" prefHeight="48.0" prefWidth="206.0" text="NO" />
+        <Text layoutX="90.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Meningitis o infección cerebral">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="90.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="un ataque cerebral o infarto">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="365.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="cerebro de purga">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="362.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lesión o trauma ortopédico">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="368.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lesión cerebral traumática">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="614.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="defecto genético">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="614.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lesión de la médula espinal o de defectos" wrappingWidth="243.7734374999999">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="384.0" layoutY="481.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pregunta 2 of 16" />
+    </children>
+
+
+</AnchorPane>

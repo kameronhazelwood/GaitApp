@@ -12,7 +12,7 @@
     <Separator layoutX="26.0" layoutY="57.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
     <Separator layoutX="26.0" layoutY="457.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
     <Button fx:id="previousButton" layoutX="250.0" layoutY="398.0" mnemonicParsing="false" onAction="#onPrevious" prefHeight="48.0" prefWidth="206.0" text="PREVIOUS QUESTION" />
-    <Text layoutX="431.0" layoutY="480.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question 13 of 16" />
+    <Text layoutX="431.0" layoutY="480.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question 14 of 16" />
     <Button fx:id="nextButton" layoutX="511.0" layoutY="398.0" mnemonicParsing="false" onAction="#onNext" prefHeight="48.0" prefWidth="206.0" text="NEXT QUESTION" />
     <Text layoutX="36.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In the last 6-12 months (or since last visit), how has childs ability to walk changed?">
         <font>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="515.0" prefWidth="888.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.Spanish.History.SpanishDevicesAndBraces">
+
+    <Text layoutX="386.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dispositivos de asistencia" textAlignment="CENTER">
+        <font>
+            <Font size="24.0" />
+        </font>
+    </Text>
+    <Separator layoutX="26.0" layoutY="57.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
+    <Separator layoutX="26.0" layoutY="457.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
+    <Button fx:id="previousButton" layoutX="250.0" layoutY="398.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="206.0" text="cuestión previa" />
+    <Text layoutX="431.0" layoutY="480.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pregunta 6 of 16" />
+    <Button fx:id="nextQuestionBut" layoutX="511.0" layoutY="398.0" mnemonicParsing="false" onAction="#onNextButton" prefHeight="48.0" prefWidth="206.0" text="Próxima pregunta" />
+    <Text layoutX="40.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="child está utilizando ahora algunos dispositivos?" wrappingWidth="445.9862976074219">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Text>
+    <Text layoutX="40.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Si es así, por favor seleccione y luego pasar a la siguiente pregunta" wrappingWidth="546.7862854003906">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Text>
+    <CheckBox layoutX="76.0" layoutY="148.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="66.0" text="bastón " />
+    <ComboBox layoutX="155.0" layoutY="144.0" prefHeight="26.0" prefWidth="52.0" />
+    <CheckBox layoutX="76.0" layoutY="202.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="150.0" text="marcha entrenador" />
+    <CheckBox layoutX="76.0" layoutY="256.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="150.0" text="andador posterior" />
+    <CheckBox layoutX="76.0" layoutY="310.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="238.0" text="férula de posicionamiento del pulgar" />
+    <CheckBox layoutX="401.0" layoutY="148.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="109.0" text="muleta " />
+    <CheckBox layoutX="401.0" layoutY="202.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="184.0" text="Ledllevar por la mano" />
+    <CheckBox layoutX="401.0" layoutY="256.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="238.0" text="férula de posicionamiento de la mano" />
+    <CheckBox layoutX="401.0" layoutY="310.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="137.0" text=" silla de ruedas" />
+    <CheckBox layoutX="658.0" layoutY="148.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="137.0" text="andador anterior" />
+    <CheckBox layoutX="658.0" layoutY="202.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="137.0" text="apoyar por la mano" />
+    <CheckBox layoutX="658.0" layoutY="256.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="137.0" text="paseante" />
+    <CheckBox layoutX="658.0" layoutY="298.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="227.0" text="férula de posicionamiento de la muñeca" wrapText="true" />
+    <CheckBox layoutX="76.0" layoutY="351.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="75.0" text="otro" />
+    <TextField layoutX="185.0" layoutY="347.0" />
+    <ComboBox layoutX="470.0" layoutY="144.0" prefHeight="26.0" prefWidth="52.0" />
+
+</AnchorPane>

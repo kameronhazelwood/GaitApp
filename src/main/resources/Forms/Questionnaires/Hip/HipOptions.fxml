@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<ScrollPane xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.Hip.HipOptions">
+   <content>
+      <AnchorPane prefHeight="2000.0" prefWidth="923.0">
+          <children>
+              <Separator layoutX="29.0" layoutY="23.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
+              <Separator layoutX="32.0" layoutY="1967.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
+              <Button fx:id="start" layoutX="372.0" layoutY="1893.0" mnemonicParsing="false" onAction="#onStart" prefHeight="48.0" prefWidth="206.0" text="SAVE" />
+              <Text layoutX="441.0" layoutY="1956.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question 3 of 3" />
+              <Separator layoutX="34.0" layoutY="46.0" orientation="VERTICAL" prefHeight="1802.0" prefWidth="0.0" />
+              <Separator layoutX="877.0" layoutY="45.0" orientation="VERTICAL" prefHeight="1802.0" prefWidth="0.0" />
+            <Separator layoutX="35.0" layoutY="45.0" prefHeight="0.0" prefWidth="845.0" />
+            <Separator layoutX="35.0" layoutY="270.0" prefHeight="0.0" prefWidth="845.0" />
+            <Text layoutX="40.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pain">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <Separator layoutX="197.0" layoutY="45.0" orientation="VERTICAL" prefHeight="1802.0" prefWidth="0.0" />
+            <RadioButton layoutX="221.0" layoutY="55.0" mnemonicParsing="false" text="None/Ignores">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="221.0" layoutY="90.0" mnemonicParsing="false" text="Slight, occasional, no compromise in activity">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="221.0" layoutY="125.0" mnemonicParsing="false" text="Mild, no effect on ordinary activity, pain after activity, uses aspirin">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="221.0" layoutY="160.0" mnemonicParsing="false" text="Moderate, tolerable, makes concessions, occasional codeine">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="221.0" layoutY="195.0" mnemonicParsing="false" text="Marked, serious limitations">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="221.0" layoutY="230.0" mnemonicParsing="false" text="Totally disabled">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <Separator layoutX="35.0" layoutY="495.0" prefHeight="0.0" prefWidth="845.0" />
+            <Text layoutX="40.0" layoutY="393.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Limp">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <RadioButton layoutX="221.0" layoutY="292.0" mnemonicParsing="false" text="None">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="221.0" layoutY="345.0" mnemonicParsing="false" text="Slight">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="221.0" layoutY="398.0" mnemonicParsing="false" text="Moderate">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="221.0" layoutY="451.0" mnemonicParsing="false" text="Severe/Unable to walk">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <Separator layoutX="35.0" layoutY="720.0" prefHeight="0.0" prefWidth="845.0" />
+            <Text layoutX="40.0" layoutY="615.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Support">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <RadioButton layoutX="221.0" layoutY="504.0" mnemonicParsing="false" text="None">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="221.0" layoutY="536.0" mnemonicParsing="false" text="Cane, long walks">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="221.0" layoutY="568.0" mnemonicParsing="false" text="Cane, full time">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="221.0" layoutY="600.0" mnemonicParsing="false" text="Crutch">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="221.0" layoutY="632.0" mnemonicParsing="false" text="2 Canes">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="221.0" layoutY="664.0" mnemonicParsing="false" text="2 Crutches">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="221.0" layoutY="696.0" mnemonicParsing="false" text="Unable to walk">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <Separator layoutX="35.0" layoutY="945.0" prefHeight="0.0" prefWidth="845.0" />
+            <Text layoutX="40.0" layoutY="824.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Distance Walked">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <RadioButton layoutX="221.0" layoutY="727.0" mnemonicParsing="false" text="Unlimited">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="221.0" layoutY="773.0" mnemonicParsing="false" text="6 Blocks">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="221.0" layoutY="821.0" mnemonicParsing="false" text="2-3 Blocks">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="221.0" layoutY="869.0" mnemonicParsing="false" text="Indoors only">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="221.0" layoutY="919.0" mnemonicParsing="false" text="Bed and Chair">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <Separator layoutX="35.0" layoutY="1170.0" prefHeight="0.0" prefWidth="845.0" />
+            <Text layoutX="40.0" layoutY="1059.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stairs">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <RadioButton layoutX="221.0" layoutY="959.0" mnemonicParsing="false" text="Normally">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="221.0" layoutY="1012.0" mnemonicParsing="false" text="Normally with banister">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="221.0" layoutY="1065.0" mnemonicParsing="false" text="Any method">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="221.0" layoutY="1118.0" mnemonicParsing="false" text="Not able">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <Separator layoutX="35.0" layoutY="1395.0" prefHeight="0.0" prefWidth="845.0" />
+            <Text layoutX="38.0" layoutY="1272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sock/Shoes">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <RadioButton layoutX="221.0" layoutY="1192.0" mnemonicParsing="false" text="With ease">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="221.0" layoutY="1274.0" mnemonicParsing="false" text="With difficulty">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="221.0" layoutY="1356.0" mnemonicParsing="false" text="Unable">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <Separator layoutX="35.0" layoutY="1620.0" prefHeight="0.0" prefWidth="845.0" />
+            <Text layoutX="40.0" layoutY="1511.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sitting">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <RadioButton layoutX="221.0" layoutY="1412.0" mnemonicParsing="false" text="Any chair, 1 hour">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="221.0" layoutY="1494.0" mnemonicParsing="false" text="High chair, 1/2 hour">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="221.0" layoutY="1576.0" mnemonicParsing="false" text="Unable to sit, 1/2 hour, any chair">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <Separator layoutX="35.0" layoutY="1845.0" prefHeight="0.0" prefWidth="845.0" />
+            <Text layoutX="40.0" layoutY="1744.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sitting">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <RadioButton layoutX="221.0" layoutY="1660.0" mnemonicParsing="false" text="Able to enter public transportation">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="221.0" layoutY="1762.0" mnemonicParsing="false" text="Unable to use public transportation">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+          </children>
+      
+      
+      
+      </AnchorPane>
+   </content>
+</ScrollPane>

@@ -18,7 +18,7 @@ public class SportsPain {
     private Stage getMyStageStart() { return (Stage) start.getScene().getWindow(); }
     public void onStart(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader;
-        fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/Sports/SportsPain.fxml"));
+        fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/Sports/SportsMile.fxml"));
         // fxmlLoader.setControllerFactory(applicationContext::getBean);
         Parent popUp = fxmlLoader.load();
 

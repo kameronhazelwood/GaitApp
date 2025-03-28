@@ -34,6 +34,18 @@ public class LongDistances {
     }
 
 
-    public void onNext(ActionEvent event) {
+    public void onNext(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/History/ChangesInWalking.fxml"));
+        // fxmlLoader.setControllerFactory(applicationContext::getBean);
+        Parent popUp = fxmlLoader.load();
+
+        Stage stage1 = new Stage((StageStyle.UTILITY));
+        stage1.initModality(Modality.WINDOW_MODAL);
+        stage1.setTitle("Questionnaire   ");
+        // stage1.setFullScreen(true);
+        stage1.setScene(new Scene(popUp, 950, 680));
+        stage1.showAndWait();
+        getMyStageNext().close();
     }
 }

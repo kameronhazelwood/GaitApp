@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="450.0" prefWidth="943.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.PODCI_Child.ParentReported.WelcomePage">
+
+    <children>
+        <Text layoutX="174.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the duPont Hospital for Children Gait Lab" textAlignment="CENTER">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+        <Separator layoutX="29.0" layoutY="75.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
+        <Text layoutX="36.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Le pedimos que complete esta encuesta sobre child, a fin de entender mejor su salud en general, así como problemas relacionados con condiciones de los huesos y de los músculos. El completar esta encuesta es voluntario. Sus respuestas se mantendrán en la más estricta confidencialidad. Se tomará de 15 a 20 minutos para completarse." wrappingWidth="852.3184852600098">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="36.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Por favor, conteste cada una de las preguntas. Es posible que algunas preguntas se parezcan a otras, pero cada una es diferente." wrappingWidth="907.8896522521973">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="36.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Conteste las preguntas, poniendo un círculo en el número apropiado, o escribiendo la respuesta, según se requiera.">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Separator layoutX="29.0" layoutY="529.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
+        <Button fx:id="start" layoutX="368.0" layoutY="426.0" mnemonicParsing="false" onAction="#onStart" prefHeight="48.0" prefWidth="206.0" text="Empezar al cuestionario" />
+        <Text layoutX="36.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No hay respuestas correctas, ni incorrectas. Si no está seguro sobre cómo contestar una pregunta, por favor, dé la mejor respuesta que pueda dar, y escriba un comentario en el margen. Leeremos todos sus comentarios, así que siéntase en libertad de hacer tantos comentarios como quiera. " wrappingWidth="935.24755859375">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="192.0" layoutY="502.0" strokeType="OUTSIDE" strokeWidth="0.0" text="[1] The Pediatric Outcomes Data Collection Instrument (PODCI), Version 2.0, revised Aug 2005.">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Text>
+    </children>
+
+</AnchorPane>

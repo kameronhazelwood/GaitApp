@@ -17,7 +17,7 @@ public class SportsCompetitive {
     private Stage getMyStageStart() { return (Stage) start.getScene().getWindow(); }
     public void onStart(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader;
-        fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/Sports/SportsCompetitiveYears.fxml"));
+        fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/Sports/SportsYearsCompetitive.fxml"));
         // fxmlLoader.setControllerFactory(applicationContext::getBean);
         Parent popUp = fxmlLoader.load();
 

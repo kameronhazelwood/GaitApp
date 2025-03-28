@@ -41,6 +41,9 @@ public class FormModuleController implements Initializable {
     public CheckBox childPODSI;
     public CheckBox adolescentPODSI;
     public CheckBox sports;
+    public CheckBox hip;
+    public ComboBox<String> language;
+    public ListView formsPatientList;
     @Autowired
     ConfigurableApplicationContext applicationContext;
     public CheckBox chooseFormsCheckBox;
@@ -65,14 +68,24 @@ public class FormModuleController implements Initializable {
     public enum Form {HISTORY, CHILD_PODSI, ADULT_PODSI, SPORTS, HIP}
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        language.getItems().addAll(
+                "English ",
+                "Spanish"
+        );
 
         //start.setDisable(true);
-       start.disableProperty().bind(history.selectedProperty().not().and(childPODSI.selectedProperty().not().and(adolescentPODSI.selectedProperty().not())));
+       start.disableProperty().bind(history.selectedProperty().not().and(childPODSI.selectedProperty().not().and(adolescentPODSI.selectedProperty().not().and(sports.selectedProperty().not().and(hip.selectedProperty().not())))));
 
     }
 
     public void onSetDate(ActionEvent event) {
         patientList.getItems().addAll(
+                "Rowan Hazelwood -- 33069893"
+        );
+    }
+
+    public void onChangeDate(ActionEvent event){
+        formsPatientList.getItems().addAll(
                 "Rowan Hazelwood -- 33069893"
         );
     }
@@ -93,7 +106,35 @@ public class FormModuleController implements Initializable {
         }
         if(childPODSI.isSelected()){
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/PODSI_Child/ParentReported/WelcomePage.fxml"));
+            fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/PODSI_Child/ParentReported/MainPage.fxml"));
+            // fxmlLoader.setControllerFactory(applicationContext::getBean);
+            Parent popUp = fxmlLoader.load();
+
+            Stage stage1 = new Stage((StageStyle.UTILITY));
+            stage1.initModality(Modality.WINDOW_MODAL);
+            stage1.setTitle("Questionnaire   ");
+            // stage1.setFullScreen(true);
+            stage1.setScene(new Scene(popUp, 950, 680));
+            stage1.showAndWait();
+
+        }
+        if(adolescentPODSI.isSelected()) {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/PODSI_Child/SelfReported/MainPage.fxml"));
+            // fxmlLoader.setControllerFactory(applicationContext::getBean);
+            Parent popUp = fxmlLoader.load();
+
+
+            Stage stage1 = new Stage((StageStyle.UTILITY));
+            stage1.initModality(Modality.WINDOW_MODAL);
+            stage1.setTitle("Questionnaire   ");
+            stage1.setFullScreen(true);
+            stage1.setScene(new Scene(popUp, 950, 680));
+            stage1.showAndWait();
+        }
+        if(sports.isSelected()){
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/Sports/MainPage.fxml"));
             // fxmlLoader.setControllerFactory(applicationContext::getBean);
             Parent popUp = fxmlLoader.load();
 
@@ -104,9 +145,9 @@ public class FormModuleController implements Initializable {
             stage1.setScene(new Scene(popUp, 950, 680));
             stage1.showAndWait();
         }
-        if(sports.isSelected()){
+        if(hip.isSelected()){
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/Sports/MainPage.fxml"));
+            fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/Hip/MainPage.fxml"));
             // fxmlLoader.setControllerFactory(applicationContext::getBean);
             Parent popUp = fxmlLoader.load();
 
@@ -134,10 +175,6 @@ public class FormModuleController implements Initializable {
         stage1.show();
 
     }
-
-
-
-
 
     public void onPatientClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
