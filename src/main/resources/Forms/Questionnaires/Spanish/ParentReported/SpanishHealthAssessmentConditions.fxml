@@ -2,176 +2,182 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="836.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.Spanish.ParentReported.SpanishHealthAssessmentConditions">
 
-    <children>
-        <Text layoutX="174.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Evaluación de Salud Pediátrica (informado por los padres)" textAlignment="CENTER">
-            <font>
-                <Font size="24.0" />
-            </font>
-        </Text>
-        <Separator layoutX="29.0" layoutY="48.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
-        <Text layoutX="55.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Alguna vez le ha dicho un(a) doctor(a), enfermero(a), maestro(a) u otro profesional médico que child ha tenido alguna de las siguientes condiciones?" wrappingWidth="852.3184852600098">
-            <font>
-                <Font size="18.0" />
-            </font>
-        </Text>
-        <Separator layoutX="27.0" layoutY="783.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
-        <Button fx:id="start" layoutX="366.0" layoutY="700.0" mnemonicParsing="false" onAction="#onStart" prefHeight="48.0" prefWidth="206.0" text="Siguiente Pregunta" />
-        <Text layoutX="422.0" layoutY="771.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pregunta 3 of 27">
-            <font>
-                <Font size="13.0" />
-            </font>
-        </Text>
-      <Text layoutX="55.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Si la respuesta es sí, indique si a su niño(a) se le está tratando para esta condición, y si su niño(a) está limitado(a) a causa de estas condiciones." wrappingWidth="852.3184852600098">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
-      <Separator layoutX="124.0" layoutY="182.0" orientation="VERTICAL" prefHeight="486.0" prefWidth="0.0" />
-      <Separator layoutX="126.0" layoutY="536.0" prefHeight="0.0" prefWidth="662.0" />
-      <Separator layoutX="127.0" layoutY="181.0" prefHeight="3.0" prefWidth="662.0" />
-      <Separator layoutX="786.0" layoutY="180.0" orientation="VERTICAL" prefHeight="486.0" prefWidth="0.0" />
-      <Separator layoutX="126.0" layoutY="250.0" prefHeight="3.0" prefWidth="662.0" />
-      <Text layoutX="453.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿La ha tenido Rowan alguna vez?" wrappingWidth="75.951171875" />
-      <Separator layoutX="429.0" layoutY="182.0" orientation="VERTICAL" prefHeight="486.0" prefWidth="0.0" />
-      <Text layoutX="129.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Artritis juvenil (una o dos articulaciones)" />
-      <RadioButton layoutX="438.0" layoutY="254.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="491.0" layoutY="254.0" mnemonicParsing="false" text="No" />
-      <Separator layoutX="546.0" layoutY="182.0" orientation="VERTICAL" prefHeight="486.0" prefWidth="0.0" />
-      <Text layoutX="563.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Recibe Rowan tratamiento para ésta ahora?" wrappingWidth="95.39257812499989" />
-      <RadioButton layoutX="565.0" layoutY="254.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="617.0" layoutY="254.0" mnemonicParsing="false" text="No" />
-      <Separator layoutX="666.0" layoutY="180.0" orientation="VERTICAL" prefHeight="486.0" prefWidth="0.0" />
-      <Text layoutX="677.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Están limitadas las actividades de Rowan por ésta ahora?" wrappingWidth="103.15118408203136" />
-      <RadioButton layoutX="682.0" layoutY="254.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="737.0" layoutY="254.0" mnemonicParsing="false" text="No" />
-      <Separator layoutX="126.0" layoutY="276.0" prefHeight="0.0" prefWidth="662.0" />
-      <Separator layoutX="126.0" layoutY="302.0" prefHeight="0.0" prefWidth="662.0" />
-      <Text layoutX="129.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Artritis juvenil (varias articulaciones)" />
-      <RadioButton layoutX="438.0" layoutY="280.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="491.0" layoutY="280.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="565.0" layoutY="281.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="617.0" layoutY="281.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="682.0" layoutY="280.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="737.0" layoutY="280.0" mnemonicParsing="false" text="No" />
-      <Separator layoutX="126.0" layoutY="328.0" prefHeight="0.0" prefWidth="662.0" />
-      <Text layoutX="129.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anorexia o bulimia (Problemas de alimentación)" />
-      <RadioButton layoutX="438.0" layoutY="308.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="491.0" layoutY="308.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="565.0" layoutY="308.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="617.0" layoutY="308.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="682.0" layoutY="308.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="737.0" layoutY="308.0" mnemonicParsing="false" text="No" />
-      <Separator layoutX="126.0" layoutY="354.0" prefHeight="0.0" prefWidth="662.0" />
-      <Text layoutX="129.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Asma" />
-      <RadioButton layoutX="438.0" layoutY="332.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="491.0" layoutY="332.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="565.0" layoutY="332.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="617.0" layoutY="332.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="682.0" layoutY="333.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="737.0" layoutY="333.0" mnemonicParsing="false" text="No" />
-      <Separator layoutX="126.0" layoutY="380.0" prefHeight="0.0" prefWidth="662.0" />
-      <Text layoutX="129.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemas de atención o comportamiento" />
-      <RadioButton layoutX="438.0" layoutY="359.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="491.0" layoutY="359.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="565.0" layoutY="359.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="617.0" layoutY="359.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="682.0" layoutY="359.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="737.0" layoutY="359.0" mnemonicParsing="false" text="No" />
-      <Separator layoutX="126.0" layoutY="406.0" prefHeight="0.0" prefWidth="662.0" />
-      <Text layoutX="129.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alergias crónicas o problemas de sinusitis" />
-      <RadioButton layoutX="438.0" layoutY="385.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="491.0" layoutY="385.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="565.0" layoutY="385.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="617.0" layoutY="385.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="682.0" layoutY="385.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="737.0" layoutY="385.0" mnemonicParsing="false" text="No" />
-      <Separator layoutX="126.0" layoutY="432.0" prefHeight="0.0" prefWidth="662.0" />
-      <Text layoutX="129.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Retraso del desarrollo" />
-      <RadioButton layoutX="438.0" layoutY="411.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="491.0" layoutY="411.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="565.0" layoutY="411.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="617.0" layoutY="411.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="682.0" layoutY="411.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="737.0" layoutY="411.0" mnemonicParsing="false" text="No" />
-      <Separator layoutX="126.0" layoutY="458.0" prefHeight="0.0" prefWidth="662.0" />
-      <Text layoutX="129.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Retraso mental" />
-      <RadioButton layoutX="438.0" layoutY="437.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="491.0" layoutY="437.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="565.0" layoutY="437.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="617.0" layoutY="437.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="682.0" layoutY="437.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="737.0" layoutY="437.0" mnemonicParsing="false" text="No" />
-      <Separator layoutX="126.0" layoutY="484.0" prefHeight="0.0" prefWidth="662.0" />
-      <Text layoutX="129.0" layoutY="478.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diabetes" />
-      <RadioButton layoutX="438.0" layoutY="463.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="491.0" layoutY="463.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="565.0" layoutY="464.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="617.0" layoutY="464.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="682.0" layoutY="464.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="737.0" layoutY="464.0" mnemonicParsing="false" text="No" />
-      <Separator layoutX="126.0" layoutY="510.0" prefHeight="0.0" prefWidth="662.0" />
-      <Text layoutX="130.0" layoutY="503.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Epilepsia (ataques)" />
-      <RadioButton layoutX="438.0" layoutY="488.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="491.0" layoutY="488.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="565.0" layoutY="489.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="617.0" layoutY="489.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="682.0" layoutY="489.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="737.0" layoutY="489.0" mnemonicParsing="false" text="No" />
-      <Text layoutX="130.0" layoutY="527.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemas del oído o sordera" />
-      <RadioButton layoutX="438.0" layoutY="514.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="491.0" layoutY="514.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="565.0" layoutY="514.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="617.0" layoutY="514.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="682.0" layoutY="515.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="737.0" layoutY="515.0" mnemonicParsing="false" text="No" />
-      <Separator layoutX="126.0" layoutY="562.0" prefHeight="0.0" prefWidth="662.0" />
-      <Text layoutX="129.0" layoutY="552.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemas del corazón" />
-      <Separator layoutX="126.0" layoutY="588.0" prefHeight="0.0" prefWidth="662.0" />
-      <Text layoutX="129.0" layoutY="581.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemas de aprendizaje" />
-      <Separator layoutX="126.0" layoutY="614.0" prefHeight="0.0" prefWidth="662.0" />
-      <Text layoutX="129.0" layoutY="606.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trastornos del sueño" />
-      <Separator layoutX="126.0" layoutY="640.0" prefHeight="0.0" prefWidth="662.0" />
-      <Text layoutX="129.0" layoutY="632.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemas del habla" />
-      <Separator layoutX="126.0" layoutY="666.0" prefHeight="0.0" prefWidth="662.0" />
-      <Text layoutX="129.0" layoutY="658.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemas de la vista" />
-      <RadioButton layoutX="438.0" layoutY="539.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="491.0" layoutY="539.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="438.0" layoutY="568.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="491.0" layoutY="568.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="438.0" layoutY="593.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="491.0" layoutY="593.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="438.0" layoutY="619.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="491.0" layoutY="619.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="438.0" layoutY="645.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="491.0" layoutY="645.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="565.0" layoutY="541.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="565.0" layoutY="568.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="617.0" layoutY="568.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="565.0" layoutY="593.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="617.0" layoutY="593.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="617.0" layoutY="541.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="565.0" layoutY="619.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="617.0" layoutY="619.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="565.0" layoutY="645.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="617.0" layoutY="645.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="682.0" layoutY="541.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="737.0" layoutY="541.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="682.0" layoutY="568.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="737.0" layoutY="568.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="682.0" layoutY="593.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="737.0" layoutY="593.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="682.0" layoutY="619.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="737.0" layoutY="619.0" mnemonicParsing="false" text="No" />
-      <RadioButton layoutX="682.0" layoutY="645.0" mnemonicParsing="false" text="Si" />
-      <RadioButton layoutX="737.0" layoutY="645.0" mnemonicParsing="false" text="No" />
-    </children>
-
-
-</AnchorPane>
+<ScrollPane xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.Spanish.ParentReported.SpanishHealthAssessmentConditions">
+   <content>
+      <AnchorPane prefHeight="836.0" prefWidth="911.0">
+      
+          <children>
+              <Text layoutX="174.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Evaluación de Salud Pediátrica (informado por los padres)" textAlignment="CENTER">
+                  <font>
+                      <Font size="24.0" />
+                  </font>
+              </Text>
+              <Separator layoutX="29.0" layoutY="48.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
+              <Text layoutX="55.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Alguna vez le ha dicho un(a) doctor(a), enfermero(a), maestro(a) u otro profesional médico que child ha tenido alguna de las siguientes condiciones?" wrappingWidth="852.3184852600098">
+                  <font>
+                      <Font size="18.0" />
+                  </font>
+              </Text>
+              <Separator layoutX="27.0" layoutY="783.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
+              <Button fx:id="start" layoutX="366.0" layoutY="700.0" mnemonicParsing="false" onAction="#onStart" prefHeight="48.0" prefWidth="206.0" text="Siguiente Pregunta" />
+              <Text layoutX="422.0" layoutY="771.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pregunta 3 of 27">
+                  <font>
+                      <Font size="13.0" />
+                  </font>
+              </Text>
+            <Text layoutX="55.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Si la respuesta es sí, indique si a su niño(a) se le está tratando para esta condición, y si su niño(a) está limitado(a) a causa de estas condiciones." wrappingWidth="852.3184852600098">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Separator layoutX="124.0" layoutY="182.0" orientation="VERTICAL" prefHeight="486.0" prefWidth="0.0" />
+            <Separator layoutX="126.0" layoutY="536.0" prefHeight="0.0" prefWidth="662.0" />
+            <Separator layoutX="127.0" layoutY="181.0" prefHeight="3.0" prefWidth="662.0" />
+            <Separator layoutX="786.0" layoutY="180.0" orientation="VERTICAL" prefHeight="486.0" prefWidth="0.0" />
+            <Separator layoutX="126.0" layoutY="250.0" prefHeight="3.0" prefWidth="662.0" />
+            <Text layoutX="453.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿La ha tenido Rowan alguna vez?" wrappingWidth="75.951171875" />
+            <Separator layoutX="429.0" layoutY="182.0" orientation="VERTICAL" prefHeight="486.0" prefWidth="0.0" />
+            <Text layoutX="129.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Artritis juvenil (una o dos articulaciones)" />
+            <RadioButton layoutX="438.0" layoutY="254.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="491.0" layoutY="254.0" mnemonicParsing="false" text="No" />
+            <Separator layoutX="546.0" layoutY="182.0" orientation="VERTICAL" prefHeight="486.0" prefWidth="0.0" />
+            <Text layoutX="563.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Recibe Rowan tratamiento para ésta ahora?" wrappingWidth="95.39257812499989" />
+            <RadioButton layoutX="565.0" layoutY="254.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="617.0" layoutY="254.0" mnemonicParsing="false" text="No" />
+            <Separator layoutX="666.0" layoutY="180.0" orientation="VERTICAL" prefHeight="486.0" prefWidth="0.0" />
+            <Text layoutX="677.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Están limitadas las actividades de Rowan por ésta ahora?" wrappingWidth="103.15118408203136" />
+            <RadioButton layoutX="682.0" layoutY="254.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="737.0" layoutY="254.0" mnemonicParsing="false" text="No" />
+            <Separator layoutX="126.0" layoutY="276.0" prefHeight="0.0" prefWidth="662.0" />
+            <Separator layoutX="126.0" layoutY="302.0" prefHeight="0.0" prefWidth="662.0" />
+            <Text layoutX="129.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Artritis juvenil (varias articulaciones)" />
+            <RadioButton layoutX="438.0" layoutY="280.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="491.0" layoutY="280.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="565.0" layoutY="281.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="617.0" layoutY="281.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="682.0" layoutY="280.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="737.0" layoutY="280.0" mnemonicParsing="false" text="No" />
+            <Separator layoutX="126.0" layoutY="328.0" prefHeight="0.0" prefWidth="662.0" />
+            <Text layoutX="129.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anorexia o bulimia (Problemas de alimentación)" />
+            <RadioButton layoutX="438.0" layoutY="308.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="491.0" layoutY="308.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="565.0" layoutY="308.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="617.0" layoutY="308.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="682.0" layoutY="308.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="737.0" layoutY="308.0" mnemonicParsing="false" text="No" />
+            <Separator layoutX="126.0" layoutY="354.0" prefHeight="0.0" prefWidth="662.0" />
+            <Text layoutX="129.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Asma" />
+            <RadioButton layoutX="438.0" layoutY="332.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="491.0" layoutY="332.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="565.0" layoutY="332.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="617.0" layoutY="332.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="682.0" layoutY="333.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="737.0" layoutY="333.0" mnemonicParsing="false" text="No" />
+            <Separator layoutX="126.0" layoutY="380.0" prefHeight="0.0" prefWidth="662.0" />
+            <Text layoutX="129.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemas de atención o comportamiento" />
+            <RadioButton layoutX="438.0" layoutY="359.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="491.0" layoutY="359.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="565.0" layoutY="359.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="617.0" layoutY="359.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="682.0" layoutY="359.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="737.0" layoutY="359.0" mnemonicParsing="false" text="No" />
+            <Separator layoutX="126.0" layoutY="406.0" prefHeight="0.0" prefWidth="662.0" />
+            <Text layoutX="129.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alergias crónicas o problemas de sinusitis" />
+            <RadioButton layoutX="438.0" layoutY="385.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="491.0" layoutY="385.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="565.0" layoutY="385.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="617.0" layoutY="385.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="682.0" layoutY="385.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="737.0" layoutY="385.0" mnemonicParsing="false" text="No" />
+            <Separator layoutX="126.0" layoutY="432.0" prefHeight="0.0" prefWidth="662.0" />
+            <Text layoutX="129.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Retraso del desarrollo" />
+            <RadioButton layoutX="438.0" layoutY="411.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="491.0" layoutY="411.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="565.0" layoutY="411.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="617.0" layoutY="411.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="682.0" layoutY="411.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="737.0" layoutY="411.0" mnemonicParsing="false" text="No" />
+            <Separator layoutX="126.0" layoutY="458.0" prefHeight="0.0" prefWidth="662.0" />
+            <Text layoutX="129.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Retraso mental" />
+            <RadioButton layoutX="438.0" layoutY="437.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="491.0" layoutY="437.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="565.0" layoutY="437.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="617.0" layoutY="437.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="682.0" layoutY="437.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="737.0" layoutY="437.0" mnemonicParsing="false" text="No" />
+            <Separator layoutX="126.0" layoutY="484.0" prefHeight="0.0" prefWidth="662.0" />
+            <Text layoutX="129.0" layoutY="478.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diabetes" />
+            <RadioButton layoutX="438.0" layoutY="463.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="491.0" layoutY="463.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="565.0" layoutY="464.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="617.0" layoutY="464.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="682.0" layoutY="464.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="737.0" layoutY="464.0" mnemonicParsing="false" text="No" />
+            <Separator layoutX="126.0" layoutY="510.0" prefHeight="0.0" prefWidth="662.0" />
+            <Text layoutX="130.0" layoutY="503.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Epilepsia (ataques)" />
+            <RadioButton layoutX="438.0" layoutY="488.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="491.0" layoutY="488.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="565.0" layoutY="489.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="617.0" layoutY="489.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="682.0" layoutY="489.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="737.0" layoutY="489.0" mnemonicParsing="false" text="No" />
+            <Text layoutX="130.0" layoutY="527.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemas del oído o sordera" />
+            <RadioButton layoutX="438.0" layoutY="514.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="491.0" layoutY="514.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="565.0" layoutY="514.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="617.0" layoutY="514.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="682.0" layoutY="515.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="737.0" layoutY="515.0" mnemonicParsing="false" text="No" />
+            <Separator layoutX="126.0" layoutY="562.0" prefHeight="0.0" prefWidth="662.0" />
+            <Text layoutX="129.0" layoutY="552.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemas del corazón" />
+            <Separator layoutX="126.0" layoutY="588.0" prefHeight="0.0" prefWidth="662.0" />
+            <Text layoutX="129.0" layoutY="581.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemas de aprendizaje" />
+            <Separator layoutX="126.0" layoutY="614.0" prefHeight="0.0" prefWidth="662.0" />
+            <Text layoutX="129.0" layoutY="606.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trastornos del sueño" />
+            <Separator layoutX="126.0" layoutY="640.0" prefHeight="0.0" prefWidth="662.0" />
+            <Text layoutX="129.0" layoutY="632.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemas del habla" />
+            <Separator layoutX="126.0" layoutY="666.0" prefHeight="0.0" prefWidth="662.0" />
+            <Text layoutX="129.0" layoutY="658.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemas de la vista" />
+            <RadioButton layoutX="438.0" layoutY="539.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="491.0" layoutY="539.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="438.0" layoutY="568.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="491.0" layoutY="568.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="438.0" layoutY="593.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="491.0" layoutY="593.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="438.0" layoutY="619.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="491.0" layoutY="619.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="438.0" layoutY="645.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="491.0" layoutY="645.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="565.0" layoutY="541.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="565.0" layoutY="568.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="617.0" layoutY="568.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="565.0" layoutY="593.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="617.0" layoutY="593.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="617.0" layoutY="541.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="565.0" layoutY="619.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="617.0" layoutY="619.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="565.0" layoutY="645.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="617.0" layoutY="645.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="682.0" layoutY="541.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="737.0" layoutY="541.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="682.0" layoutY="568.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="737.0" layoutY="568.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="682.0" layoutY="593.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="737.0" layoutY="593.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="682.0" layoutY="619.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="737.0" layoutY="619.0" mnemonicParsing="false" text="No" />
+            <RadioButton layoutX="682.0" layoutY="645.0" mnemonicParsing="false" text="Si" />
+            <RadioButton layoutX="737.0" layoutY="645.0" mnemonicParsing="false" text="No" />
+          </children>
+      
+      
+      </AnchorPane>
+   </content>
+</ScrollPane>

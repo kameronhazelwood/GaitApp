@@ -27,62 +27,62 @@
                 <Font size="13.0" />
             </font>
         </Text>
-        <Separator layoutX="91.0" layoutY="317.0" orientation="VERTICAL" prefHeight="225.0" prefWidth="0.0" />
-        <Separator layoutX="94.0" layoutY="316.0" prefHeight="0.0" prefWidth="655.0" />
-        <Separator layoutX="93.0" layoutY="385.0" prefHeight="0.0" prefWidth="655.0" />
-        <Separator layoutX="319.0" layoutY="317.0" orientation="VERTICAL" prefHeight="225.0" prefWidth="0.0" />
-        <Text layoutX="96.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="cómo se ve?" />
-        <Separator layoutX="391.0" layoutY="317.0" orientation="VERTICAL" prefHeight="225.0" prefWidth="0.0" />
-        <Separator layoutX="670.0" layoutY="317.0" orientation="VERTICAL" prefHeight="225.0" prefWidth="0.0" />
-        <Separator layoutX="93.0" layoutY="411.0" prefHeight="0.0" prefWidth="655.0" />
-        <Separator layoutX="93.0" layoutY="437.0" prefHeight="0.0" prefWidth="655.0" />
-        <Text layoutX="96.0" layoutY="428.0" strokeType="OUTSIDE" strokeWidth="0.0" text="su cuerpo?" />
-        <Separator layoutX="93.0" layoutY="463.0" prefHeight="0.0" prefWidth="655.0" />
-        <Text layoutX="96.0" layoutY="456.0" strokeType="OUTSIDE" strokeWidth="0.0" text="la ropa o zapatos que puede usar?" />
-        <Text layoutX="96.0" layoutY="484.0" strokeType="OUTSIDE" strokeWidth="0.0" text="su habilidad para hacer las mismas cosas que hacen sus amigos?" wrappingWidth="224.6829833984375" />
-        <Separator layoutX="93.0" layoutY="515.0" prefHeight="0.0" prefWidth="655.0" />
-        <Separator layoutX="93.0" layoutY="541.0" prefHeight="0.0" prefWidth="655.0" />
-        <Text layoutX="96.0" layoutY="533.0" strokeType="OUTSIDE" strokeWidth="0.0" text="su salud en general?" />
-        <Text layoutX="327.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Muy feliz" />
+        <Separator layoutX="91.0" layoutY="227.0" orientation="VERTICAL" prefHeight="225.0" prefWidth="0.0" />
+        <Separator layoutX="94.0" layoutY="226.0" prefHeight="0.0" prefWidth="655.0" />
+        <Separator layoutX="93.0" layoutY="295.0" prefHeight="0.0" prefWidth="655.0" />
+        <Separator layoutX="319.0" layoutY="227.0" orientation="VERTICAL" prefHeight="225.0" prefWidth="0.0" />
+        <Text layoutX="96.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="cómo se ve?" />
+        <Separator layoutX="391.0" layoutY="227.0" orientation="VERTICAL" prefHeight="225.0" prefWidth="0.0" />
+        <Separator layoutX="670.0" layoutY="227.0" orientation="VERTICAL" prefHeight="225.0" prefWidth="0.0" />
+        <Separator layoutX="93.0" layoutY="321.0" prefHeight="0.0" prefWidth="655.0" />
+        <Separator layoutX="93.0" layoutY="347.0" prefHeight="0.0" prefWidth="655.0" />
+        <Text layoutX="96.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="su cuerpo?" />
+        <Separator layoutX="93.0" layoutY="373.0" prefHeight="0.0" prefWidth="655.0" />
+        <Text layoutX="96.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="la ropa o zapatos que puede usar?" />
+        <Text layoutX="96.0" layoutY="394.0" strokeType="OUTSIDE" strokeWidth="0.0" text="su habilidad para hacer las mismas cosas que hacen sus amigos?" wrappingWidth="224.6829833984375" />
+        <Separator layoutX="93.0" layoutY="425.0" prefHeight="0.0" prefWidth="655.0" />
+        <Separator layoutX="93.0" layoutY="451.0" prefHeight="0.0" prefWidth="655.0" />
+        <Text layoutX="96.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0" text="su salud en general?" />
+        <Text layoutX="327.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Muy feliz" />
+        <RadioButton layoutX="345.0" layoutY="299.0" mnemonicParsing="false" />
+        <Separator layoutX="458.0" layoutY="225.0" orientation="VERTICAL" prefHeight="225.0" prefWidth="0.0" />
+        <Text layoutX="402.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Algo feliz" wrappingWidth="67.1761474609375" />
+        <Separator layoutX="525.0" layoutY="227.0" orientation="VERTICAL" prefHeight="225.0" prefWidth="0.0" />
+        <Text layoutX="467.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No estoy seguro(a" wrappingWidth="60.776123046875" />
+        <Separator layoutX="592.0" layoutY="227.0" orientation="VERTICAL" prefHeight="225.0" prefWidth="0.0" />
+        <Text layoutX="531.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Algo infeliz" wrappingWidth="60.776123046875" />
+        <RadioButton layoutX="345.0" layoutY="325.0" mnemonicParsing="false" />
+        <RadioButton layoutX="345.0" layoutY="353.0" mnemonicParsing="false" />
         <RadioButton layoutX="345.0" layoutY="389.0" mnemonicParsing="false" />
-        <Separator layoutX="458.0" layoutY="315.0" orientation="VERTICAL" prefHeight="225.0" prefWidth="0.0" />
-        <Text layoutX="402.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Algo feliz" wrappingWidth="67.1761474609375" />
-        <Separator layoutX="525.0" layoutY="317.0" orientation="VERTICAL" prefHeight="225.0" prefWidth="0.0" />
-        <Text layoutX="467.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No estoy seguro(a" wrappingWidth="60.776123046875" />
-        <Separator layoutX="592.0" layoutY="317.0" orientation="VERTICAL" prefHeight="225.0" prefWidth="0.0" />
-        <Text layoutX="531.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Algo infeliz" wrappingWidth="60.776123046875" />
-        <RadioButton layoutX="345.0" layoutY="415.0" mnemonicParsing="false" />
-        <RadioButton layoutX="345.0" layoutY="443.0" mnemonicParsing="false" />
-        <RadioButton layoutX="345.0" layoutY="479.0" mnemonicParsing="false" />
-        <RadioButton layoutX="345.0" layoutY="519.0" mnemonicParsing="false" />
+        <RadioButton layoutX="345.0" layoutY="429.0" mnemonicParsing="false" />
+        <RadioButton layoutX="417.0" layoutY="299.0" mnemonicParsing="false" />
+        <RadioButton layoutX="417.0" layoutY="325.0" mnemonicParsing="false" />
+        <RadioButton layoutX="417.0" layoutY="352.0" mnemonicParsing="false" />
         <RadioButton layoutX="417.0" layoutY="389.0" mnemonicParsing="false" />
-        <RadioButton layoutX="417.0" layoutY="415.0" mnemonicParsing="false" />
-        <RadioButton layoutX="417.0" layoutY="442.0" mnemonicParsing="false" />
-        <RadioButton layoutX="417.0" layoutY="479.0" mnemonicParsing="false" />
-        <RadioButton layoutX="417.0" layoutY="519.0" mnemonicParsing="false" />
+        <RadioButton layoutX="417.0" layoutY="429.0" mnemonicParsing="false" />
+        <RadioButton layoutX="483.0" layoutY="299.0" mnemonicParsing="false" />
+        <RadioButton layoutX="483.0" layoutY="325.0" mnemonicParsing="false" />
+        <RadioButton layoutX="483.0" layoutY="352.0" mnemonicParsing="false" />
         <RadioButton layoutX="483.0" layoutY="389.0" mnemonicParsing="false" />
-        <RadioButton layoutX="483.0" layoutY="415.0" mnemonicParsing="false" />
-        <RadioButton layoutX="483.0" layoutY="442.0" mnemonicParsing="false" />
-        <RadioButton layoutX="483.0" layoutY="479.0" mnemonicParsing="false" />
-        <RadioButton layoutX="483.0" layoutY="519.0" mnemonicParsing="false" />
+        <RadioButton layoutX="483.0" layoutY="429.0" mnemonicParsing="false" />
+        <RadioButton layoutX="553.0" layoutY="299.0" mnemonicParsing="false" />
+        <RadioButton layoutX="553.0" layoutY="324.0" mnemonicParsing="false" />
+        <RadioButton layoutX="553.0" layoutY="353.0" mnemonicParsing="false" />
         <RadioButton layoutX="553.0" layoutY="389.0" mnemonicParsing="false" />
-        <RadioButton layoutX="553.0" layoutY="414.0" mnemonicParsing="false" />
-        <RadioButton layoutX="553.0" layoutY="443.0" mnemonicParsing="false" />
-        <RadioButton layoutX="553.0" layoutY="479.0" mnemonicParsing="false" />
-        <RadioButton layoutX="553.0" layoutY="519.0" mnemonicParsing="false" />
-        <RadioButton layoutX="625.0" layoutY="389.0" mnemonicParsing="false" />
-        <RadioButton layoutX="626.0" layoutY="415.0" mnemonicParsing="false" />
-        <RadioButton layoutX="626.0" layoutY="442.0" mnemonicParsing="false" />
-        <RadioButton layoutX="626.0" layoutY="479.0" mnemonicParsing="false" />
-        <RadioButton layoutX="625.0" layoutY="519.0" mnemonicParsing="false" />
-      <Separator layoutX="748.0" layoutY="317.0" orientation="VERTICAL" prefHeight="225.0" prefWidth="0.0" />
-      <Text layoutX="603.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Muy infeliz" wrappingWidth="78.78363037109375" />
-      <Text layoutX="675.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="El niño(a) es muy joven" wrappingWidth="78.78363037109375" />
+        <RadioButton layoutX="553.0" layoutY="429.0" mnemonicParsing="false" />
+        <RadioButton layoutX="625.0" layoutY="299.0" mnemonicParsing="false" />
+        <RadioButton layoutX="626.0" layoutY="325.0" mnemonicParsing="false" />
+        <RadioButton layoutX="626.0" layoutY="352.0" mnemonicParsing="false" />
+        <RadioButton layoutX="626.0" layoutY="389.0" mnemonicParsing="false" />
+        <RadioButton layoutX="625.0" layoutY="429.0" mnemonicParsing="false" />
+      <Separator layoutX="748.0" layoutY="227.0" orientation="VERTICAL" prefHeight="225.0" prefWidth="0.0" />
+      <Text layoutX="603.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Muy infeliz" wrappingWidth="78.78363037109375" />
+      <Text layoutX="675.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="El niño(a) es muy joven" wrappingWidth="78.78363037109375" />
+      <RadioButton layoutX="698.0" layoutY="299.0" mnemonicParsing="false" />
+      <RadioButton layoutX="698.0" layoutY="325.0" mnemonicParsing="false" />
+      <RadioButton layoutX="698.0" layoutY="353.0" mnemonicParsing="false" />
       <RadioButton layoutX="698.0" layoutY="389.0" mnemonicParsing="false" />
-      <RadioButton layoutX="698.0" layoutY="415.0" mnemonicParsing="false" />
-      <RadioButton layoutX="698.0" layoutY="443.0" mnemonicParsing="false" />
-      <RadioButton layoutX="698.0" layoutY="479.0" mnemonicParsing="false" />
-      <RadioButton layoutX="698.0" layoutY="519.0" mnemonicParsing="false" />
+      <RadioButton layoutX="698.0" layoutY="429.0" mnemonicParsing="false" />
     </children>
 
 

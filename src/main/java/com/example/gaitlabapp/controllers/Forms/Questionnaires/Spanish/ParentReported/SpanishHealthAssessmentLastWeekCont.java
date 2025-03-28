@@ -18,7 +18,7 @@ public class SpanishHealthAssessmentLastWeekCont {
     private Stage getMyStageNext() { return (Stage) start.getScene().getWindow(); }
     public void onStart(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/Spanish/ParentReported/SpanishHealthAssessmentLastWeekCont.fxml"));
+        fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/Spanish/ParentReported/SpanishHealthAssessmentHelpFromOthers.fxml"));
         // fxmlLoader.setControllerFactory(applicationContext::getBean);
         Parent popUp = fxmlLoader.load();
 
