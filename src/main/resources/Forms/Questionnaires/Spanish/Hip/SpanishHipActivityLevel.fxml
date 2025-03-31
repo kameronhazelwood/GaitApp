@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="639.0" prefWidth="923.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.Spanish.Hip.SpanishHipActivityLevel">
+
+    <children>
+        <Separator layoutX="29.0" layoutY="23.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
+        <Separator layoutX="29.0" layoutY="611.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
+        <Button fx:id="start" layoutX="369.0" layoutY="537.0" mnemonicParsing="false" onAction="#onStart" prefHeight="48.0" prefWidth="206.0" text="SAVE" />
+      <Text layoutX="438.0" layoutY="600.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question 2 of 3" />
+      <Separator layoutX="37.0" layoutY="46.0" prefHeight="3.0" prefWidth="843.0" />
+      <Separator layoutX="37.0" layoutY="78.0" prefHeight="0.0" prefWidth="843.0" />
+      <Separator layoutX="34.0" layoutY="46.0" orientation="VERTICAL" prefHeight="352.0" prefWidth="0.0" />
+      <Separator layoutX="877.0" layoutY="46.0" orientation="VERTICAL" prefHeight="352.0" prefWidth="0.0" />
+      <Text layoutX="45.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please check one box that best describes current activity level." wrappingWidth="502.9367218017578">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Separator layoutX="37.0" layoutY="110.0" prefHeight="0.0" prefWidth="843.0" />
+      <Separator layoutX="813.0" layoutY="79.0" orientation="VERTICAL" prefHeight="320.0" prefWidth="0.0" />
+      <Text layoutX="45.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wholly Inactive, dependent on others, and can not leave residence" wrappingWidth="538.9367523193359">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Separator layoutX="37.0" layoutY="142.0" prefHeight="0.0" prefWidth="843.0" />
+      <Text layoutX="45.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mostly Inactive or restricted to minimum activities of daily living" wrappingWidth="538.9367523193359">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Separator layoutX="37.0" layoutY="174.0" prefHeight="0.0" prefWidth="843.0" />
+      <Text layoutX="45.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sometimes participates in mild activities, such as walking, limited housework and limited shopping" wrappingWidth="685.3367767333984">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Separator layoutX="37.0" layoutY="206.0" prefHeight="0.0" prefWidth="843.0" />
+      <Text layoutX="45.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Regularly Participates in mild activities" wrappingWidth="685.3367767333984">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Separator layoutX="37.0" layoutY="238.0" prefHeight="0.0" prefWidth="843.0" />
+      <Text layoutX="45.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sometimes participates in moderate activities such as swimming or could do unlimited housework or shopping" wrappingWidth="701.3367767333984">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Separator layoutX="37.0" layoutY="270.0" prefHeight="0.0" prefWidth="843.0" />
+      <Text layoutX="45.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Regularly participates in moderate activities" wrappingWidth="701.3367767333984">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Separator layoutX="37.0" layoutY="302.0" prefHeight="0.0" prefWidth="843.0" />
+      <Text layoutX="45.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Regularly participates in active events such as bicycling" wrappingWidth="701.3367767333984">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Separator layoutX="37.0" layoutY="334.0" prefHeight="0.0" prefWidth="843.0" />
+      <Text layoutX="45.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Regularly participates in active events, such as golf or bowling" wrappingWidth="701.3367767333984">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Separator layoutX="37.0" layoutY="366.0" prefHeight="0.0" prefWidth="843.0" />
+      <Text layoutX="45.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sometimes participates in impact sports such as jogging, tennis, skiing, acrobatics, ballet, heavy labor or backpacking" wrappingWidth="723.7368011474609">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Separator layoutX="37.0" layoutY="398.0" prefHeight="0.0" prefWidth="843.0" />
+      <Text layoutX="45.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Regularly participates in impact sports" wrappingWidth="701.3367767333984">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <RadioButton layoutX="834.0" layoutY="85.0" mnemonicParsing="false" />
+      <RadioButton layoutX="834.0" layoutY="117.0" mnemonicParsing="false" />
+      <RadioButton layoutX="834.0" layoutY="149.0" mnemonicParsing="false" />
+      <RadioButton layoutX="834.0" layoutY="181.0" mnemonicParsing="false" />
+      <RadioButton layoutX="834.0" layoutY="213.0" mnemonicParsing="false" />
+      <RadioButton layoutX="834.0" layoutY="245.0" mnemonicParsing="false" />
+      <RadioButton layoutX="834.0" layoutY="277.0" mnemonicParsing="false" />
+      <RadioButton layoutX="834.0" layoutY="311.0" mnemonicParsing="false" />
+      <RadioButton layoutX="834.0" layoutY="341.0" mnemonicParsing="false" />
+      <RadioButton layoutX="834.0" layoutY="373.0" mnemonicParsing="false" />
+    </children>
+</AnchorPane>

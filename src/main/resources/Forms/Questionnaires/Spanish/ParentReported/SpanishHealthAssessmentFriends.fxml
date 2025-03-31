@@ -9,25 +9,25 @@
 
 <AnchorPane prefHeight="526.0" prefWidth="861.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.Spanish.ParentReported.SpanishHealthAssessmentFriends">
     <children>
-        <Text layoutX="174.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pediatric Health Assessment (Parent Reported)" textAlignment="CENTER">
+        <Text layoutX="174.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Evaluación de Salud Pediátrica (informado por los padres)" textAlignment="CENTER">
             <font>
                 <Font size="24.0" />
             </font>
         </Text>
         <Separator layoutX="29.0" layoutY="48.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
-        <Text layoutX="83.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How often in the last week did child get together and do things with friends?" wrappingWidth="852.3184852600098">
+        <Text layoutX="83.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Con qué frecuencia durante la semana pasada ¿Rowan se reunió o hizo algo con sus amigos?" wrappingWidth="852.3184852600098">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
         <Separator layoutX="14.0" layoutY="450.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
-        <Button fx:id="start" layoutX="353.0" layoutY="367.0" mnemonicParsing="false" onAction="#onStart" prefHeight="48.0" prefWidth="206.0" text="NEXT QUESTION" />
-        <Text layoutX="409.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question 19 of 27">
+        <Button fx:id="start" layoutX="353.0" layoutY="367.0" mnemonicParsing="false" onAction="#onStart" prefHeight="48.0" prefWidth="206.0" text="Siguiente Pregunta" />
+        <Text layoutX="409.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pregunta 19 of 27">
             <font>
                 <Font size="13.0" />
             </font>
         </Text>
-        <CheckBox layoutX="248.0" layoutY="218.0" mnemonicParsing="false" text="Never">
+        <CheckBox layoutX="248.0" layoutY="218.0" mnemonicParsing="false" text="Frecuentemente">
             <font>
                 <Font size="14.0" />
             </font>
@@ -35,13 +35,13 @@
         <Separator layoutX="244.0" layoutY="205.0" prefHeight="0.0" prefWidth="495.0" />
         <Separator layoutX="407.0" layoutY="205.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
         <Separator layoutX="242.0" layoutY="205.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="413.0" layoutY="218.0" mnemonicParsing="false" text="Sometimes">
+        <CheckBox layoutX="413.0" layoutY="218.0" mnemonicParsing="false" text="Algunas veces">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
         <Separator layoutX="572.0" layoutY="205.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="579.0" layoutY="218.0" mnemonicParsing="false" text="Never or rarely">
+        <CheckBox layoutX="579.0" layoutY="218.0" mnemonicParsing="false" text=" Nunca o rara vez">
             <font>
                 <Font size="14.0" />
             </font>

@@ -22,8 +22,8 @@
             </font>
         </Text>
         <Separator layoutX="27.0" layoutY="516.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
-        <Button fx:id="start" layoutX="366.0" layoutY="433.0" mnemonicParsing="false" onAction="#onStart" prefHeight="48.0" prefWidth="206.0" text="NEXT QUESTION" />
-        <Text layoutX="422.0" layoutY="504.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question 27 of 27">
+        <Button fx:id="start" layoutX="366.0" layoutY="433.0" mnemonicParsing="false" onAction="#onStart" prefHeight="48.0" prefWidth="206.0" text="SIGUIENTE PREGUNTA" />
+        <Text layoutX="422.0" layoutY="504.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pregunta 27 of 27">
             <font>
                 <Font size="13.0" />
             </font>

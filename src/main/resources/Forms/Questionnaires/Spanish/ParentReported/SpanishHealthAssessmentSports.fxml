@@ -9,52 +9,52 @@
 
 <AnchorPane prefHeight="587.0" prefWidth="1007.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.Spanish.ParentReported.SpanishHealthAssessmentSports">
     <children>
-        <Text layoutX="174.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pediatric Health Assessment (Parent Reported)" textAlignment="CENTER">
+        <Text layoutX="174.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Evaluación de Salud Pediátrica (informado por los padres)" textAlignment="CENTER">
             <font>
                 <Font size="24.0" />
             </font>
         </Text>
         <Separator layoutX="29.0" layoutY="48.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
-        <Text layoutX="55.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Can child participate in pickup games or sports with other children the same age?" wrappingWidth="852.3184852600098">
+        <Text layoutX="55.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Puede Rowan participar en juegos o deportes de pelota o de movimiento con otros niños de su misma edad?" wrappingWidth="852.3184852600098">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
         <Separator layoutX="14.0" layoutY="539.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
-        <Button fx:id="start" layoutX="353.0" layoutY="456.0" mnemonicParsing="false" onAction="#onStart" prefHeight="48.0" prefWidth="206.0" text="NEXT QUESTION" />
-        <Text layoutX="409.0" layoutY="527.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question 15 of 27">
+        <Button fx:id="start" layoutX="353.0" layoutY="456.0" mnemonicParsing="false" onAction="#onStart" prefHeight="48.0" prefWidth="206.0" text="Siguiente Pregunta" />
+        <Text layoutX="409.0" layoutY="527.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pregunta 15 of 27">
             <font>
                 <Font size="13.0" />
             </font>
         </Text>
-        <CheckBox layoutX="52.0" layoutY="278.0" mnemonicParsing="false" text="Yes, easily">
+        <CheckBox layoutX="124.0" layoutY="278.0" mnemonicParsing="false" text=" Sí, fácilmente">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-        <Separator layoutX="48.0" layoutY="265.0" prefHeight="3.0" prefWidth="659.0" />
-        <Separator layoutX="211.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <Separator layoutX="46.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="217.0" layoutY="278.0" mnemonicParsing="false" text="Yes, but a little hard">
+        <Separator layoutX="120.0" layoutY="265.0" prefHeight="3.0" prefWidth="659.0" />
+        <Separator layoutX="283.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <Separator layoutX="118.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox layoutX="289.0" layoutY="266.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="148.0" text="Sí, pero es un poco difícil" wrapText="true">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-        <Separator layoutX="376.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="383.0" layoutY="278.0" mnemonicParsing="false" text="Yes, but very hard">
+        <Separator layoutX="448.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox layoutX="455.0" layoutY="278.0" mnemonicParsing="false" text="Sí, pero es muy difícil">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-        <Separator layoutX="541.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <Separator layoutX="47.0" layoutY="317.0" prefHeight="3.0" prefWidth="659.0" />
-        <Text layoutX="83.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(For example: tag, dodge ball, basketball, soccer, catch, jump rope, touch football, hop scotch)" wrappingWidth="753.651798248291">
+        <Separator layoutX="613.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <Separator layoutX="119.0" layoutY="317.0" prefHeight="3.0" prefWidth="659.0" />
+        <Text layoutX="83.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="[Por ejemplo, la roña (tag), esquivar la pelota (dodge ball), baloncesto, fútbol soccer, atrapar la pelota (catch), saltar la cuerda, fútbol americano, rayuela (hop scotch)]" wrappingWidth="753.651798248291">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <Separator layoutX="706.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="548.0" layoutY="278.0" mnemonicParsing="false" text=" No">
+        <Separator layoutX="778.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox layoutX="620.0" layoutY="278.0" mnemonicParsing="false" text=" No">
             <font>
                 <Font size="14.0" />
             </font>

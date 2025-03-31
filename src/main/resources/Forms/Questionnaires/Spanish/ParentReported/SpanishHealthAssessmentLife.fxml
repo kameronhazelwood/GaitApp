@@ -7,55 +7,55 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="551.0" prefWidth="981.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.PODCI_Child.ParentReported.HealthAssessmentLife">
+<AnchorPane prefHeight="551.0" prefWidth="981.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.Spanish.ParentReported.SpanishHealthAssessmentLife">
     <children>
-        <Text layoutX="174.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pediatric Health Assessment (Parent Reported)" textAlignment="CENTER">
+        <Text layoutX="174.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Evaluación de Salud Pediátrica (informado por los padres)" textAlignment="CENTER">
             <font>
                 <Font size="24.0" />
             </font>
         </Text>
         <Separator layoutX="29.0" layoutY="48.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
-        <Text layoutX="133.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If Rowan had to spend the rest of their life with their bone and muscle conditionas it is right now, how would you feel about it?" wrappingWidth="852.3184852600098">
+        <Text layoutX="87.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Si Rowan tuviera que pasar el resto de su vida con su condición de los huesos y músculos como la que tiene ahora, ¿cómo se sentiría al respecto?" wrappingWidth="852.3184852600098">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
         <Separator layoutX="27.0" layoutY="516.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
-        <Button fx:id="start" layoutX="366.0" layoutY="433.0" mnemonicParsing="false" onAction="#onStart" prefHeight="48.0" prefWidth="206.0" text="NEXT QUESTION" />
-        <Text layoutX="422.0" layoutY="504.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question 27 of 27">
+        <Button fx:id="start" layoutX="366.0" layoutY="433.0" mnemonicParsing="false" onAction="#onStart" prefHeight="48.0" prefWidth="206.0" text="Siguiente Pregunta" />
+        <Text layoutX="422.0" layoutY="504.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pregunta 27 of 27">
             <font>
                 <Font size="13.0" />
             </font>
         </Text>
-        <CheckBox layoutX="52.0" layoutY="174.0" mnemonicParsing="false" text="Very satisfied">
+        <CheckBox layoutX="52.0" layoutY="218.0" mnemonicParsing="false" text="Muy satisfecho(a)">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-        <Separator layoutX="48.0" layoutY="161.0" prefHeight="0.0" prefWidth="823.0" />
-        <Separator layoutX="211.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <Separator layoutX="46.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="217.0" layoutY="174.0" mnemonicParsing="false" text="Somewhat satisfied">
+        <Separator layoutX="48.0" layoutY="205.0" prefHeight="0.0" prefWidth="823.0" />
+        <Separator layoutX="211.0" layoutY="205.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <Separator layoutX="46.0" layoutY="205.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox layoutX="217.0" layoutY="218.0" mnemonicParsing="false" text="Algo satisfecho(a)">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-        <Separator layoutX="376.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="383.0" layoutY="174.0" mnemonicParsing="false" text="Neutral">
+        <Separator layoutX="376.0" layoutY="205.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox layoutX="383.0" layoutY="218.0" mnemonicParsing="false" text="Neutral">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-        <Separator layoutX="539.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <Separator layoutX="47.0" layoutY="213.0" prefHeight="0.0" prefWidth="823.0" />
-        <Separator layoutX="706.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="543.0" layoutY="174.0" mnemonicParsing="false" text="Somewhat dissatisfied">
+        <Separator layoutX="539.0" layoutY="205.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <Separator layoutX="47.0" layoutY="257.0" prefHeight="0.0" prefWidth="823.0" />
+        <Separator layoutX="706.0" layoutY="205.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox layoutX="543.0" layoutY="218.0" mnemonicParsing="false" text="Algo insa-tisfecho(a)">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-        <Separator layoutX="868.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="712.0" layoutY="174.0" mnemonicParsing="false" text=" Very dissatisfied">
+        <Separator layoutX="868.0" layoutY="205.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox layoutX="712.0" layoutY="218.0" mnemonicParsing="false" text="Muy insa-tisfecho(a)">
             <font>
                 <Font size="14.0" />
             </font>

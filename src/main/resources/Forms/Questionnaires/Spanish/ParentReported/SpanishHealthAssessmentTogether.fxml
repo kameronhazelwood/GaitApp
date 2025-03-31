@@ -10,49 +10,49 @@
 
 <AnchorPane prefHeight="761.0" prefWidth="901.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.Spanish.ParentReported.SpanishHealthAssessmentTogether">
     <children>
-        <Text layoutX="174.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pediatric Health Assessment (Parent Reported)" textAlignment="CENTER">
+        <Text layoutX="174.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Evaluación de Salud Pediátrica (informado por los padres)" textAlignment="CENTER">
             <font>
                 <Font size="24.0" />
             </font>
         </Text>
         <Separator layoutX="29.0" layoutY="48.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
-        <Text layoutX="55.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How often in the last week did child get together and do things with friends? (cont.)" wrappingWidth="852.3184852600098">
+        <Text layoutX="55.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Con qué frecuencia durante la semana pasada ¿Rowan se reunió o hizo algo con sus amigos?" wrappingWidth="852.3184852600098">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
         <Separator layoutX="27.0" layoutY="710.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
-        <Button fx:id="start" layoutX="366.0" layoutY="627.0" mnemonicParsing="false" onAction="#onStart" prefHeight="48.0" prefWidth="206.0" text="NEXT QUESTION" />
-        <Text layoutX="421.0" layoutY="698.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question 20 of 27">
+        <Button fx:id="start" layoutX="366.0" layoutY="627.0" mnemonicParsing="false" onAction="#onStart" prefHeight="48.0" prefWidth="206.0" text="Siguiente Pregunta" />
+        <Text layoutX="421.0" layoutY="698.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pregunta 20 of 27">
             <font>
                 <Font size="13.0" />
             </font>
         </Text>
-        <Text layoutX="60.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Was child activity limited by:" wrappingWidth="227.65185928344727">
+        <Text layoutX="60.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿se limitó la actividad de Rowan debido a:" wrappingWidth="474.05185317993164">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <Separator layoutX="301.0" layoutY="191.0" orientation="VERTICAL" prefHeight="129.0" prefWidth="0.0" />
-        <Separator layoutX="303.0" layoutY="190.0" prefHeight="3.0" prefWidth="299.0" />
-        <Separator layoutX="529.0" layoutY="190.0" orientation="VERTICAL" prefHeight="129.0" prefWidth="0.0" />
-        <Text layoutX="306.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pain?" />
-        <Separator layoutX="600.0" layoutY="190.0" orientation="VERTICAL" prefHeight="129.0" prefWidth="0.0" />
-        <Separator layoutX="303.0" layoutY="216.0" prefHeight="0.0" prefWidth="299.0" />
-        <Separator layoutX="303.0" layoutY="242.0" prefHeight="0.0" prefWidth="299.0" />
-        <Text layoutX="306.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="General Health?" />
-        <Separator layoutX="303.0" layoutY="268.0" prefHeight="0.0" prefWidth="299.0" />
-        <Text layoutX="306.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Doctor or parent instructions?" />
-        <Separator layoutX="303.0" layoutY="294.0" prefHeight="0.0" prefWidth="299.0" />
-        <Text layoutX="306.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fear the other kids won't like them?" />
-        <Separator layoutX="303.0" layoutY="320.0" prefHeight="0.0" prefWidth="299.0" />
-        <Text layoutX="306.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Friends not around?" />
-      <CheckBox layoutX="545.0" layoutY="195.0" mnemonicParsing="false" text="Yes" />
-      <CheckBox layoutX="545.0" layoutY="220.0" mnemonicParsing="false" text="Yes" />
-      <CheckBox layoutX="545.0" layoutY="247.0" mnemonicParsing="false" text="Yes" />
-      <CheckBox layoutX="545.0" layoutY="274.0" mnemonicParsing="false" text="Yes" />
-      <CheckBox layoutX="545.0" layoutY="298.0" mnemonicParsing="false" text="Yes" />
-      <Text layoutX="258.0" layoutY="393.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Additional Comment for Selection(s) Above:" wrappingWidth="366.318546295166">
+        <Separator layoutX="261.0" layoutY="190.0" orientation="VERTICAL" prefHeight="129.0" prefWidth="0.0" />
+        <Separator layoutX="263.0" layoutY="189.0" prefHeight="3.0" prefWidth="374.0" />
+        <Separator layoutX="565.0" layoutY="189.0" orientation="VERTICAL" prefHeight="129.0" prefWidth="0.0" />
+        <Text layoutX="266.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="dolor?" />
+        <Separator layoutX="635.0" layoutY="189.0" orientation="VERTICAL" prefHeight="129.0" prefWidth="0.0" />
+        <Separator layoutX="263.0" layoutY="215.0" prefHeight="0.0" prefWidth="374.0" />
+        <Separator layoutX="263.0" layoutY="241.0" prefHeight="0.0" prefWidth="374.0" />
+        <Text layoutX="266.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="salud en general?" />
+        <Separator layoutX="263.0" layoutY="267.0" prefHeight="0.0" prefWidth="374.0" />
+        <Text layoutX="266.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="instrucciones del médico o de los padres?" />
+        <Separator layoutX="263.0" layoutY="293.0" prefHeight="0.0" prefWidth="374.0" />
+        <Text layoutX="266.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="miedo a no ser aceptado por los otros niños?" />
+        <Separator layoutX="263.0" layoutY="319.0" prefHeight="0.0" prefWidth="374.0" />
+        <Text layoutX="266.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="que los amigos no se encontraban a su alrededor?" />
+      <CheckBox layoutX="584.0" layoutY="194.0" mnemonicParsing="false" text="Si" />
+      <CheckBox layoutX="584.0" layoutY="219.0" mnemonicParsing="false" text="Si" />
+      <CheckBox layoutX="584.0" layoutY="247.0" mnemonicParsing="false" text="Si" />
+      <CheckBox layoutX="584.0" layoutY="272.0" mnemonicParsing="false" text="Si" />
+      <CheckBox layoutX="584.0" layoutY="297.0" mnemonicParsing="false" text="Si" />
+      <Text layoutX="214.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comentario Adicional para las Selecciones Anteriores:" wrappingWidth="492.7185707092285">
          <font>
             <Font size="18.0" />
          </font>

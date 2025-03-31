@@ -8,23 +8,23 @@
 <AnchorPane prefHeight="558.0" prefWidth="984.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.PODCI_Child.ParentReported.HealthAssessmentThankYou">
     <children>
         <Separator layoutX="29.0" layoutY="48.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
-        <Text layoutX="403.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thank You" wrappingWidth="88.3184700012207">
+        <Text layoutX="405.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Muchas Gracias" wrappingWidth="173.9184455871582">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
         <Separator layoutX="27.0" layoutY="516.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
-      <Text layoutX="297.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thank You for Filling Out the Questionnaire. " wrappingWidth="358.9851417541504">
+      <Text layoutX="297.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gracias por rellenar el cuestionario." wrappingWidth="358.9851417541504">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="156.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This information helps us get the big picture and provide the best possible care." wrappingWidth="653.6518287658691">
+      <Text layoutX="131.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Esta información nos ayuda a tener la visión panorámica y ofrecer la mejor atención posible." wrappingWidth="780.0518531799316">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="261.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please tell a member of our staff that you have finished." wrappingWidth="446.9851417541504">
+      <Text layoutX="243.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informe a un miembro de nuestro personal que haya terminado." wrappingWidth="536.5851173400879">
          <font>
             <Font size="18.0" />
          </font>

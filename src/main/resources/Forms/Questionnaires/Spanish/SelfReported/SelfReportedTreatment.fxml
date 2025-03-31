@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="557.0" prefWidth="967.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.Spanish.SelfReported.SpanishSelfReportedTreatment">
+    <children>
+        <Text layoutX="174.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adolescent Health Assessment (self reported)" textAlignment="CENTER">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+        <Separator layoutX="29.0" layoutY="48.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
+        <Text layoutX="244.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What expectations do you have for your treatment?" wrappingWidth="578.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Separator layoutX="27.0" layoutY="710.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
+        <Button fx:id="start" layoutX="366.0" layoutY="627.0" mnemonicParsing="false" onAction="#onStart" prefHeight="48.0" prefWidth="206.0" text="SIGUIENTE PREGUNTA" />
+        <Text layoutX="421.0" layoutY="698.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pregunta 26 of 27">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Text>
+        <Text layoutX="261.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="As a result of my treatment, I expect:" wrappingWidth="355.651798248291">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Separator layoutX="143.0" layoutY="237.0" orientation="VERTICAL" prefHeight="324.0" prefWidth="6.0" />
+        <Separator layoutX="146.0" layoutY="236.0" prefHeight="0.0" prefWidth="578.0" />
+        <Separator layoutX="145.0" layoutY="305.0" prefHeight="3.0" prefWidth="578.0" />
+        <Separator layoutX="371.0" layoutY="237.0" orientation="VERTICAL" prefHeight="324.0" prefWidth="6.0" />
+        <Text layoutX="148.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To have pain relief" />
+        <Separator layoutX="443.0" layoutY="237.0" orientation="VERTICAL" prefHeight="324.0" prefWidth="6.0" />
+        <Separator layoutX="722.0" layoutY="237.0" orientation="VERTICAL" prefHeight="324.0" prefWidth="6.0" />
+        <Separator layoutX="145.0" layoutY="331.0" prefHeight="0.0" prefWidth="578.0" />
+        <Separator layoutX="145.0" layoutY="357.0" prefHeight="0.0" prefWidth="578.0" />
+        <Text layoutX="148.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To look better" />
+        <Separator layoutX="145.0" layoutY="383.0" prefHeight="0.0" prefWidth="578.0" />
+        <Text layoutX="148.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To feel better about myself" />
+        <Separator layoutX="145.0" layoutY="409.0" prefHeight="0.0" prefWidth="578.0" />
+        <Text layoutX="148.0" layoutY="399.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To sleep more comfortably" />
+        <Separator layoutX="145.0" layoutY="435.0" prefHeight="0.0" prefWidth="578.0" />
+        <Text layoutX="148.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To be able to do activities at home" />
+        <Separator layoutX="145.0" layoutY="461.0" prefHeight="0.0" prefWidth="578.0" />
+        <Text layoutX="148.0" layoutY="453.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To be able to do more at school" />
+        <Separator layoutX="145.0" layoutY="499.0" prefHeight="0.0" prefWidth="578.0" />
+        <Text layoutX="146.0" layoutY="477.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To be able to do more play or recreational activities" wrappingWidth="256.67578125" />
+        <Separator layoutX="145.0" layoutY="526.0" prefHeight="0.0" prefWidth="578.0" />
+        <Text layoutX="148.0" layoutY="518.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To be able to do more sports" />
+        <Text layoutX="393.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Easy" />
+        <RadioButton layoutX="397.0" layoutY="309.0" mnemonicParsing="false" />
+        <Separator layoutX="510.0" layoutY="235.0" orientation="VERTICAL" prefHeight="324.0" prefWidth="6.0" />
+        <Text layoutX="447.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A little hard" wrappingWidth="67.1761474609375" />
+        <Separator layoutX="577.0" layoutY="237.0" orientation="VERTICAL" prefHeight="324.0" prefWidth="0.0" />
+        <Text layoutX="522.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Very hard" wrappingWidth="60.776123046875" />
+        <Separator layoutX="644.0" layoutY="237.0" orientation="VERTICAL" prefHeight="324.0" prefWidth="6.0" />
+        <Text layoutX="583.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Can't do it at all" wrappingWidth="60.776123046875" />
+        <Text layoutX="647.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Too young for this activity" wrappingWidth="78.78363037109375" />
+        <RadioButton layoutX="397.0" layoutY="335.0" mnemonicParsing="false" />
+        <RadioButton layoutX="397.0" layoutY="363.0" mnemonicParsing="false" />
+        <RadioButton layoutX="397.0" layoutY="387.0" mnemonicParsing="false" />
+        <RadioButton layoutX="397.0" layoutY="413.0" mnemonicParsing="false" />
+        <RadioButton layoutX="397.0" layoutY="439.0" mnemonicParsing="false" />
+        <RadioButton layoutX="397.0" layoutY="472.0" mnemonicParsing="false" />
+        <RadioButton layoutX="397.0" layoutY="505.0" mnemonicParsing="false" />
+        <RadioButton layoutX="469.0" layoutY="309.0" mnemonicParsing="false" />
+        <RadioButton layoutX="469.0" layoutY="335.0" mnemonicParsing="false" />
+        <RadioButton layoutX="469.0" layoutY="362.0" mnemonicParsing="false" />
+        <RadioButton layoutX="469.0" layoutY="387.0" mnemonicParsing="false" />
+        <RadioButton layoutX="469.0" layoutY="413.0" mnemonicParsing="false" />
+        <RadioButton layoutX="469.0" layoutY="439.0" mnemonicParsing="false" />
+        <RadioButton layoutX="469.0" layoutY="472.0" mnemonicParsing="false" />
+        <RadioButton layoutX="469.0" layoutY="505.0" mnemonicParsing="false" />
+        <RadioButton layoutX="535.0" layoutY="309.0" mnemonicParsing="false" />
+        <RadioButton layoutX="535.0" layoutY="335.0" mnemonicParsing="false" />
+        <RadioButton layoutX="535.0" layoutY="362.0" mnemonicParsing="false" />
+        <RadioButton layoutX="535.0" layoutY="387.0" mnemonicParsing="false" />
+        <RadioButton layoutX="535.0" layoutY="413.0" mnemonicParsing="false" />
+        <RadioButton layoutX="535.0" layoutY="439.0" mnemonicParsing="false" />
+        <RadioButton layoutX="535.0" layoutY="472.0" mnemonicParsing="false" />
+        <RadioButton layoutX="535.0" layoutY="505.0" mnemonicParsing="false" />
+        <RadioButton layoutX="605.0" layoutY="309.0" mnemonicParsing="false" />
+        <RadioButton layoutX="605.0" layoutY="334.0" mnemonicParsing="false" />
+        <RadioButton layoutX="605.0" layoutY="363.0" mnemonicParsing="false" />
+        <RadioButton layoutX="605.0" layoutY="387.0" mnemonicParsing="false" />
+        <RadioButton layoutX="605.0" layoutY="413.0" mnemonicParsing="false" />
+        <RadioButton layoutX="605.0" layoutY="439.0" mnemonicParsing="false" />
+        <RadioButton layoutX="605.0" layoutY="472.0" mnemonicParsing="false" />
+        <RadioButton layoutX="605.0" layoutY="505.0" mnemonicParsing="false" />
+        <RadioButton layoutX="677.0" layoutY="309.0" mnemonicParsing="false" />
+        <RadioButton layoutX="678.0" layoutY="335.0" mnemonicParsing="false" />
+        <RadioButton layoutX="678.0" layoutY="362.0" mnemonicParsing="false" />
+        <RadioButton layoutX="677.0" layoutY="387.0" mnemonicParsing="false" />
+        <RadioButton layoutX="678.0" layoutY="413.0" mnemonicParsing="false" />
+        <RadioButton layoutX="677.0" layoutY="439.0" mnemonicParsing="false" />
+        <RadioButton layoutX="677.0" layoutY="472.0" mnemonicParsing="false" />
+        <RadioButton layoutX="678.0" layoutY="505.0" mnemonicParsing="false" />
+        <Text layoutX="148.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To be free from pain or disability as an adult" wrappingWidth="221.24542236328125" />
+        <Separator layoutX="144.0" layoutY="560.0" prefHeight="0.0" prefWidth="578.0" />
+        <RadioButton layoutX="395.0" layoutY="534.0" mnemonicParsing="false" />
+        <RadioButton layoutX="469.0" layoutY="534.0" mnemonicParsing="false" />
+        <RadioButton layoutX="535.0" layoutY="534.0" mnemonicParsing="false" />
+        <RadioButton layoutX="605.0" layoutY="534.0" mnemonicParsing="false" />
+        <RadioButton layoutX="677.0" layoutY="534.0" mnemonicParsing="false" />
+    </children>
+</AnchorPane>

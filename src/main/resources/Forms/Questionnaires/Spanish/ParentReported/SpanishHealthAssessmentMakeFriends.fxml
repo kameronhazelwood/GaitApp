@@ -9,25 +9,25 @@
 
 <AnchorPane prefHeight="557.0" prefWidth="967.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.Spanish.ParentReported.SpanishHealthAssessmentMakeFriends">
     <children>
-        <Text layoutX="174.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pediatric Health Assessment (Parent Reported)" textAlignment="CENTER">
+        <Text layoutX="174.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Evaluación de Salud Pediátrica (informado por los padres)" textAlignment="CENTER">
             <font>
                 <Font size="24.0" />
             </font>
         </Text>
         <Separator layoutX="29.0" layoutY="48.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
-        <Text layoutX="174.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Is it easy or hard for child to make friends with children his/her own age?" wrappingWidth="852.3184852600098">
+        <Text layoutX="174.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Es fácil o difícil para Rowan hacer amistad con niños de su misma edad?" wrappingWidth="852.3184852600098">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
         <Separator layoutX="27.0" layoutY="516.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
-        <Button fx:id="start" layoutX="366.0" layoutY="433.0" mnemonicParsing="false" onAction="#onStart" prefHeight="48.0" prefWidth="206.0" text="NEXT QUESTION" />
-        <Text layoutX="422.0" layoutY="504.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question 23 of 27">
+        <Button fx:id="start" layoutX="366.0" layoutY="433.0" mnemonicParsing="false" onAction="#onStart" prefHeight="48.0" prefWidth="206.0" text="Siguiente Pregunta" />
+        <Text layoutX="422.0" layoutY="504.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pregunta 23 of 27">
             <font>
                 <Font size="13.0" />
             </font>
         </Text>
-        <CheckBox layoutX="124.0" layoutY="217.0" mnemonicParsing="false" text="Usually easy">
+        <CheckBox layoutX="124.0" layoutY="217.0" mnemonicParsing="false" text="Normalmente fácil">
             <font>
                 <Font size="14.0" />
             </font>
@@ -35,13 +35,13 @@
         <Separator layoutX="120.0" layoutY="204.0" prefHeight="3.0" prefWidth="661.0" />
         <Separator layoutX="283.0" layoutY="204.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
         <Separator layoutX="118.0" layoutY="204.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="289.0" layoutY="217.0" mnemonicParsing="false" text="Sometimes">
+        <CheckBox layoutX="289.0" layoutY="217.0" mnemonicParsing="false" text="Algunas veces fácil">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
         <Separator layoutX="448.0" layoutY="204.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="455.0" layoutY="217.0" mnemonicParsing="false" text="Sometimes hard">
+        <CheckBox layoutX="455.0" layoutY="217.0" mnemonicParsing="false" text=" Algunas veces difícil">
             <font>
                 <Font size="14.0" />
             </font>
@@ -49,7 +49,7 @@
         <Separator layoutX="613.0" layoutY="204.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
         <Separator layoutX="119.0" layoutY="256.0" prefHeight="3.0" prefWidth="661.0" />
         <Separator layoutX="778.0" layoutY="204.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="620.0" layoutY="217.0" mnemonicParsing="false" text="Usually hard">
+        <CheckBox layoutX="620.0" layoutY="217.0" mnemonicParsing="false" text="Normalmente difícil">
             <font>
                 <Font size="14.0" />
             </font>

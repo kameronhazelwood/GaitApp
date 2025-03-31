@@ -9,59 +9,59 @@
 
 <AnchorPane prefHeight="557.0" prefWidth="967.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.Spanish.ParentReported.SpanishHealthAssessmentPain">
     <children>
-        <Text layoutX="174.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pediatric Health Assessment (Parent Reported)" textAlignment="CENTER">
+        <Text layoutX="174.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Evaluación de Salud Pediátrica (informado por los padres)" textAlignment="CENTER">
             <font>
                 <Font size="24.0" />
             </font>
         </Text>
         <Separator layoutX="29.0" layoutY="48.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
-        <Text layoutX="174.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How much pain have child had during the last week?" wrappingWidth="852.3184852600098">
+        <Text layoutX="212.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Cuánto dolor ha tenido Rowan durante la semana pasada?" wrappingWidth="495.518497467041">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
         <Separator layoutX="27.0" layoutY="516.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
-        <Button fx:id="start" layoutX="366.0" layoutY="433.0" mnemonicParsing="false" onAction="#onStart" prefHeight="48.0" prefWidth="206.0" text="NEXT QUESTION" />
-        <Text layoutX="422.0" layoutY="504.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question 23 of 27">
+        <Button fx:id="start" layoutX="366.0" layoutY="433.0" mnemonicParsing="false" onAction="#onStart" prefHeight="48.0" prefWidth="206.0" text="Siguiente Pregunta" />
+        <Text layoutX="422.0" layoutY="504.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pregunta 23 of 27">
             <font>
                 <Font size="13.0" />
             </font>
         </Text>
-        <CheckBox layoutX="52.0" layoutY="174.0" mnemonicParsing="false" text="None">
+        <CheckBox layoutX="70.0" layoutY="230.0" mnemonicParsing="false" text="Ninguno">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-        <Separator layoutX="48.0" layoutY="161.0" prefHeight="0.0" prefWidth="828.0" />
-        <Separator layoutX="184.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <Separator layoutX="46.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="190.0" layoutY="174.0" mnemonicParsing="false" text="Very mild">
+        <Separator layoutX="66.0" layoutY="217.0" prefHeight="0.0" prefWidth="828.0" />
+        <Separator layoutX="202.0" layoutY="217.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <Separator layoutX="64.0" layoutY="217.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox layoutX="208.0" layoutY="230.0" mnemonicParsing="false" text="Muy leve">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-        <Separator layoutX="322.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="328.0" layoutY="176.0" mnemonicParsing="false" text="Mild">
+        <Separator layoutX="340.0" layoutY="217.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox layoutX="366.0" layoutY="232.0" mnemonicParsing="false" text="Leve">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-        <Separator layoutX="460.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <Separator layoutX="47.0" layoutY="213.0" prefHeight="3.0" prefWidth="830.0" />
-        <Separator layoutX="598.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="473.0" layoutY="176.0" mnemonicParsing="false" text="Moderate">
+        <Separator layoutX="478.0" layoutY="217.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <Separator layoutX="65.0" layoutY="269.0" prefHeight="3.0" prefWidth="830.0" />
+        <Separator layoutX="616.0" layoutY="217.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox layoutX="491.0" layoutY="232.0" mnemonicParsing="false" text="Moderado">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-        <Separator layoutX="736.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="604.0" layoutY="178.0" mnemonicParsing="false" text="Severe">
+        <Separator layoutX="754.0" layoutY="217.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox layoutX="622.0" layoutY="234.0" mnemonicParsing="false" text="Fuerte">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-      <Separator layoutX="874.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-      <CheckBox layoutX="742.0" layoutY="178.0" mnemonicParsing="false" text=" Very severe">
+      <Separator layoutX="892.0" layoutY="217.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+      <CheckBox layoutX="760.0" layoutY="234.0" mnemonicParsing="false" text="Muy fuerte">
          <font>
             <Font size="14.0" />
          </font>

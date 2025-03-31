@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.Spanish.Sports.SpanishSportsDaysCompetitive"
+            prefHeight="555.0" prefWidth="896.0">
+    <children>
+        <Separator layoutX="29.0" layoutY="32.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
+        <Separator layoutX="27.0" layoutY="524.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
+        <Text layoutX="61.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do you currently have physical therapy?" wrappingWidth="542.9851417541504">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Button fx:id="start" layoutX="482.0" layoutY="438.0" mnemonicParsing="false" onAction="#onStart" prefHeight="3.0" prefWidth="223.0" text="NEXT QUESTION" />
+        <Button layoutX="212.0" layoutY="438.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="223.0" text="PREVIOUS QUESTION" />
+        <Text layoutX="416.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question 5 of 9">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Text>
+        <RadioButton layoutX="77.0" layoutY="90.0" mnemonicParsing="false" text="none">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </RadioButton>
+        <RadioButton layoutX="77.0" layoutY="124.0" mnemonicParsing="false" text="1">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </RadioButton>
+        <RadioButton layoutX="77.0" layoutY="158.0" mnemonicParsing="false" text="2">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </RadioButton>
+        <RadioButton layoutX="77.0" layoutY="192.0" mnemonicParsing="false" text="3">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </RadioButton>
+        <RadioButton layoutX="77.0" layoutY="226.0" mnemonicParsing="false" text="4">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </RadioButton>
+        <RadioButton layoutX="77.0" layoutY="260.0" mnemonicParsing="false" text="5">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </RadioButton>
+        <RadioButton layoutX="77.0" layoutY="294.0" mnemonicParsing="false" text="6">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </RadioButton>
+        <RadioButton layoutX="77.0" layoutY="328.0" mnemonicParsing="false" text="7">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </RadioButton>
+    </children>
+
+</AnchorPane>
