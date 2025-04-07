@@ -29,6 +29,9 @@ public class IHealthHistoryModel {
     private String condition;
     @Column(name = "patientId")
     private Integer patientId;
+    @Setter
+    @Column(name = "seizure")
+    private String seizure;
 
 
     @ManyToMany

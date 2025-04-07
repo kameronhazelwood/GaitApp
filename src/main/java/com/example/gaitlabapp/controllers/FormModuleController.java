@@ -44,6 +44,7 @@ public class FormModuleController implements Initializable {
     public CheckBox hip;
     public ComboBox<String> language;
     public ListView formsPatientList;
+    public DatePicker formsDate;
     @Autowired
     ConfigurableApplicationContext applicationContext;
     public CheckBox chooseFormsCheckBox;
@@ -61,7 +62,10 @@ public class FormModuleController implements Initializable {
     private AnchorPane scenePane;
 
     public void onClear(ActionEvent event) {
+
         patientList.getItems().clear();
+        aptDate.getEditor().clear();
+
     }
 
 

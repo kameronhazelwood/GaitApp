@@ -4,7 +4,9 @@ import com.example.gaitlabapp.Launcher;
 import com.example.gaitlabapp.controllers.Forms.Compendium.GenerateCompendiumSide;
 import com.example.gaitlabapp.controllers.Forms.Compendium.test.GenerateCompendium3;
 import com.example.gaitlabapp.controllers.Visits.TestNoteController;
+import com.example.gaitlabapp.controllers.Wizards.AddHealthConditionController;
 import com.example.gaitlabapp.controllers.Wizards.AddOrthosisWizard;
+import com.example.gaitlabapp.controllers.Wizards.AddSurgeryController;
 import com.example.gaitlabapp.model.forms.IGenMarkInfoModel;
 import com.example.gaitlabapp.model.forms.IOrthosisModel;
 import com.example.gaitlabapp.model.patients.IPatientModel;
@@ -26,6 +28,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -49,6 +52,14 @@ import java.util.ResourceBundle;
 public class GaitTestVisitController implements Initializable {
         public TextField mrnTextField;
         public Button onViewCompendiumSideNav;
+        public Text personReporting;
+        public Text relationshipToPatientQues;
+        public Text dateReported;
+        public Text premature;
+        public Text firstWalk;
+        public Text firstTalked;
+        public Text childLearn;
+        public Button editBaseline;
         @Autowired
         PatientService patientService;
         public TableView<String> reportsTable;
@@ -2663,8 +2674,9 @@ public class GaitTestVisitController implements Initializable {
 
 
 
-        public void setAppointmentModel(IAppointmentModel appointmentModel) {
+        public void setAppointmentModel(IAppointmentModel appointmentModel, IPatientModel patientModel) {
             this.appointmentModel = appointmentModel;
+            this.patientModel = patientModel;
 
             aptDate.setText(appointmentModel.getAptDate());
             aptVisitType.setText(appointmentModel.getVisitType());
@@ -2676,6 +2688,7 @@ public class GaitTestVisitController implements Initializable {
             visitBio.setText(appointmentModel.getVisitBioMech());
             aptStartTime.setText("1:00pm");
             aptStopTime.setText("3:00pm");
+            mrnTextField.setText(patientModel.getMrn());
 
         }
 
@@ -2683,7 +2696,9 @@ public class GaitTestVisitController implements Initializable {
 
         public void setPatient(IPatientModel patientModel){
             this.patientModel = patientModel;
-            mrnTextField.setText("32581055");
+          //  mrnTextField.setText(patientModel.getMrn());
+            //mrnTextField.setText("32581055");
+
 
         }
 
@@ -2995,6 +3010,9 @@ public class GaitTestVisitController implements Initializable {
             appointmentModel.setAptDate(date.getText());
             appointmentModel.setVisitType(aptVisitType.getText());
             appointmentModel.setVisitSubType(aptSubType.getText());
+//
+
+
 
             saved = true;
             getMyStage().close();
@@ -3086,7 +3104,37 @@ public class GaitTestVisitController implements Initializable {
 
         }
 
+        public void onEditBaseline(ActionEvent event) {
+        }
 
+        public void onAddSeizureMeds(ActionEvent event) throws IOException {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Wizards/AddSeizureMeds.fxml"));
+                // fxmlLoader.setControllerFactory(applicationContext::getBean);
+                Parent popUp = fxmlLoader.load();
+
+                Stage stage1 = new Stage((StageStyle.UTILITY));
+                stage1.initModality(Modality.WINDOW_MODAL);
+                stage1.setTitle("Add Seizure Meds:   ");
+                // stage1.setFullScreen(true);
+                stage1.setScene(new Scene(popUp, 550, 400));
+                stage1.showAndWait();
+        }
+
+        public void onQuestionnaireToEdit(ActionEvent event) throws IOException {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/History/DevicesAndBraces.fxml"));
+                // fxmlLoader.setControllerFactory(applicationContext::getBean);
+                Parent popUp = fxmlLoader.load();
+
+                Stage stage1 = new Stage((StageStyle.UTILITY));
+                stage1.initModality(Modality.WINDOW_MODAL);
+                stage1.setTitle("Questionnaire   ");
+                // stage1.setFullScreen(true);
+                stage1.setScene(new Scene(popUp, 950, 680));
+                stage1.showAndWait();
+
+        }
 }
 
 

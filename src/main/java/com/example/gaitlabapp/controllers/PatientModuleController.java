@@ -471,7 +471,7 @@ public class PatientModuleController implements Initializable {
                     Parent popUp = fxmlLoader.load();
                     GaitTestVisitController gaitTestVisitController = fxmlLoader.getController();
 
-                    gaitTestVisitController.setAppointmentModel(appointmentModel);
+                    gaitTestVisitController.setAppointmentModel(appointmentModel, patientModel);
                     gaitTestVisitController.setPatient(patientModel);
                     Stage stage1 = new Stage((StageStyle.UTILITY));
                     stage1.initModality(Modality.WINDOW_MODAL);
