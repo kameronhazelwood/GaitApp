@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.RadioButton;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -15,6 +16,11 @@ import java.io.IOException;
 public class ChangesInWalking {
     public Button previousButton;
     public Button nextButton;
+    public RadioButton muchWorse;
+    public RadioButton littleWorse;
+    public RadioButton littleBetter;
+    public RadioButton muchBetter;
+    public RadioButton noChange;
 
     private Stage getMyStageNext() { return (Stage) nextButton.getScene().getWindow(); }
 
@@ -34,5 +40,50 @@ public class ChangesInWalking {
         stage1.setScene(new Scene(popUp, 950, 680));
         stage1.showAndWait();
         getMyStageNext().close();
+    }
+
+    public void onnoChange(ActionEvent event) {
+        if(noChange.isSelected()){
+            muchBetter.setSelected(false);
+            littleBetter.setSelected(false);
+            littleWorse.setSelected(false);
+            muchWorse.setSelected(false);
+        }
+    }
+
+    public void onmuchBetter(ActionEvent event) {
+        if(muchBetter.isSelected()){
+            noChange.setSelected(false);
+            littleBetter.setSelected(false);
+            littleWorse.setSelected(false);
+            muchWorse.setSelected(false);
+        }
+    }
+
+    public void onlittleBetter(ActionEvent event) {
+        if(littleBetter.isSelected()){
+            noChange.setSelected(false);
+            muchBetter.setSelected(false);
+            littleWorse.setSelected(false);
+            muchWorse.setSelected(false);
+        }
+    }
+
+    public void onlittleWorse(ActionEvent event) {
+        if(littleWorse.isSelected()){
+            noChange.setSelected(false);
+            muchBetter.setSelected(false);
+            littleBetter.setSelected(false);
+            muchWorse.setSelected(false);
+        }
+    }
+
+    public void onmuchWorse(ActionEvent event) {
+        if(muchWorse.isSelected()){
+            noChange.setSelected(false);
+            muchBetter.setSelected(false);
+            littleBetter.setSelected(false);
+            littleWorse.setSelected(false);
+        }
     }
 }

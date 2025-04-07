@@ -28,6 +28,7 @@ public class AboutYou implements Initializable {
         relationshipToPatient.getItems().addAll(
                 "Birth Mother",
                 "Birth Father",
+                "Birth Parent",
                 "Adoptive Father",
                 "Adoptive Mother",
                 "Caretaker",

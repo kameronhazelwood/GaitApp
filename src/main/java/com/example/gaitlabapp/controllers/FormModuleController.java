@@ -66,8 +66,10 @@ public class FormModuleController implements Initializable {
 
 
     public enum Form {HISTORY, CHILD_PODSI, ADULT_PODSI, SPORTS, HIP}
+    public enum languageType {ENGLISH, SPANISH}
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        language.setValue("English");
         language.getItems().addAll(
                 "English ",
                 "Spanish"
@@ -91,60 +93,7 @@ public class FormModuleController implements Initializable {
     }
 
     public void onStart(ActionEvent event) throws IOException {
-        if(history.isSelected()){
-            FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/History/MainPage.fxml"));
-            // fxmlLoader.setControllerFactory(applicationContext::getBean);
-            Parent popUp = fxmlLoader.load();
-
-            Stage stage1 = new Stage((StageStyle.UTILITY));
-            stage1.initModality(Modality.WINDOW_MODAL);
-            stage1.setTitle("Questionnaire   ");
-           // stage1.setFullScreen(true);
-            stage1.setScene(new Scene(popUp, 950, 680));
-            stage1.showAndWait();
-        }
-        if(childPODSI.isSelected()){
-            FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/PODSI_Child/ParentReported/MainPage.fxml"));
-            // fxmlLoader.setControllerFactory(applicationContext::getBean);
-            Parent popUp = fxmlLoader.load();
-
-            Stage stage1 = new Stage((StageStyle.UTILITY));
-            stage1.initModality(Modality.WINDOW_MODAL);
-            stage1.setTitle("Questionnaire   ");
-            // stage1.setFullScreen(true);
-            stage1.setScene(new Scene(popUp, 950, 680));
-            stage1.showAndWait();
-
-        }
-        if(adolescentPODSI.isSelected()) {
-            FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/PODSI_Child/SelfReported/MainPage.fxml"));
-            // fxmlLoader.setControllerFactory(applicationContext::getBean);
-            Parent popUp = fxmlLoader.load();
-
-
-            Stage stage1 = new Stage((StageStyle.UTILITY));
-            stage1.initModality(Modality.WINDOW_MODAL);
-            stage1.setTitle("Questionnaire   ");
-            stage1.setFullScreen(true);
-            stage1.setScene(new Scene(popUp, 950, 680));
-            stage1.showAndWait();
-        }
-        if(sports.isSelected()){
-            FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/Sports/MainPage.fxml"));
-            // fxmlLoader.setControllerFactory(applicationContext::getBean);
-            Parent popUp = fxmlLoader.load();
-
-            Stage stage1 = new Stage((StageStyle.UTILITY));
-            stage1.initModality(Modality.WINDOW_MODAL);
-            stage1.setTitle("Questionnaire   ");
-            // stage1.setFullScreen(true);
-            stage1.setScene(new Scene(popUp, 950, 680));
-            stage1.showAndWait();
-        }
+    if(language.getSelectionModel().getSelectedItem().equals("English")){
         if(hip.isSelected()){
             FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/Hip/MainPage.fxml"));
@@ -158,6 +107,195 @@ public class FormModuleController implements Initializable {
             stage1.setScene(new Scene(popUp, 950, 680));
             stage1.showAndWait();
         }
+        else if(history.isSelected()){
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/History/MainPage.fxml"));
+            // fxmlLoader.setControllerFactory(applicationContext::getBean);
+            Parent popUp = fxmlLoader.load();
+
+            Stage stage1 = new Stage((StageStyle.UTILITY));
+            stage1.initModality(Modality.WINDOW_MODAL);
+            stage1.setTitle("Questionnaire   ");
+            // stage1.setFullScreen(true);
+            stage1.setScene(new Scene(popUp, 950, 680));
+            stage1.showAndWait();
+        }
+        else if(childPODSI.isSelected()){
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/PODSI_Child/ParentReported/MainPage.fxml"));
+            // fxmlLoader.setControllerFactory(applicationContext::getBean);
+            Parent popUp = fxmlLoader.load();
+
+            Stage stage1 = new Stage((StageStyle.UTILITY));
+            stage1.initModality(Modality.WINDOW_MODAL);
+            stage1.setTitle("Questionnaire   ");
+            // stage1.setFullScreen(true);
+            stage1.setScene(new Scene(popUp, 950, 680));
+            stage1.showAndWait();
+        }
+        else if(adolescentPODSI.isSelected()) {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/PODSI_Child/SelfReported/MainPage.fxml"));
+            // fxmlLoader.setControllerFactory(applicationContext::getBean);
+            Parent popUp = fxmlLoader.load();
+
+
+            Stage stage1 = new Stage((StageStyle.UTILITY));
+            stage1.initModality(Modality.WINDOW_MODAL);
+            stage1.setTitle("Questionnaire   ");
+            stage1.setFullScreen(true);
+            stage1.setScene(new Scene(popUp, 950, 680));
+            stage1.showAndWait();
+        }
+        else if(sports.isSelected()){
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/Sports/MainPage.fxml"));
+            // fxmlLoader.setControllerFactory(applicationContext::getBean);
+            Parent popUp = fxmlLoader.load();
+
+            Stage stage1 = new Stage((StageStyle.UTILITY));
+            stage1.initModality(Modality.WINDOW_MODAL);
+            stage1.setTitle("Questionnaire   ");
+            // stage1.setFullScreen(true);
+            stage1.setScene(new Scene(popUp, 950, 680));
+            stage1.showAndWait();
+        }
+    } else if(language.getSelectionModel().getSelectedItem().equals("Spanish")){
+                if(history.isSelected()){
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/Spanish/History/MainPage.fxml"));
+            // fxmlLoader.setControllerFactory(applicationContext::getBean);
+            Parent popUp = fxmlLoader.load();
+
+            Stage stage1 = new Stage((StageStyle.UTILITY));
+            stage1.initModality(Modality.WINDOW_MODAL);
+            stage1.setTitle("Questionnaire   ");
+           // stage1.setFullScreen(true);
+            stage1.setScene(new Scene(popUp, 950, 680));
+            stage1.showAndWait();
+        }
+       else if(childPODSI.isSelected()){
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/Spanish/ParentReported/SpanishMainPage.fxml"));
+            // fxmlLoader.setControllerFactory(applicationContext::getBean);
+            Parent popUp = fxmlLoader.load();
+
+            Stage stage1 = new Stage((StageStyle.UTILITY));
+            stage1.initModality(Modality.WINDOW_MODAL);
+            stage1.setTitle("Questionnaire   ");
+            // stage1.setFullScreen(true);
+            stage1.setScene(new Scene(popUp, 950, 680));
+            stage1.showAndWait();
+
+        }
+        else if(adolescentPODSI.isSelected()) {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/Spanish/SelfReported/MainPage.fxml"));
+            // fxmlLoader.setControllerFactory(applicationContext::getBean);
+            Parent popUp = fxmlLoader.load();
+
+
+            Stage stage1 = new Stage((StageStyle.UTILITY));
+            stage1.initModality(Modality.WINDOW_MODAL);
+            stage1.setTitle("Questionnaire   ");
+            stage1.setFullScreen(true);
+            stage1.setScene(new Scene(popUp, 950, 680));
+            stage1.showAndWait();
+        }
+      else if(sports.isSelected()){
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/Spanish/Sports/SpanishMainPage.fxml"));
+            // fxmlLoader.setControllerFactory(applicationContext::getBean);
+            Parent popUp = fxmlLoader.load();
+
+            Stage stage1 = new Stage((StageStyle.UTILITY));
+            stage1.initModality(Modality.WINDOW_MODAL);
+            stage1.setTitle("Questionnaire   ");
+            // stage1.setFullScreen(true);
+            stage1.setScene(new Scene(popUp, 950, 680));
+            stage1.showAndWait();
+        }
+        else if(hip.isSelected()){
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/Spanish/Hip/MainPage.fxml"));
+            // fxmlLoader.setControllerFactory(applicationContext::getBean);
+            Parent popUp = fxmlLoader.load();
+
+            Stage stage1 = new Stage((StageStyle.UTILITY));
+            stage1.initModality(Modality.WINDOW_MODAL);
+            stage1.setTitle("Questionnaire   ");
+            // stage1.setFullScreen(true);
+            stage1.setScene(new Scene(popUp, 950, 680));
+            stage1.showAndWait();
+        }
+        }
+//        if(history.isSelected()){
+//            FXMLLoader fxmlLoader = new FXMLLoader();
+//            fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/History/MainPage.fxml"));
+//            // fxmlLoader.setControllerFactory(applicationContext::getBean);
+//            Parent popUp = fxmlLoader.load();
+//
+//            Stage stage1 = new Stage((StageStyle.UTILITY));
+//            stage1.initModality(Modality.WINDOW_MODAL);
+//            stage1.setTitle("Questionnaire   ");
+//           // stage1.setFullScreen(true);
+//            stage1.setScene(new Scene(popUp, 950, 680));
+//            stage1.showAndWait();
+//        }
+//        if(childPODSI.isSelected()){
+//            FXMLLoader fxmlLoader = new FXMLLoader();
+//            fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/PODSI_Child/ParentReported/MainPage.fxml"));
+//            // fxmlLoader.setControllerFactory(applicationContext::getBean);
+//            Parent popUp = fxmlLoader.load();
+//
+//            Stage stage1 = new Stage((StageStyle.UTILITY));
+//            stage1.initModality(Modality.WINDOW_MODAL);
+//            stage1.setTitle("Questionnaire   ");
+//            // stage1.setFullScreen(true);
+//            stage1.setScene(new Scene(popUp, 950, 680));
+//            stage1.showAndWait();
+//
+//        }
+//        if(adolescentPODSI.isSelected()) {
+//            FXMLLoader fxmlLoader = new FXMLLoader();
+//            fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/PODSI_Child/SelfReported/MainPage.fxml"));
+//            // fxmlLoader.setControllerFactory(applicationContext::getBean);
+//            Parent popUp = fxmlLoader.load();
+//
+//
+//            Stage stage1 = new Stage((StageStyle.UTILITY));
+//            stage1.initModality(Modality.WINDOW_MODAL);
+//            stage1.setTitle("Questionnaire   ");
+//            stage1.setFullScreen(true);
+//            stage1.setScene(new Scene(popUp, 950, 680));
+//            stage1.showAndWait();
+//        }
+//        if(sports.isSelected()){
+//            FXMLLoader fxmlLoader = new FXMLLoader();
+//            fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/Sports/MainPage.fxml"));
+//            // fxmlLoader.setControllerFactory(applicationContext::getBean);
+//            Parent popUp = fxmlLoader.load();
+//
+//            Stage stage1 = new Stage((StageStyle.UTILITY));
+//            stage1.initModality(Modality.WINDOW_MODAL);
+//            stage1.setTitle("Questionnaire   ");
+//            // stage1.setFullScreen(true);
+//            stage1.setScene(new Scene(popUp, 950, 680));
+//            stage1.showAndWait();
+//        }
+//        if(hip.isSelected()){
+//            FXMLLoader fxmlLoader = new FXMLLoader();
+//            fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Forms/Questionnaires/Hip/MainPage.fxml"));
+//            // fxmlLoader.setControllerFactory(applicationContext::getBean);
+//            Parent popUp = fxmlLoader.load();
+//
+//            Stage stage1 = new Stage((StageStyle.UTILITY));
+//            stage1.initModality(Modality.WINDOW_MODAL);
+//            stage1.setTitle("Questionnaire   ");
+//            // stage1.setFullScreen(true);
+//            stage1.setScene(new Scene(popUp, 950, 680));
+//            stage1.showAndWait();
+//        }
 
     }
 

@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.RadioButton;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -14,6 +15,11 @@ import java.io.IOException;
 
 public class HealthAssessmentCompared {
     public Button start;
+    public RadioButton muchBetter;
+    public RadioButton somewhatBetter;
+    public RadioButton same;
+    public RadioButton somewhatworse;
+    public RadioButton muchWorse;
 
 
     private Stage getMyStageStart() { return (Stage) start.getScene().getWindow(); }
@@ -30,5 +36,51 @@ public class HealthAssessmentCompared {
         stage1.setScene(new Scene(popUp, 950, 680));
         stage1.showAndWait();
         getMyStageStart().close();
+    }
+
+    public void onmuchBetter(ActionEvent event) {
+        if(muchBetter.isSelected()){
+            somewhatBetter.setSelected(false);
+            same.setSelected(false);
+            somewhatworse.setSelected(false);
+            muchWorse.setSelected(false);
+        }
+    }
+
+    public void onsomewhatBetter(ActionEvent event) {
+        if(somewhatBetter.isSelected()){
+            muchBetter.setSelected(false);
+            same.setSelected(false);
+            somewhatworse.setSelected(false);
+            muchWorse.setSelected(false);
+        }
+    }
+
+    public void onsame(ActionEvent event) {
+        if(same.isSelected()){
+            muchBetter.setSelected(false);
+            somewhatBetter.setSelected(false);
+            somewhatworse.setSelected(false);
+            muchWorse.setSelected(false);
+        }
+    }
+
+    public void onsomewhatworse(ActionEvent event) {
+        if(somewhatworse.isSelected()){
+            muchBetter.setSelected(false);
+            somewhatBetter.setSelected(false);
+            same.setSelected(false);
+            muchWorse.setSelected(false);
+        }
+    }
+
+    public void onmuchWorse(ActionEvent event) {
+        if(muchWorse.isSelected()){
+            muchBetter.setSelected(false);
+            somewhatBetter.setSelected(false);
+            same.setSelected(false);
+            somewhatworse.setSelected(false);
+        }
+
     }
 }

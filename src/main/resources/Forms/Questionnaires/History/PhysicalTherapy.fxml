@@ -58,15 +58,15 @@
          <Font size="18.0" />
       </font>
    </Text>
-   <ComboBox layoutX="260.0" layoutY="187.0" prefWidth="150.0" />
+   <ComboBox fx:id="phyHospital" layoutX="260.0" layoutY="187.0" prefWidth="150.0" />
    <Separator layoutX="181.0" layoutY="215.0" prefHeight="0.0" prefWidth="513.0" />
    <Separator layoutX="245.0" layoutY="183.0" orientation="VERTICAL" prefHeight="130.0" prefWidth="0.0" />
    <Separator layoutX="181.0" layoutY="247.0" prefHeight="0.0" prefWidth="513.0" />
-   <ComboBox layoutX="260.0" layoutY="218.0" prefWidth="150.0" />
+   <ComboBox fx:id="phyClinic" layoutX="260.0" layoutY="218.0" prefWidth="150.0" />
    <Separator layoutX="181.0" layoutY="279.0" prefHeight="0.0" prefWidth="513.0" />
-   <ComboBox layoutX="260.0" layoutY="251.0" prefWidth="150.0" />
+   <ComboBox fx:id="phySchool" layoutX="260.0" layoutY="251.0" prefWidth="150.0" />
    <Separator layoutX="181.0" layoutY="311.0" prefHeight="0.0" prefWidth="513.0" />
-   <ComboBox layoutX="260.0" layoutY="283.0" prefWidth="150.0" />
+   <ComboBox fx:id="phyHome" layoutX="260.0" layoutY="283.0" prefWidth="150.0" />
    <Separator layoutX="691.0" layoutY="156.0" orientation="VERTICAL" prefHeight="156.0" prefWidth="0.0" />
    <Text layoutX="439.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hospital">
       <font>
@@ -89,9 +89,9 @@
       </font>
    </Text>
    <Separator layoutX="493.0" layoutY="183.0" orientation="VERTICAL" prefHeight="130.0" prefWidth="0.0" />
-   <ComboBox layoutX="514.0" layoutY="187.0" prefWidth="150.0" />
-   <ComboBox layoutX="514.0" layoutY="219.0" prefWidth="150.0" />
-   <ComboBox layoutX="514.0" layoutY="251.0" prefWidth="150.0" />
-   <ComboBox layoutX="514.0" layoutY="283.0" prefWidth="150.0" />
+   <ComboBox fx:id="occHospital" layoutX="514.0" layoutY="187.0" prefWidth="150.0" />
+   <ComboBox fx:id="occClinic" layoutX="514.0" layoutY="219.0" prefWidth="150.0" />
+   <ComboBox fx:id="occSchool" layoutX="514.0" layoutY="251.0" prefWidth="150.0" />
+   <ComboBox fx:id="occHome" layoutX="514.0" layoutY="283.0" prefWidth="150.0" />
 
 </AnchorPane>

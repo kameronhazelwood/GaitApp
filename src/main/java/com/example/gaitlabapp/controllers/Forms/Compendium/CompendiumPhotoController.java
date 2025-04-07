@@ -77,8 +77,8 @@ public class CompendiumPhotoController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Image bodyPosterior = new Image(String.valueOf(getClass().getResource("/Rowan/photos/32581055_111122_body posterior.jpg")));
-        Image bodyAnterior = new Image(String.valueOf(getClass().getResource("/Rowan/photos/32581055_111122_body anterior.jpg")));
+        Image bodyPosterior = new Image(String.valueOf(getClass().getResource("/Rowan/3/7/2025/PXL_20250324_190257684.jpg")));
+        Image bodyAnterior = new Image(String.valueOf(getClass().getResource("/Rowan/3/7/2025/PXL_20250324_190256646.jpg")));
         Image feetPosterior = new Image(String.valueOf(getClass().getResource("/Rowan/photos/32581055_111122_feet both posterior.jpg")));
         Image feetPosterior2 = new Image(String.valueOf(getClass().getResource("/Rowan/photos/32581055_111122_foot left posterior.jpg")));
         Image bodyAnterior2 = new Image(String.valueOf(getClass().getResource("/Rowan/photos/32581055_111122_foot_right_posterior.jpg")));
@@ -90,7 +90,7 @@ public class CompendiumPhotoController implements Initializable {
         Image feetPosterior4 = new Image(String.valueOf(getClass().getResource("/Rowan/photos/32581055_111122_body right_2.jpg")));
         Image bodyAnterior4 = new Image(String.valueOf(getClass().getResource("/Rowan/photos/32581055_111122_body right.jpg")));
         Image bodyPosterior4 = new Image(String.valueOf(getClass().getResource("/Rowan/photos/32581055_111122_body left.jpg")));
-        Image name = new Image(String.valueOf(getClass().getResource("/Rowan/photos/32581055_111122_name.jpg")));
+        Image name = new Image(String.valueOf(getClass().getResource("/Rowan/3/7/2025/PXL_20250324_190256646.jpg")));
 
         //Image newbodyAnterior = new Image(String.valueOf(getClass().getResource("/Rowan/1/17/2025/32581055_011725_AnkleJointAngles.png")));
 
@@ -183,14 +183,14 @@ public class CompendiumPhotoController implements Initializable {
 
         anchorPane.getChildren().add(imageView1);
         anchorPane.getChildren().add(imageView2);
-        anchorPane.getChildren().add(imageView3);
-        anchorPane.getChildren().add(imageView4);
-        anchorPane.getChildren().add(imageView5);
-        anchorPane.getChildren().add(imageView6);
-        anchorPane.getChildren().add(imageView7);
-        anchorPane.getChildren().add(imageView8);
-        anchorPane.getChildren().add(imageView9);
-        anchorPane.getChildren().add(imageView10);
+//        anchorPane.getChildren().add(imageView3);
+//        anchorPane.getChildren().add(imageView4);
+//        anchorPane.getChildren().add(imageView5);
+//        anchorPane.getChildren().add(imageView6);
+//        anchorPane.getChildren().add(imageView7);
+//        anchorPane.getChildren().add(imageView8);
+//        anchorPane.getChildren().add(imageView9);
+//        anchorPane.getChildren().add(imageView10);
 //        anchorPane.getChildren().add(imageView11);
 //        anchorPane.getChildren().add(imageView12);
 

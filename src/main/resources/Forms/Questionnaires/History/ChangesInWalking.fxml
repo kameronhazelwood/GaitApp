@@ -19,27 +19,27 @@
             <Font size="18.0" />
         </font>
     </Text>
-    <RadioButton layoutX="390.0" layoutY="173.0" mnemonicParsing="false" text="No Change">
+    <RadioButton fx:id="noChange" layoutX="390.0" layoutY="173.0" mnemonicParsing="false" onAction="#onnoChange" text="No Change">
         <font>
             <Font size="18.0" />
         </font>
     </RadioButton>
-    <RadioButton layoutX="390.0" layoutY="201.0" mnemonicParsing="false" text="Walks Much Better">
+    <RadioButton fx:id="muchBetter" layoutX="390.0" layoutY="201.0" mnemonicParsing="false" onAction="#onmuchBetter" text="Walks Much Better">
         <font>
             <Font size="18.0" />
         </font>
     </RadioButton>
-    <RadioButton layoutX="390.0" layoutY="229.0" mnemonicParsing="false" text="Walks a Little Better">
+    <RadioButton fx:id="littleBetter" layoutX="390.0" layoutY="229.0" mnemonicParsing="false" onAction="#onlittleBetter" text="Walks a Little Better">
         <font>
             <Font size="18.0" />
         </font>
     </RadioButton>
-    <RadioButton layoutX="390.0" layoutY="257.0" mnemonicParsing="false" text="Walks a Little Worse">
+    <RadioButton fx:id="littleWorse" layoutX="390.0" layoutY="257.0" mnemonicParsing="false" onAction="#onlittleWorse" text="Walks a Little Worse">
         <font>
             <Font size="18.0" />
         </font>
     </RadioButton>
-    <RadioButton layoutX="390.0" layoutY="285.0" mnemonicParsing="false" text="Walks a Much Worse">
+    <RadioButton fx:id="muchWorse" layoutX="390.0" layoutY="285.0" mnemonicParsing="false" onAction="#onmuchWorse" text="Walks a Much Worse">
         <font>
             <Font size="18.0" />
         </font>

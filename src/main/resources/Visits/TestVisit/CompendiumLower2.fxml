@@ -23,21 +23,20 @@
         <Label layoutX="20.0" layoutY="68.0" text="MRN: " />
         <Label layoutX="20.0" layoutY="85.0" text="Date of Birth: " />
         <Label layoutX="20.0" layoutY="103.0" text="Age at Eval: " />
-        <Label fx:id="patientName" layoutX="112.0" layoutY="68.0" text="32581055" />
-        <Label fx:id="compDOB" layoutX="112.0" layoutY="85.0" text="3/14/14 " />
+        <Label fx:id="patientName" layoutX="112.0" layoutY="68.0" text="33069893" />
+        <Label fx:id="compDOB" layoutX="112.0" layoutY="85.0" text="10/02/2024" />
         <Label layoutX="112.0" layoutY="103.0" text="Text" />
         <Label layoutX="203.0" layoutY="68.0" text="Height (cm):" />
         <Label layoutX="203.0" layoutY="85.0" text="Weight (kg):" />
         <Label layoutX="203.0" layoutY="103.0" text="Gender: " />
-        <Label fx:id="compHeight" layoutX="285.0" layoutY="68.0" text="128.0  " />
-        <Label fx:id="compWeigh" layoutX="285.0" layoutY="85.0" text="21.0  " />
+        <Label fx:id="compHeight" layoutX="285.0" layoutY="68.0" text="27.0" />
+        <Label fx:id="compWeigh" layoutX="285.0" layoutY="85.0" text="8" />
         <Label fx:id="compGender" layoutX="285.0" layoutY="103.0" text="Female " />
         <Label layoutX="357.0" layoutY="68.0" text="Date of Eval: " />
         <Label layoutX="357.0" layoutY="85.0" text="Therapist: " />
         <Label layoutX="357.0" layoutY="103.0" text="Comparisons: " />
-        <Label layoutX="442.0" layoutY="68.0" text="11/11/22 " />
-        <Label layoutX="442.0" layoutY="85.0" text="Freeman Miller" />
-        <Label layoutX="442.0" layoutY="103.0" style="-fx-text-fill: #ff0000;" text="2022-11-11" />
+        <Label layoutX="442.0" layoutY="68.0" text="03/07/2025" />
+        <Label layoutX="442.0" layoutY="103.0" style="-fx-text-fill: #ff0000;" text="03/07/2025" />
         <Separator layoutX="-1.0" layoutY="35.0" prefHeight="0.0" prefWidth="653.0" />
         <Separator blendMode="DIFFERENCE" layoutY="151.0" prefHeight="0.0" prefWidth="653.0" />
         <Label layoutX="101.0" layoutY="162.0" text="Passive ROM">

@@ -24,17 +24,17 @@
             <Font size="18.0" />
         </font>
     </Text>
-   <RadioButton layoutX="266.0" layoutY="172.0" mnemonicParsing="false" text="Requires Support">
+   <RadioButton fx:id="requireSupport" layoutX="266.0" layoutY="172.0" mnemonicParsing="false" onAction="#onrequireSupport" text="Requires Support">
       <font>
          <Font size="16.0" />
       </font>
    </RadioButton>
-   <RadioButton layoutX="266.0" layoutY="216.0" mnemonicParsing="false" text="Walks without support and keeps up">
+   <RadioButton fx:id="withoutSupport" layoutX="266.0" layoutY="216.0" mnemonicParsing="false" onAction="#onwithoutSupport" text="Walks without support and keeps up">
       <font>
          <Font size="16.0" />
       </font>
    </RadioButton>
-   <RadioButton layoutX="269.0" layoutY="257.0" mnemonicParsing="false" text="Walks without support but tires easily">
+   <RadioButton fx:id="tiresEasily" layoutX="269.0" layoutY="257.0" mnemonicParsing="false" onAction="#ontiresEasily" text="Walks without support but tires easily">
       <font>
          <Font size="16.0" />
       </font>

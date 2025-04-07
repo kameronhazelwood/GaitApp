@@ -18,42 +18,42 @@
             <Font size="18.0" />
         </font>
     </Text>
-   <RadioButton layoutX="284.0" layoutY="121.0" mnemonicParsing="false" text="6. Independent on all surfaces">
+   <RadioButton fx:id="six" layoutX="284.0" layoutY="121.0" mnemonicParsing="false" onAction="#onSix" text="6. Independent on all surfaces">
       <font>
          <Font size="16.0" />
       </font>
    </RadioButton>
-   <RadioButton layoutX="284.0" layoutY="149.0" mnemonicParsing="false" text="5. Independent on level surfaces (Requires a rail for stairs)">
+   <RadioButton fx:id="five" layoutX="284.0" layoutY="149.0" mnemonicParsing="false" onAction="#onfive" text="5. Independent on level surfaces (Requires a rail for stairs)">
       <font>
          <Font size="16.0" />
       </font>
    </RadioButton>
-   <RadioButton layoutX="284.0" layoutY="177.0" mnemonicParsing="false" text="4. Uses cane(s) or stick(s) (one or two)">
+   <RadioButton fx:id="four" layoutX="284.0" layoutY="177.0" mnemonicParsing="false" onAction="#onFour" text="4. Uses cane(s) or stick(s) (one or two)">
       <font>
          <Font size="16.0" />
       </font>
    </RadioButton>
-   <RadioButton layoutX="284.0" layoutY="205.0" mnemonicParsing="false" text="3. Uses crutches">
+   <RadioButton fx:id="three" layoutX="284.0" layoutY="205.0" mnemonicParsing="false" onAction="#onThree" text="3. Uses crutches">
       <font>
          <Font size="16.0" />
       </font>
    </RadioButton>
-   <RadioButton layoutX="284.0" layoutY="233.0" mnemonicParsing="false" text="2. Uses a walker or frame">
+   <RadioButton fx:id="two" layoutX="284.0" layoutY="233.0" mnemonicParsing="false" onAction="#onTwo" text="2. Uses a walker or frame">
       <font>
          <Font size="16.0" />
       </font>
    </RadioButton>
-   <RadioButton layoutX="284.0" layoutY="261.0" mnemonicParsing="false" text="1. Uses a wheelchair">
+   <RadioButton fx:id="one" layoutX="284.0" layoutY="261.0" mnemonicParsing="false" onAction="#onOne" text="1. Uses a wheelchair">
       <font>
          <Font size="16.0" />
       </font>
    </RadioButton>
-   <RadioButton layoutX="284.0" layoutY="289.0" mnemonicParsing="false" text="C. Crawling">
+   <RadioButton fx:id="c" layoutX="284.0" layoutY="289.0" mnemonicParsing="false" onAction="#onC" text="C. Crawling">
       <font>
          <Font size="16.0" />
       </font>
    </RadioButton>
-   <RadioButton layoutX="284.0" layoutY="317.0" mnemonicParsing="false" text="N. does not apply">
+   <RadioButton fx:id="n" layoutX="284.0" layoutY="317.0" mnemonicParsing="false" onAction="#onN" text="N. does not apply">
       <font>
          <Font size="16.0" />
       </font>

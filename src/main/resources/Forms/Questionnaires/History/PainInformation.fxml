@@ -42,13 +42,13 @@
    <Separator layoutX="266.0" layoutY="177.0" prefHeight="0.0" prefWidth="375.0" />
    <Separator layoutX="266.0" layoutY="153.0" prefHeight="0.0" prefWidth="375.0" />
    <Separator layoutX="266.0" layoutY="201.0" prefHeight="0.0" prefWidth="375.0" />
-   <RadioButton layoutX="358.0" layoutY="157.0" mnemonicParsing="false" text="Upper" />
-   <RadioButton layoutX="435.0" layoutY="157.0" mnemonicParsing="false" text="Lower" />
-   <RadioButton layoutX="512.0" layoutY="157.0" mnemonicParsing="false" text="None" />
-   <RadioButton layoutX="358.0" layoutY="181.0" mnemonicParsing="false" text="Left" />
-   <RadioButton layoutX="435.0" layoutY="180.0" mnemonicParsing="false" text="Right" />
-   <RadioButton layoutX="512.0" layoutY="181.0" mnemonicParsing="false" text="Both" />
-   <RadioButton layoutX="577.0" layoutY="181.0" mnemonicParsing="false" text="None" />
+   <RadioButton fx:id="backUpper" layoutX="358.0" layoutY="157.0" mnemonicParsing="false" onAction="#onbackUpper" text="Upper" />
+   <RadioButton fx:id="backLower" layoutX="435.0" layoutY="157.0" mnemonicParsing="false" onAction="#onbackLower" text="Lower" />
+   <RadioButton fx:id="backNone" layoutX="512.0" layoutY="157.0" mnemonicParsing="false" onAction="#onbackNone" text="None" />
+   <RadioButton fx:id="calfLeft" layoutX="358.0" layoutY="181.0" mnemonicParsing="false" onAction="#oncalfLeft" text="Left" />
+   <RadioButton fx:id="calfRight" layoutX="435.0" layoutY="180.0" mnemonicParsing="false" onAction="#oncalfRight" text="Right" />
+   <RadioButton fx:id="calfBoth" layoutX="512.0" layoutY="181.0" mnemonicParsing="false" onAction="#oncalfBoth" text="Both" />
+   <RadioButton fx:id="calfNone" layoutX="577.0" layoutY="181.0" mnemonicParsing="false" onAction="#oncalfNone" text="None" />
    <Separator layoutX="333.0" layoutY="153.0" orientation="VERTICAL" prefHeight="168.0" prefWidth="0.0" />
    <Separator layoutX="264.0" layoutY="153.0" orientation="VERTICAL" prefHeight="168.0" />
    <Text layoutX="275.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fingers" wrappingWidth="53.600000000000136">
@@ -57,50 +57,50 @@
       </font>
    </Text>
    <Separator layoutX="266.0" layoutY="225.0" prefHeight="0.0" prefWidth="375.0" />
-   <RadioButton layoutX="358.0" layoutY="206.0" mnemonicParsing="false" text="Left" />
-   <RadioButton layoutX="435.0" layoutY="206.0" mnemonicParsing="false" text="Right" />
-   <RadioButton layoutX="512.0" layoutY="206.0" mnemonicParsing="false" text="Both" />
-   <RadioButton layoutX="577.0" layoutY="206.0" mnemonicParsing="false" text="None" />
+   <RadioButton fx:id="fingersLeft" layoutX="358.0" layoutY="206.0" mnemonicParsing="false" onAction="#onfingersLeft" text="Left" />
+   <RadioButton fx:id="fingersRight" layoutX="435.0" layoutY="206.0" mnemonicParsing="false" onAction="#onfingersRight" text="Right" />
+   <RadioButton fx:id="fingersBoth" layoutX="512.0" layoutY="206.0" mnemonicParsing="false" onAction="#onfingersBoth" text="Both" />
+   <RadioButton fx:id="fingersNone" layoutX="577.0" layoutY="206.0" mnemonicParsing="false" onAction="#onfingersNone" text="None" />
    <Text layoutX="285.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip" wrappingWidth="32.49219512939453">
       <font>
          <Font size="14.0" />
       </font>
    </Text>
    <Separator layoutX="266.0" layoutY="249.0" prefHeight="0.0" prefWidth="375.0" />
-   <RadioButton layoutX="358.0" layoutY="230.0" mnemonicParsing="false" text="Left" />
-   <RadioButton layoutX="435.0" layoutY="230.0" mnemonicParsing="false" text="Right" />
-   <RadioButton layoutX="512.0" layoutY="230.0" mnemonicParsing="false" text="Both" />
-   <RadioButton layoutX="577.0" layoutY="230.0" mnemonicParsing="false" text="None" />
+   <RadioButton fx:id="hipLeft" layoutX="358.0" layoutY="230.0" mnemonicParsing="false" onAction="#onhipLeft" text="Left" />
+   <RadioButton fx:id="hipRight" layoutX="435.0" layoutY="230.0" mnemonicParsing="false" onAction="#onhipRight" text="Right" />
+   <RadioButton fx:id="hipBoth" layoutX="512.0" layoutY="230.0" mnemonicParsing="false" onAction="#onhipBoth" text="Both" />
+   <RadioButton fx:id="hipNone" layoutX="577.0" layoutY="230.0" mnemonicParsing="false" onAction="#onhipNone" text="None" />
    <Separator layoutX="266.0" layoutY="273.0" prefHeight="0.0" prefWidth="375.0" />
    <Text layoutX="274.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder" wrappingWidth="66.39998168945317">
       <font>
          <Font size="14.0" />
       </font>
    </Text>
-   <RadioButton layoutX="358.0" layoutY="253.0" mnemonicParsing="false" text="Left" />
-   <RadioButton layoutX="435.0" layoutY="253.0" mnemonicParsing="false" text="Right" />
-   <RadioButton layoutX="512.0" layoutY="253.0" mnemonicParsing="false" text="Both" />
-   <RadioButton layoutX="577.0" layoutY="253.0" mnemonicParsing="false" text="None" />
+   <RadioButton fx:id="shouldersLeft" layoutX="358.0" layoutY="253.0" mnemonicParsing="false" onAction="#onshouldersLeft" text="Left" />
+   <RadioButton fx:id="shouldersRight" layoutX="435.0" layoutY="253.0" mnemonicParsing="false" onAction="#onshouldersRight" text="Right" />
+   <RadioButton fx:id="shoulderBoth" layoutX="512.0" layoutY="253.0" mnemonicParsing="false" onAction="#onshouldersBoth" text="Both" />
+   <RadioButton fx:id="shoulderNone" layoutX="577.0" layoutY="253.0" mnemonicParsing="false" onAction="#onshoulderNone" text="None" />
    <Separator layoutX="266.0" layoutY="297.0" prefHeight="0.0" prefWidth="375.0" />
    <Text layoutX="276.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thumb" wrappingWidth="66.39998168945317">
       <font>
          <Font size="14.0" />
       </font>
    </Text>
-   <RadioButton layoutX="358.0" layoutY="277.0" mnemonicParsing="false" text="Left" />
-   <RadioButton layoutX="435.0" layoutY="277.0" mnemonicParsing="false" text="Right" />
-   <RadioButton layoutX="512.0" layoutY="277.0" mnemonicParsing="false" text="Both" />
-   <RadioButton layoutX="577.0" layoutY="277.0" mnemonicParsing="false" text="None" />
+   <RadioButton fx:id="thumbLeft" layoutX="358.0" layoutY="277.0" mnemonicParsing="false" onAction="#onthumbLeft" text="Left" />
+   <RadioButton fx:id="thumbRight" layoutX="435.0" layoutY="277.0" mnemonicParsing="false" onAction="#onthumbRight" text="Right" />
+   <RadioButton fx:id="thumbBoth" layoutX="512.0" layoutY="277.0" mnemonicParsing="false" onAction="#onthumbBoth" text="Both" />
+   <RadioButton fx:id="thumbNone" layoutX="577.0" layoutY="277.0" mnemonicParsing="false" onAction="#onthumbNone" text="None" />
    <Separator layoutX="266.0" layoutY="321.0" prefHeight="0.0" prefWidth="375.0" />
    <Text layoutX="282.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrist" wrappingWidth="66.39998168945317">
       <font>
          <Font size="14.0" />
       </font>
    </Text>
-   <RadioButton layoutX="358.0" layoutY="301.0" mnemonicParsing="false" text="Left" />
-   <RadioButton layoutX="435.0" layoutY="301.0" mnemonicParsing="false" text="Right" />
-   <RadioButton layoutX="512.0" layoutY="301.0" mnemonicParsing="false" text="Both" />
-   <RadioButton layoutX="577.0" layoutY="301.0" mnemonicParsing="false" text="None" />
+   <RadioButton fx:id="wristLeft" layoutX="358.0" layoutY="301.0" mnemonicParsing="false" onAction="#onwristLeft" text="Left" />
+   <RadioButton fx:id="wristRight" layoutX="435.0" layoutY="301.0" mnemonicParsing="false" onAction="#onwristRight" text="Right" />
+   <RadioButton fx:id="wristBoth" layoutX="512.0" layoutY="301.0" mnemonicParsing="false" onAction="#onwristBoth" text="Both" />
+   <RadioButton fx:id="wristNone" layoutX="577.0" layoutY="301.0" mnemonicParsing="false" onAction="#onwristNone" text="None" />
    <Separator layoutX="639.0" layoutY="153.0" orientation="VERTICAL" prefHeight="168.0" />
 
 </AnchorPane>

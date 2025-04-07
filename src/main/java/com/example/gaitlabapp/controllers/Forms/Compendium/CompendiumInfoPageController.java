@@ -105,24 +105,24 @@ public class CompendiumInfoPageController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Image faceImage = new Image(String.valueOf(getClass().getResource("/Rowan/1/17/2025/32581055_011725_HeadShot.jpg")));
+        Image faceImage = new Image(String.valueOf(getClass().getResource("/Rowan/3/7/2025/PXL_20250401_173732442.TS_exported_30007_1743555081714.jpg")));
         ImageView imageView = new ImageView(faceImage);
-        imageView.setFitHeight(180);
-        imageView.setFitWidth(300);
+        imageView.setFitHeight(348);
+        imageView.setFitWidth(359);
         imageView.setX(176);
         imageView.setY(68);
         anchorPane.getChildren().add(imageView);
 
 
-        fName.setText("Madeline Daum");
-        dob.setText("1/1/2000");
-        mrn.setText("32581055");
+        fName.setText("Rowan Hazelwood");
+        dob.setText("10/02/2025");
+        mrn.setText("33069893     ");
         gender.setText("Female");
-        visitDiag.setText("Cerebral Palsy");
-        bioMech.setText("John Henley");
-        referringPhys.setText("Freeman Miller");
-        examiningTher.setText("Chris Church");
-        dateOfEval.setText("03/05/2025");
+//        visitDiag.setText("Cerebral Palsy");
+//        bioMech.setText("John Henley");
+//        referringPhys.setText("Freeman Miller");
+//        examiningTher.setText("Chris Church");
+        dateOfEval.setText("03/07/2025");
 
     }
 
