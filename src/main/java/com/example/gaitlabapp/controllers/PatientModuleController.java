@@ -272,8 +272,8 @@ public class PatientModuleController implements Initializable {
                 }
             });
             contextMenu.getItems().add(viewDetail);
-            contextMenu.getItems().add(compendium);
-            contextMenu.getItems().add(interpretation);
+//            contextMenu.getItems().add(compendium);
+//            contextMenu.getItems().add(interpretation);
             row.itemProperty().addListener((obs, oldAppointment, newAppointment) -> {
                 if (newAppointment == null) {
                     row.setContextMenu(null);
@@ -777,7 +777,6 @@ public class PatientModuleController implements Initializable {
 
     public void addDiagnosisCode() {
         int selectedIndex = diagnosisCodeTable.getSelectionModel().getSelectedIndex();
-        String selectedItem = String.valueOf(diagnosisCodeTable.getSelectionModel().getSelectedItems());
 
         try {
             IDiagnosisModel newDiagnosisCode = showDiagnosisDialog(

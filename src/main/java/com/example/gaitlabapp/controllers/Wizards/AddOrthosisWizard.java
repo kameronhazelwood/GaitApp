@@ -16,15 +16,14 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-@Component
-@RequiredArgsConstructor
+
 public class AddOrthosisWizard implements Initializable {
     public Button saveButton;
+    public Button cancel;
+    public ComboBox<String> sideDropDown;
     private IOrthosisModel orthosisModel;
     @FXML
     private ComboBox<String> orthosisDropdown;
-    @FXML
-    private TextField sideTextfield;
     @FXML
     private boolean saved;
     private Stage getMyStage(){
@@ -36,7 +35,7 @@ public class AddOrthosisWizard implements Initializable {
     }
 
     public void onSaveBotox(ActionEvent event) {
-        orthosisModel.setSide(sideTextfield.getText());
+        orthosisModel.setSide(sideDropDown.getValue());
         orthosisModel.setOrthosis(orthosisDropdown.getValue());
 
         saved = true;
@@ -51,14 +50,13 @@ public class AddOrthosisWizard implements Initializable {
     public void setOrthosis(IOrthosisModel orthosisModel){
         this.orthosisModel = orthosisModel;
 
-        sideTextfield.setText(orthosisModel.getSide());
+        sideDropDown.setValue(orthosisModel.getSide());
         orthosisDropdown.setValue(orthosisModel.getOrthosis());
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        orthosisDropdown.getItems().addAll(
-                "KAFO",
+        String [] orthosisItems = { "KAFO",
                 "GRAFO",
                 "Art. Ankle AFO",
                 "In-shoe Brace",
@@ -69,7 +67,12 @@ public class AddOrthosisWizard implements Initializable {
                 "SMO",
                 "Neoprene Sleeve - Knee",
                 "DAFO",
-                "FAFO"
-        );
+                "FAFO" };
+
+        String [] sideItems = { "None", "Right", "Left",  "Both"};
+        orthosisDropdown.getItems().addAll(orthosisItems);
+        sideDropDown.getItems().addAll(sideItems);
+
+
     }
 }

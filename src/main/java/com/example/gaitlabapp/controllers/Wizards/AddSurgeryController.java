@@ -95,12 +95,7 @@ public class AddSurgeryController  {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
-
-
     }
-
-
     public void setSurgery(ISurgeryModel surgeryModel){
         this.surgeryModel = surgeryModel;
 

@@ -242,7 +242,7 @@
                      <Text fx:id="FMS500" strokeType="OUTSIDE" strokeWidth="0.0" text="FMS500" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                       </children>
                   </GridPane>
-                  <GridPane gridLinesVisible="true" layoutX="31.0" layoutY="1332.0" prefHeight="197.0" prefWidth="521.0">
+                  <GridPane gridLinesVisible="true" layoutX="31.0" layoutY="1412.0" prefHeight="197.0" prefWidth="521.0">
                       <columnConstraints>
                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -279,20 +279,13 @@
                   </font>
                </Text>
                <Button fx:id="addSeizureMeds" layoutX="324.0" layoutY="1160.0" mnemonicParsing="false" onAction="#onAddSeizureMeds" prefHeight="26.0" prefWidth="127.0" text="Add Seizure Meds" />
-               <Button fx:id="questionnaireToEdit" layoutX="29.0" layoutY="1288.0" mnemonicParsing="false" onAction="#onQuestionnaireToEdit" prefHeight="26.0" prefWidth="240.0" text="Use Questionnaire to Edit Items" />
-               <GridPane gridLinesVisible="true" layoutX="30.0" layoutY="1217.0" prefHeight="27.0" prefWidth="522.0">
-                  <columnConstraints>
-                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  </columnConstraints>
-                  <rowConstraints>
-                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  </rowConstraints>
-                  <children>
-                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Seizure Medication" wrappingWidth="204.13674545288086" />
-                     <Text fx:id="visitDate1" strokeType="OUTSIDE" strokeWidth="0.0" text="seizureMeds" GridPane.columnIndex="1" />
-                  </children>
-               </GridPane>
+               <Button fx:id="questionnaireToEdit" layoutX="29.0" layoutY="1368.0" mnemonicParsing="false" onAction="#onQuestionnaireToEdit" prefHeight="26.0" prefWidth="240.0" text="Use Questionnaire to Edit Items" />
+               <TextField fx:id="seizureTextfield" blendMode="DARKEN" layoutX="326.0" layoutY="1239.0" prefHeight="25.0" prefWidth="243.0" />
+               <Text layoutX="90.0" layoutY="1257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seizure Medication:" wrappingWidth="190.3717803955078">
+                  <font>
+                     <Font name="System Bold" size="14.0" />
+                  </font>
+               </Text>
               </AnchorPane>
          </content>
       </ScrollPane>
@@ -387,12 +380,12 @@
                 <Label layoutX="21.0" layoutY="2362.0" text="FF AB/ADD" />
                 <Label layoutX="21.0" layoutY="2543.0" text="Leg Length" />
                 <Label layoutX="254.0" layoutY="1130.0" text="Left" />
-                <Label layoutX="21.0" layoutY="2707.0" prefHeight="24.0" prefWidth="83.0" text="Orthotics">
+                <Label layoutX="21.0" layoutY="2673.0" prefHeight="24.0" prefWidth="83.0" text="Orthotics">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
                 </Label>
-                <Label layoutX="24.0" layoutY="2739.0" prefHeight="17.0" prefWidth="132.0" text="Orthosis to Visit:">
+                <Label layoutX="24.0" layoutY="2705.0" prefHeight="17.0" prefWidth="132.0" text="Orthosis to Visit:">
                     <font>
                         <Font name="System Bold" size="12.0" />
                     </font>
@@ -703,14 +696,8 @@
                 <ComboBox fx:id="kneeVarusLP" layoutX="240.0" layoutY="2601.0" prefHeight="19.0" prefWidth="60.0" />
                 <Label layoutX="343.0" layoutY="2584.0" text="-13 - 5" />
                 <Separator layoutX="18.0" layoutY="2639.0" prefHeight="4.0" prefWidth="608.0" />
-                <Button fx:id="addOrthosis" layoutX="187.0" layoutY="2735.0" mnemonicParsing="false" onAction="#addOrthosis" prefHeight="25.0" prefWidth="75.0" text="Add" />
-                <TableView fx:id="orthosisTable" layoutX="31.0" layoutY="2798.0" prefHeight="149.0" prefWidth="419.0">
-                    <columns>
-                        <TableColumn fx:id="orthosisColumn" prefWidth="309.9999885559082" text="Orthosis" />
-                        <TableColumn fx:id="sideColumn" prefWidth="108.00003051757812" text="Side" />
-                    </columns>
-                </TableView>
-                <Separator layoutX="19.0" layoutY="2782.0" prefHeight="4.0" prefWidth="618.0" />
+                <Button fx:id="addOrthosis" layoutX="187.0" layoutY="2701.0" mnemonicParsing="false" onAction="#addOrthosis" prefHeight="25.0" prefWidth="75.0" text="Add" />
+                <Separator layoutX="19.0" layoutY="2748.0" prefHeight="4.0" prefWidth="618.0" />
                 <Separator blendMode="DIFFERENCE" layoutX="17.0" layoutY="3000.0" prefHeight="7.0" prefWidth="575.0" />
                 <Label layoutX="203.0" layoutY="2982.0" text="Right" />
                 <Label layoutX="295.0" layoutY="2982.0" text="R Interp" />
@@ -949,6 +936,19 @@
                 <TextField fx:id="StrengthKneeFlexR2" layoutX="536.0" layoutY="1928.0" prefHeight="20.0" prefWidth="75.0" />
                 <ComboBox fx:id="kneeFlexRS1" layoutX="442.0" layoutY="1957.0" prefHeight="19.0" prefWidth="60.0" />
                 <ComboBox fx:id="kneeFlexRS11" layoutX="545.0" layoutY="1956.0" prefHeight="19.0" prefWidth="60.0" />
+            <Text layoutX="27.0" layoutY="2788.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Orthosis " wrappingWidth="54.151031494140625" />
+            <Text layoutX="179.0" layoutY="2787.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Side" />
+            <Separator layoutX="19.0" layoutY="2794.0" prefHeight="0.0" prefWidth="320.0" />
+            <Separator layoutX="173.0" layoutY="2771.0" orientation="VERTICAL" prefHeight="159.0" prefWidth="0.0" />
+            <Separator layoutX="20.0" layoutY="2827.0" prefHeight="1.0" prefWidth="317.0" />
+            <Separator layoutX="19.0" layoutY="2770.0" prefHeight="0.0" prefWidth="320.0" />
+            <Separator layoutX="18.0" layoutY="2771.0" orientation="VERTICAL" prefHeight="159.0" prefWidth="0.0" />
+            <Separator layoutX="337.0" layoutY="2771.0" orientation="VERTICAL" prefHeight="159.0" prefWidth="0.0" />
+            <Label fx:id="orthosisLabel" layoutX="34.0" layoutY="2803.0" />
+            <Label fx:id="sideLabel" layoutX="180.0" layoutY="2803.0" />
+            <Separator layoutX="18.0" layoutY="2929.0" prefHeight="0.0" prefWidth="320.0" />
+            <Separator layoutX="21.0" layoutY="2861.0" prefHeight="1.0" prefWidth="317.0" />
+            <Separator layoutX="18.0" layoutY="2893.0" prefHeight="1.0" prefWidth="317.0" />
             </Pane>
         </ScrollPane>
     </Tab>

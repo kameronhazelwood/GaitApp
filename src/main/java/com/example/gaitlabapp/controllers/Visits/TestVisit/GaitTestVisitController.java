@@ -1,14 +1,12 @@
 package com.example.gaitlabapp.controllers.Visits.TestVisit;
 
 import com.example.gaitlabapp.Launcher;
-import com.example.gaitlabapp.controllers.Forms.Compendium.GenerateCompendiumSide;
-import com.example.gaitlabapp.controllers.Forms.Compendium.test.GenerateCompendium3;
 import com.example.gaitlabapp.controllers.Visits.TestNoteController;
-import com.example.gaitlabapp.controllers.Wizards.AddHealthConditionController;
 import com.example.gaitlabapp.controllers.Wizards.AddOrthosisWizard;
-import com.example.gaitlabapp.controllers.Wizards.AddSurgeryController;
+import com.example.gaitlabapp.controllers.Wizards.AddSeizureMedsController;
 import com.example.gaitlabapp.model.forms.IGenMarkInfoModel;
 import com.example.gaitlabapp.model.forms.IOrthosisModel;
+import com.example.gaitlabapp.model.forms.ISeizureModel;
 import com.example.gaitlabapp.model.patients.IPatientModel;
 import com.example.gaitlabapp.model.visits.IAppointmentModel;
 import com.example.gaitlabapp.services.AptsService;
@@ -60,6 +58,12 @@ public class GaitTestVisitController implements Initializable {
         public Text firstTalked;
         public Text childLearn;
         public Button editBaseline;
+        public TableColumn<String, ISeizureModel> seziureMedicationColumn;
+        public TableView<ISeizureModel> seizureTable;
+        public Button addSeizureMeds;
+        public TextField seizureTextfield;
+        public Label orthosisLabel;
+        public Label sideLabel;
         @Autowired
         PatientService patientService;
         public TableView<String> reportsTable;
@@ -69,9 +73,6 @@ public class GaitTestVisitController implements Initializable {
         public TableColumn<String, String> aptReasonReport;
         public Tooltip tooltip;
         public Button addOrthosis;
-        public TableView<IOrthosisModel> orthosisTable;
-        public TableColumn<IOrthosisModel, String> orthosisColumn;
-        public TableColumn<IOrthosisModel, String> sideColumn;
         public Button gaitVisitSave;
         @Autowired
         ConfigurableApplicationContext applicationContext;
@@ -3054,42 +3055,44 @@ public class GaitTestVisitController implements Initializable {
                 selected = true;
             }
         }
-        public IOrthosisModel onAddOrthosis(IOrthosisModel orthosisModel) throws IOException {
+        public void onShowOrthosisDialog(IOrthosisModel orthosisModel) throws IOException {
             FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader.setLocation(Launcher.class.getResource("/Wizards/AddOrthosis.fxml"));
-            fxmlLoader.setControllerFactory(applicationContext::getBean);
             Parent orthosisPane = fxmlLoader.load();
             AddOrthosisWizard addOrthosisWizard = fxmlLoader.getController();
 
             addOrthosisWizard.setOrthosis(orthosisModel);
             Stage addOrthosisStage = new Stage((StageStyle.UTILITY));
             addOrthosisStage.initModality(Modality.WINDOW_MODAL);
-            addOrthosisStage.initOwner(getOrthosisWindow());
+
             addOrthosisStage.setScene(new Scene(orthosisPane, 550, 250));
             addOrthosisStage.showAndWait();
 
-            return addOrthosisWizard.isSaved() ? orthosisModel : null;
+            orthosisLabel.setText(orthosisModel.getOrthosis());
+            sideLabel.setText(orthosisModel.getSide());
 
         }
 
-        private Window getOrthosisWindow(){
-            return orthosisTable.getScene().getWindow();
-        }
+//        private Window getOrthosisWindow(){
+//            return orthosisTable.getScene().getWindow();
+//        }
 
-        public void addOrthosis(){
-            int selectedItem = orthosisTable.getSelectionModel().getSelectedIndex();
-
-            try {
-                IOrthosisModel newOrthosis = onAddOrthosis(new IOrthosisModel(null, null, null));
-
-                if(newOrthosis != null){
-                    orthosisTable.getItems().add(
-                            selectedItem + 1, newOrthosis
-                    );
-                }
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+        public void addOrthosis() throws IOException {
+                IOrthosisModel orthosisModel = new IOrthosisModel();
+                onShowOrthosisDialog(orthosisModel);
+//            int selectedItem = orthosisTable.getSelectionModel().getSelectedIndex();
+//
+//            try {
+//                IOrthosisModel newOrthosis = onAddOrthosis(new IOrthosisModel(null, null, null));
+//
+//                if(newOrthosis != null){
+//                    orthosisTable.getItems().add(
+//                            selectedItem + 1, newOrthosis
+//                    );
+//                }
+//            } catch (IOException e) {
+//                throw new RuntimeException(e);
+//            }
         }
 
 
@@ -3108,17 +3111,27 @@ public class GaitTestVisitController implements Initializable {
         }
 
         public void onAddSeizureMeds(ActionEvent event) throws IOException {
+                ISeizureModel iSeizureModel = new ISeizureModel();
+                onShowDialog(iSeizureModel);
+        }
+
+        public void onShowDialog(ISeizureModel seizureModel) throws IOException {
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Wizards/AddSeizureMeds.fxml"));
                 // fxmlLoader.setControllerFactory(applicationContext::getBean);
                 Parent popUp = fxmlLoader.load();
+                AddSeizureMedsController addSeizureMedsController = fxmlLoader.getController();
 
+                addSeizureMedsController.setAddSeizure(seizureModel);
                 Stage stage1 = new Stage((StageStyle.UTILITY));
                 stage1.initModality(Modality.WINDOW_MODAL);
                 stage1.setTitle("Add Seizure Meds:   ");
                 // stage1.setFullScreen(true);
                 stage1.setScene(new Scene(popUp, 550, 400));
                 stage1.showAndWait();
+
+                seizureTextfield.setText(seizureModel.getSeizureMedicineName());
+
         }
 
         public void onQuestionnaireToEdit(ActionEvent event) throws IOException {

@@ -1,10 +1,12 @@
 package com.example.gaitlabapp.controllers.Wizards;
 
+import com.example.gaitlabapp.model.forms.ISeizureModel;
 import com.example.gaitlabapp.model.patients.IHealthHistoryModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -16,14 +18,18 @@ public class AddSeizureMedsController implements Initializable {
     public Button addButton;
     public Button cancelButton;
     public AnchorPane addSeizure;
-    private IHealthHistoryModel healthHistoryModel;
+    private ISeizureModel seizureModel;
+    private boolean saved;
+    public boolean isSaved(){
+        return saved;
+    }
+
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        seizureDropDown.getItems().addAll(
-                "Depakote",
+        String [] medicationItems= {"Depakote",
                 "Dilantin",
                 "Felbatol",
                 "Klonopin",
@@ -32,8 +38,16 @@ public class AddSeizureMedsController implements Initializable {
                 "Phenobarbital",
                 "Tegretol/Carbatrol",
                 "Topamax",
-                "Zarontin"
-        );
+                "Zarontin"};
+
+        seizureDropDown.getItems().addAll(medicationItems);
+
+        seizureDropDown.setOnAction(event -> {
+            String data = seizureDropDown.getSelectionModel().getSelectedItem();
+
+//            String addItem = seizureDropDown.getValue();
+//            seizureDropDown.getItems().add(addItem);
+        });
 
     }
 
@@ -41,15 +55,16 @@ public class AddSeizureMedsController implements Initializable {
         return (Stage) addButton.getScene().getWindow();
     }
     public void onAddButton(ActionEvent event) {
-        healthHistoryModel.setSeizure(seizureDropDown.getSelectionModel().getSelectedItem());
+        seizureModel.setSeizureMedicineName(seizureDropDown.getSelectionModel().getSelectedItem());
 
+        saved = true;
         getMyStage().close();
     }
 
-    private void setAddSeizure(IHealthHistoryModel healthHistoryModel){
-        this.healthHistoryModel = healthHistoryModel;
+    public void setAddSeizure(ISeizureModel seizureModel){
+        this.seizureModel = seizureModel;
 
-        seizureDropDown.setValue(healthHistoryModel.getSeizure());
+        seizureDropDown.setValue(seizureModel.getSeizureMedicineName());
     }
 
     public void onCancel(ActionEvent event) {this.addSeizure.getScene().getWindow().hide();}
