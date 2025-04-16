@@ -3,6 +3,7 @@ package com.example.gaitlabapp.controllers.Forms.Questionnaires.PODCI_Child.Pare
 import com.example.gaitlabapp.Launcher;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -12,8 +13,10 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class HealthAssessmentCompared {
+public class HealthAssessmentCompared implements Initializable {
     public Button start;
     public RadioButton muchBetter;
     public RadioButton somewhatBetter;
@@ -82,5 +85,10 @@ public class HealthAssessmentCompared {
             somewhatworse.setSelected(false);
         }
 
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        muchWorse.setSelected(true);
     }
 }

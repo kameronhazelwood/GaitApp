@@ -19,11 +19,11 @@ public class IDiagnosisModel {
     @Column(name = "description")
     private String description;
 
-    @ManyToMany(mappedBy = "gen_diagnosis", fetch = FetchType.LAZY)
-    @JsonBackReference
-
-
-     Set<IPatientModel> genDiagnosis;
+//    @ManyToMany(mappedBy = "gen_diagnosis", fetch = FetchType.LAZY)
+//    @JsonBackReference
+//
+//
+//     Set<IPatientModel> genDiagnosis;
 
     public IDiagnosisModel(String code, String description){
         this.code = code;

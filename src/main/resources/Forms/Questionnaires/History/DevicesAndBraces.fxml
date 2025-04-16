@@ -37,7 +37,7 @@
    <CheckBox layoutX="76.0" layoutY="256.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="109.0" text="Rear Walker" />
    <CheckBox layoutX="76.0" layoutY="310.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="109.0" text="Thumb Splint" />
    <CheckBox layoutX="401.0" layoutY="148.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="109.0" text="Crutch" />
-   <CheckBox layoutX="401.0" layoutY="202.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="109.0" text="Hand Led" />
+   <CheckBox fx:id="handLed" layoutX="401.0" layoutY="202.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="109.0" text="Hand Led" />
    <CheckBox layoutX="401.0" layoutY="256.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="137.0" text="Resting Hand Splint" />
    <CheckBox layoutX="401.0" layoutY="310.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="137.0" text="Wheelchair" />
    <CheckBox layoutX="658.0" layoutY="148.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="137.0" text="Front Walker" />

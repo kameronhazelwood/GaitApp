@@ -69,7 +69,7 @@
          <Font size="14.0" />
       </font>
    </CheckBox>
-   <CheckBox layoutX="483.0" layoutY="148.0" mnemonicParsing="false" text="Frequent tripping">
+   <CheckBox fx:id="frequentTipping" layoutX="483.0" layoutY="148.0" mnemonicParsing="false" text="Frequent tripping">
       <font>
          <Font size="14.0" />
       </font>

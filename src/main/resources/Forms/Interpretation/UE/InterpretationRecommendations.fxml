@@ -15,7 +15,7 @@
    <content>
       <TabPane prefHeight="2000.0" prefWidth="700.0">
          <tabs>
-            <Tab text="Diagnostic">
+            <Tab closable="false" text="Diagnostic">
                <content>
                   <AnchorPane prefHeight="400.0" prefWidth="600.0">
                      <children>
@@ -50,7 +50,7 @@
                   </AnchorPane>
                </content>
             </Tab>
-            <Tab text="Surgery">
+            <Tab closable="false" text="Surgery">
                <content>
                   <AnchorPane prefHeight="400.0" prefWidth="600.0">
                      <children>
@@ -419,7 +419,7 @@
                   </AnchorPane>
                </content>
             </Tab>
-            <Tab text="PT/OT">
+            <Tab closable="false" text="PT/OT">
                <content>
                   <AnchorPane prefHeight="400.0" prefWidth="600.0">
                      <children>
@@ -474,7 +474,7 @@
                   </AnchorPane>
                </content>
             </Tab>
-            <Tab text="Splinting">
+            <Tab closable="false" text="Splinting">
                <content>
                   <AnchorPane prefHeight="400.0" prefWidth="600.0">
                      <children>

@@ -3,6 +3,7 @@ package com.example.gaitlabapp.controllers.Forms.Questionnaires.History;
 import com.example.gaitlabapp.Launcher;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -12,8 +13,10 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class LongDistances {
+public class LongDistances implements Initializable {
     public Button previousButton;
     public Button nextButton;
     public RadioButton six;
@@ -151,5 +154,10 @@ public class LongDistances {
             six.setSelected(false);
             c.setSelected(false);
         }
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        two.setSelected(true);
     }
 }

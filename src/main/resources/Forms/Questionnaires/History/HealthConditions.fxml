@@ -40,7 +40,7 @@
          <font>
             <Font size="14.0" />
          </font></CheckBox>
-      <CheckBox layoutX="266.0" layoutY="211.0" mnemonicParsing="false" text="Heart Problems">
+      <CheckBox fx:id="heartProblems" layoutX="266.0" layoutY="211.0" mnemonicParsing="false" text="Heart Problems">
          <font>
             <Font size="14.0" />
          </font></CheckBox>

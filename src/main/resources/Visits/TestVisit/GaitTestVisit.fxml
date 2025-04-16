@@ -25,7 +25,7 @@
 <?import javafx.scene.text.Text?>
 
 <TabPane prefHeight="8000.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Visits.TestVisit.GaitTestVisitController">
-    <Tab fx:id="visitTab" text="Visit Information">
+    <Tab fx:id="visitTab" closable="false" text="Visit Information">
       <ScrollPane prefHeight="2000.0" prefWidth="748.0">
          <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1702.0" prefWidth="760.0">
@@ -188,13 +188,13 @@
                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Age First Walked:" GridPane.rowIndex="4" />
                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Age First Talked:" GridPane.rowIndex="5" />
                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" How does child learn:" GridPane.rowIndex="6" />
-                     <Text fx:id="personReporting" strokeType="OUTSIDE" strokeWidth="0.0" text=" Person Reporting" wrappingWidth="231.73675155639648" GridPane.columnIndex="1" />
-                     <Text fx:id="relationshipToPatientQues" strokeType="OUTSIDE" strokeWidth="0.0" text=" Relationship to Patient" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                     <Text fx:id="dateReported" strokeType="OUTSIDE" strokeWidth="0.0" text=" Date " GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                     <Text fx:id="premature" strokeType="OUTSIDE" strokeWidth="0.0" text=" Premature " GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                     <Text fx:id="firstWalk" strokeType="OUTSIDE" strokeWidth="0.0" text=" Walk" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                     <Text fx:id="firstTalked" strokeType="OUTSIDE" strokeWidth="0.0" text=" Talk" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                     <Text fx:id="childLearn" strokeType="OUTSIDE" strokeWidth="0.0" text=" Learn" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                     <Text fx:id="personReporting" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="231.73675155639648" GridPane.columnIndex="1" />
+                     <Text fx:id="relationshipToPatientQues" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     <Text fx:id="dateReported" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     <Text fx:id="premature" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     <Text fx:id="firstWalk" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     <Text fx:id="firstTalked" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                     <Text fx:id="childLearn" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                       </children>
                   </GridPane>
                   <Text layoutX="56.0" layoutY="622.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Baseline Answers:">
@@ -232,17 +232,17 @@
                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" FMS5:" GridPane.rowIndex="5" />
                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" FMS50:" GridPane.rowIndex="6" />
                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" FMS500:" GridPane.rowIndex="7" />
-                     <Text fx:id="visitDate" strokeType="OUTSIDE" strokeWidth="0.0" text="  Visit Date" GridPane.columnIndex="1" />
-                     <Text fx:id="completingQuestionnaire" strokeType="OUTSIDE" strokeWidth="0.0" text=" Completing Questionnare" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                     <Text fx:id="relationshipToPatient" strokeType="OUTSIDE" strokeWidth="0.0" text=" Relationship" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                     <Text fx:id="changeWalk" strokeType="OUTSIDE" strokeWidth="0.0" text="changeWalk" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                     <Text fx:id="supportInWalk" strokeType="OUTSIDE" strokeWidth="0.0" text="supportInWalk" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                     <Text fx:id="FMS5" strokeType="OUTSIDE" strokeWidth="0.0" text="FMS5" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                     <Text fx:id="FMS50" strokeType="OUTSIDE" strokeWidth="0.0" text="FMS50" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                     <Text fx:id="FMS500" strokeType="OUTSIDE" strokeWidth="0.0" text="FMS500" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                     <Text fx:id="visitDate" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" />
+                     <Text fx:id="completingQuestionnaire" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     <Text fx:id="relationshipToPatient" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     <Text fx:id="changeWalk" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     <Text fx:id="supportInWalk" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     <Text fx:id="FMS5Text" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                     <Text fx:id="FMS50Text" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                     <Text fx:id="FMS500Text" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                       </children>
                   </GridPane>
-                  <GridPane gridLinesVisible="true" layoutX="31.0" layoutY="1412.0" prefHeight="197.0" prefWidth="521.0">
+                  <GridPane gridLinesVisible="true" layoutX="31.0" layoutY="1363.0" prefHeight="197.0" prefWidth="521.0">
                       <columnConstraints>
                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -264,22 +264,22 @@
                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" OT Frequency:" GridPane.rowIndex="4" />
                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Date of Followup with MD:" GridPane.rowIndex="5" />
                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" General Concerns" GridPane.rowIndex="6" />
-                     <Text fx:id="currentDevices" strokeType="OUTSIDE" strokeWidth="0.0" text=" currentDevices" GridPane.columnIndex="1" />
-                     <Text fx:id="gaitConcerns" strokeType="OUTSIDE" strokeWidth="0.0" text=" gaitConcerns" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                     <Text fx:id="pain" strokeType="OUTSIDE" strokeWidth="0.0" text=" pain" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                     <Text fx:id="ptFreq" strokeType="OUTSIDE" strokeWidth="0.0" text=" pt" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                     <Text fx:id="otFreq" strokeType="OUTSIDE" strokeWidth="0.0" text=" ot" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                     <Text fx:id="followupDate" strokeType="OUTSIDE" strokeWidth="0.0" text=" followupDate" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                     <Text fx:id="genConcerns" strokeType="OUTSIDE" strokeWidth="0.0" text=" genConcerns" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                     <Text fx:id="currentDevices" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" />
+                     <Text fx:id="gaitConcerns" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     <Text fx:id="pain" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     <Text fx:id="ptFreq" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     <Text fx:id="otFreq" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     <Text fx:id="followupDate" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                     <Text fx:id="genConcerns" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                       </children>
                   </GridPane>
-               <Text layoutX="45.0" layoutY="1178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No Seizure Meds reported on this visit -- ">
+               <Text layoutX="45.0" layoutY="1197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No Seizure Meds reported on this visit -- ">
                   <font>
                      <Font size="14.0" />
                   </font>
                </Text>
-               <Button fx:id="addSeizureMeds" layoutX="324.0" layoutY="1160.0" mnemonicParsing="false" onAction="#onAddSeizureMeds" prefHeight="26.0" prefWidth="127.0" text="Add Seizure Meds" />
-               <Button fx:id="questionnaireToEdit" layoutX="29.0" layoutY="1368.0" mnemonicParsing="false" onAction="#onQuestionnaireToEdit" prefHeight="26.0" prefWidth="240.0" text="Use Questionnaire to Edit Items" />
+               <Button fx:id="addSeizureMeds" layoutX="324.0" layoutY="1179.0" mnemonicParsing="false" onAction="#onAddSeizureMeds" prefHeight="26.0" prefWidth="127.0" text="Add Seizure Meds" />
+               <Button fx:id="questionnaireToEdit" layoutX="29.0" layoutY="1319.0" mnemonicParsing="false" onAction="#onQuestionnaireToEdit" prefHeight="26.0" prefWidth="240.0" text="Use Questionnaire to Edit Items" />
                <TextField fx:id="seizureTextfield" blendMode="DARKEN" layoutX="326.0" layoutY="1239.0" prefHeight="25.0" prefWidth="243.0" />
                <Text layoutX="90.0" layoutY="1257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seizure Medication:" wrappingWidth="190.3717803955078">
                   <font>
@@ -290,7 +290,7 @@
          </content>
       </ScrollPane>
     </Tab>
-    <Tab fx:id="physExamGait" text="GAIT Physical Examination">
+    <Tab fx:id="physExamGait" closable="false" text="GAIT Physical Examination">
         <ScrollPane prefHeight="6000.0" prefWidth="763.0">
             <Pane prefHeight="6000.0" prefWidth="773.0">
                 <Label layoutX="22.0" layoutY="11.0" text="GAIT PT Evaluation:">
@@ -1032,7 +1032,7 @@
     <!--              </BorderPane>-->
     <!--          </content>-->
     <!--      </Tab>-->
-    <Tab fx:id="reportTab" text="Reports">
+    <Tab fx:id="reportTab" closable="false" text="Reports">
         <ScrollPane prefHeight="773.0" prefWidth="773.0">
             <Pane maxWidth="900.0" prefHeight="1386.0" prefWidth="900.0">
                 <Label layoutX="12.0" layoutY="200.0" text="Gait Pictures " />
@@ -1180,7 +1180,7 @@
             </Pane>
         </ScrollPane>
     </Tab>
-    <Tab fx:id="dataTab" text="Data">
+    <Tab fx:id="dataTab" closable="false" text="Data">
         <AnchorPane prefHeight="200.0" prefWidth="200.0">
             <TreeView fx:id="dataTable" layoutX="9.0" layoutY="19.0" onMouseClicked="#selectedItem" prefHeight="546.0" prefWidth="222.0">
                 <!--    <columns>-->
@@ -1191,7 +1191,7 @@
             </HBox>
         </AnchorPane>
     </Tab>
-    <Tab fx:id="reportTab2" text="Reports">
+    <Tab fx:id="reportTab2" closable="false" text="Reports">
         <content>
             <ScrollPane prefHeight="773.0" prefWidth="773.0">
                 <content>

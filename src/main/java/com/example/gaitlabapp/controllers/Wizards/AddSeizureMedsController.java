@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -17,6 +18,8 @@ public class AddSeizureMedsController implements Initializable {
     public ComboBox<String> seizureDropDown;
     public Button addButton;
     public Button cancelButton;
+    public Label visitDate;
+    public Label patientName;
     public AnchorPane addSeizure;
     private ISeizureModel seizureModel;
     private boolean saved;
@@ -28,6 +31,8 @@ public class AddSeizureMedsController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        patientName.setText("Rowan Hazelwood");
+        visitDate.setText("03/07/2025");
 
         String [] medicationItems= {"Depakote",
                 "Dilantin",

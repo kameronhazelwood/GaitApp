@@ -1167,7 +1167,22 @@ public class GaitTestVisitController implements Initializable {
         @Autowired
         private GenMarkerService genMarkerService;
         private IAppointmentModel appointmentModel;
-
+        public Text visitDate;
+        public Text completingQuestionnaire;
+        public Text relationshipToPatient;
+        public Text changeWalk;
+        public Text supportInWalk;
+        public Text FMS5Text;
+        public Text FMS50Text;
+        public Text FMS500Text;
+        public Text currentDevice;
+        public Text gaitConcerns;
+        public Text pain;
+        public Text ptFreq;
+        public Text otFreq;
+        public Text followupDate;
+        public Text genConcerns;
+        public Text currentDevices;
 
         @Override
         public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -1353,6 +1368,22 @@ public class GaitTestVisitController implements Initializable {
                 TproxLinterp.setValue("N");
                 TdistalRinterp.setValue("H");
                 TdistalLinterp.setValue("N");
+                personReporting.setText("Kam Hazelwood");
+                relationshipToPatientQues.setText("Birth Parent");
+                dateReported.setText("4/5/2025");
+                premature.setText("Not Premature");
+                visitDate.setText("03/07/2025");
+                completingQuestionnaire.setText("Kam Hazelwood");
+                supportInWalk.setText("Requires Support");
+                changeWalk.setText("No Change");
+                currentDevices.setText("Hand Led");
+                gaitConcerns.setText("Frequent Tripping");
+                followupDate.setText("05/31/2025");
+                genConcerns.setText("n/a");
+                ptFreq.setText("None");
+                otFreq.setText("None");
+
+
 
             GMFCSCombo.getItems().addAll(
                     " ",
@@ -2698,9 +2729,7 @@ public class GaitTestVisitController implements Initializable {
         public void setPatient(IPatientModel patientModel){
             this.patientModel = patientModel;
           //  mrnTextField.setText(patientModel.getMrn());
-            //mrnTextField.setText("32581055");
-
-
+            mrnTextField.setText("32581055");
         }
 
         @FXML
@@ -3070,7 +3099,6 @@ public class GaitTestVisitController implements Initializable {
 
             orthosisLabel.setText(orthosisModel.getOrthosis());
             sideLabel.setText(orthosisModel.getSide());
-
         }
 
 //        private Window getOrthosisWindow(){

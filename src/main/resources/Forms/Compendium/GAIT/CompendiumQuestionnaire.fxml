@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <ScrollPane xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Compendium.CompendiumQuestionnaireController">
     <AnchorPane prefHeight="1028.0" prefWidth="799.0">
@@ -69,8 +70,28 @@
                 <Font name="System Bold" size="13.0" />
             </font>
         </Label>
-      <Label layoutX="23.0" layoutY="505.0" text="No seizure Medication Reported this visit. " />
-      <Label layoutX="388.0" layoutY="505.0" text="No Braces Reported this visit. " />
+      <Label layoutX="23.0" layoutY="505.0" text="Depakote" />
+      <Label layoutX="388.0" layoutY="505.0" text="Hand Led" />
+      <Text layoutX="27.0" layoutY="616.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prequent Tripping" />
+      <Text layoutX="385.0" layoutY="625.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fingers (R)" />
+      <Text layoutX="389.0" layoutY="651.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder" />
+      <Text layoutX="27.0" layoutY="724.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hospital:" />
+      <Text layoutX="27.0" layoutY="754.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clinic:" />
+      <Text layoutX="27.0" layoutY="784.0" strokeType="OUTSIDE" strokeWidth="0.0" text="School:" />
+      <Text layoutX="27.0" layoutY="814.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home:" />
+      <Text layoutX="27.0" layoutY="869.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hospital:" />
+      <Text layoutX="27.0" layoutY="899.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clinic:" />
+      <Text layoutX="27.0" layoutY="929.0" strokeType="OUTSIDE" strokeWidth="0.0" text="School:" />
+      <Text layoutX="27.0" layoutY="959.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home:" />
+      <Text layoutX="113.0" layoutY="724.0" strokeType="OUTSIDE" strokeWidth="0.0" text="None" />
+      <Text layoutX="113.0" layoutY="754.0" strokeType="OUTSIDE" strokeWidth="0.0" text="One or more times per week" />
+      <Text layoutX="113.0" layoutY="784.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Two or three times per month" />
+      <Text layoutX="113.0" layoutY="814.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About once per month" />
+      <Text layoutX="124.0" layoutY="869.0" strokeType="OUTSIDE" strokeWidth="0.0" text="None" />
+      <Text layoutX="124.0" layoutY="899.0" strokeType="OUTSIDE" strokeWidth="0.0" text="One or more times per week" />
+      <Text layoutX="124.0" layoutY="929.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About once per month" />
+      <Text layoutX="124.0" layoutY="959.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About once per month" />
+      <Text layoutX="291.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="05/31/2025" />
 
 
     </AnchorPane>

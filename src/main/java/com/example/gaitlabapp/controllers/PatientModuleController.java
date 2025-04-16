@@ -96,8 +96,8 @@ public class PatientModuleController implements Initializable {
 
     ObservableList<IAppointmentModel> initialData() {
         IAppointmentModel apt1 = new IAppointmentModel(1, "03/07/2025", "GAIT", "Full Diagnostic", "", GAIT, "",  2, "", "", "", "");
-        IAppointmentModel apt2 = new IAppointmentModel(1, "03/10/2025", "GAIT", "Full Diagnostic", "Dr. Smith", POSTOP, "", 2, "", "", "", "");
-        return FXCollections.observableArrayList(apt2, apt1);
+        //IAppointmentModel apt2 = new IAppointmentModel(1, "03/10/2025", "GAIT", "Full Diagnostic", "Dr. Smith", POSTOP, "", 2, "", "", "", "");
+        return FXCollections.observableArrayList(apt1);
     }
 
     @FXML
@@ -430,8 +430,8 @@ public class PatientModuleController implements Initializable {
         /*
         diagnosis code table
          */
-        diagnosisCode.setCellValueFactory((new PropertyValueFactory<IDiagnosisModel, String>("code")));
-        diagDescription.setCellValueFactory((new PropertyValueFactory<IDiagnosisModel, String>("diagnosis")));
+//        diagnosisCode.setCellValueFactory((new PropertyValueFactory<IDiagnosisModel, String>("code")));
+//        diagDescription.setCellValueFactory((new PropertyValueFactory<IDiagnosisModel, String>("diagnosis")));
 
         ContextMenu diagContext = new ContextMenu();
         MenuItem deleteDiag = new MenuItem("Delete Diagnosis Code");
@@ -780,7 +780,7 @@ public class PatientModuleController implements Initializable {
 
         try {
             IDiagnosisModel newDiagnosisCode = showDiagnosisDialog(
-                    new IDiagnosisModel(null, null)
+                    new IDiagnosisModel("", "")
             );
             if (newDiagnosisCode != null) {
                 diagnosisCodeTable.getItems().add(
@@ -788,14 +788,13 @@ public class PatientModuleController implements Initializable {
                         newDiagnosisCode
                 );
             }
-            System.out.println(newDiagnosisCode);
+            System.out.println("newly assigned code" + newDiagnosisCode);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
     private IDiagnosisModel showDiagnosisDialog(IDiagnosisModel diagnosisModel) throws IOException {
-        IDiagnosisModel iDiagnosisModel = diagnosisCodeTable.getSelectionModel().getSelectedItem();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Wizards/NewDiagnosisCode.fxml"));
         fxmlLoader.setControllerFactory(applicationContext::getBean);
         Parent diagCodePane = fxmlLoader.load();
@@ -805,7 +804,7 @@ public class PatientModuleController implements Initializable {
         Stage addDiagStage = new Stage((StageStyle.UTILITY));
         addDiagStage.initModality(Modality.WINDOW_MODAL);
         addDiagStage.initOwner(getDiagWindow());
-        addDiagStage.setScene(new Scene(diagCodePane, 600, 460));
+        addDiagStage.setScene(new Scene(diagCodePane, 600, 550));
         addDiagStage.showAndWait();
 
         return newDiagnosisCodeController.isSaved() ? diagnosisModel : null;

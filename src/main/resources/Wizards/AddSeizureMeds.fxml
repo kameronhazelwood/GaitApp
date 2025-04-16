@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -14,10 +15,8 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <Text layoutX="16.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="patientName" wrappingWidth="202.13671875" />
       <Text layoutX="227.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MRN" wrappingWidth="115.729736328125" />
       <Text layoutX="356.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="for visit on:" />
-      <Text layoutX="438.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="visitDate" />
       <Separator layoutY="69.0" prefHeight="0.0" prefWidth="600.0" />
       <Text layoutX="14.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add a med to the list for this visit:" wrappingWidth="270.51287841796875">
          <font>
@@ -25,8 +24,10 @@
          </font>
       </Text>
       <Text layoutX="16.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Medication from the dropdown and click the 'Add' button" />
-      <ComboBox fx:id="seizureDropDown" layoutX="262.0" layoutY="174.0" prefHeight="25.0" prefWidth="271.0" promptText="None" />
-      <Button fx:id="addButton" layoutX="297.0" layoutY="262.0" mnemonicParsing="false" onAction="#onAddButton" prefHeight="64.0" prefWidth="235.0" text="Add" />
-      <Button fx:id="cancelButton" layoutX="27.0" layoutY="268.0" mnemonicParsing="false" onAction="#onCancel" prefHeight="64.0" prefWidth="235.0" text="Cancel" />
+      <ComboBox fx:id="seizureDropDown" layoutX="27.0" layoutY="174.0" prefHeight="25.0" prefWidth="271.0" promptText="None" />
+      <Button fx:id="addButton" layoutX="31.0" layoutY="270.0" mnemonicParsing="false" onAction="#onAddButton" prefHeight="64.0" prefWidth="235.0" text="Add" />
+      <Button fx:id="cancelButton" layoutX="297.0" layoutY="270.0" mnemonicParsing="false" onAction="#onCancel" prefHeight="64.0" prefWidth="235.0" text="Cancel" />
+      <Label fx:id="patientName" layoutX="27.0" layoutY="45.0" text="Label" />
+      <Label fx:id="visitDate" layoutX="455.0" layoutY="45.0" text="Label" />
    </children>
 </AnchorPane>

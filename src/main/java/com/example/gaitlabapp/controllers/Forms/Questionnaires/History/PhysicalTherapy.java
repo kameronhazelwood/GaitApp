@@ -98,5 +98,12 @@ public class PhysicalTherapy implements Initializable {
                 "Two or three times per month",
                 "One or more times per week"
         );
+
+        phyHome.setValue("About once per month");
+        occHome.setValue("About once per month");
+        occSchool.setValue("About once per month");
+        phyClinic.setValue("One or more times per week");
+        phySchool.setValue("Two or three times per month");
+        occClinic.setValue("One or more times per week");
     }
 }

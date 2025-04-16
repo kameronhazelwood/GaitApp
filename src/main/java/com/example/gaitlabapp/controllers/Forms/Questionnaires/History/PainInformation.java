@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class PainInformation {
+public class PainInformation implements Initializable{
 
     public Button previousButton;
     public Button nextQuestion;
@@ -281,5 +281,12 @@ public class PainInformation {
             wristLeft.setSelected(false);
             wristBoth.setSelected(false);
         }
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        fingersRight.setSelected(true);
+        shouldersLeft.setSelected(true);
+        wristLeft.setSelected(true);
     }
 }

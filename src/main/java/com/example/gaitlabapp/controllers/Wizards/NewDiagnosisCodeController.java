@@ -14,12 +14,16 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import net.fortuna.ical4j.model.property.RDate;
+import org.controlsfx.control.PropertySheet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Controller;
+import org.yaml.snakeyaml.events.Event;
 
 import java.net.URL;
 import java.util.*;
@@ -37,6 +41,8 @@ public class NewDiagnosisCodeController implements Initializable {
 
     public Button cancel;
     public AnchorPane diagCodePane;
+    public TextField codeField;
+    public TextField descripField;
     private boolean saved;
     @Autowired
     ConfigurableApplicationContext applicationContext;
@@ -81,48 +87,49 @@ public class NewDiagnosisCodeController implements Initializable {
 
                 if (diagnosisCode.getDiagnosisDescription().toLowerCase().contains(lowerCaseFilter)) {
                     return true;
-                } else if (diagnosisCode.getDiagnosisCode().toLowerCase().contains(lowerCaseFilter)) {
-                    return true;
-
-                } else return false;
+                } else return diagnosisCode.getDiagnosisCode().toLowerCase().contains(lowerCaseFilter);
             });
         });
         SortedList<IDiagnosisModel> sortedData = new SortedList<>(filteredData);
         sortedData.comparatorProperty().bind(newDiagCodeTable.comparatorProperty());
         newDiagCodeTable.setItems(sortedData);
+
+        newDiagCodeTable.setOnMouseClicked(mouseEvent -> {
+            IDiagnosisModel diagCode = newDiagCodeTable.getItems().get(0);
+
+            codeCol = (TableColumn<IDiagnosisModel, String>) newDiagCodeTable.getColumns().get(0);
+            descripCol = (TableColumn<IDiagnosisModel, String>) newDiagCodeTable.getColumns().get(1);
+
+            String codeData = (String) codeCol.getCellObservableValue(diagCode).getValue();
+            String descData = (String) descripCol.getCellObservableValue(diagCode).getValue();
+
+            codeField.setText(codeData);
+            descripField.setText(descData);
+
+        });
+
+
     }
 
     @FXML
     public void onSaveDiagCode(ActionEvent event) {
-        IDiagnosisModel diagCode = newDiagCodeTable.getSelectionModel().getSelectedItem();
+//        IDiagnosisModel diagCode = newDiagCodeTable.getSelectionModel().getSelectedItem();
+//
+//        diagCode.setDescription(descripField.getText());
+//        diagCode.setCode(codeField.getText());
 
-        diagCode.setCode(codeCol.getText());
-        diagCode.setDescription(descripCol.getText());
+        diagnosisModel.setDescription(descripField.getText());
+        diagnosisModel.setCode(codeField.getText());
 
         saved = true;
         getmyStage().close();
     }
-    @FXML
-    public void setDiagCode() {
-//        PatientModuleController patientModuleController = new PatientModuleController();
-//        ObservableList<IDiagnosisModel> newData = FXCollections.observableArrayList();
-//        newDiagCodeTable.setRowFactory(dct -> {
-//            TableRow<IDiagnosisModel> row = new TableRow<>();
-//            IDiagnosisModel rowData = row.getItem();
-//            row.setOnMouseClicked(event -> {
-//                newData.add(new IDiagnosisModel(
-//                        rowData.getDiagnosisCode(),
-//                        rowData.getDiagnosisDescription()
-//                ));
-//               patientModuleController.diagnosisCodeTable.setItems(newData);
-//            });
-//            return row;
-//        });
-
-    }
-
     public void setDiagCode(IDiagnosisModel diagnosisModel) {
-//        this.diagnosisModel = diagnosisModel;
+        this.diagnosisModel = diagnosisModel;
+
+        codeField.setText(diagnosisModel.getDiagnosisCode());
+        descripField.setText(diagnosisModel.getDiagnosisDescription());
+
 //        PatientModuleController patientModuleController = new PatientModuleController();
 //        ObservableList<IDiagnosisModel> newData = FXCollections.observableArrayList();
 //        newDiagCodeTable.setRowFactory(dct -> {
@@ -139,10 +146,10 @@ public class NewDiagnosisCodeController implements Initializable {
 //            return row;
 //        });
 
-        codeCol.setText(diagnosisModel.getDiagnosisCode());
-        descripCol.setText(diagnosisModel.getDiagnosisDescription());
 
+        //IDiagnosisModel diagCode2 = newDiagCodeTable.getSelectionModel().getSelectedItem();
 
+       // testField.setText(diagCode2.getCode());
     }
 }
 

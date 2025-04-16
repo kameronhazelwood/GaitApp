@@ -8,7 +8,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <ScrollPane xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.PODCI_Child.ParentReported.LimitFunction">
    <content>
       <AnchorPane prefHeight="804.0" prefWidth="903.0">
@@ -31,7 +30,7 @@
                       <Font size="13.0" />
                   </font>
               </Text>
-            <CheckBox layoutX="138.0" layoutY="137.0" mnemonicParsing="false" text="Neck">
+            <CheckBox fx:id="rightNeck" layoutX="138.0" layoutY="137.0" mnemonicParsing="false" text="Neck">
                <font>
                   <Font size="14.0" />
                </font>
@@ -58,7 +57,7 @@
                </font>
             </CheckBox>
             <Separator layoutX="133.0" layoutY="176.0" prefHeight="0.0" prefWidth="567.0" />
-            <CheckBox layoutX="327.0" layoutY="195.0" mnemonicParsing="false" text="Hip">
+            <CheckBox fx:id="rightHip" layoutX="327.0" layoutY="195.0" mnemonicParsing="false" text="Hip">
                <font>
                   <Font size="14.0" />
                </font>
@@ -120,7 +119,7 @@
                   <Font size="14.0" />
                </font>
             </CheckBox>
-            <CheckBox layoutX="526.0" layoutY="421.0" mnemonicParsing="false" text="Thigh">
+            <CheckBox fx:id="leftThigh" layoutX="526.0" layoutY="421.0" mnemonicParsing="false" text="Thigh">
                <font>
                   <Font size="14.0" />
                </font>

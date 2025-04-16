@@ -24,7 +24,7 @@
             <Font size="18.0" />
         </font>
     </Text>
-   <TextField layoutX="314.0" layoutY="198.0" prefHeight="17.0" prefWidth="175.0" />
+   <TextField fx:id="follupDateTextfield" layoutX="314.0" layoutY="198.0" prefHeight="17.0" prefWidth="175.0" promptText="Enter Date" />
    <Text layoutX="519.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(for example, 2/5/2004 or Sept 2004)" wrappingWidth="237.60001220703123">
       <font>
          <Font name="System Italic" size="13.0" />

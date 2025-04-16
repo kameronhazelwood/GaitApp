@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -19,12 +20,14 @@ import java.util.ResourceBundle;
 
 public class AboutYou implements Initializable {
     public Button nextQuestion;
-    public ComboBox relationshipToPatient;
+    public TextField youName;
+    public ComboBox<String> relationshipToPatient;
 
     private Stage getMyStage() { return (Stage) nextQuestion.getScene().getWindow();}
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        youName.setText("Kam Hazelwood");
         relationshipToPatient.getItems().addAll(
                 "Birth Mother",
                 "Birth Father",
@@ -42,6 +45,7 @@ public class AboutYou implements Initializable {
                 "Step-Father",
                 "Step-Mother"
         );
+        relationshipToPatient.setValue("Birth Parent");
     }
     public void onNextQuestion(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
