@@ -27,32 +27,32 @@
                 <Font size="13.0" />
             </font>
         </Text>
-        <RadioButton layoutX="402.0" layoutY="144.0" mnemonicParsing="false" text="Rarely">
+        <RadioButton fx:id="rarely" layoutX="402.0" layoutY="144.0" mnemonicParsing="false" onAction="#onRarely" text="Rarely">
             <font>
                 <Font size="16.0" />
             </font>
         </RadioButton>
-        <RadioButton layoutX="402.0" layoutY="176.0" mnemonicParsing="false" text="Once a month">
+        <RadioButton fx:id="onceAMonth" layoutX="402.0" layoutY="176.0" mnemonicParsing="false" onAction="#onOnceAMonth" text="Once a month">
             <font>
                 <Font size="16.0" />
             </font>
         </RadioButton>
-        <RadioButton layoutX="402.0" layoutY="211.0" mnemonicParsing="false" text="Two or three times a month">
+        <RadioButton fx:id="twoMonth" layoutX="402.0" layoutY="211.0" mnemonicParsing="false" onAction="#onTwoMonth" text="Two or three times a month">
             <font>
                 <Font size="16.0" />
             </font>
         </RadioButton>
-        <RadioButton layoutX="402.0" layoutY="246.0" mnemonicParsing="false" text="Once a week">
+        <RadioButton fx:id="onceAWeek" layoutX="402.0" layoutY="246.0" mnemonicParsing="false" onAction="#onOnceWeek" text="Once a week">
             <font>
                 <Font size="16.0" />
             </font>
         </RadioButton>
-        <RadioButton layoutX="402.0" layoutY="281.0" mnemonicParsing="false" text="More than once a week">
+        <RadioButton fx:id="MoreOnceWeek" layoutX="402.0" layoutY="281.0" mnemonicParsing="false" onAction="#onMoreThanWeek" text="More than once a week">
             <font>
                 <Font size="16.0" />
             </font>
         </RadioButton>
-      <RadioButton layoutX="402.0" layoutY="313.0" mnemonicParsing="false" text="Does not attend school, etc.">
+      <RadioButton fx:id="NotAttend" layoutX="402.0" layoutY="313.0" mnemonicParsing="false" onAction="#onDoesNotAttend" text="Does not attend school, etc.">
          <font>
             <Font size="16.0" />
          </font>

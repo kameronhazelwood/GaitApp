@@ -45,13 +45,13 @@
         <Separator layoutX="93.0" layoutY="463.0" prefHeight="0.0" prefWidth="655.0" />
         <Text layoutX="96.0" layoutY="456.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Open a jar that has been opened before?" />
         <Separator layoutX="93.0" layoutY="489.0" prefHeight="0.0" prefWidth="655.0" />
-        <Text layoutX="96.0" layoutY="479.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Use a forlk and spoon?" />
+        <Text layoutX="96.0" layoutY="479.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Use a fork and spoon?" />
         <Separator layoutX="93.0" layoutY="515.0" prefHeight="0.0" prefWidth="655.0" />
         <Text layoutX="96.0" layoutY="507.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comb their hair?" />
         <Separator layoutX="93.0" layoutY="541.0" prefHeight="0.0" prefWidth="655.0" />
         <Text layoutX="96.0" layoutY="533.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Button buttons?" />
         <Text layoutX="327.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Very happy" />
-        <RadioButton layoutX="345.0" layoutY="389.0" mnemonicParsing="false" />
+        <RadioButton fx:id="veryHappyLift" layoutX="345.0" layoutY="389.0" mnemonicParsing="false" onAction="#onveryHappyLift" />
         <Text layoutX="55.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="During the last week was it easy or hard for your child to:" wrappingWidth="852.3184852600098">
             <font>
                 <Font size="18.0" />
@@ -63,45 +63,43 @@
         <Text layoutX="470.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Not sure" wrappingWidth="60.776123046875" />
         <Separator layoutX="592.0" layoutY="317.0" orientation="VERTICAL" prefHeight="225.0" prefWidth="0.0" />
         <Text layoutX="531.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Somewhat unhappy" wrappingWidth="60.776123046875" />
-        <RadioButton layoutX="345.0" layoutY="415.0" mnemonicParsing="false" />
-        <RadioButton layoutX="345.0" layoutY="443.0" mnemonicParsing="false" />
-        <RadioButton layoutX="345.0" layoutY="467.0" mnemonicParsing="false" />
-        <RadioButton layoutX="345.0" layoutY="493.0" mnemonicParsing="false" />
-        <RadioButton layoutX="345.0" layoutY="519.0" mnemonicParsing="false" />
-        <RadioButton layoutX="417.0" layoutY="389.0" mnemonicParsing="false" />
-        <RadioButton layoutX="417.0" layoutY="415.0" mnemonicParsing="false" />
-        <RadioButton layoutX="417.0" layoutY="442.0" mnemonicParsing="false" />
-        <RadioButton layoutX="417.0" layoutY="467.0" mnemonicParsing="false" />
-        <RadioButton layoutX="417.0" layoutY="493.0" mnemonicParsing="false" />
-        <RadioButton layoutX="417.0" layoutY="519.0" mnemonicParsing="false" />
-        <RadioButton layoutX="483.0" layoutY="389.0" mnemonicParsing="false" />
-        <RadioButton layoutX="483.0" layoutY="415.0" mnemonicParsing="false" />
-        <RadioButton layoutX="483.0" layoutY="442.0" mnemonicParsing="false" />
-        <RadioButton layoutX="483.0" layoutY="467.0" mnemonicParsing="false" />
-        <RadioButton layoutX="483.0" layoutY="493.0" mnemonicParsing="false" />
-        <RadioButton layoutX="483.0" layoutY="519.0" mnemonicParsing="false" />
-        <RadioButton layoutX="553.0" layoutY="389.0" mnemonicParsing="false" />
-        <RadioButton layoutX="553.0" layoutY="414.0" mnemonicParsing="false" />
-        <RadioButton layoutX="553.0" layoutY="443.0" mnemonicParsing="false" />
-        <RadioButton layoutX="553.0" layoutY="467.0" mnemonicParsing="false" />
-        <RadioButton layoutX="553.0" layoutY="493.0" mnemonicParsing="false" />
-        <RadioButton layoutX="553.0" layoutY="519.0" mnemonicParsing="false" />
-        <RadioButton layoutX="625.0" layoutY="389.0" mnemonicParsing="false" />
-        <RadioButton layoutX="626.0" layoutY="415.0" mnemonicParsing="false" />
-        <RadioButton layoutX="626.0" layoutY="442.0" mnemonicParsing="false" />
-        <RadioButton layoutX="625.0" layoutY="467.0" mnemonicParsing="false" />
-        <RadioButton layoutX="626.0" layoutY="493.0" mnemonicParsing="false" />
-        <RadioButton layoutX="625.0" layoutY="519.0" mnemonicParsing="false" />
+        <RadioButton fx:id="veryhappyPour" layoutX="345.0" layoutY="415.0" mnemonicParsing="false" onAction="#onveryhappyPour" />
+        <RadioButton fx:id="veryHappyJar" layoutX="345.0" layoutY="443.0" mnemonicParsing="false" onAction="#onveryHappyJar" />
+        <RadioButton fx:id="veryHappyFork" layoutX="345.0" layoutY="467.0" mnemonicParsing="false" onAction="#onveryHappyFork" />
+        <RadioButton fx:id="veryHappyComb" layoutX="345.0" layoutY="493.0" mnemonicParsing="false" onAction="#onveryHappyComb" />
+        <RadioButton fx:id="veryHappyButtons" layoutX="345.0" layoutY="519.0" mnemonicParsing="false" onAction="#onveryHappyButtons" />
+        <RadioButton fx:id="someHappyLift" layoutX="417.0" layoutY="389.0" mnemonicParsing="false" onAction="#onsomeHappyLift" />
+        <RadioButton fx:id="someHappyPour" layoutX="417.0" layoutY="415.0" mnemonicParsing="false" onAction="#onsomeHappyPour" />
+        <RadioButton fx:id="someHappyJar" layoutX="417.0" layoutY="442.0" mnemonicParsing="false" onAction="#onsomeHappyJar" />
+        <RadioButton fx:id="someHappyFork" layoutX="417.0" layoutY="467.0" mnemonicParsing="false" onAction="#onsomeHappyFork" />
+        <RadioButton fx:id="somehappyComb" layoutX="417.0" layoutY="493.0" mnemonicParsing="false" onAction="#onsomehappyComb" />
+        <RadioButton fx:id="someHappyButton" layoutX="417.0" layoutY="519.0" mnemonicParsing="false" onAction="#onsomeHappyButton" />
+        <RadioButton fx:id="sureLift" layoutX="483.0" layoutY="389.0" mnemonicParsing="false" onAction="#onsureLift" />
+        <RadioButton fx:id="surePour" layoutX="483.0" layoutY="415.0" mnemonicParsing="false" onAction="#onsurePour" />
+        <RadioButton fx:id="sureJar" layoutX="483.0" layoutY="442.0" mnemonicParsing="false" onAction="#onsureJar" />
+        <RadioButton fx:id="sureFork" layoutX="483.0" layoutY="467.0" mnemonicParsing="false" onAction="#onsureFork" />
+        <RadioButton fx:id="sureComb" layoutX="483.0" layoutY="493.0" mnemonicParsing="false" onAction="#onsureComb" />
+        <RadioButton fx:id="notButton" layoutX="483.0" layoutY="519.0" mnemonicParsing="false" onAction="#onnotButton" />
+        <RadioButton fx:id="someUnhappyLift" layoutX="553.0" layoutY="389.0" mnemonicParsing="false" onAction="#onsomeUnhappyLift" />
+        <RadioButton fx:id="someUnhappyPour" layoutX="553.0" layoutY="414.0" mnemonicParsing="false" onAction="#onsomeUnhappyPour" />
+        <RadioButton fx:id="someUnhappyJar" layoutX="553.0" layoutY="443.0" mnemonicParsing="false" onAction="#onsomeUnhappyJar" />
+        <RadioButton fx:id="someUnhappyFork" layoutX="553.0" layoutY="467.0" mnemonicParsing="false" onAction="#onsomeUnhappyFork" />
+        <RadioButton fx:id="someunhappyComb" layoutX="553.0" layoutY="493.0" mnemonicParsing="false" onAction="#onsomeunhappyComb" />
+        <RadioButton fx:id="someUnhappyButton" layoutX="553.0" layoutY="519.0" mnemonicParsing="false" onAction="#onsomeUnhappyButton" />
+        <RadioButton fx:id="veryUnhappyLift" layoutX="625.0" layoutY="389.0" mnemonicParsing="false" onAction="#onveryUnhappyLift" />
+        <RadioButton fx:id="veryUnhappyPour" layoutX="626.0" layoutY="415.0" mnemonicParsing="false" onAction="#onveryUnhappyPour" />
+        <RadioButton fx:id="veryUnhappyJar" layoutX="626.0" layoutY="442.0" mnemonicParsing="false" onAction="#onveryUnhappyJar" />
+        <RadioButton fx:id="veryUnHappyFork" layoutX="625.0" layoutY="467.0" mnemonicParsing="false" onAction="#onveryUnHappyFork" />
+        <RadioButton fx:id="veryUnhappyComb" layoutX="626.0" layoutY="493.0" mnemonicParsing="false" onAction="#onveryUnhappyComb" />
+        <RadioButton fx:id="veryUnhappyButton" layoutX="625.0" layoutY="519.0" mnemonicParsing="false" onAction="#onveryUnhappyButton" />
       <Separator layoutX="748.0" layoutY="317.0" orientation="VERTICAL" prefHeight="225.0" prefWidth="0.0" />
       <Text layoutX="595.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Very unhappy" wrappingWidth="78.78363037109375" />
       <Text layoutX="685.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Child is too young" wrappingWidth="78.78363037109375" />
-      <RadioButton layoutX="698.0" layoutY="389.0" mnemonicParsing="false" />
-      <RadioButton layoutX="698.0" layoutY="415.0" mnemonicParsing="false" />
-      <RadioButton layoutX="698.0" layoutY="443.0" mnemonicParsing="false" />
-      <RadioButton layoutX="698.0" layoutY="467.0" mnemonicParsing="false" />
-      <RadioButton layoutX="698.0" layoutY="493.0" mnemonicParsing="false" />
-      <RadioButton layoutX="698.0" layoutY="519.0" mnemonicParsing="false" />
+      <RadioButton fx:id="youngLift" layoutX="698.0" layoutY="389.0" mnemonicParsing="false" onAction="#onyoungLift" />
+      <RadioButton fx:id="youngPour" layoutX="698.0" layoutY="415.0" mnemonicParsing="false" onAction="#onyoungPour" />
+      <RadioButton fx:id="youngJar" layoutX="698.0" layoutY="443.0" mnemonicParsing="false" onAction="#onyoungJar" />
+      <RadioButton fx:id="youngFork" layoutX="698.0" layoutY="467.0" mnemonicParsing="false" onAction="#onyoungFork" />
+      <RadioButton fx:id="youngComb" layoutX="698.0" layoutY="493.0" mnemonicParsing="false" onAction="#onyoungComb" />
+      <RadioButton fx:id="youngButtons" layoutX="698.0" layoutY="519.0" mnemonicParsing="false" onAction="#onyoungButtons" />
     </children>
-
-
 </AnchorPane>

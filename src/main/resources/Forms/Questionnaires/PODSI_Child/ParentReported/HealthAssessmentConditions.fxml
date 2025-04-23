@@ -72,7 +72,7 @@
             <RadioButton fx:id="anorexiaLimitedYes" layoutX="682.0" layoutY="308.0" mnemonicParsing="false" onAction="#onanorexiaLimitedYes" text="Yes" />
             <RadioButton fx:id="anorexiaLimitedNo" layoutX="737.0" layoutY="308.0" mnemonicParsing="false" onAction="#onanorexiaLimitedNo" text="No" />
             <Separator layoutX="126.0" layoutY="354.0" prefHeight="0.0" prefWidth="662.0" />
-            <Text layoutX="129.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Asthma" />
+            <Text layoutX="129.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Asthma" />
             <RadioButton fx:id="asthmaEverYes" layoutX="438.0" layoutY="332.0" mnemonicParsing="false" onAction="#onasthmaEverYes" text="Yes" />
             <RadioButton fx:id="asthmaEverNo" layoutX="491.0" layoutY="332.0" mnemonicParsing="false" onAction="#onasthmaEverNo" text="No" />
             <RadioButton fx:id="asthmaTreatmentYes" layoutX="565.0" layoutY="332.0" mnemonicParsing="false" onAction="#onasthmaTreatmentYes" text="Yes" />

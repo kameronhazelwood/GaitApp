@@ -7,8 +7,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane fx:id="diagCodePane" prefHeight="479.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Wizards.NewDiagnosisCodeController">
+<AnchorPane fx:id="diagCodePane" prefHeight="537.0" prefWidth="599.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Wizards.NewDiagnosisCodeController">
    <children>
       <Label layoutX="14.0" layoutY="15.0" text="Search for a Diagnosis: " />
       <TableView fx:id="newDiagCodeTable" layoutX="14.0" layoutY="75.0" prefHeight="277.0" prefWidth="572.0">
@@ -17,8 +16,12 @@
             <TableColumn fx:id="descripCol" prefWidth="511.3333435058594" text="Description" />
         </columns>
       </TableView>
-      <TextField fx:id="searchCodes"   layoutX="14.0" layoutY="41.0" prefHeight="26.0" prefWidth="572.0" promptText="Keywords..." />
-      <Button fx:id="addCodes" layoutX="406.0" layoutY="362.0" mnemonicParsing="false" onAction="#onSaveDiagCode" prefHeight="26.0" prefWidth="75.0" text="Add" />
-      <Button fx:id="cancel" layoutX="496.0" layoutY="362.0" mnemonicParsing="false" onAction="#onCancel" prefHeight="26.0" prefWidth="75.0" text="Cancel" />
+      <TextField fx:id="searchCodes" layoutX="14.0" layoutY="41.0" prefHeight="26.0" prefWidth="572.0" promptText="Keywords..." />
+      <Button fx:id="addCodes" layoutX="76.0" layoutY="438.0" mnemonicParsing="false" onAction="#onSaveDiagCode" prefHeight="61.0" prefWidth="187.0" text="Add" />
+      <Button fx:id="cancel" layoutX="343.0" layoutY="438.0" mnemonicParsing="false" onAction="#onCancel" prefHeight="61.0" prefWidth="187.0" text="Cancel" />
+      <TextField fx:id="codeField" layoutX="52.0" layoutY="378.0" prefHeight="25.0" prefWidth="109.0" />
+      <TextField fx:id="descripField" layoutX="269.0" layoutY="378.0" prefHeight="25.0" prefWidth="301.0" />
+      <Label layoutX="10.0" layoutY="382.0" text="Code" />
+      <Label layoutX="195.0" layoutY="382.0" text="Description" />
    </children>
 </AnchorPane>
