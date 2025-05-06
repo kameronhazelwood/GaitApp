@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -14,6 +15,10 @@ import java.io.IOException;
 
 public class HealthAssessmentMakeFriends {
     public Button start;
+    public CheckBox usuallyEasy;
+    public CheckBox sometimesEasy;
+    public CheckBox sometimesHard;
+    public CheckBox usuallyHard;
 
     private Stage getMyStageNext() { return (Stage) start.getScene().getWindow(); }
     public void onStart(ActionEvent event) throws IOException {
@@ -29,5 +34,37 @@ public class HealthAssessmentMakeFriends {
         stage1.setScene(new Scene(popUp, 950, 680));
         stage1.showAndWait();
         getMyStageNext().close();
+    }
+
+    public void onusuallyEasy(ActionEvent event) {
+        if(usuallyEasy.isSelected()){
+            sometimesEasy.setSelected(false);
+            sometimesHard.setSelected(false);
+            usuallyHard.setSelected(false);
+        }
+    }
+
+    public void onsometimesEasy(ActionEvent event) {
+        if(sometimesEasy.isSelected()){
+            usuallyEasy.setSelected(false);
+            sometimesHard.setSelected(false);
+            usuallyHard.setSelected(false);
+        }
+    }
+
+    public void onsometimesHard(ActionEvent event) {
+        if(sometimesHard.isSelected()){
+            usuallyEasy.setSelected(false);
+            sometimesEasy.setSelected(false);
+            usuallyHard.setSelected(false);
+        }
+    }
+
+    public void onusuallyHard(ActionEvent event) {
+        if(usuallyHard.isSelected()){
+            usuallyEasy.setSelected(false);
+            sometimesEasy.setSelected(false);
+            sometimesHard.setSelected(false);
+        }
     }
 }

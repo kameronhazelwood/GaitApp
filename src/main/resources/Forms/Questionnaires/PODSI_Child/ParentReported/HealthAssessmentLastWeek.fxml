@@ -44,7 +44,7 @@
         <Separator layoutX="215.0" layoutY="486.0" prefHeight="0.0" prefWidth="499.0" />
         <Text layoutX="218.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Did pain or discomfort interfere with Rowan's activities?" wrappingWidth="230.91802978515625" />
         <Text layoutX="447.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Most of the time" wrappingWidth="85.04296875" />
-        <RadioButton layoutX="467.0" layoutY="403.0" mnemonicParsing="false" />
+        <RadioButton fx:id="mostSick" layoutX="467.0" layoutY="403.0" mnemonicParsing="false" onAction="#onmostSick" />
         <Text layoutX="55.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="During the last week was it easy or hard for your child to:" wrappingWidth="852.3184852600098">
             <font>
                 <Font size="18.0" />
@@ -56,17 +56,17 @@
         <Text layoutX="586.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A little of the time" wrappingWidth="60.776123046875" />
         <Separator layoutX="713.0" layoutY="331.0" orientation="VERTICAL" prefHeight="155.0" prefWidth="0.0" />
         <Text layoutX="654.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="None of the time" wrappingWidth="60.776123046875" />
-        <RadioButton layoutX="467.0" layoutY="429.0" mnemonicParsing="false" />
-        <RadioButton layoutX="467.0" layoutY="460.0" mnemonicParsing="false" />
-        <RadioButton layoutX="539.0" layoutY="403.0" mnemonicParsing="false" />
-        <RadioButton layoutX="539.0" layoutY="429.0" mnemonicParsing="false" />
-        <RadioButton layoutX="539.0" layoutY="460.0" mnemonicParsing="false" />
-        <RadioButton layoutX="605.0" layoutY="403.0" mnemonicParsing="false" />
-        <RadioButton layoutX="605.0" layoutY="429.0" mnemonicParsing="false" />
-        <RadioButton layoutX="605.0" layoutY="460.0" mnemonicParsing="false" />
-        <RadioButton layoutX="675.0" layoutY="403.0" mnemonicParsing="false" />
-        <RadioButton layoutX="675.0" layoutY="428.0" mnemonicParsing="false" />
-        <RadioButton layoutX="675.0" layoutY="460.0" mnemonicParsing="false" />
+        <RadioButton fx:id="mostEnergy" layoutX="467.0" layoutY="429.0" mnemonicParsing="false" onAction="#onmostEnergy" />
+        <RadioButton fx:id="mostPain" layoutX="467.0" layoutY="460.0" mnemonicParsing="false" onAction="#onmostPain" />
+        <RadioButton fx:id="someSick" layoutX="539.0" layoutY="403.0" mnemonicParsing="false" onAction="#onsomeSick" />
+        <RadioButton fx:id="someEnergy" layoutX="539.0" layoutY="429.0" mnemonicParsing="false" onAction="#onsomeEnergy" />
+        <RadioButton fx:id="somePain" layoutX="539.0" layoutY="460.0" mnemonicParsing="false" onAction="#onsomePain" />
+        <RadioButton fx:id="littleSick" layoutX="605.0" layoutY="403.0" mnemonicParsing="false" onAction="#onlittleSick" />
+        <RadioButton fx:id="littleEnergy" layoutX="605.0" layoutY="429.0" mnemonicParsing="false" onAction="#onlittleEnergy" />
+        <RadioButton fx:id="littlePain" layoutX="605.0" layoutY="460.0" mnemonicParsing="false" onAction="#onlittlePain" />
+        <RadioButton fx:id="noneSick" layoutX="675.0" layoutY="403.0" mnemonicParsing="false" onAction="#onnoneSick" />
+        <RadioButton fx:id="noneEnergy" layoutX="675.0" layoutY="428.0" mnemonicParsing="false" onAction="#onnoneEnergy" />
+        <RadioButton fx:id="nonePain" layoutX="675.0" layoutY="460.0" mnemonicParsing="false" onAction="#onnonePain" />
     </children>
 
 </AnchorPane>

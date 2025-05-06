@@ -27,7 +27,7 @@
                 <Font size="13.0" />
             </font>
         </Text>
-        <CheckBox layoutX="139.0" layoutY="278.0" mnemonicParsing="false" text="Sí, fácilmente">
+        <CheckBox fx:id="yesEasily" layoutX="139.0" layoutY="278.0" mnemonicParsing="false" onAction="#onyesEasily" text="Sí, fácilmente">
             <font>
                 <Font size="14.0" />
             </font>
@@ -35,13 +35,13 @@
         <Separator layoutX="135.0" layoutY="265.0" prefHeight="3.0" prefWidth="659.0" />
         <Separator layoutX="298.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
         <Separator layoutX="133.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="301.0" layoutY="264.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="154.0" text=" Sí, pero es un poco difícil" wrapText="true">
+        <CheckBox fx:id="littleHard" layoutX="301.0" layoutY="264.0" mnemonicParsing="false" onAction="#onlittleHard" prefHeight="48.0" prefWidth="154.0" text=" Sí, pero es un poco difícil" wrapText="true">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
         <Separator layoutX="463.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="470.0" layoutY="278.0" mnemonicParsing="false" text="Sí, pero es muy difícil">
+        <CheckBox fx:id="veryHard" layoutX="470.0" layoutY="278.0" mnemonicParsing="false" onAction="#onveryHard" text="Sí, pero es muy difícil">
             <font>
                 <Font size="14.0" />
             </font>
@@ -54,7 +54,7 @@
             </font>
         </Text>
         <Separator layoutX="793.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="635.0" layoutY="278.0" mnemonicParsing="false" text=" No">
+        <CheckBox fx:id="no" layoutX="635.0" layoutY="278.0" mnemonicParsing="false" onAction="#onno" text=" No">
             <font>
                 <Font size="14.0" />
             </font>

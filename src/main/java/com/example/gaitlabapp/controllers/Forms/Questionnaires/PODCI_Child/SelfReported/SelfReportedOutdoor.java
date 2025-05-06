@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -14,7 +15,10 @@ import java.io.IOException;
 
 public class SelfReportedOutdoor {
     public Button start;
-
+    public CheckBox yesOutdoor;
+    public CheckBox sometimesOutdoor;
+    public CheckBox hardOutdoor;
+    public CheckBox noOutdoor;
     private Stage getMyStageStart() { return (Stage) start.getScene().getWindow(); }
     public void onStart(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
@@ -29,5 +33,36 @@ public class SelfReportedOutdoor {
         stage1.setScene(new Scene(popUp, 950, 680));
         stage1.showAndWait();
         getMyStageStart().close();
+    }
+    public void onyesOutdoor(ActionEvent event) {
+        if(yesOutdoor.isSelected()){
+            sometimesOutdoor.setSelected(false);
+            hardOutdoor.setSelected(false);
+            noOutdoor.setSelected(false);
+        }
+    }
+
+    public void onsometimesOutdoor(ActionEvent event) {
+        if(sometimesOutdoor.isSelected()){
+            yesOutdoor.setSelected(false);
+            hardOutdoor.setSelected(false);
+            noOutdoor.setSelected(false);
+        }
+    }
+
+    public void onhardOutdoor(ActionEvent event) {
+        if(hardOutdoor.isSelected()){
+            yesOutdoor.setSelected(false);
+            sometimesOutdoor.setSelected(false);
+            noOutdoor.setSelected(false);
+        }
+    }
+
+    public void onnoOutdoor(ActionEvent event) {
+        if(noOutdoor.isSelected()){
+            yesOutdoor.setSelected(false);
+            sometimesOutdoor.setSelected(false);
+            hardOutdoor.setSelected(false);
+        }
     }
 }

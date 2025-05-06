@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -14,6 +15,10 @@ import java.io.IOException;
 
 public class HealthAssessmentCompetitive {
     public Button start;
+    public CheckBox yesSports;
+    public CheckBox littleSports;
+    public CheckBox hardSports;
+    public CheckBox noSports;
 
     private Stage getMyStageStart() { return (Stage) start.getScene().getWindow(); }
     public void onStart(ActionEvent event) throws IOException {
@@ -29,5 +34,37 @@ public class HealthAssessmentCompetitive {
         stage1.setScene(new Scene(popUp, 950, 680));
         stage1.showAndWait();
         getMyStageStart().close();
+    }
+
+    public void onyesSports(ActionEvent event) {
+        if(yesSports.isSelected()){
+            littleSports.setSelected(false);
+            hardSports.setSelected(false);
+            noSports.setSelected(false);
+        }
+    }
+
+    public void onlittleSports(ActionEvent event) {
+        if(littleSports.isSelected()){
+            yesSports.setSelected(false);
+            hardSports.setSelected(false);
+            noSports.setSelected(false);
+        }
+    }
+
+    public void onhardSports(ActionEvent event) {
+        if(hardSports.isSelected()){
+            littleSports.setSelected(false);
+            yesSports.setSelected(false);
+            noSports.setSelected(false);
+        }
+    }
+
+    public void onnoSports(ActionEvent event) {
+        if(noSports.isSelected()){
+            littleSports.setSelected(false);
+            hardSports.setSelected(false);
+            yesSports.setSelected(false);
+        }
     }
 }

@@ -28,27 +28,27 @@
                 <Font size="13.0" />
             </font>
         </Text>
-        <RadioButton layoutX="402.0" layoutY="150.0" mnemonicParsing="false" text="Mucho mejor que hace un año">
+        <RadioButton fx:id="muchBetter" layoutX="402.0" layoutY="150.0" mnemonicParsing="false" onAction="#onmuchBetter" text="Mucho mejor que hace un año">
             <font>
                 <Font size="16.0" />
             </font>
         </RadioButton>
-        <RadioButton layoutX="402.0" layoutY="182.0" mnemonicParsing="false" text="Algo mejor que hace un año">
+        <RadioButton fx:id="somewhatBetter" layoutX="402.0" layoutY="182.0" mnemonicParsing="false" onAction="#onsomewhatBetter" text="Algo mejor que hace un año">
             <font>
                 <Font size="16.0" />
             </font>
         </RadioButton>
-        <RadioButton layoutX="402.0" layoutY="217.0" mnemonicParsing="false" text="Casi igual">
+        <RadioButton fx:id="same" layoutX="402.0" layoutY="217.0" mnemonicParsing="false" onAction="#onsame" text="Casi igual">
             <font>
                 <Font size="16.0" />
             </font>
         </RadioButton>
-        <RadioButton layoutX="402.0" layoutY="252.0" mnemonicParsing="false" text="Algo peor que hace un año">
+        <RadioButton fx:id="somewhatworse" layoutX="402.0" layoutY="252.0" mnemonicParsing="false" onAction="#onsomewhatworse" text="Algo peor que hace un año">
             <font>
                 <Font size="16.0" />
             </font>
         </RadioButton>
-        <RadioButton layoutX="402.0" layoutY="287.0" mnemonicParsing="false" text="Mucho peor que hace un año">
+        <RadioButton fx:id="muchWorse" layoutX="402.0" layoutY="287.0" mnemonicParsing="false" onAction="#onmuchWorse" text="Mucho peor que hace un año">
             <font>
                 <Font size="16.0" />
             </font>

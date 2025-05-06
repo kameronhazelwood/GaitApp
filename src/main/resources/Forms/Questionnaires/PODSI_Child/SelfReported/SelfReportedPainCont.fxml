@@ -10,13 +10,13 @@
 <AnchorPane prefHeight="557.0" prefWidth="967.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.PODCI_Child.SelfReported.SelfReportedPainCont">
 
     <children>
-        <Text layoutX="174.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adolescent Health Assessment (self reported)" textAlignment="CENTER">
+        <Text layoutX="174.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pediatric Health Assessment (Parent Reported)" textAlignment="CENTER">
             <font>
                 <Font size="24.0" />
             </font>
         </Text>
         <Separator layoutX="29.0" layoutY="48.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
-        <Text layoutX="46.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="During the last week, how much did pain interfere with your normal activities(including at home, outside of the home, and at school)?" wrappingWidth="956.3184928894043">
+        <Text layoutX="173.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="During the last week, how much did pain interfere with Rowan's normal activities(including at home, outside of the home, and at school)?" wrappingWidth="852.3184852600098">
             <font>
                 <Font size="18.0" />
             </font>
@@ -28,35 +28,35 @@
                 <Font size="13.0" />
             </font>
         </Text>
-        <CheckBox layoutX="52.0" layoutY="174.0" mnemonicParsing="false" text="Not at all">
+        <CheckBox fx:id="not" layoutX="52.0" layoutY="220.0" mnemonicParsing="false" onAction="#onnot" text="Not at all">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-        <Separator layoutX="48.0" layoutY="161.0" prefHeight="0.0" prefWidth="823.0" />
-        <Separator layoutX="211.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <Separator layoutX="46.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="217.0" layoutY="174.0" mnemonicParsing="false" text="A little bit">
+        <Separator layoutX="48.0" layoutY="207.0" prefHeight="0.0" prefWidth="823.0" />
+        <Separator layoutX="211.0" layoutY="207.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <Separator layoutX="46.0" layoutY="206.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox fx:id="little" layoutX="217.0" layoutY="220.0" mnemonicParsing="false" onAction="#onlittle" text="A little bit">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-        <Separator layoutX="376.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="383.0" layoutY="174.0" mnemonicParsing="false" text="Moderately">
+        <Separator layoutX="376.0" layoutY="207.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox fx:id="moderate" layoutX="383.0" layoutY="220.0" mnemonicParsing="false" onAction="#onmoderate" text="Moderately">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-        <Separator layoutX="541.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <Separator layoutX="47.0" layoutY="213.0" prefHeight="0.0" prefWidth="823.0" />
-        <Separator layoutX="706.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="548.0" layoutY="174.0" mnemonicParsing="false" text=" Quite a bit">
+        <Separator layoutX="541.0" layoutY="207.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <Separator layoutX="47.0" layoutY="259.0" prefHeight="0.0" prefWidth="823.0" />
+        <Separator layoutX="706.0" layoutY="207.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox fx:id="quite" layoutX="548.0" layoutY="220.0" mnemonicParsing="false" onAction="#onquite" text=" Quite a bit">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-        <Separator layoutX="868.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="712.0" layoutY="174.0" mnemonicParsing="false" text="Extremely">
+        <Separator layoutX="868.0" layoutY="207.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox fx:id="extremely" layoutX="712.0" layoutY="220.0" mnemonicParsing="false" onAction="#onextremely" text="Extremely">
             <font>
                 <Font size="14.0" />
             </font>

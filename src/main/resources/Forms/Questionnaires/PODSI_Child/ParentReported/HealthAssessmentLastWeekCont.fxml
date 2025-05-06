@@ -8,7 +8,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <ScrollPane xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.PODCI_Child.ParentReported.HealthAssessmentLastWeekCont">
    <content>
       <AnchorPane prefHeight="761.0" prefWidth="901.0">
@@ -59,7 +58,7 @@
               <Separator layoutX="126.0" layoutY="593.0" prefHeight="0.0" prefWidth="578.0" />
               <Text layoutX="129.0" layoutY="585.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Get on and off a bus?" />
               <Text layoutX="374.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Easy" />
-              <RadioButton layoutX="378.0" layoutY="389.0" mnemonicParsing="false" />
+              <RadioButton fx:id="easyRun" layoutX="378.0" layoutY="389.0" mnemonicParsing="false" onAction="#oneasyRun" />
               <Text layoutX="55.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="During the last week was it easy or hard for your child to:" wrappingWidth="852.3184852600098">
                   <font>
                       <Font size="18.0" />
@@ -72,45 +71,45 @@
               <Separator layoutX="625.0" layoutY="317.0" orientation="VERTICAL" prefHeight="278.0" prefWidth="0.0" />
               <Text layoutX="564.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Can't do it at all" wrappingWidth="60.776123046875" />
               <Text layoutX="628.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Too young for this activity" wrappingWidth="78.78363037109375" />
-              <RadioButton layoutX="378.0" layoutY="415.0" mnemonicParsing="false" />
-              <RadioButton layoutX="378.0" layoutY="443.0" mnemonicParsing="false" />
-              <RadioButton layoutX="378.0" layoutY="467.0" mnemonicParsing="false" />
-              <RadioButton layoutX="378.0" layoutY="493.0" mnemonicParsing="false" />
-              <RadioButton layoutX="378.0" layoutY="519.0" mnemonicParsing="false" />
-              <RadioButton layoutX="378.0" layoutY="544.0" mnemonicParsing="false" />
-              <RadioButton layoutX="378.0" layoutY="571.0" mnemonicParsing="false" />
-              <RadioButton layoutX="450.0" layoutY="389.0" mnemonicParsing="false" />
-              <RadioButton layoutX="450.0" layoutY="415.0" mnemonicParsing="false" />
-              <RadioButton layoutX="450.0" layoutY="442.0" mnemonicParsing="false" />
-              <RadioButton layoutX="450.0" layoutY="467.0" mnemonicParsing="false" />
-              <RadioButton layoutX="450.0" layoutY="493.0" mnemonicParsing="false" />
-              <RadioButton layoutX="450.0" layoutY="519.0" mnemonicParsing="false" />
-              <RadioButton layoutX="450.0" layoutY="544.0" mnemonicParsing="false" />
-              <RadioButton layoutX="450.0" layoutY="571.0" mnemonicParsing="false" />
-              <RadioButton layoutX="516.0" layoutY="389.0" mnemonicParsing="false" />
-              <RadioButton layoutX="516.0" layoutY="415.0" mnemonicParsing="false" />
-              <RadioButton layoutX="516.0" layoutY="442.0" mnemonicParsing="false" />
-              <RadioButton layoutX="516.0" layoutY="467.0" mnemonicParsing="false" />
-              <RadioButton layoutX="516.0" layoutY="493.0" mnemonicParsing="false" />
-              <RadioButton layoutX="516.0" layoutY="519.0" mnemonicParsing="false" />
-              <RadioButton layoutX="516.0" layoutY="544.0" mnemonicParsing="false" />
-              <RadioButton layoutX="516.0" layoutY="571.0" mnemonicParsing="false" />
-              <RadioButton layoutX="586.0" layoutY="389.0" mnemonicParsing="false" />
-              <RadioButton layoutX="586.0" layoutY="414.0" mnemonicParsing="false" />
-              <RadioButton layoutX="586.0" layoutY="443.0" mnemonicParsing="false" />
-              <RadioButton layoutX="586.0" layoutY="467.0" mnemonicParsing="false" />
-              <RadioButton layoutX="586.0" layoutY="493.0" mnemonicParsing="false" />
-              <RadioButton layoutX="586.0" layoutY="519.0" mnemonicParsing="false" />
-              <RadioButton layoutX="586.0" layoutY="544.0" mnemonicParsing="false" />
-              <RadioButton layoutX="586.0" layoutY="571.0" mnemonicParsing="false" />
-              <RadioButton layoutX="658.0" layoutY="389.0" mnemonicParsing="false" />
-              <RadioButton layoutX="659.0" layoutY="415.0" mnemonicParsing="false" />
-              <RadioButton layoutX="659.0" layoutY="442.0" mnemonicParsing="false" />
-              <RadioButton layoutX="658.0" layoutY="467.0" mnemonicParsing="false" />
-              <RadioButton layoutX="659.0" layoutY="493.0" mnemonicParsing="false" />
-              <RadioButton layoutX="658.0" layoutY="519.0" mnemonicParsing="false" />
-              <RadioButton layoutX="658.0" layoutY="544.0" mnemonicParsing="false" />
-              <RadioButton layoutX="659.0" layoutY="571.0" mnemonicParsing="false" />
+              <RadioButton fx:id="easyBike" layoutX="378.0" layoutY="415.0" mnemonicParsing="false" onAction="#oneasyBike" />
+              <RadioButton fx:id="easyClimb" layoutX="378.0" layoutY="443.0" mnemonicParsing="false" onAction="#oneasyClimb" />
+              <RadioButton fx:id="easyStairs" layoutX="378.0" layoutY="467.0" mnemonicParsing="false" onAction="#oneasyStairs" />
+              <RadioButton fx:id="easyMile" layoutX="378.0" layoutY="493.0" mnemonicParsing="false" onAction="#oneasyMile" />
+              <RadioButton fx:id="easyThree" layoutX="378.0" layoutY="519.0" mnemonicParsing="false" onAction="#oneasyThree" />
+              <RadioButton fx:id="easyOne" layoutX="378.0" layoutY="544.0" mnemonicParsing="false" onAction="#oneasyOne" />
+              <RadioButton fx:id="easyBus" layoutX="378.0" layoutY="571.0" mnemonicParsing="false" onAction="#oneasyBus" />
+              <RadioButton fx:id="littleRun" layoutX="450.0" layoutY="389.0" mnemonicParsing="false" onAction="#onlittleRun" />
+              <RadioButton fx:id="littleBike" layoutX="450.0" layoutY="415.0" mnemonicParsing="false" onAction="#onlittleBike" />
+              <RadioButton fx:id="littleClimb" layoutX="450.0" layoutY="442.0" mnemonicParsing="false" onAction="#onLittleClimb" />
+              <RadioButton fx:id="littleStairs" layoutX="450.0" layoutY="467.0" mnemonicParsing="false" onAction="#onlittleStairs" />
+              <RadioButton fx:id="littleMile" layoutX="450.0" layoutY="493.0" mnemonicParsing="false" onAction="#onlittleMile" />
+              <RadioButton fx:id="littleThree" layoutX="450.0" layoutY="519.0" mnemonicParsing="false" onAction="#onlittleThree" />
+              <RadioButton fx:id="littleOne" layoutX="450.0" layoutY="544.0" mnemonicParsing="false" onAction="#onlittleOne" />
+              <RadioButton fx:id="littleBus" layoutX="450.0" layoutY="571.0" mnemonicParsing="false" onAction="#onlittleBus" />
+              <RadioButton fx:id="hardRun" layoutX="516.0" layoutY="389.0" mnemonicParsing="false" onAction="#onhardRun" />
+              <RadioButton fx:id="hardBike" layoutX="516.0" layoutY="415.0" mnemonicParsing="false" onAction="#onhardBike" />
+              <RadioButton fx:id="hardClimb" layoutX="516.0" layoutY="442.0" mnemonicParsing="false" onAction="#onhardClimb" />
+              <RadioButton fx:id="hardStairs" layoutX="516.0" layoutY="467.0" mnemonicParsing="false" onAction="#onhardStairs" />
+              <RadioButton fx:id="hardMile" layoutX="516.0" layoutY="493.0" mnemonicParsing="false" onAction="#onhardMile" />
+              <RadioButton fx:id="hardThree" layoutX="516.0" layoutY="519.0" mnemonicParsing="false" onAction="#onhardThree" />
+              <RadioButton fx:id="hardOne" layoutX="516.0" layoutY="544.0" mnemonicParsing="false" onAction="#onhardOne" />
+              <RadioButton fx:id="hardBus" layoutX="516.0" layoutY="571.0" mnemonicParsing="false" onAction="#onhardBus" />
+              <RadioButton fx:id="cantRun" layoutX="586.0" layoutY="389.0" mnemonicParsing="false" onAction="#oncantRun" />
+              <RadioButton fx:id="cantBike" layoutX="586.0" layoutY="414.0" mnemonicParsing="false" onAction="#oncantBike" />
+              <RadioButton fx:id="cantClimb" layoutX="586.0" layoutY="443.0" mnemonicParsing="false" onAction="#oncantClimb" />
+              <RadioButton fx:id="cantStairs" layoutX="586.0" layoutY="467.0" mnemonicParsing="false" onAction="#oncantStairs" />
+              <RadioButton fx:id="cantMile" layoutX="586.0" layoutY="493.0" mnemonicParsing="false" onAction="#oncantMile" />
+              <RadioButton fx:id="cantThree" layoutX="586.0" layoutY="519.0" mnemonicParsing="false" onAction="#oncantThree" />
+              <RadioButton fx:id="cantOne" layoutX="586.0" layoutY="544.0" mnemonicParsing="false" onAction="#oncantOne" />
+              <RadioButton fx:id="cantBus" layoutX="586.0" layoutY="571.0" mnemonicParsing="false" onAction="#oncantBus" />
+              <RadioButton fx:id="youngRun" layoutX="658.0" layoutY="389.0" mnemonicParsing="false" onAction="#onyoungRun" />
+              <RadioButton fx:id="youngBike" layoutX="659.0" layoutY="415.0" mnemonicParsing="false" onAction="#onyoungBike" />
+              <RadioButton fx:id="youngClimb" layoutX="659.0" layoutY="442.0" mnemonicParsing="false" onAction="#onyoungClimb" />
+              <RadioButton fx:id="youngStairs" layoutX="658.0" layoutY="467.0" mnemonicParsing="false" onAction="#onyoungStairs" />
+              <RadioButton fx:id="youngMile" layoutX="659.0" layoutY="493.0" mnemonicParsing="false" onAction="#onyoungMile" />
+              <RadioButton fx:id="youngThree" layoutX="658.0" layoutY="519.0" mnemonicParsing="false" onAction="#onyoungThree" />
+              <RadioButton fx:id="youngOne" layoutX="658.0" layoutY="544.0" mnemonicParsing="false" onAction="#onyoungOne" />
+              <RadioButton fx:id="youngBus" layoutX="659.0" layoutY="571.0" mnemonicParsing="false" onAction="#onyoungBus" />
           </children>
       
       </AnchorPane>

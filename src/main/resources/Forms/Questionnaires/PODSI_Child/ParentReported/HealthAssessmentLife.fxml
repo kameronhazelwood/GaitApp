@@ -27,7 +27,7 @@
                 <Font size="13.0" />
             </font>
         </Text>
-        <CheckBox layoutX="52.0" layoutY="174.0" mnemonicParsing="false" text="Very satisfied">
+        <CheckBox fx:id="verySatisified" layoutX="52.0" layoutY="174.0" mnemonicParsing="false" onAction="#onverySatisified" text="Very satisfied">
             <font>
                 <Font size="14.0" />
             </font>
@@ -35,13 +35,13 @@
         <Separator layoutX="48.0" layoutY="161.0" prefHeight="0.0" prefWidth="823.0" />
         <Separator layoutX="211.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
         <Separator layoutX="46.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="217.0" layoutY="174.0" mnemonicParsing="false" text="Somewhat satisfied">
+        <CheckBox fx:id="somewhatSat" layoutX="217.0" layoutY="174.0" mnemonicParsing="false" onAction="#onsomewhatSat" text="Somewhat satisfied">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
         <Separator layoutX="376.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="383.0" layoutY="174.0" mnemonicParsing="false" text="Neutral">
+        <CheckBox fx:id="neutral" layoutX="383.0" layoutY="174.0" mnemonicParsing="false" onAction="#onneutral" text="Neutral">
             <font>
                 <Font size="14.0" />
             </font>
@@ -49,13 +49,13 @@
         <Separator layoutX="539.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
         <Separator layoutX="47.0" layoutY="213.0" prefHeight="0.0" prefWidth="823.0" />
         <Separator layoutX="706.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="543.0" layoutY="174.0" mnemonicParsing="false" text="Somewhat dissatisfied">
+        <CheckBox fx:id="somewhatDis" layoutX="543.0" layoutY="174.0" mnemonicParsing="false" onAction="#onsomewhatDis" text="Somewhat dissatisfied">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
         <Separator layoutX="868.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="712.0" layoutY="174.0" mnemonicParsing="false" text=" Very dissatisfied">
+        <CheckBox fx:id="veryDis" layoutX="712.0" layoutY="174.0" mnemonicParsing="false" onAction="#onveryDis" text=" Very dissatisfied">
             <font>
                 <Font size="14.0" />
             </font>

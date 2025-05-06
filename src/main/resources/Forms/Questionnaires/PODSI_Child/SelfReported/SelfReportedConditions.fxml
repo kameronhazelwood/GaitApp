@@ -6,172 +6,181 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
-<AnchorPane prefHeight="836.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.PODCI_Child.SelfReported.SelfReportedConditions">
-
-    <children>
-        <Text layoutX="174.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adolescent Health Assessment (self reported)" textAlignment="CENTER">
-            <font>
-                <Font size="24.0" />
-            </font>
-        </Text>
-        <Separator layoutX="29.0" layoutY="48.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
-        <Text layoutX="55.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Have you ever been told by a doctor, nurse, teacher, or other health professional that you have had any of the following conditions?" wrappingWidth="852.3184852600098">
-            <font>
-                <Font size="18.0" />
-            </font>
-        </Text>
-        <Separator layoutX="27.0" layoutY="783.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
-        <Button fx:id="start" layoutX="366.0" layoutY="700.0" mnemonicParsing="false" onAction="#onStart" prefHeight="48.0" prefWidth="206.0" text="NEXT QUESTION" />
-        <Text layoutX="422.0" layoutY="771.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question 3 of 27">
-            <font>
-                <Font size="13.0" />
-            </font>
-        </Text>
-        <Text layoutX="55.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If yes, indicate if your child is being treated for this conditionand if your child is limited by those conditions." wrappingWidth="852.3184852600098">
-            <font>
-                <Font size="18.0" />
-            </font>
-        </Text>
-        <Separator layoutX="124.0" layoutY="182.0" orientation="VERTICAL" prefHeight="486.0" prefWidth="0.0" />
-        <Separator layoutX="126.0" layoutY="536.0" prefHeight="0.0" prefWidth="662.0" />
-        <Separator layoutX="127.0" layoutY="181.0" prefHeight="3.0" prefWidth="662.0" />
-        <Separator layoutX="786.0" layoutY="180.0" orientation="VERTICAL" prefHeight="486.0" prefWidth="0.0" />
-        <Separator layoutX="126.0" layoutY="250.0" prefHeight="3.0" prefWidth="662.0" />
-        <Text layoutX="453.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Has your child ever had it?" wrappingWidth="75.951171875" />
-        <Separator layoutX="429.0" layoutY="182.0" orientation="VERTICAL" prefHeight="486.0" prefWidth="0.0" />
-        <Text layoutX="129.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Juvenile Arthritis (one or two joints)" />
-        <RadioButton layoutX="438.0" layoutY="254.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="491.0" layoutY="254.0" mnemonicParsing="false" text="No" />
-        <Separator layoutX="546.0" layoutY="182.0" orientation="VERTICAL" prefHeight="486.0" prefWidth="0.0" />
-        <Text layoutX="563.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Does your child receive treatment for it now?" wrappingWidth="95.39257812499989" />
-        <RadioButton layoutX="565.0" layoutY="254.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="617.0" layoutY="254.0" mnemonicParsing="false" text="No" />
-        <Separator layoutX="666.0" layoutY="180.0" orientation="VERTICAL" prefHeight="486.0" prefWidth="0.0" />
-        <Text layoutX="677.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Are your child's activities limited by it now?" wrappingWidth="103.15118408203136" />
-        <RadioButton layoutX="682.0" layoutY="254.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="737.0" layoutY="254.0" mnemonicParsing="false" text="No" />
-        <Separator layoutX="126.0" layoutY="276.0" prefHeight="0.0" prefWidth="662.0" />
-        <Separator layoutX="126.0" layoutY="302.0" prefHeight="0.0" prefWidth="662.0" />
-        <Text layoutX="129.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Juvenile Arthritis (many joints)" />
-        <RadioButton layoutX="438.0" layoutY="280.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="491.0" layoutY="280.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="565.0" layoutY="281.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="617.0" layoutY="281.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="682.0" layoutY="280.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="737.0" layoutY="280.0" mnemonicParsing="false" text="No" />
-        <Separator layoutX="126.0" layoutY="328.0" prefHeight="0.0" prefWidth="662.0" />
-        <Text layoutX="129.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anorexia or bulemia (eating disorders)" />
-        <RadioButton layoutX="438.0" layoutY="308.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="491.0" layoutY="308.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="565.0" layoutY="308.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="617.0" layoutY="308.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="682.0" layoutY="308.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="737.0" layoutY="308.0" mnemonicParsing="false" text="No" />
-        <Separator layoutX="126.0" layoutY="354.0" prefHeight="0.0" prefWidth="662.0" />
-        <Text layoutX="129.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Asthma" />
-        <RadioButton layoutX="438.0" layoutY="332.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="491.0" layoutY="332.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="565.0" layoutY="332.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="617.0" layoutY="332.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="682.0" layoutY="333.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="737.0" layoutY="333.0" mnemonicParsing="false" text="No" />
-        <Separator layoutX="126.0" layoutY="380.0" prefHeight="0.0" prefWidth="662.0" />
-        <Text layoutX="129.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Attention or behavioral problems" />
-        <RadioButton layoutX="438.0" layoutY="359.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="491.0" layoutY="359.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="565.0" layoutY="359.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="617.0" layoutY="359.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="682.0" layoutY="359.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="737.0" layoutY="359.0" mnemonicParsing="false" text="No" />
-        <Separator layoutX="126.0" layoutY="406.0" prefHeight="0.0" prefWidth="662.0" />
-        <Text layoutX="129.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chronic allergies or sinus troubles" />
-        <RadioButton layoutX="438.0" layoutY="385.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="491.0" layoutY="385.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="565.0" layoutY="385.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="617.0" layoutY="385.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="682.0" layoutY="385.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="737.0" layoutY="385.0" mnemonicParsing="false" text="No" />
-        <Separator layoutX="126.0" layoutY="432.0" prefHeight="0.0" prefWidth="662.0" />
-        <Text layoutX="129.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developmental Delay" />
-        <RadioButton layoutX="438.0" layoutY="411.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="491.0" layoutY="411.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="565.0" layoutY="411.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="617.0" layoutY="411.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="682.0" layoutY="411.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="737.0" layoutY="411.0" mnemonicParsing="false" text="No" />
-        <Separator layoutX="126.0" layoutY="458.0" prefHeight="0.0" prefWidth="662.0" />
-        <Text layoutX="129.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cognitive Impairment" />
-        <RadioButton layoutX="438.0" layoutY="437.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="491.0" layoutY="437.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="565.0" layoutY="437.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="617.0" layoutY="437.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="682.0" layoutY="437.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="737.0" layoutY="437.0" mnemonicParsing="false" text="No" />
-        <Separator layoutX="126.0" layoutY="484.0" prefHeight="0.0" prefWidth="662.0" />
-        <Text layoutX="129.0" layoutY="478.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diabetes" />
-        <RadioButton layoutX="438.0" layoutY="463.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="491.0" layoutY="463.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="565.0" layoutY="464.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="617.0" layoutY="464.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="682.0" layoutY="464.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="737.0" layoutY="464.0" mnemonicParsing="false" text="No" />
-        <Separator layoutX="126.0" layoutY="510.0" prefHeight="0.0" prefWidth="662.0" />
-        <Text layoutX="130.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Epilepsy (seizure disorder)" />
-        <RadioButton layoutX="438.0" layoutY="488.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="491.0" layoutY="488.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="565.0" layoutY="489.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="617.0" layoutY="489.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="682.0" layoutY="489.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="737.0" layoutY="489.0" mnemonicParsing="false" text="No" />
-        <Text layoutX="130.0" layoutY="527.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hearing impairment or deafness" />
-        <RadioButton layoutX="438.0" layoutY="514.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="491.0" layoutY="514.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="565.0" layoutY="514.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="617.0" layoutY="514.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="682.0" layoutY="515.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="737.0" layoutY="515.0" mnemonicParsing="false" text="No" />
-        <Separator layoutX="126.0" layoutY="562.0" prefHeight="0.0" prefWidth="662.0" />
-        <Text layoutX="129.0" layoutY="552.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Heart problem" />
-        <Separator layoutX="126.0" layoutY="588.0" prefHeight="0.0" prefWidth="662.0" />
-        <Text layoutX="129.0" layoutY="581.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Learning problem" />
-        <Separator layoutX="126.0" layoutY="614.0" prefHeight="0.0" prefWidth="662.0" />
-        <Text layoutX="129.0" layoutY="606.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sleep disturbance" />
-        <Separator layoutX="126.0" layoutY="640.0" prefHeight="0.0" prefWidth="662.0" />
-        <Text layoutX="129.0" layoutY="632.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Speech problems" />
-        <Separator layoutX="126.0" layoutY="666.0" prefHeight="0.0" prefWidth="662.0" />
-        <Text layoutX="129.0" layoutY="658.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vision problems" />
-        <RadioButton layoutX="438.0" layoutY="539.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="491.0" layoutY="539.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="438.0" layoutY="568.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="491.0" layoutY="568.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="438.0" layoutY="593.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="491.0" layoutY="593.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="438.0" layoutY="619.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="491.0" layoutY="619.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="438.0" layoutY="645.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="491.0" layoutY="645.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="565.0" layoutY="541.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="565.0" layoutY="568.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="617.0" layoutY="568.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="565.0" layoutY="593.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="617.0" layoutY="593.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="617.0" layoutY="541.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="565.0" layoutY="619.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="617.0" layoutY="619.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="565.0" layoutY="645.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="617.0" layoutY="645.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="682.0" layoutY="541.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="737.0" layoutY="541.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="682.0" layoutY="568.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="737.0" layoutY="568.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="682.0" layoutY="593.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="737.0" layoutY="593.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="682.0" layoutY="619.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="737.0" layoutY="619.0" mnemonicParsing="false" text="No" />
-        <RadioButton layoutX="682.0" layoutY="645.0" mnemonicParsing="false" text="Yes" />
-        <RadioButton layoutX="737.0" layoutY="645.0" mnemonicParsing="false" text="No" />
-    </children>
+<?import javafx.scene.control.ScrollPane?>
 
 
-</AnchorPane>
+<ScrollPane prefHeight="836.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.PODCI_Child.SelfReported.SelfReportedConditions">
+    <content>
+        <AnchorPane prefHeight="836.0" prefWidth="911.0">
+
+            <children>
+                <Text layoutX="174.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pediatric Health Assessment (Parent Reported)" textAlignment="CENTER">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Text>
+                <Separator layoutX="29.0" layoutY="48.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
+                <Text layoutX="55.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Have you ever been told by a doctor, nurse, teacher, or other health professionalthat Rowan has had any of the following conditions?" wrappingWidth="852.3184852600098">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <Separator layoutX="27.0" layoutY="783.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
+                <Button fx:id="start" layoutX="366.0" layoutY="700.0" mnemonicParsing="false" onAction="#onStart" prefHeight="48.0" prefWidth="206.0" text="NEXT QUESTION" />
+                <Text layoutX="422.0" layoutY="771.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question 3 of 27">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Text>
+                <Text layoutX="55.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If yes, indicate if your child is being treated for this conditionand if your child is limited by those conditions." wrappingWidth="852.3184852600098">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <Separator layoutX="124.0" layoutY="182.0" orientation="VERTICAL" prefHeight="486.0" prefWidth="0.0" />
+                <Separator layoutX="126.0" layoutY="536.0" prefHeight="0.0" prefWidth="662.0" />
+                <Separator layoutX="127.0" layoutY="181.0" prefHeight="3.0" prefWidth="662.0" />
+                <Separator layoutX="786.0" layoutY="180.0" orientation="VERTICAL" prefHeight="486.0" prefWidth="0.0" />
+                <Separator layoutX="126.0" layoutY="250.0" prefHeight="3.0" prefWidth="662.0" />
+                <Text layoutX="453.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Has your child ever had it?" wrappingWidth="75.951171875" />
+                <Separator layoutX="429.0" layoutY="182.0" orientation="VERTICAL" prefHeight="486.0" prefWidth="0.0" />
+                <Text layoutX="129.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Juvenile Arthritis (one or two joints)" />
+                <RadioButton fx:id="JAOneHadItYes" layoutX="438.0" layoutY="254.0" mnemonicParsing="false" onAction="#onJAOneHadItYes" text="Yes" />
+                <RadioButton fx:id="JAOneHadItNo" layoutX="491.0" layoutY="254.0" mnemonicParsing="false" onAction="#onJAOneHadItNo" text="No" />
+                <Separator layoutX="546.0" layoutY="182.0" orientation="VERTICAL" prefHeight="486.0" prefWidth="0.0" />
+                <Text layoutX="563.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Does your child receive treatment for it now?" wrappingWidth="95.39257812499989" />
+                <RadioButton fx:id="JAtreatmentYes" layoutX="565.0" layoutY="254.0" mnemonicParsing="false" onAction="#onJAtreatmentYes" text="Yes" />
+                <RadioButton fx:id="JAtreatmentNo" layoutX="617.0" layoutY="254.0" mnemonicParsing="false" onAction="#onJAtreatmentNo" text="No" />
+                <Separator layoutX="666.0" layoutY="180.0" orientation="VERTICAL" prefHeight="486.0" prefWidth="0.0" />
+                <Text layoutX="677.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Are your child's activities limited by it now?" wrappingWidth="103.15118408203136" />
+                <RadioButton fx:id="JAlimitedYes" layoutX="682.0" layoutY="254.0" mnemonicParsing="false" onAction="#onJAlimitedYes" text="Yes" />
+                <RadioButton fx:id="JAlimitedNo" layoutX="737.0" layoutY="254.0" mnemonicParsing="false" onAction="#onJAlimitedNo" text="No" />
+                <Separator layoutX="126.0" layoutY="276.0" prefHeight="0.0" prefWidth="662.0" />
+                <Separator layoutX="126.0" layoutY="302.0" prefHeight="0.0" prefWidth="662.0" />
+                <Text layoutX="129.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Juvenile Arthritis (many joints)" />
+                <RadioButton fx:id="JAManyEverYes" layoutX="438.0" layoutY="280.0" mnemonicParsing="false" onAction="#onJAManyEverYes" text="Yes" />
+                <RadioButton fx:id="JAManyEverNo" layoutX="491.0" layoutY="280.0" mnemonicParsing="false" onAction="#onJAManyEverNo" text="No" />
+                <RadioButton fx:id="JAManyTreatmentYes" layoutX="565.0" layoutY="281.0" mnemonicParsing="false" onAction="#onJAManyTreatmentYes" text="Yes" />
+                <RadioButton fx:id="JAManyTreatmentNo" layoutX="617.0" layoutY="281.0" mnemonicParsing="false" onAction="#onJAManyTreatmentNo" text="No" />
+                <RadioButton fx:id="JAManyLimitedYes" layoutX="682.0" layoutY="280.0" mnemonicParsing="false" onAction="#onJAManyLimitedYes" text="Yes" />
+                <RadioButton fx:id="JAManyLimitedNo" layoutX="737.0" layoutY="280.0" mnemonicParsing="false" onAction="#onJAManyLimitedNo" text="No" />
+                <Separator layoutX="126.0" layoutY="328.0" prefHeight="0.0" prefWidth="662.0" />
+                <Text layoutX="129.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anorexia or bulemia (eating disorders)" />
+                <RadioButton fx:id="anorexiaEverYes" layoutX="438.0" layoutY="308.0" mnemonicParsing="false" onAction="#onanorexiaEverYes" text="Yes" />
+                <RadioButton fx:id="anorexiaEverNo" layoutX="491.0" layoutY="308.0" mnemonicParsing="false" onAction="#onanorexiaEverNo" text="No" />
+                <RadioButton fx:id="anorexiaTreatmentYes" layoutX="565.0" layoutY="308.0" mnemonicParsing="false" onAction="#onanorexiaTreatmentYes" text="Yes" />
+                <RadioButton fx:id="anorexiaTreatmentNo" layoutX="617.0" layoutY="308.0" mnemonicParsing="false" onAction="#onanorexiaTreatmentNo" text="No" />
+                <RadioButton fx:id="anorexiaLimitedYes" layoutX="682.0" layoutY="308.0" mnemonicParsing="false" onAction="#onanorexiaLimitedYes" text="Yes" />
+                <RadioButton fx:id="anorexiaLimitedNo" layoutX="737.0" layoutY="308.0" mnemonicParsing="false" onAction="#onanorexiaLimitedNo" text="No" />
+                <Separator layoutX="126.0" layoutY="354.0" prefHeight="0.0" prefWidth="662.0" />
+                <Text layoutX="129.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Asthma" />
+                <RadioButton fx:id="asthmaEverYes" layoutX="438.0" layoutY="332.0" mnemonicParsing="false" onAction="#onasthmaEverYes" text="Yes" />
+                <RadioButton fx:id="asthmaEverNo" layoutX="491.0" layoutY="332.0" mnemonicParsing="false" onAction="#onasthmaEverNo" text="No" />
+                <RadioButton fx:id="asthmaTreatmentYes" layoutX="565.0" layoutY="332.0" mnemonicParsing="false" onAction="#onasthmaTreatmentYes" text="Yes" />
+                <RadioButton fx:id="asthmaTreatmentNo" layoutX="617.0" layoutY="332.0" mnemonicParsing="false" onAction="#onasthmaTreatmentNo" text="No" />
+                <RadioButton fx:id="asthmaLimitedYes" layoutX="682.0" layoutY="333.0" mnemonicParsing="false" onAction="#onasthmaLimitedYes" text="Yes" />
+                <RadioButton fx:id="asthmaLimitedNo" layoutX="737.0" layoutY="333.0" mnemonicParsing="false" onAction="#onasthmaLimitedNo" text="No" />
+                <Separator layoutX="126.0" layoutY="380.0" prefHeight="0.0" prefWidth="662.0" />
+                <Text layoutX="129.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Attention or behavioral problems" />
+                <RadioButton fx:id="attentionEverYes" layoutX="438.0" layoutY="359.0" mnemonicParsing="false" onAction="#onattentionEverYes" text="Yes" />
+                <RadioButton fx:id="attentionEverNo" layoutX="491.0" layoutY="359.0" mnemonicParsing="false" onAction="#onattentionEverNo" text="No" />
+                <RadioButton fx:id="attentionTreatmentYes" layoutX="565.0" layoutY="359.0" mnemonicParsing="false" onAction="#onattentionTreatmentYes" text="Yes" />
+                <RadioButton fx:id="attentionTreatmentNo" layoutX="617.0" layoutY="359.0" mnemonicParsing="false" onAction="#onattentionTreatmentNo" text="No" />
+                <RadioButton fx:id="attentionLimitedYes" layoutX="682.0" layoutY="359.0" mnemonicParsing="false" onAction="#onattentionLimitedYes" text="Yes" />
+                <RadioButton fx:id="attentionLimitedNo" layoutX="737.0" layoutY="359.0" mnemonicParsing="false" onAction="#onattentionLimitedNo" text="No" />
+                <Separator layoutX="126.0" layoutY="406.0" prefHeight="0.0" prefWidth="662.0" />
+                <Text layoutX="129.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chronic allergies or sinus troubles" />
+                <RadioButton fx:id="allergiesEverYes" layoutX="438.0" layoutY="385.0" mnemonicParsing="false" onAction="#onallergiesEverYes" text="Yes" />
+                <RadioButton fx:id="allergiesEverNo" layoutX="491.0" layoutY="385.0" mnemonicParsing="false" onAction="#onallergiesEverNo" text="No" />
+                <RadioButton fx:id="allergytreatmentYes" layoutX="565.0" layoutY="385.0" mnemonicParsing="false" onAction="#onallergytreatmentYes" text="Yes" />
+                <RadioButton fx:id="allergytreatmentNo" layoutX="617.0" layoutY="385.0" mnemonicParsing="false" onAction="#onallergytreatmentNo" text="No" />
+                <RadioButton fx:id="allergyLimitedYes" layoutX="682.0" layoutY="385.0" mnemonicParsing="false" onAction="#onallergyLimitedYes" text="Yes" />
+                <RadioButton fx:id="allergyLimitedNo" layoutX="737.0" layoutY="385.0" mnemonicParsing="false" onAction="#onallergyLimitedNo" text="No" />
+                <Separator layoutX="126.0" layoutY="432.0" prefHeight="0.0" prefWidth="662.0" />
+                <Text layoutX="129.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developmental Delay" />
+                <RadioButton fx:id="delayEverYes" layoutX="438.0" layoutY="411.0" mnemonicParsing="false" onAction="#ondelayEverYes" text="Yes" />
+                <RadioButton fx:id="delayEverNo" layoutX="491.0" layoutY="411.0" mnemonicParsing="false" onAction="#ondelayEverNo" text="No" />
+                <RadioButton fx:id="delayTreatmentYes" layoutX="565.0" layoutY="411.0" mnemonicParsing="false" onAction="#ondelayTreatmentYes" text="Yes" />
+                <RadioButton fx:id="delayTreatmentNo" layoutX="617.0" layoutY="411.0" mnemonicParsing="false" onAction="#ondelayTreatmentNo" text="No" />
+                <RadioButton fx:id="delayLimitedYes" layoutX="682.0" layoutY="411.0" mnemonicParsing="false" onAction="#ondelayLimitedYes" text="Yes" />
+                <RadioButton fx:id="delayLimitedNo" layoutX="737.0" layoutY="411.0" mnemonicParsing="false" onAction="#ondelayLimitedNo" text="No" />
+                <Separator layoutX="126.0" layoutY="458.0" prefHeight="0.0" prefWidth="662.0" />
+                <Text layoutX="129.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cognitive Impairment" />
+                <RadioButton fx:id="cognitiveEverYes" layoutX="438.0" layoutY="437.0" mnemonicParsing="false" onAction="#oncognitiveEverYes" text="Yes" />
+                <RadioButton fx:id="cognitiveEverNo" layoutX="491.0" layoutY="437.0" mnemonicParsing="false" onAction="#oncognitiveEverNo" text="No" />
+                <RadioButton fx:id="cognitiveTreatmentYes" layoutX="565.0" layoutY="437.0" mnemonicParsing="false" onAction="#oncognitiveTreatmentYes" text="Yes" />
+                <RadioButton fx:id="cognitiveTreatmentNo" layoutX="617.0" layoutY="437.0" mnemonicParsing="false" onAction="#oncognitiveTreatmentNo" text="No" />
+                <RadioButton fx:id="cognitiveLimitedYes" layoutX="682.0" layoutY="437.0" mnemonicParsing="false" onAction="#oncognitiveLimitedYes" text="Yes" />
+                <RadioButton fx:id="cognitiveLimitedNo" layoutX="737.0" layoutY="437.0" mnemonicParsing="false" onAction="#oncognitiveLimitedNo" text="No" />
+                <Separator layoutX="126.0" layoutY="484.0" prefHeight="0.0" prefWidth="662.0" />
+                <Text layoutX="129.0" layoutY="478.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diabetes" />
+                <RadioButton fx:id="diabetesEverYes" layoutX="438.0" layoutY="463.0" mnemonicParsing="false" onAction="#ondiabetesEverYes" text="Yes" />
+                <RadioButton fx:id="diabetesEverNo" layoutX="491.0" layoutY="463.0" mnemonicParsing="false" onAction="#ondiabetesEverNo" text="No" />
+                <RadioButton fx:id="diabetesTreatmentYes" layoutX="565.0" layoutY="464.0" mnemonicParsing="false" onAction="#ondiabetesTreatmentYes" text="Yes" />
+                <RadioButton fx:id="diabetesTreatmentNo" layoutX="617.0" layoutY="464.0" mnemonicParsing="false" onAction="#ondiabetesTreatmentNo" text="No" />
+                <RadioButton fx:id="diabetesLimitedYes" layoutX="682.0" layoutY="464.0" mnemonicParsing="false" onAction="#ondiabetesLimitedYes" text="Yes" />
+                <RadioButton fx:id="diabetesLimitedNo" layoutX="737.0" layoutY="464.0" mnemonicParsing="false" onAction="#ondiabetesLimitedNo" text="No" />
+                <Separator layoutX="126.0" layoutY="510.0" prefHeight="0.0" prefWidth="662.0" />
+                <Text layoutX="130.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Epilepsy (seizure disorder)" />
+                <RadioButton fx:id="seizureEverYes" layoutX="438.0" layoutY="488.0" mnemonicParsing="false" onAction="#onseizureEverYes" text="Yes" />
+                <RadioButton fx:id="seizureEverNo" layoutX="491.0" layoutY="488.0" mnemonicParsing="false" onAction="#onseizureEverNo" text="No" />
+                <RadioButton fx:id="seizureTreatmentYes" layoutX="565.0" layoutY="489.0" mnemonicParsing="false" onAction="#onseizureTreatmentYes" text="Yes" />
+                <RadioButton fx:id="seizureTreatmentNo" layoutX="617.0" layoutY="489.0" mnemonicParsing="false" onAction="#onseizureTreatmentNo" text="No" />
+                <RadioButton fx:id="seizureLimitedYes" layoutX="682.0" layoutY="489.0" mnemonicParsing="false" onAction="#onseizureLimitedYes" text="Yes" />
+                <RadioButton fx:id="seizureLimitedNo" layoutX="737.0" layoutY="489.0" mnemonicParsing="false" onAction="#onseizureLimitedNo" text="No" />
+                <Text layoutX="130.0" layoutY="527.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hearing impairment or deafness" />
+                <RadioButton fx:id="hearingEverYes" layoutX="438.0" layoutY="514.0" mnemonicParsing="false" onAction="#onhearingEverYes" text="Yes" />
+                <RadioButton fx:id="hearingEverNo" layoutX="491.0" layoutY="514.0" mnemonicParsing="false" onAction="#onhearingEverNo" text="No" />
+                <RadioButton fx:id="hearingTreatmentyes" layoutX="565.0" layoutY="514.0" mnemonicParsing="false" onAction="#onhearingTreatmentyes" text="Yes" />
+                <RadioButton fx:id="hearingTreatmentNo" layoutX="617.0" layoutY="514.0" mnemonicParsing="false" onAction="#onhearingTreatmentNo" text="No" />
+                <RadioButton fx:id="hearingLimitedYes" layoutX="682.0" layoutY="515.0" mnemonicParsing="false" onAction="#onhearingLimitedYes" text="Yes" />
+                <RadioButton fx:id="hearingLimitedNo" layoutX="737.0" layoutY="515.0" mnemonicParsing="false" onAction="#onhearingLimitedNo" text="No" />
+                <Separator layoutX="126.0" layoutY="562.0" prefHeight="0.0" prefWidth="662.0" />
+                <Text layoutX="129.0" layoutY="552.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Heart problem" />
+                <Separator layoutX="126.0" layoutY="588.0" prefHeight="0.0" prefWidth="662.0" />
+                <Text layoutX="129.0" layoutY="581.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Learning problem" />
+                <Separator layoutX="126.0" layoutY="614.0" prefHeight="0.0" prefWidth="662.0" />
+                <Text layoutX="129.0" layoutY="606.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sleep disturbance" />
+                <Separator layoutX="126.0" layoutY="640.0" prefHeight="0.0" prefWidth="662.0" />
+                <Text layoutX="129.0" layoutY="632.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Speech problems" />
+                <Separator layoutX="126.0" layoutY="666.0" prefHeight="0.0" prefWidth="662.0" />
+                <Text layoutX="129.0" layoutY="658.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vision problems" />
+                <RadioButton fx:id="heartEverYes" layoutX="438.0" layoutY="541.0" mnemonicParsing="false" onAction="#onheartEverYes" text="Yes" />
+                <RadioButton fx:id="heartEverNo" layoutX="491.0" layoutY="541.0" mnemonicParsing="false" onAction="#onheartEverNo" text="No" />
+                <RadioButton fx:id="learningEverYes" layoutX="438.0" layoutY="568.0" mnemonicParsing="false" onAction="#onlearningEverYes" text="Yes" />
+                <RadioButton fx:id="learningEverNo" layoutX="491.0" layoutY="568.0" mnemonicParsing="false" onAction="#onlearningEverNo" text="No" />
+                <RadioButton fx:id="sleepEverYes" layoutX="438.0" layoutY="593.0" mnemonicParsing="false" onAction="#onsleepEverYes" text="Yes" />
+                <RadioButton fx:id="sleepEverNo" layoutX="491.0" layoutY="593.0" mnemonicParsing="false" onAction="#onsleepEverNo" text="No" />
+                <RadioButton fx:id="speechEverYes" layoutX="438.0" layoutY="619.0" mnemonicParsing="false" onAction="#onspeechEverYes" text="Yes" />
+                <RadioButton fx:id="speechEverNo" layoutX="491.0" layoutY="619.0" mnemonicParsing="false" onAction="#onspeechEverNo" text="No" />
+                <RadioButton fx:id="visionEverYes" layoutX="438.0" layoutY="645.0" mnemonicParsing="false" onAction="#onvisionEverYes" text="Yes" />
+                <RadioButton fx:id="visionEverNo" layoutX="491.0" layoutY="645.0" mnemonicParsing="false" onAction="#onvisionEverNo" text="No" />
+                <RadioButton fx:id="heartTreatmentYes" layoutX="565.0" layoutY="541.0" mnemonicParsing="false" onAction="#onheartTreatmentYes" text="Yes" />
+                <RadioButton fx:id="learningTreatmentyes" layoutX="565.0" layoutY="568.0" mnemonicParsing="false" onAction="#onlearningTreatmentyes" text="Yes" />
+                <RadioButton fx:id="learningTreatmentNo" layoutX="617.0" layoutY="568.0" mnemonicParsing="false" onAction="#onlearningTreatmentNo" text="No" />
+                <RadioButton fx:id="sleepTreatmentYes" layoutX="565.0" layoutY="593.0" mnemonicParsing="false" onAction="#onsleepTreatmentYes" text="Yes" />
+                <RadioButton fx:id="sleepTreatmentNo" layoutX="617.0" layoutY="593.0" mnemonicParsing="false" onAction="#onsleepTreatmentNo" text="No" />
+                <RadioButton fx:id="heartTreatmentNo" layoutX="617.0" layoutY="541.0" mnemonicParsing="false" onAction="#onheartTreatmentNo" text="No" />
+                <RadioButton fx:id="speechTreatmentYes" layoutX="565.0" layoutY="619.0" mnemonicParsing="false" onAction="#onspeechTreatmentYes" text="Yes" />
+                <RadioButton fx:id="speechTreatmentNo" layoutX="617.0" layoutY="619.0" mnemonicParsing="false" onAction="#onspeechTreatmentNo" text="No" />
+                <RadioButton fx:id="visionTreatmentYes" layoutX="565.0" layoutY="645.0" mnemonicParsing="false" onAction="#onvisionTreatmentYes" text="Yes" />
+                <RadioButton fx:id="visionTreatmentNo" layoutX="617.0" layoutY="645.0" mnemonicParsing="false" onAction="#onvisionTreatmentNo" text="No" />
+                <RadioButton fx:id="heartLimitedYes" layoutX="682.0" layoutY="541.0" mnemonicParsing="false" onAction="#onheartLimitedYes" text="Yes" />
+                <RadioButton fx:id="heartLimitedNo" layoutX="737.0" layoutY="541.0" mnemonicParsing="false" onAction="#onheartLimitedNo" text="No" />
+                <RadioButton fx:id="learningLimitedYes" layoutX="682.0" layoutY="568.0" mnemonicParsing="false" onAction="#onlearningLimitedYes" text="Yes" />
+                <RadioButton fx:id="earningLimitedNo" layoutX="737.0" layoutY="568.0" mnemonicParsing="false" onAction="#onlearningLimitedNo" text="No" />
+                <RadioButton fx:id="sleepLimitedYes" layoutX="682.0" layoutY="593.0" mnemonicParsing="false" onAction="#onsleepLimitedYes" text="Yes" />
+                <RadioButton fx:id="sleepLimitedNo" layoutX="737.0" layoutY="593.0" mnemonicParsing="false" onAction="#onsleepLimitedNo" text="No" />
+                <RadioButton fx:id="speechLimitedYes" layoutX="682.0" layoutY="619.0" mnemonicParsing="false" onAction="#onspeechLimitedYes" text="Yes" />
+                <RadioButton fx:id="speechLimitedNo" layoutX="737.0" layoutY="619.0" mnemonicParsing="false" onAction="#onspeechLimitedNo" text="No" />
+                <RadioButton fx:id="visionLimitedYes" layoutX="682.0" layoutY="645.0" mnemonicParsing="false" onAction="#onvisionLimitedYes" text="Yes" />
+                <RadioButton fx:id="visionLimitedNo" layoutX="737.0" layoutY="645.0" mnemonicParsing="false" onAction="#onvisionLimitedNo" text="No" />
+            </children>
+
+
+        </AnchorPane>
+    </content>
+
+
+
+</ScrollPane>

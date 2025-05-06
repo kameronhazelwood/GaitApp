@@ -27,7 +27,7 @@
             <Font size="13.0" />
         </font>
     </Text>
-    <CheckBox layoutX="123.0" layoutY="249.0" mnemonicParsing="false" text="Frecuentemente">
+    <CheckBox fx:id="oftenGym" layoutX="123.0" layoutY="249.0" mnemonicParsing="false" onAction="#onoftenGym" text="Frecuentemente">
         <font>
             <Font size="14.0" />
         </font>
@@ -35,13 +35,13 @@
     <Separator layoutX="119.0" layoutY="236.0" prefHeight="3.0" prefWidth="662.0" />
     <Separator layoutX="282.0" layoutY="236.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
     <Separator layoutX="117.0" layoutY="236.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-    <CheckBox layoutX="288.0" layoutY="249.0" mnemonicParsing="false" text=" Algunas veces">
+    <CheckBox fx:id="sometimesGym" layoutX="288.0" layoutY="249.0" mnemonicParsing="false" onAction="#onsometimesGym" text=" Algunas veces">
         <font>
             <Font size="14.0" />
         </font>
     </CheckBox>
     <Separator layoutX="447.0" layoutY="236.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-    <CheckBox layoutX="454.0" layoutY="249.0" mnemonicParsing="false" text="Nunca o rara vez">
+    <CheckBox fx:id="neverGym" layoutX="454.0" layoutY="249.0" mnemonicParsing="false" onAction="#onneverGym" text="Nunca o rara vez">
         <font>
             <Font size="14.0" />
         </font>
@@ -49,7 +49,7 @@
     <Separator layoutX="612.0" layoutY="236.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
     <Separator layoutX="118.0" layoutY="288.0" prefHeight="3.0" prefWidth="661.0" />
     <Separator layoutX="777.0" layoutY="236.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-    <CheckBox layoutX="618.0" layoutY="235.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="154.0" text=" No fue a gimnasia ni deportes" wrapText="true">
+    <CheckBox fx:id="noGym" layoutX="618.0" layoutY="235.0" mnemonicParsing="false" onAction="#onnoGym" prefHeight="48.0" prefWidth="154.0" text=" No fue a gimnasia ni deportes" wrapText="true">
         <font>
             <Font size="14.0" />
         </font>

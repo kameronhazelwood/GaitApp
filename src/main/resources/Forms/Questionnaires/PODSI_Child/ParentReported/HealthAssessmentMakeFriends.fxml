@@ -27,7 +27,7 @@
                 <Font size="13.0" />
             </font>
         </Text>
-        <CheckBox layoutX="124.0" layoutY="217.0" mnemonicParsing="false" text="Usually easy">
+        <CheckBox fx:id="usuallyEasy" layoutX="124.0" layoutY="217.0" mnemonicParsing="false" onAction="#onusuallyEasy" text="Usually easy">
             <font>
                 <Font size="14.0" />
             </font>
@@ -35,13 +35,13 @@
         <Separator layoutX="120.0" layoutY="204.0" prefHeight="3.0" prefWidth="661.0" />
         <Separator layoutX="283.0" layoutY="204.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
         <Separator layoutX="118.0" layoutY="204.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="289.0" layoutY="217.0" mnemonicParsing="false" text="Sometimes">
+        <CheckBox fx:id="sometimesEasy" layoutX="289.0" layoutY="217.0" mnemonicParsing="false" onAction="#onsometimesEasy" text="Sometimes">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
         <Separator layoutX="448.0" layoutY="204.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="455.0" layoutY="217.0" mnemonicParsing="false" text="Sometimes hard">
+        <CheckBox fx:id="sometimesHard" layoutX="455.0" layoutY="217.0" mnemonicParsing="false" onAction="#onsometimesHard" text="Sometimes hard">
             <font>
                 <Font size="14.0" />
             </font>
@@ -49,7 +49,7 @@
         <Separator layoutX="613.0" layoutY="204.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
         <Separator layoutX="119.0" layoutY="256.0" prefHeight="3.0" prefWidth="661.0" />
         <Separator layoutX="778.0" layoutY="204.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="620.0" layoutY="217.0" mnemonicParsing="false" text="Usually hard">
+        <CheckBox fx:id="usuallyHard" layoutX="620.0" layoutY="217.0" mnemonicParsing="false" onAction="#onusuallyHard" text="Usually hard">
             <font>
                 <Font size="14.0" />
             </font>

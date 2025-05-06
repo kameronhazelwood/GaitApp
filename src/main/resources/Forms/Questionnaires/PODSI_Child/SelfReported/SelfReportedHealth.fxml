@@ -28,27 +28,27 @@
                 <Font size="13.0" />
             </font>
         </Text>
-        <RadioButton layoutX="402.0" layoutY="150.0" mnemonicParsing="false" text="Excellent">
+        <RadioButton fx:id="excellent" layoutX="402.0" layoutY="150.0" mnemonicParsing="false" onAction="#onexcellent" text="Excellent">
             <font>
                 <Font size="16.0" />
             </font>
         </RadioButton>
-        <RadioButton layoutX="402.0" layoutY="182.0" mnemonicParsing="false" text="Very Good">
+        <RadioButton fx:id="veryGood" layoutX="402.0" layoutY="182.0" mnemonicParsing="false" onAction="#onveryGood" text="Very Good">
             <font>
                 <Font size="16.0" />
             </font>
         </RadioButton>
-        <RadioButton layoutX="402.0" layoutY="217.0" mnemonicParsing="false" text="Good">
+        <RadioButton fx:id="good" layoutX="402.0" layoutY="217.0" mnemonicParsing="false" onAction="#ongood" text="Good">
             <font>
                 <Font size="16.0" />
             </font>
         </RadioButton>
-        <RadioButton layoutX="402.0" layoutY="252.0" mnemonicParsing="false" text="Fair">
+        <RadioButton fx:id="fair" layoutX="402.0" layoutY="252.0" mnemonicParsing="false" onAction="#onfair" text="Fair">
             <font>
                 <Font size="16.0" />
             </font>
         </RadioButton>
-        <RadioButton layoutX="402.0" layoutY="287.0" mnemonicParsing="false" text="Poor">
+        <RadioButton fx:id="poor" layoutX="402.0" layoutY="287.0" mnemonicParsing="false" onAction="#onpoor" text="Poor">
             <font>
                 <Font size="16.0" />
             </font>

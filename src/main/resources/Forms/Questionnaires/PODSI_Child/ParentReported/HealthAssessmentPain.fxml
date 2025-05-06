@@ -27,41 +27,41 @@
                 <Font size="13.0" />
             </font>
         </Text>
-        <CheckBox layoutX="52.0" layoutY="174.0" mnemonicParsing="false" text="None">
+        <CheckBox fx:id="none" layoutX="52.0" layoutY="235.0" mnemonicParsing="false" onAction="#onnone" text="None">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-        <Separator layoutX="48.0" layoutY="161.0" prefHeight="0.0" prefWidth="828.0" />
-        <Separator layoutX="184.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <Separator layoutX="46.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="190.0" layoutY="174.0" mnemonicParsing="false" text="Very mild">
+        <Separator layoutX="48.0" layoutY="222.0" prefHeight="0.0" prefWidth="828.0" />
+        <Separator layoutX="184.0" layoutY="222.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <Separator layoutX="46.0" layoutY="222.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox fx:id="veryMild" layoutX="190.0" layoutY="235.0" mnemonicParsing="false" onAction="#onveryMild" text="Very mild">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-        <Separator layoutX="322.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="328.0" layoutY="176.0" mnemonicParsing="false" text="Mild">
+        <Separator layoutX="322.0" layoutY="222.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox fx:id="mild" layoutX="328.0" layoutY="237.0" mnemonicParsing="false" onAction="#onMild" text="Mild">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-        <Separator layoutX="460.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <Separator layoutX="47.0" layoutY="213.0" prefHeight="3.0" prefWidth="830.0" />
-        <Separator layoutX="598.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="473.0" layoutY="176.0" mnemonicParsing="false" text="Moderate">
+        <Separator layoutX="460.0" layoutY="222.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <Separator layoutX="47.0" layoutY="274.0" prefHeight="3.0" prefWidth="830.0" />
+        <Separator layoutX="598.0" layoutY="222.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox fx:id="moderate" layoutX="473.0" layoutY="237.0" mnemonicParsing="false" onAction="#onmoderate" text="Moderate">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-        <Separator layoutX="736.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="604.0" layoutY="178.0" mnemonicParsing="false" text="Severe">
+        <Separator layoutX="736.0" layoutY="222.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox fx:id="severe" layoutX="604.0" layoutY="239.0" mnemonicParsing="false" onAction="#onsevere" text="Severe">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-      <Separator layoutX="874.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-      <CheckBox layoutX="742.0" layoutY="178.0" mnemonicParsing="false" text=" Very severe">
+      <Separator layoutX="874.0" layoutY="222.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+      <CheckBox fx:id="verySevere" layoutX="742.0" layoutY="239.0" mnemonicParsing="false" onAction="#onverySevere" text=" Very severe">
          <font>
             <Font size="14.0" />
          </font>

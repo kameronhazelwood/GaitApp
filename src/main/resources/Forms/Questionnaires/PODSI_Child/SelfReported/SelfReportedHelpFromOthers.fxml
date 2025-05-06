@@ -10,7 +10,7 @@
 <AnchorPane prefHeight="745.0" prefWidth="893.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.PODCI_Child.SelfReported.SelfReportedHelpFromOthers">
 
     <children>
-        <Text layoutX="174.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adolescent Health Assessment (self reported)" textAlignment="CENTER">
+        <Text layoutX="174.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adolescent Health Assessment (Self Reported)" textAlignment="CENTER">
             <font>
                 <Font size="24.0" />
             </font>
@@ -28,7 +28,7 @@
                 <Font size="13.0" />
             </font>
         </Text>
-        <CheckBox layoutX="52.0" layoutY="174.0" mnemonicParsing="false" text="Never">
+        <CheckBox fx:id="neverHelp" layoutX="52.0" layoutY="174.0" mnemonicParsing="false" onAction="#onneverHelp" text="Never">
             <font>
                 <Font size="14.0" />
             </font>
@@ -36,13 +36,13 @@
         <Separator layoutX="48.0" layoutY="161.0" prefHeight="0.0" prefWidth="823.0" />
         <Separator layoutX="211.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
         <Separator layoutX="46.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="217.0" layoutY="174.0" mnemonicParsing="false" text="Sometimes">
+        <CheckBox fx:id="sometimesHelp" layoutX="217.0" layoutY="174.0" mnemonicParsing="false" onAction="#onsometimesHelp" text="Sometimes">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
         <Separator layoutX="376.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="383.0" layoutY="174.0" mnemonicParsing="false" text=" About half the time">
+        <CheckBox fx:id="halfHelp" layoutX="383.0" layoutY="174.0" mnemonicParsing="false" onAction="#onhalfHelp" text=" About half the time">
             <font>
                 <Font size="14.0" />
             </font>
@@ -55,18 +55,18 @@
             </font>
         </Text>
         <Separator layoutX="706.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="548.0" layoutY="174.0" mnemonicParsing="false" text="Often">
+        <CheckBox fx:id="oftenHelp" layoutX="548.0" layoutY="174.0" mnemonicParsing="false" onAction="#onoftenHelp" text="Often">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
         <Separator layoutX="868.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="712.0" layoutY="174.0" mnemonicParsing="false" text="All the time">
+        <CheckBox fx:id="allHelp" layoutX="712.0" layoutY="174.0" mnemonicParsing="false" onAction="#onallHelp" text="All the time">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-        <CheckBox layoutX="52.0" layoutY="462.0" mnemonicParsing="false" text="Never">
+        <CheckBox fx:id="neverDevice" layoutX="52.0" layoutY="462.0" mnemonicParsing="false" onAction="#onneverDevice" text="Never">
             <font>
                 <Font size="14.0" />
             </font>
@@ -74,13 +74,13 @@
         <Separator layoutX="47.0" layoutY="449.0" prefHeight="0.0" prefWidth="823.0" />
         <Separator layoutX="211.0" layoutY="449.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
         <Separator layoutX="46.0" layoutY="449.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="216.0" layoutY="462.0" mnemonicParsing="false" text="Sometimes">
+        <CheckBox fx:id="sometimesDevice" layoutX="216.0" layoutY="462.0" mnemonicParsing="false" onAction="#onsometimesDevice" text="Sometimes">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
         <Separator layoutX="376.0" layoutY="449.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="381.0" layoutY="462.0" mnemonicParsing="false" text=" About half the time">
+        <CheckBox fx:id="halfDevice" layoutX="381.0" layoutY="462.0" mnemonicParsing="false" onAction="#onhalfDevice" text=" About half the time">
             <font>
                 <Font size="14.0" />
             </font>
@@ -88,16 +88,17 @@
         <Separator layoutX="541.0" layoutY="449.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
         <Separator layoutX="46.0" layoutY="501.0" prefHeight="0.0" prefWidth="823.0" />
         <Separator layoutX="703.0" layoutY="449.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="548.0" layoutY="462.0" mnemonicParsing="false" text="Often">
+        <CheckBox fx:id="oftenDevice" layoutX="548.0" layoutY="462.0" mnemonicParsing="false" onAction="#onoftenDevice" text="Often">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-        <CheckBox layoutX="710.0" layoutY="462.0" mnemonicParsing="false" text="All the time">
+        <CheckBox fx:id="allDevice" layoutX="710.0" layoutY="462.0" mnemonicParsing="false" onAction="#onallDevice" text="All the time">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
         <Separator layoutX="869.0" layoutY="449.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
     </children>
+
 </AnchorPane>

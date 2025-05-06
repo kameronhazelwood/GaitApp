@@ -64,6 +64,14 @@ public class GaitTestVisitController implements Initializable {
         public TextField seizureTextfield;
         public Label orthosisLabel;
         public Label sideLabel;
+        public Text PTHospital;
+        public Text PTClinic;
+        public Text PTSchool;
+        public Text PTHome;
+        public Text OTHospital;
+        public Text OTClinic;
+        public Text OTSchool;
+        public Text OTHome;
         @Autowired
         PatientService patientService;
         public TableView<String> reportsTable;
@@ -1380,9 +1388,21 @@ public class GaitTestVisitController implements Initializable {
                 gaitConcerns.setText("Frequent Tripping");
                 followupDate.setText("05/31/2025");
                 genConcerns.setText("n/a");
-                ptFreq.setText("None");
-                otFreq.setText("None");
-
+                firstWalk.setText("");
+                firstTalked.setText("");
+                FMS5Text.setText("Uses crutches");
+                FMS50Text.setText("Independent on level surfaces (Requires a rail for stairs) ");
+                FMS500Text.setText("Crawling");
+                seizureTextfield.setText("Depakote");
+                pain.setText(" R -- Fingers L -- Shoulder L -- Wrist" );
+                PTHospital.setText("None");
+                PTClinic.setText("One of more times per week");
+                PTSchool.setText("Two of three times per week");
+                PTHome.setText("About once per month");
+                OTHospital.setText("None");
+                OTClinic.setText("One of more times per week");
+                OTSchool.setText("About one per month");
+                OTHome.setText("About once per month");
 
 
             GMFCSCombo.getItems().addAll(

@@ -15,7 +15,7 @@
             </font>
         </Text>
         <Separator layoutX="29.0" layoutY="48.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
-        <Text layoutX="55.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Can Rowan participate in recreational outdoor activitieswith other children the same age?" wrappingWidth="852.3184852600098">
+        <Text layoutX="55.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Can Rowan participate in recreational outdoor activities with other children the same age?" wrappingWidth="852.3184852600098">
             <font>
                 <Font size="18.0" />
             </font>
@@ -27,40 +27,34 @@
                 <Font size="13.0" />
             </font>
         </Text>
-        <CheckBox layoutX="52.0" layoutY="278.0" mnemonicParsing="false" text=" Yes, easily">
+        <CheckBox fx:id="yesOutdoor" layoutX="98.0" layoutY="278.0" mnemonicParsing="false" onAction="#onyesOutdoor" text=" Yes, easily">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-        <Separator layoutX="48.0" layoutY="265.0" prefHeight="0.0" prefWidth="823.0" />
-        <Separator layoutX="211.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <Separator layoutX="46.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="217.0" layoutY="278.0" mnemonicParsing="false" text="Sometimes">
+        <Separator layoutX="94.0" layoutY="265.0" prefHeight="3.0" prefWidth="661.0" />
+        <Separator layoutX="257.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <Separator layoutX="92.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox fx:id="sometimesOutdoor" layoutX="263.0" layoutY="278.0" mnemonicParsing="false" onAction="#onsometimesOutdoor" text="Sometimes">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-        <Separator layoutX="376.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="383.0" layoutY="278.0" mnemonicParsing="false" text="Yes, but a little hard">
+        <Separator layoutX="422.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox fx:id="hardOutdoor" layoutX="429.0" layoutY="278.0" mnemonicParsing="false" onAction="#onhardOutdoor" text="Yes, but a little hard">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-        <Separator layoutX="541.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <Separator layoutX="47.0" layoutY="317.0" prefHeight="0.0" prefWidth="823.0" />
+        <Separator layoutX="587.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <Separator layoutX="93.0" layoutY="317.0" prefHeight="3.0" prefWidth="661.0" />
         <Text layoutX="200.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(For example: bicycling, tricycling, skating, hiking, jogging)" wrappingWidth="852.3184852600098">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <Separator layoutX="706.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="548.0" layoutY="278.0" mnemonicParsing="false" text=" No">
-            <font>
-                <Font size="14.0" />
-            </font>
-        </CheckBox>
-        <Separator layoutX="868.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="712.0" layoutY="278.0" mnemonicParsing="false" text="All the time">
+        <Separator layoutX="752.0" layoutY="265.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox fx:id="noOutdoor" layoutX="594.0" layoutY="278.0" mnemonicParsing="false" onAction="#onnoOutdoor" text=" No">
             <font>
                 <Font size="14.0" />
             </font>

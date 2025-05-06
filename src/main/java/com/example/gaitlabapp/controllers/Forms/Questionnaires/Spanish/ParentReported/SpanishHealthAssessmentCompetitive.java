@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -14,6 +15,10 @@ import java.io.IOException;
 
 public class SpanishHealthAssessmentCompetitive {
     public Button start;
+    public CheckBox yesEasily;
+    public CheckBox littleHard;
+    public CheckBox veryHard;
+    public CheckBox no;
 
     private Stage getMyStageStart() { return (Stage) start.getScene().getWindow(); }
     public void onStart(ActionEvent event) throws IOException {
@@ -29,5 +34,37 @@ public class SpanishHealthAssessmentCompetitive {
         stage1.setScene(new Scene(popUp, 950, 680));
         stage1.showAndWait();
         getMyStageStart().close();
+    }
+
+    public void onyesEasily(ActionEvent event) {
+        if(yesEasily.isSelected()){
+            littleHard.setSelected(false);
+            veryHard.setSelected(false);
+            no.setSelected(false);
+        }
+    }
+
+    public void onlittleHard(ActionEvent event) {
+        if(littleHard.isSelected()){
+            yesEasily.setSelected(false);
+            veryHard.setSelected(false);
+            no.setSelected(false);
+        }
+    }
+
+    public void onveryHard(ActionEvent event) {
+        if(veryHard.isSelected()){
+            yesEasily.setSelected(false);
+            littleHard.setSelected(false);
+            no.setSelected(false);
+        }
+    }
+
+    public void onno(ActionEvent event) {
+        if(no.isSelected()){
+            yesEasily.setSelected(false);
+            littleHard.setSelected(false);
+            veryHard.setSelected(false);
+        }
     }
 }

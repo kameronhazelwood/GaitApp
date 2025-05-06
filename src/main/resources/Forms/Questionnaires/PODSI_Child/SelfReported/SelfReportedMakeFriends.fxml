@@ -10,13 +10,13 @@
 <AnchorPane prefHeight="557.0" prefWidth="967.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Questionnaires.PODCI_Child.SelfReported.SelfReportedMakeFriends">
 
     <children>
-        <Text layoutX="174.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adolescent Health Assessment (self reported)" textAlignment="CENTER">
+        <Text layoutX="174.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pediatric Health Assessment (Self Reported)" textAlignment="CENTER">
             <font>
                 <Font size="24.0" />
             </font>
         </Text>
         <Separator layoutX="29.0" layoutY="48.0" prefHeight="3.0" prefWidth="862.0" style="-fx-background-color: #8B0000;" />
-        <Text layoutX="166.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Is it easy or hard for you to make friends with kids your own age?" wrappingWidth="745.9184608459473">
+        <Text layoutX="174.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Is it easy or hard for you to make friends with children your age?" wrappingWidth="852.3184852600098">
             <font>
                 <Font size="18.0" />
             </font>
@@ -28,29 +28,29 @@
                 <Font size="13.0" />
             </font>
         </Text>
-        <CheckBox layoutX="143.0" layoutY="222.0" mnemonicParsing="false" text="Usually easy">
+        <CheckBox fx:id="usuallyEasy" layoutX="124.0" layoutY="217.0" mnemonicParsing="false" onAction="#onusuallyEasy" text="Usually easy">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-        <Separator layoutX="139.0" layoutY="209.0" prefHeight="3.0" prefWidth="660.0" />
-        <Separator layoutX="302.0" layoutY="209.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <Separator layoutX="137.0" layoutY="209.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="308.0" layoutY="222.0" mnemonicParsing="false" text="Sometimes">
+        <Separator layoutX="120.0" layoutY="204.0" prefHeight="3.0" prefWidth="661.0" />
+        <Separator layoutX="283.0" layoutY="204.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <Separator layoutX="118.0" layoutY="204.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox fx:id="sometimesEasy" layoutX="289.0" layoutY="217.0" mnemonicParsing="false" onAction="#onsometimesEasy" text="Sometimes">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-        <Separator layoutX="467.0" layoutY="209.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="474.0" layoutY="222.0" mnemonicParsing="false" text="Sometimes hard">
+        <Separator layoutX="448.0" layoutY="204.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox fx:id="sometimesHard" layoutX="455.0" layoutY="217.0" mnemonicParsing="false" onAction="#onsometimesHard" text="Sometimes hard">
             <font>
                 <Font size="14.0" />
             </font>
         </CheckBox>
-        <Separator layoutX="632.0" layoutY="209.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <Separator layoutX="138.0" layoutY="261.0" prefHeight="3.0" prefWidth="660.0" />
-        <Separator layoutX="797.0" layoutY="209.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-        <CheckBox layoutX="639.0" layoutY="222.0" mnemonicParsing="false" text="Usually hard">
+        <Separator layoutX="613.0" layoutY="204.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <Separator layoutX="119.0" layoutY="256.0" prefHeight="3.0" prefWidth="661.0" />
+        <Separator layoutX="778.0" layoutY="204.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+        <CheckBox fx:id="usuallyHard" layoutX="620.0" layoutY="217.0" mnemonicParsing="false" onAction="#onusuallyHard" text="Usually hard">
             <font>
                 <Font size="14.0" />
             </font>

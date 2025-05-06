@@ -27,35 +27,29 @@
             <Font size="13.0" />
         </font>
     </Text>
-    <CheckBox layoutX="52.0" layoutY="174.0" mnemonicParsing="false" text="Often">
+    <CheckBox fx:id="oftenGym" layoutX="93.0" layoutY="231.0" mnemonicParsing="false" onAction="#onoftenGym" text="Often">
         <font>
             <Font size="14.0" />
         </font>
     </CheckBox>
-    <Separator layoutX="48.0" layoutY="161.0" prefHeight="0.0" prefWidth="823.0" />
-    <Separator layoutX="211.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-    <Separator layoutX="46.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-    <CheckBox layoutX="217.0" layoutY="174.0" mnemonicParsing="false" text="Sometimes">
+    <Separator layoutX="89.0" layoutY="218.0" prefHeight="3.0" prefWidth="661.0" />
+    <Separator layoutX="252.0" layoutY="218.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+    <Separator layoutX="87.0" layoutY="218.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+    <CheckBox fx:id="sometimesGym" layoutX="258.0" layoutY="231.0" mnemonicParsing="false" onAction="#onsometimesGym" text="Sometimes">
         <font>
             <Font size="14.0" />
         </font>
     </CheckBox>
-    <Separator layoutX="376.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-    <CheckBox layoutX="383.0" layoutY="174.0" mnemonicParsing="false" text="Never or rarely">
+    <Separator layoutX="417.0" layoutY="218.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+    <CheckBox fx:id="neverGym" layoutX="424.0" layoutY="231.0" mnemonicParsing="false" onAction="#onneverGym" text="Never or rarely">
         <font>
             <Font size="14.0" />
         </font>
     </CheckBox>
-    <Separator layoutX="541.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-    <Separator layoutX="47.0" layoutY="213.0" prefHeight="0.0" prefWidth="823.0" />
-    <Separator layoutX="706.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-    <CheckBox layoutX="548.0" layoutY="174.0" mnemonicParsing="false" text=" No gym or recess">
-        <font>
-            <Font size="14.0" />
-        </font>
-    </CheckBox>
-    <Separator layoutX="868.0" layoutY="161.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
-    <CheckBox layoutX="712.0" layoutY="174.0" mnemonicParsing="false" text="All the time">
+    <Separator layoutX="582.0" layoutY="218.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+    <Separator layoutX="88.0" layoutY="270.0" prefHeight="3.0" prefWidth="661.0" />
+    <Separator layoutX="747.0" layoutY="218.0" orientation="VERTICAL" prefHeight="53.0" prefWidth="0.0" />
+    <CheckBox fx:id="noGym" layoutX="589.0" layoutY="231.0" mnemonicParsing="false" onAction="#onnoGym" text=" No gym or recess">
         <font>
             <Font size="14.0" />
         </font>
