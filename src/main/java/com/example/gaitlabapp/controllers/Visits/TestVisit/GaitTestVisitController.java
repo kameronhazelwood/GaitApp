@@ -1376,12 +1376,12 @@ public class GaitTestVisitController implements Initializable {
                 TproxLinterp.setValue("N");
                 TdistalRinterp.setValue("H");
                 TdistalLinterp.setValue("N");
-                personReporting.setText("Kam Hazelwood");
+                personReporting.setText("Kameron Hazelwood");
                 relationshipToPatientQues.setText("Birth Parent");
                 dateReported.setText("4/5/2025");
                 premature.setText("Not Premature");
                 visitDate.setText("03/07/2025");
-                completingQuestionnaire.setText("Kam Hazelwood");
+                completingQuestionnaire.setText("Kameron Hazelwood");
                 supportInWalk.setText("Requires Support");
                 changeWalk.setText("No Change");
                 currentDevices.setText("Hand Led");
@@ -1403,6 +1403,10 @@ public class GaitTestVisitController implements Initializable {
                 OTClinic.setText("One of more times per week");
                 OTSchool.setText("About one per month");
                 OTHome.setText("About once per month");
+                firstTalked.setText("18 months");
+                firstWalk.setText("18 months");
+                childLearn.setText("Slow learner, needs special class");
+                relationshipToPatient.setText("Birth Parent");
 
 
             GMFCSCombo.getItems().addAll(
@@ -3155,7 +3159,19 @@ public class GaitTestVisitController implements Initializable {
 
         }
 
-        public void onEditBaseline(ActionEvent event) {
+        public void onEditBaseline(ActionEvent event) throws IOException {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Wizards/EditBaselineInfo.fxml"));
+                // fxmlLoader.setControllerFactory(applicationContext::getBean);
+                Parent popUp = fxmlLoader.load();
+
+                Stage stage1 = new Stage((StageStyle.UTILITY));
+                stage1.initModality(Modality.WINDOW_MODAL);
+                stage1.setTitle("Edit Baseline Questionnaire Info:   ");
+                // stage1.setFullScreen(true);
+                stage1.setScene(new Scene(popUp, 600, 550));
+                stage1.showAndWait();
+
         }
 
         public void onAddSeizureMeds(ActionEvent event) throws IOException {
