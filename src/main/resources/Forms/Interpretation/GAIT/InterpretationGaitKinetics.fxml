@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane prefHeight="556.0" prefWidth="613.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Interpretation.GAIT.InterpretationGAITKineticsController">
+<ScrollPane prefHeight="556.0" prefWidth="696.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Interpretation.GAIT.InterpretationGAITKineticsController">
     <TabPane prefHeight="900.0" prefWidth="697.0">
         <Tab closable="false" text="Ground Reaction Forces (BW)">
             <AnchorPane prefHeight="880.0" prefWidth="1280.0">
@@ -48,48 +48,54 @@
                         </font>
                     </Text>
                     <Separator layoutY="95.0" prefHeight="0.0" prefWidth="649.0" />
-                    <Text layoutX="260.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="539.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="maxPropulsionRValue" layoutX="260.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="maxPropulsionRNormals" layoutX="539.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                     <Text layoutX="10.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max Propulsion GRF L">
                         <font>
                             <Font name="SansSerif Regular" size="12.0" />
                         </font>
                     </Text>
                     <Separator layoutY="120.0" prefHeight="0.0" prefWidth="649.0" />
-                    <Text layoutX="260.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="539.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="maxPropulsionLValue" layoutX="260.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="maxPropulsionLNormals" layoutX="539.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                     <Text layoutX="10.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lateral GRF Max R">
                         <font>
                             <Font name="SansSerif Regular" size="12.0" />
                         </font>
                     </Text>
                     <Separator layoutY="145.0" prefHeight="0.0" prefWidth="649.0" />
-                    <Text layoutX="260.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="539.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="latGRFMaxRValue" layoutX="260.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="latGRFMaxRNormals" layoutX="539.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                     <Text layoutX="10.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lateral GRF Max L">
                         <font>
                             <Font name="SansSerif Regular" size="12.0" />
                         </font>
                     </Text>
                     <Separator layoutY="170.0" prefHeight="0.0" prefWidth="649.0" />
-                    <Text layoutX="260.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="539.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="latGRFMaxLValue" layoutX="260.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="latGRFMaxLNormals" layoutX="539.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                     <Text layoutX="11.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vertical GRF Max R">
                         <font>
                             <Font name="SansSerif Regular" size="12.0" />
                         </font>
                     </Text>
                     <Separator layoutY="195.0" prefHeight="0.0" prefWidth="649.0" />
-                    <Text layoutX="260.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="539.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="vertGRFRValue" layoutX="260.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="vertGRFRNormals" layoutX="539.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                     <Text layoutX="10.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vertical GRF Max L">
                         <font>
                             <Font name="SansSerif Regular" size="12.0" />
                         </font>
                     </Text>
                     <Separator layoutY="220.0" prefHeight="0.0" prefWidth="649.0" />
-                    <Text layoutX="260.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="539.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="vertGRFLValue" layoutX="260.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="vertGRFLNormals" layoutX="539.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+               <Text fx:id="maxPropulsionRInterp" layoutX="380.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+               <Text fx:id="maxPropulsionLInterp" layoutX="380.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+               <Text fx:id="latGRFMaxRInterp" layoutX="380.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+               <Text fx:id="latGRFMaxLInterp" layoutX="380.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+               <Text fx:id="vertGRFRInterp" layoutX="380.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+               <Text fx:id="vertGRFLInterp" layoutX="380.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                 </children>
             </AnchorPane>
         </Tab>
@@ -132,72 +138,81 @@
                         </font>
                     </Text>
                     <Separator layoutY="95.0" prefHeight="0.0" prefWidth="649.0" />
-                    <Text layoutX="260.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="539.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="kneeVarusValgusMaxRValue" layoutX="260.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="kneeVarusValgusMaxRNormals" layoutX="539.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                     <Text layoutX="10.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee varus valgus Moment Max L">
                         <font>
                             <Font name="SansSerif Regular" size="12.0" />
                         </font>
                     </Text>
                     <Separator layoutY="120.0" prefHeight="0.0" prefWidth="649.0" />
-                    <Text layoutX="260.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="539.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="kneeVarusValgusMaxLValue" layoutX="260.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="kneeVarusValgusMaxLNormals" layoutX="539.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                     <Text layoutX="10.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee varus valgus Moment Min R">
                         <font>
                             <Font name="SansSerif Regular" size="12.0" />
                         </font>
                     </Text>
                     <Separator layoutY="145.0" prefHeight="0.0" prefWidth="649.0" />
-                    <Text layoutX="260.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="539.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="kneeVarusValMinRValue" layoutX="260.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="kneeVarusValMinRNormals" layoutX="539.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                     <Text layoutX="10.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee varus valgus Moment Min L">
                         <font>
                             <Font name="SansSerif Regular" size="12.0" />
                         </font>
                     </Text>
                     <Separator layoutY="170.0" prefHeight="0.0" prefWidth="649.0" />
-                    <Text layoutX="260.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="539.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="kneeVarusValMinLValue" layoutX="260.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="kneeVarusValMinLNormals" layoutX="539.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                     <Text layoutX="11.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee Extension Moment R">
                         <font>
                             <Font name="SansSerif Regular" size="12.0" />
                         </font>
                     </Text>
                     <Separator layoutY="195.0" prefHeight="0.0" prefWidth="649.0" />
-                    <Text layoutX="260.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="539.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="kneeExtRValue" layoutX="260.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="kneeExtRNormals" layoutX="539.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                     <Text layoutX="10.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee Extension Moment L">
                         <font>
                             <Font name="SansSerif Regular" size="12.0" />
                         </font>
                     </Text>
                     <Separator layoutY="220.0" prefHeight="0.0" prefWidth="649.0" />
-                    <Text layoutX="260.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="539.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="kneeExtLValue" layoutX="260.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="kneeExtLNormals" layoutX="539.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                     <Text layoutX="10.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee Flex Moment R">
                         <font>
                             <Font name="SansSerif Regular" size="12.0" />
                         </font>
                     </Text>
                     <Separator layoutY="245.0" prefHeight="0.0" prefWidth="649.0" />
-                    <Text layoutX="260.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="539.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="kneeFlexRValue" layoutX="260.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="kneeFlexRNormals" layoutX="539.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                     <Text layoutX="10.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee Flex Moment L">
                         <font>
                             <Font name="SansSerif Regular" size="12.0" />
                         </font>
                     </Text>
                     <Separator layoutY="270.0" prefHeight="0.0" prefWidth="649.0" />
-                    <Text layoutX="260.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="539.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="kneeFlexLValue" layoutX="260.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="kneeFlexLNormals" layoutX="539.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                     <Text layoutX="10.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee Flex Moment (SD) L">
                         <font>
                             <Font name="SansSerif Regular" size="12.0" />
                         </font>
                     </Text>
                     <Separator layoutY="295.0" prefHeight="0.0" prefWidth="649.0" />
-                    <Text layoutX="260.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="539.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="kneeFlexSDLValue" layoutX="260.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="kneeFlexSDLNormals" layoutX="539.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="kneeVarusValgusMaxRInterp" layoutX="380.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="kneeVarusValgusMaxLInterp" layoutX="380.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="kneeVarusValMinRInterp" layoutX="380.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="kneeVarusValMinLInterp" layoutX="380.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="kneeExtRInterp" layoutX="381.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="kneeExtLInterp" layoutX="380.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="kneeFlexRInterp" layoutX="380.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="kneeFlexLInterp" layoutX="380.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="kneeFlexSDLInterp" layoutX="380.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                 </children>
             </AnchorPane>
          </content>
@@ -241,96 +256,108 @@
                         </font>
                     </Text>
                     <Separator layoutY="95.0" prefHeight="0.0" prefWidth="649.0" />
-                    <Text layoutX="260.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="539.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="10.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip Power generation Max L">
+                    <Text fx:id="hipPwrGenMaxRValue" layoutX="260.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="hipPwrGenMaxRNormals" layoutX="539.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text layoutX="10.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip Power Generation Max L">
                         <font>
                             <Font name="SansSerif Regular" size="12.0" />
                         </font>
                     </Text>
                     <Separator layoutY="120.0" prefHeight="0.0" prefWidth="649.0" />
-                    <Text layoutX="260.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="539.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="hipPwrGenMaxLValue" layoutX="260.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="hipPwrGenMaxLNormals" layoutX="539.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                     <Text layoutX="10.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip Power Absorption Max R">
                         <font>
                             <Font name="SansSerif Regular" size="12.0" />
                         </font>
                     </Text>
                     <Separator layoutY="145.0" prefHeight="0.0" prefWidth="649.0" />
-                    <Text layoutX="260.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="539.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="10.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip Power Absorption Max L">
+                    <Text fx:id="hipPwrAbsMaxRValue" layoutX="260.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="hipPwrAbsMaxRNormals" layoutX="539.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text layoutX="10.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip Power Absorption Max L">
                         <font>
                             <Font name="SansSerif Regular" size="12.0" />
                         </font>
                     </Text>
                     <Separator layoutY="170.0" prefHeight="0.0" prefWidth="649.0" />
-                    <Text layoutX="260.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="539.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="hipPwrAbsMaxLValue" layoutX="260.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="hipPwrAbsMaxLNormals" layoutX="539.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                     <Text layoutX="11.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee Power Generation Max R">
                         <font>
                             <Font name="SansSerif Regular" size="12.0" />
                         </font>
                     </Text>
                     <Separator layoutY="195.0" prefHeight="0.0" prefWidth="649.0" />
-                    <Text layoutX="260.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="539.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="kneePwrGenMaxRValue" layoutX="260.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="kneePwrGenMaxRNormals" layoutX="539.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                     <Text layoutX="10.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee Power Generation Max L">
                         <font>
                             <Font name="SansSerif Regular" size="12.0" />
                         </font>
                     </Text>
                     <Separator layoutY="220.0" prefHeight="0.0" prefWidth="649.0" />
-                    <Text layoutX="260.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="539.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="kneePwrGenMaxLValue" layoutX="260.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="kneePwrGenMaxLNormals" layoutX="539.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                     <Text layoutX="10.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee Power Absorption Max R">
                         <font>
                             <Font name="SansSerif Regular" size="12.0" />
                         </font>
                     </Text>
                     <Separator layoutY="245.0" prefHeight="0.0" prefWidth="649.0" />
-                    <Text layoutX="260.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="539.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="kneePwrAbsMaxRValue" layoutX="260.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="kneePwrAbsMaxRNormals" layoutX="539.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                     <Text layoutX="10.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee Power Absorption Max L">
                         <font>
                             <Font name="SansSerif Regular" size="12.0" />
                         </font>
                     </Text>
                     <Separator layoutY="270.0" prefHeight="0.0" prefWidth="649.0" />
-                    <Text layoutX="260.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="539.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="kneePwrAbsMaxLValue" layoutX="260.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="kneePwrAbsMaxLNormals" layoutX="539.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                     <Text layoutX="10.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ankle Power Generation Max R">
                         <font>
                             <Font name="SansSerif Regular" size="12.0" />
                         </font>
                     </Text>
                     <Separator layoutY="295.0" prefHeight="0.0" prefWidth="649.0" />
-                    <Text layoutX="260.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="539.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="anklePwrGenMaxRValue" layoutX="260.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="anklePwrGenMaxRNormals" layoutX="539.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                     <Text layoutX="10.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ankle Power Generation Max L">
                         <font>
                             <Font name="SansSerif Regular" size="12.0" />
                         </font>
                     </Text>
                     <Separator layoutY="320.0" prefHeight="0.0" prefWidth="649.0" />
-                    <Text layoutX="260.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="539.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="anklePwrGenMaxLValue" layoutX="260.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="anklePwrGenMaxLNormals" layoutX="539.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                     <Text layoutX="10.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ankle Power Generation Time of Max R">
                         <font>
                             <Font name="SansSerif Regular" size="12.0" />
                         </font>
                     </Text>
                     <Separator layoutY="345.0" prefHeight="0.0" prefWidth="649.0" />
-                    <Text layoutX="260.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="539.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="anklePwrGenTimeMaxRValue" layoutX="260.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="anklePwrGenTimeMaxRNormals" layoutX="539.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                     <Text layoutX="10.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ankle Power Generation Time of Max L">
                         <font>
                             <Font name="SansSerif Regular" size="12.0" />
                         </font>
                     </Text>
                     <Separator layoutY="370.0" prefHeight="0.0" prefWidth="649.0" />
-                    <Text layoutX="260.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                    <Text layoutX="539.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="anklePwrGenTimeMaxLValue" layoutX="260.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                    <Text fx:id="anklePwrGenTimeMaxLNormals" layoutX="539.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="hipPwrGenMaxRInterp" layoutX="380.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="hipPwrGenMaxLInterp" layoutX="380.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="hipPwrAbsMaxRInterp" layoutX="380.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="hipPwrAbsMaxLInterp" layoutX="380.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="kneePwrGenMaxRInterp" layoutX="380.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="kneePwrGenMaxLInterp" layoutX="380.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="kneePwrAbsMaxRInterp" layoutX="380.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="kneePwrAbsMaxLInterp" layoutX="380.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="anklePwrGenMaxRInterp" layoutX="380.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="anklePwrGenMaxLInterp" layoutX="380.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="anklePwrGenTimeMaxRInterp" layoutX="380.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="anklePwrGenTimeMaxLInterp" layoutX="380.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                 </children>
             </AnchorPane>
 
@@ -375,48 +402,54 @@
                      </font>
                   </Text>
                   <Separator layoutY="95.0" prefHeight="0.0" prefWidth="649.0" />
-                  <Text layoutX="260.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                  <Text layoutX="539.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="hipAbdMaxRValue" layoutX="260.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="hipAbdMaxRNormals" layoutX="539.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                   <Text layoutX="10.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip Abd Moment Max L">
                      <font>
                         <Font name="SansSerif Regular" size="12.0" />
                      </font>
                   </Text>
                   <Separator layoutY="120.0" prefHeight="0.0" prefWidth="649.0" />
-                  <Text layoutX="260.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                  <Text layoutX="539.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="hipAbdMaxLValue" layoutX="260.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="hipAbdMaxLNormals" layoutX="539.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                   <Text layoutX="10.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip Extension Moment Max R">
                      <font>
                         <Font name="SansSerif Regular" size="12.0" />
                      </font>
                   </Text>
                   <Separator layoutY="145.0" prefHeight="0.0" prefWidth="649.0" />
-                  <Text layoutX="260.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                  <Text layoutX="539.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="hipExtMaxRValue" layoutX="260.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="hipExtMaxRNormals" layoutX="539.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                   <Text layoutX="10.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip Extension Moment Max L">
                      <font>
                         <Font name="SansSerif Regular" size="12.0" />
                      </font>
                   </Text>
                   <Separator layoutY="170.0" prefHeight="0.0" prefWidth="649.0" />
-                  <Text layoutX="260.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                  <Text layoutX="539.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="hipExtMaxLValue" layoutX="260.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="hipExtMaxLNormals" layoutX="539.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                   <Text layoutX="11.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip Flex Moment Max R">
                      <font>
                         <Font name="SansSerif Regular" size="12.0" />
                      </font>
                   </Text>
                   <Separator layoutY="195.0" prefHeight="0.0" prefWidth="649.0" />
-                  <Text layoutX="260.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                  <Text layoutX="539.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="hipFlexMaxRValue" layoutX="260.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="hipFlexMaxRNormals" layoutX="539.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                   <Text layoutX="10.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip Flex Moment Max L">
                      <font>
                         <Font name="SansSerif Regular" size="12.0" />
                      </font>
                   </Text>
                   <Separator layoutY="220.0" prefHeight="0.0" prefWidth="649.0" />
-                  <Text layoutX="260.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                  <Text layoutX="539.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="hipFlexMaxLValue" layoutX="260.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="hipFlexMaxLNormals" layoutX="539.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="hipAbdMaxRInterp" layoutX="380.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="hipAbdMaxLInterp" layoutX="380.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="hipExtMaxRInterp" layoutX="380.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="hipExtMaxLInterp" layoutX="380.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="hipFlexMaxRInterp" layoutX="380.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="hipFlexMaxLInterp" layoutX="380.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                </children>
             </AnchorPane>
          </content>
@@ -460,32 +493,36 @@
                      </font>
                   </Text>
                   <Separator layoutY="95.0" prefHeight="0.0" prefWidth="656.0" />
-                  <Text layoutX="260.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                  <Text layoutX="539.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="anklePlanMaxRValue" layoutX="260.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="anklePlanMaxRNormals" layoutX="539.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                   <Text layoutX="10.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ankle Plantarflex Moment Max L">
                      <font>
                         <Font name="SansSerif Regular" size="12.0" />
                      </font>
                   </Text>
                   <Separator layoutY="120.0" prefHeight="0.0" prefWidth="656.0" />
-                  <Text layoutX="260.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                  <Text layoutX="539.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="anklePlanMaxLValue" layoutX="260.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="anklePlanMaxLNormals" layoutX="539.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                   <Text layoutX="10.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ankle Plantarflex Moment Time of Max R">
                      <font>
                         <Font name="SansSerif Regular" size="12.0" />
                      </font>
                   </Text>
                   <Separator layoutY="145.0" prefHeight="0.0" prefWidth="656.0" />
-                  <Text layoutX="260.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                  <Text layoutX="539.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="anklePlanTimeofMaxRValue" layoutX="260.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="anklePlanTimeofMaxRNormals" layoutX="539.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                   <Text layoutX="10.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ankle Plantarflex Moment Time of Max L">
                      <font>
                         <Font name="SansSerif Regular" size="12.0" />
                      </font>
                   </Text>
                   <Separator layoutY="170.0" prefHeight="0.0" prefWidth="656.0" />
-                  <Text layoutX="260.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                  <Text layoutX="539.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="anklePlanTimeofMaxLValue" layoutX="260.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="anklePlanTimeofMaxLNormals" layoutX="539.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="anklePlanMaxRInterp" layoutX="395.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="anklePlanMaxLInterp" layoutX="395.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="anklePlanTimeofMaxRInterp" layoutX="395.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="anklePlanTimeofMaxLInterp" layoutX="395.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                </children>
             </AnchorPane>
          </content>

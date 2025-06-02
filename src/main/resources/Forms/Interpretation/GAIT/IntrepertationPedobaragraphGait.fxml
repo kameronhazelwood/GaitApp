@@ -5,7 +5,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="546.0" prefWidth="659.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Interpretation.GAIT.IntrepertationPedobaragraphGaitController">
+<AnchorPane prefHeight="592.0" prefWidth="689.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Interpretation.GAIT.IntrepertationPedobaragraphGaitController">
     <children>
         <Text layoutX="14.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
             <font>
@@ -32,7 +32,7 @@
                 <Font name="SansSerif Bold" size="14.0" />
             </font>
         </Text>
-        <Separator layoutY="70.0" prefHeight="0.0" prefWidth="656.0" />
+        <Separator layoutY="70.0" prefHeight="3.0" prefWidth="649.0" />
         <Separator layoutX="265.0" layoutY="50.0" orientation="VERTICAL" prefHeight="421.0" prefWidth="0.0" />
         <Separator layoutX="359.0" layoutY="50.0" orientation="VERTICAL" prefHeight="421.0" prefWidth="0.0" />
         <Separator layoutX="501.0" layoutY="50.0" orientation="VERTICAL" prefHeight="421.0" prefWidth="0.0" />
@@ -42,104 +42,104 @@
             </font>
         </Text>
         <Separator layoutY="95.0" prefHeight="0.0" prefWidth="649.0" />
-        <Text layoutX="300.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-        <Text layoutX="539.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="heelWeightRValue" layoutX="300.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="heelWeightRNormals" layoutX="539.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
         <Text layoutX="10.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Termination Heel Weight Bearing L">
             <font>
                 <Font name="SansSerif Regular" size="12.0" />
             </font>
         </Text>
         <Separator layoutY="120.0" prefHeight="0.0" prefWidth="649.0" />
-        <Text layoutX="300.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-        <Text layoutX="539.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="heelWeightLValue" layoutX="300.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="heelWeightLNormals" layoutX="539.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
         <Text layoutX="10.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Impulse Heel R">
             <font>
                 <Font name="SansSerif Regular" size="12.0" />
             </font>
         </Text>
         <Separator layoutY="145.0" prefHeight="0.0" prefWidth="649.0" />
-        <Text layoutX="300.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-        <Text layoutX="539.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="impuleHeelRvalue" layoutX="300.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="impuleHeelRNormals" layoutX="539.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
         <Text layoutX="10.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Impulse Heel L">
             <font>
                 <Font name="SansSerif Regular" size="12.0" />
             </font>
         </Text>
         <Separator layoutY="170.0" prefHeight="0.0" prefWidth="649.0" />
-        <Text layoutX="300.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-        <Text layoutX="539.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="impuleHeelLValue" layoutX="300.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="impuleHeelLNormal" layoutX="539.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
         <Text layoutX="11.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Impulse Lat Mid-Foot R">
             <font>
                 <Font name="SansSerif Regular" size="12.0" />
             </font>
         </Text>
         <Separator layoutY="195.0" prefHeight="0.0" prefWidth="649.0" />
-        <Text layoutX="300.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-        <Text layoutX="539.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="impuleLatFootRValue" layoutX="300.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="impuleLatFootRNormals" layoutX="539.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
         <Text layoutX="10.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Impulse Lat Mid-Foot L">
             <font>
                 <Font name="SansSerif Regular" size="12.0" />
             </font>
         </Text>
         <Separator layoutY="220.0" prefHeight="0.0" prefWidth="649.0" />
-        <Text layoutX="300.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-        <Text layoutX="539.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="impulseLatRValue" layoutX="300.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="impulseLatRNormals" layoutX="539.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
         <Text layoutX="10.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Impulse Medial Mid-Foot R">
             <font>
                 <Font name="SansSerif Regular" size="12.0" />
             </font>
         </Text>
         <Separator layoutY="245.0" prefHeight="0.0" prefWidth="649.0" />
-        <Text layoutX="300.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-        <Text layoutX="539.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="impuleMedialRValue" layoutX="300.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="impuleMedialRNormals" layoutX="539.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
         <Text layoutX="10.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Impulse Medial Mid-Foot L">
             <font>
                 <Font name="SansSerif Regular" size="12.0" />
             </font>
         </Text>
         <Separator layoutY="270.0" prefHeight="0.0" prefWidth="649.0" />
-        <Text layoutX="300.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-        <Text layoutX="539.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="medialFootRValue" layoutX="300.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="medialFootRNormals" layoutX="539.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
         <Text layoutX="10.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Impulse Lat Fore Foot R">
             <font>
                 <Font name="SansSerif Regular" size="12.0" />
             </font>
         </Text>
         <Separator layoutY="295.0" prefHeight="0.0" prefWidth="649.0" />
-        <Text layoutX="300.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-        <Text layoutX="539.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="impulseLatForeRValue" layoutX="300.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="impulseLatForeRNormals" layoutX="539.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
         <Text layoutX="10.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Impulse Lat Fore Foot L">
             <font>
                 <Font name="SansSerif Regular" size="12.0" />
             </font>
         </Text>
         <Separator layoutY="320.0" prefHeight="0.0" prefWidth="649.0" />
-        <Text layoutX="300.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-        <Text layoutX="539.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="impulseForeFootLValue" layoutX="300.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="impulseForeFootLNormals" layoutX="539.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
         <Text layoutX="10.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Impulse Medial Fore Foot R">
             <font>
                 <Font name="SansSerif Regular" size="12.0" />
             </font>
         </Text>
         <Separator layoutY="345.0" prefHeight="0.0" prefWidth="649.0" />
-        <Text layoutX="300.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-        <Text layoutX="539.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="medialForeFoorRValue" layoutX="300.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="medialForeFoorRNormals" layoutX="539.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
         <Text layoutX="10.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Impulse Medial Fore Foot L">
             <font>
                 <Font name="SansSerif Regular" size="12.0" />
             </font>
         </Text>
         <Separator layoutY="370.0" prefHeight="0.0" prefWidth="649.0" />
-        <Text layoutX="300.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-        <Text layoutX="539.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="medialForeFoorLValue" layoutX="300.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="medialForeFoorLNormals" layoutX="539.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="10.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Varus Valgus Position R">
          <font>
             <Font name="SansSerif Regular" size="12.0" />
          </font>
       </Text>
       <Separator layoutY="395.0" prefHeight="0.0" prefWidth="649.0" />
-      <Text layoutX="300.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="539.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="valgusPostitionRValue" layoutX="300.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="valgusPostitionRNormals" layoutX="539.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="10.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Varus Valgus Position L">
          <font>
             <Font name="SansSerif Regular" size="12.0" />
@@ -151,10 +151,10 @@
             <Font name="SansSerif Regular" size="12.0" />
          </font>
       </Text>
-      <Text layoutX="300.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="300.0" layoutY="437.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="300.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="539.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="valgusPositionLValue" layoutX="300.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="footProgressionRValue" layoutX="300.0" layoutY="437.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="footProgressionLValue" layoutX="300.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="valgusPositionLNormals" layoutX="539.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Separator layoutY="445.0" prefHeight="0.0" prefWidth="649.0" />
       <Text layoutX="10.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Foot Progression L">
          <font>
@@ -162,8 +162,25 @@
          </font>
       </Text>
       <Separator layoutY="470.0" prefHeight="0.0" prefWidth="649.0" />
-      <Text layoutX="539.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="539.0" layoutY="437.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="footProgressionLNormals" layoutX="539.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="footProgressionRNormals" layoutX="539.0" layoutY="437.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="heelWeightRInterp" layoutX="416.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="heelWeightLInterp" layoutX="416.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="impuleHeelRInterp" layoutX="416.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="impuleHeelLInterp" layoutX="416.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="impuleLatFootRInterp" layoutX="416.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="impulseLatRInterp" layoutX="416.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="impuleMedialRInterp" layoutX="416.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="medialFootRInterp" layoutX="416.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="impulseLatForeRInterp" layoutX="416.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="impulseForeootLInterp" layoutX="416.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="medialForeFoorRVInterp" layoutX="416.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="medialForeFoorLInterp" layoutX="416.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="valgusPostitionRInterp" layoutX="416.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="valgusPositionLInterp" layoutX="416.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="footProgressionRInterp" layoutX="416.0" layoutY="437.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="footProgressionLInterp" layoutX="416.0" layoutY="461.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Separator layoutX="646.0" layoutY="69.0" orientation="VERTICAL" prefHeight="402.0" prefWidth="0.0" />
     </children>
 
 

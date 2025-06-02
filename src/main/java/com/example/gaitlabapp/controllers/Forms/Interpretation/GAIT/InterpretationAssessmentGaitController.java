@@ -10,23 +10,91 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import javafx.fxml.FXML;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
+import javafx.scene.control.TextArea;
+
 public class InterpretationAssessmentGaitController  implements Initializable{
 
+    @FXML
+    private TabPane allTabs;
+
+    @FXML
+    private RadioButton associateImpairB;
+
+    @FXML
+    private RadioButton associateImpairL;
+
+    @FXML
+    private RadioButton associateImpairN;
+
+    @FXML
+    private RadioButton associateImpairR;
+
+    @FXML
+    private TextArea behaviorComments;
+
+    @FXML
+    private AnchorPane behaviorFunctionTab;
+
+    @FXML
+    private Tab behaviorTab;
+
+    @FXML
+    private RadioButton impairmentB;
+
+    @FXML
+    private RadioButton impairmentL;
+
+    @FXML
+    private RadioButton impairmentN;
+
+    @FXML
+    private RadioButton impairmentR;
+
+    @FXML
+    private AnchorPane issuesTab;
+
+    @FXML
+    private Text issuesText;
+
+    @FXML
+    private TextArea issuesTextArea;
+
+    @FXML
+    private RadioButton negImpactB;
+
+    @FXML
+    private RadioButton negImpactL;
+
+    @FXML
+    private RadioButton negImpactN;
+
+    @FXML
+    private RadioButton negImpactR;
+
+    @FXML
+    private RadioButton noProbB;
+
+    @FXML
+    private RadioButton noProbL;
+
+    @FXML
+    private RadioButton noProbN;
+
+    @FXML
+    private RadioButton noProbR;
     public ScrollPane assessmentGait;
-
-
     public Tab issues;
-    public Text issuesText;
-    public TextArea issuesTextArea;
-    public AnchorPane issuesTab;
-    public AnchorPane behaviorFunctionTab;
 //    public AnchorPane motorControlTab;
 //    public AnchorPane muscleStrengthTab;
 //    public AnchorPane movementDisorderTab;
 //    public AnchorPane muscleToneTab;
 //    public AnchorPane stanceTab;
 //    public AnchorPane swingTab;
-    public TabPane allTabs;
     public Tab behavior;
     public Button print;
 
