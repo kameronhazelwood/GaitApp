@@ -72,6 +72,7 @@ public class GaitTestVisitController implements Initializable {
         public Text OTClinic;
         public Text OTSchool;
         public Text OTHome;
+        public Button questionnaires;
         @Autowired
         PatientService patientService;
         public TableView<String> reportsTable;
@@ -2744,7 +2745,7 @@ public class GaitTestVisitController implements Initializable {
             visitBio.setText(appointmentModel.getVisitBioMech());
             aptStartTime.setText("1:00pm");
             aptStopTime.setText("3:00pm");
-            mrnTextField.setText(patientModel.getMrn());
+            //mrnTextField.setText(patientModel.getMrn());
 
         }
 
@@ -2753,7 +2754,7 @@ public class GaitTestVisitController implements Initializable {
         public void setPatient(IPatientModel patientModel){
             this.patientModel = patientModel;
           //  mrnTextField.setText(patientModel.getMrn());
-            mrnTextField.setText("32581055");
+            //mrnTextField.setText("32581055");
         }
 
         @FXML
@@ -3211,6 +3212,9 @@ public class GaitTestVisitController implements Initializable {
                 stage1.setScene(new Scene(popUp, 950, 680));
                 stage1.showAndWait();
 
+        }
+
+        public void onQuestionnaires(ActionEvent event) {
         }
 }
 

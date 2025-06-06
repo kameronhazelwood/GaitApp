@@ -129,4 +129,8 @@ public class CompendiumAdolParent implements Initializable {
         physFunHipScore.setText("0/68");
 
     }
+
+
+
+
 }
