@@ -115,8 +115,9 @@ public class CompendiumInfoPageController implements Initializable {
 
 
         fName.setText("Rowan Hazelwood");
-        dob.setText("10/02/2025");
+        dob.setText("10/02/2024");
         mrn.setText("33069893     ");
+        age.setText(".08");
         gender.setText("Female");
 //        visitDiag.setText("Cerebral Palsy");
 //        bioMech.setText("John Henley");

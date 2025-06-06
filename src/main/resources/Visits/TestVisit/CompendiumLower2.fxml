@@ -7,9 +7,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane prefHeight="2700.0" prefWidth="655.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Visits.TestVisit.CompendiumLower2">
+<ScrollPane prefHeight="3500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Visits.TestVisit.CompendiumLower2">
 
-    <AnchorPane prefHeight="2757.0" prefWidth="679.0">
+    <AnchorPane prefHeight="4000.0" prefWidth="902.0">
         <Label layoutX="20.0" layoutY="14.0" text="Lower Extremity Physical Exam">
             <font>
                 <Font name="SansSerif Bold" size="14.0" />
@@ -296,14 +296,14 @@
                 <Font name="SansSerif Bold" size="12.0" />
             </font>
         </Label>
-        <Label layoutX="15.0" layoutY="2540.0" text="Total GMFM Score:">
+        <Label layoutX="15.0" layoutY="2577.0" text="Total GMFM Score:">
             <font>
                 <Font name="SansSerif Bold" size="18.0" />
             </font>
         </Label>
-        <Text layoutX="228.0" layoutY="2555.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-        <Text layoutX="228.0" layoutY="2577.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-        <Text layoutX="229.0" layoutY="2600.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text layoutX="228.0" layoutY="2592.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text layoutX="228.0" layoutY="2614.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text layoutX="229.0" layoutY="2637.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
         <Text layoutX="5.0" layoutY="593.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee Flex" wrappingWidth="57.815765380859375" />
         <Separator layoutY="601.0" prefHeight="0.0" prefWidth="473.0" />
         <Text fill="RED" layoutX="133.0" layoutY="593.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WNL" />
@@ -444,6 +444,34 @@
         <Text fill="RED" layoutX="346.0" layoutY="1683.0" strokeType="OUTSIDE" strokeWidth="0.0" text="down" />
         <Text fill="RED" layoutX="344.0" layoutY="1640.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3+" />
         <Text fill="RED" layoutX="344.0" layoutY="1662.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3+" />
+      <Separator blendMode="DIFFERENCE" layoutX="2.0" layoutY="2657.0" prefHeight="1.0" prefWidth="673.0" />
+      <Separator blendMode="DIFFERENCE" layoutY="2546.0" prefHeight="1.0" prefWidth="673.0" />
+      <Label layoutX="227.0" layoutY="2669.0" text="Mobility Scales">
+         <font>
+            <Font name="SansSerif Bold" size="18.0" />
+         </font>
+      </Label>
+      <Text layoutY="2747.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ambulations Scale" />
+      <Separator layoutY="2775.0" prefHeight="0.0" prefWidth="674.0" />
+      <Separator layoutY="2710.0" prefHeight="0.0" prefWidth="674.0" />
+      <Separator layoutX="128.0" layoutY="2710.0" orientation="VERTICAL" prefHeight="403.0" prefWidth="0.0" />
+      <Text fx:id="msAmbulationScale" layoutX="134.0" layoutY="2727.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutY="2815.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GMFCS:" />
+      <Separator layoutY="2840.0" prefHeight="0.0" prefWidth="674.0" />
+      <Text fx:id="msGMFCS" layoutX="134.0" layoutY="2791.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutY="2877.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FMS (5m)" />
+      <Text fx:id="msFMS5" layoutX="134.0" layoutY="2856.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Separator layoutY="2910.0" prefHeight="0.0" prefWidth="674.0" />
+      <Text layoutY="2951.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FMS (50m)" />
+      <Text fx:id="msFMS50" layoutX="134.0" layoutY="2926.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Separator layoutY="2978.0" prefHeight="0.0" prefWidth="674.0" />
+      <Text layoutY="3023.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FMS (500m)" />
+      <Separator layoutY="3047.0" prefHeight="0.0" prefWidth="674.0" />
+      <Text layoutY="3085.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MACS" />
+      <Text fx:id="msFMS500" layoutX="134.0" layoutY="2994.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="msMACS" layoutX="134.0" layoutY="3064.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Separator layoutY="3113.0" prefHeight="0.0" prefWidth="674.0" />
+      <Separator layoutX="671.0" layoutY="2711.0" orientation="VERTICAL" prefHeight="403.0" prefWidth="0.0" />
         <!--             <fx:include source="GAITPhysExam.fxml"/>-->
     </AnchorPane>
 
