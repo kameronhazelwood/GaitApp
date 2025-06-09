@@ -22,299 +22,146 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<?import javafx.scene.control.TreeTableColumn?>
-<?import javafx.scene.control.TreeItem?>
-<TabPane prefHeight="7987.0" prefWidth="853.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Visits.TestVisit.GaitTestVisitController">
+<TabPane prefHeight="779.0" prefWidth="895.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Visits.TestVisit.TestInterpChangeController">
+
     <Tab fx:id="visitTab" closable="false" text="Visit Information">
-      <ScrollPane prefHeight="2000.0" prefWidth="748.0">
-         <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1894.0" prefWidth="876.0">
-                  <Label layoutX="5.0" layoutY="11.0" text="Visit Information:">
-                      <font>
-                          <Font name="System Bold" size="14.0" />
-                      </font>
-                  </Label>
-                  <GridPane layoutX="3.0" layoutY="62.0" prefHeight="119.0" prefWidth="698.0">
-                      <columnConstraints>
-                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      </columnConstraints>
-                      <rowConstraints>
-                          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      </rowConstraints>
-                      <Label prefHeight="34.0" prefWidth="85.0" text="Date" />
-                      <TextField fx:id="date" GridPane.columnIndex="1" />
-                      <Label text="Time" GridPane.columnIndex="2" />
-                      <TextField fx:id="aptTime" GridPane.columnIndex="3" />
-                      <Label text="Attended?" GridPane.columnIndex="4" />
-                      <TextField fx:id="aptAttended" GridPane.columnIndex="5" />
-                      <Label prefHeight="34.0" prefWidth="85.0" text="Start Time" GridPane.rowIndex="1" />
-                      <TextField fx:id="aptStartTime" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                      <Label text="Stop Time" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                      <TextField fx:id="aptStopTime" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                      <Label text="Date Sched" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                      <TextField fx:id="aptDate" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-                      <Label text="Visit Type" GridPane.rowIndex="2" />
-                      <TextField fx:id="aptVisitType" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                      <Label text="Visit Sub-Type" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                      <TextField fx:id="aptSubType" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                      <Label text="Date Sent to EPIC" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                      <TextField fx:id="dateToEpic" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-                      <Label text="Date Processed" GridPane.rowIndex="3" />
-                      <TextField fx:id="aptDateProcessed" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                      <Label text="Date Printed" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                      <TextField GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                      <Label text="Date Finalized" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-                      <TextField GridPane.columnIndex="5" GridPane.rowIndex="3" />
-                  </GridPane>
-                  <Label layoutX="4.0" layoutY="195.0" text="Diagnosis" />
-                  <TextField fx:id="aptDiagnosis" layoutX="121.0" layoutY="191.0" prefHeight="25.0" prefWidth="579.0" />
-                  <Label layoutX="3.0" layoutY="227.0" text="Reason for Analysis" />
-                  <TextField fx:id="aptReason" layoutX="121.0" layoutY="223.0" prefHeight="25.0" prefWidth="579.0" />
-                  <Label layoutX="3.0" layoutY="259.0" text="Internal Comment" />
-                  <TextField fx:id="aptComment" layoutX="121.0" layoutY="255.0" prefHeight="25.0" prefWidth="579.0" />
-                  <Label layoutX="4.0" layoutY="291.0" text="Keywords" />
-                  <TextField layoutX="121.0" layoutY="287.0" prefHeight="25.0" prefWidth="579.0" />
-                  <Label layoutX="4.0" layoutY="317.0" text="Interpretation Information">
-                      <font>
-                          <Font name="System Bold" size="13.0" />
-                      </font>
-                  </Label>
-                  <GridPane layoutX="5.0" layoutY="353.0" prefHeight="24.0" prefWidth="690.0">
-                      <columnConstraints>
-                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
-                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
-                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
-                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
-                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
-                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
-                      </columnConstraints>
-                      <rowConstraints>
-                          <RowConstraints />
-                          <RowConstraints />
-                          <RowConstraints />
-                          <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
-                          <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
-                      </rowConstraints>
-                      <Label prefHeight="17.0" prefWidth="134.0" text="Date" GridPane.rowIndex="3" />
-                      <Label text="MD " GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                      <Label text="PT" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-                      <TextField fx:id="interpDate" prefHeight="45.0" prefWidth="119.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                      <TextField fx:id="aptMd" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                      <TextField fx:id="aptPT" prefHeight="27.0" prefWidth="112.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-                  </GridPane>
-                  <Label layoutX="5.0" layoutY="379.0" text="Referring Physician Information">
-                      <font>
-                          <Font name="System Bold" size="13.0" />
-                      </font>
-                  </Label>
-                  <GridPane layoutX="7.0" layoutY="462.0" prefHeight="106.0" prefWidth="701.0">
-                      <columnConstraints>
-                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="346.0" minWidth="10.0" prefWidth="128.0" />
-                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="573.0" minWidth="10.0" prefWidth="573.0" />
-                      </columnConstraints>
-                      <rowConstraints>
-                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      </rowConstraints>
-                      <children>
-                          <Label text="Visit PT" />
-                          <Label text="Visit PT-2" GridPane.rowIndex="1" />
-                          <Label text="Visit Biomech" GridPane.rowIndex="2" />
-                          <Label text="Visit Biomech-2" GridPane.rowIndex="3" />
-                          <TextField fx:id="visitPt" GridPane.columnIndex="1" />
-                          <TextField fx:id="visitPt2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                          <TextField fx:id="visitBio" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                          <TextField fx:id="visitBio2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                      </children>
-                  </GridPane>
-                  <Label layoutX="3.0" layoutY="443.0" text="Visit Personnel">
-                      <font>
-                          <Font name="System Bold" size="13.0" />
-                      </font>
-                  </Label>
-                  <GridPane layoutX="3.0" layoutY="398.0" prefHeight="30.0" prefWidth="710.0">
-                      <columnConstraints>
-                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      </columnConstraints>
-                      <rowConstraints>
-                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      </rowConstraints>
-                      <Label text="Referring MD" />
-                      <Label text="Date Sent" GridPane.columnIndex="2" />
-                      <TextField fx:id="aptReferringMd" GridPane.columnIndex="1" />
-                      <TextField fx:id="aptDateSent" GridPane.columnIndex="3" />
-                  </GridPane>
-                  <Label layoutX="31.0" layoutY="573.0" text="Questionnaires:">
-                      <font>
-                          <Font name="System Bold" size="13.0" />
-                      </font>
-                  </Label>
-                  <Label fx:id="patientId" layoutX="467.0" layoutY="16.0" prefHeight="17.0" prefWidth="109.0" />
-                  <Button fx:id="gaitVisitSave" layoutX="728.0" layoutY="9.0" mnemonicParsing="false" onAction="#onGaitVisitSave" prefHeight="43.0" prefWidth="110.0" text="Save" />
-                  <GridPane gridLinesVisible="true" layoutX="31.0" layoutY="645.0" prefHeight="186.0" prefWidth="521.0">
-                      <columnConstraints>
-                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      </columnConstraints>
-                      <rowConstraints>
-                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      </rowConstraints>
-                      <children>
-                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Person Reporting:" wrappingWidth="204.13674545288086" />
-                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Relationship to Patient:" wrappingWidth="212.80340194702148" GridPane.rowIndex="1" />
-                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Date Reported" wrappingWidth="212.1366844177246" GridPane.rowIndex="2" />
-                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" How Premature:" GridPane.rowIndex="3" />
-                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Age First Walked:" GridPane.rowIndex="4" />
-                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Age First Talked:" GridPane.rowIndex="5" />
-                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" How does child learn:" GridPane.rowIndex="6" />
-                     <Text fx:id="personReporting" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="231.73675155639648" GridPane.columnIndex="1" />
-                     <Text fx:id="relationshipToPatientQues" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                     <Text fx:id="dateReported" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                     <Text fx:id="premature" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                     <Text fx:id="firstWalk" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                     <Text fx:id="firstTalked" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                     <Text fx:id="childLearn" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                      </children>
-                  </GridPane>
-                  <Text layoutX="56.0" layoutY="622.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Baseline Answers:">
-                      <font>
-                          <Font name="System Bold" size="14.0" />
-                      </font>
-                  </Text>
-                  <Button fx:id="editBaseline" layoutX="360.0" layoutY="604.0" mnemonicParsing="false" onAction="#onEditBaseline" text="Edit Baseline" />
-                  <Text layoutX="56.0" layoutY="896.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Per Visit Answers: ">
-                      <font>
-                          <Font name="System Bold" size="14.0" />
-                      </font>
-                  </Text>
-                  <GridPane gridLinesVisible="true" layoutX="31.0" layoutY="919.0" prefHeight="218.0" prefWidth="603.0">
-                      <columnConstraints>
-                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      </columnConstraints>
-                      <rowConstraints>
-                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      </rowConstraints>
-                      <children>
-                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Visit Date:" wrappingWidth="204.13674545288086" />
-                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Person completing questionnaire:" wrappingWidth="212.80340194702148" GridPane.rowIndex="1" />
-                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Relationship to patient:" wrappingWidth="212.1366844177246" GridPane.rowIndex="2" />
-                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Recent change in ability to walk:" GridPane.rowIndex="3" />
-                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Need for support while walking:" GridPane.rowIndex="4" />
-                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" FMS5:" GridPane.rowIndex="5" />
-                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" FMS50:" GridPane.rowIndex="6" />
-                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" FMS500:" GridPane.rowIndex="7" />
-                     <Text fx:id="visitDate" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" />
-                     <Text fx:id="completingQuestionnaire" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                     <Text fx:id="relationshipToPatient" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                     <Text fx:id="changeWalk" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                     <Text fx:id="supportInWalk" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                     <Text fx:id="FMS5Text" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                     <Text fx:id="FMS50Text" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                     <Text fx:id="FMS500Text" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                      </children>
-                  </GridPane>
-                  <GridPane gridLinesVisible="true" layoutX="31.0" layoutY="1363.0" prefHeight="227.0" prefWidth="521.0">
-                      <columnConstraints>
-                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      </columnConstraints>
-                      <rowConstraints>
-                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      </rowConstraints>
-                      <children>
-                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Current devices/braces:" />
-                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Gait Concerns:" GridPane.rowIndex="1" />
-                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Pain:" GridPane.rowIndex="2" />
-                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Date of Followup with MD:" GridPane.rowIndex="3" />
-                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" General Concerns" GridPane.rowIndex="4" />
-                     <Text fx:id="currentDevices" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" />
-                     <Text fx:id="gaitConcerns" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                     <Text fx:id="pain" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                     <Text fx:id="followupDate" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                     <Text fx:id="genConcerns" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                      </children>
-                  </GridPane>
-               <Text layoutX="45.0" layoutY="1197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No Seizure Meds reported on this visit -- ">
-                  <font>
-                     <Font size="14.0" />
-                  </font>
-               </Text>
-               <Button fx:id="addSeizureMeds" layoutX="324.0" layoutY="1179.0" mnemonicParsing="false" onAction="#onAddSeizureMeds" prefHeight="26.0" prefWidth="127.0" text="Add Seizure Meds" />
-               <Button fx:id="questionnaireToEdit" layoutX="29.0" layoutY="1319.0" mnemonicParsing="false" onAction="#onQuestionnaireToEdit" prefHeight="26.0" prefWidth="240.0" text="Use Questionnaire to Edit Items" />
-               <TextField fx:id="seizureTextfield" blendMode="DARKEN" layoutX="326.0" layoutY="1239.0" prefHeight="25.0" prefWidth="243.0" />
-               <Text layoutX="90.0" layoutY="1257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seizure Medication:" wrappingWidth="190.3717803955078">
-                  <font>
-                     <Font name="System Bold" size="14.0" />
-                  </font>
-               </Text>
-               <Separator blendMode="EXCLUSION" layoutX="29.0" layoutY="1615.0" orientation="VERTICAL" prefHeight="200.0" />
-               <Separator blendMode="EXCLUSION" layoutX="29.0" layoutY="1613.0" prefHeight="2.0" prefWidth="523.0" />
-               <Separator blendMode="EXCLUSION" layoutX="32.0" layoutY="1715.0" prefHeight="0.0" prefWidth="521.0" />
-               <Text layoutX="48.0" layoutY="1670.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PT Frequency:">
-                  <font>
-                     <Font size="14.0" />
-                  </font>
-               </Text>
-               <Separator blendMode="EXCLUSION" layoutX="226.0" layoutY="1615.0" orientation="VERTICAL" prefHeight="200.0" />
-               <Text layoutX="236.0" layoutY="1638.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hospital:" />
-               <Text layoutX="236.0" layoutY="1659.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clinic:" />
-               <Text layoutX="236.0" layoutY="1680.0" strokeType="OUTSIDE" strokeWidth="0.0" text="School:" />
-               <Text layoutX="238.0" layoutY="1702.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home:" />
-               <Separator blendMode="EXCLUSION" layoutX="313.0" layoutY="1615.0" orientation="VERTICAL" prefHeight="200.0" />
-               <Separator blendMode="EXCLUSION" layoutX="31.0" layoutY="1814.0" prefHeight="0.0" prefWidth="524.0" />
-               <Text fx:id="PTHospital" layoutX="326.0" layoutY="1638.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-               <Text fx:id="PTClinic" layoutX="326.0" layoutY="1659.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-               <Text fx:id="PTSchool" layoutX="326.0" layoutY="1680.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-               <Text fx:id="PTHome" layoutX="326.0" layoutY="1701.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-               <Text layoutX="242.0" layoutY="1736.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hospital:" />
-               <Text layoutX="242.0" layoutY="1757.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clinic:" />
-               <Text layoutX="242.0" layoutY="1778.0" strokeType="OUTSIDE" strokeWidth="0.0" text="School:" />
-               <Text layoutX="244.0" layoutY="1800.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home:" />
-               <Text fx:id="OTHospital" layoutX="326.0" layoutY="1735.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-               <Text fx:id="OTClinic" layoutX="326.0" layoutY="1756.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-               <Text fx:id="OTSchool" layoutX="326.0" layoutY="1777.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-               <Text fx:id="OTHome" layoutX="326.0" layoutY="1798.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-               <Text layoutX="48.0" layoutY="1769.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OT Frequency:">
-                  <font>
-                     <Font size="14.0" />
-                  </font>
-               </Text>
-               <Separator blendMode="EXCLUSION" layoutX="551.0" layoutY="1613.0" orientation="VERTICAL" prefHeight="203.0" prefWidth="5.0" />
-               <Button fx:id="questionnaires" layoutX="728.0" layoutY="62.0" mnemonicParsing="false" onAction="#onQuestionnaires" prefHeight="43.0" prefWidth="110.0" text="Questionnaires" />
-              </AnchorPane>
-         </content>
-      </ScrollPane>
+        <ScrollPane prefHeight="851.0" prefWidth="827.0">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1894.0" prefWidth="876.0">
+                    <Label layoutX="150.0" layoutY="62.0" text="Visit Information:">
+                        <font>
+                            <Font name="System Bold" size="14.0" />
+                        </font>
+                    </Label>
+                    <GridPane layoutX="146.0" layoutY="91.0" prefHeight="119.0" prefWidth="698.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <Label prefHeight="34.0" prefWidth="85.0" text="Date" />
+                        <TextField fx:id="date" GridPane.columnIndex="1" />
+                        <Label text="Time" GridPane.columnIndex="2" />
+                        <TextField fx:id="aptTime" GridPane.columnIndex="3" />
+                        <Label text="Attended?" GridPane.columnIndex="4" />
+                        <TextField fx:id="aptAttended" GridPane.columnIndex="5" />
+                        <Label prefHeight="34.0" prefWidth="85.0" text="Start Time" GridPane.rowIndex="1" />
+                        <TextField fx:id="aptStartTime" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Stop Time" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField fx:id="aptStopTime" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Label text="Date Sched" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <TextField fx:id="aptDate" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                        <Label text="Visit Type" GridPane.rowIndex="2" />
+                        <TextField fx:id="aptVisitType" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Visit Sub-Type" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <TextField fx:id="aptSubType" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Label text="Date Sent to EPIC" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                        <TextField fx:id="dateToEpic" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                        <Label text="Date Processed" GridPane.rowIndex="3" />
+                        <TextField fx:id="aptDateProcessed" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Date Printed" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <TextField GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <Label text="Date Finalized" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                        <TextField GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                    </GridPane>
+                    <Label layoutX="147.0" layoutY="224.0" text="Diagnosis" />
+                    <TextField fx:id="aptDiagnosis" layoutX="264.0" layoutY="220.0" prefHeight="25.0" prefWidth="579.0" />
+                    <Label layoutX="146.0" layoutY="256.0" text="Reason for Analysis" />
+                    <TextField fx:id="aptReason" layoutX="264.0" layoutY="252.0" prefHeight="25.0" prefWidth="579.0" />
+                    <Label layoutX="146.0" layoutY="288.0" text="Internal Comment" />
+                    <TextField fx:id="aptComment" layoutX="264.0" layoutY="284.0" prefHeight="25.0" prefWidth="579.0" />
+                    <Label layoutX="147.0" layoutY="320.0" text="Keywords" />
+                    <TextField layoutX="264.0" layoutY="316.0" prefHeight="25.0" prefWidth="579.0" />
+                    <Label layoutX="147.0" layoutY="346.0" text="Interpretation Information">
+                        <font>
+                            <Font name="System Bold" size="13.0" />
+                        </font>
+                    </Label>
+                    <GridPane layoutX="148.0" layoutY="382.0" prefHeight="24.0" prefWidth="690.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints />
+                            <RowConstraints />
+                            <RowConstraints />
+                            <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <Label prefHeight="17.0" prefWidth="134.0" text="Date" GridPane.rowIndex="3" />
+                        <Label text="MD " GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Label text="PT" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                        <TextField fx:id="interpDate" prefHeight="45.0" prefWidth="119.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="aptMd" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <TextField fx:id="aptPT" prefHeight="27.0" prefWidth="112.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                    </GridPane>
+                    <Label layoutX="148.0" layoutY="408.0" text="Referring Physician Information">
+                        <font>
+                            <Font name="System Bold" size="13.0" />
+                        </font>
+                    </Label>
+                    <GridPane layoutX="150.0" layoutY="491.0" prefHeight="106.0" prefWidth="701.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="346.0" minWidth="10.0" prefWidth="128.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="573.0" minWidth="10.0" prefWidth="573.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <children>
+                            <Label text="Visit PT" />
+                            <Label text="Visit PT-2" GridPane.rowIndex="1" />
+                            <Label text="Visit Biomech" GridPane.rowIndex="2" />
+                            <Label text="Visit Biomech-2" GridPane.rowIndex="3" />
+                            <TextField fx:id="visitPt" GridPane.columnIndex="1" />
+                            <TextField fx:id="visitPt2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                            <TextField fx:id="visitBio" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                            <TextField fx:id="visitBio2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        </children>
+                    </GridPane>
+                    <Label layoutX="146.0" layoutY="472.0" text="Visit Personnel">
+                        <font>
+                            <Font name="System Bold" size="13.0" />
+                        </font>
+                    </Label>
+                    <GridPane layoutX="146.0" layoutY="427.0" prefHeight="30.0" prefWidth="710.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <Label text="Referring MD" />
+                        <Label text="Date Sent" GridPane.columnIndex="2" />
+                        <TextField fx:id="aptReferringMd" GridPane.columnIndex="1" />
+                        <TextField fx:id="aptDateSent" GridPane.columnIndex="3" />
+                    </GridPane>
+                    <Button fx:id="gaitVisitSave" layoutX="8.0" layoutY="31.0" mnemonicParsing="false" onAction="#onGaitVisitSave" prefHeight="72.0" prefWidth="110.0" text="Save" />
+                    <Button fx:id="questionnaires" layoutX="8.0" layoutY="122.0" mnemonicParsing="false" onAction="#onQuestionnaires" prefHeight="72.0" prefWidth="110.0" text="Questionnaires" />
+               <Separator blendMode="EXCLUSION" layoutX="127.0" layoutY="18.0" orientation="VERTICAL" prefHeight="577.0" prefWidth="6.0" />
+                </AnchorPane>
+            </content>
+        </ScrollPane>
     </Tab>
     <Tab fx:id="physExamGait" closable="false" text="GAIT Physical Examination">
         <ScrollPane prefHeight="6000.0" prefWidth="763.0">
@@ -962,19 +809,19 @@
                 <TextField fx:id="StrengthKneeFlexR2" layoutX="536.0" layoutY="1928.0" prefHeight="20.0" prefWidth="75.0" />
                 <ComboBox fx:id="kneeFlexRS1" layoutX="442.0" layoutY="1957.0" prefHeight="19.0" prefWidth="60.0" />
                 <ComboBox fx:id="kneeFlexRS11" layoutX="545.0" layoutY="1956.0" prefHeight="19.0" prefWidth="60.0" />
-            <Text layoutX="27.0" layoutY="2788.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Orthosis " wrappingWidth="54.151031494140625" />
-            <Text layoutX="179.0" layoutY="2787.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Side" />
-            <Separator layoutX="19.0" layoutY="2794.0" prefHeight="0.0" prefWidth="320.0" />
-            <Separator layoutX="173.0" layoutY="2771.0" orientation="VERTICAL" prefHeight="159.0" prefWidth="0.0" />
-            <Separator layoutX="20.0" layoutY="2827.0" prefHeight="1.0" prefWidth="317.0" />
-            <Separator layoutX="19.0" layoutY="2770.0" prefHeight="0.0" prefWidth="320.0" />
-            <Separator layoutX="18.0" layoutY="2771.0" orientation="VERTICAL" prefHeight="159.0" prefWidth="0.0" />
-            <Separator layoutX="337.0" layoutY="2771.0" orientation="VERTICAL" prefHeight="159.0" prefWidth="0.0" />
-            <Label fx:id="orthosisLabel" layoutX="34.0" layoutY="2803.0" />
-            <Label fx:id="sideLabel" layoutX="180.0" layoutY="2803.0" />
-            <Separator layoutX="18.0" layoutY="2929.0" prefHeight="0.0" prefWidth="320.0" />
-            <Separator layoutX="21.0" layoutY="2861.0" prefHeight="1.0" prefWidth="317.0" />
-            <Separator layoutX="18.0" layoutY="2893.0" prefHeight="1.0" prefWidth="317.0" />
+                <Text layoutX="27.0" layoutY="2788.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Orthosis " wrappingWidth="54.151031494140625" />
+                <Text layoutX="179.0" layoutY="2787.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Side" />
+                <Separator layoutX="19.0" layoutY="2794.0" prefHeight="0.0" prefWidth="320.0" />
+                <Separator layoutX="173.0" layoutY="2771.0" orientation="VERTICAL" prefHeight="159.0" prefWidth="0.0" />
+                <Separator layoutX="20.0" layoutY="2827.0" prefHeight="1.0" prefWidth="317.0" />
+                <Separator layoutX="19.0" layoutY="2770.0" prefHeight="0.0" prefWidth="320.0" />
+                <Separator layoutX="18.0" layoutY="2771.0" orientation="VERTICAL" prefHeight="159.0" prefWidth="0.0" />
+                <Separator layoutX="337.0" layoutY="2771.0" orientation="VERTICAL" prefHeight="159.0" prefWidth="0.0" />
+                <Label fx:id="orthosisLabel" layoutX="34.0" layoutY="2803.0" />
+                <Label fx:id="sideLabel" layoutX="180.0" layoutY="2803.0" />
+                <Separator layoutX="18.0" layoutY="2929.0" prefHeight="0.0" prefWidth="320.0" />
+                <Separator layoutX="21.0" layoutY="2861.0" prefHeight="1.0" prefWidth="317.0" />
+                <Separator layoutX="18.0" layoutY="2893.0" prefHeight="1.0" prefWidth="317.0" />
             </Pane>
         </ScrollPane>
     </Tab>
@@ -1198,20 +1045,22 @@
                 <Label layoutX="12.0" layoutY="1176.0" text="Other - History" />
                 <Separator layoutY="1197.0" prefHeight="3.0" prefWidth="783.0" />
                 <CheckBox layoutX="288.0" layoutY="1176.0" mnemonicParsing="false" />
-            <Label layoutX="681.0" layoutY="103.0" text="11/11/2022">
-               <font>
-                  <Font size="11.0" />
-               </font>
-            </Label>
+                <Label layoutX="681.0" layoutY="103.0" text="11/11/2022">
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                </Label>
             </Pane>
         </ScrollPane>
     </Tab>
     <Tab fx:id="dataTab" closable="false" text="Data">
         <AnchorPane prefHeight="200.0" prefWidth="200.0">
             <TreeView fx:id="dataTable" layoutX="9.0" layoutY="19.0" onMouseClicked="#selectedItem" prefHeight="546.0" prefWidth="222.0">
-                   <TreeItem fx:id="dataColumn"  />
+                <!--    <columns>-->
+                <!--   <TreeTableColumn fx:id="dataColumn" prefWidth="207.99999936421713" text="Data" />-->
+                <!--    </columns>-->
             </TreeView>
-            <HBox layoutX="355.0" layoutY="161.0" prefHeight="236.0" prefWidth="379.0">
+            <HBox layoutX="287.0" layoutY="110.0" prefHeight="403.0" prefWidth="565.0">
             </HBox>
         </AnchorPane>
     </Tab>

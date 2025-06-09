@@ -13,6 +13,7 @@ import com.example.gaitlabapp.services.AptsService;
 import com.example.gaitlabapp.services.GenMarkerService;
 import com.example.gaitlabapp.services.PatientService;
 import jakarta.persistence.Table;
+import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -22,8 +23,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Text;
@@ -31,6 +34,8 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.stage.Window;
+import javafx.util.Duration;
+import javafx.util.StringConverter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
@@ -40,6 +45,7 @@ import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.invoke.StringConcatFactory;
 import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
@@ -1153,6 +1159,7 @@ public class GaitTestVisitController implements Initializable {
         // data types
         TreeItem<String> showAll = new TreeItem<>("Show all");
         TreeItem<String> pngFiles = new TreeItem<String>("PNG Files");
+        TreeItem<String> interpFiles = new TreeItem<>("Interpt");
         TreeItem<String> photos = new TreeItem<>("Photos");
         TreeItem<String> videos = new TreeItem<>("Videos");
         TreeItem<String> compendium = new TreeItem<>("Compendium");
@@ -1160,6 +1167,7 @@ public class GaitTestVisitController implements Initializable {
 
         //categories
         TreeItem<String> kinematics = new TreeItem<>("Kinematics");
+        TreeItem<String> kinematicsData = new TreeItem<>("Kinematics");
         TreeItem<String> footKinematics = new TreeItem<>("Foot Kinematics");
         TreeItem<String> kinetics = new TreeItem<>("Kinetics");
         TreeItem<String> hipJointAngles = new TreeItem<>("Hip Joint Angles");
@@ -1169,8 +1177,30 @@ public class GaitTestVisitController implements Initializable {
         TreeItem<String> hipJoint = new TreeItem<>("Hip Joint Moments");
         TreeItem<String> kneeJoint = new TreeItem<>("Knee Joint Moments");
         TreeItem<String> ankleJoint = new TreeItem<>("Ankle Joint Moments");
+        TreeItem<String> kineticsData = new TreeItem<>("Kinetics");
+        TreeItem<String> footModel = new TreeItem<>("Foot Model");
+        TreeItem<String> pedobaragraph = new TreeItem<>("Pedobaragraph");
+        TreeItem<String> o2Consumption = new TreeItem<>("02 Consumption");
+
+        //subcategories
+        TreeItem<String> temporalSpatial = new TreeItem<>("Temporal/Spatial Parameters");
+        TreeItem<String> trunkOrientation = new TreeItem<>("Trunk Orientation Relative to Room");
+        TreeItem<String> hipJointData = new TreeItem<>("Hip Joint Angles(deg)");
+        TreeItem<String> ankleJointData = new TreeItem<>("Ankle Joint Angles (def");
+        TreeItem<String> variabilityData = new TreeItem<>("Variability");
+        TreeItem<String> armJointData = new TreeItem<>("Arm Joint Angles");
+        TreeItem<String> pelvisOrientation = new TreeItem<>("Pelvis Orientation Relative to Room");
+        TreeItem<String> kneeJointData = new TreeItem<>("Knee Joint Angles (deg)");
+        TreeItem<String> footOrientation = new TreeItem<>("Foot Orientation Relative to Room");
+        TreeItem<String> groundForcesData = new TreeItem<>("Ground Reaction Forces (BW)");
+        TreeItem<String> kneeJointMoments = new TreeItem<>("Knee Joint Moments");
+        TreeItem<String> sagittalPowers = new TreeItem<>("Sagittal Joint Powers");
+        TreeItem<String> hipMoments = new TreeItem<>("Hip Joint Moments");
+        TreeItem<String> ankleMoments = new TreeItem<>("Ankle Joint Moments");
+
+        //main tree
         TreeItem<String> parent2DataRoot = new TreeItem<>("");
-        private boolean gaitTest = false;
+
         @Autowired
         private AptsService aptsService;
         @Autowired
@@ -2555,7 +2585,7 @@ public class GaitTestVisitController implements Initializable {
 //        hipAbdRS.getItems().setAll(promOptions);
 //        hipIntRotLP.getItems().setAll(promOptions);
 //        hipIntRotRP.getItems().setAll(promOptions);
-//        hipIntRotLS.getItems().setAll(promOptions);
+////        hipIntRotLS.getItems().setAll(promOptions);
 //        hipIntRotRS.getItems().setAll(promOptions);
 //        hipExtRotRS.getItems().setAll(promOptions);
 //        hipExtRotLS.getItems().setAll(promOptions);
@@ -2615,10 +2645,12 @@ public class GaitTestVisitController implements Initializable {
 //        legLengthLP.getItems().setAll(promOptions);
 //        kneeVarusLP.getItems().setAll(promOptions);
 //        kneeVarusRP.getItems().setAll(promOptions);
-//
-//
-//
-//
+
+
+
+/*
+changes saved - no longer being used
+ */
 //        physExamGait.setOnSelectionChanged(e -> {
 //            PauseTransition delay = new PauseTransition(Duration.seconds(1));
 //
@@ -2636,26 +2668,38 @@ public class GaitTestVisitController implements Initializable {
 //            delay.setOnFinished(event -> popoverStage.close());
 //            delay.play();
 //        });
-//
+////
 //
 //
 //        /*
 //        need to see if this is in use.
 //         */
-//        // adding to the tree view
-//        kinematics.getChildren().addAll(hipJointAngles, ankleJointAngles);
-//        footKinematics.getChildren().addAll(lateralForefoot, medialForefoot);
-//        kinetics.getChildren().addAll(hipJoint, kneeJoint, ankleJoint);
-//        pngFiles.getChildren().addAll(kinematics);
-//        pngFiles.getChildren().addAll(footKinematics);
-//        pngFiles.getChildren().addAll(kinetics);
-//
-//        parent2DataRoot.getChildren().addAll(showAll);
-//        parent2DataRoot.getChildren().addAll(pngFiles);
-//
-//        parent2DataRoot.setExpanded(true);
-//        dataTable.setRoot(parent2DataRoot);
-//        this.dataTable.setShowRoot(false);
+//        // adding to the tree view subcats
+        kinematics.getChildren().addAll(hipJointAngles, ankleJointAngles);
+        footKinematics.getChildren().addAll(lateralForefoot, medialForefoot);
+        kinetics.getChildren().addAll(hipJoint, kneeJoint, ankleJoint);
+        pngFiles.getChildren().addAll(kinematics);
+        pngFiles.getChildren().addAll(footKinematics);
+        pngFiles.getChildren().addAll(kinetics);
+        kinematicsData.getChildren().addAll(temporalSpatial, trunkOrientation, hipJointData, ankleJointData, variabilityData, armJointData,
+                pelvisOrientation, kneeJointData, footOrientation);
+        kineticsData.getChildren().addAll(groundForcesData, kneeJointMoments, sagittalPowers, hipMoments, ankleMoments);
+        //main tree
+        interpFiles.getChildren().addAll(kinematicsData);
+        interpFiles.getChildren().addAll(kineticsData);
+        interpFiles.getChildren().addAll(footModel);
+        interpFiles.getChildren().addAll(pedobaragraph);
+        interpFiles.getChildren().addAll(o2Consumption);
+
+
+       // parent2DataRoot.getChildren().addAll(showAll);
+        parent2DataRoot.getChildren().addAll(interpFiles);
+        parent2DataRoot.getChildren().addAll(pngFiles);
+
+
+        parent2DataRoot.setExpanded(true);
+        dataTable.setRoot(parent2DataRoot);
+        this.dataTable.setShowRoot(false);
 
 
             gaitpics.selectedProperty().addListener((o, newValue, oldValue) -> {
@@ -2773,7 +2817,7 @@ public class GaitTestVisitController implements Initializable {
 
         }
         Image lateralForeFoot = new Image(String.valueOf(getClass().getResource("/images/99999999_052223_LateralForeFoot.png")));
-        Image kneeJointMoments = new Image(String.valueOf(getClass().getResource("/images/99999999_052223_KneeJointMoments.png")));
+        Image kneeJointMoments1 = new Image(String.valueOf(getClass().getResource("/images/99999999_052223_KneeJointMoments.png")));
         Image kneeJointAngles = new Image(String.valueOf(getClass().getResource("/images/99999999_052223_KneeJointAngles.png")));
         Image hipJointMoments = new Image(String.valueOf(getClass().getResource("/images/99999999_052223_HipJointMoments.png")));
         Image hipJointAnglesImage = new Image(String.valueOf(getClass().getResource("/images/99999999_052223_HipJointAngles.png")));
@@ -2786,188 +2830,235 @@ public class GaitTestVisitController implements Initializable {
 
 
         public void selectedItem() throws IOException {
-            TreeItem<String> item = (TreeItem<String>) dataTable.getSelectionModel().getSelectedItem();
-            if (item.equals(showAll)) {
-                Pane pane = new Pane();
-                ImageView imageView1 = new ImageView(kneeJointAngles);
-                ImageView imageView2 = new ImageView(comparisonPhoto);
-                ImageView imageView3 = new ImageView(hipJointAnglesImage);
-                ImageView imageView4 = new ImageView(comparisonPhoto);
-                ImageView imageView5 = new ImageView(hipJointAnglesImage);
-                ImageView imageView6 = new ImageView(comparisonPhoto);
-                ImageView imageView7 = new ImageView(lateralForeFoot);
-                ImageView imageView8 = new ImageView(comparisonPhoto);
-                //image1
-                imageView1.setFitWidth(300);
-                imageView1.setFitHeight(300);
-                imageView1.setTranslateY(0);
-                imageView1.setTranslateX(0);
-                //image2
-                imageView2.setFitHeight(300);
-                imageView2.setFitWidth(300);
-                imageView2.setTranslateY(0);
-                imageView2.setTranslateX(310);
-
-                //image 3
-                imageView3.setFitHeight(300);
-                imageView3.setFitWidth(300);
-                imageView3.setTranslateY(310);
-                imageView3.setTranslateX(0);
-
-                //image 4
-                imageView4.setFitWidth(300);
-                imageView4.setFitHeight(300);
-                imageView4.setTranslateY(310);
-                imageView4.setTranslateX(310);
-
-                //image 5
-                imageView5.setFitHeight(300);
-                imageView5.setFitWidth(300);
-                imageView5.setTranslateY(0);
-                imageView5.setTranslateX(620);
-
-                //image 6
-                imageView6.setFitHeight(300);
-                imageView6.setFitWidth(300);
-                imageView6.setTranslateY(0);
-                imageView6.setTranslateX(920);
-
-                //image 7
-                imageView7.setFitHeight(300);
-                imageView7.setFitWidth(300);
-                imageView7.setTranslateY(315);
-                imageView7.setTranslateX(620);
-
-                //image 8
-                imageView8.setFitHeight(300);
-                imageView8.setFitWidth(300);
-                imageView8.setTranslateY(315);
-                imageView8.setTranslateX(920);
-
-                pane.getChildren().add(imageView1);
-                pane.getChildren().add(imageView2);
-                pane.getChildren().add(imageView3);
-                pane.getChildren().add(imageView4);
-                pane.getChildren().add(imageView5);
-                pane.getChildren().add(imageView6);
-                pane.getChildren().add(imageView7);
-                pane.getChildren().add(imageView8);
-
-                Scene scene = new Scene(pane, 1200, 650);
-                Stage stage = new Stage();
-                stage.setScene(scene);
-                stage.show();
-            }
-            if (item.equals(kneeJoint)) {
-                Pane pane = new HBox(150);
-                ImageView imageView1 = new ImageView(kneeJointAngles);
-                ImageView imageView2 = new ImageView(comparisonPhoto);
-                //image1
-                imageView1.setFitWidth(400);
-                imageView1.setFitHeight(400);
-                //image2
-                imageView2.setFitHeight(400);
-                imageView2.setFitWidth(400);
-
-                pane.getChildren().add(imageView1);
-                pane.getChildren().add(imageView2);
-                Scene scene = new Scene(pane, 1000, 500);
-                Stage stage = new Stage();
-                stage.setScene(scene);
-                stage.show();
-            }
-            if (item.equals(hipJointAngles)) {
-                Pane pane = new HBox(150);
-                ImageView imageView1 = new ImageView(hipJointAnglesImage);
-                ImageView imageView2 = new ImageView(comparisonPhoto);
-                //image1
-                imageView1.setFitWidth(400);
-                imageView1.setFitHeight(400);
-                //image2
-                imageView2.setFitHeight(400);
-                imageView2.setFitWidth(400);
-
-                pane.getChildren().add(imageView1);
-                pane.getChildren().add(imageView2);
-                Scene scene = new Scene(pane, 1000, 500);
-                Stage stage = new Stage();
-                stage.setScene(scene);
-                stage.show();
-            }
-            if (item.equals(lateralForefoot)) {
-                Pane pane = new HBox(150);
-                ImageView imageView1 = new ImageView(lateralForeFoot);
-                ImageView imageView2 = new ImageView(comparisonPhoto);
-                //image1
-                imageView1.setFitWidth(400);
-                imageView1.setFitHeight(400);
-                //image2
-                imageView2.setFitHeight(400);
-                imageView2.setFitWidth(400);
-
-                pane.getChildren().add(imageView1);
-                pane.getChildren().add(imageView2);
-                Scene scene = new Scene(pane, 1000, 500);
-                Stage stage = new Stage();
-                stage.setScene(scene);
-                stage.show();
-            }
-            if (item.equals(medialForefoot)) {
-                Pane pane = new HBox(150);
-                ImageView imageView1 = new ImageView(medialForeFoot);
-                ImageView imageView2 = new ImageView(comparisonPhoto);
-                //image1
-                imageView1.setFitWidth(400);
-                imageView1.setFitHeight(400);
-                //image2
-                imageView2.setFitHeight(400);
-                imageView2.setFitWidth(400);
-
-                pane.getChildren().add(imageView1);
-                pane.getChildren().add(imageView2);
-                Scene scene = new Scene(pane, 1000, 500);
-                Stage stage = new Stage();
-                stage.setScene(scene);
-                stage.show();
-            }
-            if (item.equals(ankleJointAngles)) {
-                Pane pane = new HBox(150);
-                ImageView imageView1 = new ImageView(kneeJointMoments);
-                ImageView imageView2 = new ImageView(comparisonPhoto);
-                //image1
-                imageView1.setFitWidth(400);
-                imageView1.setFitHeight(400);
-                //image2
-                imageView2.setFitHeight(400);
-                imageView2.setFitWidth(400);
-
-                pane.getChildren().add(imageView1);
-                pane.getChildren().add(imageView2);
-                Scene scene = new Scene(pane, 1000, 500);
-                Stage stage = new Stage();
-                stage.setScene(scene);
-                stage.show();
-            }
-            if (item.equals(hipJoint)) {
-                Pane pane = new HBox(150);
-                ImageView imageView1 = new ImageView(hipJointMoments);
-                ImageView imageView2 = new ImageView(comparisonPhoto);
-                //image1
-                imageView1.setFitWidth(400);
-                imageView1.setFitHeight(400);
-                //image2
-                imageView2.setFitHeight(400);
-                imageView2.setFitWidth(400);
-
-                pane.getChildren().add(imageView1);
-                pane.getChildren().add(imageView2);
-                Scene scene = new Scene(pane, 1000, 500);
-                Stage stage = new Stage();
-                stage.setScene(scene);
-                stage.show();
-            }
-
+                TreeItem<String> item = (TreeItem<String>) dataTable.getSelectionModel().getSelectedItem();
+                if (item != null) {
+                        System.out.println(item.getValue());
+                } else if (item == pngFiles) {
+                        System.out.println("You've selected PNG Files");
+                }
         }
+//                for (int i = 1; i < 6; i++) {
+//                        TreeItem<String> item = new TreeItem ("Message" + i);
+//                        rootItem.getChildren().add(item);
+//                }
+//                TreeView<String> tree = new TreeView (rootItem);
+//                BorderPane root = new BorderPane();
+//                root.setCenter(getViewOne());
+//                root.setLeft(tree);
+//
+//                tree.getSelectionModel().selectedItemProperty().addListener((obs, oldTreeItem, newTreeItem) -> {
+//                        if(newTreeItem != null)
+//                        {
+//                                if(newTreeItem == rootItem.getChildren().get(0))
+//                                {
+//                                        root.setCenter(getViewOne());
+//                                }
+//                                if(newTreeItem == rootItem.getChildren().get(1))
+//                                {
+//                                        root.setCenter(getViewTwo());
+//                                }
+//                                else
+//                                {
+//                                        System.out.println("Write code for other cases!");
+//                                }
+//                        }
+//                });
+//        }
+//
+//        public HBox getViewOne()
+//        {
+//                return new HBox(new Label("View One"));
+//        }
+//
+//        public StackPane getViewTwo()
+//        {
+//                return new StackPane(new Label("View Two"));
+//        }
+
+
+
+
+//            if (item.equals(showAll)) {
+//                Pane pane = new Pane();
+//                ImageView imageView1 = new ImageView(kneeJointAngles);
+//                ImageView imageView2 = new ImageView(comparisonPhoto);
+//                ImageView imageView3 = new ImageView(hipJointAnglesImage);
+//                ImageView imageView4 = new ImageView(comparisonPhoto);
+//                ImageView imageView5 = new ImageView(hipJointAnglesImage);
+//                ImageView imageView6 = new ImageView(comparisonPhoto);
+//                ImageView imageView7 = new ImageView(lateralForeFoot);
+//                ImageView imageView8 = new ImageView(comparisonPhoto);
+//                //image1
+//                imageView1.setFitWidth(300);
+//                imageView1.setFitHeight(300);
+//                imageView1.setTranslateY(0);
+//                imageView1.setTranslateX(0);
+//                //image2
+//                imageView2.setFitHeight(300);
+//                imageView2.setFitWidth(300);
+//                imageView2.setTranslateY(0);
+//                imageView2.setTranslateX(310);
+//
+//                //image 3
+//                imageView3.setFitHeight(300);
+//                imageView3.setFitWidth(300);
+//                imageView3.setTranslateY(310);
+//                imageView3.setTranslateX(0);
+//
+//                //image 4
+//                imageView4.setFitWidth(300);
+//                imageView4.setFitHeight(300);
+//                imageView4.setTranslateY(310);
+//                imageView4.setTranslateX(310);
+//
+//                //image 5
+//                imageView5.setFitHeight(300);
+//                imageView5.setFitWidth(300);
+//                imageView5.setTranslateY(0);
+//                imageView5.setTranslateX(620);
+//
+//                //image 6
+//                imageView6.setFitHeight(300);
+//                imageView6.setFitWidth(300);
+//                imageView6.setTranslateY(0);
+//                imageView6.setTranslateX(920);
+//
+//                //image 7
+//                imageView7.setFitHeight(300);
+//                imageView7.setFitWidth(300);
+//                imageView7.setTranslateY(315);
+//                imageView7.setTranslateX(620);
+//
+//                //image 8
+//                imageView8.setFitHeight(300);
+//                imageView8.setFitWidth(300);
+//                imageView8.setTranslateY(315);
+//                imageView8.setTranslateX(920);
+//
+//                pane.getChildren().add(imageView1);
+//                pane.getChildren().add(imageView2);
+//                pane.getChildren().add(imageView3);
+//                pane.getChildren().add(imageView4);
+//                pane.getChildren().add(imageView5);
+//                pane.getChildren().add(imageView6);
+//                pane.getChildren().add(imageView7);
+//                pane.getChildren().add(imageView8);
+//
+//                Scene scene = new Scene(pane, 1200, 650);
+//                Stage stage = new Stage();
+//                stage.setScene(scene);
+//                stage.show();
+//            }
+//            if (item.equals(kneeJoint)) {
+//                Pane pane = new HBox(150);
+//                ImageView imageView1 = new ImageView(kneeJointAngles);
+//                ImageView imageView2 = new ImageView(comparisonPhoto);
+//                //image1
+//                imageView1.setFitWidth(400);
+//                imageView1.setFitHeight(400);
+//                //image2
+//                imageView2.setFitHeight(400);
+//                imageView2.setFitWidth(400);
+//
+//                pane.getChildren().add(imageView1);
+//                pane.getChildren().add(imageView2);
+//                Scene scene = new Scene(pane, 1000, 500);
+//                Stage stage = new Stage();
+//                stage.setScene(scene);
+//                stage.show();
+//            }
+//            if (item.equals(hipJointAngles)) {
+//                Pane pane = new HBox(150);
+//                ImageView imageView1 = new ImageView(hipJointAnglesImage);
+//                ImageView imageView2 = new ImageView(comparisonPhoto);
+//                //image1
+//                imageView1.setFitWidth(400);
+//                imageView1.setFitHeight(400);
+//                //image2
+//                imageView2.setFitHeight(400);
+//                imageView2.setFitWidth(400);
+//
+//                pane.getChildren().add(imageView1);
+//                pane.getChildren().add(imageView2);
+//                Scene scene = new Scene(pane, 1000, 500);
+//                Stage stage = new Stage();
+//                stage.setScene(scene);
+//                stage.show();
+//            }
+//            if (item.equals(lateralForefoot)) {
+//                Pane pane = new HBox(150);
+//                ImageView imageView1 = new ImageView(lateralForeFoot);
+//                ImageView imageView2 = new ImageView(comparisonPhoto);
+//                //image1
+//                imageView1.setFitWidth(400);
+//                imageView1.setFitHeight(400);
+//                //image2
+//                imageView2.setFitHeight(400);
+//                imageView2.setFitWidth(400);
+//
+//                pane.getChildren().add(imageView1);
+//                pane.getChildren().add(imageView2);
+//                Scene scene = new Scene(pane, 1000, 500);
+//                Stage stage = new Stage();
+//                stage.setScene(scene);
+//                stage.show();
+//            }
+//            if (item.equals(medialForefoot)) {
+//                Pane pane = new HBox(150);
+//                ImageView imageView1 = new ImageView(medialForeFoot);
+//                ImageView imageView2 = new ImageView(comparisonPhoto);
+//                //image1
+//                imageView1.setFitWidth(400);
+//                imageView1.setFitHeight(400);
+//                //image2
+//                imageView2.setFitHeight(400);
+//                imageView2.setFitWidth(400);
+//
+//                pane.getChildren().add(imageView1);
+//                pane.getChildren().add(imageView2);
+//                Scene scene = new Scene(pane, 1000, 500);
+//                Stage stage = new Stage();
+//                stage.setScene(scene);
+//                stage.show();
+//            }
+//            if (item.equals(ankleJointAngles)) {
+//                Pane pane = new HBox(150);
+//                ImageView imageView1 = new ImageView(kneeJointMoments);
+//                ImageView imageView2 = new ImageView(comparisonPhoto);
+//                //image1
+//                imageView1.setFitWidth(400);
+//                imageView1.setFitHeight(400);
+//                //image2
+//                imageView2.setFitHeight(400);
+//                imageView2.setFitWidth(400);
+//
+//                pane.getChildren().add(imageView1);
+//                pane.getChildren().add(imageView2);
+//                Scene scene = new Scene(pane, 1000, 500);
+//                Stage stage = new Stage();
+//                stage.setScene(scene);
+//                stage.show();
+//            }
+//            if (item.equals(hipJoint)) {
+//                Pane pane = new HBox(150);
+//                ImageView imageView1 = new ImageView(hipJointMoments);
+//                ImageView imageView2 = new ImageView(comparisonPhoto);
+//                //image1
+//                imageView1.setFitWidth(400);
+//                imageView1.setFitHeight(400);
+//                //image2
+//                imageView2.setFitHeight(400);
+//                imageView2.setFitWidth(400);
+//
+//                pane.getChildren().add(imageView1);
+//                pane.getChildren().add(imageView2);
+//                Scene scene = new Scene(pane, 1000, 500);
+//                Stage stage = new Stage();
+//                stage.setScene(scene);
+//                stage.show();
+//            }
+
+
 
         //patientId.setText(String.valueOf(patientModel.getPatientID()));
 
