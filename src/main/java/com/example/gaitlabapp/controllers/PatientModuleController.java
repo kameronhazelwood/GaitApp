@@ -477,7 +477,7 @@ public class PatientModuleController implements Initializable {
                     stage1.initModality(Modality.WINDOW_MODAL);
                     stage1.initOwner(getVisitGaitDetails());
                     stage1.setTitle("GAIT Visit Details:   ");
-                    stage1.setScene(new Scene(popUp, 800, 680));
+                    stage1.setScene(new Scene(popUp, 860, 680));
                     stage1.showAndWait();
                 }
                 case POSTOP -> {

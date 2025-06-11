@@ -1,9 +1,13 @@
 package com.example.gaitlabapp.controllers.Forms.Interpretation.GAIT;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.text.Text;
 
-public class InterpretationGAITKinematicsController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class InterpretationGAITKinematicsController implements Initializable {
 
     @FXML
     private Text AntPelvicMaxRInterp;
@@ -782,4 +786,15 @@ public class InterpretationGAITKinematicsController {
     @FXML
     private Text velocityRValue;
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        elbowFlexFCRValue.setText("53");
+        elbowFlexMaxRightRValue.setText("60.86");
+        elbowFlexFCLValue.setText("33.94");
+        elbowFlexMaxLeftLValue.setText("57.49");
+        elbowFlexFCRInterp.setText("High");
+        elbowFlexMaxRightRInterp.setText("Normal");
+        elbowFlexFCLInterp.setText("Normal");
+        elbowFlexMaxLeftLInterp.setText("Normal");
+    }
 }

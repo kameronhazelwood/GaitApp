@@ -40,58 +40,72 @@
         <Separator layoutX="21.0" layoutY="289.0" prefHeight="0.0" prefWidth="541.0" />
         <Separator layoutX="21.0" layoutY="328.0" prefHeight="0.0" prefWidth="541.0" />
         <Separator layoutX="21.0" layoutY="422.0" prefHeight="0.0" prefWidth="541.0" />
-        <Label layoutX="23.0" layoutY="476.0" text="Seizure Medications: ">
+        <Label layoutX="23.0" layoutY="440.0" text="Seizure Medications: ">
             <font>
                 <Font name="System Bold" size="13.0" />
             </font>
         </Label>
-        <Label layoutX="383.0" layoutY="476.0" text="Current Devices/Braces:">
+        <Label layoutX="383.0" layoutY="440.0" text="Current Devices/Braces:">
             <font>
                 <Font name="System Bold" size="13.0" />
             </font>
         </Label>
-        <Label layoutX="23.0" layoutY="574.0" text="Gait Concerns:">
+        <Label layoutX="23.0" layoutY="538.0" text="Gait Concerns:">
             <font>
                 <Font name="System Bold" size="13.0" />
             </font>
         </Label>
-        <Label layoutX="383.0" layoutY="584.0" text="Pain Reports: ">
+        <Label layoutX="383.0" layoutY="548.0" text="Pain Reports: ">
             <font>
                 <Font name="System Bold" size="13.0" />
             </font>
         </Label>
-        <Label layoutX="20.0" layoutY="830.0" text="Occupational Therapy Frequency:">
+        <Label layoutX="347.0" layoutY="668.0" text="Occupational Therapy Frequency:">
             <font>
                 <Font name="System Bold" size="13.0" />
             </font>
         </Label>
-        <Label layoutX="20.0" layoutY="683.0" text="Physical Therapy Frequency:">
+        <Label layoutX="20.0" layoutY="668.0" text="Physical Therapy Frequency:">
             <font>
                 <Font name="System Bold" size="13.0" />
             </font>
         </Label>
-      <Label layoutX="23.0" layoutY="505.0" text="Depakote" />
-      <Label layoutX="388.0" layoutY="505.0" text="Hand Led" />
-      <Text layoutX="27.0" layoutY="616.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prequent Tripping" />
-      <Text layoutX="385.0" layoutY="625.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fingers (R)" />
-      <Text layoutX="389.0" layoutY="651.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder" />
-      <Text layoutX="27.0" layoutY="724.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hospital:" />
-      <Text layoutX="27.0" layoutY="754.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clinic:" />
-      <Text layoutX="27.0" layoutY="784.0" strokeType="OUTSIDE" strokeWidth="0.0" text="School:" />
-      <Text layoutX="27.0" layoutY="814.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home:" />
-      <Text layoutX="27.0" layoutY="869.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hospital:" />
-      <Text layoutX="27.0" layoutY="899.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clinic:" />
-      <Text layoutX="27.0" layoutY="929.0" strokeType="OUTSIDE" strokeWidth="0.0" text="School:" />
-      <Text layoutX="27.0" layoutY="959.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home:" />
-      <Text layoutX="113.0" layoutY="724.0" strokeType="OUTSIDE" strokeWidth="0.0" text="None" />
-      <Text layoutX="113.0" layoutY="754.0" strokeType="OUTSIDE" strokeWidth="0.0" text="One or more times per week" />
-      <Text layoutX="113.0" layoutY="784.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Two or three times per month" />
-      <Text layoutX="113.0" layoutY="814.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About once per month" />
-      <Text layoutX="124.0" layoutY="869.0" strokeType="OUTSIDE" strokeWidth="0.0" text="None" />
-      <Text layoutX="124.0" layoutY="899.0" strokeType="OUTSIDE" strokeWidth="0.0" text="One or more times per week" />
-      <Text layoutX="124.0" layoutY="929.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About once per month" />
-      <Text layoutX="124.0" layoutY="959.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About once per month" />
+      <Label layoutX="23.0" layoutY="469.0" text="Depakote" />
+      <Label layoutX="388.0" layoutY="469.0" text="Hand Led" />
+      <Text layoutX="27.0" layoutY="580.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prequent Tripping" />
+      <Text layoutX="385.0" layoutY="589.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fingers (R)" />
+      <Text layoutX="389.0" layoutY="615.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder" />
+      <Text layoutX="27.0" layoutY="716.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hospital:" />
+      <Text layoutX="27.0" layoutY="746.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clinic:" />
+      <Text layoutX="27.0" layoutY="776.0" strokeType="OUTSIDE" strokeWidth="0.0" text="School:" />
+      <Text layoutX="27.0" layoutY="806.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home:" />
+      <Text layoutX="352.0" layoutY="714.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hospital:" />
+      <Text layoutX="352.0" layoutY="744.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clinic:" />
+      <Text layoutX="352.0" layoutY="774.0" strokeType="OUTSIDE" strokeWidth="0.0" text="School:" />
+      <Text layoutX="352.0" layoutY="804.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home:" />
+      <Text layoutX="113.0" layoutY="716.0" strokeType="OUTSIDE" strokeWidth="0.0" text="None" />
+      <Text layoutX="113.0" layoutY="746.0" strokeType="OUTSIDE" strokeWidth="0.0" text="One or more times per week" />
+      <Text layoutX="113.0" layoutY="776.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Two or three times per month" />
+      <Text layoutX="113.0" layoutY="806.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About once per month" />
+      <Text layoutX="449.0" layoutY="714.0" strokeType="OUTSIDE" strokeWidth="0.0" text="None" />
+      <Text layoutX="449.0" layoutY="744.0" strokeType="OUTSIDE" strokeWidth="0.0" text="One or more times per week" />
+      <Text layoutX="449.0" layoutY="774.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About once per month" />
+      <Text layoutX="449.0" layoutY="804.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About once per month" />
       <Text layoutX="291.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="05/31/2025" />
+      <Separator layoutX="12.0" layoutY="725.0" prefHeight="0.0" prefWidth="297.0" />
+      <Separator layoutX="12.0" layoutY="757.0" prefHeight="0.0" prefWidth="297.0" />
+      <Separator layoutX="12.0" layoutY="789.0" prefHeight="0.0" prefWidth="297.0" />
+      <Separator layoutX="12.0" layoutY="817.0" prefHeight="0.0" prefWidth="297.0" />
+      <Separator layoutX="306.0" layoutY="693.0" orientation="VERTICAL" prefHeight="126.0" prefWidth="0.0" />
+      <Separator layoutX="16.0" layoutY="692.0" prefHeight="1.0" prefWidth="291.0" />
+      <Separator layoutX="12.0" layoutY="692.0" orientation="VERTICAL" prefHeight="126.0" prefWidth="0.0" />
+      <Separator layoutX="337.0" layoutY="725.0" prefHeight="0.0" prefWidth="287.0" />
+      <Separator layoutX="337.0" layoutY="757.0" prefHeight="0.0" prefWidth="287.0" />
+      <Separator layoutX="337.0" layoutY="789.0" prefHeight="0.0" prefWidth="287.0" />
+      <Separator layoutX="337.0" layoutY="817.0" prefHeight="0.0" prefWidth="287.0" />
+      <Separator layoutX="337.0" layoutY="692.0" prefHeight="0.0" prefWidth="287.0" />
+      <Separator layoutX="335.0" layoutY="692.0" orientation="VERTICAL" prefHeight="126.0" prefWidth="0.0" />
+      <Separator layoutX="621.0" layoutY="692.0" orientation="VERTICAL" prefHeight="126.0" prefWidth="0.0" />
 
 
     </AnchorPane>

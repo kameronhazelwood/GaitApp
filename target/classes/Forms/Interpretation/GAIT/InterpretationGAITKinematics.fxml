@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane prefHeight="762.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<ScrollPane prefHeight="762.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Interpretation.GAIT.InterpretationGAITKinematicsController">
    <TabPane prefHeight="970.0" prefWidth="1380.0" tabClosingPolicy="UNAVAILABLE">
       <Tab text="Temporal / Spatial Parameters">
          <AnchorPane prefHeight="971.0" prefWidth="1335.0">
@@ -1012,7 +1012,7 @@
                      </font>
                   </Text>
                   <Text fx:id="kneeFlexMaxSwTimeRValue" layoutX="260.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                  <Text fx:id="kneeFlexSwingRNormals" layoutX="539.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="kneeFlexSwingTimeRNormals" layoutX="539.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                   <Separator layoutY="395.0" prefHeight="0.0" prefWidth="649.0" />
                   <Text layoutX="12.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee Flex Max Swing Time L">
                      <font>
@@ -1020,8 +1020,8 @@
                      </font>
                   </Text>
                   <Separator layoutY="420.0" prefHeight="0.0" prefWidth="649.0" />
-                  <Text fx:id="kneeFlexSwingLValue" layoutX="260.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                  <Text fx:id="kneeFlexSwingLNormals" layoutX="539.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="kneeFlexSwingLTimeValue" layoutX="260.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="kneeFlexSwingLTimeNormals" layoutX="539.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                   <Text fx:id="tibTorsionMaxRInterp" layoutX="380.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                   <Text fx:id="tibTorsionMaxLInterp" layoutX="380.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                   <Text fx:id="kneeVarusValRInterp" layoutX="380.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
@@ -1034,8 +1034,8 @@
                   <Text fx:id="kneeMaxExtLInterp" layoutX="380.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                   <Text fx:id="kneeFlexSwingRInterp" layoutX="380.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                   <Text fx:id="kneeFlexSwingLInterp" layoutX="380.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                  <Text fx:id="kneeFlexSwingRInterp" layoutX="380.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                  <Text fx:id="kneeFlexSwingLInterp" layoutX="380.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="kneeFlexSwingTimeRInterp" layoutX="380.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="kneeFlexSwingLTimeInterp" layoutX="380.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                </children>
             </AnchorPane>
          </content>

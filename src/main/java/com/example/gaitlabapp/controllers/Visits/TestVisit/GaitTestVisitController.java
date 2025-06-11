@@ -13,7 +13,6 @@ import com.example.gaitlabapp.services.AptsService;
 import com.example.gaitlabapp.services.GenMarkerService;
 import com.example.gaitlabapp.services.PatientService;
 import jakarta.persistence.Table;
-import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -26,16 +25,12 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import javafx.stage.Window;
-import javafx.util.Duration;
-import javafx.util.StringConverter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
@@ -45,10 +40,10 @@ import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
-import java.lang.invoke.StringConcatFactory;
 import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
+
 
 @Component
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
@@ -1152,7 +1147,6 @@ public class GaitTestVisitController implements Initializable {
         private Label patientId;
         @FXML
         private Tab visitTab;
-
         //parent root
 
         TreeItem<String> parentPhotoVideoRoot = new TreeItem<>("");
@@ -1186,7 +1180,7 @@ public class GaitTestVisitController implements Initializable {
         TreeItem<String> temporalSpatial = new TreeItem<>("Temporal/Spatial Parameters");
         TreeItem<String> trunkOrientation = new TreeItem<>("Trunk Orientation Relative to Room");
         TreeItem<String> hipJointData = new TreeItem<>("Hip Joint Angles(deg)");
-        TreeItem<String> ankleJointData = new TreeItem<>("Ankle Joint Angles (def");
+        TreeItem<String> ankleJointData = new TreeItem<>("Ankle Joint Angles (deg)");
         TreeItem<String> variabilityData = new TreeItem<>("Variability");
         TreeItem<String> armJointData = new TreeItem<>("Arm Joint Angles");
         TreeItem<String> pelvisOrientation = new TreeItem<>("Pelvis Orientation Relative to Room");
@@ -2828,14 +2822,30 @@ changes saved - no longer being used
         private Media media;
         private MediaPlayer mediaPlayer;
 
+        private Stage stage;
 
         public void selectedItem() throws IOException {
-                TreeItem<String> item = (TreeItem<String>) dataTable.getSelectionModel().getSelectedItem();
-                if (item != null) {
-                        System.out.println(item.getValue());
-                } else if (item == pngFiles) {
-                        System.out.println("You've selected PNG Files");
-                }
+                //TreeItem<String> item = (TreeItem<String>) dataTable.getSelectionModel().getSelectedItem();
+//                if (item != null) {
+//                        System.out.println(item.getValue());
+//                } else if (item == pngFiles) {
+//                        System.out.println("You've selected PNG Files");
+//                }
+                BorderPane root = new BorderPane();
+                root.setCenter(getViewOne());
+                        TreeItem<String> item = (TreeItem<String>) dataTable.getSelectionModel().getSelectedItem();
+                        if(item == armJointData){
+                                root.setCenter(getViewOne());
+
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.setScene(new Scene(root, 500, 500));
+                                stage.show();
+                        }
+
+        }
+        public HBox getViewOne()
+        {
+                return new HBox(new Label("View One"));
         }
 //                for (int i = 1; i < 6; i++) {
 //                        TreeItem<String> item = new TreeItem ("Message" + i);
@@ -2865,10 +2875,7 @@ changes saved - no longer being used
 //                });
 //        }
 //
-//        public HBox getViewOne()
-//        {
-//                return new HBox(new Label("View One"));
-//        }
+
 //
 //        public StackPane getViewTwo()
 //        {
@@ -3305,7 +3312,18 @@ changes saved - no longer being used
 
         }
 
-        public void onQuestionnaires(ActionEvent event) {
+        public void onQuestionnaires(ActionEvent event) throws IOException {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Visits/TestVisit/Questionnaries.fxml"));
+                // fxmlLoader.setControllerFactory(applicationContext::getBean);
+                Parent popUp = fxmlLoader.load();
+
+                Stage stage1 = new Stage((StageStyle.UTILITY));
+                stage1.initModality(Modality.WINDOW_MODAL);
+                stage1.setTitle("Questionnaire   ");
+                // stage1.setFullScreen(true);
+                stage1.setScene(new Scene(popUp, 950, 680));
+                stage1.showAndWait();
         }
 }
 
