@@ -14,17 +14,19 @@ import com.example.gaitlabapp.services.GenMarkerService;
 import com.example.gaitlabapp.services.PatientService;
 import jakarta.persistence.Table;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Text;
@@ -2822,6 +2824,7 @@ changes saved - no longer being used
         private Media media;
         private MediaPlayer mediaPlayer;
 
+        @FXML
         private Stage stage;
 
         public void selectedItem() throws IOException {
@@ -2835,52 +2838,505 @@ changes saved - no longer being used
                 root.setCenter(getViewOne());
                         TreeItem<String> item = (TreeItem<String>) dataTable.getSelectionModel().getSelectedItem();
                         if(item == armJointData){
+                                root.setCenter(getArmJointAngles());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.setScene(new Scene(root, 500, 500));
+                                stage.show();
+                        } else if(item == temporalSpatial) {
+                                root.setCenter(getTempSpaView());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.setScene(new Scene(root, 500, 500));
+                                stage.show();
+                        } else if (item == trunkOrientation) {
+                                root.setCenter(getTrunkOriet());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.setScene(new Scene(root, 500, 500));
+                                stage.show();
+                        } else if (item == hipJointData) {
+                                root.setCenter(getHipJointAngles());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.setScene(new Scene(root, 500, 500));
+                                stage.show();
+                        }else if(item == variabilityData){
+                                root.setCenter(getVaraiblity());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.setScene(new Scene(root, 500, 500));
+                                stage.show();
+                        } else if (item == pelvisOrientation) {
+                                root.setCenter(getPelvisOreit());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.setScene(new Scene(root, 500, 500));
+                                stage.show();
+                        } else if (item == kneeJointData) {
+                                root.setCenter(getKneeJointAngles());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.setScene(new Scene(root, 500, 500));
+                                stage.show();
+                        } else if (item == footOrientation) {
+                                root.setCenter(getFootOreint());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.setScene(new Scene(root, 500, 500));
+                                stage.show();
+                        } else if (item == groundForcesData) {
+                                root.setCenter(getGroundForces());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.setScene(new Scene(root, 500, 500));
+                                stage.show();
+                        } else if (item == hipMoments) {
+                                root.setCenter(getHipJointMoments());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.setScene(new Scene(root, 500, 500));
+                                stage.show();
+                        }
+                        else if (item == hipJointAngles) {
+                                root.setCenter(getHipJointMoments());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.setScene(new Scene(root, 500, 500));
+                                stage.show();
+                        }  else if (item == lateralForefoot) {
                                 root.setCenter(getViewOne());
-
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.setScene(new Scene(root, 500, 500));
+                                stage.show();
+                        } else if (item == medialForefoot) {
+                                root.setCenter(getViewOne());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.setScene(new Scene(root, 500, 500));
+                                stage.show();
+                        }
+                        else if (item == ankleJoint) {
+                                root.setCenter(getAnkleMoments());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.setScene(new Scene(root, 500, 500));
+                                stage.show();
+                        } else if (item == kneeJointData) {
+                                root.setCenter(getKneeJointMoments());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.setScene(new Scene(root, 500, 500));
+                                stage.show();
+                        }
+                        else if (item == footModel) {
+                                root.setCenter(getFootModel());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.setScene(new Scene(root, 500, 500));
+                                stage.show();
+                        } else if (item == pedobaragraph) {
+                                root.setCenter(getPedobaragraph());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.setScene(new Scene(root, 500, 500));
+                                stage.show();
+                        } else if (item == o2Consumption) {
+                                root.setCenter(geto2Consumption());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.setScene(new Scene(root, 500, 500));
+                                stage.show();
+                        }else if (item == ankleMoments){
+                                root.setCenter(getAnkleMoments());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.setScene(new Scene(root, 500, 500));
+                                stage.show();
+                        } else if (item == kneeJointMoments) {
+                                root.setCenter(getKneeJointMoments());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.setScene(new Scene(root, 500, 500));
+                                stage.show();
+                        } else if(item == sagittalPowers){
+                                root.setCenter(getSaggitalJointPowers());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.setScene(new Scene(root, 500, 500));
+                                stage.show();
+                        } else if (item == ankleJointData) {
+                                root.setCenter(getAnkleJointAngles());
+                                Stage stage = new Stage();
                                 stage.initModality(Modality.WINDOW_MODAL);
                                 stage.setScene(new Scene(root, 500, 500));
                                 stage.show();
                         }
 
         }
-        public HBox getViewOne()
+        public VBox getViewOne()
         {
-                return new HBox(new Label("View One"));
-        }
-//                for (int i = 1; i < 6; i++) {
-//                        TreeItem<String> item = new TreeItem ("Message" + i);
-//                        rootItem.getChildren().add(item);
-//                }
-//                TreeView<String> tree = new TreeView (rootItem);
-//                BorderPane root = new BorderPane();
-//                root.setCenter(getViewOne());
-//                root.setLeft(tree);
-//
-//                tree.getSelectionModel().selectedItemProperty().addListener((obs, oldTreeItem, newTreeItem) -> {
-//                        if(newTreeItem != null)
-//                        {
-//                                if(newTreeItem == rootItem.getChildren().get(0))
-//                                {
-//                                        root.setCenter(getViewOne());
-//                                }
-//                                if(newTreeItem == rootItem.getChildren().get(1))
-//                                {
-//                                        root.setCenter(getViewTwo());
-//                                }
-//                                else
-//                                {
-//                                        System.out.println("Write code for other cases!");
-//                                }
-//                        }
-//                });
-//        }
-//
+                Button cancelButton = new Button("Close");
+                Label testLabel = new Label("ViewOne");
 
-//
-//        public StackPane getViewTwo()
-//        {
-//                return new StackPane(new Label("View Two"));
-//        }
+                VBox vbox = new VBox();
+                vbox.getChildren().addAll(testLabel, cancelButton);
+
+                cancelButton.setOnAction(new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent event) {
+                                vbox.getScene().getWindow().hide();
+                        }
+                });
+                testLabel.setTranslateX(10);
+                cancelButton.setMinWidth(90);
+                cancelButton.setMinHeight(50);
+                cancelButton.setTranslateX(400);
+                cancelButton.setTranslateY(400);
+                return vbox;
+        }
+        public VBox getTempSpaView(){
+                Button cancelButton = new Button("Close");
+                Label testLabel = new Label("Temporal/Spatial Parameters");
+
+                VBox vbox = new VBox();
+                vbox.getChildren().addAll(testLabel, cancelButton);
+
+                cancelButton.setOnAction(new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent event) {
+                                vbox.getScene().getWindow().hide();
+                        }
+                });
+                testLabel.setTranslateX(10);
+                cancelButton.setMinWidth(90);
+                cancelButton.setMinHeight(50);
+                cancelButton.setTranslateX(400);
+                cancelButton.setTranslateY(400);
+                return vbox;
+        }
+
+        public VBox getTrunkOriet(){
+                Button cancelButton = new Button("Close");
+                Label testLabel = new Label("Trunk Orientation Relative to Room");
+
+                VBox vbox = new VBox();
+                vbox.getChildren().addAll(testLabel, cancelButton);
+
+                cancelButton.setOnAction(new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent event) {
+                                vbox.getScene().getWindow().hide();
+                        }
+                });
+                testLabel.setTranslateX(10);
+                cancelButton.setMinWidth(90);
+                cancelButton.setMinHeight(50);
+                cancelButton.setTranslateX(400);
+                cancelButton.setTranslateY(400);
+                return vbox;
+        }
+        public VBox getHipJointAngles(){
+                Button cancelButton = new Button("Close");
+                Label testLabel = new Label("Hip Joint Angles(deg)");
+
+                VBox vbox = new VBox();
+                vbox.getChildren().addAll(testLabel, cancelButton);
+
+                cancelButton.setOnAction(new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent event) {
+                                vbox.getScene().getWindow().hide();
+                        }
+                });
+                testLabel.setTranslateX(10);
+                cancelButton.setMinWidth(90);
+                cancelButton.setMinHeight(50);
+                cancelButton.setTranslateX(400);
+                cancelButton.setTranslateY(400);
+                return vbox;
+        }
+        public VBox getAnkleJointAngles(){
+                Button cancelButton = new Button("Close");
+                Label testLabel = new Label("Ankle Joint Angles(deg)");
+
+                VBox vbox = new VBox();
+                vbox.getChildren().addAll(testLabel, cancelButton);
+
+                cancelButton.setOnAction(new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent event) {
+                                vbox.getScene().getWindow().hide();
+                        }
+                });
+                testLabel.setTranslateX(10);
+                cancelButton.setMinWidth(90);
+                cancelButton.setMinHeight(50);
+                cancelButton.setTranslateX(400);
+                cancelButton.setTranslateY(400);
+                return vbox;
+        }
+        public VBox getVaraiblity(){
+                Button cancelButton = new Button("Close");
+                Label testLabel = new Label("Variability");
+
+                VBox vbox = new VBox();
+                vbox.getChildren().addAll(testLabel, cancelButton);
+
+                cancelButton.setOnAction(new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent event) {
+                                vbox.getScene().getWindow().hide();
+                        }
+                });
+                testLabel.setTranslateX(10);
+                cancelButton.setMinWidth(90);
+                cancelButton.setMinHeight(50);
+                cancelButton.setTranslateX(400);
+                cancelButton.setTranslateY(400);
+                return vbox;
+        }
+        public VBox getArmJointAngles(){
+                Button cancelButton = new Button("Close");
+                Label testLabel = new Label("Arm Joints Angles");
+
+                VBox vbox = new VBox();
+                vbox.getChildren().addAll(testLabel, cancelButton);
+
+                cancelButton.setOnAction(new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent event) {
+                                vbox.getScene().getWindow().hide();
+                        }
+                });
+                testLabel.setTranslateX(10);
+                cancelButton.setMinWidth(90);
+                cancelButton.setMinHeight(50);
+                cancelButton.setTranslateX(400);
+                cancelButton.setTranslateY(400);
+                return vbox;
+        }
+        public VBox getPelvisOreit(){
+                Button cancelButton = new Button("Close");
+                Label testLabel = new Label("Pelvis Orientation Relative to Room");
+
+                VBox vbox = new VBox();
+                vbox.getChildren().addAll(testLabel, cancelButton);
+
+                cancelButton.setOnAction(new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent event) {
+                                vbox.getScene().getWindow().hide();
+                        }
+                });
+                testLabel.setTranslateX(10);
+                cancelButton.setMinWidth(90);
+                cancelButton.setMinHeight(50);
+                cancelButton.setTranslateX(400);
+                cancelButton.setTranslateY(400);
+                return vbox;
+        }
+        public VBox getKneeJointAngles(){
+                Button cancelButton = new Button("Close");
+                Label testLabel = new Label("Knee Joint Angles (deg)");
+
+                VBox vbox = new VBox();
+                vbox.getChildren().addAll(testLabel, cancelButton);
+
+                cancelButton.setOnAction(new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent event) {
+                                vbox.getScene().getWindow().hide();
+                        }
+                });
+                testLabel.setTranslateX(10);
+                cancelButton.setMinWidth(90);
+                cancelButton.setMinHeight(50);
+                cancelButton.setTranslateX(400);
+                cancelButton.setTranslateY(400);
+                return vbox;
+        }
+        public VBox getFootOreint(){
+                Button cancelButton = new Button("Close");
+                Label testLabel = new Label("Foot Orientation Relative to Room");
+
+                VBox vbox = new VBox();
+                vbox.getChildren().addAll(testLabel, cancelButton);
+
+                cancelButton.setOnAction(new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent event) {
+                                vbox.getScene().getWindow().hide();
+                        }
+                });
+                testLabel.setTranslateX(10);
+                cancelButton.setMinWidth(90);
+                cancelButton.setMinHeight(50);
+                cancelButton.setTranslateX(400);
+                cancelButton.setTranslateY(400);
+                return vbox;
+        }
+        public VBox getGroundForces(){
+                Button cancelButton = new Button("Close");
+                Label testLabel = new Label("Ground Reaction Forces");
+
+                VBox vbox = new VBox();
+                vbox.getChildren().addAll(testLabel, cancelButton);
+
+                cancelButton.setOnAction(new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent event) {
+                                vbox.getScene().getWindow().hide();
+                        }
+                });
+                testLabel.setTranslateX(10);
+                cancelButton.setMinWidth(90);
+                cancelButton.setMinHeight(50);
+                cancelButton.setTranslateX(400);
+                cancelButton.setTranslateY(400);
+                return vbox;
+        }
+        public VBox getKneeJointMoments(){
+                Button cancelButton = new Button("Close");
+                Label testLabel = new Label("Knee Joint Moments");
+
+                VBox vbox = new VBox();
+                vbox.getChildren().addAll(testLabel, cancelButton);
+
+                cancelButton.setOnAction(new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent event) {
+                                vbox.getScene().getWindow().hide();
+                        }
+                });
+                testLabel.setTranslateX(10);
+                cancelButton.setMinWidth(90);
+                cancelButton.setMinHeight(50);
+                cancelButton.setTranslateX(400);
+                cancelButton.setTranslateY(400);
+                return vbox;
+        }
+        public VBox getSaggitalJointPowers(){
+                Button cancelButton = new Button("Close");
+                Label testLabel = new Label("Sagittal Joint Powers");
+
+                VBox vbox = new VBox();
+                vbox.getChildren().addAll(testLabel, cancelButton);
+
+                cancelButton.setOnAction(new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent event) {
+                                vbox.getScene().getWindow().hide();
+                        }
+                });
+                testLabel.setTranslateX(10);
+                cancelButton.setMinWidth(90);
+                cancelButton.setMinHeight(50);
+                cancelButton.setTranslateX(400);
+                cancelButton.setTranslateY(400);
+                return vbox;
+        }
+        public VBox getHipJointMoments(){
+                Button cancelButton = new Button("Close");
+                Label testLabel = new Label("Hip Joint Moments");
+
+                VBox vbox = new VBox();
+                vbox.getChildren().addAll(testLabel, cancelButton);
+
+                cancelButton.setOnAction(new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent event) {
+                                vbox.getScene().getWindow().hide();
+                        }
+                });
+                testLabel.setTranslateX(10);
+                cancelButton.setMinWidth(90);
+                cancelButton.setMinHeight(50);
+                cancelButton.setTranslateX(400);
+                cancelButton.setTranslateY(400);
+                return vbox;
+        }
+        public VBox getFootModel(){
+                Button cancelButton = new Button("Close");
+                Label testLabel = new Label("Foot Model");
+
+                VBox vbox = new VBox();
+                vbox.getChildren().addAll(testLabel, cancelButton);
+
+                cancelButton.setOnAction(new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent event) {
+                                vbox.getScene().getWindow().hide();
+                        }
+                });
+                testLabel.setTranslateX(10);
+                cancelButton.setMinWidth(90);
+                cancelButton.setMinHeight(50);
+                cancelButton.setTranslateX(400);
+                cancelButton.setTranslateY(400);
+                return vbox;
+        }
+        public VBox getPedobaragraph(){
+                Button cancelButton = new Button("Close");
+                Label testLabel = new Label("Pedobaragraph");
+
+                VBox vbox = new VBox();
+                vbox.getChildren().addAll(testLabel, cancelButton);
+
+                cancelButton.setOnAction(new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent event) {
+                                vbox.getScene().getWindow().hide();
+                        }
+                });
+                testLabel.setTranslateX(10);
+                cancelButton.setMinWidth(90);
+                cancelButton.setMinHeight(50);
+                cancelButton.setTranslateX(400);
+                cancelButton.setTranslateY(400);
+                return vbox;
+        }
+        public VBox geto2Consumption(){
+                Button cancelButton = new Button("Close");
+                Label testLabel = new Label("O2 Consumption");
+
+                VBox vbox = new VBox();
+                vbox.getChildren().addAll(testLabel, cancelButton);
+
+                cancelButton.setOnAction(new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent event) {
+                                vbox.getScene().getWindow().hide();
+                        }
+                });
+                testLabel.setTranslateX(10);
+                cancelButton.setMinWidth(90);
+                cancelButton.setMinHeight(50);
+                cancelButton.setTranslateX(400);
+                cancelButton.setTranslateY(400);
+                return vbox;
+        }
+        public VBox getAnkleMoments(){
+                Button cancelButton = new Button("Close");
+                Label testLabel = new Label("Ankle Joint Moments");
+
+                VBox vbox = new VBox();
+                vbox.getChildren().addAll(testLabel, cancelButton);
+
+                cancelButton.setOnAction(new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent event) {
+                                vbox.getScene().getWindow().hide();
+                        }
+                });
+                testLabel.setTranslateX(10);
+                cancelButton.setMinWidth(90);
+                cancelButton.setMinHeight(50);
+                cancelButton.setTranslateX(400);
+                cancelButton.setTranslateY(400);
+                return vbox;
+        }
 
 
 
