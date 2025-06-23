@@ -18,11 +18,13 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.ComboBoxTableCell;
 import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
@@ -2847,7 +2849,8 @@ changes saved - no longer being used
                                 root.setCenter(getTempSpaView());
                                 Stage stage = new Stage();
                                 stage.initModality(Modality.WINDOW_MODAL);
-                                stage.setScene(new Scene(root, 500, 500));
+                                //width first and length second 6 and 5
+                                stage.setScene(new Scene(root, 650, 550));
                                 stage.show();
                         } else if (item == trunkOrientation) {
                                 root.setCenter(getTrunkOriet());
@@ -2996,24 +2999,63 @@ changes saved - no longer being used
                 cancelButton.setTranslateY(400);
                 return vbox;
         }
+
+        private TableView temporialTable = new TableView();
+        private ComboBox<String> interpComboBox;
         public VBox getTempSpaView(){
-                Button cancelButton = new Button("Close");
-                Label testLabel = new Label("Temporal/Spatial Parameters");
+                Button closeButton = new Button("Close");
+                Button saveButton = new Button("Save");
+                Label textLabel = new Label("Temporal/Spatial Parameters");
+                temporialTable.setEditable(false);
+                TableColumn nameCol = new TableColumn("Name");
+                TableColumn valueCol = new TableColumn("Value");
+                TableColumn interpCol = new TableColumn("Interpretation");
+                interpCol.setCellValueFactory(ComboBoxTableCell.forTableColumn("High", "Low"));
+                nameCol.prefWidthProperty().bind(temporialTable.widthProperty().multiply(0.3));
+                valueCol.prefWidthProperty().bind(temporialTable.widthProperty().multiply(0.3));
+                interpCol.prefWidthProperty().bind(temporialTable.widthProperty().multiply(0.4));
+
+
+
+                nameCol.setResizable(false);
+                valueCol.setResizable(false);
+                interpCol.setResizable(false);
+                interpCol.setEditable(true);
+
+                temporialTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+                temporialTable.getColumns().addAll(nameCol, valueCol, interpCol);
 
                 VBox vbox = new VBox();
-                vbox.getChildren().addAll(testLabel, cancelButton);
+                //vbox.setPadding(new Insets(1,0,0,1));
+                vbox.getChildren().addAll(textLabel, saveButton, closeButton, temporialTable );
 
-                cancelButton.setOnAction(new EventHandler<ActionEvent>() {
+                closeButton.setOnAction(new EventHandler<ActionEvent>() {
                         @Override
                         public void handle(ActionEvent event) {
                                 vbox.getScene().getWindow().hide();
                         }
                 });
-                testLabel.setTranslateX(10);
-                cancelButton.setMinWidth(90);
-                cancelButton.setMinHeight(50);
-                cancelButton.setTranslateX(400);
-                cancelButton.setTranslateY(400);
+
+                saveButton.setOnAction(new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent event) {
+                                vbox.getScene().getWindow().hide();
+                        }
+                });
+                textLabel.setTranslateX(10);
+
+                temporialTable.setTranslateY(-70);
+
+                closeButton.setMinWidth(90);
+                closeButton.setMinHeight(50);
+                closeButton.setTranslateX(550);
+                closeButton.setTranslateY(400);
+
+                saveButton.setMinHeight(50);
+                saveButton.setMinWidth(90);
+                saveButton.setTranslateX(445);
+                saveButton.setTranslateY(450);
                 return vbox;
         }
 

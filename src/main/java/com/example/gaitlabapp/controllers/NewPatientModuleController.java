@@ -198,7 +198,6 @@ public class NewPatientModuleController implements Initializable {
             t.printStackTrace();
         }
 
-
     }
 
     public void clearFields() {
