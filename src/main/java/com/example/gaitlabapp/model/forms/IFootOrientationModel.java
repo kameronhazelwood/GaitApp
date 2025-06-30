@@ -9,34 +9,18 @@ import lombok.Setter;
 @Setter
 @Data
 @Entity
-@Table(name = "footOrientation")
+@Table(name = "foot_Orientation")
 public class IFootOrientationModel {
     @Id
     @GeneratedValue
-    @Column(name = "footOreinId")
+    @Column(name = "foot_Orien_Id")
     private String footOreinId;
-    @Column(name = "footProgFCR")
-    private String footProgFCR;
-    @Column(name = "footProgFCL")
-    private String footProgFCL;
-    @Column(name = "footProgAngleMaxR")
-    private String footProgAngleMaxR;
-    @Column(name = "footProgAngleMaxL")
-    private String footProgAngleMaxL;
-    @Column(name = "footProgAngleMinR")
-    private String footProgAngleMinR;
-    @Column(name = "footProgAngleMinL")
-    private String footProgAngleMinL;
-    @Column(name = "footProgFCR_interp")
-    private String footProgFCR_interp;
-    @Column(name = "footProgFCL_interp")
-    private String footProgFCL_interp;
-    @Column(name = "footProgAngleMaxR_interp")
-    private String footProgAngleMaxR_interp;
-    @Column(name = "footProgAngleMaxL_interp")
-    private String footProgAngleMaxL_interp;
-    @Column(name = "footProgAngleMinR_interp")
-    private String footProgAngleMinR_interp;
-    @Column(name = "footProgAngleMinL_interp")
-    private String footProgAngleMinL_interp;
+    @Column(name = "name")
+    private String name;
+    @Column(name = "value")
+    private Double value;
+    @Column(name = "interp")
+    private String interp;
+    @Column(name = "normal")
+    private String normal;
 }

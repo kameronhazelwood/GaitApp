@@ -178,7 +178,6 @@ public class PatientModuleController implements Initializable {
     @Autowired
     ConfigurableApplicationContext applicationContext;
 
-
     @Override
     public void initialize(URL PatientModule, ResourceBundle resourceBundle) {
 

@@ -3,25 +3,24 @@ package com.example.gaitlabapp.model.forms;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
-import lombok.Setter;
+import lombok.NoArgsConstructor;
 
-@Setter
-@Getter
 @Entity
+@Getter
+@NoArgsConstructor
 @Data
-@Table(name = "variability")
-public class IVariabilityModel {
+@Table(name = "saggital_joint_powers")
+public class ISaggitalJointModel {
     @Id
     @GeneratedValue
-    @Column(name = "var_Id")
-    private Integer varId;
-    @Column(name =  "name")
+    @Column(name = "saggital_id")
+    private Integer saggitalId;
+    @Column(name = "name")
     private String name;
+    @Column(name = "normals")
+    private String normals;
     @Column(name = "value")
     private Double value;
-    @Column(name = "normal")
-    private String normal;
     @Column(name = "interp")
     private String interp;
-
 }

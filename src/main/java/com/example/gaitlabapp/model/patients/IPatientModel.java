@@ -66,7 +66,6 @@ public class IPatientModel implements Serializable {
     private Set<ISurgeryModel> surgeryModels;
 
 
-
     public IPatientModel(String s, String s1, String s2) {
         this.setFirstName(s);
         this.firstName = s;

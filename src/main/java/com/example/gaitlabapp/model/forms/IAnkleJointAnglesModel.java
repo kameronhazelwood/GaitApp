@@ -9,43 +9,18 @@ import lombok.Setter;
 @Getter
 @Data
 @Entity
-@Table(name = "ankleJointAngles")
+@Table(name = "ankle_Joint_Angles")
 public class IAnkleJointAnglesModel {
     @Id
     @GeneratedValue
-    @Column(name = "ankleJointId")
+    @Column(name = "ankle_Joint_Id")
     private Integer ankleJointId;
-    @Column(name = "footTibiaRotR")
-    private String footTibiaRotR;
-    @Column(name = "footTibiaRotL")
-    private String footTibiaRotL;
-    @Column(name = "ankleDorsiFCR")
-    private String ankleDorsiFCR;
-    @Column(name = "ankleDorsiFCL")
-    private String ankleDorsiFCL;
-    @Column(name ="ankleDorsiMaxR")
-    private String ankleDorsiMaxR;
-    @Column(name = "ankleDorsiMaxL")
-    private String ankleDorsiMaxL;
-    @Column(name = "ankleDorsiTimeMaxR")
-    private String ankleDorsiTimeMaxR;
-    @Column(name = "ankleDorsiTimeMaxL")
-    private String ankleDorsiTimeMaxL;
-    @Column(name = "footTibiaRotR_interp")
-    private String footTibiaRotR_interp;
-    @Column(name = "footTibiaRotL_interp")
-    private String footTibiaRotL_interp;
-    @Column(name = "ankleDorsiFCR_interp")
-    private String ankleDorsiFCR_interp;
-    @Column(name = "ankleDorsiFCL_interp")
-    private String ankleDorsiFCL_interp;
-    @Column(name = "ankleDorsiMaxR_interp")
-    private String ankleDorsiMaxR_interp;
-    @Column(name = "ankleDorsiTimeMaxL_interp")
-    private String ankleDorsiTimeMaxL_interp;
-    @Column(name = "ankleDorsiTimeMaxR_interp")
-    private String ankleDorsiTimeMaxR_interp;
-    @Column(name = "ankleDorsiMaxL_interp")
-    private String ankleDorsiMaxL_interp;
-
+    @Column(name = "value")
+    private Double value;
+    @Column(name = "interp")
+    private String interp;
+    @Column(name = "normal")
+    private String normal;
+    @Column(name = "name")
+    private String name;
 }

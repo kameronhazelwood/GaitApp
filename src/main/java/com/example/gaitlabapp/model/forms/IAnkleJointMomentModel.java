@@ -3,44 +3,24 @@ package com.example.gaitlabapp.model.forms;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
-import lombok.Setter;
+import lombok.NoArgsConstructor;
 
-
-@Setter
-@Getter
-@Data
 @Entity
-@Table(name = "pelvis_Orientation")
-public class IPelvisOrientationModel {
+@Getter
+@NoArgsConstructor
+@Data
+@Table(name = "ankle_joint_moments")
+public class IAnkleJointMomentModel {
     @Id
     @GeneratedValue
-    @Column(name = "pelvis_Orien_Id")
-    private String pelvisOreinId;
+    @Column(name = "ankle_moment_id")
+    private Integer ankleMomentId;
     @Column(name = "name")
     private String name;
+    @Column(name = "normals")
+    private String normals;
     @Column(name = "value")
-    private Double value;
-    @Column(name = "normal")
-    private String normal;
+    private String value;
     @Column(name = "interp")
     private String interp;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

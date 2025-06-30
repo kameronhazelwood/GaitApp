@@ -11,35 +11,46 @@ import lombok.Setter;
 @Entity
 @NoArgsConstructor
 @Data
-@Table(name = "trunkOrientation")
+@Table(name = "trunk_Orientation")
 public class ITrunkOrientationModel {
     @Id
     @GeneratedValue
-    private Integer trunkOreinId;
-    @Column(name = "latTrunkTilMaxR")
-    private String latTrunkTilMaxR;
-    @Column(name = "latTrunkTilMaxL")
-    private String latTrunkTilMaxL;
-    @Column(name = "forTrunkTilMaxR")
-    private String forTrunkTilMaxR;
-    @Column(name = "forTrunkTilMaxL")
-    private String forTrunkTilMaxL;
-    @Column(name = "trunkRotMaxR")
-    private String trunkRotMaxR;
-    @Column(name = "trunkRotMaxL")
-    private String trunkRotMaxL;
-    @Column(name =  "latTrunkTilMaxR_interp")
-    private String latTrunkTilMaxR_interp;
-    @Column(name = "latTrunkTilMaxL_interp")
-    private String latTrunkTilMaxL_interp;
-    @Column(name = "forTrunkTilMaxR_interp")
-    private String forTrunkTilMaxR_interp;
-    @Column(name = "forTrunkTilMaxL_interp")
-    private String forTrunkTilMaxL_interp;
-    @Column(name = "trunkRotMaxR_interp")
-    private String trunkRotMaxR_interp;
-    @Column(name = "trunkRotMaxL_interp")
-    private String trunkRotMaxL_interp;
+    @Column(name = "trunk_Orien_Id")
+    private Integer trunk_Orien_Id;
+    @Column(name = "name")
+    private String name;
+    @Column(name = "value")
+    private Double value;
+    @Column(name = "interp")
+    private String interp;
+    @Column(name = "normals")
+    private String normals;
+
+
+//    @Column(name = "latTrunkTilMaxR")
+//    private String latTrunkTilMaxR;
+//    @Column(name = "latTrunkTilMaxL")
+//    private String latTrunkTilMaxL;
+//    @Column(name = "forTrunkTilMaxR")
+//    private String forTrunkTilMaxR;
+//    @Column(name = "forTrunkTilMaxL")
+//    private String forTrunkTilMaxL;
+//    @Column(name = "trunkRotMaxR")
+//    private String trunkRotMaxR;
+//    @Column(name = "trunkRotMaxL")
+//    private String trunkRotMaxL;
+//    @Column(name =  "latTrunkTilMaxR_interp")
+//    private String latTrunkTilMaxR_interp;
+//    @Column(name = "latTrunkTilMaxL_interp")
+//    private String latTrunkTilMaxL_interp;
+//    @Column(name = "forTrunkTilMaxR_interp")
+//    private String forTrunkTilMaxR_interp;
+//    @Column(name = "forTrunkTilMaxL_interp")
+//    private String forTrunkTilMaxL_interp;
+//    @Column(name = "trunkRotMaxR_interp")
+//    private String trunkRotMaxR_interp;
+//    @Column(name = "trunkRotMaxL_interp")
+//    private String trunkRotMaxL_interp;
 
 
 
