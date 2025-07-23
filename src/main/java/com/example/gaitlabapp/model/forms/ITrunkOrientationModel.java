@@ -26,6 +26,14 @@ public class ITrunkOrientationModel {
     @Column(name = "normals")
     private String normals;
 
+    public ITrunkOrientationModel(Integer trunk_Orien_Id, String name, Double value, String interp, String normals) {
+        this.trunk_Orien_Id = trunk_Orien_Id;
+        this.name = name;
+        this.value = value;
+        this.interp = interp;
+        this.normals = normals;
+    }
+
 
 //    @Column(name = "latTrunkTilMaxR")
 //    private String latTrunkTilMaxR;

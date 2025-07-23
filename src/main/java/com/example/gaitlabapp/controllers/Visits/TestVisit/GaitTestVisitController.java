@@ -1,12 +1,14 @@
 package com.example.gaitlabapp.controllers.Visits.TestVisit;
 
 import com.example.gaitlabapp.Launcher;
+import com.example.gaitlabapp.config.RadioButtonCell;
 import com.example.gaitlabapp.controllers.Visits.TestNoteController;
 import com.example.gaitlabapp.controllers.Wizards.AddOrthosisWizard;
 import com.example.gaitlabapp.controllers.Wizards.AddSeizureMedsController;
 import com.example.gaitlabapp.model.forms.*;
 import com.example.gaitlabapp.model.patients.IPatientModel;
 import com.example.gaitlabapp.model.visits.IAppointmentModel;
+import com.example.gaitlabapp.model.visits.IAppointmentSetDates;
 import com.example.gaitlabapp.services.*;
 import jakarta.persistence.Table;
 import javafx.collections.FXCollections;
@@ -16,17 +18,16 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.CheckBoxTableCell;
 import javafx.scene.control.cell.ComboBoxTableCell;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
@@ -34,6 +35,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.util.Callback;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
@@ -45,6 +47,7 @@ import org.springframework.stereotype.Component;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.EnumSet;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
@@ -1167,6 +1170,8 @@ public class GaitTestVisitController implements Initializable {
 
     //categories
     TreeItem<String> kinematics = new TreeItem<>("Kinematics");
+    TreeItem<String> recommendations = new TreeItem<>("Recommendations");
+    TreeItem<String> assessmentForm = new TreeItem<>("Assessment Form");
     TreeItem<String> kinematicsData = new TreeItem<>("Kinematics");
     TreeItem<String> footKinematics = new TreeItem<>("Foot Kinematics");
     TreeItem<String> kinetics = new TreeItem<>("Kinetics");
@@ -1181,6 +1186,18 @@ public class GaitTestVisitController implements Initializable {
     TreeItem<String> footModel = new TreeItem<>("Foot Model");
     TreeItem<String> pedobaragraph = new TreeItem<>("Pedobaragraph");
     TreeItem<String> o2Consumption = new TreeItem<>("02 Consumption");
+    TreeItem<String> recommendationDiagnostic = new TreeItem<>("Diagnostic");
+    TreeItem<String> recommendationSurgical = new TreeItem<>("Surgical");
+    TreeItem<String> recommendationTherapy = new TreeItem<>("Therapy");
+    TreeItem<String> recommendationOrthodics = new TreeItem<>("Orthotics");
+    TreeItem<String> assessmentIssues = new TreeItem<>("Issues");
+    TreeItem<String> assessmentBehavior = new TreeItem<>("Behavior/Cognitive Function");
+    TreeItem<String>  assessmentMotorControl = new TreeItem<>("Motor Control/Static Balance");
+    TreeItem<String> assessmentMuscleStrength = new TreeItem<>("Muscle Strength");
+    TreeItem<String> assessmentMovement = new TreeItem<>("Movement Disorder");
+    TreeItem<String> assessmentMuscleTone = new TreeItem<>("Muscle Tone");
+    TreeItem<String> assessmentStance = new TreeItem<>("Stance Stability");
+    TreeItem<String> assessmentSwing = new TreeItem<>("Swing Phase Function");
 
     //subcategories
     TreeItem<String> temporalSpatial = new TreeItem<>("Temporal/Spatial Parameters");
@@ -1438,7 +1455,6 @@ public class GaitTestVisitController implements Initializable {
         firstWalk.setText("18 months");
         childLearn.setText("Slow learner, needs special class");
         relationshipToPatient.setText("Birth Parent");
-
 
         GMFCSCombo.getItems().addAll(
                 " ",
@@ -2639,30 +2655,6 @@ public class GaitTestVisitController implements Initializable {
 //        kneeVarusRP.getItems().setAll(promOptions);
 
 
-
-/*
-changes saved - no longer being used
- */
-//        physExamGait.setOnSelectionChanged(e -> {
-//            PauseTransition delay = new PauseTransition(Duration.seconds(1));
-//
-//            BorderPane borderPane = new BorderPane();
-//            Scene currentScene=new Scene(borderPane,200,10);
-//            Stage popoverStage= new Stage();
-//
-//            popoverStage.alwaysOnTopProperty();
-//            popoverStage.initStyle(StageStyle.UTILITY);
-//            popoverStage.setTitle("All changes have been saved.");
-//            popoverStage.setScene(currentScene);
-//            popoverStage.setY(650);
-//            popoverStage.setX(100);
-//            popoverStage.show();
-//            delay.setOnFinished(event -> popoverStage.close());
-//            delay.play();
-//        });
-////
-//
-//
 //        /*
 //        need to see if this is in use.
 //         */
@@ -2676,16 +2668,20 @@ changes saved - no longer being used
         kinematicsData.getChildren().addAll(temporalSpatial, trunkOrientation, hipJointData, ankleJointData, variabilityData, armJointData,
                 pelvisOrientation, kneeJointData, footOrientation);
         kineticsData.getChildren().addAll(groundForcesData, kneeJointMoments, sagittalPowers, hipMoments, ankleMoments);
+
         //main tree
-        interpFiles.getChildren().addAll(kinematicsData);
-        interpFiles.getChildren().addAll(kineticsData);
-        interpFiles.getChildren().addAll(footModel);
-        interpFiles.getChildren().addAll(pedobaragraph);
-        interpFiles.getChildren().addAll(o2Consumption);
+        recommendations.getChildren().addAll(recommendationDiagnostic, recommendationSurgical, recommendationTherapy, recommendationOrthodics);
+        assessmentForm.getChildren().addAll(assessmentIssues, assessmentBehavior, assessmentMotorControl, assessmentMuscleStrength, assessmentMovement, assessmentMuscleTone, assessmentStance, assessmentSwing);
 
 
         // parent2DataRoot.getChildren().addAll(showAll);
-        parent2DataRoot.getChildren().addAll(interpFiles);
+        parent2DataRoot.getChildren().addAll(kineticsData);
+        parent2DataRoot.getChildren().addAll(kineticsData);
+        parent2DataRoot.getChildren().addAll(footModel);
+        parent2DataRoot.getChildren().addAll(pedobaragraph);
+        parent2DataRoot.getChildren().addAll(o2Consumption);
+        parent2DataRoot.getChildren().addAll(assessmentForm);
+        parent2DataRoot.getChildren().addAll(recommendations);
         parent2DataRoot.getChildren().addAll(pngFiles);
 
 
@@ -2821,153 +2817,272 @@ changes saved - no longer being used
     @FXML
     private Stage stage;
 
+
     public void selectedItem() throws IOException {
-        //TreeItem<String> item = (TreeItem<String>) dataTable.getSelectionModel().getSelectedItem();
-//                if (item != null) {
-//                        System.out.println(item.getValue());
-//                } else if (item == pngFiles) {
-//                        System.out.println("You've selected PNG Files");
-//                }
-        BorderPane root = new BorderPane();
-        root.setCenter(getViewOne());
-        TreeItem<String> item = (TreeItem<String>) dataTable.getSelectionModel().getSelectedItem();
-        if (item == armJointData) {
-            root.setCenter(getArmJointAngles());
-            Stage stage = new Stage();
-            stage.initModality(Modality.WINDOW_MODAL);
-            stage.setScene(new Scene(root, 650, 550));
-            stage.show();
-        } else if (item == temporalSpatial) {
-            root.setCenter(getTempSpaView());
-            Stage stage = new Stage();
-            stage.initModality(Modality.WINDOW_MODAL);
-            //width first and length second 6 and 5
-            stage.setScene(new Scene(root, 650, 550));
-            stage.show();
-        } else if (item == trunkOrientation) {
-            root.setCenter(getTrunkOriet());
-            Stage stage = new Stage();
-            stage.initModality(Modality.WINDOW_MODAL);
-            stage.setScene(new Scene(root, 500, 500));
-            stage.show();
-        } else if (item == hipJointData) {
-            root.setCenter(getHipJointAngles());
-            Stage stage = new Stage();
-            stage.initModality(Modality.WINDOW_MODAL);
-            stage.setScene(new Scene(root, 500, 500));
-            stage.show();
-        } else if (item == variabilityData) {
-            root.setCenter(getVaraiblity());
-            Stage stage = new Stage();
-            stage.initModality(Modality.WINDOW_MODAL);
-            stage.setScene(new Scene(root, 500, 500));
-            stage.show();
-        } else if (item == pelvisOrientation) {
-            root.setCenter(getPelvisOreit());
-            Stage stage = new Stage();
-            stage.initModality(Modality.WINDOW_MODAL);
-            stage.setScene(new Scene(root, 500, 500));
-            stage.show();
-        } else if (item == kneeJointData) {
-            root.setCenter(getKneeJointAngles());
-            Stage stage = new Stage();
-            stage.initModality(Modality.WINDOW_MODAL);
-            stage.setScene(new Scene(root, 500, 500));
-            stage.show();
-        } else if (item == footOrientation) {
-            root.setCenter(getFootOreint());
-            Stage stage = new Stage();
-            stage.initModality(Modality.WINDOW_MODAL);
-            stage.setScene(new Scene(root, 500, 500));
-            stage.show();
-        } else if (item == groundForcesData) {
-            root.setCenter(getGroundForces());
-            Stage stage = new Stage();
-            stage.initModality(Modality.WINDOW_MODAL);
-            stage.setScene(new Scene(root, 500, 500));
-            stage.show();
-        } else if (item == hipMoments) {
-            root.setCenter(getHipJointMoments());
-            Stage stage = new Stage();
-            stage.initModality(Modality.WINDOW_MODAL);
-            stage.setScene(new Scene(root, 500, 500));
-            stage.show();
-        } else if (item == hipJointAngles) {
-            root.setCenter(getHipJointMoments());
-            Stage stage = new Stage();
-            stage.initModality(Modality.WINDOW_MODAL);
-            stage.setScene(new Scene(root, 500, 500));
-            stage.show();
-        } else if (item == lateralForefoot) {
-            root.setCenter(getViewOne());
-            Stage stage = new Stage();
-            stage.initModality(Modality.WINDOW_MODAL);
-            stage.setScene(new Scene(root, 500, 500));
-            stage.show();
-        } else if (item == medialForefoot) {
-            root.setCenter(getViewOne());
-            Stage stage = new Stage();
-            stage.initModality(Modality.WINDOW_MODAL);
-            stage.setScene(new Scene(root, 500, 500));
-            stage.show();
-        } else if (item == ankleJoint) {
-            root.setCenter(getAnkleMoments());
-            Stage stage = new Stage();
-            stage.initModality(Modality.WINDOW_MODAL);
-            stage.setScene(new Scene(root, 500, 500));
-            stage.show();
-        } else if (item == kneeJointData) {
-            root.setCenter(getKneeJointMoments());
-            Stage stage = new Stage();
-            stage.initModality(Modality.WINDOW_MODAL);
-            stage.setScene(new Scene(root, 500, 500));
-            stage.show();
-        } else if (item == footModel) {
-            root.setCenter(getFootModel());
-            Stage stage = new Stage();
-            stage.initModality(Modality.WINDOW_MODAL);
-            stage.setScene(new Scene(root, 500, 500));
-            stage.show();
-        } else if (item == pedobaragraph) {
-            root.setCenter(getPedobaragraph());
-            Stage stage = new Stage();
-            stage.initModality(Modality.WINDOW_MODAL);
-            stage.setScene(new Scene(root, 500, 500));
-            stage.show();
-        } else if (item == o2Consumption) {
-            root.setCenter(geto2Consumption());
-            Stage stage = new Stage();
-            stage.initModality(Modality.WINDOW_MODAL);
-            stage.setScene(new Scene(root, 500, 500));
-            stage.show();
-        } else if (item == ankleMoments) {
-            root.setCenter(getAnkleMoments());
-            Stage stage = new Stage();
-            stage.initModality(Modality.WINDOW_MODAL);
-            stage.setScene(new Scene(root, 500, 500));
-            stage.show();
-        } else if (item == kneeJointMoments) {
-            root.setCenter(getKneeJointMoments());
-            Stage stage = new Stage();
-            stage.initModality(Modality.WINDOW_MODAL);
-            stage.setScene(new Scene(root, 500, 500));
-            stage.show();
-        } else if (item == sagittalPowers) {
-            root.setCenter(getSaggitalJointPowers());
-            Stage stage = new Stage();
-            stage.initModality(Modality.WINDOW_MODAL);
-            stage.setScene(new Scene(root, 500, 500));
-            stage.show();
-        } else if (item == ankleJointData) {
-            root.setCenter(getAnkleJointAngles());
-            Stage stage = new Stage();
-            stage.initModality(Modality.WINDOW_MODAL);
-            stage.setScene(new Scene(root, 500, 500));
-            stage.show();
-        }
+        dataTable.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                    if(mouseEvent.getButton().equals(MouseButton.PRIMARY)){
+                        if(mouseEvent.getClickCount() == 2){
+                            BorderPane root = new BorderPane();
+                            root.setCenter(getViewOne());
+                            TreeItem<String> item = (TreeItem<String>) dataTable.getSelectionModel().getSelectedItem();
+                            if (item == armJointData) {
+                                root.setCenter(getArmJointAngles());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            } else if (item == temporalSpatial) {
+                                root.setCenter(getTempSpaView());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                //width first and length second 6 and 5
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            } else if (item == trunkOrientation) {
+                                root.setCenter(getTrunkOriet());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            } else if (item == hipJointData) {
+                                root.setCenter(getHipJointAngles());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            } else if (item == variabilityData) {
+                                root.setCenter(getVaraiblity());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            } else if (item == pelvisOrientation) {
+                                root.setCenter(getPelvisOreit());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            } else if (item == kneeJointData) {
+                                root.setCenter(getKneeJointAngles());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            } else if (item == footOrientation) {
+                                root.setCenter(getFootOreint());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            } else if (item == groundForcesData) {
+                                root.setCenter(getGroundForces());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            } else if (item == hipMoments) {
+                                root.setCenter(getHipJointMoments());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            } else if (item == hipJointAngles) {
+                                root.setCenter(getHipJointMoments());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            } else if (item == lateralForefoot) {
+                                root.setCenter(getViewOne());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            } else if (item == medialForefoot) {
+                                root.setCenter(getViewOne());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            } else if (item == ankleJoint) {
+                                root.setCenter(getAnkleMoments());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 680, 600));
+                                stage.show();
+                            } else if (item == kneeJointData) {
+                                root.setCenter(getKneeJointMoments());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            } else if (item == footModel) {
+                                root.setCenter(getFootModel());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            } else if (item == pedobaragraph) {
+                                root.setCenter(getPedobaragraph());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            } else if (item == o2Consumption) {
+                                root.setCenter(geto2Consumption());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            } else if (item == ankleMoments) {
+                                root.setCenter(getAnkleMoments());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 680, 600));
+                                stage.show();
+                            }
+                            else if (item == kneeJointMoments) {
+                                root.setCenter(getKneeJointMoments());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            } else if (item == sagittalPowers) {
+                                root.setCenter(getSaggitalJointPowers());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            } else if (item == ankleJointData) {
+                                root.setCenter(getAnkleJointAngles());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            }
+                            else if (item == recommendationDiagnostic){
+                                root.setCenter(getDiagRecommendations());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            }
+                            else if (item == recommendationSurgical){
+                                root.setCenter(getSurgRecommendations());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 850, 600));
+                                stage.show();
+                            }
+                            else if (item == recommendationTherapy){
+                                root.setCenter(getTherapyRecommendations());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 850, 600));
+                                stage.show();
+                            }
+                            else if (item == recommendationOrthodics){
+                                root.setCenter(getOrthRecommendations());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 850, 600));
+                                stage.show();
+                            }
+                            else if (item == assessmentIssues){
+                                root.setCenter(getIssuesAssessment());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 850, 600));
+                                stage.show();
+                            }
+                            else if (item == assessmentBehavior){
+                                root.setCenter(getBehaviorAssessment());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            }
+                            else if (item == assessmentMotorControl){
+                                root.setCenter(getMotorAssessment());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            }
+                            else if (item == assessmentMuscleStrength){
+                                root.setCenter(getMuscleAssessment());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            }
+                            else if (item == assessmentMovement){
+                                root.setCenter(getMovementAssessment());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            }
+                            else if (item == assessmentMuscleTone){
+                                root.setCenter(getMuscleToneAssessment());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            }
+                            else if (item == assessmentStance){
+                                root.setCenter(getStanceAssessment());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            }
+                            else if (item == assessmentSwing){
+                                root.setCenter(getSwingAssessment());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            }
+                        }
+                    }
+            }
+        });
 
     }
-
     public VBox getViewOne() {
         Button cancelButton = new Button("Close");
         Label testLabel = new Label("ViewOne");
@@ -2997,46 +3112,40 @@ changes saved - no longer being used
         Button closeButton = new Button("Close");
         Button saveButton = new Button("Save");
         Label textLabel = new Label("Temporal/Spatial Parameters");
-
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
+        TextArea textArea = new TextArea();
 
         listviewTemporal.addAll(FXCollections.observableArrayList(temporalService.findAll()));
         temporialTable.setItems(listviewTemporal);
         TableColumn<ITemporalModel, String> nameCol = new TableColumn<>("Name");
         TableColumn<ITemporalModel, String> valueCol = new TableColumn<>("Value");
-        TableColumn<ITemporalModel, ITemporalModel.interptationValues> interpCol = new TableColumn<>("Interpretation");
+        TableColumn<ITemporalModel, String> interpCol = new TableColumn<>("Interpretation");
 
         nameCol.setCellValueFactory((new PropertyValueFactory<>("name")));
         valueCol.setCellValueFactory((new PropertyValueFactory<>("value")));
          interpCol.setCellValueFactory((new PropertyValueFactory<>("interp")));
-        interpCol.setCellFactory(ComboBoxTableCell.forTableColumn(ITemporalModel.interptationValues.values()));
-
-      //  interpCol.setCellFactory(ComboBoxTableCell.<ITemporalModel, String>forTableColumn("test"));
-//        interpCol.setCellFactory(tc -> {
-//            ComboBox<String> combo = new ComboBox<>();
-//            combo.getItems().addAll("normal", "high");
-//            TableCell<ITemporalModel, String> cell = new TableCell<>();
-//            return cell;
-//        });
+         interpCol.setCellFactory(ComboBoxTableCell.forTableColumn("Very High", "High", "Normal", "Low", "Very Low"));
 
         nameCol.prefWidthProperty().bind(temporialTable.widthProperty().multiply(0.3));
         valueCol.prefWidthProperty().bind(temporialTable.widthProperty().multiply(0.3));
-        interpCol.prefWidthProperty().bind(temporialTable.widthProperty().multiply(0.4));
+        interpCol.prefWidthProperty().bind(temporialTable.widthProperty().multiply(0.3));
 
         nameCol.setResizable(false);
         valueCol.setResizable(false);
         interpCol.setResizable(false);
 
         temporialTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
-
+        temporialTable.setEditable(true);
         temporialTable.getColumns().addAll(nameCol, valueCol, interpCol);
 
         VBox vbox = new VBox();
-        vbox.getChildren().addAll(textLabel, saveButton, closeButton, temporialTable);
+        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, temporialTable);
 
         closeButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                temporialTable.getColumns().clear();
             }
         });
 
@@ -3044,11 +3153,12 @@ changes saved - no longer being used
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                temporialTable.getColumns().clear();
             }
         });
         textLabel.setTranslateX(10);
 
-        temporialTable.setTranslateY(-70);
+        temporialTable.setTranslateY(-140);
 
         closeButton.setMinWidth(90);
         closeButton.setMinHeight(50);
@@ -3059,35 +3169,42 @@ changes saved - no longer being used
         saveButton.setMinWidth(90);
         saveButton.setTranslateX(445);
         saveButton.setTranslateY(450);
+
+        textArea.setMaxHeight(50);
+        textArea.setMaxWidth(600);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(420);
         return vbox;
     }
-
     private TableView<ITrunkOrientationModel> trunkOrienTable = new TableView<>();
     @Autowired
     TrunkOrienService trunkOrienService;
     private final ObservableList<ITrunkOrientationModel> listviewTrunkOrien = FXCollections.observableArrayList();
     public VBox getTrunkOriet() {
         Button closeButton = new Button("Close");
-        Label textLabel = new Label("Arm Joints Angles");
+        Label textLabel = new Label("Trunk Orientation Relative to Room");
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
         Button saveButton = new Button("Save");
+        TextArea textArea = new TextArea();
 
         listviewTrunkOrien.addAll(FXCollections.observableArrayList(trunkOrienService.findAll()));
         trunkOrienTable.setItems(listviewTrunkOrien);
-        trunkOrienTable.setEditable(false);
+        trunkOrienTable.setEditable(true);
 
         TableColumn<ITrunkOrientationModel, String> nameCol = new TableColumn<>("Name");
         TableColumn<ITrunkOrientationModel, Double> valueCol = new TableColumn<>("Value");
-        TableColumn<ITrunkOrientationModel, String> interpCol = new TableColumn<>("Interpretation");
+        TableColumn<ITrunkOrientationModel, String > interpCol = new TableColumn<>("Interpretation");
 
         nameCol.setCellValueFactory((new PropertyValueFactory<>("name")));
         valueCol.setCellValueFactory((new PropertyValueFactory<>("value")));
         interpCol.setCellValueFactory((new PropertyValueFactory<>("interp")));
+        interpCol.setCellFactory(ComboBoxTableCell.forTableColumn("Very High", "High", "Normal", "Low", "Very Low"));
+
 
         //  interpCol.setCellValueFactory(ComboBoxTableCell.forTableColumn("High", "Low", "Very Low", "Normal", "Very High"));
         nameCol.prefWidthProperty().bind(trunkOrienTable.widthProperty().multiply(0.3));
         valueCol.prefWidthProperty().bind(trunkOrienTable.widthProperty().multiply(0.3));
-        interpCol.prefWidthProperty().bind(trunkOrienTable.widthProperty().multiply(0.4));
-
+        interpCol.prefWidthProperty().bind(trunkOrienTable.widthProperty().multiply(0.3));
 
         nameCol.setResizable(false);
         valueCol.setResizable(false);
@@ -3101,12 +3218,13 @@ changes saved - no longer being used
 
         VBox vbox = new VBox();
         //vbox.setPadding(new Insets(1,0,0,1));
-        vbox.getChildren().addAll(textLabel, saveButton, closeButton, trunkOrienTable);
+        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, trunkOrienTable);
 
         closeButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                trunkOrienTable.getColumns().clear();
             }
         });
 
@@ -3114,11 +3232,12 @@ changes saved - no longer being used
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                trunkOrienTable.getColumns().clear();
             }
         });
         textLabel.setTranslateX(10);
 
-        trunkOrienTable.setTranslateY(-70);
+        trunkOrienTable.setTranslateY(-140);
 
         closeButton.setMinWidth(90);
         closeButton.setMinHeight(50);
@@ -3129,6 +3248,11 @@ changes saved - no longer being used
         saveButton.setMinWidth(90);
         saveButton.setTranslateX(445);
         saveButton.setTranslateY(450);
+
+        textArea.setMaxHeight(50);
+        textArea.setMaxWidth(600);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(420);
         return vbox;
     }
 
@@ -3138,12 +3262,14 @@ changes saved - no longer being used
     private final ObservableList<IHipJointModel> listviewHipJoint = FXCollections.observableArrayList();
     public VBox getHipJointAngles() {
         Button closeButton = new Button("Close");
-        Label textLabel = new Label("Arm Joints Angles");
+        Label textLabel = new Label("Hip Joint Angles(deg)");
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
         Button saveButton = new Button("Save");
+        TextArea textArea = new TextArea();
 
         listviewHipJoint.addAll(FXCollections.observableArrayList(hipJointService.findAll()));
         hipJointTable.setItems(listviewHipJoint);
-        hipJointTable.setEditable(false);
+        hipJointTable.setEditable(true);
 
         TableColumn<IHipJointModel, String> nameCol = new TableColumn<>("Name");
         TableColumn<IHipJointModel, Double> valueCol = new TableColumn<>("Value");
@@ -3153,10 +3279,10 @@ changes saved - no longer being used
         valueCol.setCellValueFactory((new PropertyValueFactory<>("value")));
         interpCol.setCellValueFactory((new PropertyValueFactory<>("interp")));
 
-        //  interpCol.setCellValueFactory(ComboBoxTableCell.forTableColumn("High", "Low", "Very Low", "Normal", "Very High"));
+        interpCol.setCellFactory(ComboBoxTableCell.forTableColumn("Very High", "High", "Normal", "Low", "Very Low"));
         nameCol.prefWidthProperty().bind(hipJointTable.widthProperty().multiply(0.3));
         valueCol.prefWidthProperty().bind(hipJointTable.widthProperty().multiply(0.3));
-        interpCol.prefWidthProperty().bind(hipJointTable.widthProperty().multiply(0.4));
+        interpCol.prefWidthProperty().bind(hipJointTable.widthProperty().multiply(0.3));
 
 
         nameCol.setResizable(false);
@@ -3171,12 +3297,13 @@ changes saved - no longer being used
 
         VBox vbox = new VBox();
         //vbox.setPadding(new Insets(1,0,0,1));
-        vbox.getChildren().addAll(textLabel, saveButton, closeButton, hipJointTable);
+        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, hipJointTable);
 
         closeButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                hipJointTable.getColumns().clear();
             }
         });
 
@@ -3184,11 +3311,12 @@ changes saved - no longer being used
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                hipJointTable.getColumns().clear();
             }
         });
         textLabel.setTranslateX(10);
 
-        hipJointTable.setTranslateY(-70);
+        hipJointTable.setTranslateY(-140);
 
         closeButton.setMinWidth(90);
         closeButton.setMinHeight(50);
@@ -3199,6 +3327,11 @@ changes saved - no longer being used
         saveButton.setMinWidth(90);
         saveButton.setTranslateX(445);
         saveButton.setTranslateY(450);
+
+        textArea.setMaxHeight(50);
+        textArea.setMaxWidth(600);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(420);
         return vbox;
     }
 
@@ -3208,12 +3341,14 @@ changes saved - no longer being used
     private final ObservableList<IAnkleJointAnglesModel> listviewAnkleJoint = FXCollections.observableArrayList();
     public VBox getAnkleJointAngles() {
         Button closeButton = new Button("Close");
-        Label textLabel = new Label("Arm Joints Angles");
+        Label textLabel = new Label("Ankle Joint Angles(deg)");
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
         Button saveButton = new Button("Save");
+        TextArea textArea = new TextArea();
 
         listviewAnkleJoint.addAll(FXCollections.observableArrayList(ankleJointService.findAll()));
         ankleJointTable.setItems(listviewAnkleJoint);
-        ankleJointTable.setEditable(false);
+        ankleJointTable.setEditable(true);
 
         TableColumn<IAnkleJointAnglesModel, String> nameCol = new TableColumn<>("Name");
         TableColumn<IAnkleJointAnglesModel, Double> valueCol = new TableColumn<>("Value");
@@ -3223,10 +3358,10 @@ changes saved - no longer being used
         valueCol.setCellValueFactory((new PropertyValueFactory<>("value")));
         interpCol.setCellValueFactory((new PropertyValueFactory<>("interp")));
 
-        //  interpCol.setCellValueFactory(ComboBoxTableCell.forTableColumn("High", "Low", "Very Low", "Normal", "Very High"));
-        nameCol.prefWidthProperty().bind(ankleJointTable.widthProperty().multiply(0.3));
+        interpCol.setCellFactory(ComboBoxTableCell.forTableColumn("Very High", "High", "Normal", "Low", "Very Low"));
+        nameCol.prefWidthProperty().bind(ankleJointTable.widthProperty().multiply(0.4));
         valueCol.prefWidthProperty().bind(ankleJointTable.widthProperty().multiply(0.3));
-        interpCol.prefWidthProperty().bind(ankleJointTable.widthProperty().multiply(0.4));
+        interpCol.prefWidthProperty().bind(ankleJointTable.widthProperty().multiply(0.3));
 
 
         nameCol.setResizable(false);
@@ -3241,12 +3376,13 @@ changes saved - no longer being used
 
         VBox vbox = new VBox();
         //vbox.setPadding(new Insets(1,0,0,1));
-        vbox.getChildren().addAll(textLabel, saveButton, closeButton, ankleJointTable);
+        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, ankleJointTable);
 
         closeButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                ankleJointTable.getColumns().clear();
             }
         });
 
@@ -3254,11 +3390,12 @@ changes saved - no longer being used
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                ankleJointTable.getColumns().clear();
             }
         });
         textLabel.setTranslateX(10);
 
-        ankleJointTable.setTranslateY(-70);
+        ankleJointTable.setTranslateY(-140);
 
         closeButton.setMinWidth(90);
         closeButton.setMinHeight(50);
@@ -3269,6 +3406,11 @@ changes saved - no longer being used
         saveButton.setMinWidth(90);
         saveButton.setTranslateX(445);
         saveButton.setTranslateY(450);
+
+        textArea.setMaxHeight(50);
+        textArea.setMaxWidth(600);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(420);
         return vbox;
     }
 
@@ -3280,12 +3422,14 @@ changes saved - no longer being used
 
     public VBox getVaraiblity() {
         Button closeButton = new Button("Close");
-        Label textLabel = new Label("Arm Joints Angles");
+        Label textLabel = new Label("Variability");
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
         Button saveButton = new Button("Save");
+        TextArea textArea = new TextArea();
 
         listviewVar.addAll(FXCollections.observableArrayList(variabilityService.findAll()));
         variabilityTable.setItems(listviewVar);
-        variabilityTable.setEditable(false);
+        variabilityTable.setEditable(true);
 
         TableColumn<IVariabilityModel, String> nameCol = new TableColumn<>("Name");
         TableColumn<IVariabilityModel, Double> valueCol = new TableColumn<>("Value");
@@ -3295,10 +3439,10 @@ changes saved - no longer being used
         valueCol.setCellValueFactory((new PropertyValueFactory<>("value")));
         interpCol.setCellValueFactory((new PropertyValueFactory<>("interp")));
 
-        //  interpCol.setCellValueFactory(ComboBoxTableCell.forTableColumn("High", "Low", "Very Low", "Normal", "Very High"));
-        nameCol.prefWidthProperty().bind(variabilityTable.widthProperty().multiply(0.3));
+        interpCol.setCellFactory(ComboBoxTableCell.forTableColumn("Very High", "High", "Normal", "Low", "Very Low"));
+        nameCol.prefWidthProperty().bind(variabilityTable.widthProperty().multiply(0.4));
         valueCol.prefWidthProperty().bind(variabilityTable.widthProperty().multiply(0.3));
-        interpCol.prefWidthProperty().bind(variabilityTable.widthProperty().multiply(0.4));
+        interpCol.prefWidthProperty().bind(variabilityTable.widthProperty().multiply(0.3));
 
 
         nameCol.setResizable(false);
@@ -3313,12 +3457,13 @@ changes saved - no longer being used
 
         VBox vbox = new VBox();
         //vbox.setPadding(new Insets(1,0,0,1));
-        vbox.getChildren().addAll(textLabel, saveButton, closeButton, variabilityTable);
+        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, variabilityTable);
 
         closeButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                variabilityTable.getColumns().clear();
             }
         });
 
@@ -3326,11 +3471,12 @@ changes saved - no longer being used
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                variabilityTable.getColumns().clear();
             }
         });
         textLabel.setTranslateX(10);
 
-        variabilityTable.setTranslateY(-70);
+        variabilityTable.setTranslateY(-140);
 
         closeButton.setMinWidth(90);
         closeButton.setMinHeight(50);
@@ -3341,6 +3487,11 @@ changes saved - no longer being used
         saveButton.setMinWidth(90);
         saveButton.setTranslateX(445);
         saveButton.setTranslateY(450);
+
+        textArea.setMaxHeight(50);
+        textArea.setMaxWidth(600);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(420);
         return vbox;
     }
 
@@ -3353,11 +3504,13 @@ changes saved - no longer being used
     public VBox getArmJointAngles() {
         Button closeButton = new Button("Close");
         Label textLabel = new Label("Arm Joints Angles");
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
         Button saveButton = new Button("Save");
+        TextArea textArea = new TextArea();
 
         listviewArmJoints.addAll(FXCollections.observableArrayList(armJointsAnglesSerivce.findAll()));
         armJointTable.setItems(listviewArmJoints);
-        armJointTable.setEditable(false);
+        armJointTable.setEditable(true);
 
         TableColumn<IArmJointAnglesModel, String> nameCol = new TableColumn<>("Name");
                 TableColumn<IArmJointAnglesModel, Double> valueCol = new TableColumn<>("Value");
@@ -3367,10 +3520,10 @@ changes saved - no longer being used
                 valueCol.setCellValueFactory((new PropertyValueFactory<>("value")));
                 interpCol.setCellValueFactory((new PropertyValueFactory<>("interp")));
 
-        //  interpCol.setCellValueFactory(ComboBoxTableCell.forTableColumn("High", "Low", "Very Low", "Normal", "Very High"));
+        interpCol.setCellFactory(ComboBoxTableCell.forTableColumn("Very High", "High", "Normal", "Low", "Very Low"));
         nameCol.prefWidthProperty().bind(armJointTable.widthProperty().multiply(0.3));
                 valueCol.prefWidthProperty().bind(armJointTable.widthProperty().multiply(0.3));
-                interpCol.prefWidthProperty().bind(armJointTable.widthProperty().multiply(0.4));
+                interpCol.prefWidthProperty().bind(armJointTable.widthProperty().multiply(0.3));
 
 
         nameCol.setResizable(false);
@@ -3385,12 +3538,13 @@ changes saved - no longer being used
 
         VBox vbox = new VBox();
         //vbox.setPadding(new Insets(1,0,0,1));
-        vbox.getChildren().addAll(textLabel, saveButton, closeButton, armJointTable);
+        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, armJointTable);
 
         closeButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                armJointTable.getColumns().clear();
             }
         });
 
@@ -3398,11 +3552,12 @@ changes saved - no longer being used
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                armJointTable.getColumns().clear();
             }
         });
         textLabel.setTranslateX(10);
 
-        armJointTable.setTranslateY(-70);
+        armJointTable.setTranslateY(-140);
 
         closeButton.setMinWidth(90);
         closeButton.setMinHeight(50);
@@ -3413,6 +3568,11 @@ changes saved - no longer being used
         saveButton.setMinWidth(90);
         saveButton.setTranslateX(445);
         saveButton.setTranslateY(450);
+
+        textArea.setMaxHeight(50);
+        textArea.setMaxWidth(600);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(420);
         return vbox;
     }
 
@@ -3423,12 +3583,14 @@ changes saved - no longer being used
 
     public VBox getPelvisOreit() {
         Button closeButton = new Button("Close");
-        Label textLabel = new Label("Arm Joints Angles");
+        Label textLabel = new Label("Pelvis Orientation Relative to Room");
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
         Button saveButton = new Button("Save");
+        TextArea textArea = new TextArea();
 
         listviewPelvisOrien.addAll(FXCollections.observableArrayList(pelvisOrienService.findAll()));
         pelvisOrienTable.setItems(listviewPelvisOrien);
-        pelvisOrienTable.setEditable(false);
+        pelvisOrienTable.setEditable(true);
 
         TableColumn<IPelvisOrientationModel, String> nameCol = new TableColumn<>("Name");
         TableColumn<IPelvisOrientationModel, Double> valueCol = new TableColumn<>("Value");
@@ -3438,10 +3600,10 @@ changes saved - no longer being used
         valueCol.setCellValueFactory((new PropertyValueFactory<>("value")));
         interpCol.setCellValueFactory((new PropertyValueFactory<>("interp")));
 
-        //  interpCol.setCellValueFactory(ComboBoxTableCell.forTableColumn("High", "Low", "Very Low", "Normal", "Very High"));
+        interpCol.setCellFactory(ComboBoxTableCell.forTableColumn("Very High", "High", "Normal", "Low", "Very Low"));
         nameCol.prefWidthProperty().bind(pelvisOrienTable.widthProperty().multiply(0.3));
         valueCol.prefWidthProperty().bind(pelvisOrienTable.widthProperty().multiply(0.3));
-        interpCol.prefWidthProperty().bind(pelvisOrienTable.widthProperty().multiply(0.4));
+        interpCol.prefWidthProperty().bind(pelvisOrienTable.widthProperty().multiply(0.3));
 
 
         nameCol.setResizable(false);
@@ -3456,12 +3618,13 @@ changes saved - no longer being used
 
         VBox vbox = new VBox();
         //vbox.setPadding(new Insets(1,0,0,1));
-        vbox.getChildren().addAll(textLabel, saveButton, closeButton, pelvisOrienTable);
+        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, pelvisOrienTable);
 
         closeButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                pelvisOrienTable.getColumns().clear();
             }
         });
 
@@ -3469,11 +3632,12 @@ changes saved - no longer being used
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                pelvisOrienTable.getColumns().clear();
             }
         });
         textLabel.setTranslateX(10);
 
-        pelvisOrienTable.setTranslateY(-70);
+        pelvisOrienTable.setTranslateY(-140);
 
         closeButton.setMinWidth(90);
         closeButton.setMinHeight(50);
@@ -3484,6 +3648,11 @@ changes saved - no longer being used
         saveButton.setMinWidth(90);
         saveButton.setTranslateX(445);
         saveButton.setTranslateY(450);
+
+        textArea.setMaxHeight(50);
+        textArea.setMaxWidth(600);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(420);
         return vbox;
     }
 
@@ -3493,12 +3662,14 @@ changes saved - no longer being used
     private final ObservableList<IKneeJointAnglesModel> listviewKneeJoint = FXCollections.observableArrayList();
     public VBox getKneeJointAngles() {
         Button closeButton = new Button("Close");
-        Label textLabel = new Label("Arm Joints Angles");
+        Label textLabel = new Label("Knee Joint Angles(deg)");
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
         Button saveButton = new Button("Save");
+        TextArea textArea = new TextArea();
 
         listviewKneeJoint.addAll(FXCollections.observableArrayList(kneeJointService.findAll()));
         kneeJointTable.setItems(listviewKneeJoint);
-        kneeJointTable.setEditable(false);
+        kneeJointTable.setEditable(true);
 
         TableColumn<IKneeJointAnglesModel, String> nameCol = new TableColumn<>("Name");
         TableColumn<IKneeJointAnglesModel, Double> valueCol = new TableColumn<>("Value");
@@ -3508,10 +3679,10 @@ changes saved - no longer being used
         valueCol.setCellValueFactory((new PropertyValueFactory<>("value")));
         interpCol.setCellValueFactory((new PropertyValueFactory<>("interp")));
 
-        //  interpCol.setCellValueFactory(ComboBoxTableCell.forTableColumn("High", "Low", "Very Low", "Normal", "Very High"));
+        interpCol.setCellFactory(ComboBoxTableCell.forTableColumn("Very High", "High", "Normal", "Low", "Very Low"));
         nameCol.prefWidthProperty().bind(kneeJointTable.widthProperty().multiply(0.3));
         valueCol.prefWidthProperty().bind(kneeJointTable.widthProperty().multiply(0.3));
-        interpCol.prefWidthProperty().bind(kneeJointTable.widthProperty().multiply(0.4));
+        interpCol.prefWidthProperty().bind(kneeJointTable.widthProperty().multiply(0.3));
 
 
         nameCol.setResizable(false);
@@ -3526,12 +3697,13 @@ changes saved - no longer being used
 
         VBox vbox = new VBox();
         //vbox.setPadding(new Insets(1,0,0,1));
-        vbox.getChildren().addAll(textLabel, saveButton, closeButton, kneeJointTable);
+        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, kneeJointTable);
 
         closeButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                kneeJointTable.getColumns().clear();
             }
         });
 
@@ -3539,6 +3711,7 @@ changes saved - no longer being used
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                kneeJointTable.getColumns().clear();
             }
         });
         textLabel.setTranslateX(10);
@@ -3554,6 +3727,11 @@ changes saved - no longer being used
         saveButton.setMinWidth(90);
         saveButton.setTranslateX(445);
         saveButton.setTranslateY(450);
+
+        textArea.setMaxHeight(50);
+        textArea.setMaxWidth(600);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(420);
         return vbox;
     }
 
@@ -3563,12 +3741,14 @@ changes saved - no longer being used
     private final ObservableList<IFootOrientationModel> listviewFootOrien = FXCollections.observableArrayList();
     public VBox getFootOreint() {
         Button closeButton = new Button("Close");
-        Label textLabel = new Label("Arm Joints Angles");
+        Label textLabel = new Label("Foot Orientation Relative to Room");
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
         Button saveButton = new Button("Save");
+        TextArea textArea = new TextArea();
 
         listviewFootOrien.addAll(FXCollections.observableArrayList(footOrienService.findAll()));
         footOrientTable.setItems(listviewFootOrien);
-        footOrientTable.setEditable(false);
+        footOrientTable.setEditable(true);
 
         TableColumn<IFootOrientationModel, String> nameCol = new TableColumn<>("Name");
         TableColumn<IFootOrientationModel, Double> valueCol = new TableColumn<>("Value");
@@ -3578,10 +3758,10 @@ changes saved - no longer being used
         valueCol.setCellValueFactory((new PropertyValueFactory<>("value")));
         interpCol.setCellValueFactory((new PropertyValueFactory<>("interp")));
 
-        //  interpCol.setCellValueFactory(ComboBoxTableCell.forTableColumn("High", "Low", "Very Low", "Normal", "Very High"));
+        interpCol.setCellFactory(ComboBoxTableCell.forTableColumn("Very High", "High", "Normal", "Low", "Very Low"));
         nameCol.prefWidthProperty().bind(footOrientTable.widthProperty().multiply(0.3));
         valueCol.prefWidthProperty().bind(footOrientTable.widthProperty().multiply(0.3));
-        interpCol.prefWidthProperty().bind(footOrientTable.widthProperty().multiply(0.4));
+        interpCol.prefWidthProperty().bind(footOrientTable.widthProperty().multiply(0.3));
 
 
         nameCol.setResizable(false);
@@ -3596,12 +3776,13 @@ changes saved - no longer being used
 
         VBox vbox = new VBox();
         //vbox.setPadding(new Insets(1,0,0,1));
-        vbox.getChildren().addAll(textLabel, saveButton, closeButton, footOrientTable);
+        vbox.getChildren().addAll(textLabel,textArea, saveButton, closeButton, footOrientTable);
 
         closeButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                footOrientTable.getColumns().clear();
             }
         });
 
@@ -3609,11 +3790,12 @@ changes saved - no longer being used
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                footOrientTable.getColumns().clear();
             }
         });
         textLabel.setTranslateX(10);
 
-        footOrientTable.setTranslateY(-70);
+        footOrientTable.setTranslateY(-140);
 
         closeButton.setMinWidth(90);
         closeButton.setMinHeight(50);
@@ -3624,6 +3806,11 @@ changes saved - no longer being used
         saveButton.setMinWidth(90);
         saveButton.setTranslateX(445);
         saveButton.setTranslateY(450);
+
+        textArea.setMaxHeight(50);
+        textArea.setMaxWidth(600);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(420);
         return vbox;
     }
 
@@ -3633,12 +3820,14 @@ changes saved - no longer being used
     private final ObservableList<IGroundReactionForces> listviewGround = FXCollections.observableArrayList();
     public VBox getGroundForces() {
         Button closeButton = new Button("Close");
-        Label textLabel = new Label("Arm Joints Angles");
+        Label textLabel = new Label("Ground Reaction Forces (BW)");
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
         Button saveButton = new Button("Save");
+        TextArea textArea = new TextArea();
 
         listviewGround.addAll(FXCollections.observableArrayList(groundReactionService.findAll()));
         groundTable.setItems(listviewGround);
-        groundTable.setEditable(false);
+        groundTable.setEditable(true);
 
         TableColumn<IGroundReactionForces, String> nameCol = new TableColumn<>("Name");
         TableColumn<IGroundReactionForces, Double> valueCol = new TableColumn<>("Value");
@@ -3648,10 +3837,10 @@ changes saved - no longer being used
         valueCol.setCellValueFactory((new PropertyValueFactory<>("value")));
         interpCol.setCellValueFactory((new PropertyValueFactory<>("interp")));
 
-        //  interpCol.setCellValueFactory(ComboBoxTableCell.forTableColumn("High", "Low", "Very Low", "Normal", "Very High"));
+        interpCol.setCellFactory(ComboBoxTableCell.forTableColumn("Very High", "High", "Normal", "Low", "Very Low"));
         nameCol.prefWidthProperty().bind(groundTable.widthProperty().multiply(0.3));
         valueCol.prefWidthProperty().bind(groundTable.widthProperty().multiply(0.3));
-        interpCol.prefWidthProperty().bind(groundTable.widthProperty().multiply(0.4));
+        interpCol.prefWidthProperty().bind(groundTable.widthProperty().multiply(0.3));
 
 
         nameCol.setResizable(false);
@@ -3666,12 +3855,13 @@ changes saved - no longer being used
 
         VBox vbox = new VBox();
         //vbox.setPadding(new Insets(1,0,0,1));
-        vbox.getChildren().addAll(textLabel, saveButton, closeButton, groundTable);
+        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, groundTable);
 
         closeButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                groundTable.getColumns().clear();
             }
         });
 
@@ -3679,11 +3869,12 @@ changes saved - no longer being used
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                groundTable.getColumns().clear();
             }
         });
         textLabel.setTranslateX(10);
 
-        groundTable.setTranslateY(-70);
+        groundTable.setTranslateY(-140);
 
         closeButton.setMinWidth(90);
         closeButton.setMinHeight(50);
@@ -3694,6 +3885,11 @@ changes saved - no longer being used
         saveButton.setMinWidth(90);
         saveButton.setTranslateX(445);
         saveButton.setTranslateY(450);
+
+        textArea.setMaxHeight(50);
+        textArea.setMaxWidth(600);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(420);
         return vbox;
     }
 
@@ -3704,12 +3900,14 @@ changes saved - no longer being used
 
     public VBox getKneeJointMoments() {
         Button closeButton = new Button("Close");
-        Label textLabel = new Label("Arm Joints Angles");
+        Label textLabel = new Label("Knee Joint Moments");
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
         Button saveButton = new Button("Save");
+        TextArea textArea = new TextArea();
 
         listviewKneeMoment.addAll(FXCollections.observableArrayList(kneeMomentService.findAll()));
         kneeMomentTable.setItems(listviewKneeMoment);
-        kneeMomentTable.setEditable(false);
+        kneeMomentTable.setEditable(true);
 
         TableColumn<IKneeMomentsModel, String> nameCol = new TableColumn<>("Name");
         TableColumn<IKneeMomentsModel, Double> valueCol = new TableColumn<>("Value");
@@ -3719,10 +3917,10 @@ changes saved - no longer being used
         valueCol.setCellValueFactory((new PropertyValueFactory<>("value")));
         interpCol.setCellValueFactory((new PropertyValueFactory<>("interp")));
 
-        //  interpCol.setCellValueFactory(ComboBoxTableCell.forTableColumn("High", "Low", "Very Low", "Normal", "Very High"));
+        interpCol.setCellFactory(ComboBoxTableCell.forTableColumn("Very High", "High", "Normal", "Low", "Very Low"));
         nameCol.prefWidthProperty().bind(kneeMomentTable.widthProperty().multiply(0.3));
         valueCol.prefWidthProperty().bind(kneeMomentTable.widthProperty().multiply(0.3));
-        interpCol.prefWidthProperty().bind(kneeMomentTable.widthProperty().multiply(0.4));
+        interpCol.prefWidthProperty().bind(kneeMomentTable.widthProperty().multiply(0.3));
 
 
         nameCol.setResizable(false);
@@ -3737,12 +3935,13 @@ changes saved - no longer being used
 
         VBox vbox = new VBox();
         //vbox.setPadding(new Insets(1,0,0,1));
-        vbox.getChildren().addAll(textLabel, saveButton, closeButton, groundTable);
+        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, groundTable);
 
         closeButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                kneeMomentTable.getColumns().clear();
             }
         });
 
@@ -3750,11 +3949,12 @@ changes saved - no longer being used
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                kneeMomentTable.getColumns().clear();
             }
         });
         textLabel.setTranslateX(10);
 
-        kneeMomentTable.setTranslateY(-70);
+        kneeMomentTable.setTranslateY(-140);
 
         closeButton.setMinWidth(90);
         closeButton.setMinHeight(50);
@@ -3765,6 +3965,12 @@ changes saved - no longer being used
         saveButton.setMinWidth(90);
         saveButton.setTranslateX(445);
         saveButton.setTranslateY(450);
+
+        textArea.setMaxHeight(50);
+        textArea.setMaxWidth(600);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(420);
+
         return vbox;
     }
     private TableView<ISaggitalJointModel> saggitalTable = new TableView<>();
@@ -3774,12 +3980,14 @@ changes saved - no longer being used
 
     public VBox getSaggitalJointPowers() {
         Button closeButton = new Button("Close");
-        Label textLabel = new Label("Arm Joints Angles");
+        Label textLabel = new Label("Sagittal Joint Powers");
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
         Button saveButton = new Button("Save");
+        TextArea textArea = new TextArea();
 
         listviewSaggital.addAll(FXCollections.observableArrayList(saggitalJointService.findAll()));
         saggitalTable.setItems(listviewSaggital);
-        saggitalTable.setEditable(false);
+        saggitalTable.setEditable(true);
 
         TableColumn<ISaggitalJointModel, String> nameCol = new TableColumn<>("Name");
         TableColumn<ISaggitalJointModel, Double> valueCol = new TableColumn<>("Value");
@@ -3789,10 +3997,10 @@ changes saved - no longer being used
         valueCol.setCellValueFactory((new PropertyValueFactory<>("value")));
         interpCol.setCellValueFactory((new PropertyValueFactory<>("interp")));
 
-        //  interpCol.setCellValueFactory(ComboBoxTableCell.forTableColumn("High", "Low", "Very Low", "Normal", "Very High"));
-        nameCol.prefWidthProperty().bind(saggitalTable.widthProperty().multiply(0.3));
+        interpCol.setCellFactory(ComboBoxTableCell.forTableColumn("Very High", "High", "Normal", "Low", "Very Low"));
+        nameCol.prefWidthProperty().bind(saggitalTable.widthProperty().multiply(0.4));
         valueCol.prefWidthProperty().bind(saggitalTable.widthProperty().multiply(0.3));
-        interpCol.prefWidthProperty().bind(saggitalTable.widthProperty().multiply(0.4));
+        interpCol.prefWidthProperty().bind(saggitalTable.widthProperty().multiply(0.3));
 
 
         nameCol.setResizable(false);
@@ -3807,12 +4015,13 @@ changes saved - no longer being used
 
         VBox vbox = new VBox();
         //vbox.setPadding(new Insets(1,0,0,1));
-        vbox.getChildren().addAll(textLabel, saveButton, closeButton, saggitalTable);
+        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, saggitalTable);
 
         closeButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                saggitalTable.getColumns().clear();
             }
         });
 
@@ -3820,11 +4029,12 @@ changes saved - no longer being used
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                saggitalTable.getColumns().clear();
             }
         });
         textLabel.setTranslateX(10);
 
-        saggitalTable.setTranslateY(-70);
+        saggitalTable.setTranslateY(-140);
 
         closeButton.setMinWidth(90);
         closeButton.setMinHeight(50);
@@ -3835,6 +4045,11 @@ changes saved - no longer being used
         saveButton.setMinWidth(90);
         saveButton.setTranslateX(445);
         saveButton.setTranslateY(450);
+
+        textArea.setMaxHeight(50);
+        textArea.setMaxWidth(600);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(420);
         return vbox;
     }
 
@@ -3844,12 +4059,14 @@ changes saved - no longer being used
     private final ObservableList<IHipJointMomentsModel> listviewHipMoment = FXCollections.observableArrayList();
     public VBox getHipJointMoments() {
         Button closeButton = new Button("Close");
-        Label textLabel = new Label("Arm Joints Angles");
+        Label textLabel = new Label("Hip Joint Moments");
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
         Button saveButton = new Button("Save");
+        TextArea textArea = new TextArea();
 
         listviewHipMoment.addAll(FXCollections.observableArrayList(hipJointMomentService.findAll()));
         hipMomentTable.setItems(listviewHipMoment);
-        hipMomentTable.setEditable(false);
+        hipMomentTable.setEditable(true);
 
         TableColumn<IHipJointMomentsModel, String> nameCol = new TableColumn<>("Name");
         TableColumn<IHipJointMomentsModel, Double> valueCol = new TableColumn<>("Value");
@@ -3859,10 +4076,10 @@ changes saved - no longer being used
         valueCol.setCellValueFactory((new PropertyValueFactory<>("value")));
         interpCol.setCellValueFactory((new PropertyValueFactory<>("interp")));
 
-        //  interpCol.setCellValueFactory(ComboBoxTableCell.forTableColumn("High", "Low", "Very Low", "Normal", "Very High"));
+        interpCol.setCellFactory(ComboBoxTableCell.forTableColumn("Very High", "High", "Normal", "Low", "Very Low"));
         nameCol.prefWidthProperty().bind(hipMomentTable.widthProperty().multiply(0.3));
         valueCol.prefWidthProperty().bind(hipMomentTable.widthProperty().multiply(0.3));
-        interpCol.prefWidthProperty().bind(hipMomentTable.widthProperty().multiply(0.4));
+        interpCol.prefWidthProperty().bind(hipMomentTable.widthProperty().multiply(0.3));
 
 
         nameCol.setResizable(false);
@@ -3877,12 +4094,13 @@ changes saved - no longer being used
 
         VBox vbox = new VBox();
         //vbox.setPadding(new Insets(1,0,0,1));
-        vbox.getChildren().addAll(textLabel, saveButton, closeButton, hipMomentTable);
+        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, hipMomentTable);
 
         closeButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                hipMomentTable.getColumns().clear();
             }
         });
 
@@ -3890,11 +4108,12 @@ changes saved - no longer being used
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                hipMomentTable.getColumns().clear();
             }
         });
         textLabel.setTranslateX(10);
 
-        hipMomentTable.setTranslateY(-70);
+        hipMomentTable.setTranslateY(-1400);
 
         closeButton.setMinWidth(90);
         closeButton.setMinHeight(50);
@@ -3905,48 +4124,169 @@ changes saved - no longer being used
         saveButton.setMinWidth(90);
         saveButton.setTranslateX(445);
         saveButton.setTranslateY(450);
+
+        textArea.setMaxHeight(50);
+        textArea.setMaxWidth(600);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(420);
         return vbox;
     }
 
+    private TableView<IFootInterpModel> footInterpTable = new TableView<>();
+    @Autowired
+    FootInterpService footInterpService;
+    private final ObservableList<IFootInterpModel> listviewFootInterp = FXCollections.observableArrayList();
     public VBox getFootModel() {
-        Button cancelButton = new Button("Close");
-        Label testLabel = new Label("Foot Model");
+        Button closeButton = new Button("Close");
+        Label textLabel = new Label("Foot Model");
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
+        Button saveButton = new Button("Save");
+        TextArea textArea = new TextArea();
+
+        listviewFootInterp.addAll(FXCollections.observableArrayList(footInterpService.findAll()));
+        footInterpTable.setItems(listviewFootInterp);
+        footInterpTable.setEditable(true);
+
+        TableColumn<IFootInterpModel, String> nameCol = new TableColumn<>("Name");
+        TableColumn<IFootInterpModel, Double> valueCol = new TableColumn<>("Value");
+        TableColumn<IFootInterpModel, String> interpCol = new TableColumn<>("Interpretation");
+
+        nameCol.setCellValueFactory((new PropertyValueFactory<>("name")));
+        valueCol.setCellValueFactory((new PropertyValueFactory<>("value")));
+        interpCol.setCellValueFactory((new PropertyValueFactory<>("interp")));
+
+        interpCol.setCellFactory(ComboBoxTableCell.forTableColumn("Very High", "High", "Normal", "Low", "Very Low"));
+        nameCol.prefWidthProperty().bind(footInterpTable.widthProperty().multiply(0.4));
+        valueCol.prefWidthProperty().bind(footInterpTable.widthProperty().multiply(0.3));
+        interpCol.prefWidthProperty().bind(footInterpTable.widthProperty().multiply(0.3));
+
+        nameCol.setResizable(false);
+        valueCol.setResizable(false);
+        interpCol.setResizable(false);
+        interpCol.setEditable(true);
+
+        footInterpTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        footInterpTable.getColumns().addAll(nameCol, valueCol, interpCol);
+
 
         VBox vbox = new VBox();
-        vbox.getChildren().addAll(testLabel, cancelButton);
+        //vbox.setPadding(new Insets(1,0,0,1));
+        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, footInterpTable);
 
-        cancelButton.setOnAction(new EventHandler<ActionEvent>() {
+        closeButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                footInterpTable.getColumns().clear();
             }
         });
-        testLabel.setTranslateX(10);
-        cancelButton.setMinWidth(90);
-        cancelButton.setMinHeight(50);
-        cancelButton.setTranslateX(400);
-        cancelButton.setTranslateY(400);
+
+        saveButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+                footInterpTable.getColumns().clear();
+            }
+        });
+        textLabel.setTranslateX(10);
+
+        footInterpTable.setTranslateY(-140);
+
+        closeButton.setMinWidth(90);
+        closeButton.setMinHeight(50);
+        closeButton.setTranslateX(550);
+        closeButton.setTranslateY(400);
+
+        saveButton.setMinHeight(50);
+        saveButton.setMinWidth(90);
+        saveButton.setTranslateX(445);
+        saveButton.setTranslateY(450);
+
+        textArea.setMaxHeight(50);
+        textArea.setMaxWidth(600);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(420);
         return vbox;
     }
+
+    private TableView<IPedobaragraphModel> pedobaragraphTable = new TableView<>();
+    @Autowired
+    PedobaragraphService pedobaragraphService;
+    private final ObservableList<IPedobaragraphModel> listviewPedobar = FXCollections.observableArrayList();
 
     public VBox getPedobaragraph() {
-        Button cancelButton = new Button("Close");
-        Label testLabel = new Label("Pedobaragraph");
+        Button closeButton = new Button("Close");
+        Label textLabel = new Label("Pedobaragraph");
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
+        Button saveButton = new Button("Save");
+        TextArea textArea = new TextArea();
+
+        listviewPedobar.addAll(FXCollections.observableArrayList(pedobaragraphService.findAll()));
+        pedobaragraphTable.setItems(listviewPedobar);
+        pedobaragraphTable.setEditable(true);
+
+        TableColumn<IPedobaragraphModel, String> nameCol = new TableColumn<>("Name");
+        TableColumn<IPedobaragraphModel, Double> valueCol = new TableColumn<>("Value");
+        TableColumn<IPedobaragraphModel, String> interpCol = new TableColumn<>("Interpretation");
+
+        nameCol.setCellValueFactory((new PropertyValueFactory<>("name")));
+        valueCol.setCellValueFactory((new PropertyValueFactory<>("value")));
+        interpCol.setCellValueFactory((new PropertyValueFactory<>("interp")));
+
+        interpCol.setCellFactory(ComboBoxTableCell.forTableColumn("Very High", "High", "Normal", "Low", "Very Low"));
+        nameCol.prefWidthProperty().bind(pedobaragraphTable.widthProperty().multiply(0.3));
+        valueCol.prefWidthProperty().bind(pedobaragraphTable.widthProperty().multiply(0.3));
+        interpCol.prefWidthProperty().bind(pedobaragraphTable.widthProperty().multiply(0.3));
+
+
+        nameCol.setResizable(false);
+        valueCol.setResizable(false);
+        interpCol.setResizable(false);
+        interpCol.setEditable(true);
+
+        pedobaragraphTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        pedobaragraphTable.getColumns().addAll(nameCol, valueCol, interpCol);
+
 
         VBox vbox = new VBox();
-        vbox.getChildren().addAll(testLabel, cancelButton);
+        //vbox.setPadding(new Insets(1,0,0,1));
+        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, pedobaragraphTable);
 
-        cancelButton.setOnAction(new EventHandler<ActionEvent>() {
+        closeButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                pedobaragraphTable.getColumns().clear();
             }
         });
-        testLabel.setTranslateX(10);
-        cancelButton.setMinWidth(90);
-        cancelButton.setMinHeight(50);
-        cancelButton.setTranslateX(400);
-        cancelButton.setTranslateY(400);
+
+        saveButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+                pedobaragraphTable.getColumns().clear();
+            }
+        });
+        textLabel.setTranslateX(10);
+
+        pedobaragraphTable.setTranslateY(-140);
+
+        closeButton.setMinWidth(90);
+        closeButton.setMinHeight(50);
+        closeButton.setTranslateX(550);
+        closeButton.setTranslateY(400);
+
+        saveButton.setMinHeight(50);
+        saveButton.setMinWidth(90);
+        saveButton.setTranslateX(445);
+        saveButton.setTranslateY(450);
+
+        textArea.setMaxHeight(50);
+        textArea.setMaxWidth(600);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(420);
         return vbox;
     }
 
@@ -3971,24 +4311,1019 @@ changes saved - no longer being used
         return vbox;
     }
 
+    private TableView<IAnkleJointMomentModel> ankleMomentTable = new TableView<>();
+    @Autowired
+    AnkleJointMomentService ankleJointMomentService;
+    private final ObservableList<IAnkleJointMomentModel> listviewAnkleMoment = FXCollections.observableArrayList();
+
     public VBox getAnkleMoments() {
-        Button cancelButton = new Button("Close");
-        Label testLabel = new Label("Ankle Joint Moments");
+        Button closeButton = new Button("Close");
+        Label textLabel = new Label("Ankle Joint Moments");
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
+        Button saveButton = new Button("Save");
+        TextArea textArea = new TextArea();
+
+        listviewAnkleMoment.addAll(FXCollections.observableArrayList(ankleJointMomentService.findAll()));
+        ankleMomentTable.setItems(listviewAnkleMoment);
+        ankleMomentTable.setEditable(true);
+
+        TableColumn<IAnkleJointMomentModel, String> nameCol = new TableColumn<>("Name");
+        TableColumn<IAnkleJointMomentModel, Double> valueCol = new TableColumn<>("Value");
+        TableColumn<IAnkleJointMomentModel, String> interpCol = new TableColumn<>("Interpretation");
+
+        nameCol.setCellValueFactory((new PropertyValueFactory<>("name")));
+        valueCol.setCellValueFactory((new PropertyValueFactory<>("value")));
+        interpCol.setCellValueFactory((new PropertyValueFactory<>("interp")));
+
+        interpCol.setCellFactory(ComboBoxTableCell.forTableColumn("Very High", "High", "Normal", "Low", "Very Low"));
+        nameCol.prefWidthProperty().bind(ankleMomentTable.widthProperty().multiply(0.4));
+        valueCol.prefWidthProperty().bind(ankleMomentTable.widthProperty().multiply(0.3));
+        interpCol.prefWidthProperty().bind(ankleMomentTable.widthProperty().multiply(0.3));
+
+
+        nameCol.setResizable(false);
+        valueCol.setResizable(false);
+        interpCol.setResizable(false);
+        interpCol.setEditable(true);
+
+        ankleMomentTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        ankleMomentTable.getColumns().addAll(nameCol, valueCol, interpCol);
 
         VBox vbox = new VBox();
-        vbox.getChildren().addAll(testLabel, cancelButton);
+        //vbox.setPadding(new Insets(1,0,0,1));
+        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, ankleMomentTable);
 
-        cancelButton.setOnAction(new EventHandler<ActionEvent>() {
+        closeButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+                ankleMomentTable.getColumns().clear();
             }
         });
-        testLabel.setTranslateX(10);
-        cancelButton.setMinWidth(90);
-        cancelButton.setMinHeight(50);
-        cancelButton.setTranslateX(400);
-        cancelButton.setTranslateY(400);
+
+        saveButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+                ankleMomentTable.getColumns().clear();
+            }
+        });
+        textLabel.setTranslateX(10);
+
+        ankleMomentTable.setTranslateY(-140);
+
+        closeButton.setMinWidth(90);
+        closeButton.setMinHeight(50);
+        closeButton.setTranslateX(550);
+        closeButton.setTranslateY(400);
+
+        saveButton.setMinHeight(50);
+        saveButton.setMinWidth(90);
+        saveButton.setTranslateX(445);
+        saveButton.setTranslateY(450);
+
+        textArea.setMaxHeight(50);
+        textArea.setMaxWidth(600);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(420);
+
+        return vbox;
+    }
+
+
+    private TableView<IDiagRecommendations> diagRecomTable = new TableView<>();
+    @Autowired
+    DiagRecomService diagRecomService;
+    private final ObservableList<IDiagRecommendations> listviewDiagRecom = FXCollections.observableArrayList();
+    public VBox getDiagRecommendations() {
+        Button closeButton = new Button("Close");
+        Label textLabel = new Label("Recommendation: Diagnostic");
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
+        Button saveButton = new Button("Save");
+        TextArea textArea = new TextArea();
+
+        TableColumn<IDiagRecommendations, Boolean> valueCol = new TableColumn<>("");
+        TableColumn<IDiagRecommendations, String> nameCol = new TableColumn<>("");
+
+        valueCol.setCellValueFactory((new PropertyValueFactory<>("selected")));
+        nameCol.setCellValueFactory((new PropertyValueFactory<>("recom_name")));
+
+        nameCol.prefWidthProperty().bind(diagRecomTable.widthProperty().multiply(0.8));
+        valueCol.prefWidthProperty().bind(diagRecomTable.widthProperty().multiply(0.1));
+
+        valueCol.setCellFactory(CheckBoxTableCell.forTableColumn(valueCol));
+
+        IDiagRecommendations diagRecommendations = new IDiagRecommendations(1, "Recommend pre-operative gait analysis", "", null);
+        IDiagRecommendations diagRecommendations1 = new IDiagRecommendations(2, "Recommend post operative gait analysis in one year to document outcome", "", null);
+        IDiagRecommendations diagRecommendations2 = new IDiagRecommendations(3, "Based on this evaluation, no additional diagnostic tests are indicated", "", null);
+        IDiagRecommendations diagRecommendations3 = new IDiagRecommendations(4, "Radiographs if they are felt to be clinically indicated", "", null);
+        IDiagRecommendations diagRecommendations4 = new IDiagRecommendations(5, "Based on the available data the diagnosis is not clear and further work up may be useful.", "", null);
+        IDiagRecommendations diagRecommendations5 = new IDiagRecommendations(6, "Spinal imaging to rule out spinal cord pathology.", "", null);
+        IDiagRecommendations diagRecommendations6 = new IDiagRecommendations(7, "Work up for myopathy or peripheral neuropathy.", "", null);
+        IDiagRecommendations diagRecommendations7 = new IDiagRecommendations(8, "Recommend a full development assessment.", "", null);
+        IDiagRecommendations diagRecommendations8 = new IDiagRecommendations(9, "CT scan to assess femoral anteversion.", "", null);
+        IDiagRecommendations diagRecommendations9 = new IDiagRecommendations(10, "Continue regular orthopedic follow-up", "", null);
+        IDiagRecommendations diagRecommendations10 = new IDiagRecommendations(11, "Gait lab re-evaluation in 6 months", "", null);
+        IDiagRecommendations diagRecommendations11 = new IDiagRecommendations(12, "Pre-op Social needs Assessment", "", null);
+
+        diagRecomTable.getItems().addAll(diagRecommendations, diagRecommendations1, diagRecommendations2,diagRecommendations3, diagRecommendations4,
+                diagRecommendations5,diagRecommendations6, diagRecommendations7,diagRecommendations8, diagRecommendations9, diagRecommendations10,diagRecommendations11  );
+        diagRecomTable.setEditable(true);
+
+        nameCol.setResizable(false);
+        valueCol.setResizable(false);
+
+
+        diagRecomTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        diagRecomTable.getColumns().addAll( valueCol,nameCol);
+
+
+        VBox vbox = new VBox();
+        //vbox.setPadding(new Insets(1,0,0,1));
+        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, diagRecomTable);
+
+        closeButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+                diagRecomTable.getColumns().clear();
+            }
+        });
+
+        saveButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+                diagRecomTable.getColumns().clear();
+            }
+        });
+        textLabel.setTranslateX(10);
+
+        diagRecomTable.setTranslateY(-140);
+
+        closeButton.setMinWidth(90);
+        closeButton.setMinHeight(50);
+        closeButton.setTranslateX(550);
+        closeButton.setTranslateY(400);
+
+        saveButton.setMinHeight(50);
+        saveButton.setMinWidth(90);
+        saveButton.setTranslateX(445);
+        saveButton.setTranslateY(450);
+
+        textArea.setMaxHeight(50);
+        textArea.setMaxWidth(600);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(420);
+        return vbox;
+    }
+
+    private TableView<IRecomSurgicalModel> surgRecomTable = new TableView<>();
+    @Autowired
+    RecomSurgicalService recomSurgicalService;
+    private final ObservableList<IRecomSurgicalModel> listviewSurgRecom = FXCollections.observableArrayList();
+    public VBox getSurgRecommendations() {
+        Button closeButton = new Button("Close");
+        Label textLabel = new Label("Recommendation: Surgical");
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
+        Button saveButton = new Button("Save");
+        TextArea textArea = new TextArea();
+
+        listviewSurgRecom.addAll(FXCollections.observableArrayList(recomSurgicalService.findAll()));
+        surgRecomTable.setItems(listviewSurgRecom);
+
+        TableColumn<IRecomSurgicalModel, String> nameCol = new TableColumn<>("");
+        TableColumn<IRecomSurgicalModel, IRecomSurgicalModel.Values> valueCol = new TableColumn<>("");
+
+        nameCol.setCellValueFactory((new PropertyValueFactory<>("recom_procedure")));
+        valueCol.setCellValueFactory((new PropertyValueFactory<>("selected")));
+
+//        valueCol.setOnEditCommit(
+//                new EventHandler<TableColumn.CellEditEvent<IRecomSurgicalModel, Boolean>>() {
+//                    @Override
+//                    public void handle(TableColumn.CellEditEvent<IRecomSurgicalModel, Boolean> t) {
+//                        ((IRecomSurgicalModel) t.getTableView().getItems().get(t.getTablePosition().getRow()).setRecom_normal(t.getNewValue());
+//                    }
+//                }
+//        );
+
+        nameCol.prefWidthProperty().bind(surgRecomTable.widthProperty().multiply(0.7));
+        valueCol.prefWidthProperty().bind(surgRecomTable.widthProperty().multiply(0.2 ));
+
+        valueCol.setCellFactory((param) -> new RadioButtonCell<IRecomSurgicalModel, IRecomSurgicalModel.Values>(EnumSet.allOf(IRecomSurgicalModel.Values.class)));
+
+        surgRecomTable.setEditable(true);
+
+        nameCol.setResizable(false);
+        valueCol.setResizable(false);
+
+
+        surgRecomTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        surgRecomTable.getColumns().addAll( valueCol,nameCol);
+
+
+        VBox vbox = new VBox();
+        //vbox.setPadding(new Insets(1,0,0,1));
+        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, surgRecomTable);
+
+        closeButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+                surgRecomTable.getColumns().clear();
+            }
+        });
+
+        saveButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+                surgRecomTable.getColumns().clear();
+            }
+        });
+        textLabel.setTranslateX(10);
+
+        surgRecomTable.setTranslateY(-140);
+
+        closeButton.setMinWidth(90);
+        closeButton.setMinHeight(50);
+        closeButton.setTranslateX(550);
+        closeButton.setTranslateY(400);
+
+        saveButton.setMinHeight(50);
+        saveButton.setMinWidth(90);
+        saveButton.setTranslateX(445);
+        saveButton.setTranslateY(450);
+
+        textArea.setMaxHeight(50);
+        textArea.setMaxWidth(700);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(420);
+        return vbox;
+    }
+    private TableView<ITherapyRecomModel> therapyRecomTable = new TableView<>();
+    @Autowired
+    TherapyRecomService therapyRecomService;
+    private final ObservableList<ITherapyRecomModel> listviewTherapyRecom = FXCollections.observableArrayList();
+    public VBox getTherapyRecommendations() {
+        Button closeButton = new Button("Close");
+        Label textLabel = new Label("Recommendation: Therapy");
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
+        Button saveButton = new Button("Save");
+        TextArea textArea = new TextArea();
+
+        TableColumn<ITherapyRecomModel, Boolean> valueCol = new TableColumn<>("");
+        TableColumn<ITherapyRecomModel, String> nameCol = new TableColumn<>("");
+
+        valueCol.setCellValueFactory((new PropertyValueFactory<>("selected")));
+        nameCol.setCellValueFactory((new PropertyValueFactory<>("recom_name")));
+
+        valueCol.prefWidthProperty().bind(therapyRecomTable.widthProperty().multiply(0.1));
+        nameCol.prefWidthProperty().bind(therapyRecomTable.widthProperty().multiply(0.9));
+
+        valueCol.setCellFactory(CheckBoxTableCell.forTableColumn(valueCol));
+
+        ITherapyRecomModel diagRecommendations = new ITherapyRecomModel(1, null,  "Based on this evaluation, no physical therapy is recommended.");
+        ITherapyRecomModel diagRecommendations1 = new ITherapyRecomModel(2, null, "Current therapy program seems reasonable.");
+        ITherapyRecomModel diagRecommendations2 = new ITherapyRecomModel(3, null, "Pre-Operative Physical Therapy is recommended");
+        ITherapyRecomModel diagRecommendations3 = new ITherapyRecomModel(4, null, "Comprehensive post-operative rehabilitation including, but not limited to, PT and OT to address pain management, gait training with appropriate assistive device, functional mobility training, transfers, strengthening, stretching, ADLs and patient and family education.");
+        ITherapyRecomModel diagRecommendations4 = new ITherapyRecomModel(5, null, "Outpatient physical therapy to address gait training with appropriate assistive device (walker, crutches, forearm crutches), functional mobility, strengthening, stretching, balance training to improve motor control strategies, and development of a home exercise program.");
+        ITherapyRecomModel diagRecommendations5 = new ITherapyRecomModel(6,null,  "One-time consult with Physical Therapy or Adaptive trainer to set up a home exercise program");
+        ITherapyRecomModel diagRecommendations6 = new ITherapyRecomModel(7,  null, "Encourage participation in age-appropriate activities such as martial arts, dance, soccer, and swimming.");
+        ITherapyRecomModel diagRecommendations7 = new ITherapyRecomModel(8, null,  "Consult to seating clinic for new wheelchair or adjustments");
+        ITherapyRecomModel diagRecommendations8 = new ITherapyRecomModel(9, null, "Equipment evaluation or Physical therapy to assess needs for stander, walker, forearm crutch or other assistive devices and training.");
+        ITherapyRecomModel diagRecommendations9 = new ITherapyRecomModel(10, null,  "Consult to Occupational therapy");
+
+        therapyRecomTable.getItems().addAll(diagRecommendations, diagRecommendations1, diagRecommendations2,diagRecommendations3, diagRecommendations4,
+                diagRecommendations5,diagRecommendations6, diagRecommendations7,diagRecommendations8, diagRecommendations9);
+        therapyRecomTable.setEditable(true);
+
+        nameCol.setCellFactory(new Callback<TableColumn<ITherapyRecomModel, String>, TableCell<ITherapyRecomModel, String>>() {
+            @Override
+            public TableCell<ITherapyRecomModel, String> call(TableColumn<ITherapyRecomModel, String> iTherapyRecomModelStringTableColumn) {
+                TableCell<ITherapyRecomModel, String> nameCell = new TableCell<>();
+                Text text = new Text();
+                nameCell.setGraphic(text);
+                text.wrappingWidthProperty().bind(nameCell.widthProperty());
+                text.textProperty().bind(nameCell.itemProperty());
+                return nameCell;
+            }
+        });
+
+        nameCol.setResizable(false);
+        valueCol.setResizable(false);
+
+
+        therapyRecomTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        therapyRecomTable.getColumns().addAll( valueCol,nameCol);
+
+
+        VBox vbox = new VBox();
+        //vbox.setPadding(new Insets(1,0,0,1));
+        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, therapyRecomTable);
+
+        closeButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+                therapyRecomTable.getColumns().clear();
+            }
+        });
+
+        saveButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+                therapyRecomTable.getColumns().clear();
+            }
+        });
+        textLabel.setTranslateX(10);
+
+        therapyRecomTable.setTranslateY(-140);
+
+        closeButton.setMinWidth(90);
+        closeButton.setMinHeight(50);
+        closeButton.setTranslateX(550);
+        closeButton.setTranslateY(400);
+
+        saveButton.setMinHeight(50);
+        saveButton.setMinWidth(90);
+        saveButton.setTranslateX(445);
+        saveButton.setTranslateY(450);
+
+        textArea.setMaxHeight(50);
+        textArea.setMaxWidth(600);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(420);
+        return vbox;
+    }
+    private TableView<IOrthoticsRecomModel> orthRecomTable = new TableView<>();
+    @Autowired
+    OrthRecomService orthRecomService;
+    private final ObservableList<IOrthoticsRecomModel> listviewOrthRecom = FXCollections.observableArrayList();
+    public VBox getOrthRecommendations() {
+        Button closeButton = new Button("Close");
+        Label textLabel = new Label("Recommendation: Orthotics");
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
+        Button saveButton = new Button("Save");
+        TextArea textArea = new TextArea();
+
+        listviewOrthRecom.addAll(FXCollections.observableArrayList(orthRecomService.findAll()));
+        orthRecomTable.setItems(listviewOrthRecom);
+
+        TableColumn<IOrthoticsRecomModel, String> nameCol = new TableColumn<>("");
+        TableColumn<IOrthoticsRecomModel, IOrthoticsRecomModel.Values> valueCol = new TableColumn<>("");
+
+        nameCol.setCellValueFactory((new PropertyValueFactory<>("recom_orth_procedure")));
+        valueCol.setCellValueFactory((new PropertyValueFactory<>("selected")));
+
+//        valueCol.setOnEditCommit(
+//                new EventHandler<TableColumn.CellEditEvent<IRecomSurgicalModel, Boolean>>() {
+//                    @Override
+//                    public void handle(TableColumn.CellEditEvent<IRecomSurgicalModel, Boolean> t) {
+//                        ((IRecomSurgicalModel) t.getTableView().getItems().get(t.getTablePosition().getRow()).setRecom_normal(t.getNewValue());
+//                    }
+//                }
+//        );
+
+        nameCol.prefWidthProperty().bind(orthRecomTable.widthProperty().multiply(0.7));
+        valueCol.prefWidthProperty().bind(orthRecomTable.widthProperty().multiply(0.2 ));
+
+        valueCol.setCellFactory((param) -> new RadioButtonCell<IOrthoticsRecomModel, IOrthoticsRecomModel.Values>(EnumSet.allOf(IOrthoticsRecomModel.Values.class)));
+
+        orthRecomTable.setEditable(true);
+
+        nameCol.setResizable(false);
+        valueCol.setResizable(false);
+
+
+        orthRecomTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        orthRecomTable.getColumns().addAll( valueCol,nameCol);
+
+
+        VBox vbox = new VBox();
+        //vbox.setPadding(new Insets(1,0,0,1));
+        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, orthRecomTable);
+
+        closeButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+                orthRecomTable.getColumns().clear();
+            }
+        });
+
+        saveButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+                orthRecomTable.getColumns().clear();
+            }
+        });
+        textLabel.setTranslateX(10);
+
+        orthRecomTable.setTranslateY(-140);
+
+        closeButton.setMinWidth(90);
+        closeButton.setMinHeight(50);
+        closeButton.setTranslateX(550);
+        closeButton.setTranslateY(400);
+
+        saveButton.setMinHeight(50);
+        saveButton.setMinWidth(90);
+        saveButton.setTranslateX(445);
+        saveButton.setTranslateY(450);
+
+        textArea.setMaxHeight(50);
+        textArea.setMaxWidth(700);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(420);
+        return vbox;
+    }
+
+
+    public VBox getIssuesAssessment() {
+        Button closeButton = new Button("Close");
+        Label textLabel = new Label("Issues Impacting Gait Function");
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
+        Button saveButton = new Button("Save");
+        TextArea textArea = new TextArea();
+
+
+        VBox vbox = new VBox();
+        //vbox.setPadding(new Insets(1,0,0,1));
+        vbox.getChildren().addAll(textLabel, closeButton, saveButton, textArea);
+
+        closeButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+
+            }
+        });
+
+        saveButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+
+            }
+        });
+
+
+        closeButton.setMinWidth(90);
+        closeButton.setMinHeight(50);
+        closeButton.setTranslateX(650);
+        closeButton.setTranslateY(480);
+
+        saveButton.setMinHeight(50);
+        saveButton.setMinWidth(90);
+        saveButton.setTranslateX(550);
+        saveButton.setTranslateY(430);
+
+        textArea.setMaxHeight(700);
+        textArea.setMaxWidth(700);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(50);
+        return vbox;
+    }
+    private final TableView<IAssessmentBehaviorModel> behAssessmentTable = new TableView<>();
+
+    public VBox getBehaviorAssessment() {
+        Button closeButton = new Button("Close");
+        Label textLabel = new Label("Behavior/Cognitive Function");
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
+        Button saveButton = new Button("Save");
+        TextArea textArea = new TextArea();
+
+        TableColumn<IAssessmentBehaviorModel, String> nameCol = new TableColumn<>("");
+        TableColumn<IAssessmentBehaviorModel, IAssessmentBehaviorModel.Values> valueCol = new TableColumn<>("");
+
+        nameCol.setCellValueFactory((new PropertyValueFactory<>("assessment_behavior_condition")));
+        valueCol.setCellValueFactory((new PropertyValueFactory<>("selected")));
+
+        nameCol.prefWidthProperty().bind(behAssessmentTable.widthProperty().multiply(0.7));
+        valueCol.prefWidthProperty().bind(behAssessmentTable.widthProperty().multiply(0.2 ));
+
+        valueCol.setCellFactory((param) -> new RadioButtonCell<IAssessmentBehaviorModel, IAssessmentBehaviorModel.Values>(EnumSet.allOf(IAssessmentBehaviorModel.Values.class)));
+
+        IAssessmentBehaviorModel as1 = new IAssessmentBehaviorModel(1, null, null, null, null, "", "No problem");
+        IAssessmentBehaviorModel as2 = new IAssessmentBehaviorModel(2, null, null, null, null, "", "Negatively impacted the evaluation");
+        IAssessmentBehaviorModel as3 = new IAssessmentBehaviorModel(3, null, null, null, null, "", "Is a primary impairment to gait function");
+        IAssessmentBehaviorModel as4 = new IAssessmentBehaviorModel(4, null, null, null, null, "", "Is an associated impairment");
+        behAssessmentTable.getItems().addAll(as1, as2, as3, as4);
+
+        behAssessmentTable.setEditable(true);
+
+        nameCol.setResizable(false);
+        valueCol.setResizable(false);
+
+
+        behAssessmentTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        behAssessmentTable.getColumns().addAll( valueCol,nameCol);
+
+
+        VBox vbox = new VBox();
+        //vbox.setPadding(new Insets(1,0,0,1));
+        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, behAssessmentTable);
+
+        closeButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+                behAssessmentTable.getColumns().clear();
+            }
+        });
+
+        saveButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+                behAssessmentTable.getColumns().clear();
+            }
+        });
+        textLabel.setTranslateX(10);
+
+        behAssessmentTable.setTranslateY(-140);
+
+        closeButton.setMinWidth(90);
+        closeButton.setMinHeight(50);
+        closeButton.setTranslateX(550);
+        closeButton.setTranslateY(400);
+
+        saveButton.setMinHeight(50);
+        saveButton.setMinWidth(90);
+        saveButton.setTranslateX(445);
+        saveButton.setTranslateY(450);
+
+        textArea.setMaxHeight(50);
+        textArea.setMaxWidth(600);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(420);
+        return vbox;
+    }
+
+    private TableView<IAssessmentMotorModel> motorAssessmentTable = new TableView<>();
+    public VBox getMotorAssessment() {
+        Button closeButton = new Button("Close");
+        Label textLabel = new Label("Motor Control/ Static Balance");
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
+        Button saveButton = new Button("Save");
+        TextArea textArea = new TextArea();
+
+        TableColumn<IAssessmentMotorModel, String> nameCol = new TableColumn<>("");
+        TableColumn<IAssessmentMotorModel, IAssessmentMotorModel.Values> valueCol = new TableColumn<>("");
+
+        nameCol.setCellValueFactory((new PropertyValueFactory<>("assessment_motor_condition")));
+        valueCol.setCellValueFactory((new PropertyValueFactory<>("selected")));
+
+        nameCol.prefWidthProperty().bind(motorAssessmentTable.widthProperty().multiply(0.7));
+        valueCol.prefWidthProperty().bind(motorAssessmentTable.widthProperty().multiply(0.2 ));
+
+        valueCol.setCellFactory((param) -> new RadioButtonCell<IAssessmentMotorModel, IAssessmentMotorModel.Values>(EnumSet.allOf(IAssessmentMotorModel.Values.class)));
+
+        IAssessmentMotorModel as1 = new IAssessmentMotorModel(1, null, null, null, null, "", "No problem");
+        IAssessmentMotorModel as2 = new IAssessmentMotorModel(2, null, null, null, null, "", "Mild impairment");
+        IAssessmentMotorModel as3 = new IAssessmentMotorModel(3, null, null, null, null, "",  "Moderate impairment limiting gait function");
+        IAssessmentMotorModel as4 = new IAssessmentMotorModel(4, null, null, null, null, "", "Severe impairment probably limiting functional community ambulation");
+        motorAssessmentTable.getItems().addAll(as1, as2, as3, as4);
+
+        motorAssessmentTable.setEditable(true);
+
+        nameCol.setResizable(false);
+        valueCol.setResizable(false);
+
+
+        motorAssessmentTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        motorAssessmentTable.getColumns().addAll( valueCol,nameCol);
+
+
+        VBox vbox = new VBox();
+        //vbox.setPadding(new Insets(1,0,0,1));
+        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, motorAssessmentTable);
+
+        closeButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+                motorAssessmentTable.getColumns().clear();
+            }
+        });
+
+        saveButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+                motorAssessmentTable.getColumns().clear();
+            }
+        });
+        textLabel.setTranslateX(10);
+
+        motorAssessmentTable.setTranslateY(-140);
+
+        closeButton.setMinWidth(90);
+        closeButton.setMinHeight(50);
+        closeButton.setTranslateX(550);
+        closeButton.setTranslateY(400);
+
+        saveButton.setMinHeight(50);
+        saveButton.setMinWidth(90);
+        saveButton.setTranslateX(445);
+        saveButton.setTranslateY(450);
+
+        textArea.setMaxHeight(50);
+        textArea.setMaxWidth(600);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(420);
+        return vbox;
+    }
+    private TableView<IAssessmentStrengthModel> muscleAssessmentTable = new TableView<>();
+    public VBox getMuscleAssessment() {
+        Button closeButton = new Button("Close");
+        Label textLabel = new Label("Muscle Strength");
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
+        Button saveButton = new Button("Save");
+        TextArea textArea = new TextArea();
+
+        TableColumn<IAssessmentStrengthModel, String> nameCol = new TableColumn<>("");
+        TableColumn<IAssessmentStrengthModel, IAssessmentStrengthModel.Values> valueCol = new TableColumn<>("");
+
+        nameCol.setCellValueFactory((new PropertyValueFactory<>("assessment_strength_condition")));
+        valueCol.setCellValueFactory((new PropertyValueFactory<>("selected")));
+
+        nameCol.prefWidthProperty().bind(muscleAssessmentTable.widthProperty().multiply(0.7));
+        valueCol.prefWidthProperty().bind(muscleAssessmentTable.widthProperty().multiply(0.2 ));
+
+        valueCol.setCellFactory((param) -> new RadioButtonCell<IAssessmentStrengthModel, IAssessmentStrengthModel.Values>(EnumSet.allOf(IAssessmentStrengthModel.Values.class)));
+
+        IAssessmentStrengthModel as1 = new IAssessmentStrengthModel(1, null, null, null, null,"", "Normal");
+        IAssessmentStrengthModel as2 = new IAssessmentStrengthModel(2, null, null, null, null, "", "Isolated weakness");
+        IAssessmentStrengthModel as3 = new IAssessmentStrengthModel(3, null, null, null, null, "",  "Global weakness");
+        muscleAssessmentTable.getItems().addAll(as1, as2, as3);
+
+        muscleAssessmentTable.setEditable(true);
+
+        nameCol.setResizable(false);
+        valueCol.setResizable(false);
+
+
+        muscleAssessmentTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        muscleAssessmentTable.getColumns().addAll( valueCol,nameCol);
+
+
+        VBox vbox = new VBox();
+        //vbox.setPadding(new Insets(1,0,0,1));
+        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, muscleAssessmentTable);
+
+        closeButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+                muscleAssessmentTable.getColumns().clear();
+            }
+        });
+
+        saveButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+                muscleAssessmentTable.getColumns().clear();
+            }
+        });
+        textLabel.setTranslateX(10);
+
+        muscleAssessmentTable.setTranslateY(-140);
+
+        closeButton.setMinWidth(90);
+        closeButton.setMinHeight(50);
+        closeButton.setTranslateX(550);
+        closeButton.setTranslateY(400);
+
+        saveButton.setMinHeight(50);
+        saveButton.setMinWidth(90);
+        saveButton.setTranslateX(445);
+        saveButton.setTranslateY(450);
+
+        textArea.setMaxHeight(50);
+        textArea.setMaxWidth(600);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(420);
+        return vbox;
+    }
+
+    private TableView<IAssessmentMovementModel> movementAssessmentTable = new TableView<>();
+    public VBox getMovementAssessment() {
+        Button closeButton = new Button("Close");
+        Label textLabel = new Label("Movement Disorder");
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
+        Button saveButton = new Button("Save");
+        TextArea textArea = new TextArea();
+
+        TableColumn<IAssessmentMovementModel, String> nameCol = new TableColumn<>("");
+        TableColumn<IAssessmentMovementModel, IAssessmentMovementModel.Values> valueCol = new TableColumn<>("");
+
+        nameCol.setCellValueFactory((new PropertyValueFactory<>("assessment_movement_condition")));
+        valueCol.setCellValueFactory((new PropertyValueFactory<>("selected")));
+
+        nameCol.prefWidthProperty().bind(movementAssessmentTable.widthProperty().multiply(0.7));
+        valueCol.prefWidthProperty().bind(movementAssessmentTable.widthProperty().multiply(0.2 ));
+
+        valueCol.setCellFactory((param) -> new RadioButtonCell<IAssessmentMovementModel, IAssessmentMovementModel.Values>(EnumSet.allOf(IAssessmentMovementModel.Values.class)));
+
+        IAssessmentMovementModel as1 = new IAssessmentMovementModel(1, null, null, null, null, "None", "");
+        IAssessmentMovementModel as2 = new IAssessmentMovementModel(2, null, null, null, null,  "Dystonia", "");
+        IAssessmentMovementModel as3 = new IAssessmentMovementModel(3, null, null, null, null,  "Athetosis" , "");
+        IAssessmentMovementModel as4 = new IAssessmentMovementModel(4, null, null, null, null, "Ballismus" , "");
+        IAssessmentMovementModel as5 = new IAssessmentMovementModel(5, null, null, null, null,  "Mixed" , "");
+        IAssessmentMovementModel as6 = new IAssessmentMovementModel(6, null, null, null, null,  "Ataxia", "");
+        movementAssessmentTable.getItems().addAll(as1, as2, as3, as4, as5, as6);
+
+        movementAssessmentTable.setEditable(true);
+
+        nameCol.setResizable(false);
+        valueCol.setResizable(false);
+
+
+        movementAssessmentTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        movementAssessmentTable.getColumns().addAll( valueCol,nameCol);
+
+
+        VBox vbox = new VBox();
+        //vbox.setPadding(new Insets(1,0,0,1));
+        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, movementAssessmentTable);
+
+        closeButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+                movementAssessmentTable.getColumns().clear();
+            }
+        });
+
+        saveButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+                movementAssessmentTable.getColumns().clear();
+            }
+        });
+        textLabel.setTranslateX(10);
+
+        movementAssessmentTable.setTranslateY(-140);
+
+        closeButton.setMinWidth(90);
+        closeButton.setMinHeight(50);
+        closeButton.setTranslateX(550);
+        closeButton.setTranslateY(400);
+
+        saveButton.setMinHeight(50);
+        saveButton.setMinWidth(90);
+        saveButton.setTranslateX(445);
+        saveButton.setTranslateY(450);
+
+        textArea.setMaxHeight(50);
+        textArea.setMaxWidth(600);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(420);
+        return vbox;
+    }
+
+    private TableView<IAssessmentToneModel> muscleToneAssessmentTable = new TableView<>();
+    public VBox getMuscleToneAssessment() {
+        Button closeButton = new Button("Close");
+        Label textLabel = new Label("Muscle Tone");
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
+        Button saveButton = new Button("Save");
+        TextArea textArea = new TextArea();
+
+        TableColumn<IAssessmentToneModel, String> nameCol = new TableColumn<>("");
+        TableColumn<IAssessmentToneModel, IAssessmentToneModel.Values> valueCol = new TableColumn<>("");
+
+        nameCol.setCellValueFactory((new PropertyValueFactory<>("assessment_tone_condition")));
+        valueCol.setCellValueFactory((new PropertyValueFactory<>("selected")));
+
+        nameCol.prefWidthProperty().bind(muscleToneAssessmentTable.widthProperty().multiply(0.7));
+        valueCol.prefWidthProperty().bind(muscleToneAssessmentTable.widthProperty().multiply(0.2 ));
+
+        valueCol.setCellFactory((param) -> new RadioButtonCell<IAssessmentToneModel, IAssessmentToneModel.Values>(EnumSet.allOf(IAssessmentToneModel.Values.class)));
+
+        IAssessmentToneModel as1 = new IAssessmentToneModel(1, null, null, null, null, "", "None");
+        IAssessmentToneModel as2 = new IAssessmentToneModel(2, null, null, null, null, "",  "Hypotonia");
+        IAssessmentToneModel as3 = new IAssessmentToneModel(3, null, null, null, null, "",  "Spasticity assisting support");
+        IAssessmentToneModel as4 = new IAssessmentToneModel(4, null, null, null, null, "",  "Spasticity causes associated impairment to gait");
+        IAssessmentToneModel as5 = new IAssessmentToneModel(5, null, null, null, null, "", "Spasticity the primary gait impairment");
+        muscleToneAssessmentTable.getItems().addAll(as1, as2, as3, as4, as5);
+
+        muscleToneAssessmentTable.setEditable(true);
+
+        nameCol.setResizable(false);
+        valueCol.setResizable(false);
+
+
+        muscleToneAssessmentTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        muscleToneAssessmentTable.getColumns().addAll( valueCol,nameCol);
+
+
+        VBox vbox = new VBox();
+        //vbox.setPadding(new Insets(1,0,0,1));
+        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, muscleToneAssessmentTable);
+
+        closeButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+                muscleToneAssessmentTable.getColumns().clear();
+            }
+        });
+
+        saveButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+                muscleToneAssessmentTable.getColumns().clear();
+            }
+        });
+        textLabel.setTranslateX(10);
+
+        muscleToneAssessmentTable.setTranslateY(-140);
+
+        closeButton.setMinWidth(90);
+        closeButton.setMinHeight(50);
+        closeButton.setTranslateX(550);
+        closeButton.setTranslateY(400);
+
+        saveButton.setMinHeight(50);
+        saveButton.setMinWidth(90);
+        saveButton.setTranslateX(445);
+        saveButton.setTranslateY(450);
+
+        textArea.setMaxHeight(50);
+        textArea.setMaxWidth(600);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(420);
+        return vbox;
+    }
+    private TableView<IAssessmentStanceModel> stanceAssessmentTable = new TableView<>();
+    public VBox getStanceAssessment() {
+        Button closeButton = new Button("Close");
+        Label textLabel = new Label("Stance Stability");
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
+        Button saveButton = new Button("Save");
+        TextArea textArea = new TextArea();
+
+        TableColumn<IAssessmentStanceModel, String> nameCol = new TableColumn<>("");
+        TableColumn<IAssessmentStanceModel, IAssessmentStanceModel.Values> valueCol = new TableColumn<>("");
+
+        nameCol.setCellValueFactory((new PropertyValueFactory<>("assessment_stance_condition")));
+        valueCol.setCellValueFactory((new PropertyValueFactory<>("selected")));
+
+        nameCol.prefWidthProperty().bind(stanceAssessmentTable.widthProperty().multiply(0.7));
+        valueCol.prefWidthProperty().bind(stanceAssessmentTable.widthProperty().multiply(0.2 ));
+
+        valueCol.setCellFactory((param) -> new RadioButtonCell<IAssessmentStanceModel, IAssessmentStanceModel.Values>(EnumSet.allOf(IAssessmentStanceModel.Values.class)));
+
+        IAssessmentStanceModel as1 = new IAssessmentStanceModel(1, null, null, null, null, "Increased lumbar lordosis", "");
+        IAssessmentStanceModel as2 = new IAssessmentStanceModel(2, null, null, null, null, "High knee flexion midstance-crouch", "");
+        IAssessmentStanceModel as3 = new IAssessmentStanceModel(3, null, null, null, null, "Planovalgus feet", "");
+        IAssessmentStanceModel as4 = new IAssessmentStanceModel(4, null, null, null, null, "Equinus", "");
+        IAssessmentStanceModel as5 = new IAssessmentStanceModel(5, null, null, null, null, "Equinovarus", "");
+        IAssessmentStanceModel as6 = new IAssessmentStanceModel(6, null, null, null, null, "Rotational malalignment", "");
+        IAssessmentStanceModel as7 = new IAssessmentStanceModel(7, null, null, null, null, "No problem", "");
+
+        stanceAssessmentTable.getItems().addAll(as1, as2, as3, as4, as5, as6, as7);
+        stanceAssessmentTable.setEditable(true);
+
+        nameCol.setResizable(false);
+        valueCol.setResizable(false);
+
+
+        stanceAssessmentTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        stanceAssessmentTable.getColumns().addAll( valueCol,nameCol);
+
+
+        VBox vbox = new VBox();
+        //vbox.setPadding(new Insets(1,0,0,1));
+        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, stanceAssessmentTable);
+
+        closeButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+                stanceAssessmentTable.getColumns().clear();
+            }
+        });
+
+        saveButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+                stanceAssessmentTable.getColumns().clear();
+            }
+        });
+        textLabel.setTranslateX(10);
+
+        stanceAssessmentTable.setTranslateY(-140);
+
+        closeButton.setMinWidth(90);
+        closeButton.setMinHeight(50);
+        closeButton.setTranslateX(550);
+        closeButton.setTranslateY(400);
+
+        saveButton.setMinHeight(50);
+        saveButton.setMinWidth(90);
+        saveButton.setTranslateX(445);
+        saveButton.setTranslateY(450);
+
+        textArea.setMaxHeight(50);
+        textArea.setMaxWidth(600);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(420);
+        return vbox;
+    }
+    private TableView<IAssessmentSwingModel> swingAssessmentTable = new TableView<>();
+    public VBox getSwingAssessment() {
+        Button closeButton = new Button("Close");
+        Label textLabel = new Label("Swing Phase Function");
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
+        Button saveButton = new Button("Save");
+        TextArea textArea = new TextArea();
+
+        TableColumn<IAssessmentSwingModel, String> nameCol = new TableColumn<>("");
+        TableColumn<IAssessmentSwingModel, IAssessmentSwingModel.Values> valueCol = new TableColumn<>("");
+
+        nameCol.setCellValueFactory((new PropertyValueFactory<>("assessment_swing_condition")));
+        valueCol.setCellValueFactory((new PropertyValueFactory<>("selected")));
+
+        nameCol.prefWidthProperty().bind(swingAssessmentTable.widthProperty().multiply(0.7));
+        valueCol.prefWidthProperty().bind(swingAssessmentTable.widthProperty().multiply(0.2 ));
+
+        valueCol.setCellFactory((param) -> new RadioButtonCell<IAssessmentSwingModel, IAssessmentSwingModel.Values>(EnumSet.allOf(IAssessmentSwingModel.Values.class)));
+
+        IAssessmentSwingModel as1 = new IAssessmentSwingModel(1, null, null, null, null, "", "Decreased knee flexion with toe drag");
+        IAssessmentSwingModel as2 = new IAssessmentSwingModel(2, null, null, null, null, "", "Increased rectus EMG activity");
+        IAssessmentSwingModel as3 = new IAssessmentSwingModel(3, null, null, null, null, "",  "Limited ankle dorsiflexion");
+        IAssessmentSwingModel as4 = new IAssessmentSwingModel(4, null, null, null, null, "",  "No problem");
+
+        swingAssessmentTable.getItems().addAll(as1, as2, as3, as4);
+        swingAssessmentTable.setEditable(true);
+
+        nameCol.setResizable(false);
+        valueCol.setResizable(false);
+
+
+        swingAssessmentTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        swingAssessmentTable.getColumns().addAll( valueCol,nameCol);
+
+
+        VBox vbox = new VBox();
+        //vbox.setPadding(new Insets(1,0,0,1));
+        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, swingAssessmentTable);
+
+        closeButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+                swingAssessmentTable.getColumns().clear();
+            }
+        });
+
+        saveButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+                swingAssessmentTable.getColumns().clear();
+            }
+        });
+        textLabel.setTranslateX(10);
+
+        swingAssessmentTable.setTranslateY(-140);
+
+        closeButton.setMinWidth(90);
+        closeButton.setMinHeight(50);
+        closeButton.setTranslateX(550);
+        closeButton.setTranslateY(400);
+
+        saveButton.setMinHeight(50);
+        saveButton.setMinWidth(90);
+        saveButton.setTranslateX(445);
+        saveButton.setTranslateY(450);
+
+        textArea.setMaxHeight(50);
+        textArea.setMaxWidth(600);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(420);
         return vbox;
     }
 
@@ -4422,19 +5757,93 @@ changes saved - no longer being used
 
     }
 
-    public void onQuestionnaires(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Visits/TestVisit/Questionnaries.fxml"));
-        // fxmlLoader.setControllerFactory(applicationContext::getBean);
-        Parent popUp = fxmlLoader.load();
+    private TableView<IAppointmentSetDates> aptDateTable = new TableView();
+    @Autowired
+    AppointmentSetDateService appointmentSetDateService;
+    private final ObservableList<IAppointmentSetDates> listviewAptSetDates = FXCollections.observableArrayList();
+    private IAppointmentSetDates setDates;
 
-        Stage stage1 = new Stage((StageStyle.UTILITY));
-        stage1.initModality(Modality.WINDOW_MODAL);
-        stage1.setTitle("Questionnaire   ");
-        // stage1.setFullScreen(true);
-        stage1.setScene(new Scene(popUp, 950, 680));
-        stage1.showAndWait();
+    public VBox getAptDates(){
+        Button closeButton = new Button("Close");
+        Button saveButton = new Button("Save");
+        Label textLabel = new Label("Appointment Set Dates");
+
+        listviewAptSetDates.addAll(FXCollections.observableArrayList(appointmentSetDateService.findAll()));
+        aptDateTable.setItems(listviewAptSetDates);
+
+        aptDateTable.setEditable(true);
+
+        TableColumn<IAppointmentSetDates, String> nameCol = new TableColumn<>("Name");
+        TableColumn<IAppointmentSetDates, Boolean> dateCol = new TableColumn<>("Date");
+
+        nameCol.setCellValueFactory((new PropertyValueFactory<>("name")));
+        dateCol.setCellValueFactory((new PropertyValueFactory<>("date")));
+
+        nameCol.prefWidthProperty().bind(aptDateTable.widthProperty().multiply(0.3));
+        dateCol.prefWidthProperty().bind(aptDateTable.widthProperty().multiply(0.3));
+
+        // i need to figure out how to bind the table column value to the column
+        dateCol.setCellFactory(CheckBoxTableCell.forTableColumn(dateCol));
+
+
+        aptDateTable.getColumns().addAll(nameCol, dateCol);
+
+        VBox vbox = new VBox();
+        vbox.getChildren().addAll(textLabel, saveButton, closeButton, aptDateTable);
+
+        closeButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+            }
+        });
+
+        saveButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+            }
+        });
+        textLabel.setTranslateX(10);
+
+        aptDateTable.setTranslateY(-70);
+
+        closeButton.setMinWidth(90);
+        closeButton.setMinHeight(50);
+        closeButton.setTranslateX(550);
+        closeButton.setTranslateY(400);
+
+        saveButton.setMinHeight(50);
+        saveButton.setMinWidth(90);
+        saveButton.setTranslateX(445);
+        saveButton.setTranslateY(450);
+        return vbox;
+
     }
+    public void onAptDates(ActionEvent event) {
+        BorderPane root = new BorderPane();
+        root.setCenter(getViewOne());
+        root.setCenter(getAptDates());
+        Stage stage = new Stage();
+        stage.initModality(Modality.WINDOW_MODAL);
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.setScene(new Scene(root, 650, 550));
+        stage.show();
+    }
+
+//    public void onQuestionnaires(ActionEvent event) throws IOException {
+//        FXMLLoader fxmlLoader = new FXMLLoader();
+//        fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Visits/TestVisit/Questionnaries.fxml"));
+//        // fxmlLoader.setControllerFactory(applicationContext::getBean);
+//        Parent popUp = fxmlLoader.load();
+//
+//        Stage stage1 = new Stage((StageStyle.UTILITY));
+//        stage1.initModality(Modality.WINDOW_MODAL);
+//        stage1.setTitle("Questionnaire   ");
+//        // stage1.setFullScreen(true);
+//        stage1.setScene(new Scene(popUp, 950, 680));
+//        stage1.showAndWait();
+//    }
 }
 
 

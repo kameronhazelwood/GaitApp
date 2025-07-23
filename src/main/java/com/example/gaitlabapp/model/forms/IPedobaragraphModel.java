@@ -9,19 +9,19 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @Data
-@Table(name = "hip_joint_moments")
-public class IHipJointMomentsModel {
+@Table(name = "pedobaragraph")
+public class IPedobaragraphModel {
     @Id
     @GeneratedValue
-    @Column(name = "hip_joint_id")
-    private Integer hip_joint_id;
+    @Column(name = "pedobaragraph_id")
+    private Integer pedobaragraphId;
     @Column(name = "name")
     private String name;
-    @Column(name = "normals")
-    private String normals;
     @Column(name = "value")
     private Double value;
     @Column(name = "interp")
     private String interp;
-
+    @Column(name = "normals")
+    private String normals;
 }
+

@@ -20,7 +20,7 @@ public class IGroundReactionForces {
     @Column(name = "normals")
     private String normals;
     @Column(name = "value")
-    private String value;
+    private Double value;
     @Column(name = "interp")
     private String interp;
 }

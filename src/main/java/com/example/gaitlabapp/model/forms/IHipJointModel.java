@@ -20,7 +20,7 @@ public class IHipJointModel {
     @Column(name = "interp")
     private String interp;
     @Column(name = "value")
-    private Double values;
+    private Double value;
     @Column(name = "normals")
     private String normals;
 //    @Column(name = "hipRotFootContactR")

@@ -12,6 +12,7 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.control.TreeItem?>
 <?import javafx.scene.control.TreeView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -22,8 +23,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<?import javafx.scene.control.TreeTableColumn?>
-<?import javafx.scene.control.TreeItem?>
 <TabPane prefHeight="7987.0" prefWidth="853.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Visits.TestVisit.GaitTestVisitController">
     <Tab fx:id="visitTab" closable="false" text="Visit Information">
       <ScrollPane prefHeight="2000.0" prefWidth="748.0">
@@ -311,7 +310,9 @@
                   </font>
                </Text>
                <Separator blendMode="EXCLUSION" layoutX="551.0" layoutY="1613.0" orientation="VERTICAL" prefHeight="203.0" prefWidth="5.0" />
-               <Button fx:id="questionnaires" layoutX="728.0" layoutY="62.0" mnemonicParsing="false" onAction="#onQuestionnaires" prefHeight="43.0" prefWidth="110.0" text="Questionnaires" />
+               <Button fx:id="aptDates" layoutX="728.0" layoutY="72.0" mnemonicParsing="false" onAction="#onAptDates" prefHeight="53.0" prefWidth="113.0" text="Apt Dates" />
+               <Button fx:id="onViewCompendiumSideNav" layoutX="728.0" layoutY="143.0" mnemonicParsing="false" onAction="#onViewCompendiumSideNav" prefHeight="71.0" prefWidth="111.0" text="View Compendium" textAlignment="CENTER" wrapText="true" />
+               <Button fx:id="interpSideNav1" layoutX="726.0" layoutY="229.0" mnemonicParsing="false" onAction="#onViewInterpretation" prefHeight="68.0" prefWidth="116.0" text="View Interpretation" textAlignment="CENTER" wrapText="true" />
               </AnchorPane>
          </content>
       </ScrollPane>
@@ -1131,10 +1132,10 @@
                 <CheckBox layoutX="288.0" layoutY="650.0" mnemonicParsing="false" />
                 <Separator layoutY="672.0" prefHeight="3.0" prefWidth="783.0" />
                 <Separator blendMode="EXCLUSION" layoutX="3.0" layoutY="53.0" prefHeight="3.0" prefWidth="783.0" />
-                <Button fx:id="onViewCompendiumSideNav" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#onViewCompendiumSideNav" prefHeight="31.0" prefWidth="126.0" text="View Compendium " />
+                <Button fx:id="onViewCompendiumSideNavTest" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="126.0" text="View Compendium " />
                 <Button fx:id="setDatesVisitGait" layoutX="620.0" layoutY="66.0" mnemonicParsing="false" onAction="#onSetDatesVisitGait" prefHeight="23.0" prefWidth="117.0" text="Set Dates" />
                 <Label layoutX="565.0" layoutY="100.0" text="Current Comparison:" />
-                <Button fx:id="interpSideNav1" layoutX="148.0" layoutY="14.0" mnemonicParsing="false" onAction="#onViewInterpretation" prefHeight="31.0" prefWidth="126.0" text="View Interpretation " />
+                <Button fx:id="interpSideNav1Test" layoutX="148.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="126.0" text="View Interpretation " />
                 <Label layoutX="12.0" layoutY="676.0" text="UE - History" />
                 <Separator layoutY="697.0" prefHeight="3.0" prefWidth="783.0" />
                 <CheckBox layoutX="288.0" layoutY="676.0" mnemonicParsing="false" />
@@ -1206,10 +1207,10 @@
             </Pane>
         </ScrollPane>
     </Tab>
-    <Tab fx:id="dataTab" closable="false" text="Data">
+    <Tab fx:id="dataTab" closable="false" text="Interpret">
         <AnchorPane prefHeight="200.0" prefWidth="200.0">
             <TreeView fx:id="dataTable" layoutX="9.0" layoutY="19.0" onMouseClicked="#selectedItem" prefHeight="546.0" prefWidth="222.0">
-                   <TreeItem fx:id="dataColumn"  />
+                   <TreeItem fx:id="dataColumn" />
             </TreeView>
             <HBox layoutX="355.0" layoutY="161.0" prefHeight="236.0" prefWidth="379.0">
             </HBox>

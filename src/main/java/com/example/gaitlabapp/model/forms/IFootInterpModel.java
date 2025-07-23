@@ -9,12 +9,12 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @Data
-@Table(name = "hip_joint_moments")
-public class IHipJointMomentsModel {
+@Table(name = "foot_Interp")
+public class IFootInterpModel {
     @Id
     @GeneratedValue
-    @Column(name = "hip_joint_id")
-    private Integer hip_joint_id;
+    @Column(name = "foot_id")
+    private Integer foodId;
     @Column(name = "name")
     private String name;
     @Column(name = "normals")
