@@ -1175,6 +1175,7 @@ public class GaitTestVisitController implements Initializable {
     TreeItem<String> kinematicsData = new TreeItem<>("Kinematics");
     TreeItem<String> footKinematics = new TreeItem<>("Foot Kinematics");
     TreeItem<String> kinetics = new TreeItem<>("Kinetics");
+    TreeItem<String> signatures = new TreeItem<>("Signatures");
     TreeItem<String> hipJointAngles = new TreeItem<>("Hip Joint Angles");
     TreeItem<String> ankleJointAngles = new TreeItem<>("Ankle Joint Angles");
     TreeItem<String> lateralForefoot = new TreeItem<>("Lateral Forefoot");
@@ -2682,6 +2683,7 @@ public class GaitTestVisitController implements Initializable {
         parent2DataRoot.getChildren().addAll(o2Consumption);
         parent2DataRoot.getChildren().addAll(assessmentForm);
         parent2DataRoot.getChildren().addAll(recommendations);
+        parent2DataRoot.getChildren().addAll(signatures);
         parent2DataRoot.getChildren().addAll(pngFiles);
 
 
@@ -3077,6 +3079,14 @@ public class GaitTestVisitController implements Initializable {
                                 stage.setScene(new Scene(root, 650, 600));
                                 stage.show();
                             }
+                            else if (item == signatures){
+                                root.setCenter(getSwingAssessment());
+                                Stage stage = new Stage();
+                                stage.initModality(Modality.WINDOW_MODAL);
+                                stage.initStyle(StageStyle.UNDECORATED);
+                                stage.setScene(new Scene(root, 650, 600));
+                                stage.show();
+                            }
                         }
                     }
             }
@@ -3198,7 +3208,7 @@ public class GaitTestVisitController implements Initializable {
         nameCol.setCellValueFactory((new PropertyValueFactory<>("name")));
         valueCol.setCellValueFactory((new PropertyValueFactory<>("value")));
         interpCol.setCellValueFactory((new PropertyValueFactory<>("interp")));
-        interpCol.setCellFactory(ComboBoxTableCell.forTableColumn("Very High", "High", "Normal", "Low", "Very Low"));
+        interpCol.setCellFactory(ComboBoxTableCell.forTableColumn("Very High", "High", "Normal", "Low", "Very Low", "Posterior", "Anterior", "Very Posterior", "Very Anterior" ));
 
 
         //  interpCol.setCellValueFactory(ComboBoxTableCell.forTableColumn("High", "Low", "Very Low", "Normal", "Very High"));
@@ -3279,7 +3289,7 @@ public class GaitTestVisitController implements Initializable {
         valueCol.setCellValueFactory((new PropertyValueFactory<>("value")));
         interpCol.setCellValueFactory((new PropertyValueFactory<>("interp")));
 
-        interpCol.setCellFactory(ComboBoxTableCell.forTableColumn("Very High", "High", "Normal", "Low", "Very Low"));
+        interpCol.setCellFactory(ComboBoxTableCell.forTableColumn("Very Internal", "Internal", "Normal", "External", "Very External"));
         nameCol.prefWidthProperty().bind(hipJointTable.widthProperty().multiply(0.3));
         valueCol.prefWidthProperty().bind(hipJointTable.widthProperty().multiply(0.3));
         interpCol.prefWidthProperty().bind(hipJointTable.widthProperty().multiply(0.3));
@@ -4665,12 +4675,17 @@ public class GaitTestVisitController implements Initializable {
     @Autowired
     OrthRecomService orthRecomService;
     private final ObservableList<IOrthoticsRecomModel> listviewOrthRecom = FXCollections.observableArrayList();
-    public VBox getOrthRecommendations() {
+    public ScrollPane getOrthRecommendations() {
         Button closeButton = new Button("Close");
         Label textLabel = new Label("Recommendation: Orthotics");
         textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
+        Label preopLabel = new Label("Pre-Op Recommendation");
+        preopLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
         Button saveButton = new Button("Save");
+        Button postOpRec = new Button("Add Post-Op Recommendation");
+        Button preOpRec = new Button("Add Pre-Op Recommendation");
         TextArea textArea = new TextArea();
+        TextArea preOpTextArea = new TextArea();
 
         listviewOrthRecom.addAll(FXCollections.observableArrayList(orthRecomService.findAll()));
         orthRecomTable.setItems(listviewOrthRecom);
@@ -4680,15 +4695,6 @@ public class GaitTestVisitController implements Initializable {
 
         nameCol.setCellValueFactory((new PropertyValueFactory<>("recom_orth_procedure")));
         valueCol.setCellValueFactory((new PropertyValueFactory<>("selected")));
-
-//        valueCol.setOnEditCommit(
-//                new EventHandler<TableColumn.CellEditEvent<IRecomSurgicalModel, Boolean>>() {
-//                    @Override
-//                    public void handle(TableColumn.CellEditEvent<IRecomSurgicalModel, Boolean> t) {
-//                        ((IRecomSurgicalModel) t.getTableView().getItems().get(t.getTablePosition().getRow()).setRecom_normal(t.getNewValue());
-//                    }
-//                }
-//        );
 
         nameCol.prefWidthProperty().bind(orthRecomTable.widthProperty().multiply(0.7));
         valueCol.prefWidthProperty().bind(orthRecomTable.widthProperty().multiply(0.2 ));
@@ -4707,8 +4713,10 @@ public class GaitTestVisitController implements Initializable {
 
 
         VBox vbox = new VBox();
+        ScrollPane sp = new ScrollPane();
         //vbox.setPadding(new Insets(1,0,0,1));
-        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, orthRecomTable);
+        sp.setContent(vbox);
+        vbox.getChildren().addAll(textLabel, textArea, preOpRec, postOpRec, saveButton , closeButton, orthRecomTable);
 
         closeButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -4725,25 +4733,82 @@ public class GaitTestVisitController implements Initializable {
                 orthRecomTable.getColumns().clear();
             }
         });
+
+        preOpRec.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                 TableView<IOrthoticsRecomModel> preOpTable = new TableView<>();
+                 ObservableList<IOrthoticsRecomModel> listviewOrthRecom = FXCollections.observableArrayList();
+
+                listviewOrthRecom.addAll(FXCollections.observableArrayList(orthRecomService.findAll()));
+                preOpTable.setItems(listviewOrthRecom);
+
+                TableColumn<IOrthoticsRecomModel, String> nameCol = new TableColumn<>("");
+                TableColumn<IOrthoticsRecomModel, IOrthoticsRecomModel.Values> valueCol = new TableColumn<>("");
+
+                nameCol.setCellValueFactory((new PropertyValueFactory<>("recom_orth_procedure")));
+                valueCol.setCellValueFactory((new PropertyValueFactory<>("selected")));
+
+                nameCol.prefWidthProperty().bind(preOpTable.widthProperty().multiply(0.7));
+                valueCol.prefWidthProperty().bind(preOpTable.widthProperty().multiply(0.2 ));
+
+                valueCol.setCellFactory((param) -> new RadioButtonCell<IOrthoticsRecomModel, IOrthoticsRecomModel.Values>(EnumSet.allOf(IOrthoticsRecomModel.Values.class)));
+
+                preOpTable.setEditable(true);
+
+                nameCol.setResizable(false);
+                valueCol.setResizable(false);
+
+                preOpTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+                preOpTable.getColumns().addAll( valueCol,nameCol);
+
+                vbox.getChildren().addAll(preopLabel, preOpTextArea, preOpTable);
+                sp.setContent(vbox);
+
+                preOpTable.setTranslateY(-90);
+
+                preopLabel.setTranslateY(-70);
+                preopLabel.setTranslateX(5);
+
+                preOpTextArea.setTranslateY(380);
+                preOpTextArea.setTranslateX(0);
+                preOpTextArea.setMaxHeight(50);
+                preOpTextArea.setMaxWidth(700);
+
+            }
+        });
         textLabel.setTranslateX(10);
 
-        orthRecomTable.setTranslateY(-140);
+        orthRecomTable.setTranslateY(-235);
 
         closeButton.setMinWidth(90);
         closeButton.setMinHeight(50);
         closeButton.setTranslateX(550);
-        closeButton.setTranslateY(400);
+        closeButton.setTranslateY(303);
 
         saveButton.setMinHeight(50);
         saveButton.setMinWidth(90);
-        saveButton.setTranslateX(445);
-        saveButton.setTranslateY(450);
+        saveButton.setTranslateX(450);
+        saveButton.setTranslateY(353);
+
+        preOpRec.setMinHeight(50);
+        preOpRec.setMinWidth(90);
+        preOpRec.setTranslateX(0);
+        preOpRec.setTranslateY(453);
+
+        postOpRec.setMinHeight(50);
+        postOpRec.setMinWidth(90);
+        postOpRec.setTranslateX(205);
+        postOpRec.setTranslateY(404);
 
         textArea.setMaxHeight(50);
         textArea.setMaxWidth(700);
-        textArea.setTranslateX(10);
+        textArea.setTranslateX(5);
         textArea.setTranslateY(420);
-        return vbox;
+
+        vbox.setMinHeight(5500);
+        sp.setMinHeight(800);
+        return sp;
     }
 
 
@@ -5327,6 +5392,59 @@ public class GaitTestVisitController implements Initializable {
         return vbox;
     }
 
+
+    public VBox getSignatures() {
+        Button closeButton = new Button("Close");
+        Label textLabel = new Label("Swing Phase Function");
+        textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
+        Button saveButton = new Button("Save");
+        TextArea textArea = new TextArea();
+
+
+
+
+
+
+
+
+        VBox vbox = new VBox();
+        //vbox.setPadding(new Insets(1,0,0,1));
+
+
+        closeButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+
+            }
+        });
+
+        saveButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                vbox.getScene().getWindow().hide();
+
+            }
+        });
+        textLabel.setTranslateX(10);
+
+
+        closeButton.setMinWidth(90);
+        closeButton.setMinHeight(50);
+        closeButton.setTranslateX(550);
+        closeButton.setTranslateY(400);
+
+        saveButton.setMinHeight(50);
+        saveButton.setMinWidth(90);
+        saveButton.setTranslateX(445);
+        saveButton.setTranslateY(450);
+
+        textArea.setMaxHeight(50);
+        textArea.setMaxWidth(600);
+        textArea.setTranslateX(10);
+        textArea.setTranslateY(420);
+        return vbox;
+    }
 
 //            if (item.equals(showAll)) {
 //                Pane pane = new Pane();
