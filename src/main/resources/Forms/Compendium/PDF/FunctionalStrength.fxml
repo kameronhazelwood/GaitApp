@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<ScrollPane xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Compendium.PDF.FunctionalStrength">
+   <content>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+          <Label layoutX="5.0" layoutY="6.0" text="Functional Strength - GMFM-D">
+              <font>
+                  <Font name="SansSerif Bold" size="11.0" />
+              </font>
+          </Label>
+          <Separator layoutX="6.0" layoutY="30.0" prefHeight="3.0" prefWidth="349.0" />
+          <Separator layoutX="221.0" layoutY="30.0" orientation="VERTICAL" prefHeight="281.0" prefWidth="3.0" />
+          <Label layoutX="235.0" layoutY="38.0" text="Right">
+              <font>
+                  <Font name="SansSerif Bold" size="10.0" />
+              </font>
+          </Label>
+          <Label layoutX="11.0" layoutY="59.0" prefHeight="19.0" prefWidth="118.0" text="Pull to Stand(52)" wrapText="true">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="6.0" layoutY="56.0" prefHeight="0.0" prefWidth="349.0" />
+          <Separator layoutX="6.0" layoutY="82.0" prefHeight="0.0" prefWidth="349.0" />
+          <Label layoutX="11.0" layoutY="85.0" prefHeight="11.0" prefWidth="261.0" text="Independent Standing - Arms Free (3 sec) (53)" wrapText="true">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="6.0" layoutY="107.0" prefHeight="0.0" prefWidth="349.0" />
+          <Label layoutX="11.0" layoutY="110.0" prefHeight="17.0" prefWidth="259.0" text="Independent Standing - Arms Free (20 sec) (53)" wrapText="true">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="6.0" layoutY="131.0" prefHeight="0.0" prefWidth="349.0" />
+          <Label layoutX="11.0" layoutY="134.0" prefHeight="22.0" prefWidth="223.0" text="One leg stance hand held - Right (54,55)" wrapText="true">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="6.0" layoutY="155.0" prefHeight="0.0" prefWidth="349.0" />
+          <Label layoutX="11.0" layoutY="161.0" prefHeight="21.0" prefWidth="161.0" text="One leg stance (57,58)" wrapText="true">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="6.0" layoutY="183.0" prefHeight="0.0" prefWidth="349.0" />
+          <Label layoutX="11.0" layoutY="188.0" prefHeight="19.0" prefWidth="118.0" text="Short sit to stand (59)" wrapText="true">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="6.0" layoutY="209.0" prefHeight="0.0" prefWidth="349.0" />
+          <Label layoutX="11.0" layoutY="213.0" prefHeight="14.0" prefWidth="201.0" text="High Kneel to stand (60,61)" wrapText="true">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="6.0" layoutY="235.0" prefHeight="0.0" prefWidth="349.0" />
+          <Label layoutX="11.0" layoutY="240.0" prefHeight="14.0" prefWidth="215.0" text="Lowers to floor (62)" wrapText="true">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="6.0" layoutY="262.0" prefHeight="0.0" prefWidth="349.0" />
+          <Text fill="RED" layoutX="244.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="244.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="244.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="244.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="244.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="244.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="244.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="244.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="319.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="--">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="319.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="--">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="319.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="--">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="319.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="--">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="319.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="--">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="319.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="--">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="319.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="--">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="319.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="--">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Separator layoutX="287.0" layoutY="28.0" orientation="VERTICAL" prefHeight="285.0" prefWidth="2.0" />
+          <Label layoutX="10.0" layoutY="266.0" prefHeight="14.0" prefWidth="215.0" text="Squats (63)" wrapText="true">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="6.0" layoutY="287.0" prefHeight="0.0" prefWidth="349.0" />
+          <Label layoutX="11.0" layoutY="290.0" prefHeight="14.0" prefWidth="215.0" text="Standing-picks pen from floor(64)" wrapText="true">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="4.0" layoutY="312.0" prefHeight="0.0" prefWidth="349.0" />
+          <Text layoutX="450.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+          <Text fill="RED" layoutX="244.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="319.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="--">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="243.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="319.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="--">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Separator layoutX="353.0" layoutY="31.0" orientation="VERTICAL" prefHeight="282.0" prefWidth="0.0" />
+          <Label layoutX="315.0" layoutY="38.0" text="Left">
+              <font>
+                  <Font name="SansSerif Bold" size="10.0" />
+              </font>
+          </Label>
+          <Label layoutX="14.0" layoutY="337.0" text="Total GMFM Score:">
+              <font>
+                  <Font name="SansSerif Bold" size="12.0" />
+              </font>
+          </Label>
+          <Text fill="RED" layoutX="138.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="36/39" />
+         <Separator blendMode="EXCLUSION" layoutX="1.0" layoutY="325.0" prefHeight="3.0" prefWidth="600.0" />
+         <Separator layoutX="3.0" layoutY="30.0" orientation="VERTICAL" prefHeight="282.0" prefWidth="0.0" />
+      </AnchorPane>
+   </content>
+</ScrollPane>

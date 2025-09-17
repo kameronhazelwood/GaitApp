@@ -26,8 +26,6 @@ import net.rgielen.fxweaver.core.FxmlView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationListener;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -55,6 +53,7 @@ public class UserLoginController  {
     private Scene scene;
     @FXML
     private Parent root;
+
     //    Timeline alertTimer = new Timeline(new KeyFrame(Duration.minutes(1), event1 -> {
 //
 //    }));

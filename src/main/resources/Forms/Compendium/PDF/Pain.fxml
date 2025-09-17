@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<ScrollPane xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Compendium.PDF.Pain">
+   <content>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+          <Label layoutX="16.0" layoutY="6.0" text="Pain">
+              <font>
+                  <Font name="SansSerif Bold" size="11.0" />
+              </font>
+          </Label>
+          <Separator layoutX="12.0" layoutY="28.0" prefHeight="3.0" prefWidth="307.0" />
+          <Separator layoutX="160.0" layoutY="28.0" orientation="VERTICAL" prefHeight="315.0" prefWidth="0.0" />
+          <Label layoutX="16.0" layoutY="36.0" text="Pain Assessment Factors">
+              <font>
+                  <Font name="SansSerif Bold" size="11.0" />
+              </font>
+          </Label>
+          <Label layoutX="179.0" layoutY="36.0" style="-fx-text-fill: #ff0000;" text="Numerical">
+              <font>
+                  <Font name="SansSerif Bold" size="11.0" />
+              </font>
+          </Label>
+          <Label layoutX="16.0" layoutY="57.0" prefHeight="19.0" prefWidth="118.0" text="Aggravating Factors" wrapText="true">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="11.0" layoutY="54.0" prefHeight="3.0" prefWidth="307.0" />
+          <Separator layoutX="11.0" layoutY="80.0" prefHeight="0.0" prefWidth="307.0" />
+          <Label layoutX="16.0" layoutY="83.0" prefHeight="19.0" prefWidth="118.0" text="Activities Impacted" wrapText="true">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="11.0" layoutY="105.0" prefHeight="0.0" prefWidth="307.0" />
+          <Label layoutX="16.0" layoutY="108.0" prefHeight="19.0" prefWidth="118.0" text="Current Level" wrapText="true">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="10.0" layoutY="129.0" prefHeight="0.0" prefWidth="307.0" />
+          <Label layoutX="16.0" layoutY="132.0" prefHeight="19.0" prefWidth="118.0" text="Lowest Level" wrapText="true">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="10.0" layoutY="167.0" prefHeight="0.0" prefWidth="307.0" />
+          <Label layoutX="16.0" layoutY="170.0" prefHeight="19.0" prefWidth="118.0" text="Highest Level" wrapText="true">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutY="191.0" prefHeight="0.0" prefWidth="319.0" />
+          <Label layoutX="16.0" layoutY="218.0" prefHeight="19.0" prefWidth="118.0" text="Location of Pain" wrapText="true">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="-1.0" layoutY="235.0" prefHeight="0.0" prefWidth="319.0" />
+          <Label layoutX="16.0" layoutY="251.0" prefHeight="19.0" prefWidth="118.0" text="Frequency of Pain" wrapText="true">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="10.0" layoutY="293.0" prefHeight="0.0" prefWidth="307.0" />
+          <Label layoutX="16.0" layoutY="311.0" prefHeight="19.0" prefWidth="118.0" text="Duration of Pain" wrapText="true">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="10.0" layoutY="343.0" prefHeight="0.0" prefWidth="307.0" />
+          <Text fill="RED" layoutX="167.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="running/impact">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="167.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="sports">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="167.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="167.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="167.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="167.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ankle">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="163.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1x week">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+         <Separator layoutX="317.0" layoutY="29.0" orientation="VERTICAL" prefHeight="315.0" prefWidth="0.0" />
+         <Separator layoutX="9.0" layoutY="28.0" orientation="VERTICAL" prefHeight="315.0" prefWidth="0.0" />
+      
+      </AnchorPane>
+   </content>
+</ScrollPane>

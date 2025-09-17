@@ -1,16 +1,20 @@
 package com.example.gaitlabapp.controllers.Visits.TestVisit;
 
 import com.example.gaitlabapp.Launcher;
+import com.example.gaitlabapp.config.HostServicesProvider;
 import com.example.gaitlabapp.config.RadioButtonCell;
 import com.example.gaitlabapp.controllers.Visits.TestNoteController;
 import com.example.gaitlabapp.controllers.Wizards.AddOrthosisWizard;
 import com.example.gaitlabapp.controllers.Wizards.AddSeizureMedsController;
 import com.example.gaitlabapp.model.forms.*;
+import javafx.application.HostServices;
+import javafx.application.Application;
 import com.example.gaitlabapp.model.patients.IPatientModel;
 import com.example.gaitlabapp.model.visits.IAppointmentModel;
 import com.example.gaitlabapp.model.visits.IAppointmentSetDates;
 import com.example.gaitlabapp.services.*;
 import jakarta.persistence.Table;
+import javafx.application.HostServices;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -28,10 +32,12 @@ import javafx.scene.image.Image;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Text;
+import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -43,6 +49,8 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+import javafx.application.HostServices;
+import javafx.application.Application;
 
 import java.io.File;
 import java.io.IOException;
@@ -1172,10 +1180,11 @@ public class GaitTestVisitController implements Initializable {
     TreeItem<String> kinematics = new TreeItem<>("Kinematics");
     TreeItem<String> recommendations = new TreeItem<>("Recommendations");
     TreeItem<String> assessmentForm = new TreeItem<>("Assessment Form");
+    TreeItem<String> signatures = new TreeItem<>("Signatures");
     TreeItem<String> kinematicsData = new TreeItem<>("Kinematics");
     TreeItem<String> footKinematics = new TreeItem<>("Foot Kinematics");
     TreeItem<String> kinetics = new TreeItem<>("Kinetics");
-    TreeItem<String> signatures = new TreeItem<>("Signatures");
+    TreeItem<String> signatureForm = new TreeItem<>("Signatures");
     TreeItem<String> hipJointAngles = new TreeItem<>("Hip Joint Angles");
     TreeItem<String> ankleJointAngles = new TreeItem<>("Ankle Joint Angles");
     TreeItem<String> lateralForefoot = new TreeItem<>("Lateral Forefoot");
@@ -2676,7 +2685,7 @@ public class GaitTestVisitController implements Initializable {
 
 
         // parent2DataRoot.getChildren().addAll(showAll);
-        parent2DataRoot.getChildren().addAll(kineticsData);
+        parent2DataRoot.getChildren().addAll(kinematicsData);
         parent2DataRoot.getChildren().addAll(kineticsData);
         parent2DataRoot.getChildren().addAll(footModel);
         parent2DataRoot.getChildren().addAll(pedobaragraph);
@@ -2928,7 +2937,7 @@ public class GaitTestVisitController implements Initializable {
                                 stage.initStyle(StageStyle.UNDECORATED);
                                 stage.setScene(new Scene(root, 680, 600));
                                 stage.show();
-                            } else if (item == kneeJointData) {
+                            } else if (item == kneeJointMoments) {
                                 root.setCenter(getKneeJointMoments());
                                 Stage stage = new Stage();
                                 stage.initModality(Modality.WINDOW_MODAL);
@@ -3080,7 +3089,7 @@ public class GaitTestVisitController implements Initializable {
                                 stage.show();
                             }
                             else if (item == signatures){
-                                root.setCenter(getSwingAssessment());
+                                root.setCenter(getSignatures());
                                 Stage stage = new Stage();
                                 stage.initModality(Modality.WINDOW_MODAL);
                                 stage.initStyle(StageStyle.UNDECORATED);
@@ -3666,10 +3675,10 @@ public class GaitTestVisitController implements Initializable {
         return vbox;
     }
 
-    private TableView<IKneeJointAnglesModel> kneeJointTable = new TableView<>();
+    private final TableView<IKneeJointAnglesModel> kneeJointAnglesTable = new TableView<>();
     @Autowired
-    KneeJointService kneeJointService;
-    private final ObservableList<IKneeJointAnglesModel> listviewKneeJoint = FXCollections.observableArrayList();
+    KneeJointService kneeJointAnglesService;
+    private final ObservableList<IKneeJointAnglesModel> listviewKneeJointAngles = FXCollections.observableArrayList();
     public VBox getKneeJointAngles() {
         Button closeButton = new Button("Close");
         Label textLabel = new Label("Knee Joint Angles(deg)");
@@ -3677,9 +3686,9 @@ public class GaitTestVisitController implements Initializable {
         Button saveButton = new Button("Save");
         TextArea textArea = new TextArea();
 
-        listviewKneeJoint.addAll(FXCollections.observableArrayList(kneeJointService.findAll()));
-        kneeJointTable.setItems(listviewKneeJoint);
-        kneeJointTable.setEditable(true);
+        listviewKneeJointAngles.addAll(FXCollections.observableArrayList(kneeJointAnglesService.findAll()));
+        kneeJointAnglesTable.setItems(listviewKneeJointAngles);
+        kneeJointAnglesTable.setEditable(true);
 
         TableColumn<IKneeJointAnglesModel, String> nameCol = new TableColumn<>("Name");
         TableColumn<IKneeJointAnglesModel, Double> valueCol = new TableColumn<>("Value");
@@ -3690,9 +3699,9 @@ public class GaitTestVisitController implements Initializable {
         interpCol.setCellValueFactory((new PropertyValueFactory<>("interp")));
 
         interpCol.setCellFactory(ComboBoxTableCell.forTableColumn("Very High", "High", "Normal", "Low", "Very Low"));
-        nameCol.prefWidthProperty().bind(kneeJointTable.widthProperty().multiply(0.3));
-        valueCol.prefWidthProperty().bind(kneeJointTable.widthProperty().multiply(0.3));
-        interpCol.prefWidthProperty().bind(kneeJointTable.widthProperty().multiply(0.3));
+        nameCol.prefWidthProperty().bind(kneeJointAnglesTable.widthProperty().multiply(0.3));
+        valueCol.prefWidthProperty().bind(kneeJointAnglesTable.widthProperty().multiply(0.3));
+        interpCol.prefWidthProperty().bind(kneeJointAnglesTable.widthProperty().multiply(0.3));
 
 
         nameCol.setResizable(false);
@@ -3700,20 +3709,20 @@ public class GaitTestVisitController implements Initializable {
         interpCol.setResizable(false);
         interpCol.setEditable(true);
 
-        kneeJointTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+        kneeJointAnglesTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
-        kneeJointTable.getColumns().addAll(nameCol, valueCol, interpCol);
+        kneeJointAnglesTable.getColumns().addAll(nameCol, valueCol, interpCol);
 
 
         VBox vbox = new VBox();
         //vbox.setPadding(new Insets(1,0,0,1));
-        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, kneeJointTable);
+        vbox.getChildren().addAll(textLabel, textArea, saveButton, closeButton, kneeJointAnglesTable);
 
         closeButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
-                kneeJointTable.getColumns().clear();
+                kneeJointAnglesTable.getColumns().clear();
             }
         });
 
@@ -3721,12 +3730,12 @@ public class GaitTestVisitController implements Initializable {
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
-                kneeJointTable.getColumns().clear();
+                kneeJointAnglesTable.getColumns().clear();
             }
         });
         textLabel.setTranslateX(10);
 
-        kneeJointTable.setTranslateY(-70);
+        kneeJointAnglesTable.setTranslateY(-70);
 
         closeButton.setMinWidth(90);
         closeButton.setMinHeight(50);
@@ -5395,22 +5404,20 @@ public class GaitTestVisitController implements Initializable {
 
     public VBox getSignatures() {
         Button closeButton = new Button("Close");
-        Label textLabel = new Label("Swing Phase Function");
+        Label textLabel = new Label("Signatures");
+        Label physicianSig = new Label("Interpreting Physician Signature");
+        Label physicalSig = new Label("Interpreting Physical Therapist Signature");
+        Label addendumSig = new Label("Addendum Signature");
+        CheckBox physicianCheck = new CheckBox();
+        CheckBox physicalCheck = new CheckBox();
+        CheckBox addendumCheck = new CheckBox();
         textLabel.setStyle("-fx-font-size:20; -fx-font-weight: Bold");
         Button saveButton = new Button("Save");
-        TextArea textArea = new TextArea();
-
-
-
-
-
-
-
 
         VBox vbox = new VBox();
         //vbox.setPadding(new Insets(1,0,0,1));
 
-
+        vbox.getChildren().addAll(textLabel, saveButton, closeButton,physicianCheck, physicianSig, physicalCheck, physicalSig, addendumCheck, addendumSig);
         closeButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -5423,6 +5430,7 @@ public class GaitTestVisitController implements Initializable {
             @Override
             public void handle(ActionEvent event) {
                 vbox.getScene().getWindow().hide();
+
 
             }
         });
@@ -5439,10 +5447,27 @@ public class GaitTestVisitController implements Initializable {
         saveButton.setTranslateX(445);
         saveButton.setTranslateY(450);
 
-        textArea.setMaxHeight(50);
-        textArea.setMaxWidth(600);
-        textArea.setTranslateX(10);
-        textArea.setTranslateY(420);
+        physicianSig.setTranslateX(5);
+        physicianSig.setTranslateY(-88);
+        physicianSig.setStyle("-fx-font-size:15;");
+
+        physicianCheck.setTranslateX(225);
+        physicianCheck.setTranslateY(-68);
+
+        physicalCheck.setTranslateX(280);
+        physicalCheck.setTranslateY(-50);
+
+        physicalSig.setTranslateX(5);
+        physicalSig.setTranslateY(-70);
+        physicalSig.setStyle("-fx-font-size:15;");
+
+        addendumCheck.setTranslateX(160);
+        addendumCheck.setTranslateY(-18);
+
+        addendumSig.setTranslateX(5);
+        addendumSig.setTranslateY(-40);
+        addendumSig.setStyle("-fx-font-size:15;");
+
         return vbox;
     }
 
@@ -5703,17 +5728,53 @@ public class GaitTestVisitController implements Initializable {
 //            stage1.show();
 //        }
 
-    public void onViewInterpretation(ActionEvent actionEvent) throws IOException {
-        Parent popUp;
-        popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Interpretation/GAIT/GenerateGAITInterpretation.fxml")));
-        Stage stage1 = new Stage();
-        popUp.getStylesheets().add(Objects.requireNonNull(Launcher.class.getResource("/styles.css")).toExternalForm());
-        stage1.setTitle("Patient Interpretation");
-        stage1.setScene(new Scene(popUp, 900, 680));
-        stage1.setScene(popUp.getScene());
-        stage1.show();
-    }
+    private HostServices hostServices ;
 
+    public HostServices getHostServices() {
+        return hostServices ;
+    }
+    public void onViewInterpretation(ActionEvent actionEvent) throws IOException {
+//        Parent popUp;
+//        popUp = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Interpretation/GAIT/GenerateGAITInterpretation.fxml")));
+//        Stage stage1 = new Stage();
+//        popUp.getStylesheets().add(Objects.requireNonNull(Launcher.class.getResource("/styles.css")).toExternalForm());
+//        stage1.setTitle("Patient Interpretation");
+//        stage1.setScene(new Scene(popUp, 900, 700));
+//        stage1.setScene(popUp.getScene());
+//        stage1.show();
+
+//        File pdfFile = new File("C:\\Users\\sh0184\\Documents\\test.pdf");
+//
+//        if(pdfFile.exists()){
+//            hostServices.showDocument(pdfFile.toURI().toString());
+//        }
+//        StackPane popUp = new StackPane();
+        Stage stage1 = new Stage();
+//      stage1.setTitle("Patient Interpretation");
+//       stage1.setScene(new Scene(popUp, 900, 700));
+//      stage1.setScene(popUp.getScene());
+//      stage1.show();
+//        FileChooser fc = new FileChooser();
+//        fc.setTitle("Open PDF file...");
+//        fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("PDF Files", "*.pdf"));
+//        File f = fc.showOpenDialog(new Stage());
+//        String filename = file.getAbsolutePath();
+
+        try {
+            File pdfFile = new File("C:\\dev\\GaitApp\\src\\main\\java\\com\\example\\gaitlabapp\\controllers\\Forms\\Compendium\\PDF\\testing3.pdf"); // Replace with your PDF file path
+            if (pdfFile.exists()) {
+                // Get HostServices from the Application instance
+                HostServicesProvider.getHostServices().showDocument(pdfFile.getAbsolutePath());
+
+            } else {
+                System.err.println("PDF file not found: " + pdfFile.getAbsolutePath());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            // Handle any potential exceptions, e.g., file not found, security issues
+        }
+        
+    }
     private boolean saved;
 
     private Stage getMyStage() {
@@ -5724,8 +5785,6 @@ public class GaitTestVisitController implements Initializable {
         appointmentModel.setAptDate(date.getText());
         appointmentModel.setVisitType(aptVisitType.getText());
         appointmentModel.setVisitSubType(aptSubType.getText());
-//
-
 
         saved = true;
         getMyStage().close();

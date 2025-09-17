@@ -2,8 +2,13 @@ package com.example.gaitlabapp.controllers.Forms.Interpretation.GAIT;
 
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.text.Text;
-public class IntrepertationPedobaragraphGaitController {
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class IntrepertationPedobaragraphGaitController implements Initializable {
     @FXML
     private Text footProgressionLInterp;
 
@@ -147,4 +152,33 @@ public class IntrepertationPedobaragraphGaitController {
 
     @FXML
     private Text valgusPostitionRValue;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        heelWeightRValue.setText("4.3");
+        heelWeightLValue.setText("27.7");
+        impuleHeelRvalue.setText("0.3");
+        impuleHeelLValue.setText("19.7");
+        impuleLatFootRValue.setText("0");
+        impulseLatRValue.setText("1.1");
+        impuleMedialRValue.setText("0");
+        medialFootRValue.setText("0");
+        impulseLatForeRValue.setText("24.3");
+        impulseForeFootLValue.setText("31.5");
+        medialForeFoorRValue.setText("75.4");
+        medialForeFoorLValue.setText("47.8");
+        valgusPostitionRValue.setText("51.3");
+        valgusPositionLValue.setText("18.9");
+        footProgressionRValue.setText("25");
+        footProgressionLValue.setText("1");
+
+        heelWeightRInterp.setText("Very Early");
+        heelWeightLInterp.setText("Very Early");
+        impuleHeelRInterp.setText("Very Early");
+        impuleHeelLInterp.setText("Low");
+        valgusPostitionRNormals.setText("Moderate Valgus");
+        valgusPositionLNormals.setText("Normal");
+        footProgressionRNormals.setText("Very External");
+        footProgressionLNormals.setText("Normal");
+    }
 }

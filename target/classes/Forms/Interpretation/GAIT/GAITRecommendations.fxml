@@ -1,715 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <ScrollPane prefHeight="723.0" prefWidth="795.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Interpretation.GAIT.GAITRecommendationsController">
-
-    <content>
-        <TabPane prefHeight="2000.0" prefWidth="800.0">
-            <tabs>
-                <Tab text="Diagnostic">
-                    <content>
-                        <AnchorPane prefHeight="400.0" prefWidth="600.0">
-                            <children>
-                                <CheckBox fx:id="recommendPreOp" layoutX="31.0" layoutY="39.0" mnemonicParsing="false" text="Recommend pre-operative gait analysis">
-                                    <font>
-                                        <Font name="SansSerif Regular" size="13.0" />
-                                    </font>
-                                </CheckBox>
-                                <CheckBox fx:id="recommendpostOp" layoutX="31.0" layoutY="63.0" mnemonicParsing="false" text="Recommend post operative gait analysis in one year to document outcome">
-                                    <font>
-                                        <Font name="SansSerif Regular" size="13.0" />
-                                    </font>
-                                </CheckBox>
-                                <CheckBox fx:id="noAdditional" layoutX="31.0" layoutY="86.0" mnemonicParsing="false" text="Based on this evaluation, no additional diagnostic tests are indicated">
-                                    <font>
-                                        <Font name="SansSerif Regular" size="13.0" />
-                                    </font>
-                                </CheckBox>
-                                <CheckBox fx:id="radiographisIndicated" layoutX="31.0" layoutY="109.0" mnemonicParsing="false" text="Radiographs if they are felt to be clinically indicated">
-                                    <font>
-                                        <Font name="SansSerif Regular" size="13.0" />
-                                    </font>
-                                </CheckBox>
-                        <CheckBox fx:id="availableData" layoutX="31.0" layoutY="131.0" mnemonicParsing="false" text="Based on the available data the diagnosis is not clear and further work up may be useful.">
-                           <font>
-                              <Font name="SansSerif Regular" size="13.0" />
-                           </font>
-                        </CheckBox>
-                        <CheckBox fx:id="spinalImage" layoutX="31.0" layoutY="152.0" mnemonicParsing="false" text="Spinal imaging to rule out spinal cord pathology.">
-                           <font>
-                              <Font name="SansSerif Regular" size="13.0" />
-                           </font>
-                        </CheckBox>
-                        <CheckBox fx:id="myopathy" layoutX="31.0" layoutY="173.0" mnemonicParsing="false" text="Work up for myopathy or peripheral neuropathy.">
-                           <font>
-                              <Font name="SansSerif Regular" size="13.0" />
-                           </font>
-                        </CheckBox>
-                        <CheckBox fx:id="fullAssessment" layoutX="31.0" layoutY="194.0" mnemonicParsing="false" text="Recommend a full development assessment.">
-                           <font>
-                              <Font name="SansSerif Regular" size="13.0" />
-                           </font>
-                        </CheckBox>
-                        <CheckBox fx:id="ctScan" layoutX="31.0" layoutY="215.0" mnemonicParsing="false" text="CT scan to assess femoral anteversion.">
-                           <font>
-                              <Font name="SansSerif Regular" size="13.0" />
-                           </font>
-                        </CheckBox>
-                        <CheckBox fx:id="regularOrthopedic" layoutX="31.0" layoutY="236.0" mnemonicParsing="false" text="Continue regular orthopedic follow-up">
-                           <font>
-                              <Font name="SansSerif Regular" size="13.0" />
-                           </font>
-                        </CheckBox>
-                        <CheckBox fx:id="preOpAssessment" layoutX="31.0" layoutY="257.0" mnemonicParsing="false" text="Pre-op Social needs Assessment">
-                           <font>
-                              <Font name="SansSerif Regular" size="13.0" />
-                           </font>
-                        </CheckBox>
-                        <TextArea fx:id="diagnositicComments" layoutX="98.0" layoutY="296.0" prefHeight="170.0" prefWidth="559.0" />
-                        <Button layoutX="476.0" layoutY="528.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="224.0" text="Save" />
-                            </children>
-                        </AnchorPane>
-                    </content>
-                </Tab>
-                <Tab text="Surgical">
-                    <content>
-                        <AnchorPane prefHeight="400.0" prefWidth="600.0">
+   <content>
+      <TabPane prefHeight="801.0" prefWidth="859.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Diagnostic">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Separator layoutY="56.0" prefHeight="0.0" prefWidth="633.0" />
-                        <Text layoutX="317.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Procedure">
+                        <Text fill="#121111" layoutX="269.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recommendation">
                            <font>
-                              <Font name="SansSerif Bold" size="12.0" />
+                              <Font name="System Bold" size="18.0" />
                            </font>
                         </Text>
-                        <Text layoutX="5.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N">
+                        <GridPane gridLinesVisible="true" layoutX="46.0" layoutY="194.0" prefHeight="121.0" prefWidth="667.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                        <Text layoutX="46.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diagnostic">
                            <font>
-                              <Font name="SansSerif Bold" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutX="20.0" layoutY="37.0" orientation="VERTICAL" prefHeight="978.0" prefWidth="0.0" />
-                        <Text layoutX="30.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R">
-                           <font>
-                              <Font name="SansSerif Bold" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutX="47.0" layoutY="37.0" orientation="VERTICAL" prefHeight="978.0" prefWidth="0.0" />
-                        <Text layoutX="58.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L">
-                           <font>
-                              <Font name="SansSerif Bold" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutX="74.0" layoutY="37.0" orientation="VERTICAL" prefHeight="978.0" prefWidth="0.0" />
-                        <Text layoutX="84.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B">
-                           <font>
-                              <Font name="SansSerif Bold" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutX="101.0" layoutY="34.0" orientation="VERTICAL" prefHeight="978.0" prefWidth="0.0" />
-                        <Separator layoutY="87.0" prefHeight="0.0" prefWidth="633.0" />
-                        <Text layoutX="114.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Based on the reviewed gait data, there are no specific surgical recommendations.">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <RadioButton fx:id="noSurgerN" layoutX="1.0" layoutY="65.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="noSurgerR" layoutX="26.0" layoutY="65.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="noSurgerL" layoutX="54.0" layoutY="65.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="noSurgerB" layoutX="80.0" layoutY="65.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="femoralDerotationN" layoutX="1.0" layoutY="97.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="femoralDerotationR" layoutX="26.0" layoutY="97.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="femoralDerotationL" layoutX="54.0" layoutY="97.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="femoralDerotationB" layoutX="80.0" layoutY="97.0" mnemonicParsing="false" />
-                        <Separator layoutY="120.0" prefHeight="0.0" prefWidth="633.0" />
-                        <Text layoutX="114.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Femoral derotation to correct internal femoral torsion.">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="153.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="adductorLengthingN" layoutX="1.0" layoutY="128.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="adductorLengthingR" layoutX="26.0" layoutY="128.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="adductorLengthingL" layoutX="54.0" layoutY="128.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="adductorLengthingB" layoutX="80.0" layoutY="128.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adductor lengthening to improve hip abduction during swing and decrease scissoring.">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="186.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="illiopsoasLengthingN" layoutX="1.0" layoutY="163.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="illiopsoasLengthingR" layoutX="26.0" layoutY="163.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="illiopsoasLengthingL" layoutX="54.0" layoutY="163.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="illiopsoasLengthingB" layoutX="80.0" layoutY="163.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Iliopsoas lengthening to improve hip extension and anterior pelvic tilt.">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="219.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="antieriorGluteusN" layoutX="1.0" layoutY="195.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="antieriorGluteusR" layoutX="26.0" layoutY="195.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="antieriorGluteusL" layoutX="54.0" layoutY="195.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="antieriorGluteusB" layoutX="80.0" layoutY="195.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anterior gluteus minus release to decrease internal femoral rotation.">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="252.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="rectusTransferN" layoutX="1.0" layoutY="228.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="rectusTransferR" layoutX="26.0" layoutY="228.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="rectusTransferL" layoutX="54.0" layoutY="228.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="rectusTransferB" layoutX="80.0" layoutY="228.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rectus transfer or resection to improve swing phase knee flexion and decrease toe drag">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <RadioButton fx:id="hamstringLengthN" layoutX="1.0" layoutY="261.0" mnemonicParsing="false" />
-                        <Separator layoutY="285.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="hamstringLengthR" layoutX="26.0" layoutY="261.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="hamstringLengthL" layoutX="54.0" layoutY="261.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="hamstringLengthB" layoutX="80.0" layoutY="261.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hamstring lengthening medial and lateral to improve knee extension at foot contact and midstance." wrappingWidth="521.6373291015625">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="318.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="kneeCapsulotomyN" layoutX="1.0" layoutY="295.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="kneeCapsulotomyR" layoutX="26.0" layoutY="295.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="kneeCapsulotomyL" layoutX="54.0" layoutY="295.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="kneeCapsulotomyB" layoutX="80.0" layoutY="295.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee capsulotomy to decrease fixed knee flexion contracture." wrappingWidth="521.6373291015625">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="351.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="femoralExtensionN" layoutX="1.0" layoutY="329.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="femoralExtensionR" layoutX="26.0" layoutY="329.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="femoralExtensionL" layoutX="54.0" layoutY="329.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="femoralExtensionB" layoutX="80.0" layoutY="329.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Femoral distal extension osteotomy to correct fixed knee flexion contracture." wrappingWidth="521.6373291015625">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="384.0" prefHeight="0.0" prefWidth="633.0" />
-                        <Text layoutX="114.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rectus transfer to improve swing phase knee flexion and decrease toe drag." wrappingWidth="521.6373291015625">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <RadioButton fx:id="rectusSwingTransferN" layoutX="2.0" layoutY="359.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="rectusSwingTransferR" layoutX="26.0" layoutY="359.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="rectusSwingTransferL" layoutX="54.0" layoutY="359.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="rectusSwingTransferB" layoutX="80.0" layoutY="359.0" mnemonicParsing="false" />
-                        <Separator layoutY="417.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="tibialDerotationInternalN" layoutX="2.0" layoutY="394.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="tibialDerotationInternalR" layoutX="26.0" layoutY="394.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="tibialDerotationInternalL" layoutX="54.0" layoutY="394.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="tibialDerotationInternalB" layoutX="80.0" layoutY="394.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tibial derotation, Internal, to correct external foot to knee torsional alignment." wrappingWidth="521.6373291015625">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="450.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="tibialDerotationExternalN" layoutX="2.0" layoutY="426.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="tibialDerotationExternalR" layoutX="26.0" layoutY="426.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="tibialDerotationExternalL" layoutX="54.0" layoutY="426.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="tibialDerotationExternalB" layoutX="80.0" layoutY="426.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tibial derotation, External, to correct internal foot to torsion alignment." wrappingWidth="521.6373291015625">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="483.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="gastroRecessionN" layoutX="2.0" layoutY="459.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="gastroRecessionR" layoutX="26.0" layoutY="459.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="gastroRecessionL" layoutX="54.0" layoutY="459.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="gastroRecessionB" layoutX="80.0" layoutY="459.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gastrocnemius recession to improve premature heel rise and high early plantar flexion moment." wrappingWidth="521.6373291015625">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="516.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="achillesLengthingN" layoutX="2.0" layoutY="493.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="achillesLengthingR" layoutX="26.0" layoutY="493.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="achillesLengthingL" layoutX="54.0" layoutY="493.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="achillesLengthingB" layoutX="80.0" layoutY="493.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="506.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tendon Achilles lengthening to improve flat foot contact." wrappingWidth="521.6373291015625">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="549.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="splitTibialisPosteriorN" layoutX="2.0" layoutY="525.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="splitTibialisPosteriorR" layoutX="26.0" layoutY="525.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="splitTibialisPosteriorL" layoutX="54.0" layoutY="525.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="splitTibialisPosteriorB" layoutX="80.0" layoutY="525.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="538.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Split tibialis posterior transfer to improve varus foot position." wrappingWidth="521.6373291015625">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="582.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="splitTibialisAntN" layoutX="2.0" layoutY="560.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="splitTibialisAntR" layoutX="26.0" layoutY="560.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="splitTibialisAntL" layoutX="54.0" layoutY="560.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="splitTibialisAntB" layoutX="80.0" layoutY="560.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="573.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Split tibialis anterior transfer to improve varus foot position." wrappingWidth="521.6373291015625">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="615.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="planoCorrectionN" layoutX="2.0" layoutY="591.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="planoCorrectionR" layoutX="26.0" layoutY="591.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="planoCorrectionL" layoutX="54.0" layoutY="591.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="planoCorrectionB" layoutX="80.0" layoutY="591.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="604.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Planovalgus correction to improve stance stability and moment arm malalignments." wrappingWidth="521.6373291015625">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="648.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="calcanealOsteotomyN" layoutX="2.0" layoutY="625.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="calcanealOsteotomyR" layoutX="26.0" layoutY="625.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="calcanealOsteotomyL" layoutX="54.0" layoutY="625.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="calcanealOsteotomyB" layoutX="80.0" layoutY="625.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="638.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calcaneal osteotomy to correct hindfoot varus and improve stance stability." wrappingWidth="521.6373291015625">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="681.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="bunionCorrectionN" layoutX="2.0" layoutY="658.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="bunionCorrectionR" layoutX="26.0" layoutY="658.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="bunionCorrectionL" layoutX="54.0" layoutY="658.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="bunionCorrectionB" layoutX="80.0" layoutY="658.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="671.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bunion correction to improve push off power comfortable shoe wear." wrappingWidth="521.6373291015625">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="714.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="upperExtremN" layoutX="2.0" layoutY="691.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="upperExtremR" layoutX="26.0" layoutY="691.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="upperExtremL" layoutX="54.0" layoutY="691.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="upperExtremB" layoutX="80.0" layoutY="691.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="695.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upper extremity correction to improve positioning during gait and for optimal positioning for function use." wrappingWidth="521.6373291015625">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="747.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="tenodesisExtensorN" layoutX="2.0" layoutY="723.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="tenodesisExtensorR" layoutX="26.0" layoutY="723.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="tenodesisExtensorL" layoutX="54.0" layoutY="723.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="tenodesisExtensorB" layoutX="80.0" layoutY="723.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="736.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tenodesis of extensor hallus to prevent hallux hyperextension during swing phase." wrappingWidth="521.6373291015625">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="780.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="intrathecalN" layoutX="2.0" layoutY="757.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="intrathecalR" layoutX="26.0" layoutY="757.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="intrathecalL" layoutX="54.0" layoutY="757.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="intrathecalB" layoutX="80.0" layoutY="757.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="770.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Intrathecal Baclofen Trial." wrappingWidth="521.6373291015625">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="813.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="botulinumToxinN" layoutX="2.0" layoutY="788.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="botulinumToxinR" layoutX="26.0" layoutY="788.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="botulinumToxinL" layoutX="54.0" layoutY="788.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="botulinumToxinB" layoutX="80.0" layoutY="788.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="801.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Botulinum Toxin Injection." wrappingWidth="521.6373291015625">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="846.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="patellarTendonN" layoutX="2.0" layoutY="822.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="patellarTendonR" layoutX="26.0" layoutY="822.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="patellarTendonL" layoutX="54.0" layoutY="822.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="patellarTendonB" layoutX="80.0" layoutY="822.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="835.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patellar tendon shortening" wrappingWidth="521.6373291015625">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="879.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="tibialisPostTransferN" layoutX="2.0" layoutY="856.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="tibialisPostTransferR" layoutX="26.0" layoutY="856.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="tibialisPostTransferL" layoutX="54.0" layoutY="856.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="tibialisPostTransferB" layoutX="80.0" layoutY="856.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="869.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tibialis Posterior tendon transfer" wrappingWidth="521.6373291015625">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="912.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="tibialisAntransferN" layoutX="2.0" layoutY="889.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="tibialisAntransferR" layoutX="26.0" layoutY="889.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="tibialisAntransferL" layoutX="54.0" layoutY="889.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="tibialisAntransferB" layoutX="80.0" layoutY="889.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="902.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tibialis Anterior tendon transfer" wrappingWidth="521.6373291015625">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="945.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="tibialisAntShortN" layoutX="2.0" layoutY="922.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="tibialisAntShortR" layoutX="26.0" layoutY="922.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="tibialisAntShortL" layoutX="54.0" layoutY="922.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="tibialisAntShortB" layoutX="80.0" layoutY="922.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="935.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tibialis Anterior tendon shortening" wrappingWidth="521.6373291015625">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="978.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="guidedGrowthN" layoutX="2.0" layoutY="954.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="guidedGrowthR" layoutX="26.0" layoutY="954.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="guidedGrowthL" layoutX="54.0" layoutY="954.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="guidedGrowthB" layoutX="80.0" layoutY="954.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="967.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Guided Growth" wrappingWidth="521.6373291015625">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="1011.0" prefHeight="0.0" prefWidth="633.0" />
-                        <Text layoutX="115.0" layoutY="999.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Plantar fascia release" wrappingWidth="521.6373291015625">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <RadioButton fx:id="plantarFasciaN" layoutX="2.0" layoutY="988.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="plantarFasciaR" layoutX="26.0" layoutY="988.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="plantarFasciaL" layoutX="54.0" layoutY="988.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="plantarFasciaB" layoutX="80.0" layoutY="988.0" mnemonicParsing="false" />
-                     </children>
-                        </AnchorPane>
-                    </content>
-                </Tab>
-            <Tab text="Therapy">
-               <content>
-                  <AnchorPane prefHeight="400.0" prefWidth="600.0">
-                     <children>
-                        <Separator layoutY="56.0" prefHeight="0.0" prefWidth="633.0" />
-                        <Text layoutX="317.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Procedure">
-                           <font>
-                              <Font name="SansSerif Bold" size="12.0" />
-                           </font>
-                        </Text>
-                        <Text layoutX="5.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N">
-                           <font>
-                              <Font name="SansSerif Bold" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutX="20.0" layoutY="64.0" orientation="VERTICAL" prefHeight="350.0" prefWidth="0.0" />
-                        <Text layoutX="30.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R">
-                           <font>
-                              <Font name="SansSerif Bold" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutX="47.0" layoutY="64.0" orientation="VERTICAL" prefHeight="350.0" prefWidth="0.0" />
-                        <Text layoutX="58.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L">
-                           <font>
-                              <Font name="SansSerif Bold" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutX="74.0" layoutY="64.0" orientation="VERTICAL" prefHeight="350.0" prefWidth="0.0" />
-                        <Text layoutX="84.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B">
-                           <font>
-                              <Font name="SansSerif Bold" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutX="101.0" layoutY="61.0" orientation="VERTICAL" prefHeight="350.0" prefWidth="0.0" />
-                        <Separator layoutY="87.0" prefHeight="0.0" prefWidth="633.0" />
-                        <Text layoutX="114.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Based on this evaluation, no physical therapy is recommended.">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <RadioButton fx:id="notherapyN" layoutX="1.0" layoutY="65.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="notherapyR" layoutX="26.0" layoutY="65.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="notherapyL" layoutX="54.0" layoutY="65.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="notherapyB" layoutX="80.0" layoutY="65.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="currentTherapyN" layoutX="1.0" layoutY="97.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="currentTherapyR" layoutX="26.0" layoutY="97.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="currentTherapyL" layoutX="54.0" layoutY="97.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="currentTherapyB" layoutX="80.0" layoutY="97.0" mnemonicParsing="false" />
-                        <Separator layoutY="120.0" prefHeight="0.0" prefWidth="633.0" />
-                        <Text layoutX="114.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current therapy program seems reasonable.">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="153.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="preOpPhyTherapyN" layoutX="1.0" layoutY="128.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="preOpPhyTherapyR" layoutX="26.0" layoutY="128.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="preOpPhyTherapyL" layoutX="54.0" layoutY="128.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="preOpPhyTherapyB" layoutX="80.0" layoutY="128.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pre-Operative Physical Therapy is recommended">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="198.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="postOpRehabN" layoutX="1.0" layoutY="168.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="postOpRehabR" layoutX="26.0" layoutY="168.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="postOpRehabL" layoutX="54.0" layoutY="168.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="postOpRehabB" layoutX="80.0" layoutY="168.0" mnemonicParsing="false" />
-                        <Text layoutX="107.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comprehensive post-operative rehabilitation including, but not limited to, PT and OT to address pain management, gait training with appropriate assistive device, functional mobility training, transfers, strengthening, stretching, ADLs and patient and family education." wrappingWidth="582.0990219116211">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="246.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="outpatientPhyN" layoutX="1.0" layoutY="215.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="outpatientPhyR" layoutX="26.0" layoutY="215.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="outpatientPhyL" layoutX="54.0" layoutY="215.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="outpatientPhyB" layoutX="80.0" layoutY="215.0" mnemonicParsing="false" />
-                        <Separator layoutY="279.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="oneTimePhysTherapyN" layoutX="1.0" layoutY="255.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="oneTimePhysTherapyR" layoutX="26.0" layoutY="255.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="oneTimePhysTherapyL" layoutX="54.0" layoutY="255.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="oneTimePhysTherapyB" layoutX="80.0" layoutY="255.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="One-time consult with Physical Therapy or Adaptive trainer to set up a home exercise program">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <RadioButton fx:id="ageApproActivitesN" layoutX="1.0" layoutY="288.0" mnemonicParsing="false" />
-                        <Separator layoutY="312.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="ageApproActivitesR" layoutX="26.0" layoutY="288.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="ageApproActivitesL" layoutX="54.0" layoutY="288.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="ageApproActivitesB" layoutX="80.0" layoutY="288.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Encourage participation in age-appropriate activities such as martial arts, dance, soccer, and swimming." wrappingWidth="521.6373291015625">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="345.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="consultSeatClinicN" layoutX="1.0" layoutY="322.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="consultSeatClinicR" layoutX="26.0" layoutY="322.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="consultSeatClinicL" layoutX="54.0" layoutY="322.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="consultSeatClinicB" layoutX="80.0" layoutY="322.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Consult to seating clinic for new wheelchair or adjustments" wrappingWidth="521.6373291015625">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="378.0" prefHeight="0.0" prefWidth="633.0" />
-                        <RadioButton fx:id="equipEvalN" layoutX="1.0" layoutY="356.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="equipEvalR" layoutX="26.0" layoutY="356.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="equipEvalL" layoutX="54.0" layoutY="356.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="equipEvalB" layoutX="80.0" layoutY="356.0" mnemonicParsing="false" />
-                        <Text layoutX="114.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Equipment evaluation or Physical therapy to assess needs for stander, walker, forearm crutch or other assistive devices and training." wrappingWidth="521.6373291015625">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="411.0" prefHeight="0.0" prefWidth="633.0" />
-                        <Text layoutX="114.0" layoutY="399.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Consult to Occupational therapy" wrappingWidth="521.6373291015625">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <RadioButton fx:id="occupTherapyN" layoutX="2.0" layoutY="386.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="occupTherapyR" layoutX="26.0" layoutY="386.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="occupTherapyL" layoutX="54.0" layoutY="386.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="occupTherapyB" layoutX="80.0" layoutY="386.0" mnemonicParsing="false" />
-                        <Text layoutX="107.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Outpatient physical therapy to address gait training with appropriate assistive device (walker, crutches, forearm crutches), functional mobility, strengthening, stretching, balance training to improve motor control strategies, and development of a home exercise program." wrappingWidth="538.0990447998047">
-                           <font>
-                              <Font name="SansSerif Regular" size="12.0" />
-                           </font>
-                        </Text>
-                        <TextArea fx:id="therapyComments" layoutX="145.0" layoutY="448.0" prefHeight="158.0" prefWidth="425.0" promptText="Tap Here to Enter Text" />
-                        <Text layoutX="28.0" layoutY="517.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comments:">
-                           <font>
-                              <Font name="SansSerif Bold" size="12.0" />
+                              <Font name="System Bold" size="14.0" />
                            </font>
                         </Text>
                      </children>
                   </AnchorPane>
-               </content>
+            </content>
+          </Tab>
+          <Tab text="Surgical">
+              <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                      <children>
+                          <Text fill="#121111" layoutX="269.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recommendation">
+                              <font>
+                                  <Font name="System Bold" size="18.0" />
+                              </font>
+                          </Text>
+                          <GridPane gridLinesVisible="true" layoutX="46.0" layoutY="194.0" prefHeight="121.0" prefWidth="667.0">
+                              <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              </columnConstraints>
+                              <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              </rowConstraints>
+                          </GridPane>
+                          <Text layoutX="46.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Surgical">
+                              <font>
+                                  <Font name="System Bold" size="14.0" />
+                              </font>
+                          </Text>
+                      </children>
+                  </AnchorPane>
+              </content>
+          </Tab>
+            <Tab text="Therapy">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                            <Text fill="#121111" layoutX="269.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recommendation">
+                                <font>
+                                    <Font name="System Bold" size="18.0" />
+                                </font>
+                            </Text>
+                            <GridPane gridLinesVisible="true" layoutX="46.0" layoutY="194.0" prefHeight="121.0" prefWidth="667.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                            </GridPane>
+                            <Text layoutX="46.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Therapy">
+                                <font>
+                                    <Font name="System Bold" size="14.0" />
+                                </font>
+                            </Text>
+                        </children>
+                    </AnchorPane>
+                </content>
             </Tab>
-                <Tab text="Orthotics">
-                    <content>
-                        <AnchorPane prefHeight="400.0" prefWidth="600.0">
-                            <children>
-                                <Separator layoutY="68.0" prefHeight="0.0" prefWidth="588.0" />
-                                <Text layoutX="3.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N">
-                                    <font>
-                                        <Font name="SansSerif Bold" size="14.0" />
-                                    </font>
-                                </Text>
-                                <Separator layoutX="22.0" layoutY="49.0" orientation="VERTICAL" prefHeight="272.0" prefWidth="0.0" />
-                                <Text layoutX="27.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R">
-                                    <font>
-                                        <Font name="SansSerif Bold" size="14.0" />
-                                    </font>
-                                </Text>
-                                <Separator layoutX="44.0" layoutY="49.0" orientation="VERTICAL" prefHeight="272.0" prefWidth="0.0" />
-                                <Text layoutX="49.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L">
-                                    <font>
-                                        <Font name="SansSerif Bold" size="14.0" />
-                                    </font>
-                                </Text>
-                                <Separator layoutX="66.0" layoutY="49.0" orientation="VERTICAL" prefHeight="272.0" prefWidth="0.0" />
-                                <Text layoutX="70.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B">
-                                    <font>
-                                        <Font name="SansSerif Bold" size="14.0" />
-                                    </font>
-                                </Text>
-                                <RadioButton fx:id="noOrthoticsN" layoutX="2.0" layoutY="71.0" mnemonicParsing="false" />
-                                <RadioButton fx:id="noOrthoticsR" layoutX="27.0" layoutY="71.0" mnemonicParsing="false" />
-                                <RadioButton fx:id="noOrthoticsL" layoutX="49.0" layoutY="71.0" mnemonicParsing="false" />
-                                <Separator layoutX="88.0" layoutY="49.0" orientation="VERTICAL" prefHeight="272.0" prefWidth="0.0" />
-                                <RadioButton fx:id="noOrthoticsB" layoutX="70.0" layoutY="71.0" mnemonicParsing="false" />
-                                <Separator layoutY="91.0" prefHeight="0.0" prefWidth="588.0" />
-                                <Text layoutX="270.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Splinting">
-                                    <font>
-                                        <Font name="SansSerif Bold" size="14.0" />
-                                    </font>
-                                </Text>
-                                <Text layoutX="115.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Based on this evaluation, no orthotics are recommended.">
-                                    <font>
-                                        <Font name="SansSerif Regular" size="13.0" />
-                                    </font>
-                                </Text>
-                                <RadioButton fx:id="solidAFON" layoutX="2.0" layoutY="95.0" mnemonicParsing="false" />
-                                <RadioButton fx:id="solidAFOR" layoutX="27.0" layoutY="95.0" mnemonicParsing="false" />
-                                <RadioButton fx:id="solidAFOL" layoutX="49.0" layoutY="95.0" mnemonicParsing="false" />
-                                <RadioButton fx:id="solidAFOB" layoutX="70.0" layoutY="95.0" mnemonicParsing="false" />
-                                <Separator layoutY="114.0" prefHeight="0.0" prefWidth="588.0" />
-                                <Text layoutX="115.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Solid ankle AFO">
-                                    <font>
-                                        <Font name="SansSerif Regular" size="13.0" />
-                                    </font>
-                                </Text>
-                                <RadioButton fx:id="articulatedAFON" layoutX="2.0" layoutY="117.0" mnemonicParsing="false" />
-                                <RadioButton fx:id="articulatedAFOR" layoutX="27.0" layoutY="117.0" mnemonicParsing="false" />
-                                <RadioButton fx:id="articulatedAFOL" layoutX="49.0" layoutY="117.0" mnemonicParsing="false" />
-                                <RadioButton fx:id="articulatedAFOB" layoutX="70.0" layoutY="117.0" mnemonicParsing="false" />
-                                <Separator layoutY="137.0" prefHeight="0.0" prefWidth="588.0" />
-                                <Text layoutX="115.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Articulated AFO">
-                                    <font>
-                                        <Font name="SansSerif Regular" size="13.0" />
-                                    </font>
-                                </Text>
-                                <RadioButton fx:id="leafAFON" layoutX="2.0" layoutY="140.0" mnemonicParsing="false" />
-                                <RadioButton fx:id="leafAFOR" layoutX="27.0" layoutY="140.0" mnemonicParsing="false" />
-                                <RadioButton fx:id="leafAFOL" layoutX="50.0" layoutY="140.0" mnemonicParsing="false" />
-                                <RadioButton fx:id="leafAFONB" layoutX="70.0" layoutY="140.0" mnemonicParsing="false" />
-                                <Separator layoutY="160.0" prefHeight="0.0" prefWidth="588.0" />
-                                <Text layoutX="115.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leaf Spring AFO">
-                                    <font>
-                                        <Font name="SansSerif Regular" size="13.0" />
-                                    </font>
-                                </Text>
-                                <RadioButton fx:id="reactionAFON" layoutX="2.0" layoutY="164.0" mnemonicParsing="false" />
-                                <RadioButton fx:id="reactionAFOR" layoutX="27.0" layoutY="164.0" mnemonicParsing="false" />
-                                <RadioButton fx:id="reactionAFOL" layoutX="50.0" layoutY="164.0" mnemonicParsing="false" />
-                                <RadioButton fx:id="reactionAFONB" layoutX="70.0" layoutY="164.0" mnemonicParsing="false" />
-                                <Separator layoutY="183.0" prefHeight="0.0" prefWidth="588.0" />
-                                <Text layoutX="115.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ground reaction AFO">
-                                    <font>
-                                        <Font name="SansSerif Regular" size="13.0" />
-                                    </font>
-                                </Text>
-                                <RadioButton fx:id="GRAFON" layoutX="2.0" layoutY="186.0" mnemonicParsing="false" />
-                                <RadioButton fx:id="GRAFOR" layoutX="27.0" layoutY="186.0" mnemonicParsing="false" />
-                                <RadioButton fx:id="GRAFOL" layoutX="50.0" layoutY="186.0" mnemonicParsing="false" />
-                                <RadioButton fx:id="GRAFOB" layoutX="70.0" layoutY="186.0" mnemonicParsing="false" />
-                                <Separator layoutY="206.0" prefHeight="0.0" prefWidth="588.0" />
-                                <Text layoutX="115.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Articulated GRAFO">
-                                    <font>
-                                        <Font name="SansSerif Regular" size="13.0" />
-                                    </font>
-                                </Text>
-                                <TextArea layoutX="140.0" layoutY="366.0" prefHeight="167.0" prefWidth="436.0" promptText="Tap to Enter Text" />
-                                <Text layoutX="11.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comments:">
-                                    <font>
-                                        <Font name="SansSerif Regular" size="13.0" />
-                                    </font>
-                                </Text>
-                        <Separator layoutY="229.0" prefHeight="0.0" prefWidth="588.0" />
-                        <Text layoutX="115.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supramalleolar AFO (SMO)">
-                           <font>
-                              <Font name="SansSerif Regular" size="13.0" />
-                           </font>
-                        </Text>
-                        <RadioButton fx:id="supraAFON" layoutX="2.0" layoutY="210.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="supraAFOR" layoutX="27.0" layoutY="210.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="supraAFOL" layoutX="49.0" layoutY="210.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="supraAFOB" layoutX="70.0" layoutY="210.0" mnemonicParsing="false" />
-                        <Separator layoutY="252.0" prefHeight="0.0" prefWidth="588.0" />
-                        <RadioButton fx:id="inframalleolarN" layoutX="2.0" layoutY="233.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="inframalleolarR" layoutX="27.0" layoutY="233.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="inframalleolarL" layoutX="49.0" layoutY="233.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="inframalleolarB" layoutX="70.0" layoutY="233.0" mnemonicParsing="false" />
-                        <Text layoutX="115.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inframalleolar (UCBL)">
-                           <font>
-                              <Font name="SansSerif Regular" size="13.0" />
-                           </font>
-                        </Text>
-                        <Separator layoutY="275.0" prefHeight="0.0" prefWidth="588.0" />
-                        <Text layoutX="115.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KAFO">
-                           <font>
-                              <Font name="SansSerif Regular" size="13.0" />
-                           </font>
-                        </Text>
-                        <RadioButton fx:id="KAFON" layoutX="2.0" layoutY="256.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="KAFOR" layoutX="27.0" layoutY="256.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="KAFOL" layoutX="49.0" layoutY="256.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="KAFOB" layoutX="70.0" layoutY="256.0" mnemonicParsing="false" />
-                        <Separator layoutY="298.0" prefHeight="0.0" prefWidth="588.0" />
-                        <Text layoutX="115.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current orthotics are appropriate.">
-                           <font>
-                              <Font name="SansSerif Regular" size="13.0" />
-                           </font>
-                        </Text>
-                        <RadioButton fx:id="currentOrthoticsN" layoutX="2.0" layoutY="279.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="currentOrthoticsR" layoutX="27.0" layoutY="279.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="currentOrthoticsL" layoutX="49.0" layoutY="279.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="currentOrthoticsB" layoutX="70.0" layoutY="279.0" mnemonicParsing="false" />
-                        <Separator layoutY="321.0" prefHeight="0.0" prefWidth="588.0" />
-                        <Text layoutX="115.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Night braces">
-                           <font>
-                              <Font name="SansSerif Regular" size="13.0" />
-                           </font>
-                        </Text>
-                        <RadioButton fx:id="nightBracesN" layoutX="2.0" layoutY="301.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="nightBracesR" layoutX="27.0" layoutY="301.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="nightBracesL" layoutX="50.0" layoutY="301.0" mnemonicParsing="false" />
-                        <RadioButton fx:id="nightBracesB" layoutX="70.0" layoutY="301.0" mnemonicParsing="false" />
-                            </children>
-                        </AnchorPane>
-                    </content>
-                </Tab>
-            </tabs>
-        </TabPane>
-    </content>
-
+            <Tab text="Orthotics">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                            <Text fill="#121111" layoutX="269.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recommendation">
+                                <font>
+                                    <Font name="System Bold" size="18.0" />
+                                </font>
+                            </Text>
+                            <GridPane gridLinesVisible="true" layoutX="46.0" layoutY="194.0" prefHeight="121.0" prefWidth="667.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                            </GridPane>
+                            <Text layoutX="46.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Orthotics">
+                                <font>
+                                    <Font name="System Bold" size="14.0" />
+                                </font>
+                            </Text>
+                        </children>
+                    </AnchorPane>
+                </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </content>
 </ScrollPane>

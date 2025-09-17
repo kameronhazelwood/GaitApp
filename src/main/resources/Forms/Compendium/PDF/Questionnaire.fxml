@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Compendium.PDF.Questionnaire">
+
+    <AnchorPane prefHeight="586.0" prefWidth="553.0">
+        <!--    <AnchorPane prefHeight="1028.0" prefWidth="799.0">-->
+        <Label layoutX="3.0" layoutY="4.0" text="Questionnaire Report">
+            <font>
+                <Font name="SansSerif Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="4.0" layoutY="36.0" text="Patient: " />
+        <Label layoutX="56.0" layoutY="36.0" text="Rowan Hazelwood" />
+        <Label layoutX="185.0" layoutY="36.0" text="MRN: " />
+        <Label layoutX="247.0" layoutY="36.0" text="33069893" />
+        <Label layoutX="324.0" layoutY="36.0" text="Visit Date: " />
+        <Label layoutX="391.0" layoutY="35.0" text="03/07/2025" />
+        <Separator blendMode="DIFFERENCE" layoutX="-17.0" layoutY="63.0" prefHeight="0.0" prefWidth="565.0" />
+        <Label layoutX="4.0" layoutY="78.0" text="Person Completing Questionnaire">
+         <font>
+            <Font size="10.0" />
+         </font></Label>
+        <Label layoutX="4.0" layoutY="103.0" text="Relationship to Patient: ">
+         <font>
+            <Font size="10.0" />
+         </font></Label>
+        <Label layoutX="4.0" layoutY="128.0" text="Recent Change to Ability to Walk: ">
+         <font>
+            <Font size="10.0" />
+         </font></Label>
+        <Label layoutX="4.0" layoutY="152.0" text="Noted for Support while Walking: ">
+         <font>
+            <Font size="10.0" />
+         </font></Label>
+        <Label layoutX="4.0" layoutY="177.0" text="FMS: ">
+         <font>
+            <Font size="10.0" />
+         </font></Label>
+        <Label layoutX="4.0" layoutY="201.0" text="Date to Followup with MD: ">
+         <font>
+            <Font size="10.0" />
+         </font></Label>
+        <Label layoutX="4.0" layoutY="222.0" text="General Concerns: ">
+         <font>
+            <Font size="10.0" />
+         </font></Label>
+        <Label layoutX="266.0" layoutY="78.0" text="Kameron Hazelwood">
+         <font>
+            <Font size="10.0" />
+         </font></Label>
+        <Label layoutX="266.0" layoutY="103.0" text="Birth Parent">
+         <font>
+            <Font size="10.0" />
+         </font></Label>
+        <Label layoutX="266.0" layoutY="128.0" text="Much Better">
+         <font>
+            <Font size="10.0" />
+         </font></Label>
+        <Label layoutX="266.0" layoutY="152.0" text="Walks without Support and Keeps up">
+         <font>
+            <Font size="10.0" />
+         </font></Label>
+        <Label layoutX="266.0" layoutY="177.0" text="(3,5,C)">
+         <font>
+            <Font size="10.0" />
+         </font></Label>
+        <Separator layoutX="2.0" layoutY="98.0" prefHeight="0.0" prefWidth="541.0" />
+        <Separator layoutX="2.0" layoutY="123.0" prefHeight="0.0" prefWidth="541.0" />
+        <Separator layoutX="2.0" layoutY="146.0" prefHeight="0.0" prefWidth="541.0" />
+        <Separator layoutX="2.0" layoutY="174.0" prefHeight="0.0" prefWidth="541.0" />
+        <Separator layoutX="2.0" layoutY="197.0" prefHeight="0.0" prefWidth="541.0" />
+        <Separator layoutX="-5.0" layoutY="219.0" prefHeight="0.0" prefWidth="541.0" />
+        <Separator layoutX="2.0" layoutY="255.0" prefHeight="0.0" prefWidth="541.0" />
+        <Label layoutX="4.0" layoutY="270.0" text="Seizure Medications: ">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="182.0" layoutY="270.0" text="Current Devices/Braces:">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="4.0" layoutY="343.0" text="Gait Concerns:">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="182.0" layoutY="343.0" text="Pain Reports: ">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="243.0" layoutY="424.0" text="Occupational Therapy Frequency:">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="4.0" layoutY="424.0" text="Physical Therapy Frequency:">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="4.0" layoutY="290.0" text="Depakote">
+         <font>
+            <Font size="10.0" />
+         </font></Label>
+        <Label layoutX="187.0" layoutY="290.0" text="Hand Led">
+         <font>
+            <Font size="10.0" />
+         </font></Label>
+        <Text layoutX="8.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prequent Tripping">
+         <font>
+            <Font size="10.0" />
+         </font></Text>
+        <Text layoutX="184.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fingers (R)">
+         <font>
+            <Font size="10.0" />
+         </font></Text>
+        <Text layoutX="186.0" layoutY="394.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoulder">
+         <font>
+            <Font size="10.0" />
+         </font></Text>
+        <Text layoutX="10.0" layoutY="465.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hospital:">
+         <font>
+            <Font size="10.0" />
+         </font></Text>
+        <Text layoutX="11.0" layoutY="492.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clinic:">
+         <font>
+            <Font size="10.0" />
+         </font></Text>
+        <Text layoutX="10.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="School:">
+         <font>
+            <Font size="10.0" />
+         </font></Text>
+        <Text layoutX="10.0" layoutY="545.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home:">
+         <font>
+            <Font size="10.0" />
+         </font></Text>
+        <Text layoutX="246.0" layoutY="465.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hospital:">
+         <font>
+            <Font size="10.0" />
+         </font></Text>
+        <Text layoutX="246.0" layoutY="492.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clinic:">
+         <font>
+            <Font size="10.0" />
+         </font></Text>
+        <Text layoutX="246.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="School:">
+         <font>
+            <Font size="10.0" />
+         </font></Text>
+        <Text layoutX="246.0" layoutY="546.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home:">
+         <font>
+            <Font size="10.0" />
+         </font></Text>
+        <Text layoutX="76.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" text="None">
+         <font>
+            <Font size="10.0" />
+         </font></Text>
+        <Text layoutX="79.0" layoutY="491.0" strokeType="OUTSIDE" strokeWidth="0.0" text="One or more times per week">
+         <font>
+            <Font size="10.0" />
+         </font></Text>
+        <Text layoutX="75.0" layoutY="519.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Two or three times per month">
+         <font>
+            <Font size="10.0" />
+         </font></Text>
+        <Text layoutX="76.0" layoutY="546.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About once per month">
+         <font>
+            <Font size="10.0" />
+         </font></Text>
+        <Text layoutX="316.0" layoutY="465.0" strokeType="OUTSIDE" strokeWidth="0.0" text="None">
+         <font>
+            <Font size="10.0" />
+         </font></Text>
+        <Text layoutX="299.0" layoutY="492.0" strokeType="OUTSIDE" strokeWidth="0.0" text="One or more times per week">
+         <font>
+            <Font size="10.0" />
+         </font></Text>
+        <Text layoutX="299.0" layoutY="518.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About once per month">
+         <font>
+            <Font size="10.0" />
+         </font></Text>
+        <Text layoutX="299.0" layoutY="546.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About once per month">
+         <font>
+            <Font size="10.0" />
+         </font></Text>
+        <Text layoutX="266.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="05/31/2025">
+         <font>
+            <Font size="10.0" />
+         </font></Text>
+        <Separator layoutX="5.0" layoutY="472.0" prefHeight="0.0" prefWidth="212.0" />
+        <Separator layoutX="4.0" layoutY="500.0" prefHeight="0.0" prefWidth="212.0" />
+        <Separator layoutX="5.0" layoutY="528.0" prefHeight="0.0" prefWidth="212.0" />
+        <Separator layoutX="5.0" layoutY="554.0" prefHeight="0.0" prefWidth="212.0" />
+        <Separator layoutX="214.0" layoutY="448.0" orientation="VERTICAL" prefHeight="106.0" prefWidth="0.0" />
+        <Separator layoutX="5.0" layoutY="448.0" prefHeight="0.0" prefWidth="212.0" />
+        <Separator layoutX="3.0" layoutY="448.0" orientation="VERTICAL" prefHeight="106.0" prefWidth="0.0" />
+        <Separator layoutX="244.0" layoutY="472.0" prefHeight="0.0" prefWidth="212.0" />
+        <Separator layoutX="244.0" layoutY="499.0" prefHeight="0.0" prefWidth="212.0" />
+        <Separator layoutX="242.0" layoutY="528.0" prefHeight="0.0" prefWidth="212.0" />
+        <Separator layoutX="243.0" layoutY="552.0" prefHeight="0.0" prefWidth="212.0" />
+        <Separator layoutX="244.0" layoutY="446.0" prefHeight="0.0" prefWidth="212.0" />
+        <Separator layoutX="242.0" layoutY="447.0" orientation="VERTICAL" prefHeight="106.0" prefWidth="0.0" />
+        <Separator layoutX="453.0" layoutY="446.0" orientation="VERTICAL" prefHeight="106.0" prefWidth="0.0" />
+
+
+    </AnchorPane>
+
+</ScrollPane>

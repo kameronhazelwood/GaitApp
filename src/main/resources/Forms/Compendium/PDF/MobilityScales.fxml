@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<ScrollPane xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Compendium.PDF.MobilityScales">
+   <content>
+      <AnchorPane prefHeight="490.0" prefWidth="681.0">
+          <Label layoutX="4.0" layoutY="14.0" text="Mobility Scales">
+              <font>
+                  <Font name="SansSerif Bold" size="11.0" />
+              </font>
+          </Label>
+          <Text layoutX="1.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ambulations Scale">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Separator layoutX="-4.0" layoutY="110.0" prefHeight="0.0" prefWidth="674.0" />
+          <Separator layoutX="-4.0" layoutY="45.0" prefHeight="0.0" prefWidth="674.0" />
+          <Separator layoutX="84.0" layoutY="45.0" orientation="VERTICAL" prefHeight="403.0" prefWidth="0.0" />
+          <Text fx:id="msAmbulationScale" layoutX="99.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text layoutX="14.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GMFCS:">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Separator layoutX="-4.0" layoutY="175.0" prefHeight="0.0" prefWidth="674.0" />
+          <Text fx:id="msGMFCS" layoutX="99.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text layoutX="10.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FMS (5m)">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fx:id="msFMS5" layoutX="99.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Separator layoutX="-4.0" layoutY="245.0" prefHeight="0.0" prefWidth="674.0" />
+          <Text layoutX="8.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FMS (50m)">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fx:id="msFMS50" layoutX="99.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Separator layoutX="-4.0" layoutY="313.0" prefHeight="0.0" prefWidth="674.0" />
+          <Text layoutX="8.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FMS (500m)">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Separator layoutX="-4.0" layoutY="382.0" prefHeight="0.0" prefWidth="674.0" />
+          <Text layoutX="18.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MACS">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fx:id="msFMS500" layoutX="99.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fx:id="msMACS" layoutX="99.0" layoutY="399.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Separator layoutX="-4.0" layoutY="448.0" prefHeight="0.0" prefWidth="674.0" />
+          <Separator layoutX="667.0" layoutY="46.0" orientation="VERTICAL" prefHeight="403.0" prefWidth="0.0" />
+         <Separator layoutX="-4.0" layoutY="45.0" orientation="VERTICAL" prefHeight="403.0" prefWidth="0.0" />
+      
+      </AnchorPane>
+   </content>
+</ScrollPane>

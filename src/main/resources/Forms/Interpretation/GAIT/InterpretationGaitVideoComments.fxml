@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<ScrollPane prefHeight="498.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Interpretation.GAIT.InterpretataionGaitVideoComments">
+   <content>
+      <AnchorPane prefHeight="566.0" prefWidth="713.0">
+         <children>
+            <Text layoutX="335.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Video">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Separator layoutY="19.0" prefHeight="0.0" prefWidth="700.0" />
+            <Text layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Notes">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Text layoutX="16.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Evaluation Comments:">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Separator layoutX="-1.0" layoutY="82.0" prefHeight="0.0" prefWidth="700.0" />
+            <Text layoutX="15.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Category">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Separator layoutX="92.0" layoutY="82.0" orientation="VERTICAL" prefHeight="215.0" prefWidth="0.0" />
+            <Text layoutX="342.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Separator layoutX="-1.0" layoutY="100.0" prefHeight="0.0" prefWidth="700.0" />
+            <Text layoutX="3.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ambulatory Aids:">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Separator layoutX="-2.0" layoutY="124.0" prefHeight="0.0" prefWidth="700.0" />
+            <Text layoutX="3.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Foot Wear Conditions" wrappingWidth="78.1962890625">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Separator layoutX="-1.0" layoutY="157.0" prefHeight="0.0" prefWidth="700.0" />
+            <Text layoutX="3.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upper Extremity">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Separator layoutX="-4.0" layoutY="176.0" prefHeight="0.0" prefWidth="700.0" />
+            <Text layoutX="3.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trunk">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Separator layoutX="-5.0" layoutY="196.0" prefHeight="0.0" prefWidth="700.0" />
+            <Text layoutX="3.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pelvis">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Separator layoutX="-1.0" layoutY="217.0" prefHeight="0.0" prefWidth="700.0" />
+            <Text layoutX="3.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hips" wrappingWidth="24.70703125">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Separator layoutX="-3.0" layoutY="236.0" prefHeight="0.0" prefWidth="700.0" />
+            <Text layoutX="3.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knees" wrappingWidth="38.70703125">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Separator layoutX="-2.0" layoutY="256.0" prefHeight="0.0" prefWidth="700.0" />
+            <Text layoutX="3.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ankle" wrappingWidth="38.70703125">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Separator layoutY="275.0" prefHeight="0.0" prefWidth="700.0" />
+            <Text layoutX="3.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Running" wrappingWidth="38.70703125">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Separator layoutX="-1.0" layoutY="296.0" prefHeight="0.0" prefWidth="700.0" />
+            <Separator layoutX="-1.0" layoutY="82.0" orientation="VERTICAL" prefHeight="215.0" prefWidth="0.0" />
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

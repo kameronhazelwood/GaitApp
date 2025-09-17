@@ -25,20 +25,20 @@ public class CompendiumPtHistoryController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        surgicalHisDate.setText("1/1/2025");
-        surgicalHisDate.setText("Adductor");
-        surgicalHisSide.setText("L");
-        surgicalHisMd.setText("test");
-        surgicalHisFacility.setText("test facility");
-        surgicalHisComments.setText("lkfdslkal");
+//        surgicalHisDate.setText("1/1/2025");
+//        surgicalHisDate.setText("Adductor");
+//        surgicalHisSide.setText("L");
+//        surgicalHisMd.setText("test");
+//        surgicalHisFacility.setText("test facility");
+//        surgicalHisComments.setText("lkfdslkal");
 
-        botoxDate.setText("2/1/2025");
-        botoxLocation.setText("Adductor");
-        botoxSide.setText("L");
-
-        healthAge.setText("4 years");
-        healthCondition.setText("Asphyxia");
-        healthHistCondition.setText("Heart Problems");
+//        botoxDate.setText("2/1/2025");
+//        botoxLocation.setText("Adductor");
+//        botoxSide.setText("L");
+//
+//        healthAge.setText("4 years");
+//        healthCondition.setText("Asphyxia");
+//        healthHistCondition.setText("Heart Problems");
 
     }
 }

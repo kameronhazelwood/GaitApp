@@ -1,9 +1,13 @@
 package com.example.gaitlabapp.controllers.Forms.Interpretation.GAIT;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.text.Text;
 
-public class InterpretationGAITKineticsController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class InterpretationGAITKineticsController implements Initializable {
     @FXML
     private Text anklePlanMaxLInterp;
 
@@ -336,4 +340,20 @@ public class InterpretationGAITKineticsController {
 
     @FXML
     private Text vertGRFRValue;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        maxPropulsionRValue.setText("0.17");
+        maxPropulsionRInterp.setText("Low");
+        maxPropulsionLValue.setText("0.23");
+        maxPropulsionLInterp.setText("Normal");
+        latGRFMaxRValue.setText("0.13");
+        latGRFMaxRInterp.setText("");
+        latGRFMaxLValue.setText("0.09");
+        latGRFMaxLInterp.setText("");
+        vertGRFRValue.setText("0.09");
+        vertGRFRInterp.setText("1.21");
+        vertGRFLValue.setText("");
+        vertGRFLInterp.setText("1.27");
+    }
 }

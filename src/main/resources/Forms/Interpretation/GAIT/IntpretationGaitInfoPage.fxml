@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Interpretation.GAIT.IntpretationGaitInfoPage">
+    <Pane layoutX="-41.0" prefHeight="606.0" prefWidth="673.0">
+        <Label fx:id="nameLabel" layoutX="61.0" layoutY="411.0" text="Patient Name" textAlignment="CENTER">
+            <font>
+                <Font size="10.0" />
+            </font></Label>
+        <Label fx:id="dobLabel" layoutX="61.0" layoutY="434.0" text="Date of Birth: " textAlignment="CENTER">
+            <font>
+                <Font size="10.0" />
+            </font></Label>
+        <Label fx:id="dob" layoutX="170.0" layoutY="434.0" text="dob" textAlignment="CENTER">
+            <font>
+                <Font size="10.0" />
+            </font></Label>
+        <Label layoutX="50.0" layoutY="15.0" text="Gait Interpretation Report" textAlignment="CENTER">
+            <font>
+                <Font name="SansSerif Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label fx:id="dateOfEvallLabel" layoutX="61.0" layoutY="456.0" text="Date of Evaluation" textAlignment="CENTER">
+            <font>
+                <Font size="10.0" />
+            </font></Label>
+        <Label fx:id="dateOfEval" layoutX="170.0" layoutY="456.0" text="doe" textAlignment="CENTER">
+            <font>
+                <Font size="10.0" />
+            </font></Label>
+        <Label fx:id="bioMechLabel" layoutX="61.0" layoutY="478.0" text="Biomechanist" textAlignment="CENTER">
+            <font>
+                <Font size="10.0" />
+            </font></Label>
+        <Label fx:id="bioMech" layoutX="170.0" layoutY="478.0" text="bio" textAlignment="CENTER">
+            <font>
+                <Font size="10.0" />
+            </font></Label>
+        <Label fx:id="referringPhysLabel" layoutX="61.0" layoutY="498.0" text="Referring Physician" textAlignment="CENTER">
+            <font>
+                <Font size="10.0" />
+            </font></Label>
+        <Label fx:id="referringPhys" layoutX="170.0" layoutY="499.0" text="refphys" textAlignment="CENTER">
+            <font>
+                <Font size="10.0" />
+            </font></Label>
+        <Label fx:id="mrnLabel" layoutX="375.0" layoutY="411.0" text="MRN: " textAlignment="CENTER">
+            <font>
+                <Font size="10.0" />
+            </font></Label>
+        <Label fx:id="mrn" layoutX="458.0" layoutY="411.0" text="mrn" textAlignment="CENTER">
+            <font>
+                <Font size="10.0" />
+            </font></Label>
+        <Label fx:id="ageLabel" layoutX="321.0" layoutY="434.0" text="Age: " textAlignment="CENTER">
+            <font>
+                <Font size="10.0" />
+            </font></Label>
+        <Label fx:id="age" layoutX="404.0" layoutY="434.0" text="age" textAlignment="CENTER">
+            <font>
+                <Font size="10.0" />
+            </font></Label>
+        <Label fx:id="genderLabel" layoutX="321.0" layoutY="456.0" text="Gender" textAlignment="CENTER">
+            <font>
+                <Font size="10.0" />
+            </font></Label>
+        <Label fx:id="gender" layoutX="404.0" layoutY="456.0" text="sex" textAlignment="CENTER">
+            <font>
+                <Font size="10.0" />
+            </font></Label>
+        <Label fx:id="visitDiagLabel" layoutX="321.0" layoutY="478.0" text="Visit Diagnosis" textAlignment="CENTER">
+            <font>
+                <Font size="10.0" />
+            </font></Label>
+        <Label fx:id="visitDiag" layoutX="442.0" layoutY="478.0" text="diag" textAlignment="CENTER">
+            <font>
+                <Font size="10.0" />
+            </font></Label>
+        <Label fx:id="examiningTherLabel" layoutX="321.0" layoutY="499.0" text="Examining Therapist" textAlignment="CENTER">
+            <font>
+                <Font size="10.0" />
+            </font></Label>
+        <Label fx:id="examiningTher" layoutX="440.0" layoutY="499.0" text="therapist" textAlignment="CENTER">
+            <font>
+                <Font size="10.0" />
+            </font></Label>
+        <Label fx:id="patientBioComments" layoutX="87.0" layoutY="537.0" prefHeight="0.0" prefWidth="343.0" text="These are test comments for the test patient. " textAlignment="CENTER" />
+        <Label fx:id="fName" layoutX="169.0" layoutY="412.0" prefHeight="17.0" prefWidth="185.0" text="patientName">
+            <font>
+                <Font size="10.0" />
+            </font></Label>
+        <ImageView fx:id="frontInfoPhoto" fitHeight="306.0" fitWidth="397.0" layoutX="176.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true" />
+
+    </Pane>
+
+</AnchorPane>

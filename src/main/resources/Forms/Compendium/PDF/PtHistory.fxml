@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane prefHeight="848.0" prefWidth="578.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Compendium.PDF.PtHistory">
+    <content>
+        <AnchorPane prefHeight="979.0" prefWidth="693.0">
+            <Label layoutX="1.0" layoutY="4.0" text="Basic Questionnaire">
+                <font>
+                    <Font name="SansSerif Bold" size="14.0" />
+                </font>
+            </Label>
+            <Label layoutX="7.0" layoutY="258.0" text="Surgical History">
+                <font>
+                    <Font name="SansSerif Bold" size="11.0" />
+                </font>
+            </Label>
+            <Label layoutX="2.0" layoutY="449.0" text="Health History">
+                <font>
+                    <Font name="SansSerif Bold" size="11.0" />
+                </font>
+            </Label>
+            <Label layoutX="2.0" layoutY="545.0" text="Health Condition">
+                <font>
+                    <Font name="SansSerif Bold" size="11.0" />
+                </font>
+            </Label>
+            <Label layoutX="5.0" layoutY="34.0" text="Person providing History: ">
+            <font>
+               <Font size="10.0" />
+            </font></Label>
+            <Label layoutX="193.0" layoutY="34.0" text="Kameron Hazelwood">
+            <font>
+               <Font size="10.0" />
+            </font></Label>
+            <Label layoutX="5.0" layoutY="63.0" text="Relationship to Parent: ">
+            <font>
+               <Font size="10.0" />
+            </font></Label>
+            <Label layoutX="193.0" layoutY="63.0" text="Birth Parent">
+            <font>
+               <Font size="10.0" />
+            </font></Label>
+            <Label layoutX="5.0" layoutY="88.0" text="Date of Baseline Report: ">
+            <font>
+               <Font size="10.0" />
+            </font></Label>
+            <Label layoutX="193.0" layoutY="88.0" text="03/05/2025">
+            <font>
+               <Font size="10.0" />
+            </font></Label>
+            <Label layoutX="5.0" layoutY="112.0" text="How Premature was the birth">
+            <font>
+               <Font size="10.0" />
+            </font></Label>
+            <Label layoutX="193.0" layoutY="114.0" text="Not Premature">
+            <font>
+               <Font size="10.0" />
+            </font></Label>
+            <Label layoutX="5.0" layoutY="132.0" prefHeight="38.0" prefWidth="158.0" text="How long was the hospital stay at birth: " wrapText="true">
+            <font>
+               <Font size="10.0" />
+            </font></Label>
+            <Label layoutX="193.0" layoutY="142.0" text="None">
+            <font>
+               <Font size="10.0" />
+            </font></Label>
+            <Label layoutX="5.0" layoutY="176.0" text="Age walked with support">
+            <font>
+               <Font size="10.0" />
+            </font></Label>
+            <Label layoutX="193.0" layoutY="176.0" text="18 months">
+            <font>
+               <Font size="10.0" />
+            </font></Label>
+            <Label layoutX="5.0" layoutY="202.0" text="Age walked without support">
+            <font>
+               <Font size="10.0" />
+            </font></Label>
+            <Label layoutX="193.0" layoutY="202.0" text="n/a">
+            <font>
+               <Font size="10.0" />
+            </font></Label>
+            <Label layoutX="4.0" layoutY="234.0" text="How does child learn">
+            <font>
+               <Font size="10.0" />
+            </font></Label>
+            <Label layoutX="193.0" layoutY="234.0" text="Slow, needs special class">
+            <font>
+               <Font size="10.0" />
+            </font></Label>
+            <Separator layoutY="55.0" prefHeight="0.0" prefWidth="387.0" />
+            <Separator layoutY="83.0" prefHeight="0.0" prefWidth="387.0" />
+            <Separator layoutY="109.0" prefHeight="0.0" prefWidth="387.0" />
+            <Separator layoutY="133.0" prefHeight="0.0" prefWidth="387.0" />
+            <Separator layoutY="169.0" prefHeight="0.0" prefWidth="387.0" />
+            <Separator layoutX="-1.0" layoutY="196.0" prefHeight="0.0" prefWidth="387.0" />
+            <Separator layoutY="230.0" prefHeight="0.0" prefWidth="387.0" />
+            <Separator layoutY="253.0" prefHeight="0.0" prefWidth="387.0" />
+            <Separator layoutY="24.0" prefHeight="0.0" prefWidth="781.0" />
+            <TableView layoutX="4.0" layoutY="274.0" prefHeight="77.0" prefWidth="455.0">
+                <columns>
+                    <TableColumn prefWidth="75.0" text="Date" />
+                    <TableColumn prefWidth="75.0" text="Procedure" />
+                    <TableColumn prefWidth="75.0" text="Side" />
+                    <TableColumn prefWidth="75.0" text="MD" />
+                    <TableColumn prefWidth="75.0" text="Facility" />
+                    <TableColumn prefWidth="77.33336385091144" text="Comments" />
+                </columns>
+            </TableView>
+            <Label layoutX="3.0" layoutY="354.0" text="Botox History">
+                <font>
+                    <Font name="SansSerif Bold" size="11.0" />
+                </font>
+            </Label>
+            <TableView layoutX="5.0" layoutY="370.0" prefHeight="76.0" prefWidth="435.0">
+                <columns>
+                    <TableColumn prefWidth="75.0" text="Date" />
+                    <TableColumn prefWidth="97.33332061767578" text="Body Location" />
+                    <TableColumn prefWidth="78.66661071777344" text="Side" />
+                    <TableColumn prefWidth="74.00006103515625" text="MD" />
+                    <TableColumn prefWidth="109.33331298828125" text="Facility" />
+                </columns>
+            </TableView>
+            <TableView layoutX="12.0" layoutY="466.0" prefHeight="78.0" prefWidth="430.0">
+                <columns>
+                    <TableColumn prefWidth="75.0" text="Age" />
+                    <TableColumn prefWidth="354.4" text="Condition" />
+                </columns>
+            </TableView>
+            <TableView layoutX="12.0" layoutY="561.0" prefHeight="87.0" prefWidth="396.0">
+                <columns>
+                    <TableColumn prefWidth="390.0000098546346" text="Health Condition" />
+                </columns>
+            </TableView>
+
+
+        </AnchorPane>
+    </content>
+
+
+</ScrollPane>

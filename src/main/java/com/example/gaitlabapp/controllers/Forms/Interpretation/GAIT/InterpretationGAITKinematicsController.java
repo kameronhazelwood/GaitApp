@@ -2,6 +2,8 @@ package com.example.gaitlabapp.controllers.Forms.Interpretation.GAIT;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
 import javafx.scene.text.Text;
 
 import java.net.URL;
@@ -9,6 +11,8 @@ import java.util.ResourceBundle;
 
 public class InterpretationGAITKinematicsController implements Initializable {
 
+    public TabPane kinematicsTabPane;
+    public Tab armJointAngles;
     @FXML
     private Text AntPelvicMaxRInterp;
 
@@ -807,7 +811,7 @@ public class InterpretationGAITKinematicsController implements Initializable {
         totSupportTimeLValue.setText("61.19");
         totSupportTimeLInterp.setText("Normal");
         singleSupportTimeRValue.setText("38.81");
-        singleSupportTimeRValue.setText("Normal");
+        //singleSupportTimeRValue.setText("Normal");
         singleSupportTimeLValue.setText("44.44");
         singleSupportTimeLInterp.setText("Normal");
         stepWidthRValue.setText("11.15");
@@ -939,5 +943,6 @@ public class InterpretationGAITKinematicsController implements Initializable {
         footProgAngleMaxLValue.setText("3.06");
         footProgAngleMinRValue.setText("-15.88");
         footProgAngleMinLValue.setText("-3.06");
+
     }
 }

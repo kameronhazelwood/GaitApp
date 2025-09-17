@@ -25,7 +25,7 @@
             <ToggleButton fx:id="lowerExam" layoutX="10.0" layoutY="101.0" mnemonicParsing="false" onMouseClicked="#lowerExam" prefHeight="85.0" prefWidth="135.0" text="Lower Extremity Physical Exam" textFill="#efefef" wrapText="true" />
             <ToggleButton fx:id="pngFiles" layoutX="10.0" layoutY="237.0" mnemonicParsing="false" onMouseClicked="#png" prefHeight="85.0" prefWidth="133.0" text="PNG Files" textFill="#efefef" wrapText="true" />
             <ToggleButton fx:id="photos" layoutX="10.0" layoutY="282.0" mnemonicParsing="false" onMouseClicked="#photos" prefHeight="85.0" prefWidth="141.0" text="Photos" textFill="#efefef" wrapText="true" />
-            <ToggleButton fx:id="photos1" mnemonicParsing="false" onMouseClicked="#photos" prefHeight="85.0" prefWidth="141.0" text="Download PDF" textFill="#efefef" wrapText="true" />
+            <ToggleButton fx:id="photos1" mnemonicParsing="false" onMouseClicked="#generatePDF" prefHeight="85.0" prefWidth="141.0" text="Download PDF" textFill="#efefef" wrapText="true" />
         </VBox>
     </left>
 

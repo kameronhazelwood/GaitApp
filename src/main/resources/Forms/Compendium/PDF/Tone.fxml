@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Compendium.PDF.Tone">
+   <content>
+      <AnchorPane prefHeight="435.0" prefWidth="565.0">
+      
+          <Label layoutX="6.0" layoutY="2.0" text="Tone">
+              <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+              </font>
+          </Label>
+          <Label layoutX="136.0" layoutY="23.0" text="Right">
+              <font>
+                  <Font name="SansSerif Bold" size="11.0" />
+              </font>
+          </Label>
+          <Label layoutX="224.0" layoutY="22.0" text="Left">
+              <font>
+                  <Font name="SansSerif Bold" size="11.0" />
+              </font>
+          </Label>
+          <Separator layoutX="117.0" layoutY="19.0" orientation="VERTICAL" prefHeight="397.0" prefWidth="5.0" />
+          <Separator layoutX="195.0" layoutY="20.0" orientation="VERTICAL" prefHeight="397.0" prefWidth="5.0" />
+          <Separator layoutX="6.0" layoutY="40.0" prefHeight="0.0" prefWidth="263.0" />
+          <Separator layoutX="6.0" layoutY="20.0" prefHeight="3.0" prefWidth="263.0" />
+          <Separator layoutX="268.0" layoutY="19.0" orientation="VERTICAL" prefHeight="397.0" prefWidth="5.0" />
+          <Label layoutX="6.0" layoutY="47.0" text="Iliopsoas">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="5.0" layoutY="67.0" prefHeight="0.0" prefWidth="263.0" />
+          <Label layoutX="6.0" layoutY="72.0" text="Glut Max">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="5.0" layoutY="91.0" prefHeight="0.0" prefWidth="263.0" />
+          <Label layoutX="6.0" layoutY="97.0" text="Adductor">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="5.0" layoutY="116.0" prefHeight="0.0" prefWidth="263.0" />
+          <Label layoutX="6.0" layoutY="121.0" text="Rectus Femoris">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="6.0" layoutY="141.0" prefHeight="0.0" prefWidth="263.0" />
+          <Label layoutX="6.0" layoutY="146.0" text="Rectus Catch Angle">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="6.0" layoutY="166.0" prefHeight="0.0" prefWidth="263.0" />
+          <Label layoutX="6.0" layoutY="169.0" text="Vastus Medialis">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="6.0" layoutY="187.0" prefHeight="0.0" prefWidth="263.0" />
+          <Label layoutX="6.0" layoutY="192.0" text="Hamstring">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="6.0" layoutY="211.0" prefHeight="0.0" prefWidth="263.0" />
+          <Label layoutX="6.0" layoutY="214.0" text="Post Tib">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="6.0" layoutY="234.0" prefHeight="0.0" prefWidth="263.0" />
+          <Label layoutX="6.0" layoutY="237.0" text="Ant Tib">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="6.0" layoutY="254.0" prefHeight="0.0" prefWidth="263.0" />
+          <Label layoutX="6.0" layoutY="259.0" text="Gastroc">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="5.0" layoutY="278.0" prefHeight="0.0" prefWidth="263.0" />
+          <Label layoutX="6.0" layoutY="282.0" text="Clonus">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="5.0" layoutY="300.0" prefHeight="0.0" prefWidth="263.0" />
+          <Label layoutX="6.0" layoutY="303.0" prefHeight="20.0" prefWidth="59.0" text="Knee Jerk" wrapText="true">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="5.0" layoutY="322.0" prefHeight="0.0" prefWidth="263.0" />
+          <Label layoutX="6.0" layoutY="327.0" prefHeight="16.0" prefWidth="61.0" text="Ankle Jerk" wrapText="true">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="5.0" layoutY="345.0" prefHeight="0.0" prefWidth="263.0" />
+          <Text fill="RED" layoutX="138.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="138.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="138.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1+">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="138.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1+">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="138.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="45">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="138.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1+">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="138.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1+">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="138.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="138.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="138.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="138.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="234.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="234.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="234.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="234.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="234.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="234.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="234.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="234.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="234.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="234.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Text fill="RED" layoutX="234.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+          <Label layoutX="6.0" layoutY="348.0" prefHeight="16.0" prefWidth="61.0" text="Babinski" wrapText="true">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="6.0" layoutY="367.0" prefHeight="0.0" prefWidth="263.0" />
+          <Label layoutX="6.0" layoutY="369.0" prefHeight="20.0" prefWidth="112.0" text="Proximal Muscle Control" wrapText="true">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="5.0" layoutY="391.0" prefHeight="0.0" prefWidth="263.0" />
+          <Label layoutX="6.0" layoutY="394.0" prefHeight="20.0" prefWidth="105.0" text="Distal Muscle Control" wrapText="true">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
+          <Separator layoutX="5.0" layoutY="414.0" prefHeight="0.0" prefWidth="263.0" />
+         <Text fill="RED" layoutX="138.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3+">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+         <Text fill="RED" layoutX="138.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2+">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+         <Text fill="RED" layoutX="138.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="up">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+         <Text fill="RED" layoutX="234.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="down">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+         <Text fill="RED" layoutX="234.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3+">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+         <Text fill="RED" layoutX="234.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3+">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Text>
+         <Separator layoutX="3.0" layoutY="19.0" orientation="VERTICAL" prefHeight="397.0" prefWidth="5.0" />
+         <Text layoutX="274.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00     Hypotonic">
+            <font>
+               <Font size="9.0" />
+            </font>
+         </Text>
+         <Text layoutX="274.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0      No increase in tone.">
+            <font>
+               <Font size="9.0" />
+            </font>
+         </Text>
+         <Text layoutX="274.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1      Slight increase in tome manifested by a catch and release or by minimal resistance at the end of rage of motion" wrappingWidth="204.35354614257812">
+            <font>
+               <Font size="9.0" />
+            </font>
+         </Text>
+         <Text layoutX="274.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1+     Slight increase in muscle tone manifested by a catch followed by minimal resistance throughout the remainder (less than half) of the range   of motion" wrappingWidth="206.32786560058594">
+            <font>
+               <Font size="9.0" />
+            </font>
+         </Text>
+         <Text layoutX="274.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2      More marked increase in muscle tone through most of the range of motion, but affected part easily moved" wrappingWidth="209.19107055664062">
+            <font>
+               <Font size="9.0" />
+            </font>
+         </Text>
+         <Text layoutX="274.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3      Considerable increase in muscle tone, passive movement difficult." wrappingWidth="231.58724975585938">
+            <font>
+               <Font size="9.0" />
+            </font>
+         </Text>
+         <Text layoutX="274.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4      Affected part rigid">
+            <font>
+               <Font size="9.0" />
+            </font>
+         </Text>
+         <Text layoutX="274.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modified Ashworth Scale">
+            <font>
+               <Font name="System Bold" size="10.0" />
+            </font>
+         </Text>
+      
+      </AnchorPane>
+   </content>
+</ScrollPane>

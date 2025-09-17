@@ -120,7 +120,7 @@ public class SchedulerModuleController implements Initializable {
         entry.setLocation("Nemours Hospital Gait Lab");
         entry.setTitle("32581055,  Madeline Daum");
         entry.setCalendar(gaitFullEval);
-        gaitFullEval.addEntry(entry);
+      //  gaitFullEval.addEntry(entry);
 
 
 //        Entry<String> entry1 = new Entry<>();

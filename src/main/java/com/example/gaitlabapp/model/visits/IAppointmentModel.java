@@ -81,7 +81,6 @@ public class IAppointmentModel  {
     @OneToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
             inverseJoinColumns = @JoinColumn(name = "patient_id"))
-
     public Set<IPatientModel> patientModel;
 
     public IAppointmentModel(Integer aptId, String aptDate, String visitType, String visitSubType, String referringPhys, Type type, String testReason, Integer patientId, String visitBioMech2, String visitBioMech, String visitPT, String visitPT2) {

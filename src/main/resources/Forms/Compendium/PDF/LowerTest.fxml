@@ -1,0 +1,1177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+
+            prefHeight="400.0" prefWidth="600.0">
+
+    <!--<?xml version="1.0" encoding="UTF-8"?>-->
+
+    <!--<?import javafx.scene.control.Label?>-->
+    <!--<?import javafx.scene.control.ScrollPane?>-->
+    <!--<?import javafx.scene.control.Separator?>-->
+    <!--<?import javafx.scene.layout.AnchorPane?>-->
+    <!--<?import javafx.scene.text.Font?>-->
+    <!--<?import javafx.scene.text.Text?>-->
+
+    <!--<ScrollPane prefHeight="2700.0" prefWidth="655.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Compendium.PDF.Lower">-->
+
+    <!--    <AnchorPane prefHeight="2757.0" prefWidth="679.0">-->
+    <!--        <Label layoutX="2.0" layoutY="7.0" text="Lower Extremity Physical Exam">-->
+    <!--            <font>-->
+    <!--                <Font name="SansSerif Bold" size="11.0" />-->
+    <!--            </font>-->
+    <!--        </Label>-->
+    <!--        <Label layoutX="4.0" layoutY="28.0" text="Daum, Madeline">-->
+    <!--            <font>-->
+    <!--                <Font size="10.0" />-->
+    <!--            </font>-->
+    <!--        </Label>-->
+    <!--        <Label layoutX="4.0" layoutY="51.0" text="MRN: ">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Label>-->
+    <!--        <Label layoutX="4.0" layoutY="68.0" text="Date of Birth: ">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Label>-->
+    <!--        <Label layoutX="4.0" layoutY="86.0" text="Age at Eval: ">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Label>-->
+    <!--        <Label fx:id="patientName" layoutX="75.0" layoutY="51.0" text="32581055">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Label>-->
+    <!--        <Label fx:id="compDOB" layoutX="75.0" layoutY="68.0" text="3/14/14 ">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Label>-->
+    <!--        <Label layoutX="75.0" layoutY="86.0" text="Text">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Label>-->
+    <!--        <Label layoutX="144.0" layoutY="51.0" text="Height (cm):">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Label>-->
+    <!--        <Label layoutX="144.0" layoutY="68.0" text="Weight (kg):">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Label>-->
+    <!--        <Label layoutX="144.0" layoutY="86.0" text="Gender: ">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Label>-->
+    <!--        <Label fx:id="compHeight" layoutX="220.0" layoutY="51.0" text="128.0  ">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Label>-->
+    <!--        <Label fx:id="compWeigh" layoutX="220.0" layoutY="68.0" text="21.0  ">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Label>-->
+    <!--        <Label fx:id="compGender" layoutX="220.0" layoutY="86.0" text="Female ">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Label>-->
+    <!--        <Label layoutX="277.0" layoutY="51.0" text="Date of Eval: ">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Label>-->
+    <!--        <Label layoutX="277.0" layoutY="68.0" text="Therapist: ">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Label>-->
+    <!--        <Label layoutX="277.0" layoutY="86.0" text="Comparisons: ">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Label>-->
+    <!--        <Label layoutX="362.0" layoutY="51.0" text="11/11/22 ">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Label>-->
+    <!--        <Label layoutX="362.0" layoutY="68.0" text="Freeman Miller">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Label>-->
+    <!--        <Label layoutX="362.0" layoutY="86.0" style="-fx-text-fill: #ff0000;" text="2025-01-17">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Label>-->
+    <!--        <Separator layoutX="-1.0" layoutY="25.0" prefHeight="0.0" prefWidth="653.0" />-->
+    <!--        <Separator blendMode="DIFFERENCE" layoutY="124.0" prefHeight="0.0" prefWidth="653.0" />-->
+    <!--        <Label layoutX="124.0" layoutY="127.0" text="Passive ROM">-->
+    <!--            <font>-->
+    <!--                <Font name="SansSerif Bold" size="11.0" />-->
+    <!--            </font>-->
+    <!--        </Label>-->
+    <!--        <Label layoutX="280.0" layoutY="127.0" text="Strength">-->
+    <!--            <font>-->
+    <!--                <Font name="SansSerif Bold" size="11.0" />-->
+    <!--            </font>-->
+    <!--        </Label>-->
+    <!--        <Separator layoutX="-5.0" layoutY="145.0" prefHeight="2.0" prefWidth="655.0" />-->
+    <!--        <Label layoutX="423.0" layoutY="127.0" text="Key">-->
+    <!--            <font>-->
+    <!--                <Font name="SansSerif Bold" size="11.0" />-->
+    <!--            </font>-->
+    <!--        </Label>-->
+    <!--        <Separator layoutX="84.0" layoutY="127.0" orientation="VERTICAL" prefHeight="639.0" prefWidth="2.0" />-->
+    <!--        <Label layoutX="114.0" layoutY="148.0" text="Right">-->
+    <!--         <font>-->
+    <!--            <Font size="11.0" />-->
+    <!--         </font></Label>-->
+    <!--        <Separator layoutX="159.0" layoutY="146.0" orientation="VERTICAL" prefHeight="637.0" prefWidth="1.0" />-->
+    <!--        <Text fill="RED" layoutX="89.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="125 ">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Separator layoutY="162.0" prefHeight="3.0" prefWidth="655.0" />-->
+    <!--        <Separator layoutX="121.0" layoutY="164.0" orientation="VERTICAL" prefHeight="620.0" prefWidth="0.0" />-->
+    <!--        <Text layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip Flex">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Separator layoutX="-1.0" layoutY="181.0" prefHeight="0.0" prefWidth="655.0" />-->
+    <!--        <Label layoutX="198.0" layoutY="148.0" text="Left">-->
+    <!--         <font>-->
+    <!--            <Font size="11.0" />-->
+    <!--         </font></Label>-->
+    <!--        <Separator layoutX="204.0" layoutY="164.0" orientation="VERTICAL" prefHeight="620.0" prefWidth="0.0" />-->
+    <!--        <Separator layoutX="246.0" layoutY="126.0" orientation="VERTICAL" prefHeight="637.0" prefWidth="1.0" />-->
+    <!--        <Label layoutX="264.0" layoutY="146.0" text="Right">-->
+    <!--         <font>-->
+    <!--            <Font size="11.0" />-->
+    <!--         </font></Label>-->
+    <!--        <Label layoutX="325.0" layoutY="146.0" text="Left">-->
+    <!--         <font>-->
+    <!--            <Font size="11.0" />-->
+    <!--         </font></Label>-->
+    <!--        <Separator layoutX="271.0" layoutY="163.0" orientation="VERTICAL" prefHeight="619.0" prefWidth="0.0" />-->
+    <!--        <Separator layoutX="305.0" layoutY="145.0" orientation="VERTICAL" prefHeight="639.0" prefWidth="0.0" />-->
+    <!--        <Separator layoutX="333.0" layoutY="163.0" orientation="VERTICAL" prefHeight="617.0" prefWidth="3.0" />-->
+    <!--        <Separator layoutX="359.0" layoutY="126.0" orientation="VERTICAL" prefHeight="599.0" prefWidth="0.0" />-->
+    <!--        <Text layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip Ext">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Separator layoutX="-1.0" layoutY="201.0" prefHeight="0.0" prefWidth="655.0" />-->
+    <!--        <Text layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip Abd">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Separator layoutX="-2.0" layoutY="220.0" prefHeight="0.0" prefWidth="655.0" />-->
+    <!--        <Text layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip Int Rot">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Separator layoutX="-2.0" layoutY="240.0" prefHeight="0.0" prefWidth="655.0" />-->
+    <!--        <Text layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hip Ext Rot">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Separator layoutX="-1.0" layoutY="258.0" prefHeight="0.0" prefWidth="655.0" />-->
+    <!--        <Text layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ryder Test">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Separator layoutX="-1.0" layoutY="278.0" prefHeight="0.0" prefWidth="655.0" />-->
+    <!--        <Text layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee Ext">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Separator layoutX="-1.0" layoutY="297.0" prefHeight="0.0" prefWidth="655.0" />-->
+    <!--        <Text layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pop Angle">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Separator layoutX="-1.0" layoutY="332.0" prefHeight="0.0" prefWidth="655.0" />-->
+    <!--        <Text layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bilateral Pop Angle" wrappingWidth="85.81576538085938">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ely Test" wrappingWidth="57.815765380859375">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Separator layoutX="-2.0" layoutY="355.0" prefHeight="0.0" prefWidth="655.0" />-->
+    <!--        <Separator layoutX="-2.0" layoutY="378.0" prefHeight="0.0" prefWidth="655.0" />-->
+    <!--        <Text layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dorsi (flex)" wrappingWidth="57.815765380859375">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Separator layoutX="-3.0" layoutY="399.0" prefHeight="0.0" prefWidth="655.0" />-->
+    <!--        <Text layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dorsi (ext)" wrappingWidth="57.815765380859375">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Separator layoutX="-2.0" layoutY="418.0" prefHeight="0.0" prefWidth="655.0" />-->
+    <!--        <Text layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Plantar" wrappingWidth="57.815765380859375">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Separator layoutX="-1.0" layoutY="439.0" prefHeight="0.0" prefWidth="655.0" />-->
+    <!--        <Text layoutY="453.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ankle Inv" wrappingWidth="57.815765380859375">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Separator layoutX="-2.0" layoutY="459.0" prefHeight="0.0" prefWidth="655.0" />-->
+    <!--        <Text layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ankle Ever" wrappingWidth="57.815765380859375">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Separator layoutX="-2.0" layoutY="483.0" prefHeight="0.0" prefWidth="655.0" />-->
+    <!--        <Text layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TMA" wrappingWidth="57.815765380859375">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Separator layoutX="-2.0" layoutY="505.0" prefHeight="0.0" prefWidth="655.0" />-->
+    <!--        <Text layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TFA" wrappingWidth="57.815765380859375">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Separator layoutX="-2.0" layoutY="544.0" prefHeight="0.0" prefWidth="655.0" />-->
+    <!--        <Text layoutY="561.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FF AB/ADD" wrappingWidth="68.482421875">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Separator layoutX="-5.0" layoutY="571.0" prefHeight="0.0" prefWidth="655.0" />-->
+    <!--        <Text layoutX="-1.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calcaneal Inv" wrappingWidth="87.14907836914062">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Separator layoutX="-2.0" layoutY="598.0" prefHeight="0.0" prefWidth="655.0" />-->
+    <!--        <Text layoutX="-1.0" layoutY="618.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calcaneal Ever" wrappingWidth="87.14907836914062">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Separator layoutX="-3.0" layoutY="624.0" prefHeight="0.0" prefWidth="655.0" />-->
+    <!--        <Text layoutX="-1.0" layoutY="642.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leg Length" wrappingWidth="87.14907836914062">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Separator layoutX="-3.0" layoutY="648.0" prefHeight="0.0" prefWidth="655.0" />-->
+    <!--        <Text layoutX="-1.0" layoutY="665.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee Varus/Valgus" wrappingWidth="87.14907836914062">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Separator layoutX="-4.0" layoutY="673.0" prefHeight="0.0" prefWidth="655.0" />-->
+    <!--        <Text fill="RED" layoutX="89.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="89.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30 ">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="89.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="60 ">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="89.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="25 ">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="89.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-30">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="89.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-8">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="89.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="75">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="89.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="70">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text layoutX="-1.0" layoutY="691.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Extensor Lag" wrappingWidth="87.14907836914062">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Separator layoutY="701.0" prefHeight="0.0" prefWidth="655.0" />-->
+    <!--        <Text fill="RED" layoutX="89.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="60">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="91.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" text="120">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="92.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-15">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="90.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-20">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="92.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="65">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="89.0" layoutY="453.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="89.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="89.0" layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15 EXT">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="88.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8 EXT">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="88.0" layoutY="561.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3 ADD">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="88.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="88.0" layoutY="617.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="88.0" layoutY="642.0" strokeType="OUTSIDE" strokeWidth="0.0" text="62">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="88.0" layoutY="667.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&#45;&#45;">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="88.0" layoutY="693.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-20">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Label layoutX="229.0" layoutY="849.0" text="Motor Control">-->
+    <!--            <font>-->
+    <!--                <Font name="SansSerif Bold" size="14.0" />-->
+    <!--            </font>-->
+    <!--        </Label>-->
+    <!--        <Label layoutX="196.0" layoutY="885.0" text="Right">-->
+    <!--            <font>-->
+    <!--                <Font name="SansSerif Bold" size="14.0" />-->
+    <!--            </font>-->
+    <!--        </Label>-->
+    <!--        <Label layoutX="342.0" layoutY="885.0" text="Left">-->
+    <!--            <font>-->
+    <!--                <Font name="SansSerif Bold" size="14.0" />-->
+    <!--            </font>-->
+    <!--        </Label>-->
+    <!--        <Separator layoutX="143.0" layoutY="882.0" orientation="VERTICAL" prefHeight="368.0" prefWidth="0.0" />-->
+    <!--        <Separator layoutX="283.0" layoutY="885.0" orientation="VERTICAL" prefHeight="363.0" prefWidth="3.0" />-->
+    <!--        <Separator layoutY="903.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Separator layoutY="883.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Separator layoutX="432.0" layoutY="883.0" orientation="VERTICAL" prefHeight="368.0" prefWidth="0.0" />-->
+    <!--        <Separator layoutX="213.0" layoutY="903.0" orientation="VERTICAL" prefHeight="347.0" prefWidth="0.0" />-->
+    <!--        <Separator layoutX="353.0" layoutY="903.0" orientation="VERTICAL" prefHeight="347.0" prefWidth="0.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="910.0" text="Iliopsoas" />-->
+    <!--        <Separator layoutX="-1.0" layoutY="930.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="935.0" text="Glute Med" />-->
+    <!--        <Separator layoutX="-1.0" layoutY="954.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="960.0" text="Hip Adductor" />-->
+    <!--        <Separator layoutX="-1.0" layoutY="979.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="984.0" text="Glute Max" />-->
+    <!--        <Separator layoutY="1004.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="1002.0" text="Quads" />-->
+    <!--        <Separator layoutY="1029.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="1032.0" text="Hamstring" />-->
+    <!--        <Separator layoutY="1050.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="1055.0" text="Ant Tibialis" />-->
+    <!--        <Separator layoutY="1074.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="1077.0" text="Gastrocnemius" />-->
+    <!--        <Separator layoutY="1097.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="1100.0" text="Post Tibialis" />-->
+    <!--        <Separator layoutY="1117.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="1115.0" text="Soleus" />-->
+    <!--        <Separator layoutX="-1.0" layoutY="1141.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="1145.0" text="Peroneals" />-->
+    <!--        <Separator layoutX="-1.0" layoutY="1163.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="1166.0" prefHeight="38.0" prefWidth="105.0" text="Proximal Muscle Control" wrapText="true" />-->
+    <!--        <Separator layoutX="-1.0" layoutY="1201.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="1210.0" prefHeight="38.0" prefWidth="105.0" text="Distal Muscle Control" wrapText="true" />-->
+    <!--        <Separator layoutX="-1.0" layoutY="1249.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Separator blendMode="DIFFERENCE" layoutY="836.0" prefHeight="1.0" prefWidth="675.0" />-->
+    <!--        <Text fill="RED" layoutX="162.0" layoutY="923.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />-->
+    <!--        <Text fill="RED" layoutX="162.0" layoutY="948.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />-->
+    <!--        <Text fill="RED" layoutX="162.0" layoutY="973.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />-->
+    <!--        <Text fill="RED" layoutX="162.0" layoutY="997.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />-->
+    <!--        <Text fill="RED" layoutX="162.0" layoutY="1022.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />-->
+    <!--        <Text fill="RED" layoutX="162.0" layoutY="1045.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />-->
+    <!--        <Text fill="RED" layoutX="162.0" layoutY="1068.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />-->
+    <!--        <Text fill="RED" layoutX="162.0" layoutY="1090.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />-->
+    <!--        <Text fill="RED" layoutX="162.0" layoutY="1113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />-->
+    <!--        <Text fill="RED" layoutX="162.0" layoutY="1135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />-->
+    <!--        <Text fill="RED" layoutX="162.0" layoutY="1158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />-->
+    <!--        <Separator blendMode="DIFFERENCE" layoutX="-1.0" layoutY="1809.0" prefHeight="1.0" prefWidth="675.0" />-->
+    <!--        <Label layoutX="248.0" layoutY="1820.0" text="Pain">-->
+    <!--            <font>-->
+    <!--                <Font name="SansSerif Bold" size="14.0" />-->
+    <!--            </font>-->
+    <!--        </Label>-->
+    <!--        <Separator layoutX="1.0" layoutY="1840.0" prefHeight="0.0" prefWidth="523.0" />-->
+    <!--        <Separator layoutX="300.0" layoutY="1840.0" orientation="VERTICAL" prefHeight="315.0" prefWidth="0.0" />-->
+    <!--        <Label layoutX="50.0" layoutY="1848.0" text="Pain Assessment Factors">-->
+    <!--            <font>-->
+    <!--                <Font name="SansSerif Bold" size="12.0" />-->
+    <!--            </font>-->
+    <!--        </Label>-->
+    <!--        <Label layoutX="315.0" layoutY="1848.0" style="-fx-text-fill: #ff0000;" text="Numerical">-->
+    <!--            <font>-->
+    <!--                <Font name="SansSerif Bold" size="12.0" />-->
+    <!--            </font>-->
+    <!--        </Label>-->
+    <!--        <Separator layoutX="522.0" layoutY="1839.0" orientation="VERTICAL" prefHeight="317.0" prefWidth="0.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="1869.0" prefHeight="19.0" prefWidth="118.0" text="Aggravating Factors" wrapText="true" />-->
+    <!--        <Separator layoutY="1866.0" prefHeight="0.0" prefWidth="523.0" />-->
+    <!--        <Separator layoutY="1892.0" prefHeight="0.0" prefWidth="523.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="1895.0" prefHeight="19.0" prefWidth="118.0" text="Activities Impacted" wrapText="true" />-->
+    <!--        <Separator layoutY="1917.0" prefHeight="0.0" prefWidth="523.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="1920.0" prefHeight="19.0" prefWidth="118.0" text="Current Level" wrapText="true" />-->
+    <!--        <Separator layoutX="-1.0" layoutY="1941.0" prefHeight="0.0" prefWidth="523.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="1944.0" prefHeight="19.0" prefWidth="118.0" text="Lowest Level" wrapText="true" />-->
+    <!--        <Separator layoutX="-1.0" layoutY="1979.0" prefHeight="0.0" prefWidth="523.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="1982.0" prefHeight="19.0" prefWidth="118.0" text="Highest Level" wrapText="true" />-->
+    <!--        <Separator layoutY="2016.0" prefHeight="0.0" prefWidth="523.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="2030.0" prefHeight="19.0" prefWidth="118.0" text="Location of Pain" wrapText="true" />-->
+    <!--        <Separator layoutX="-1.0" layoutY="2060.0" prefHeight="0.0" prefWidth="523.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="2071.0" prefHeight="19.0" prefWidth="118.0" text="Frequency of Pain" wrapText="true" />-->
+    <!--        <Separator layoutX="-1.0" layoutY="2105.0" prefHeight="0.0" prefWidth="523.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="2123.0" prefHeight="19.0" prefWidth="118.0" text="Duration of Pain" wrapText="true" />-->
+    <!--        <Separator layoutX="-1.0" layoutY="2155.0" prefHeight="0.0" prefWidth="523.0" />-->
+    <!--        <Text fill="RED" layoutX="307.0" layoutY="1883.0" strokeType="OUTSIDE" strokeWidth="0.0" text="running/impact" />-->
+    <!--        <Text fill="RED" layoutX="326.0" layoutY="1909.0" strokeType="OUTSIDE" strokeWidth="0.0" text="sports" />-->
+    <!--        <Text fill="RED" layoutX="313.0" layoutY="1933.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="RED" layoutX="313.0" layoutY="1960.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="RED" layoutX="313.0" layoutY="1999.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" />-->
+    <!--        <Text fill="RED" layoutX="316.0" layoutY="2033.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ankle" />-->
+    <!--        <Text fill="RED" layoutX="316.0" layoutY="2077.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1x week" />-->
+    <!--        <Label layoutX="163.0" layoutY="2220.0" text="Functional Strength - GMFM-D">-->
+    <!--            <font>-->
+    <!--                <Font name="SansSerif Bold" size="14.0" />-->
+    <!--            </font>-->
+    <!--        </Label>-->
+    <!--        <Separator layoutY="2247.0" prefHeight="0.0" prefWidth="527.0" />-->
+    <!--        <Separator layoutX="303.0" layoutY="2247.0" orientation="VERTICAL" prefHeight="281.0" prefWidth="3.0" />-->
+    <!--        <Label layoutX="341.0" layoutY="2253.0" text="Right">-->
+    <!--            <font>-->
+    <!--                <Font name="SansSerif Bold" size="12.0" />-->
+    <!--            </font>-->
+    <!--        </Label>-->
+    <!--        <Label layoutX="5.0" layoutY="2276.0" prefHeight="19.0" prefWidth="118.0" text="Pull to Stand(52)" wrapText="true" />-->
+    <!--        <Separator layoutY="2273.0" prefHeight="0.0" prefWidth="527.0" />-->
+    <!--        <Separator layoutY="2299.0" prefHeight="0.0" prefWidth="527.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="2302.0" prefHeight="11.0" prefWidth="261.0" text="Independent Standing - Arms Free (3 sec) (53)" wrapText="true" />-->
+    <!--        <Separator layoutY="2324.0" prefHeight="0.0" prefWidth="527.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="2327.0" prefHeight="17.0" prefWidth="259.0" text="Independent Standing - Arms Free (20 sec) (53)" wrapText="true" />-->
+    <!--        <Separator layoutY="2348.0" prefHeight="0.0" prefWidth="527.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="2351.0" prefHeight="22.0" prefWidth="223.0" text="One leg stance hand held - Right (54,55)" wrapText="true" />-->
+    <!--        <Separator layoutY="2372.0" prefHeight="0.0" prefWidth="527.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="2378.0" prefHeight="21.0" prefWidth="161.0" text="One leg stance (57,58)" wrapText="true" />-->
+    <!--        <Separator layoutY="2400.0" prefHeight="0.0" prefWidth="527.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="2405.0" prefHeight="19.0" prefWidth="118.0" text="Short sit to stand (59)" wrapText="true" />-->
+    <!--        <Separator layoutY="2426.0" prefHeight="0.0" prefWidth="527.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="2430.0" prefHeight="14.0" prefWidth="201.0" text="High Kneel to stand (60,61)" wrapText="true" />-->
+    <!--        <Separator layoutY="2452.0" prefHeight="0.0" prefWidth="527.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="2457.0" prefHeight="14.0" prefWidth="215.0" text="Lowers to floor (62)" wrapText="true" />-->
+    <!--        <Separator layoutY="2479.0" prefHeight="0.0" prefWidth="527.0" />-->
+    <!--        <Text fill="RED" layoutX="318.0" layoutY="2289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />-->
+    <!--        <Text fill="RED" layoutX="318.0" layoutY="2316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />-->
+    <!--        <Text fill="RED" layoutX="318.0" layoutY="2340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />-->
+    <!--        <Text fill="RED" layoutX="318.0" layoutY="2367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />-->
+    <!--        <Text fill="RED" layoutX="318.0" layoutY="2391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />-->
+    <!--        <Text fill="RED" layoutX="318.0" layoutY="2418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />-->
+    <!--        <Text fill="RED" layoutX="318.0" layoutY="2444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" />-->
+    <!--        <Text fill="RED" layoutX="318.0" layoutY="2471.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />-->
+    <!--        <Separator layoutX="354.0" layoutY="2272.0" orientation="VERTICAL" prefHeight="258.0" prefWidth="6.0" />-->
+    <!--        <Text fill="#009900" layoutX="369.0" layoutY="2290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />-->
+    <!--        <Text fill="#009900" layoutX="369.0" layoutY="2317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />-->
+    <!--        <Text fill="#009900" layoutX="369.0" layoutY="2341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />-->
+    <!--        <Text fill="#009900" layoutX="369.0" layoutY="2368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />-->
+    <!--        <Text fill="#009900" layoutX="369.0" layoutY="2392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />-->
+    <!--        <Text fill="#009900" layoutX="369.0" layoutY="2419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />-->
+    <!--        <Text fill="#009900" layoutX="369.0" layoutY="2445.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />-->
+    <!--        <Text fill="#009900" layoutX="369.0" layoutY="2472.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />-->
+    <!--        <Text fill="RED" layoutX="436.0" layoutY="2289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&#45;&#45;" />-->
+    <!--        <Text fill="RED" layoutX="436.0" layoutY="2316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&#45;&#45;" />-->
+    <!--        <Text fill="RED" layoutX="436.0" layoutY="2340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&#45;&#45;" />-->
+    <!--        <Text fill="RED" layoutX="436.0" layoutY="2367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&#45;&#45;" />-->
+    <!--        <Text fill="RED" layoutX="436.0" layoutY="2391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&#45;&#45;" />-->
+    <!--        <Text fill="RED" layoutX="436.0" layoutY="2418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&#45;&#45;" />-->
+    <!--        <Text fill="RED" layoutX="436.0" layoutY="2444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&#45;&#45;" />-->
+    <!--        <Text fill="RED" layoutX="436.0" layoutY="2471.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&#45;&#45;" />-->
+    <!--        <Separator layoutX="404.0" layoutY="2246.0" orientation="VERTICAL" prefHeight="285.0" prefWidth="2.0" />-->
+    <!--        <Label layoutX="4.0" layoutY="2483.0" prefHeight="14.0" prefWidth="215.0" text="Squats (63)" wrapText="true" />-->
+    <!--        <Separator layoutY="2504.0" prefHeight="0.0" prefWidth="527.0" />-->
+    <!--        <Label layoutX="5.0" layoutY="2507.0" prefHeight="14.0" prefWidth="215.0" text="Standing-picks pen from floor(64)" wrapText="true" />-->
+    <!--        <Separator layoutY="2529.0" prefHeight="0.0" prefWidth="527.0" />-->
+    <!--        <Text fill="#009900" layoutX="493.0" layoutY="2365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />-->
+    <!--        <Text fill="#009900" layoutX="493.0" layoutY="2392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />-->
+    <!--        <Text layoutX="450.0" layoutY="2419.0" strokeType="OUTSIDE" strokeWidth="0.0" />-->
+    <!--        <Text fill="#009900" layoutX="493.0" layoutY="2442.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />-->
+    <!--        <Text fill="RED" layoutX="318.0" layoutY="2497.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />-->
+    <!--        <Text fill="#009900" layoutX="369.0" layoutY="2498.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />-->
+    <!--        <Text fill="RED" layoutX="436.0" layoutY="2497.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&#45;&#45;" />-->
+    <!--        <Text fill="RED" layoutX="317.0" layoutY="2520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />-->
+    <!--        <Text fill="#009900" layoutX="368.0" layoutY="2521.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />-->
+    <!--        <Text fill="RED" layoutX="436.0" layoutY="2520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&#45;&#45;" />-->
+    <!--        <Separator layoutX="467.0" layoutY="2273.0" orientation="VERTICAL" prefHeight="257.0" prefWidth="5.0" />-->
+    <!--        <Separator layoutX="525.0" layoutY="2248.0" orientation="VERTICAL" prefHeight="282.0" prefWidth="0.0" />-->
+    <!--        <Label layoutX="459.0" layoutY="2250.0" text="Left">-->
+    <!--            <font>-->
+    <!--                <Font name="SansSerif Bold" size="12.0" />-->
+    <!--            </font>-->
+    <!--        </Label>-->
+    <!--        <Label layoutX="15.0" layoutY="2540.0" text="Total GMFM Score:">-->
+    <!--            <font>-->
+    <!--                <Font name="SansSerif Bold" size="18.0" />-->
+    <!--            </font>-->
+    <!--        </Label>-->
+    <!--        <Text layoutX="228.0" layoutY="2555.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />-->
+    <!--        <Text layoutX="228.0" layoutY="2577.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />-->
+    <!--        <Text layoutX="229.0" layoutY="2600.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />-->
+    <!--        <Text layoutY="519.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knee Flex" wrappingWidth="57.815765380859375">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Separator layoutY="525.0" prefHeight="0.0" prefWidth="655.0" />-->
+    <!--        <Text fill="RED" layoutX="88.0" layoutY="519.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WNL">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="126.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="110">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="126.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="126.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="126.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="55">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="126.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="126.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-40">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="126.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-16">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#018749" layoutX="126.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="75">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="126.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="70" />-->
+    <!--        <Text fill="#009900" layoutX="126.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="129.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" text="95">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="127.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="127.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-15">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="129.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="65">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="126.0" layoutY="452.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="126.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="126.0" layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15 EXT">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="127.0" layoutY="519.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WNL">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="124.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10 EXT">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="125.0" layoutY="561.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7 ADD">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="125.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="125.0" layoutY="618.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="125.0" layoutY="641.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="125.0" layoutY="667.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&#45;&#45;">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="125.0" layoutY="693.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-51">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="173.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="115">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="212.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="125">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="173.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="212.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="173.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="35">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="212.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="173.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="212.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="55">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="173.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="212.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="173.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-30">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="212.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-20">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="254.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="279.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4+">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="312.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4+">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="342.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="254.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="279.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4+">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="312.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4+">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="342.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="254.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="279.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4+">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="312.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4+">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="342.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="173.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-10">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="212.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-5">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="254.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="279.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4+">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="312.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="342.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="173.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="55">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="173.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50" />-->
+    <!--        <Text fill="#009900" layoutX="212.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="60">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="212.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="55">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="170.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="45">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="212.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="55">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="172.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" text="120">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="212.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" text="125">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="172.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="214.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="254.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="282.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1+">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="312.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4+">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="342.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="174.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="213.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="176.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="55">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="215.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="253.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="278.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1+">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="311.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4+">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="341.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="173.0" layoutY="453.0" strokeType="OUTSIDE" strokeWidth="0.0" text="25">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="212.0" layoutY="453.0" strokeType="OUTSIDE" strokeWidth="0.0" text="45">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="256.0" layoutY="453.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="281.0" layoutY="453.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="314.0" layoutY="453.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4+">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="344.0" layoutY="453.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="173.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="25">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="212.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="25">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="254.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="279.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="312.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4+">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="342.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="173.0" layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15 EXT">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="212.0" layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12 EXT">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="168.0" layoutY="519.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WNL">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="207.0" layoutY="519.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WNL">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="252.0" layoutY="519.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="277.0" layoutY="519.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4+">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="310.0" layoutY="519.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4+">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="339.0" layoutY="519.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="168.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5 EXT">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="212.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8 EXT">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="172.0" layoutY="561.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3 ADD">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="211.0" layoutY="561.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5 ADD">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="172.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" text="25">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="211.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" text="25">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="172.0" layoutY="618.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="211.0" layoutY="617.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="172.0" layoutY="641.0" strokeType="OUTSIDE" strokeWidth="0.0" text="72">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="172.0" layoutY="667.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&#45;&#45;">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="RED" layoutX="172.0" layoutY="693.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-20">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="211.0" layoutY="642.0" strokeType="OUTSIDE" strokeWidth="0.0" text="63">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="211.0" layoutY="664.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&#45;&#45;">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="211.0" layoutY="693.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-15">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Text>-->
+    <!--        <Text fill="#009900" layoutX="243.0" layoutY="923.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />-->
+    <!--        <Text fill="#009900" layoutX="243.0" layoutY="948.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />-->
+    <!--        <Text fill="#009900" layoutX="243.0" layoutY="973.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />-->
+    <!--        <Text fill="#009900" layoutX="243.0" layoutY="997.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />-->
+    <!--        <Text fill="#009900" layoutX="243.0" layoutY="1022.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />-->
+    <!--        <Text fill="#009900" layoutX="243.0" layoutY="1045.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />-->
+    <!--        <Text fill="#009900" layoutX="243.0" layoutY="1068.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />-->
+    <!--        <Text fill="#009900" layoutX="243.0" layoutY="1090.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />-->
+    <!--        <Text fill="#009900" layoutX="243.0" layoutY="1113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />-->
+    <!--        <Text fill="#009900" layoutX="243.0" layoutY="1135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />-->
+    <!--        <Text fill="#009900" layoutX="243.0" layoutY="1158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />-->
+    <!--        <Text fill="RED" layoutX="310.0" layoutY="923.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />-->
+    <!--        <Text fill="RED" layoutX="310.0" layoutY="948.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />-->
+    <!--        <Text fill="RED" layoutX="310.0" layoutY="973.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />-->
+    <!--        <Text fill="RED" layoutX="310.0" layoutY="997.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />-->
+    <!--        <Text fill="RED" layoutX="310.0" layoutY="1022.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />-->
+    <!--        <Text fill="RED" layoutX="310.0" layoutY="1045.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />-->
+    <!--        <Text fill="RED" layoutX="310.0" layoutY="1068.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />-->
+    <!--        <Text fill="RED" layoutX="310.0" layoutY="1090.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />-->
+    <!--        <Text fill="RED" layoutX="310.0" layoutY="1113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />-->
+    <!--        <Text fill="RED" layoutX="310.0" layoutY="1135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />-->
+    <!--        <Text fill="RED" layoutX="310.0" layoutY="1158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />-->
+    <!--        <Text fill="#009900" layoutX="383.0" layoutY="923.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />-->
+    <!--        <Text fill="#009900" layoutX="383.0" layoutY="948.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />-->
+    <!--        <Text fill="#009900" layoutX="383.0" layoutY="973.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />-->
+    <!--        <Text fill="#009900" layoutX="383.0" layoutY="997.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />-->
+    <!--        <Text fill="#009900" layoutX="383.0" layoutY="1022.0" strokeType="OUTSIDE" strokeWidth="0.0" text="g" />-->
+    <!--        <Text fill="#009900" layoutX="383.0" layoutY="1045.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />-->
+    <!--        <Text fill="#009900" layoutX="383.0" layoutY="1068.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />-->
+    <!--        <Text fill="#009900" layoutX="383.0" layoutY="1090.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />-->
+    <!--        <Text fill="#009900" layoutX="383.0" layoutY="1113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />-->
+    <!--        <Text fill="#009900" layoutX="383.0" layoutY="1135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p" />-->
+    <!--        <Text fill="#009900" layoutX="383.0" layoutY="1158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />-->
+    <!--        <Text fill="#009900" layoutX="316.0" layoutY="2099.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #009900;" text="1x week" />-->
+    <!--        <Text fill="#009900" layoutX="316.0" layoutY="2054.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #009900;" text="ankle" />-->
+    <!--        <Separator layoutX="392.0" layoutY="1839.0" orientation="VERTICAL" prefHeight="179.0" prefWidth="0.0" />-->
+    <!--        <Label layoutX="406.0" layoutY="1848.0" style="-fx-text-fill: #009900;" text="Wrong-Baker Faces">-->
+    <!--            <font>-->
+    <!--                <Font name="SansSerif Bold" size="12.0" />-->
+    <!--            </font>-->
+    <!--        </Label>-->
+    <!--        <Text fill="#009900" layoutX="415.0" layoutY="1883.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #009900;" text="running/impact" />-->
+    <!--        <Text fill="#009900" layoutX="440.0" layoutY="1909.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #009900;" text="&#45;&#45;" />-->
+    <!--        <Text fill="#009900" layoutX="445.0" layoutY="1934.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #009900;" text="0" />-->
+    <!--        <Text fill="#009900" layoutX="443.0" layoutY="1968.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #009900;" text="0" />-->
+    <!--        <Text fill="#009900" layoutX="443.0" layoutY="2006.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #009900;" text="3" />-->
+    <!--        <Separator blendMode="DIFFERENCE" layoutX="-3.0" layoutY="2209.0" prefHeight="1.0" prefWidth="675.0" />-->
+    <!--        <Label layoutX="228.0" layoutY="1308.0" text="Tone">-->
+    <!--            <font>-->
+    <!--                <Font name="SansSerif Bold" size="14.0" />-->
+    <!--            </font>-->
+    <!--        </Label>-->
+    <!--        <Label layoutX="195.0" layoutY="1344.0" text="Right">-->
+    <!--            <font>-->
+    <!--                <Font name="SansSerif Bold" size="14.0" />-->
+    <!--            </font>-->
+    <!--        </Label>-->
+    <!--        <Label layoutX="341.0" layoutY="1344.0" text="Left">-->
+    <!--            <font>-->
+    <!--                <Font name="SansSerif Bold" size="14.0" />-->
+    <!--            </font>-->
+    <!--        </Label>-->
+    <!--        <Separator layoutX="142.0" layoutY="1341.0" orientation="VERTICAL" prefHeight="429.0" prefWidth="0.0" />-->
+    <!--        <Separator layoutX="282.0" layoutY="1344.0" orientation="VERTICAL" prefHeight="429.0" prefWidth="0.0" />-->
+    <!--        <Separator layoutX="-1.0" layoutY="1362.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Separator layoutX="-1.0" layoutY="1342.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Separator layoutX="431.0" layoutY="1342.0" orientation="VERTICAL" prefHeight="429.0" prefWidth="0.0" />-->
+    <!--        <Separator layoutX="212.0" layoutY="1362.0" orientation="VERTICAL" prefHeight="409.0" prefWidth="0.0" />-->
+    <!--        <Separator layoutX="352.0" layoutY="1362.0" orientation="VERTICAL" prefHeight="410.0" prefWidth="0.0" />-->
+    <!--        <Label layoutX="4.0" layoutY="1369.0" text="Iliopsoas" />-->
+    <!--        <Separator layoutX="-2.0" layoutY="1389.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Label layoutX="4.0" layoutY="1394.0" text="Glut Max" />-->
+    <!--        <Separator layoutX="-2.0" layoutY="1413.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Label layoutX="4.0" layoutY="1419.0" text="Adductor" />-->
+    <!--        <Separator layoutX="-2.0" layoutY="1438.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Label layoutX="4.0" layoutY="1443.0" text="Rectus Femoris" />-->
+    <!--        <Separator layoutX="-1.0" layoutY="1463.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Label layoutX="4.0" layoutY="1468.0" text="Rectus Catch Angle" />-->
+    <!--        <Separator layoutX="-1.0" layoutY="1488.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Label layoutX="4.0" layoutY="1491.0" text="Vastus Medialis" />-->
+    <!--        <Separator layoutX="-1.0" layoutY="1509.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Label layoutX="4.0" layoutY="1514.0" text="Hamstring" />-->
+    <!--        <Separator layoutX="-1.0" layoutY="1533.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Label layoutX="4.0" layoutY="1536.0" text="Post Tib" />-->
+    <!--        <Separator layoutX="-1.0" layoutY="1556.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Label layoutX="4.0" layoutY="1559.0" text="Ant Tib" />-->
+    <!--        <Separator layoutX="-1.0" layoutY="1576.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Label layoutX="4.0" layoutY="1581.0" text="Gastroc" />-->
+    <!--        <Separator layoutX="-2.0" layoutY="1600.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Label layoutX="4.0" layoutY="1604.0" text="Clonus" />-->
+    <!--        <Separator layoutX="-2.0" layoutY="1622.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Label layoutX="4.0" layoutY="1625.0" prefHeight="20.0" prefWidth="59.0" text="Knee Jerk" wrapText="true" />-->
+    <!--        <Separator layoutX="-2.0" layoutY="1644.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Label layoutX="4.0" layoutY="1649.0" prefHeight="16.0" prefWidth="61.0" text="Ankle Jerk" wrapText="true" />-->
+    <!--        <Separator layoutX="-2.0" layoutY="1667.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Text fill="RED" layoutX="161.0" layoutY="1382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />-->
+    <!--        <Text fill="RED" layoutX="161.0" layoutY="1407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />-->
+    <!--        <Text fill="RED" layoutX="161.0" layoutY="1432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1+" />-->
+    <!--        <Text fill="RED" layoutX="161.0" layoutY="1456.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1+" />-->
+    <!--        <Text fill="RED" layoutX="161.0" layoutY="1481.0" strokeType="OUTSIDE" strokeWidth="0.0" text="45" />-->
+    <!--        <Text fill="RED" layoutX="161.0" layoutY="1504.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1+" />-->
+    <!--        <Text fill="RED" layoutX="161.0" layoutY="1527.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1+" />-->
+    <!--        <Text fill="RED" layoutX="161.0" layoutY="1549.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="RED" layoutX="161.0" layoutY="1572.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="RED" layoutX="161.0" layoutY="1594.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />-->
+    <!--        <Text fill="RED" layoutX="161.0" layoutY="1617.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="#009900" layoutX="242.0" layoutY="1382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="#009900" layoutX="242.0" layoutY="1407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="#009900" layoutX="242.0" layoutY="1432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />-->
+    <!--        <Text fill="#009900" layoutX="242.0" layoutY="1456.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />-->
+    <!--        <Text fill="#009900" layoutX="242.0" layoutY="1481.0" strokeType="OUTSIDE" strokeWidth="0.0" text="115" />-->
+    <!--        <Text fill="#009900" layoutX="242.0" layoutY="1504.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />-->
+    <!--        <Text fill="#009900" layoutX="242.0" layoutY="1527.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1+" />-->
+    <!--        <Text fill="#009900" layoutX="242.0" layoutY="1549.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />-->
+    <!--        <Text fill="#009900" layoutX="242.0" layoutY="1572.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="#009900" layoutX="242.0" layoutY="1594.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1+" />-->
+    <!--        <Text fill="#009900" layoutX="242.0" layoutY="1617.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="RED" layoutX="309.0" layoutY="1382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="RED" layoutX="309.0" layoutY="1407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="RED" layoutX="309.0" layoutY="1432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="RED" layoutX="309.0" layoutY="1456.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="RED" layoutX="309.0" layoutY="1481.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="RED" layoutX="309.0" layoutY="1504.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="RED" layoutX="309.0" layoutY="1527.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="RED" layoutX="309.0" layoutY="1549.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="RED" layoutX="309.0" layoutY="1572.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="RED" layoutX="309.0" layoutY="1594.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="RED" layoutX="309.0" layoutY="1617.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="#009900" layoutX="382.0" layoutY="1382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="#009900" layoutX="382.0" layoutY="1407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="#009900" layoutX="382.0" layoutY="1432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="#009900" layoutX="382.0" layoutY="1456.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="#009900" layoutX="382.0" layoutY="1481.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="#009900" layoutX="382.0" layoutY="1504.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="#009900" layoutX="382.0" layoutY="1527.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="#009900" layoutX="382.0" layoutY="1549.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="#009900" layoutX="382.0" layoutY="1572.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="#009900" layoutX="382.0" layoutY="1594.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Text fill="#009900" layoutX="382.0" layoutY="1617.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />-->
+    <!--        <Label layoutX="4.0" layoutY="1670.0" prefHeight="16.0" prefWidth="61.0" text="Babinski" wrapText="true" />-->
+    <!--        <Separator layoutX="-1.0" layoutY="1689.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Label layoutX="3.0" layoutY="1692.0" prefHeight="38.0" prefWidth="105.0" text="Proximal Muscle Control" wrapText="true" />-->
+    <!--        <Separator layoutX="-2.0" layoutY="1729.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Label layoutY="1733.0" prefHeight="38.0" prefWidth="105.0" text="Distal Muscle Control" wrapText="true" />-->
+    <!--        <Separator layoutY="1771.0" prefHeight="0.0" prefWidth="434.0" />-->
+    <!--        <Separator blendMode="DIFFERENCE" layoutX="-1.0" layoutY="1285.0" prefHeight="1.0" prefWidth="675.0" />-->
+    <!--        <Text fill="RED" layoutX="162.0" layoutY="1639.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3+" />-->
+    <!--        <Text fill="RED" layoutX="161.0" layoutY="1662.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2+" />-->
+    <!--        <Text fill="RED" layoutX="159.0" layoutY="1683.0" strokeType="OUTSIDE" strokeWidth="0.0" text="up" />-->
+    <!--        <Text fill="#009900" layoutX="239.0" layoutY="1683.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />-->
+    <!--        <Text fill="RED" layoutX="307.0" layoutY="1683.0" strokeType="OUTSIDE" strokeWidth="0.0" text="down" />-->
+    <!--        <Text fill="#009900" layoutX="380.0" layoutY="1683.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />-->
+    <!--        <Text fill="#009900" layoutX="239.0" layoutY="1639.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3+" />-->
+    <!--        <Text fill="RED" layoutX="305.0" layoutY="1640.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3+" />-->
+    <!--        <Text fill="#009900" layoutX="377.0" layoutY="1640.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3+" />-->
+    <!--        <Text fill="#009900" layoutX="239.0" layoutY="1662.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3+" />-->
+    <!--        <Text fill="RED" layoutX="305.0" layoutY="1662.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3+" />-->
+    <!--        <Text fill="#009900" layoutX="377.0" layoutY="1662.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3+" />-->
+    <!--        <Label layoutX="362.0" layoutY="103.0" text="2022-11-11" textFill="#009900">-->
+    <!--         <font>-->
+    <!--            <Font size="10.0" />-->
+    <!--         </font></Label>-->
+    <!--        <Label layoutX="472.0" layoutY="840.0" text="Comparisons: " />-->
+    <!--        <Label layoutX="557.0" layoutY="840.0" style="-fx-text-fill: #ff0000;" text="2025-01-17" />-->
+    <!--        <Label layoutX="557.0" layoutY="857.0" text="2022-11-11" textFill="#009900" />-->
+    <!--        <Label layoutX="484.0" layoutY="1290.0" text="Comparisons: " />-->
+    <!--        <Label layoutX="569.0" layoutY="1290.0" style="-fx-text-fill: #ff0000;" text="2025-01-17" />-->
+    <!--        <Label layoutX="569.0" layoutY="1307.0" text="2022-11-11" textFill="#009900" />-->
+    <!--        <Text fill="RED" layoutX="305.0" layoutY="2125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-&#45;&#45;" />-->
+    <!--        <Text fill="#009900" layoutX="305.0" layoutY="2147.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #009900;" text="-&#45;&#45;" />-->
+    <!--        <Text fill="#009900" layoutX="242.0" layoutY="1190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />-->
+    <!--        <Text fill="#009900" layoutX="385.0" layoutY="1190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />-->
+    <!--        <Text fill="RED" layoutX="310.0" layoutY="1190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />-->
+    <!--        <Text fill="RED" layoutX="309.0" layoutY="1242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />-->
+    <!--        <Text fill="RED" layoutX="155.0" layoutY="1242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />-->
+    <!--        &lt;!&ndash;             <fx:include source="GAITPhysExam.fxml"/>&ndash;&gt;-->
+    <!--    </AnchorPane>-->
+
+    <!--</ScrollPane>-->
+
+</AnchorPane>

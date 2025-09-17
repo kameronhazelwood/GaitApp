@@ -1,6 +1,7 @@
 package com.example.gaitlabapp;
 
 
+import com.example.gaitlabapp.config.HostServicesProvider;
 import com.example.gaitlabapp.model.patients.IPatientModel;
 import com.example.gaitlabapp.repo.PatientRepo;
 import com.example.gaitlabapp.services.PatientService;
@@ -55,6 +56,7 @@ public class FxApplicationLauncher {
         public void start(Stage stage) throws IOException {
             try {
                   this.context.publishEvent(new StageIsReadyEvent(stage));
+                HostServicesProvider.setHostServices(getHostServices());
             } catch (Throwable t) {
                 t.printStackTrace();
             }
@@ -70,6 +72,7 @@ public class FxApplicationLauncher {
             @Value("${spring.application.name}")
             private  String applicationTitle;
             private final ConfigurableApplicationContext applicationContext;
+
             public  FxApplicationStageIsReadyListener(
                     @Value("${spring.application.name}") String applicationTitle,
                     ConfigurableApplicationContext applicationContext) {
@@ -84,6 +87,7 @@ public class FxApplicationLauncher {
                     System.out.println("javafx.version: " + System.getProperty("javafx.version"));
                     FXMLLoader fxmlLoader = new FXMLLoader();
                     fxmlLoader.setControllerFactory(applicationContext::getBean);
+
                     fxmlLoader.setLocation(getClass().getResource("/UserLogin.fxml"));
                     Image icon = new Image(String.valueOf(getClass().getResource("/images/nemours_logo.png")));
 

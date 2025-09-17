@@ -1,6 +1,7 @@
 package com.example.gaitlabapp.model.patients;
 
 import com.example.gaitlabapp.model.forms.IGenMarkInfoModel;
+import com.example.gaitlabapp.model.visits.IAppointmentModel;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -55,15 +56,20 @@ public class IPatientModel implements Serializable {
     @Setter
     private String genDiagnosis;
 
+
+    // i'm not sure this is the proper way this needs to be done? the list is full of icd cdes.
     @ManyToMany
     @JoinTable(name = "diagnosis_code", joinColumns = @JoinColumn(referencedColumnName = "gen_diagnosis"),
     inverseJoinColumns = @JoinColumn(name = "code"))
      Set<IDiagnosisModel> gen_diagnosis;
 
-
-
-    @OneToMany(mappedBy= "patientModel")
-    private Set<ISurgeryModel> surgeryModels;
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "appointments", joinColumns = @JoinColumn(referencedColumnName = "patient_iD"),
+            inverseJoinColumns = @JoinColumn(name = "patientId"))
+    public Set<IAppointmentModel> appointmentModel;
+//
+//    @OneToMany(mappedBy= "patientModel")
+//    private Set<ISurgeryModel> surgeryModels;
 
 
     public IPatientModel(String s, String s1, String s2) {
@@ -87,4 +93,5 @@ public class IPatientModel implements Serializable {
         this.state = state;
         this.genDiagnosis = genDiagnosis;
     }
+
 }

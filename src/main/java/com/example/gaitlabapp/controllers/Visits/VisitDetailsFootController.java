@@ -2,6 +2,9 @@ package com.example.gaitlabapp.controllers.Visits;
 
 import com.example.gaitlabapp.Launcher;
 import com.example.gaitlabapp.config.Config;
+import com.example.gaitlabapp.model.patients.IPatientModel;
+import com.example.gaitlabapp.model.visits.IAppointmentModel;
+import com.sun.javafx.charts.Legend;
 import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -37,6 +40,7 @@ public class VisitDetailsFootController implements Initializable {
     @Autowired
     ConfigurableApplicationContext applicationContext;
     public TextField FEaptDateSent;
+    private IAppointmentModel appointmentModel;
     public TextField FEaptReferringMd;
     public TextField FEvisitBio;
     public TextField FEvisitPt;
@@ -61,37 +65,55 @@ public class VisitDetailsFootController implements Initializable {
     public Tab physExamFoot;
     @FXML
     private TextField patientId;
-    Connection connection;
-    Config db = new Config();
-    Statement statement = null;
-    public int visitId;
+    @FXML
+    private TextField aptVisitType;
+    @FXML
+    private TextField date;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
-
-
-
-        physExamFoot.setOnSelectionChanged(e -> {
-            PauseTransition delay = new PauseTransition(Duration.seconds(1));
-
-            BorderPane borderPane = new BorderPane();
-            Scene currentScene=new Scene(borderPane,200,10);
-            Stage popoverStage= new Stage();
-
-            popoverStage.alwaysOnTopProperty();
-            popoverStage.initStyle(StageStyle.UTILITY);
-            popoverStage.setTitle("All changes have been saved.");
-            popoverStage.setScene(currentScene);
-            popoverStage.setY(650);
-            popoverStage.setX(100);
-            popoverStage.show();
-            delay.setOnFinished(event -> popoverStage.close());
-            delay.play();
-        });
+//            PauseTransition delay = new PauseTransition(Duration.seconds(1));
+//
+//            BorderPane borderPane = new BorderPane();
+//            Scene currentScene=new Scene(borderPane,200,10);
+//            Stage popoverStage= new Stage();
+//
+//            popoverStage.alwaysOnTopProperty();
+//            popoverStage.initStyle(StageStyle.UTILITY);
+//            popoverStage.setTitle("All changes have been saved.");
+//            popoverStage.setScene(currentScene);
+//            popoverStage.setY(650);
+//            popoverStage.setX(100);
+//            popoverStage.show();
+//            delay.setOnFinished(event -> popoverStage.close());
+//            delay.play();
+//        });
 
     }
 
+    IPatientModel patientModel;
+
+    public void setPatient(IPatientModel patientModel){
+        this.patientModel = patientModel;
+        //mrnTextField.setText("32581055");
+
+    }
+    public void setAppointment(IAppointmentModel appointmentModel) {
+        this.appointmentModel = appointmentModel;
+
+        FEaptTime.setText(appointmentModel.getAptDate());
+        FEaptVisitType.setText(appointmentModel.getVisitType());
+        FEaptSubType.setText(appointmentModel.getVisitSubType());
+        FEaptReferringMd.setText(appointmentModel.getReferringPhys());
+        FEvisitPt.setText(appointmentModel.getVisitPT());
+        FEvisitPt2.setText(appointmentModel.getVisitPT2());
+        FEvisitBio2.setText(appointmentModel.getVisitBioMech2());
+        FEvisitBio.setText(appointmentModel.getVisitBioMech());
+        FEaptStartTime.setText("1:00pm");
+        FEaptStopTime.setText("3:00pm");
+
+    }
     public void selectedItem(MouseEvent mouseEvent) {
     }
 

@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<TabPane xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gaitlabapp.controllers.Forms.Interpretation.GAIT.InterpretationEmgGait">
+    <tabs>
+        <Tab text="Overall">
+            <content>
+                <AnchorPane prefHeight="400.0" prefWidth="600.0">
+                    <children>
+                        <GridPane gridLinesVisible="true" layoutX="25.0" layoutY="38.0" prefHeight="130.0" prefWidth="524.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" EMG Not Done" textAlignment="CENTER" />
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" EMG All Normal" textAlignment="CENTER" GridPane.columnIndex="1" />
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" EMG Assessment" textAlignment="CENTER" GridPane.columnIndex="2" />
+                                <RadioButton fx:id="emgNotDone" mnemonicParsing="false" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                <RadioButton fx:id="emgAllNormal" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                <RadioButton fx:id="emgAssessment" mnemonicParsing="false" prefHeight="18.0" prefWidth="20.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                            </children>
+                        </GridPane>
+                        <TextArea fx:id="emgNotes" layoutX="24.0" layoutY="220.0" prefHeight="86.0" prefWidth="522.0" />
+                  <Button layoutX="453.0" layoutY="334.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="108.0" text="Save Changes" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Vasus Medialis">
+            <content>
+                <AnchorPane prefHeight="400.0" prefWidth="600.0">
+                    <children>
+                        <GridPane gridLinesVisible="true" layoutX="28.0" layoutY="33.0" prefHeight="290.0" prefWidth="116.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <RadioButton fx:id="vasusNormalNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                <RadioButton fx:id="vasusNormalRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                <RadioButton fx:id="vasusNormalLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                <RadioButton fx:id="vasusNormalBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                <RadioButton fx:id="vasusImmatureNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                <RadioButton fx:id="vasusImmatureRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                <RadioButton fx:id="vasusImmatureLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                <RadioButton fx:id="vasusImmatureBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                <RadioButton fx:id="vasusProlongNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                <RadioButton fx:id="vasusProlongRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                <RadioButton fx:id="vasusProlongLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                <RadioButton fx:id="vasusProlongBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                <RadioButton fx:id="vasusContNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                <RadioButton fx:id="vasusContRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                <RadioButton fx:id="vasusContLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                <RadioButton fx:id="vasusContBoth" mnemonicParsing="false" prefWidth="16.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                <RadioButton fx:id="vasusEarlyNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                                <RadioButton fx:id="vasusEarlyRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                                <RadioButton fx:id="vasusEarlyLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                                <RadioButton fx:id="vasusEarlyBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                                <RadioButton fx:id="vasusDelayNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                                <RadioButton fx:id="vasusAbsentNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                                <RadioButton fx:id="vasusOutNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                                <RadioButton fx:id="vasusCompleteNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                                <RadioButton fx:id="vasusDelayRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                                <RadioButton fx:id="vasusAbsentRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                                <RadioButton fx:id="vasusOutRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                                <RadioButton fx:id="vasusCompleteRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                                <RadioButton fx:id="vasusDelayLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                                <RadioButton fx:id="vasusDelayBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                                <RadioButton fx:id="vasusAbsentLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                                <RadioButton fx:id="vasusAbsentBoth" mnemonicParsing="false" prefWidth="16.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                                <RadioButton fx:id="vasusOurLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                                <RadioButton fx:id="vasusOutBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                                <RadioButton fx:id="vasusCompleteLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                                <RadioButton fx:id="vasusCompleteBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                            </children>
+                        </GridPane>
+                        <GridPane gridLinesVisible="true" layoutX="145.0" layoutY="33.0" prefHeight="290.0" prefWidth="406.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Normal firing range">
+                                    <font>
+                                        <Font name="Arial" size="12.0" />
+                                    </font>
+                                </Text>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Premature onset" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font name="Arial" size="12.0" />
+                                    </font>
+                                </Text>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Prolong activity" GridPane.rowIndex="2">
+                                    <font>
+                                        <Font name="Arial" size="12.0" />
+                                    </font>
+                                </Text>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Continuous activity" GridPane.rowIndex="3">
+                                    <font>
+                                        <Font name="Arial" size="12.0" />
+                                    </font>
+                                </Text>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Early off" GridPane.rowIndex="4">
+                                    <font>
+                                        <Font name="Arial" size="12.0" />
+                                    </font>
+                                </Text>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Delayed onset" GridPane.rowIndex="5">
+                                    <font>
+                                        <Font name="Arial" size="12.0" />
+                                    </font>
+                                </Text>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Absent muscle activity" GridPane.rowIndex="6">
+                                    <font>
+                                        <Font name="Arial" size="12.0" />
+                                    </font>
+                                </Text>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Out of phase muscle activity" GridPane.rowIndex="7">
+                                    <font>
+                                        <Font name="Arial" size="12.0" />
+                                    </font>
+                                </Text>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Complete co-contraction with the rectus" GridPane.rowIndex="8">
+                                    <font>
+                                        <Font name="Arial" size="12.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </GridPane>
+                        <Text layoutX="36.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N" />
+                        <Text layoutX="66.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R" />
+                        <Text layoutX="95.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L" />
+                        <Text layoutX="125.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B" />
+                        <Text layoutX="273.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Procedure" />
+                  <Button layoutX="460.0" layoutY="339.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="118.0" text="Save Changes" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+      <Tab text="Rectus">
+         <content>
+            <AnchorPane prefHeight="400.0" prefWidth="600.0">
+               <children>
+                  <GridPane gridLinesVisible="true" layoutX="28.0" layoutY="33.0" prefHeight="290.0" prefWidth="116.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <RadioButton fx:id="rectusNormalNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="rectusNormalRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="rectusNormalLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="rectusNormalBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="rectusImmatureNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="rectusImmatureRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="rectusImmatureLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="rectusImmatureBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="rectusProlongNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="rectusProlongRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="rectusProlongLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="rectusProlongBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="rectusContNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="rectusContRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="rectusContLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="rectusContBoth" mnemonicParsing="false" prefWidth="16.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="rectusEarlyNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <RadioButton fx:id="rectusEarlyRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <RadioButton fx:id="rectusEarlyLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <RadioButton fx:id="rectusEarlyBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <RadioButton fx:id="rectusDelayNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                        <RadioButton fx:id="rectusAbsentNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                        <RadioButton fx:id="rectusOutNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                        <RadioButton fx:id="rectusIncreasedNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="rectusDelayRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                        <RadioButton fx:id="rectusAbsentRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                        <RadioButton fx:id="rectusOutRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                        <RadioButton fx:id="rectusIncreasedRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="rectusDelayLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                        <RadioButton fx:id="rectusDelayBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                        <RadioButton fx:id="rectusAbsentLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                        <RadioButton fx:id="rectusAbsentBoth" mnemonicParsing="false" prefWidth="16.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                        <RadioButton fx:id="rectusOutLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                        <RadioButton fx:id="rectusOutBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                        <RadioButton fx:id="rectusIncreasedLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="rectusIncreasedBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                     </children>
+                  </GridPane>
+                  <GridPane gridLinesVisible="true" layoutX="145.0" layoutY="33.0" prefHeight="290.0" prefWidth="406.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Normal firing range">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Premature onset" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Prolong activity" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Continuous activity" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Early off" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Delayed onset" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Absent muscle activity" GridPane.rowIndex="6">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Out of phase muscle activity" GridPane.rowIndex="7">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Increased swing activity" GridPane.rowIndex="8">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </GridPane>
+                  <Text layoutX="36.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N" />
+                  <Text layoutX="66.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R" />
+                  <Text layoutX="95.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L" />
+                  <Text layoutX="125.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B" />
+                  <Text layoutX="273.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Procedure" />
+                  <Button layoutX="451.0" layoutY="338.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="136.0" text="Save Changes" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Hamstring">
+         <content>
+            <AnchorPane prefHeight="400.0" prefWidth="600.0">
+               <children>
+                  <GridPane gridLinesVisible="true" layoutX="28.0" layoutY="35.0" prefHeight="290.0" prefWidth="116.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <RadioButton fx:id="hamstringNormalNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="hamstringNormalRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="hamstringNormalLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="hamstringNormalBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="hamstringImmatureNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="hamstringImmatureRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="hamstringImmatureLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="hamstringImmatureBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="hamstringProlongNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="hamstringProlongRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="hamstringProlongLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="hamstringProlongBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="hamstringContNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="hamstringContRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="hamstringContLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="hamstringContBoth" mnemonicParsing="false" prefWidth="16.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="hamstringEarlyNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <RadioButton fx:id="hamstringEarlyRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <RadioButton fx:id="hamstringEarlyLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <RadioButton fx:id="hamstringEarlyBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <RadioButton fx:id="hamstringDelayedNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                        <RadioButton fx:id="hamstringAbsentNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                        <RadioButton fx:id="hamstringOutNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                        <RadioButton fx:id="hamstringSignNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="hamstringDelayedRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                        <RadioButton fx:id="hamstringAbsentRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                        <RadioButton fx:id="hamstringOutRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                        <RadioButton fx:id="hamstringSignRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="hamstringDelayedLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                        <RadioButton fx:id="hamstringDelayedBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                        <RadioButton fx:id="hamstringAbsentLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                        <RadioButton fx:id="hamstringAbsentBoth" mnemonicParsing="false" prefWidth="16.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                        <RadioButton fx:id="hamstringOutLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                        <RadioButton fx:id="hamstringOutBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                        <RadioButton fx:id="hamstringSignLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="hamstringSignBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                     </children>
+                  </GridPane>
+                  <GridPane gridLinesVisible="true" layoutX="145.0" layoutY="35.0" prefHeight="290.0" prefWidth="406.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Normal firing range">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Premature onset" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Prolong activity" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Continuous activity" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Early off" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Delayed onset" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Absent muscle activity" GridPane.rowIndex="6">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Out of phase muscle activity" GridPane.rowIndex="7">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Significant toe off activity" GridPane.rowIndex="8">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </GridPane>
+                  <Text layoutX="36.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N" />
+                  <Text layoutX="66.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R" />
+                  <Text layoutX="95.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L" />
+                  <Text layoutX="125.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B" />
+                  <Text layoutX="273.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Procedure" />
+                  <Button layoutX="456.0" layoutY="338.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="126.0" text="Save Changes" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Gastrocnemous">
+         <content>
+            <AnchorPane prefHeight="400.0" prefWidth="600.0">
+               <children>
+                  <GridPane gridLinesVisible="true" layoutX="28.0" layoutY="35.0" prefHeight="290.0" prefWidth="116.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <RadioButton fx:id="gastroNormalNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="gastroNormalRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="gastroNormalLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="gastroNormalBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="gastroImmatureNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="gastroImmatureRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="gastroImmatureLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="gastroImmatureBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="gastroProlongNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="gastroProlongRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="gastroProlongLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="gastroProlongBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="gatroContNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="gatroContRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="gatroContLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="gatroContBoth" mnemonicParsing="false" prefWidth="16.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="gatroEarlyNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <RadioButton fx:id="gatroEarlyRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <RadioButton fx:id="gatroEarlyLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <RadioButton fx:id="gatroEarlyBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <RadioButton fx:id="gastroDelayedNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                        <RadioButton fx:id="gastroAbsentNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                        <RadioButton fx:id="gastroOutNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                        <RadioButton fx:id="gastroSignNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="gastroDelayedRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                        <RadioButton fx:id="gastroAbsentRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                        <RadioButton fx:id="gastroOutRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                        <RadioButton fx:id="gastroSignRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="gastroDelayedLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                        <RadioButton fx:id="gastroDelayedBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                        <RadioButton fx:id="gastroAbsentLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                        <RadioButton fx:id="gastroAbsentBoth" mnemonicParsing="false" prefWidth="16.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                        <RadioButton fx:id="gastroOutLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                        <RadioButton fx:id="gastroOutBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                        <RadioButton fx:id="gastroSignLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="gastroSignBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                     </children>
+                  </GridPane>
+                  <GridPane gridLinesVisible="true" layoutX="145.0" layoutY="35.0" prefHeight="290.0" prefWidth="406.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Normal firing range">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Premature onset" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Prolong activity" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Continuous activity" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Early off" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Delayed onset" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Absent muscle activity" GridPane.rowIndex="6">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Out of phase muscle activity" GridPane.rowIndex="7">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Significant swing phase activity" GridPane.rowIndex="8">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </GridPane>
+                  <Text layoutX="36.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N" />
+                  <Text layoutX="66.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R" />
+                  <Text layoutX="95.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L" />
+                  <Text layoutX="125.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B" />
+                  <Text layoutX="273.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Procedure" />
+                  <Button layoutX="469.0" layoutY="338.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="118.0" text="Save Changes" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Anterior Tibialis">
+         <content>
+            <AnchorPane prefHeight="400.0" prefWidth="600.0">
+               <children>
+                  <GridPane gridLinesVisible="true" layoutX="28.0" layoutY="32.0" prefHeight="290.0" prefWidth="116.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <RadioButton fx:id="AntTibNormalNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="AntTibNormalRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="AntTibNormalLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="AntTibNormalBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="AntTibImmatureNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="AntTibImmatureRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="AntTibImmatureLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="AntTibImmatureBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="AntTibProlongNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="AntTibProlongRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="AntTibProlongLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="AntTibProlongBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="AntTibContNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="AntTibContRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="AntTibContLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="AntTibContBoth" mnemonicParsing="false" prefWidth="16.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="AntTibEarlyNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <RadioButton fx:id="AntTibEarlyRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <RadioButton fx:id="AntTibEarlyLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <RadioButton fx:id="AntTibEarlyBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <RadioButton fx:id="AntTibDelatedNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                        <RadioButton fx:id="AntTibAbsentNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                        <RadioButton fx:id="AntTibOutNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                        <RadioButton fx:id="AntTibDelatedRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                        <RadioButton fx:id="AntTibAbsentRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                        <RadioButton fx:id="AntTibOutRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                        <RadioButton fx:id="AntTibDelatedLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                        <RadioButton fx:id="AntTibDelatedBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                        <RadioButton fx:id="AntTibAbsentLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                        <RadioButton fx:id="AntTibAbsentBoth" mnemonicParsing="false" prefWidth="16.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                        <RadioButton fx:id="AntTibOutLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                        <RadioButton fx:id="AntTibOutBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                     </children>
+                  </GridPane>
+                  <GridPane gridLinesVisible="true" layoutX="145.0" layoutY="32.0" prefHeight="290.0" prefWidth="406.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Normal firing range">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Premature onset" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Prolong Activity" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Continuous activity" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Early off" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Delayed onset" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Absent muscle activity" GridPane.rowIndex="6">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Out of phase muscle activity" GridPane.rowIndex="7">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </GridPane>
+                  <Text layoutX="36.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N" />
+                  <Text layoutX="66.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R" />
+                  <Text layoutX="95.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L" />
+                  <Text layoutX="125.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B" />
+                  <Text layoutX="273.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Procedure" />
+                  <Button layoutX="468.0" layoutY="336.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="118.0" text="Save Changes" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Posterior Tibialis">
+         <content>
+            <AnchorPane prefHeight="400.0" prefWidth="600.0">
+               <children>
+                  <GridPane gridLinesVisible="true" layoutX="28.0" layoutY="33.0" prefHeight="290.0" prefWidth="116.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <RadioButton fx:id="postTibNormalNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="postTibNormalRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="postTibNormalLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="postTibNormalBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="postTibImmatreNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="postTibImmatreRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="postTibImmatreLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="postTibImmatreBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="postTibProlongNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="postTibProlongRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="postTibProlongLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="postTibProlongBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="postTibContNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="postTibContRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="postTibContLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="postTibContBoth" mnemonicParsing="false" prefWidth="16.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="postTibEarlyNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <RadioButton fx:id="postTibEarlyRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <RadioButton fx:id="postTibEarlyLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <RadioButton fx:id="postTibEarlyBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <RadioButton fx:id="postTibDelayedNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                        <RadioButton fx:id="postTibAbsentNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                        <RadioButton fx:id="postTibOutNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                        <RadioButton fx:id="postTibDecNormal" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="postTibDelayedRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                        <RadioButton fx:id="postTibAbsentRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                        <RadioButton fx:id="postTibOutRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                        <RadioButton fx:id="postTibDecRight" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="postTibDelayedLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                        <RadioButton fx:id="postTibDelayedBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                        <RadioButton fx:id="postTibAbsentLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                        <RadioButton fx:id="postTibAbsentBoth" mnemonicParsing="false" prefWidth="16.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                        <RadioButton fx:id="postTibOutLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                        <RadioButton fx:id="postTibOutBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                        <RadioButton fx:id="postTibDecLeft" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="postTibDecBoth" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                     </children>
+                  </GridPane>
+                  <GridPane gridLinesVisible="true" layoutX="145.0" layoutY="33.0" prefHeight="290.0" prefWidth="406.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Normal firing range">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Premature onset" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Prolong Activity" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Continuous activity" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Early off" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Delayed onset" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Absent muscle activity" GridPane.rowIndex="6">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Out of phase muscle activity" GridPane.rowIndex="7">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Decreased toe off activity" GridPane.rowIndex="8">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </GridPane>
+                  <Text layoutX="36.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N" />
+                  <Text layoutX="66.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R" />
+                  <Text layoutX="95.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L" />
+                  <Text layoutX="125.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B" />
+                  <Text layoutX="273.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Procedure" />
+                  <Button fx:id="onSave" layoutX="438.0" layoutY="334.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="147.0" text="Save Changes" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+    </tabs>
+</TabPane>

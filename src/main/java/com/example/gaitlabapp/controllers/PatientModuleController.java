@@ -96,8 +96,8 @@ public class PatientModuleController implements Initializable {
 
     ObservableList<IAppointmentModel> initialData() {
         IAppointmentModel apt1 = new IAppointmentModel(1, "03/07/2025", "GAIT", "Full Diagnostic", "", GAIT, "",  2, "", "", "", "");
-        //IAppointmentModel apt2 = new IAppointmentModel(1, "03/10/2025", "GAIT", "Full Diagnostic", "Dr. Smith", POSTOP, "", 2, "", "", "", "");
-        return FXCollections.observableArrayList(apt1);
+        IAppointmentModel apt2 = new IAppointmentModel(1, "09/12/2025", "GAIT", "Full Diagnostic", "Dr. Smith", FOOT, "", 2, "", "", "", "");
+        return FXCollections.observableArrayList(apt2, apt1);
     }
 
     @FXML
@@ -499,9 +499,11 @@ public class PatientModuleController implements Initializable {
                     stage1.showAndWait();
                 }
                 case UE -> {
-                    Parent popUp;
+                    IPatientModel patientModel = new IPatientModel();
+
                     FXMLLoader fxmlLoader = new FXMLLoader(PatientModuleController.class.getResource("/Visits/VisitDetailsUE.fxml"));
                     fxmlLoader.setControllerFactory(applicationContext::getBean);
+                    Parent popUp = fxmlLoader.load();
                     VisitDetailsUEController visitDetailsUEController = fxmlLoader.getController();
                     popUp = fxmlLoader.load();
                     Stage stage1 = new Stage();
@@ -514,12 +516,14 @@ public class PatientModuleController implements Initializable {
                     Parent popUp;
                     FXMLLoader fxmlLoader = new FXMLLoader(PatientModuleController.class.getResource("/Visits/VisitDetailsFootEval.fxml"));
                     fxmlLoader.setControllerFactory(applicationContext::getBean);
+
+
                     VisitDetailsFootController visitDetailsFootController = fxmlLoader.getController();
                     popUp = fxmlLoader.load();
                     Stage stage1 = new Stage();
                     stage1.setTitle("Foot Eval Visit Details:   ");
                     //height 680 width 800
-                    stage1.setScene(new Scene(popUp, 800, 680));
+                    stage1.setScene(new Scene(popUp, 860, 680));
                     stage1.show();
                 }
             }

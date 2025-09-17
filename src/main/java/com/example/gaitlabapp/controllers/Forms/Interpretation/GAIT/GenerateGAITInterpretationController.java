@@ -68,9 +68,13 @@ public class GenerateGAITInterpretationController {
         bp.setCenter(root);
     }
 
-    @FXML
-    void onEMG(MouseEvent event) {
 
+    @FXML
+    void onEMG(MouseEvent event) throws IOException {
+        // well this is wrong lol. need to create this as a hard copy not
+        Parent root = null;
+        root = FXMLLoader.load(Objects.requireNonNull(PatientModuleController.class.getResource("/Forms/Interpretation/GAIT/InterpretationGaitEMG.fxml")));
+        bp.setCenter(root);
     }
 
     @FXML
