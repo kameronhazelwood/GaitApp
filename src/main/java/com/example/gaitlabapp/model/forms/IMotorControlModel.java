@@ -118,12 +118,12 @@ public class IMotorControlModel {
     private String distalMuscleControlRInterp;
     @Column(name = "distal_muscle_controlLInterp")
     private String distalMuscleControlLInterp;
-    @Column(name = "patientId")
+    @Column(name = "patient_id")
     private Integer patientId;
 
 
     @ManyToMany
-    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patient_iD"),
             inverseJoinColumns = @JoinColumn(name = "patient_id"))
 
     Set<IPatientModel> patientID;

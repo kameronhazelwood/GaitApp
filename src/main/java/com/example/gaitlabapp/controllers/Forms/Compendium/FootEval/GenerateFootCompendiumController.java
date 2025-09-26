@@ -34,7 +34,7 @@ public class GenerateFootCompendiumController {
     @FXML
     public String ptHistory(MouseEvent mouseEvent) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Compendium/GAIT/CompendiumPtHistory.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Compendium/PDF/footeval/FootPtHistory.fxml")));
         bp.setCenter(root);
         return null;
     }
@@ -70,7 +70,7 @@ public class GenerateFootCompendiumController {
     @FXML
     void lowerExam(MouseEvent event) throws IOException {
         Parent root = null;
-        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Visits/TestVisit/CompendiumLower2.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Compendium/FootEval/FootEvalCompendium.fxml")));
         bp.setCenter(root);
     }
 
@@ -89,8 +89,8 @@ public class GenerateFootCompendiumController {
     Parent fxml1Root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Compendium/PDF/Questionnaire.fxml")));
     Parent fxml2Root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Compendium/PDF/PtHistory.fxml")));
     Parent fxml3Root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Compendium/GAIT/FootEvalInfoPage.fxml")));
-    Parent lowerPDF = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Compendium/PDF/Lower.fxml")));
-    Parent motorControlPDF = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Compendium/PDF/MotorControl.fxml")));
+    Parent lowerPDF = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Compendium/PDF/footeval/FootLower.fxml")));
+    Parent motorControlPDF = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Compendium/PDF/footeval/FootMotorControl.fxml")));
     Parent tonePDF = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Compendium/PDF/Tone.fxml")));
     Parent painPDF = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Compendium/PDF/Pain.fxml")));
     Parent functionalStrengthPDF = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("/Forms/Compendium/PDF/FunctionalStrength.fxml")));
@@ -122,7 +122,7 @@ public class GenerateFootCompendiumController {
 //            }
 //        }
         try {
-            File pdfFile = new File("C:\\dev\\GaitApp\\src\\main\\resources\\Forms\\Compendium\\FootEval\\footevaltest.pdf");
+            File pdfFile = new File("C:\\dev\\GaitApp\\src\\main\\resources\\Forms\\Compendium\\FootEval\\footevaltest1.pdf");
             if (pdfFile.exists()) {
                 // Get HostServices from the Application instance
                 HostServicesProvider.getHostServices().showDocument(pdfFile.getAbsolutePath());

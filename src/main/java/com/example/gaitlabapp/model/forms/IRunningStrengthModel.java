@@ -57,12 +57,12 @@ public class IRunningStrengthModel {
     private String kneeFlex2;
     @Column(name = "knee_Flex3")
     private String kneeFlex3;
-    @Column(name = "patientId")
+    @Column(name = "patient_id")
     private Integer patientId;
 
 
     @ManyToMany
-    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patient_iD"),
             inverseJoinColumns = @JoinColumn(name = "patient_id"))
 
     Set<IPatientModel> patientID;

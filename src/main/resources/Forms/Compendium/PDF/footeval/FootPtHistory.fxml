@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<ScrollPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.gaitlabapp.controllers.Forms.Compendium.PDF.FootEval.FootPtHistory"
+            prefHeight="982.0" prefWidth="603.0">
+    <content>
+        <AnchorPane prefHeight="979.0" prefWidth="693.0">
+            <Label layoutX="14.0" layoutY="16.0" text="Basic Questionnaire">
+                <font>
+                    <Font name="SansSerif Bold" size="14.0" />
+                </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="312.0" text="Surgical History">
+                <font>
+                    <Font name="SansSerif Bold" size="12.0" />
+                </font>
+            </Label>
+            <Label layoutX="9.0" layoutY="551.0" text="Health History">
+                <font>
+                    <Font name="SansSerif Bold" size="12.0" />
+                </font>
+            </Label>
+            <Label layoutX="12.0" layoutY="680.0" text="Health Condition">
+                <font>
+                    <Font name="SansSerif Bold" size="12.0" />
+                </font>
+            </Label>
+            <Label layoutX="5.0" layoutY="55.0" text="Person providing History: " />
+            <Label layoutX="193.0" layoutY="55.0" text="Kameron Hazelwood" />
+            <Label layoutX="5.0" layoutY="84.0" text="Relationship to Parent: " />
+            <Label layoutX="193.0" layoutY="84.0" text="Birth Parent" />
+            <Label layoutX="5.0" layoutY="109.0" text="Date of Baseline Report: " />
+            <Label layoutX="193.0" layoutY="109.0" text="09/12/2025" />
+            <Label layoutX="5.0" layoutY="133.0" text="How Premature was the birth" />
+            <Label layoutX="193.0" layoutY="133.0" text="Not Premature" />
+            <Label layoutX="5.0" layoutY="153.0" prefHeight="38.0" prefWidth="158.0" text="How long was the hospital stay at birth: " wrapText="true" />
+            <Label layoutX="193.0" layoutY="163.0" text="None" />
+            <Label layoutX="5.0" layoutY="197.0" text="Age walked with support" />
+            <Label layoutX="193.0" layoutY="197.0" text="18 months" />
+            <Label layoutX="5.0" layoutY="223.0" text="Age walked without support" />
+            <Label layoutX="193.0" layoutY="223.0" text="n/a" />
+            <Label layoutX="4.0" layoutY="255.0" text="How does child learn" />
+            <Label layoutX="193.0" layoutY="255.0" text="Slow, needs special class" />
+            <Separator layoutY="76.0" prefHeight="0.0" prefWidth="387.0" />
+            <Separator layoutY="104.0" prefHeight="0.0" prefWidth="387.0" />
+            <Separator layoutY="130.0" prefHeight="0.0" prefWidth="387.0" />
+            <Separator layoutY="154.0" prefHeight="0.0" prefWidth="387.0" />
+            <Separator layoutY="190.0" prefHeight="0.0" prefWidth="387.0" />
+            <Separator layoutX="-1.0" layoutY="217.0" prefHeight="0.0" prefWidth="387.0" />
+            <Separator layoutY="251.0" prefHeight="0.0" prefWidth="387.0" />
+            <Separator layoutY="274.0" prefHeight="0.0" prefWidth="387.0" />
+            <Separator layoutY="48.0" prefHeight="0.0" prefWidth="781.0" />
+            <TableView layoutX="11.0" layoutY="337.0" prefHeight="77.0" prefWidth="455.0">
+                <columns>
+                    <TableColumn prefWidth="75.0" text="Date" />
+                    <TableColumn prefWidth="75.0" text="Procedure" />
+                    <TableColumn prefWidth="75.0" text="Side" />
+                    <TableColumn prefWidth="75.0" text="MD" />
+                    <TableColumn prefWidth="75.0" text="Facility" />
+                    <TableColumn prefWidth="77.33336385091144" text="Comments" />
+                </columns>
+            </TableView>
+            <Label layoutX="10.0" layoutY="426.0" text="Botox History">
+                <font>
+                    <Font name="SansSerif Bold" size="12.0" />
+                </font>
+            </Label>
+            <TableView layoutX="12.0" layoutY="460.0" prefHeight="76.0" prefWidth="435.0">
+                <columns>
+                    <TableColumn prefWidth="75.0" text="Date" />
+                    <TableColumn prefWidth="97.33332061767578" text="Body Location" />
+                    <TableColumn prefWidth="78.66661071777344" text="Side" />
+                    <TableColumn prefWidth="74.00006103515625" text="MD" />
+                    <TableColumn prefWidth="109.33331298828125" text="Facility" />
+                </columns>
+            </TableView>
+            <TableView layoutX="12.0" layoutY="584.0" prefHeight="78.0" prefWidth="430.0">
+                <columns>
+                    <TableColumn prefWidth="75.0" text="Age" />
+                    <TableColumn prefWidth="314.66666920979816" text="Condition" />
+                </columns>
+            </TableView>
+            <TableView layoutX="12.0" layoutY="714.0" prefHeight="106.0" prefWidth="391.0">
+                <columns>
+                    <TableColumn prefWidth="390.0000098546346" text="Health Condition" />
+                </columns>
+            </TableView>
+
+
+        </AnchorPane>
+    </content>
+</ScrollPane>

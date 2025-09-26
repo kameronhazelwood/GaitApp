@@ -14,29 +14,29 @@ import java.util.Set;
 @Entity
 @Setter
 @NoArgsConstructor
-@Table(name = "Running")
+
 public class IRunningModel {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "run_Id")
-    private Integer runId;
-    @Column(name = "normal_running")
-    private String normalRunning;
-    @Column(name = "none_running")
-    private String noneRunning;
-    @Column(name = "increased_speed_no_float")
-    private String increasedSpeedNoFloat;
-    @Column(name = "slow_with_float")
-    private String slowWithFloat;
-    @Column(name = "patientId")
-    private Integer patientId;
+   @GeneratedValue(strategy = GenerationType.IDENTITY)
+  // @Column(name = "run_Id")
+   private Integer runId;
+//    @Column(name = "normal_running")
+//    private String normalRunning;
+//    @Column(name = "none_running")
+//    private String noneRunning;
+//    @Column(name = "increased_speed_no_float")
+//    private String increasedSpeedNoFloat;
+//    @Column(name = "slow_with_float")
+//    private String slowWithFloat;
+//    @Column(name = "patientId")
+//    private Integer patientId;
 
 
-    @ManyToMany
-    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
-            inverseJoinColumns = @JoinColumn(name = "patient_id"))
-
-    Set<IPatientModel> patientID;
+//    @ManyToMany
+//    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+//            inverseJoinColumns = @JoinColumn(name = "patient_id"))
+//
+//    Set<IPatientModel> patientID;
 
 //    public IRunningModel(Integer runId, String normalRunning, String noneRunning, String increasedSpeedNoFloat, String slowWithFloat) {
 //        this.runId = runId;

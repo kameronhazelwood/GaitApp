@@ -112,13 +112,13 @@ public class FootEvalInfoPage implements Initializable {
         fName.setText("Rowan Hazelwood");
         dob.setText("10/02/2024");
         mrn.setText("33069893     ");
-        age.setText(".11");
+        age.setText("1");
         gender.setText("Female");
 //        visitDiag.setText("Cerebral Palsy");
 //        bioMech.setText("John Henley");
 //        referringPhys.setText("Freeman Miller");
 //        examiningTher.setText("Chris Church");
-        dateOfEval.setText("03/07/2025");
+        dateOfEval.setText("09/12/2025");
 
     }
 

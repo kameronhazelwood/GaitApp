@@ -30,12 +30,12 @@ public class IHipScoresModel {
     private String physicalFunction;
     @Column(name = "harris_hip_score")
     private String harrisHipScore;
-    @Column(name = "patientId")
+    @Column(name = "patient_id")
     private Integer patientId;
 
 
     @ManyToMany
-    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patient_id"),
             inverseJoinColumns = @JoinColumn(name = "patient_id"))
 
     Set<IPatientModel> patientID;

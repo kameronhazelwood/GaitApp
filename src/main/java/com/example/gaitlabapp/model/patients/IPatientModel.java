@@ -17,10 +17,9 @@ import java.util.Set;
 @Data
 @Table(name = "patients")
 public class IPatientModel implements Serializable {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "patient_id", nullable = false)
+    @Column(name = "patient_id")
     private  Integer patientID;
     @Column(name = "first_name")
     @Setter
@@ -28,7 +27,7 @@ public class IPatientModel implements Serializable {
     @Column(name = "last_name")
     @Setter
     private String lastName;
-    @Column(name = "preffered_first_name")
+    @Column(name = "preferred_first_name")
     @Setter
     private String preferredFirstName;
     @Column(name = "mrn")
@@ -52,20 +51,20 @@ public class IPatientModel implements Serializable {
     @Column(name = "state")
     @Setter
     private String state;
-    @Column(name = "gen_diagnosis")
-    @Setter
-    private String genDiagnosis;
+//    @Column(name = "gen_diagnosis")
+//    @Setter
+//    private String genDiagnosis;
 
 
     // i'm not sure this is the proper way this needs to be done? the list is full of icd cdes.
-    @ManyToMany
-    @JoinTable(name = "diagnosis_code", joinColumns = @JoinColumn(referencedColumnName = "gen_diagnosis"),
-    inverseJoinColumns = @JoinColumn(name = "code"))
-     Set<IDiagnosisModel> gen_diagnosis;
+//    @ManyToMany
+//    @JoinTable(name = "diagnosis_code", joinColumns = @JoinColumn(referencedColumnName = "gen_diagnosis"),
+//    inverseJoinColumns = @JoinColumn(name = "code"))
+//     Set<IDiagnosisModel> gen_diagnosis;
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "appointments", joinColumns = @JoinColumn(referencedColumnName = "patient_iD"),
-            inverseJoinColumns = @JoinColumn(name = "patientId"))
+            inverseJoinColumns = @JoinColumn(name = "patient_id"))
     public Set<IAppointmentModel> appointmentModel;
 //
 //    @OneToMany(mappedBy= "patientModel")
@@ -91,7 +90,7 @@ public class IPatientModel implements Serializable {
         this.dob = dob;
         this.comments = comments;
         this.state = state;
-        this.genDiagnosis = genDiagnosis;
+
     }
 
 }

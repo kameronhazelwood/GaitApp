@@ -146,12 +146,12 @@ public class IShueeModel {
     @Column(name = "static_House")
     private String staticHouse;
 
-    @Column(name = "patientId")
+    @Column(name = "patient_id")
     private Integer patientId;
 
 
     @ManyToMany
-    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patient_iD"),
             inverseJoinColumns = @JoinColumn(name = "patient_id"))
 
     Set<IPatientModel> patientID;

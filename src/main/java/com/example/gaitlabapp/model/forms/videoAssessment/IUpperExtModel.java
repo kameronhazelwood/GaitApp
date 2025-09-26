@@ -43,12 +43,12 @@ public class IUpperExtModel {
     private String athetoidMovement;
     @Column(name = "assist_Device")
     private String assistDevice;
-    @Column(name = "patientId")
+    @Column(name = "patient_id")
     private Integer patientId;
 
 
     @ManyToMany
-    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patient_iD"),
             inverseJoinColumns = @JoinColumn(name = "patient_id"))
 
     Set<IPatientModel> patientID;

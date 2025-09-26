@@ -2,9 +2,6 @@ package com.example.gaitlabapp;
 
 
 import com.example.gaitlabapp.config.HostServicesProvider;
-import com.example.gaitlabapp.model.patients.IPatientModel;
-import com.example.gaitlabapp.repo.PatientRepo;
-import com.example.gaitlabapp.services.PatientService;
 import javafx.application.Application;
 import javafx.application.HostServices;
 import javafx.application.Platform;
@@ -13,12 +10,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.*;
 import org.springframework.context.support.GenericApplicationContext;
@@ -26,6 +19,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.sql.*;
 
 @SpringBootApplication
 @EnableJpaRepositories("com.example.gaitlabapp.repo")
@@ -38,10 +32,8 @@ public class FxApplicationLauncher {
     public static class FxApplication extends Application {
         private ConfigurableApplicationContext context;
 
-
         @Override
         public void init() throws IOException {
-
 
             context = new SpringApplicationBuilder()
                     .sources(FxApplicationLauncher.class)
@@ -80,11 +72,14 @@ public class FxApplicationLauncher {
                 this.applicationTitle = applicationTitle;
                 this.applicationContext = applicationContext;
         }
+
             @Override
             public void onApplicationEvent(StageIsReadyEvent event) {
                 try {
-                    System.out.println("java version: "+System.getProperty("java.version"));
+
+                    System.out.println("java version: "+ System.getProperty("java.version"));
                     System.out.println("javafx.version: " + System.getProperty("javafx.version"));
+
                     FXMLLoader fxmlLoader = new FXMLLoader();
                     fxmlLoader.setControllerFactory(applicationContext::getBean);
 

@@ -53,7 +53,7 @@ public class IAppointmentModel  {
 //    private final StringProperty interpMD;
 //    @Column(name = "interpPT")
 //    private final StringProperty interpPT;
-    @Column(name = "referring_phys")
+    @Column(name = "referring_phy")
     @Setter
     private String referringPhys;
     @Column(name = "visitPT")
@@ -73,13 +73,13 @@ public class IAppointmentModel  {
     @Column(name = "test_reason")
     @Setter
     private String testReason;
-    @Column(name = "patientId")
+    @Column(name = "patient_id")
     private Integer patientId;
     private Boolean collected = true;
 
 
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patient_iD"),
             inverseJoinColumns = @JoinColumn(name = "patient_id"))
     public Set<IPatientModel> patientModel;
 

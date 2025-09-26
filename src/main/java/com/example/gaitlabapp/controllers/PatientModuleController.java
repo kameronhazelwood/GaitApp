@@ -479,6 +479,25 @@ public class PatientModuleController implements Initializable {
                     stage1.setScene(new Scene(popUp, 860, 680));
                     stage1.showAndWait();
                 }
+                case FOOT -> {
+                    IPatientModel patientModel = new IPatientModel();
+
+                    FXMLLoader fxmlLoader = new FXMLLoader();
+
+                    fxmlLoader = new FXMLLoader(Launcher.class.getResource("/Visits/VisitDetailsFootEval.fxml"));
+                    fxmlLoader.setControllerFactory(applicationContext::getBean);
+                    Parent popUp = fxmlLoader.load();
+                    VisitDetailsFootController visitDetailsFootController = fxmlLoader.getController();
+
+                    visitDetailsFootController.setAppointmentModel(appointmentModel, patientModel);
+                    visitDetailsFootController.setPatient(patientModel);
+                    Stage stage1 = new Stage((StageStyle.UTILITY));
+                    stage1.initModality(Modality.WINDOW_MODAL);
+                    stage1.initOwner(getVisitGaitDetails());
+                    stage1.setTitle("GAIT Visit Details:   ");
+                    stage1.setScene(new Scene(popUp, 860, 680));
+                    stage1.showAndWait();
+                }
                 case POSTOP -> {
                     IPatientModel patientModel = new IPatientModel();
 
@@ -512,20 +531,7 @@ public class PatientModuleController implements Initializable {
                     stage1.setScene(new Scene(popUp, 800, 680));
                     stage1.show();
                 }
-                case FOOT -> {
-                    Parent popUp;
-                    FXMLLoader fxmlLoader = new FXMLLoader(PatientModuleController.class.getResource("/Visits/VisitDetailsFootEval.fxml"));
-                    fxmlLoader.setControllerFactory(applicationContext::getBean);
 
-
-                    VisitDetailsFootController visitDetailsFootController = fxmlLoader.getController();
-                    popUp = fxmlLoader.load();
-                    Stage stage1 = new Stage();
-                    stage1.setTitle("Foot Eval Visit Details:   ");
-                    //height 680 width 800
-                    stage1.setScene(new Scene(popUp, 860, 680));
-                    stage1.show();
-                }
             }
         } catch (IOException e) {
             throw new RuntimeException(e);

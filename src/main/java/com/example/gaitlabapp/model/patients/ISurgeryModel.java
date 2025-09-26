@@ -39,7 +39,7 @@ public class ISurgeryModel  {
 
 
     @ManyToOne
-    @JoinColumn(name = "patientId", insertable = false, updatable = false)
+    @JoinColumn(name = "patient_id", insertable = false, updatable = false)
     private IPatientModel patientModel;
 
     public ISurgeryModel(Integer surgeryId, String surgeryDate, String surgeryProcedure, String surgerySide, String surgeon, String facility, String comments, Integer patientId){

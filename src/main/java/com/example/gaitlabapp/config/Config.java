@@ -19,13 +19,14 @@ public class Config {
     @Bean
     public DataSource dataSource(){
         return DataSourceBuilder.create()
-                .url("jdbc:sqlserver://NEMGLASQL001\\SQLSERVER:1433;database=gaitData; integratedSecurity = true; trustServerCertificate=true;")
+//                .url("jdbc:sqlserver://NEMGLASQL001\\SQLSERVER:1433;database=gaitData; integratedSecurity = true; trustServerCertificate=true;")
+                .url("jdbc:postgresql://127.0.0.1:5432/postgres")
                 .build();
     }
 
     public Connection getDBConnection() throws SQLException {
 
-        String url = "jdbc:sqlserver://NEMGLASQL001\\SQLSERVER:1433;databaseName=gaitData;integratedSecurity=true";
+        String url = "jdbc:postgresql://localhost:5432/postgres";
 //        try{
 //            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 //            DriverManager.setLoginTimeout(1000);

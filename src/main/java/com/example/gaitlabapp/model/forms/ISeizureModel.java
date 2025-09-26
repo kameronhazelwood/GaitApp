@@ -23,7 +23,7 @@ public class ISeizureModel {
     @Column(name = "seizureMedicineName")
     @Setter
     private String seizureMedicineName;
-    @Column(name = "patientId")
+    @Column(name = "patient_id")
     private Integer patientId;
 
     public ISeizureModel(Integer seizureId, String seizureMedicineName, Integer patientId) {

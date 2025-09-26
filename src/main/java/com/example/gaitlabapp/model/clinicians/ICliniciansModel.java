@@ -51,11 +51,11 @@ public class ICliniciansModel {
     private Integer active;
     @Column(name = "clin_gender")
     private String clinGender;
-    @Column(name = "patientId")
+    @Column(name = "patient_id")
     private Integer patientid;
 
     @ManyToMany
-    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patient_iD"),
             inverseJoinColumns = @JoinColumn(name = "patient_id"))
 
     Set<IPatientModel> patientID;

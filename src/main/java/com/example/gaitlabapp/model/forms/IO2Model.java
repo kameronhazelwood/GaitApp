@@ -20,7 +20,7 @@ import java.util.Set;
 public class IO2Model {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "o2Id")
+    @Column(name = "o2_Id")
     private Integer o2Id;
     @Column(name = "time_test")
     private String timeTest;
@@ -28,16 +28,16 @@ public class IO2Model {
     private String startTime;
     @Column(name = "o2Start")
     private String o2Start;
-    @Column(name = "o2Finish")
+    @Column(name = "o2_Finish")
     private String o2Finish;
     @Column(name = "sit_Time")
     private String sitTime;
-    @Column(name = "patientId")
+    @Column(name = "patient_Id")
     private Integer patientId;
 
 
     @ManyToMany
-    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patientID"),
+    @JoinTable(name = "patients", joinColumns = @JoinColumn(referencedColumnName = "patient_iD"),
             inverseJoinColumns = @JoinColumn(name = "patient_id"))
 
     Set<IPatientModel> patientID;
