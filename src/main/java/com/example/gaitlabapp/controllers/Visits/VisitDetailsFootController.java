@@ -2430,9 +2430,9 @@ public class VisitDetailsFootController implements Initializable {
         pngFiles.getChildren().addAll(kinematics);
         pngFiles.getChildren().addAll(footKinematics);
         pngFiles.getChildren().addAll(kinetics);
-        kinematicsData.getChildren().addAll(temporalSpatial, trunkOrientation, hipJointData, ankleJointData, variabilityData, armJointData,
-                pelvisOrientation, kneeJointData, footOrientation);
-        kineticsData.getChildren().addAll(groundForcesData, kneeJointMoments, sagittalPowers, hipMoments, ankleMoments);
+//        kinematicsData.getChildren().addAll(temporalSpatial, trunkOrientation, hipJointData, ankleJointData, variabilityData, armJointData,
+//                pelvisOrientation, kneeJointData, footOrientation);
+//        kineticsData.getChildren().addAll(groundForcesData, kneeJointMoments, sagittalPowers, hipMoments, ankleMoments);
 
         //main tree
         recommendations.getChildren().addAll(recommendationDiagnostic, recommendationSurgical, recommendationTherapy, recommendationOrthodics);
@@ -2440,11 +2440,9 @@ public class VisitDetailsFootController implements Initializable {
 
 
         // parent2DataRoot.getChildren().addAll(showAll);
-        parent2DataRoot.getChildren().addAll(kinematicsData);
-        parent2DataRoot.getChildren().addAll(kineticsData);
-        parent2DataRoot.getChildren().addAll(footModel);
+//        parent2DataRoot.getChildren().addAll(kinematicsData);
+//        parent2DataRoot.getChildren().addAll(kineticsData);
         parent2DataRoot.getChildren().addAll(pedobaragraph);
-        parent2DataRoot.getChildren().addAll(o2Consumption);
         parent2DataRoot.getChildren().addAll(assessmentForm);
         parent2DataRoot.getChildren().addAll(recommendations);
         parent2DataRoot.getChildren().addAll(signatures);

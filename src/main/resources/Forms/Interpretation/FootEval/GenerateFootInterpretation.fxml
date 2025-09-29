@@ -25,37 +25,7 @@
                             <Font size="13.0" />
                         </font>
                     </ToggleButton>
-                    <ToggleButton fx:id="kinematicsButton" mnemonicParsing="false" onMouseClicked="#onKinematics" prefHeight="40.0" prefWidth="181.0" text="Kinematics">
-                        <font>
-                            <Font size="13.0" />
-                        </font>
-                    </ToggleButton>
-                    <ToggleButton fx:id="kineticsButton" mnemonicParsing="false" onMouseClicked="#onKinetics" prefHeight="40.0" prefWidth="181.0" text="Kinetics">
-                        <font>
-                            <Font name="SansSerif Regular" size="13.0" />
-                        </font>
-                    </ToggleButton>
-                    <ToggleButton fx:id="footModelButton" mnemonicParsing="false" onMouseClicked="#onFootModel" prefHeight="40.0" prefWidth="181.0" text="Foot Model">
-                        <font>
-                            <Font name="SansSerif Regular" size="13.0" />
-                        </font>
-                    </ToggleButton>
-                    <ToggleButton fx:id="emgButton" mnemonicParsing="false" onMouseClicked="#onEMG" prefHeight="40.0" prefWidth="181.0" text="EMG Assessment">
-                        <font>
-                            <Font name="SansSerif Regular" size="13.0" />
-                        </font>
-                    </ToggleButton>
                     <ToggleButton fx:id="pedobaragraphButton" mnemonicParsing="false" onMouseClicked="#onPedobaragraph" prefHeight="40.0" prefWidth="181.0" text="Pedobaragraph">
-                        <font>
-                            <Font size="13.0" />
-                        </font>
-                    </ToggleButton>
-                    <ToggleButton fx:id="metabolicButton" mnemonicParsing="false" onMouseClicked="#onMetabolic" prefHeight="40.0" prefWidth="181.0" text="Metabolic (O2) Assessment" textAlignment="CENTER" wrapText="true">
-                        <font>
-                            <Font size="13.0" />
-                        </font>
-                    </ToggleButton>
-                    <ToggleButton fx:id="stepWatchButton" mnemonicParsing="false" onMouseClicked="#onStepWatch" prefHeight="40.0" prefWidth="181.0" text="Step Watch" textAlignment="CENTER" wrapText="true">
                         <font>
                             <Font size="13.0" />
                         </font>
